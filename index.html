@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tides Bookkeeping — Modern Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── TOKENS ─────────────────────────────────────── */
+    :root {
+      --teal:    #41cfd0;
+      --teal-lt: #e6f9f9;
+      --blue:    #66c1ee;
+      --blue-lt: #e8f4fd;
+      --navy:    #215197;
+      --navy-dk: #163872;
+      --ink:     #0f1c2e;
+      --body:    #4a5568;
+      --muted:   #94a3b8;
+      --border:  #e2eaf3;
+      --bg:      #ffffff;
+      --bg-alt:  #f7fbff;
+      --shadow:  0 1px 3px rgba(15,28,46,.06), 0 4px 16px rgba(15,28,46,.08);
+      --shadow-lg: 0 8px 40px rgba(15,28,46,.12);
+      --r:       16px;
+      --r-sm:    10px;
+    }
+
+    /* ── RESET ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── TYPE ───────────────────────────────────────── */
+    .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 0.95; }
+    h2.display { font-size: clamp(2.4rem, 5vw, 4rem); }
+    h3 { font-size: 1.15rem; font-weight: 700; color: var(--ink); }
+    p { color: var(--body); }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal);
+      background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
+      padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--blue) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* ── LAYOUT ─────────────────────────────────────── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+    .section { padding: 96px 0; }
+    .section-alt { background: var(--bg-alt); }
+    .section-navy { background: var(--navy); }
+    .section-ink { background: var(--ink); }
+
+    /* ── BUTTONS ────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .85rem 1.75rem; border-radius: 50px;
+      font-weight: 600; font-size: .9rem; cursor: pointer;
+      transition: all .2s ease; border: 2px solid transparent;
+    }
+    .btn-primary { background: var(--navy); color: #fff; }
+    .btn-primary:hover { background: var(--navy-dk); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(33,81,151,.3); }
+    .btn-teal { background: var(--teal); color: var(--ink); font-weight: 700; }
+    .btn-teal:hover { background: #38bfc0; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(65,207,208,.4); }
+    .btn-outline { border-color: var(--border); color: var(--ink); background: #fff; }
+    .btn-outline:hover { border-color: var(--navy); color: var(--navy); }
+    .btn-outline-white { border-color: rgba(255,255,255,.35); color: #fff; }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+    .btn-lg { padding: 1rem 2.2rem; font-size: 1rem; }
+
+    /* ══════════════════════════════════════
+       MOCKUP STRIP
+    ══════════════════════════════════════ */
+    .mockup-strip {
+      background: var(--teal); color: var(--ink);
+      text-align: center; padding: 8px;
+      font-size: .75rem; font-weight: 700; letter-spacing: .08em;
+      position: sticky; top: 0; z-index: 300;
+    }
+
+    /* ══════════════════════════════════════
+       NAV
+    ══════════════════════════════════════ */
+    .nav-wrap {
+      position: sticky; top: 33px; z-index: 200;
+      background: rgba(255,255,255,.92); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem; max-width: 1180px; margin: 0 auto;
+    }
+    .nav-logo img { height: 44px; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-cta { display: flex; align-items: center; gap: .75rem; }
+
+    /* ══════════════════════════════════════
+       HERO
+    ══════════════════════════════════════ */
+    .hero {
+      padding: 100px 0 80px;
+      position: relative; overflow: hidden;
+      background: #ffffff;
+    }
+    /* Mesh gradient */
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 80% at 90% 10%, rgba(65,207,208,.12) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 60% at 10% 90%, rgba(102,193,238,.1) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 40% at 50% 50%, rgba(33,81,151,.03) 0%, transparent 70%);
+    }
+    .hero-inner {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 480px; gap: 5rem; align-items: center;
+    }
+
+    .hero-headline {
+      font-size: clamp(3.8rem, 8vw, 6.5rem);
+      line-height: .93; margin-bottom: 1.5rem; color: var(--ink);
+    }
+    .hero-sub { font-size: 1.1rem; line-height: 1.75; max-width: 480px; margin-bottom: 2.5rem; color: var(--body); }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .hero-note { font-size: .78rem; color: var(--muted); margin-top: .75rem; }
+
+    /* Trust pills */
+    .trust-pills { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2.5rem; }
+    .trust-pill {
+      display: flex; align-items: center; gap: .5rem;
+      padding: 6px 14px; border-radius: 50px;
+      background: #fff; border: 1px solid var(--border);
+      font-size: .78rem; font-weight: 600; color: var(--ink);
+      box-shadow: 0 1px 4px rgba(0,0,0,.05);
+    }
+    .trust-pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); flex-shrink: 0; }
+
+    /* Hero dashboard card */
+    .hero-card {
+      background: #fff; border-radius: 24px; border: 1px solid var(--border);
+      box-shadow: var(--shadow-lg); overflow: hidden;
+    }
+    .hero-card-header {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a3d7a 100%);
+      padding: 1.5rem 2rem; color: #fff;
+    }
+    .hero-card-header p { color: rgba(255,255,255,.7); font-size: .8rem; margin-top: 2px; }
+    .hc-title { font-size: 1rem; font-weight: 700; }
+    .hero-card-body { padding: 1.75rem 2rem; }
+
+    .metric-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem; }
+    .metric {
+      background: var(--bg-alt); border-radius: var(--r-sm);
+      padding: 1rem; border: 1px solid var(--border);
+    }
+    .metric-val { font-family: 'Bebas Neue', sans-serif; font-size: 1.9rem; color: var(--navy); line-height: 1; }
+    .metric-val.teal { color: var(--teal); }
+    .metric-label { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-top: 4px; }
+
+    .service-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .85rem 0; border-bottom: 1px solid var(--border);
+      font-size: .85rem;
+    }
+    .service-row:last-child { border-bottom: none; }
+    .service-row strong { font-weight: 600; color: var(--ink); }
+    .service-row span { color: var(--muted); font-size: .78rem; }
+    .status-dot {
+      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+    }
+    .status-dot.green { background: #22c55e; }
+    .status-dot.teal { background: var(--teal); }
+
+    /* ══════════════════════════════════════
+       LOGOS / TRUST BAR
+    ══════════════════════════════════════ */
+    .trust-bar {
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      background: var(--bg-alt); padding: 1.25rem 0;
+    }
+    .trust-bar-inner {
+      display: flex; align-items: center; justify-content: center;
+      gap: 3rem; flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: .6rem;
+      font-size: .82rem; font-weight: 600; color: var(--muted);
+      white-space: nowrap;
+    }
+    .trust-icon { font-size: 1.1rem; }
+
+    /* ══════════════════════════════════════
+       SERVICES — BENTO GRID
+    ══════════════════════════════════════ */
+    .bento {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 1.25rem;
+      margin-top: 3.5rem;
+    }
+    .bento-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 20px; padding: 2rem; position: relative;
+      overflow: hidden; transition: all .25s ease;
+      box-shadow: var(--shadow);
+    }
+    .bento-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.4); }
+    .bento-card.featured {
+      grid-column: span 2;
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      border-color: transparent;
+      color: #fff;
+    }
+    .bento-card.featured h3 { color: #fff; font-size: 1.5rem; }
+    .bento-card.featured p { color: rgba(255,255,255,.7); }
+    .bento-card.featured .bento-icon { background: rgba(255,255,255,.1); }
+    .bento-card.teal-card {
+      background: var(--teal);
+      border-color: transparent;
+    }
+    .bento-card.teal-card h3, .bento-card.teal-card p { color: var(--ink); }
+    .bento-card.teal-card .bento-icon { background: rgba(255,255,255,.25); }
+
+    .bento-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: var(--teal-lt); display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin-bottom: 1.25rem;
+    }
+    .bento-card h3 { margin-bottom: .6rem; }
+    .bento-card p { font-size: .88rem; line-height: 1.65; }
+    .bento-tag {
+      display: inline-block; margin-top: 1rem;
+      padding: 4px 12px; border-radius: 50px;
+      font-size: .72rem; font-weight: 700;
+      background: rgba(255,255,255,.15); color: rgba(255,255,255,.9);
+    }
+    .bento-tag.dark { background: var(--teal-lt); color: var(--teal); }
+    .bento-link {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: .82rem; font-weight: 600; color: var(--teal);
+      margin-top: 1rem;
+    }
+    .bento-card.featured .bento-link { color: rgba(255,255,255,.85); }
+
+    /* ══════════════════════════════════════
+       STATS STRIP
+    ══════════════════════════════════════ */
+    .stats-strip {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dk) 100%);
+      padding: 60px 0;
+    }
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 2rem; text-align: center;
+    }
+    .stat-val {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.5rem; color: var(--teal); line-height: 1;
+    }
+    .stat-label { font-size: .82rem; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .08em; margin-top: .4rem; }
+    .stat-divider { border: none; border-left: 1px solid rgba(255,255,255,.1); }
+
+    /* ══════════════════════════════════════
+       INDUSTRIES
+    ══════════════════════════════════════ */
+    .industries-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1rem; margin-top: 3rem;
+    }
+    .industry-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: var(--r); padding: 1.5rem;
+      text-align: center; transition: all .2s;
+      box-shadow: var(--shadow);
+    }
+    .industry-card:hover { border-color: var(--teal); box-shadow: 0 6px 24px rgba(65,207,208,.15); transform: translateY(-3px); }
+    .industry-icon {
+      font-size: 1.8rem; margin-bottom: .75rem;
+      display: block;
+    }
+    .industry-card h4 { font-size: .9rem; font-weight: 700; color: var(--ink); margin-bottom: .25rem; }
+    .industry-card p { font-size: .76rem; color: var(--muted); }
+
+    /* ══════════════════════════════════════
+       HOW IT WORKS
+    ══════════════════════════════════════ */
+    .steps {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem; margin-top: 4rem; position: relative;
+    }
+    .steps::before {
+      content: ''; position: absolute;
+      top: 28px; left: calc(16.66% + 1rem); right: calc(16.66% + 1rem);
+      height: 2px;
+      background: linear-gradient(90deg, var(--teal), var(--blue));
+      opacity: .25;
+    }
+    .step { text-align: center; padding: .5rem; }
+    .step-num {
+      width: 56px; height: 56px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem; font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem; position: relative; z-index: 1;
+    }
+    .step:nth-child(1) .step-num { background: var(--teal-lt); color: var(--teal); border: 2px solid rgba(65,207,208,.4); }
+    .step:nth-child(2) .step-num { background: var(--blue-lt); color: var(--navy); border: 2px solid rgba(102,193,238,.4); }
+    .step:nth-child(3) .step-num { background: rgba(33,81,151,.08); color: var(--navy); border: 2px solid rgba(33,81,151,.25); }
+    .step h3 { margin-bottom: .6rem; }
+    .step p { font-size: .88rem; max-width: 260px; margin: 0 auto; }
+
+    /* ══════════════════════════════════════
+       TESTIMONIALS
+    ══════════════════════════════════════ */
+    .reviews-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; margin-top: 3.5rem;
+    }
+    .review-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 20px; padding: 2rem;
+      box-shadow: var(--shadow); transition: all .2s;
+    }
+    .review-card:hover { border-color: rgba(65,207,208,.4); box-shadow: var(--shadow-lg); }
+    .stars { color: #f59e0b; font-size: .9rem; letter-spacing: 2px; margin-bottom: 1rem; }
+    .review-card blockquote { font-size: .9rem; line-height: 1.75; color: var(--body); margin-bottom: 1.5rem; font-style: italic; }
+    .reviewer { display: flex; align-items: center; gap: .75rem; }
+    .reviewer-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: .85rem; flex-shrink: 0;
+    }
+    .reviewer-avatar.t { background: var(--teal-lt); color: var(--teal); }
+    .reviewer-avatar.b { background: var(--blue-lt); color: var(--navy); }
+    .reviewer-avatar.n { background: rgba(33,81,151,.1); color: var(--navy); }
+    .reviewer-name { font-size: .88rem; font-weight: 700; color: var(--ink); }
+    .reviewer-biz { font-size: .75rem; color: var(--muted); }
+
+    /* ══════════════════════════════════════
+       SERVICE AREAS
+    ══════════════════════════════════════ */
+    .areas-two-col {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;
+      margin-top: 3rem;
+    }
+    .state-group { margin-bottom: 2rem; }
+    .state-name {
+      font-size: .7rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal);
+      margin-bottom: .75rem;
+    }
+    .city-pills { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .city-pill {
+      padding: .35rem .9rem; border-radius: 50px;
+      font-size: .78rem; font-weight: 500; border: 1px solid;
+      transition: all .2s; cursor: default;
+    }
+    .city-pill.active { background: var(--teal-lt); border-color: rgba(65,207,208,.4); color: var(--teal); font-weight: 600; }
+    .city-pill.soon { background: var(--bg-alt); border-color: var(--border); color: var(--muted); }
+
+    .area-map-placeholder {
+      background: var(--bg-alt); border: 1px solid var(--border);
+      border-radius: 20px; height: 400px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      color: var(--muted); font-size: .88rem; gap: .5rem;
+    }
+    .area-map-placeholder .map-icon { font-size: 2.5rem; }
+
+    /* Expansion timeline */
+    .expansion-list { list-style: none; }
+    .expansion-item {
+      display: flex; align-items: center; gap: 1rem;
+      padding: .75rem 0; border-bottom: 1px solid var(--border);
+      font-size: .88rem;
+    }
+    .expansion-item:last-child { border-bottom: none; }
+    .exp-dot {
+      width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+    }
+    .exp-dot.active { background: var(--teal); }
+    .exp-dot.soon { background: var(--blue); }
+    .exp-dot.future { background: var(--border); border: 2px solid var(--muted); }
+    .exp-state { font-weight: 700; color: var(--ink); min-width: 140px; }
+    .exp-badge {
+      padding: 2px 10px; border-radius: 50px;
+      font-size: .68rem; font-weight: 700;
+    }
+    .exp-badge.now { background: var(--teal-lt); color: var(--teal); }
+    .exp-badge.q2 { background: var(--blue-lt); color: var(--navy); }
+    .exp-badge.later { background: var(--bg-alt); color: var(--muted); }
+
+    /* ══════════════════════════════════════
+       PRICING TEASER
+    ══════════════════════════════════════ */
+    .pricing-cards {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .pricing-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 20px; padding: 2.5rem 2rem;
+      box-shadow: var(--shadow); position: relative;
+      transition: all .2s;
+    }
+    .pricing-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .pricing-card.popular {
+      border: 2px solid var(--teal);
+      box-shadow: 0 0 0 4px rgba(65,207,208,.08), var(--shadow-lg);
+    }
+    .popular-badge {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      background: var(--teal); color: var(--ink);
+      font-size: .7rem; font-weight: 800; letter-spacing: .08em;
+      padding: 4px 14px; border-radius: 50px; white-space: nowrap;
+    }
+    .pricing-tier { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin-bottom: .75rem; }
+    .pricing-price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.2rem; color: var(--ink); line-height: 1;
+    }
+    .pricing-price sup { font-size: 1.5rem; vertical-align: top; margin-top: .5rem; }
+    .pricing-per { font-size: .8rem; color: var(--muted); margin-bottom: 1.5rem; }
+    .pricing-features { list-style: none; margin-bottom: 2rem; }
+    .pricing-features li {
+      display: flex; align-items: center; gap: .6rem;
+      font-size: .85rem; color: var(--body); padding: .45rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .pricing-features li:last-child { border-bottom: none; }
+    .pricing-features .check { color: var(--teal); font-weight: 700; font-size: .9rem; }
+
+    /* ══════════════════════════════════════
+       CTA SECTION
+    ══════════════════════════════════════ */
+    .cta-section {
+      background: linear-gradient(135deg, var(--navy) 0%, #122f6b 100%);
+      position: relative; overflow: hidden;
+      padding: 96px 0; text-align: center;
+    }
+    .cta-section::before {
+      content: ''; position: absolute;
+      top: -100px; right: -100px; width: 500px; height: 500px;
+      border-radius: 50%; background: radial-gradient(circle, rgba(65,207,208,.12) 0%, transparent 70%);
+    }
+    .cta-section::after {
+      content: ''; position: absolute;
+      bottom: -80px; left: -80px; width: 400px; height: 400px;
+      border-radius: 50%; background: radial-gradient(circle, rgba(102,193,238,.08) 0%, transparent 70%);
+    }
+    .cta-section .container { position: relative; z-index: 1; }
+    .cta-section h2 { color: #fff; margin-bottom: 1.25rem; max-width: 680px; margin-left: auto; margin-right: auto; }
+    .cta-section p { color: rgba(255,255,255,.7); font-size: 1.05rem; max-width: 520px; margin: 0 auto 2.5rem; }
+    .cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .cta-fine { margin-top: 1.5rem; font-size: .78rem; color: rgba(255,255,255,.35); }
+
+    /* ══════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════ */
+    .footer {
+      background: var(--ink);
+      padding: 64px 0 32px;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem; margin-bottom: 3rem;
+    }
+    .footer-brand p { font-size: .84rem; color: rgba(255,255,255,.4); line-height: 1.7; margin: 1rem 0 1.5rem; }
+    .footer-logo img { height: 40px; filter: brightness(0) invert(1) opacity(.9); }
+    .footer-social { display: flex; gap: .6rem; }
+    .social-btn {
+      width: 34px; height: 34px; border-radius: 8px;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .8rem; color: rgba(255,255,255,.5); transition: all .2s;
+    }
+    .social-btn:hover { background: rgba(65,207,208,.15); border-color: var(--teal); color: var(--teal); }
+    .footer-col h4 {
+      font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
+      color: rgba(255,255,255,.35); margin-bottom: 1.25rem;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: .55rem; }
+    .footer-links a { font-size: .84rem; color: rgba(255,255,255,.5); transition: color .2s; }
+    .footer-links a:hover { color: var(--teal); }
+    .footer-contact p { font-size: .84rem; color: rgba(255,255,255,.5); margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.07);
+      padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.25); margin: 0; }
+    .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-bottom-links a { font-size: .78rem; color: rgba(255,255,255,.25); transition: color .2s; }
+    .footer-bottom-links a:hover { color: var(--teal); }
+
+    /* ══════════════════════════════════════
+       SECTION HEADER UTILITY
+    ══════════════════════════════════════ */
+    .section-header { max-width: 620px; }
+    .section-header.centered { max-width: 680px; margin: 0 auto; text-align: center; }
+    .section-header p { margin-top: 1rem; font-size: 1rem; line-height: 1.75; }
+
+    /* ══════════════════════════════════════
+       HERO CARD — DEADLINES
+    ══════════════════════════════════════ */
+    .hc-checklist { display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1.25rem; }
+    .hc-check-row {
+      display: flex; align-items: center; gap: .75rem;
+      font-size: .83rem; padding: .6rem .85rem; border-radius: 8px;
+      background: var(--bg-alt); border: 1px solid var(--border);
+    }
+    .hc-check-row .chk { font-size: 1rem; flex-shrink: 0; }
+    .hc-check-row strong { color: var(--ink); font-weight: 600; flex: 1; }
+    .hc-check-row span { color: var(--muted); font-size: .75rem; }
+    .deadline-list { display: flex; flex-direction: column; }
+    .deadline-item {
+      display: flex; align-items: center; gap: .85rem;
+      padding: .8rem 0; border-bottom: 1px solid var(--border);
+    }
+    .deadline-item:last-child { border-bottom: none; }
+    .deadline-date {
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem;
+      color: var(--navy); min-width: 48px; line-height: 1;
+    }
+    .deadline-info { flex: 1; }
+    .deadline-info strong { font-size: .83rem; font-weight: 700; color: var(--ink); display: block; }
+    .deadline-sub { font-size: .71rem; color: var(--muted); margin-top: 1px; }
+    .deadline-badge {
+      font-size: .66rem; font-weight: 700; letter-spacing: .05em;
+      padding: 3px 10px; border-radius: 50px;
+      background: var(--teal-lt); color: var(--teal);
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .deadline-badge.annual { background: var(--blue-lt); color: var(--navy); }
+
+    /* ══════════════════════════════════════
+       HOW IT WORKS — VERTICAL TIMELINE
+    ══════════════════════════════════════ */
+    .timeline-wrap {
+      display: grid; grid-template-columns: 260px 1fr;
+      gap: 4rem; margin-top: 3rem; align-items: start;
+    }
+    .timeline-sticky { position: sticky; top: 120px; }
+    .timeline-sticky .eyebrow { margin-bottom: 1rem; }
+    .timeline-sticky h2 { margin-bottom: 1rem; }
+    .timeline-sticky p { font-size: .95rem; color: var(--body); line-height: 1.7; }
+    .timeline { position: relative; padding-left: 3rem; }
+    .timeline::before {
+      content: ''; position: absolute; left: 19px; top: 20px; bottom: 20px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--teal) 0%, var(--blue) 60%, rgba(33,81,151,.15) 100%);
+    }
+    .timeline-step { position: relative; padding: 0 0 3rem 2rem; }
+    .timeline-step:last-child { padding-bottom: 0; }
+    .timeline-dot {
+      position: absolute; left: -3rem; top: 2px;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: #fff; border: 3px solid var(--teal);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Bebas Neue', sans-serif; font-size: 1rem; color: var(--teal);
+      z-index: 1; box-shadow: 0 0 0 6px var(--teal-lt);
+    }
+    .timeline-step:nth-child(2) .timeline-dot { border-color: var(--blue); color: var(--navy); box-shadow: 0 0 0 6px var(--blue-lt); }
+    .timeline-step:nth-child(3) .timeline-dot { border-color: var(--navy); color: var(--navy); box-shadow: 0 0 0 6px rgba(33,81,151,.08); }
+    .timeline-step:nth-child(4) .timeline-dot { border-color: var(--teal); color: var(--teal); box-shadow: 0 0 0 6px var(--teal-lt); }
+    .timeline-content {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 16px; padding: 1.75rem 2rem; box-shadow: var(--shadow);
+    }
+    .timeline-content h3 { margin-bottom: .5rem; font-size: 1.15rem; }
+    .timeline-content p { font-size: .9rem; color: var(--body); line-height: 1.7; }
+    .timeline-tag {
+      display: inline-block; margin-top: .75rem;
+      padding: 3px 12px; border-radius: 50px;
+      font-size: .7rem; font-weight: 700; letter-spacing: .05em;
+      background: var(--teal-lt); color: var(--teal);
+    }
+
+    /* ══════════════════════════════════════
+       SIMPLE FLAT PRICING TILES
+    ══════════════════════════════════════ */
+    .pricing-tiles {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .pricing-tile {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 20px; padding: 2rem;
+      box-shadow: var(--shadow); transition: all .2s;
+    }
+    .pricing-tile:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    .pt-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: var(--teal-lt); display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin-bottom: 1.25rem;
+    }
+    .pricing-tile:nth-child(2) .pt-icon { background: var(--blue-lt); }
+    .pricing-tile:nth-child(3) .pt-icon { background: rgba(33,81,151,.08); }
+    .pricing-tile:nth-child(4) .pt-icon { background: var(--teal-lt); }
+    .pricing-tile:nth-child(5) .pt-icon { background: var(--blue-lt); }
+    .pricing-tile:nth-child(6) .pt-icon { background: rgba(65,207,208,.12); }
+    .pricing-tile h3 { font-size: 1.05rem; margin-bottom: .55rem; }
+    .pricing-tile p { font-size: .87rem; color: var(--body); line-height: 1.65; }
+    .pricing-cta-box {
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      border-radius: 20px; padding: 2.5rem; text-align: center; margin-top: 2rem;
+    }
+    .pricing-cta-box h3 { color: #fff; font-size: 1.5rem; margin-bottom: .75rem; }
+    .pricing-cta-box p { color: rgba(255,255,255,.72); font-size: .95rem; max-width: 480px; margin: 0 auto 1.75rem; }
+
+    /* ══════════════════════════════════════
+       WHAT WE STAND FOR
+    ══════════════════════════════════════ */
+    .values-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .value-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 20px; padding: 2rem 1.75rem;
+      box-shadow: var(--shadow); transition: all .2s;
+    }
+    .value-card:hover { border-color: rgba(65,207,208,.4); box-shadow: var(--shadow-lg); }
+    .value-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: var(--teal-lt); display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin-bottom: 1.25rem;
+    }
+    .value-card:nth-child(2) .value-icon { background: var(--blue-lt); }
+    .value-card:nth-child(3) .value-icon { background: rgba(33,81,151,.08); }
+    .value-card:nth-child(4) .value-icon { background: rgba(65,207,208,.1); }
+    .value-card h3 { font-size: 1.05rem; margin-bottom: .6rem; }
+    .value-card p { font-size: .87rem; color: var(--body); line-height: 1.65; }
+
+    /* ══════════════════════════════════════
+       WHAT YOU GAIN
+    ══════════════════════════════════════ */
+    .gains-layout {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; margin-top: 3rem; align-items: center;
+    }
+    .gains-list { display: flex; flex-direction: column; gap: 1rem; }
+    .gain-item {
+      display: flex; align-items: flex-start; gap: 1.25rem;
+      padding: 1.25rem 1.5rem; background: #fff; border: 1px solid var(--border);
+      border-radius: 14px; box-shadow: var(--shadow); transition: all .2s;
+    }
+    .gain-item:hover { border-color: rgba(65,207,208,.4); }
+    .gain-icon {
+      width: 42px; height: 42px; border-radius: 11px;
+      background: var(--teal-lt); display: flex; align-items: center; justify-content: center;
+      font-size: 1.15rem; flex-shrink: 0;
+    }
+    .gain-item:nth-child(even) .gain-icon { background: var(--blue-lt); }
+    .gain-text h4 { font-size: .95rem; font-weight: 700; color: var(--ink); margin-bottom: .25rem; }
+    .gain-text p { font-size: .83rem; color: var(--body); line-height: 1.6; }
+    .gains-visual {
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      border-radius: 24px; padding: 2.5rem; color: #fff;
+    }
+    .gains-visual-title {
+      font-family: 'Bebas Neue', sans-serif; font-size: 2.4rem;
+      letter-spacing: .02em; line-height: 1; margin-bottom: 1.75rem; color: #fff;
+    }
+    .gains-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .gains-stat {
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
+      border-radius: 14px; padding: 1.25rem;
+    }
+    .gains-stat-val {
+      font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem;
+      color: var(--teal); line-height: 1;
+    }
+    .gains-stat-label { font-size: .72rem; color: rgba(255,255,255,.5); text-transform: uppercase; letter-spacing: .06em; margin-top: 4px; }
+    .gains-qbo-badge {
+      margin-top: 1.5rem; padding: 1rem 1.25rem;
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
+      border-radius: 14px; display: flex; align-items: center; gap: 1rem;
+    }
+    .gains-qbo-badge .stars-sm { color: #f59e0b; font-size: .85rem; letter-spacing: 1px; }
+    .gains-qbo-badge p { color: rgba(255,255,255,.65); font-size: .8rem; margin: 0; }
+    .gains-qbo-badge strong { color: #fff; }
+
+    /* ══════════════════════════════════════
+       TICKER
+    ══════════════════════════════════════ */
+    .ticker-wrap {
+      overflow: hidden;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-alt);
+      padding: 14px 0;
+      white-space: nowrap;
+    }
+    @keyframes ticker-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .ticker-track {
+      display: inline-flex; align-items: center; gap: 0;
+      animation: ticker-scroll 30s linear infinite;
+    }
+    .ticker-track:hover { animation-play-state: paused; }
+    .ticker-item {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .8rem; font-weight: 600; color: var(--body);
+      padding: 0 2.5rem;
+      border-right: 1px solid var(--border);
+    }
+    .ticker-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--teal); flex-shrink: 0;
+    }
+
+    /* ══════════════════════════════════════
+       REVIEW CAROUSEL
+    ══════════════════════════════════════ */
+    .carousel-wrap { position: relative; margin-top: 3.5rem; }
+    .carousel-viewport { overflow: hidden; }
+    .carousel-track {
+      display: flex; gap: 1.5rem;
+      transition: transform .45s cubic-bezier(.4,0,.2,1);
+    }
+    .carousel-track .review-card {
+      flex: 0 0 calc((100% - 3rem) / 3);
+      min-width: 0;
+    }
+    .carousel-controls {
+      display: flex; justify-content: center; align-items: center;
+      gap: 1rem; margin-top: 2rem;
+    }
+    .carousel-btn {
+      width: 44px; height: 44px; border-radius: 50%;
+      border: 2px solid var(--border); background: #fff;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 1.1rem; color: var(--ink);
+      transition: all .2s; box-shadow: var(--shadow);
+    }
+    .carousel-btn:hover { border-color: var(--teal); color: var(--teal); }
+    .carousel-btn:disabled { opacity: .35; cursor: default; }
+    .carousel-dots { display: flex; gap: .5rem; }
+    .carousel-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--border); border: none; cursor: pointer;
+      transition: all .2s; padding: 0;
+    }
+    .carousel-dot.active { background: var(--teal); width: 24px; border-radius: 4px; }
+
+    /* ══════════════════════════════════════
+       HAMBURGER
+    ══════════════════════════════════════ */
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 6px;
+      z-index: 201; flex-shrink: 0;
+    }
+    .hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: var(--ink); border-radius: 2px; transition: all .25s;
+    }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: translateX(-8px); }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ══════════════════════════════════════
+       RESPONSIVE — TABLET (≤1024px)
+    ══════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .section { padding: 72px 0; }
+      .hero { padding: 72px 0 60px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-card { max-width: 560px; }
+      .hero-headline { font-size: clamp(3rem, 7vw, 5rem); }
+      .bento { grid-template-columns: repeat(2, 1fr); }
+      .bento-card.featured { grid-column: span 2; }
+      .industries-grid { grid-template-columns: repeat(3, 1fr) !important; }
+      .timeline-wrap { grid-template-columns: 1fr; gap: 2rem; }
+      .timeline-sticky { position: relative; top: auto; display: flex; flex-direction: column; gap: 1rem; }
+      .timeline-sticky .btn { align-self: flex-start; }
+      .gains-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .gains-visual { max-width: 480px; }
+      .pricing-tiles { grid-template-columns: repeat(2, 1fr); }
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+
+    /* ══════════════════════════════════════
+       RESPONSIVE — MOBILE (≤768px)
+    ══════════════════════════════════════ */
+    @media (max-width: 768px) {
+      .container { padding: 0 1.25rem; }
+      .section { padding: 56px 0; }
+
+      /* Mockup strip */
+      .mockup-strip { position: relative; top: auto; font-size: .65rem; }
+
+      /* Nav */
+      .nav-wrap { top: 0; position: sticky; }
+      .nav-inner { padding: .875rem 1.25rem; }
+      .nav-links {
+        display: none; position: fixed;
+        inset: 0; background: #fff;
+        flex-direction: column; justify-content: center; align-items: center;
+        gap: 2.25rem; z-index: 199; list-style: none;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 1.15rem; font-weight: 600; color: var(--ink); }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
+
+      /* Hero */
+      .hero { padding: 52px 0 44px; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-card { display: none; }
+      .hero-headline { font-size: clamp(2.6rem, 11vw, 3.8rem); }
+      .hero-sub { font-size: .95rem; max-width: 100%; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-actions .btn { justify-content: center; }
+
+      /* Type */
+      h2.display { font-size: clamp(2rem, 9vw, 3rem); }
+
+      /* Ticker */
+      .ticker-item { padding: 0 1.25rem; font-size: .7rem; }
+
+      /* Services Bento */
+      .bento { grid-template-columns: 1fr; }
+      .bento-card.featured { grid-column: span 1; }
+      .bento-card[style*="span 2"] { grid-column: span 1 !important; }
+
+      /* Industries */
+      .industries-grid { grid-template-columns: repeat(2, 1fr) !important; gap: .75rem; }
+      .industry-icon { font-size: 1.5rem; }
+      .industry-card h4 { font-size: .82rem; }
+      .industry-card p { font-size: .7rem; }
+
+      /* Timeline */
+      .timeline-wrap { grid-template-columns: 1fr; gap: 1.5rem; }
+      .timeline-sticky { position: relative; top: auto; }
+      .timeline-sticky h2 { font-size: 2.4rem; }
+      .timeline-content { padding: 1.25rem 1.5rem; }
+
+      /* Benefits */
+      .gains-layout { grid-template-columns: 1fr; gap: 2rem; }
+      .gains-stat-grid { grid-template-columns: repeat(2, 1fr); }
+      .gains-visual { padding: 2rem 1.5rem; }
+
+      /* Pricing */
+      .pricing-tiles { grid-template-columns: 1fr; }
+
+      /* Values */
+      .values-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+
+      /* Reviews Carousel */
+      .carousel-track .review-card { flex: 0 0 100%; }
+
+      /* CTA */
+      .cta-section { padding: 64px 0; }
+      .cta-btns { flex-direction: column; align-items: center; }
+      .cta-btns .btn { width: 100%; max-width: 320px; justify-content: center; }
+
+      /* Footer */
+      .footer { padding: 48px 0 28px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: .75rem; }
+      .footer-bottom-links { justify-content: center; flex-wrap: wrap; gap: 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .values-grid { grid-template-columns: 1fr; }
+      .gains-stat-grid { grid-template-columns: 1fr 1fr; }
+      .hero-headline { font-size: 2.6rem; }
+      .section { padding: 44px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- MOCKUP STRIP -->
+<div class="mockup-strip">HOMEPAGE MOCKUP — TidesBookkeeping.com — For Review Only</div>
+
+<!-- ══════════════════════════════════════
+     NAV
+══════════════════════════════════════ -->
+<nav class="nav-wrap">
+  <div class="nav-inner">
+    <div class="nav-logo"><img src="logo.png" alt="Tides Bookkeeping" /></div>
+    <ul class="nav-links">
+      <li><a href="#">How It Works</a></li>
+      <li><a href="#">Who We Serve</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Pricing</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-outline">Sign In</a>
+      <a href="#" class="btn btn-primary">Free Consultation</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="dot" style="width:6px;height:6px;border-radius:50%;background:var(--teal);"></span>
+          America's Bookkeeping Company
+        </div>
+        <h1 class="display hero-headline">
+          Your Books,<br/>
+          <span class="gradient-text">Handled.</span><br/>
+          Your Business,<br/>Grown.
+        </h1>
+        <p class="hero-sub">
+          Remote bookkeeping, payroll, and financial reporting built for small businesses nationwide. Clean books every month — guaranteed.
+        </p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-teal btn-lg">Schedule Free Call</a>
+          <a href="#" class="btn btn-outline btn-lg">See Services →</a>
+        </div>
+      </div>
+
+      <!-- Key Dates Card -->
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <div class="hc-title">📅 Key Dates &amp; Tax Deadlines</div>
+          <p>Important dates every small business owner needs</p>
+        </div>
+        <div class="hero-card-body">
+          <div class="hc-checklist">
+            <div class="hc-check-row">
+              <span class="chk">✅</span>
+              <strong>Bank Reconciliation</strong>
+              <span>Monthly</span>
+            </div>
+            <div class="hc-check-row">
+              <span class="chk">✅</span>
+              <strong>P&amp;L + Balance Sheet Delivered</strong>
+              <span>Monthly</span>
+            </div>
+            <div class="hc-check-row">
+              <span class="chk">✅</span>
+              <strong>Expense Categorization</strong>
+              <span>Monthly</span>
+            </div>
+          </div>
+          <div class="deadline-list">
+            <div class="deadline-item">
+              <div class="deadline-date">Jan 31</div>
+              <div class="deadline-info">
+                <strong>1099-NEC Filing</strong>
+                <div class="deadline-sub">Send to contractors + file with IRS</div>
+              </div>
+              <span class="deadline-badge annual">Annual</span>
+            </div>
+            <div class="deadline-item">
+              <div class="deadline-date">Apr 15</div>
+              <div class="deadline-info">
+                <strong>Q1 Estimated Tax Payment</strong>
+                <div class="deadline-sub">Jan 1 – Mar 31 income</div>
+              </div>
+              <span class="deadline-badge">Quarterly</span>
+            </div>
+            <div class="deadline-item">
+              <div class="deadline-date">Sep 15</div>
+              <div class="deadline-info">
+                <strong>Q3 Estimated Tax Payment</strong>
+                <div class="deadline-sub">Jun 1 – Aug 31 income</div>
+              </div>
+              <span class="deadline-badge">Quarterly</span>
+            </div>
+            <div class="deadline-item">
+              <div class="deadline-date">Jan 15</div>
+              <div class="deadline-info">
+                <strong>Q4 Estimated Tax Payment</strong>
+                <div class="deadline-sub">Sep 1 – Dec 31 income</div>
+              </div>
+              <span class="deadline-badge">Quarterly</span>
+            </div>
+          </div>
+          <p style="font-size:.72rem;color:var(--muted);text-align:center;margin-top:1rem;">Tides keeps you ahead of every deadline, every month.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     TICKER
+══════════════════════════════════════ -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="ticker-dot"></span> Puzzle Advisor Certified</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Gusto Payroll Certified</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> QuickBooks ProAdvisor</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Fixed Monthly Pricing</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> No Setup Fees</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Cancel Anytime</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> 100% Remote</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> No Long-Term Contracts</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> SC &amp; Nationwide</span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker-item"><span class="ticker-dot"></span> Puzzle Advisor Certified</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Gusto Payroll Certified</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> QuickBooks ProAdvisor</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Fixed Monthly Pricing</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> No Setup Fees</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> Cancel Anytime</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> 100% Remote</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> No Long-Term Contracts</span>
+    <span class="ticker-item"><span class="ticker-dot"></span> SC &amp; Nationwide</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SERVICES — BENTO
+══════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">What We Do</div>
+      <h2 class="display">Everything Your<br/>Books Need</h2>
+      <p>Seven core services built for small businesses. One flat monthly price. Zero surprises.</p>
+    </div>
+
+    <div class="bento">
+
+      <!-- Featured -->
+      <div class="bento-card featured">
+        <div class="bento-icon">📊</div>
+        <h3>Monthly Bookkeeping</h3>
+        <p>Clean, accurate books delivered every month. We reconcile every account, categorize every transaction, and send you a P&L and balance sheet you can actually understand.</p>
+        <div style="display:flex;gap:.5rem;margin-top:1.25rem;flex-wrap:wrap;">
+          <span class="bento-tag">Bank Reconciliation</span>
+          <span class="bento-tag">P&amp;L Statement</span>
+          <span class="bento-tag">Balance Sheet</span>
+        </div>
+        <a href="#" class="bento-link">Learn more →</a>
+      </div>
+
+      <div class="bento-card">
+        <div class="bento-icon">🔄</div>
+        <h3>Catch-Up Bookkeeping</h3>
+        <p>Months or years behind? We dig in, sort it out, and get your books current fast.</p>
+        <a href="#" class="bento-link">Learn more →</a>
+      </div>
+
+      <div class="bento-card teal-card">
+        <div class="bento-icon">💼</div>
+        <h3>Payroll Support</h3>
+        <p>Gusto Payroll Certified. We run payroll, file taxes, and keep your team paid on time.</p>
+        <span class="bento-tag dark">Gusto Certified Partner</span>
+      </div>
+
+      <div class="bento-card">
+        <div class="bento-icon">🔧</div>
+        <h3>Accounting Software Setup & Cleanup</h3>
+        <p>We set up and clean up all your accounting systems from the ground up — connecting your accounts, organizing your data, and configuring everything so it runs smoothly from day one.</p>
+        <a href="#" class="bento-link">Learn more →</a>
+      </div>
+
+      <div class="bento-card">
+        <div class="bento-icon">📈</div>
+        <h3>Financial Reporting</h3>
+        <p>Monthly reports your business needs — P&L, cash flow, and custom dashboards built for decisions.</p>
+        <a href="#" class="bento-link">Learn more →</a>
+      </div>
+
+      <div class="bento-card">
+        <div class="bento-icon">🏦</div>
+        <h3>Bank Reconciliation</h3>
+        <p>Every account matched, every discrepancy caught. Monthly accuracy you can count on.</p>
+        <a href="#" class="bento-link">Learn more →</a>
+      </div>
+
+      <div class="bento-card" style="grid-column:span 2;">
+        <div style="display:flex;align-items:center;gap:2rem;">
+          <div class="bento-icon" style="margin-bottom:0;flex-shrink:0;">📑</div>
+          <div>
+            <h3>Accounts Payable & Receivable</h3>
+            <p>We track what you owe and what you're owed so your cash flow stays healthy. Invoice entry, vendor bills, aging reports.</p>
+            <a href="#" class="bento-link" style="margin-top:.5rem;">Learn more →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     INDUSTRIES
+══════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">Who We Serve</div>
+      <h2 class="display">Built for Your<br/><span class="gradient-text">Industry</span></h2>
+      <p>We work with small businesses across every sector — bringing industry-specific bookkeeping knowledge to every client.</p>
+    </div>
+
+    <div class="industries-grid" style="grid-template-columns:repeat(4,1fr);">
+      <div class="industry-card">
+        <span class="industry-icon">🔨</span>
+        <h4>Contractors &amp; Trades</h4>
+        <p>Construction, HVAC, plumbing &amp; electrical</p>
+      </div>
+      <div class="industry-card">
+        <span class="industry-icon">🍽️</span>
+        <h4>Restaurants &amp; Bars</h4>
+        <p>Food service, cafes &amp; hospitality</p>
+      </div>
+      <div class="industry-card">
+        <span class="industry-icon">🏡</span>
+        <h4>Real Estate</h4>
+        <p>Agents, investors &amp; property managers</p>
+      </div>
+      <div class="industry-card">
+        <span class="industry-icon">🏥</span>
+        <h4>Healthcare Practices</h4>
+        <p>Clinics, dentists &amp; private practices</p>
+      </div>
+      <div class="industry-card">
+        <span class="industry-icon">⚖️</span>
+        <h4>Professional Services</h4>
+        <p>Law firms, consultants &amp; agencies</p>
+      </div>
+      <div class="industry-card">
+        <span class="industry-icon">🛍️</span>
+        <h4>E-Commerce &amp; Retail</h4>
+        <p>Online stores, DTC &amp; brick-and-mortar</p>
+      </div>
+      <div class="industry-card">
+        <span class="industry-icon">💼</span>
+        <h4>Solo Entrepreneurs</h4>
+        <p>Freelancers, coaches &amp; independent pros</p>
+      </div>
+      <div class="industry-card">
+        <span class="industry-icon">🏢</span>
+        <h4>Small Businesses</h4>
+        <p>Growing teams across every industry</p>
+      </div>
+      <div class="industry-card">
+        <span class="industry-icon">🚗</span>
+        <h4>Automotive Services</h4>
+        <p>Dealerships, repair shops &amp; detailing</p>
+      </div>
+      <div class="industry-card">
+        <span class="industry-icon">🚚</span>
+        <h4>Logistics &amp; Transportation</h4>
+        <p>Freight, delivery &amp; fleet operators</p>
+      </div>
+      <div class="industry-card">
+        <span class="industry-icon">🤝</span>
+        <h4>Non-Profit Organizations</h4>
+        <p>501(c)(3) grant tracking &amp; compliance</p>
+      </div>
+      <div class="industry-card">
+        <span class="industry-icon">💡</span>
+        <h4>Tech &amp; Startups</h4>
+        <p>SaaS, apps &amp; early-stage companies</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     HOW IT WORKS
+══════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="timeline-wrap">
+      <div class="timeline-sticky">
+        <div class="eyebrow">How It Works</div>
+        <h2 class="display">From Sign-Up<br/>to <span class="gradient-text">Clean Books</span></h2>
+        <p>No complicated setup. Most clients are fully running within one business week.</p>
+        <div style="margin-top:2rem;">
+          <a href="#" class="btn btn-teal">Schedule Free Call</a>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-step">
+          <div class="timeline-dot">01</div>
+          <div class="timeline-content">
+            <h3>Discovery Call</h3>
+            <p>A quick 15-minute call to learn about your business, understand your current books, and figure out exactly what you need. No sales pressure — just a real conversation about where you are and where you want to be.</p>
+            <span class="timeline-tag">Free &nbsp;·&nbsp; 30 Minutes</span>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-dot">02</div>
+          <div class="timeline-content">
+            <h3>Onboarding</h3>
+            <p>We connect your accounts, set up all your systems, and configure everything properly. You fill out one short form — we handle the rest. Done within 2–3 business days with zero disruption to your operations.</p>
+            <span class="timeline-tag">We Do the Work</span>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-dot">03</div>
+          <div class="timeline-content">
+            <h3>Initial Clean-Up</h3>
+            <p>If there's any backlog or messy history, we dig in and fix it. Transactions categorized, accounts reconciled, and your books brought fully current before we move forward — no matter how far behind you are.</p>
+            <span class="timeline-tag">Historical Clean-Up Included</span>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-dot">04</div>
+          <div class="timeline-content">
+            <h3>Ongoing Monthly Work</h3>
+            <p>Every month we reconcile your accounts, categorize every transaction, and deliver your P&L and balance sheet. Your dedicated bookkeeper is available whenever you have questions — no tickets, no wait queues.</p>
+            <span class="timeline-tag">Monthly &nbsp;·&nbsp; Ongoing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     THE BENEFITS (WHAT YOU GAIN)
+══════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="gains-layout">
+      <div>
+        <div class="eyebrow">The Benefits</div>
+        <h2 class="display" style="margin-bottom:1rem;">What You<br/><span class="gradient-text">Gain</span></h2>
+        <p style="margin-bottom:2rem;font-size:.95rem;line-height:1.75;">When your books are handled by someone who actually cares, the impact goes well beyond cleaner spreadsheets.</p>
+        <div class="gains-list">
+          <div class="gain-item">
+            <div class="gain-icon">📊</div>
+            <div class="gain-text">
+              <h4>Clean Monthly Financials</h4>
+              <p>P&L, balance sheet, and cash flow delivered every month — in plain English you can actually act on.</p>
+            </div>
+          </div>
+          <div class="gain-item">
+            <div class="gain-icon">📅</div>
+            <div class="gain-text">
+              <h4>Tax-Ready Books Year-Round</h4>
+              <p>No more scrambling in January. Your CPA gets organized, accurate records every quarter — no surprises at tax time.</p>
+            </div>
+          </div>
+          <div class="gain-item">
+            <div class="gain-icon">👤</div>
+            <div class="gain-text">
+              <h4>A Bookkeeper Who Knows You</h4>
+              <p>One dedicated professional who learns your business and stays consistent month after month — not a rotating team.</p>
+            </div>
+          </div>
+          <div class="gain-item">
+            <div class="gain-icon">⏰</div>
+            <div class="gain-text">
+              <h4>More Time to Run Your Business</h4>
+              <p>Stop spending weekends in spreadsheets. Hand it off completely and focus entirely on what you do best.</p>
+            </div>
+          </div>
+          <div class="gain-item">
+            <div class="gain-icon">😌</div>
+            <div class="gain-text">
+              <h4>Zero Stress at Tax Season</h4>
+              <p>When April comes, you're already prepared. No panic, no last-minute scrambles, no boxes of receipts to sort through.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="gains-visual">
+          <div class="gains-visual-title">The Tides Difference</div>
+          <div class="gains-stat-grid">
+            <div class="gains-stat">
+              <div class="gains-stat-val">5.0</div>
+              <div class="gains-stat-label">Avg. Star Rating</div>
+            </div>
+            <div class="gains-stat">
+              <div class="gains-stat-val">8</div>
+              <div class="gains-stat-label">Verified Reviews</div>
+            </div>
+            <div class="gains-stat">
+              <div class="gains-stat-val">7</div>
+              <div class="gains-stat-label">Services Included</div>
+            </div>
+            <div class="gains-stat">
+              <div class="gains-stat-val">$0</div>
+              <div class="gains-stat-label">Setup or Hidden Fees</div>
+            </div>
+          </div>
+          <div class="gains-qbo-badge">
+            <div>
+              <div class="stars-sm">★★★★★</div>
+              <p style="margin-top:4px;"><strong>Verified on QuickBooks ProAdvisor</strong><br/>Overall Rating: 5.0 / 5.0 &nbsp;·&nbsp; 8 Reviews</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SIMPLE FLAT PRICING
+══════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">Simple Pricing</div>
+      <h2 class="display">One Flat Rate.<br/><span class="gradient-text">Everything Included.</span></h2>
+      <p>No hourly billing. No surprise invoices. Your price is based on your monthly expenses — and it never changes unless your business grows.</p>
+    </div>
+    <div class="pricing-tiles">
+      <div class="pricing-tile">
+        <div class="pt-icon">📊</div>
+        <h3>Based on Your Monthly Expenses</h3>
+        <p>Your plan is sized to match your business volume — you only pay for what you actually need, not a one-size-fits-all rate.</p>
+      </div>
+      <div class="pricing-tile">
+        <div class="pt-icon">💳</div>
+        <h3>One Flat Monthly Rate</h3>
+        <p>No hourly billing. No invoices for "extra" work. Your price is your price every month — predictable, budgeted, no drama.</p>
+      </div>
+      <div class="pricing-tile">
+        <div class="pt-icon">✅</div>
+        <h3>All 7 Services Included</h3>
+        <p>Every plan includes all core bookkeeping services. Bank rec, P&L, reporting, AP/AR — nothing is gated behind a higher tier.</p>
+      </div>
+      <div class="pricing-tile">
+        <div class="pt-icon">🚫</div>
+        <h3>No Setup Fees. No Contracts.</h3>
+        <p>Start with zero upfront cost and no long-term commitment. If it's not working for you, cancel anytime — zero penalty.</p>
+      </div>
+      <div class="pricing-tile">
+        <div class="pt-icon">📈</div>
+        <h3>Scale Up or Down Anytime</h3>
+        <p>As your business grows, your plan adjusts with it. Slow month? Scale down. Big quarter? We scale up. No friction either way.</p>
+      </div>
+      <div class="pricing-tile">
+        <div class="pt-icon">👤</div>
+        <h3>A Dedicated Bookkeeper</h3>
+        <p>A real person who knows your business — not a call center, not a chatbot. One consistent professional, every single month.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     OUR VALUES (WHAT WE STAND FOR)
+══════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">Our Values</div>
+      <h2 class="display">What We<br/><span class="gradient-text">Stand For</span></h2>
+      <p>We built Tides around four principles we refuse to compromise on. Every client, every month, no exceptions.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🔍</div>
+        <h3>Transparency First</h3>
+        <p>No hidden fees. No billing surprises. You always know exactly what you're paying, what's included, and what's happening with your books — before it happens.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">✅</div>
+        <h3>Accuracy Guaranteed</h3>
+        <p>Every account reconciled, every transaction verified, every single month. Your numbers are right — or we fix it at no extra charge, no questions asked.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">⚡</div>
+        <h3>Always Responsive</h3>
+        <p>Your bookkeeper responds fast. No waiting days for a reply, no support tickets, no call centers. Real answers from a real person who knows your business.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">💡</div>
+        <h3>Business-First Thinking</h3>
+        <p>We don't just record transactions. We help you understand your numbers and make smarter decisions — so your books become a tool, not just a compliance requirement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     REVIEWS CAROUSEL
+══════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">Client Stories</div>
+      <h2 class="display">Real Business Owners,<br/><span class="gradient-text">Real Results</span></h2>
+      <p style="margin-top:.75rem;">5.0 ★ across 8 reviews — verified on QuickBooks ProAdvisor</p>
+    </div>
+
+    <div class="carousel-wrap" id="reviewCarousel">
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carouselTrack">
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Dan is crucial to the financial management of my business. I started a side hustle and it took off. Dan is an impressive professional with a high 'business IQ' — he helped me beyond simply bookkeeping, offering suggestions in addition to what I hired him to do. Resourceful, detail oriented, and most importantly responsive and fast. I'd recommend him to anyone that seriously cares about their business and money."</blockquote>
+            <div class="reviewer">
+              <div class="reviewer-avatar t">SL</div>
+              <div>
+                <div class="reviewer-name">S. Longfellow</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Daniel has helped me keep my finances organized and is always helpful during tax season. He is very personable, and if I have a question, he promptly gets back with me!"</blockquote>
+            <div class="reviewer">
+              <div class="reviewer-avatar b">CB</div>
+              <div>
+                <div class="reviewer-name">Courtney Brooks Photography</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Daniel is a very important part of our Real Estate team. Dan not only does our accounting, he helps us lay out a yearly forecast. His checks and balances of our expenses are extremely crucial to our daily routine and strategy. He would be an asset to anyone using his skills."</blockquote>
+            <div class="reviewer">
+              <div class="reviewer-avatar n">S5</div>
+              <div>
+                <div class="reviewer-name">Steve 54</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Very reliable, detail-oriented, and keeps my finances in perfect order. Their expertise and responsiveness make managing my business stress-free. Highly recommend!"</blockquote>
+            <div class="reviewer">
+              <div class="reviewer-avatar t">JR</div>
+              <div>
+                <div class="reviewer-name">JanetRealtor4Life</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Loved working with him. He's great at what he does. Highly recommend!"</blockquote>
+            <div class="reviewer">
+              <div class="reviewer-avatar b">PR</div>
+              <div>
+                <div class="reviewer-name">Prosper611</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Loved working with him. He's great at what he does. Highly recommend!"</blockquote>
+            <div class="reviewer">
+              <div class="reviewer-avatar n">SR</div>
+              <div>
+                <div class="reviewer-name">SRK14</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Very reliable, detail-oriented, and keeps my finances in perfect order. Their expertise and responsiveness make managing my business stress-free. Highly recommend!"</blockquote>
+            <div class="reviewer">
+              <div class="reviewer-avatar t">R4</div>
+              <div>
+                <div class="reviewer-name">Realtor4Life</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Dan is great. Prompt service and knows his stuff."</blockquote>
+            <div class="reviewer">
+              <div class="reviewer-avatar b">JT</div>
+              <div>
+                <div class="reviewer-name">Joetheroofer</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="carouselPrev" aria-label="Previous">&#8592;</button>
+        <div class="carousel-dots" id="carouselDots"></div>
+        <button class="carousel-btn" id="carouselNext" aria-label="Next">&#8594;</button>
+      </div>
+    </div>
+
+    <p style="text-align:center;margin-top:1.5rem;font-size:.82rem;color:var(--muted);">
+      All reviews verified on <strong style="color:var(--navy);">QuickBooks ProAdvisor</strong> — Overall Rating: <strong style="color:var(--navy);">5.0 / 5.0</strong>
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CTA
+══════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="eyebrow" style="background:rgba(65,207,208,.15);border-color:rgba(65,207,208,.3);color:var(--teal);">
+      Get Started Today
+    </div>
+    <h2 class="display" style="font-size:clamp(2.8rem,6vw,4.5rem);margin-bottom:1.25rem;">
+      Stop Guessing.<br/>Start Knowing<br/><span class="gradient-text">Your Numbers.</span>
+    </h2>
+    <p>Schedule a free 15-minute call. We'll assess your books, answer your questions, and give you a clear plan — no pressure.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn btn-teal btn-lg">Schedule Free Consultation</a>
+      <a href="#" class="btn btn-outline-white btn-lg">View Pricing</a>
+    </div>
+    <p class="cta-fine">No credit card required &nbsp;·&nbsp; No long-term contracts &nbsp;·&nbsp; Cancel anytime</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="logo.png" alt="Tides Bookkeeping" /></div>
+        <p>Remote bookkeeping and financial services for South Carolina small businesses and beyond. Clean books. Clear numbers. Confident decisions.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">in</a>
+          <a href="#" class="social-btn">f</a>
+          <a href="#" class="social-btn">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#">Monthly Bookkeeping</a></li>
+          <li><a href="#">Catch-Up Bookkeeping</a></li>
+          <li><a href="#">Payroll Support</a></li>
+          <li><a href="#">QuickBooks Setup</a></li>
+          <li><a href="#">Financial Reporting</a></li>
+          <li><a href="#">Bank Reconciliation</a></li>
+          <li><a href="#">Accounts Payable/Receivable</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Service Areas</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact footer-col">
+        <h4>Contact</h4>
+        <p>📧 hello@tidesbookkeeping.com</p>
+        <p>📞 (843) 000-0000</p>
+        <p>📍 South Carolina</p>
+        <div style="margin-top:1.25rem;">
+          <a href="#" class="btn btn-teal" style="font-size:.82rem;padding:.65rem 1.4rem;">Book a Free Call</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Tides Bookkeeping LLC. All rights reserved. South Carolina Bookkeeping Services.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* ── CAROUSEL ─────────────────────────────── */
+  (function() {
+    const track    = document.getElementById('carouselTrack');
+    const prevBtn  = document.getElementById('carouselPrev');
+    const nextBtn  = document.getElementById('carouselNext');
+    const dotsWrap = document.getElementById('carouselDots');
+    const cards    = track.querySelectorAll('.review-card');
+    const total    = cards.length;
+    let current    = 0;
+    let pages      = 0;
+
+    function getPerPage() { return window.innerWidth <= 768 ? 1 : 3; }
+
+    function buildDots() {
+      dotsWrap.innerHTML = '';
+      const perPage = getPerPage();
+      pages = Math.ceil(total / perPage);
+      for (let i = 0; i < pages; i++) {
+        const d = document.createElement('button');
+        d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', 'Go to page ' + (i + 1));
+        d.addEventListener('click', () => goTo(i));
+        dotsWrap.appendChild(d);
+      }
+    }
+
+    function goTo(page) {
+      const perPage = getPerPage();
+      pages = Math.ceil(total / perPage);
+      current = Math.min(page, pages - 1);
+      const cardWidth = cards[0].offsetWidth;
+      const gap = window.innerWidth <= 768 ? 0 : 24;
+      track.style.transform = 'translateX(-' + (current * perPage * (cardWidth + gap)) + 'px)';
+      dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current >= pages - 1;
+    }
+
+    prevBtn.addEventListener('click', () => { if (current > 0) goTo(current - 1); });
+    nextBtn.addEventListener('click', () => { if (current < pages - 1) goTo(current + 1); });
+
+    buildDots();
+    goTo(0);
+    window.addEventListener('resize', () => { buildDots(); goTo(0); });
+  })();
+
+  /* ── HAMBURGER ────────────────────────────── */
+  (function() {
+    const btn   = document.getElementById('hamburger');
+    const links = document.querySelector('.nav-links');
+    if (!btn || !links) return;
+    btn.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        btn.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

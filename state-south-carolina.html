@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookkeeping Services in South Carolina | Tides Bookkeeping</title>
+  <meta name="description" content="Tides Bookkeeping provides remote bookkeeping, payroll, and financial reporting for small businesses across South Carolina. Serving all major SC cities and counties." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── TOKENS ─────────────────────────────────────── */
+    :root {
+      --teal:    #41cfd0;
+      --teal-lt: #e6f9f9;
+      --blue:    #66c1ee;
+      --blue-lt: #e8f4fd;
+      --navy:    #215197;
+      --navy-dk: #163872;
+      --ink:     #0f1c2e;
+      --body:    #4a5568;
+      --muted:   #94a3b8;
+      --border:  #e2eaf3;
+      --bg:      #ffffff;
+      --bg-alt:  #f7fbff;
+      --shadow:  0 1px 3px rgba(15,28,46,.06), 0 4px 16px rgba(15,28,46,.08);
+      --shadow-lg: 0 8px 40px rgba(15,28,46,.12);
+      --r:       16px;
+      --r-sm:    10px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── TYPE ───────────────────────────────────────── */
+    .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 0.95; }
+    h2.display { font-size: clamp(2.4rem, 5vw, 4rem); }
+    h3 { font-size: 1.1rem; font-weight: 700; color: var(--ink); }
+    p { color: var(--body); }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal);
+      background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
+      padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--blue) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* ── LAYOUT ─────────────────────────────────────── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+    .section { padding: 96px 0; }
+    .section-alt { background: var(--bg-alt); }
+    .section-navy { background: var(--navy); }
+    .section-ink { background: var(--ink); }
+
+    /* ── BUTTONS ────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .85rem 1.75rem; border-radius: 50px;
+      font-weight: 600; font-size: .9rem; cursor: pointer;
+      transition: all .2s ease; border: 2px solid transparent;
+    }
+    .btn-primary { background: var(--navy); color: #fff; }
+    .btn-primary:hover { background: var(--navy-dk); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(33,81,151,.3); }
+    .btn-teal { background: var(--teal); color: var(--ink); font-weight: 700; }
+    .btn-teal:hover { background: #38bfc0; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(65,207,208,.4); }
+    .btn-outline { border-color: var(--border); color: var(--ink); background: #fff; }
+    .btn-outline:hover { border-color: var(--navy); color: var(--navy); }
+    .btn-outline-white { border-color: rgba(255,255,255,.35); color: #fff; }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+    .btn-lg { padding: 1rem 2.2rem; font-size: 1rem; }
+
+    /* ── MOCKUP STRIP ───────────────────────────────── */
+    .mockup-strip {
+      background: var(--teal); color: var(--ink);
+      text-align: center; padding: 8px;
+      font-size: .75rem; font-weight: 700; letter-spacing: .08em;
+      position: sticky; top: 0; z-index: 300;
+    }
+
+    /* ── NAV ────────────────────────────────────────── */
+    .nav-wrap {
+      position: sticky; top: 33px; z-index: 200;
+      background: rgba(255,255,255,.92); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem; max-width: 1180px; margin: 0 auto;
+    }
+    .nav-logo img { height: 44px; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); font-weight: 700; }
+    .nav-cta { display: flex; align-items: center; gap: .75rem; }
+    .nav-signin { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
+    .nav-signin:hover { color: var(--navy); }
+
+    /* ── HAMBURGER ──────────────────────────────────── */
+    .hamburger {
+      display: none; background: none; border: none; cursor: pointer;
+      padding: .4rem; flex-direction: column; gap: 5px; z-index: 1001;
+    }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); transition: all .25s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── BREADCRUMB ─────────────────────────────────── */
+    .breadcrumb { background: var(--bg-alt); border-bottom: 1px solid var(--border); padding: .75rem 0; }
+    .breadcrumb-inner {
+      display: flex; align-items: center; gap: .5rem; flex-wrap: wrap;
+      max-width: 1180px; margin: 0 auto; padding: 0 2rem;
+      font-size: .78rem; color: var(--muted);
+    }
+    .breadcrumb-inner a { color: var(--muted); transition: color .2s; }
+    .breadcrumb-inner a:hover { color: var(--navy); }
+    .breadcrumb-sep { color: var(--border); }
+    .breadcrumb-current { color: var(--navy); font-weight: 600; }
+
+    /* ── PAGE HERO ──────────────────────────────────── */
+    .page-hero {
+      padding: 88px 0 80px;
+      background: #fff; position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 65% 75% at 88% 15%, rgba(65,207,208,.11) 0%, transparent 60%),
+        radial-gradient(ellipse 45% 45% at 10% 85%, rgba(102,193,238,.08) 0%, transparent 60%);
+    }
+    .page-hero-inner {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 420px; gap: 5rem; align-items: center;
+    }
+    .page-hero h1 {
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      line-height: .93; margin-bottom: 1.5rem; color: var(--ink);
+    }
+    .page-hero p {
+      font-size: 1.05rem; line-height: 1.78; color: var(--body); max-width: 520px; margin-bottom: 2.25rem;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .hero-note { font-size: .78rem; color: var(--muted); margin-top: .75rem; }
+
+    /* Hero aside card */
+    .hero-aside {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 24px; box-shadow: var(--shadow-lg); overflow: hidden;
+    }
+    .ha-header {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a3d7a 100%);
+      padding: 1.5rem 2rem; color: #fff;
+    }
+    .ha-header .label {
+      font-size: .68rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal); display: block; margin-bottom: .5rem;
+    }
+    .ha-title { font-size: 1.05rem; font-weight: 700; }
+    .ha-subtitle { font-size: .78rem; color: rgba(255,255,255,.55); margin-top: 3px; }
+    .ha-body { padding: 1.75rem 2rem; }
+    .ha-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .8rem 0; border-bottom: 1px solid var(--border);
+      font-size: .85rem;
+    }
+    .ha-row:last-child { border-bottom: none; }
+    .ha-row strong { font-weight: 600; color: var(--ink); }
+    .ha-badge {
+      font-size: .67rem; font-weight: 700; padding: 3px 10px; border-radius: 50px; letter-spacing: .04em;
+    }
+    .ha-badge.green { background: #dcfce7; color: #16a34a; }
+    .ha-badge.teal { background: var(--teal-lt); color: var(--teal); }
+    .ha-badge.blue { background: var(--blue-lt); color: var(--navy); }
+    .ha-stat-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+      background: var(--border); border: 1px solid var(--border);
+      border-radius: var(--r-sm); overflow: hidden; margin-top: 1.5rem;
+    }
+    .ha-stat { background: var(--bg-alt); padding: 1rem; text-align: center; }
+    .ha-stat-val { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--navy); line-height: 1; }
+    .ha-stat-label { font-size: .68rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-top: 3px; }
+
+    /* ── STATS BAR ──────────────────────────────────── */
+    .stats-bar { background: var(--ink); padding: 2.5rem 0; }
+    .stats-inner {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 2rem; max-width: 1180px; margin: 0 auto; padding: 0 2rem;
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif; font-size: 3rem;
+      line-height: 1; color: var(--teal); letter-spacing: .02em;
+    }
+    .stat-label { font-size: .78rem; color: rgba(255,255,255,.5); text-transform: uppercase; letter-spacing: .08em; margin-top: .3rem; }
+
+    /* ── SECTION HEADER ─────────────────────────────── */
+    .section-header { max-width: 620px; }
+    .section-header.centered { max-width: 700px; margin: 0 auto; text-align: center; }
+    .section-header p { margin-top: 1rem; font-size: 1rem; line-height: 1.75; }
+
+    /* ── SERVICES ───────────────────────────────────── */
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem; margin-top: 3.5rem;
+    }
+    .svc-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 20px; padding: 2rem; box-shadow: var(--shadow); transition: all .25s;
+    }
+    .svc-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    .svc-card.featured {
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      border-color: transparent; grid-column: span 2;
+    }
+    .svc-icon {
+      width: 50px; height: 50px; border-radius: 13px;
+      background: var(--teal-lt); display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; margin-bottom: 1.25rem;
+    }
+    .svc-card.featured .svc-icon { background: rgba(255,255,255,.12); }
+    .svc-card h3 { margin-bottom: .6rem; }
+    .svc-card.featured h3 { color: #fff; font-size: 1.35rem; }
+    .svc-card p { font-size: .87rem; line-height: 1.7; }
+    .svc-card.featured p { color: rgba(255,255,255,.65); }
+    .svc-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
+    .svc-tag {
+      font-size: .68rem; font-weight: 700; letter-spacing: .04em;
+      padding: 4px 10px; border-radius: 50px;
+      background: rgba(255,255,255,.1); color: rgba(255,255,255,.75);
+    }
+    .svc-tag.light { background: var(--teal-lt); color: var(--teal); }
+
+    /* ── COVERAGE GRID ──────────────────────────────── */
+    .coverage-intro {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; margin-bottom: 4rem;
+    }
+    .counties-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem;
+    }
+    .county-card {
+      background: #fff; border: 1px solid var(--border); border-radius: 16px;
+      padding: 1.5rem; box-shadow: var(--shadow); transition: all .2s; cursor: pointer;
+    }
+    .county-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.4); }
+    .county-card.featured {
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      border-color: transparent;
+    }
+    .county-name {
+      font-weight: 700; font-size: 1rem; color: var(--ink); margin-bottom: .35rem;
+    }
+    .county-card.featured .county-name { color: #fff; }
+    .county-cities { font-size: .78rem; color: var(--muted); line-height: 1.6; }
+    .county-card.featured .county-cities { color: rgba(255,255,255,.5); }
+    .county-badge {
+      display: inline-flex; align-items: center; gap: .35rem;
+      font-size: .67rem; font-weight: 700; letter-spacing: .05em;
+      background: var(--teal); color: var(--ink);
+      padding: 3px 10px; border-radius: 50px; margin-bottom: .75rem;
+    }
+    .city-pills { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .75rem; }
+    .city-pill {
+      font-size: .72rem; font-weight: 600; color: var(--navy);
+      background: var(--blue-lt); border: 1px solid rgba(102,193,238,.3);
+      padding: 4px 12px; border-radius: 50px; transition: all .15s;
+    }
+    .city-pill:hover { background: var(--navy); color: #fff; border-color: transparent; }
+    .city-pill.teal { background: var(--teal-lt); color: var(--teal); border-color: rgba(65,207,208,.3); }
+
+    /* ── INDUSTRIES ─────────────────────────────────── */
+    .industries-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 3.5rem;
+    }
+    .ind-card {
+      background: #fff; border: 1px solid var(--border); border-radius: 16px;
+      padding: 1.5rem; text-align: center; box-shadow: var(--shadow); transition: all .2s;
+    }
+    .ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    .ind-icon { font-size: 1.8rem; margin-bottom: .75rem; }
+    .ind-card h4 { font-size: .9rem; font-weight: 700; color: var(--ink); margin-bottom: .4rem; }
+    .ind-card p { font-size: .78rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── WHY TIDES ───────────────────────────────────── */
+    .why-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem;
+    }
+    .why-card {
+      background: #fff; border: 1px solid var(--border); border-radius: 20px;
+      padding: 2rem; box-shadow: var(--shadow); transition: all .2s;
+    }
+    .why-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    .why-num {
+      font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem;
+      color: var(--teal); line-height: 1; margin-bottom: .75rem;
+    }
+    .why-card h3 { margin-bottom: .6rem; }
+    .why-card p { font-size: .87rem; line-height: 1.7; }
+
+    /* ── TESTIMONIAL ────────────────────────────────── */
+    .testimonial-section {
+      background: linear-gradient(135deg, var(--navy) 0%, #122f6b 100%); padding: 88px 0;
+    }
+    .testimonial-inner { max-width: 860px; margin: 0 auto; text-align: center; }
+    .t-stars { color: #f59e0b; font-size: 1.1rem; letter-spacing: 3px; margin-bottom: 2rem; }
+    .t-quote {
+      font-size: clamp(1.05rem, 2.5vw, 1.35rem); line-height: 1.75;
+      color: rgba(255,255,255,.88); font-style: italic; margin-bottom: 2.5rem;
+    }
+    .t-author { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+    .t-avatar {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: rgba(255,255,255,.1); border: 2px solid rgba(65,207,208,.4);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: .9rem; color: var(--teal);
+    }
+    .t-name { font-size: 1rem; font-weight: 700; color: #fff; }
+    .t-role { font-size: .8rem; color: rgba(255,255,255,.5); margin-top: 2px; }
+
+    /* ── FAQ ────────────────────────────────────────── */
+    .faq-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 4rem; margin-top: 3rem; }
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.4rem 0; text-align: left; gap: 1rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .faq-question h4 { font-size: .97rem; font-weight: 700; color: var(--ink); flex: 1; }
+    .faq-toggle {
+      width: 28px; height: 28px; border-radius: 50%;
+      border: 1.5px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 1.1rem; color: var(--muted); transition: all .2s;
+    }
+    .faq-item.open .faq-toggle { background: var(--teal); border-color: var(--teal); color: var(--ink); transform: rotate(45deg); }
+    .faq-answer { display: none; padding: 0 0 1.4rem; }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-answer p { font-size: .9rem; line-height: 1.75; color: var(--body); }
+
+    /* ── CTA ────────────────────────────────────────── */
+    .cta-section { background: var(--ink); padding: 96px 0; }
+    .cta-inner { text-align: center; max-width: 720px; margin: 0 auto; }
+    .cta-inner h2 { font-size: clamp(2rem, 5vw, 3.5rem); color: #fff; margin-bottom: 1.25rem; }
+    .cta-inner p { font-size: 1.05rem; color: rgba(255,255,255,.6); margin-bottom: 2.5rem; }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .cta-note { font-size: .78rem; color: rgba(255,255,255,.3); margin-top: 1.25rem; }
+
+    /* ── FOOTER ─────────────────────────────────────── */
+    footer { background: #080f1a; padding: 72px 0 32px; }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem;
+    }
+    .footer-logo { height: 40px; margin-bottom: 1.25rem; filter: brightness(10); }
+    .footer-about { font-size: .84rem; color: rgba(255,255,255,.35); line-height: 1.75; max-width: 280px; }
+    .footer-col h4 {
+      font-size: .66rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: .12em; color: rgba(255,255,255,.25); margin-bottom: 1.25rem;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: .55rem; }
+    .footer-links a { font-size: .82rem; color: rgba(255,255,255,.4); transition: color .15s; }
+    .footer-links a:hover { color: rgba(255,255,255,.8); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.06); padding-top: 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: .72rem; color: rgba(255,255,255,.2); }
+    .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-bottom-links a { font-size: .72rem; color: rgba(255,255,255,.2); transition: color .15s; }
+    .footer-bottom-links a:hover { color: rgba(255,255,255,.5); }
+
+    /* ── SC GUIDE ───────────────────────────────────── */
+    .sc-regions-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 3rem;
+    }
+    .region-card {
+      background: #fff; border: 1px solid var(--border); border-radius: 20px;
+      padding: 1.75rem; box-shadow: var(--shadow); transition: all .2s;
+    }
+    .region-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    .region-card.featured {
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      border-color: transparent;
+    }
+    .region-icon { font-size: 1.6rem; margin-bottom: .75rem; }
+    .region-name { font-size: 1rem; font-weight: 700; color: var(--ink); margin-bottom: .4rem; }
+    .region-card.featured .region-name { color: #fff; }
+    .region-cities { font-size: .78rem; color: var(--teal); font-weight: 600; margin-bottom: .5rem; }
+    .region-card.featured .region-cities { color: var(--teal); }
+    .region-desc { font-size: .82rem; color: var(--body); line-height: 1.65; }
+    .region-card.featured .region-desc { color: rgba(255,255,255,.6); }
+    .sc-econ-layout {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; margin-top: 4rem;
+    }
+    .sc-econ-layout h3 { font-size: 1.2rem; margin-bottom: 1.25rem; }
+    .econ-list { display: flex; flex-direction: column; gap: .65rem; }
+    .econ-item {
+      display: flex; align-items: flex-start; gap: .85rem;
+      padding: .9rem 1.25rem; background: #fff;
+      border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); transition: all .2s;
+    }
+    .econ-item:hover { border-color: rgba(65,207,208,.35); box-shadow: var(--shadow-lg); }
+    .econ-icon { font-size: 1.05rem; flex-shrink: 0; margin-top: 2px; }
+    .econ-title { font-size: .9rem; font-weight: 700; color: var(--ink); }
+    .econ-desc { font-size: .78rem; color: var(--body); line-height: 1.6; margin-top: .15rem; }
+    .sc-hwy-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin-top: 1.25rem;
+    }
+    .hwy-card {
+      background: var(--bg-alt); border: 1px solid var(--border); border-radius: 12px;
+      padding: 1rem 1.25rem; transition: all .2s;
+    }
+    .hwy-card:hover { background: #fff; box-shadow: var(--shadow); border-color: rgba(65,207,208,.3); }
+    .hwy-name { font-size: .9rem; font-weight: 700; color: var(--ink); margin-bottom: .25rem; }
+    .hwy-desc { font-size: .76rem; color: var(--body); line-height: 1.6; }
+
+    /* ── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .sc-regions-grid { grid-template-columns: 1fr 1fr; }
+      .sc-econ-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .page-hero-inner { grid-template-columns: 1fr; }
+      .hero-aside { display: none; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .svc-card.featured { grid-column: span 2; }
+      .counties-grid { grid-template-columns: 1fr 1fr; }
+      .industries-grid { grid-template-columns: repeat(3, 1fr); }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .faq-cols { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .coverage-intro { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    @media (max-width: 768px) {
+      .sc-regions-grid { grid-template-columns: 1fr; }
+      .sc-hwy-grid { grid-template-columns: 1fr; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column; position: fixed;
+        inset: 0; background: #fff; z-index: 1000;
+        align-items: center; justify-content: center; gap: 2rem;
+      }
+      .nav-links.open li a { font-size: 1.4rem; color: var(--ink); }
+      .page-hero h1 { font-size: 2.8rem; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+      .services-grid { grid-template-columns: 1fr; }
+      .svc-card.featured { grid-column: span 1; }
+      .counties-grid { grid-template-columns: 1fr; }
+      .industries-grid { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .cta-actions { flex-direction: column; align-items: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-bottom-links { justify-content: center; }
+      h2.display { font-size: 2.2rem; }
+    }
+    @media (max-width: 480px) {
+      .industries-grid { grid-template-columns: 1fr; }
+      .stats-inner { grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .container { padding: 0 1rem; }
+      .section { padding: 3rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- MOCKUP STRIP -->
+<div class="mockup-strip">State Page Mockup &nbsp;·&nbsp; <span>TidesBookkeeping.com/south-carolina</span> &nbsp;·&nbsp; For Review Only</div>
+
+<!-- NAV -->
+<nav class="nav-wrap">
+  <div class="nav-inner">
+    <div class="nav-logo"><img src="logo.png" alt="Tides Bookkeeping" /></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">How It Works</a></li>
+      <li><a href="#">Who We Serve</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Pricing</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#" class="nav-signin">Sign In</a>
+      <a href="#" class="btn btn-primary">Free Consultation</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="#">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="#">Locations</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">South Carolina</span>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="page-hero-content">
+        <div class="eyebrow">📍 South Carolina Bookkeeping</div>
+        <h1 class="display">Bookkeeping<br/><span class="gradient-text">Built for SC</span><br/>Businesses.</h1>
+        <p>From Charleston to Greenville, Tides Bookkeeping provides remote bookkeeping, payroll support, and monthly financial reporting for small businesses across South Carolina. Clean books. Real results. No commute required.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-teal btn-lg">Schedule a Free Call</a>
+          <a href="#" class="btn btn-outline btn-lg">View All SC Cities →</a>
+        </div>
+        <p class="hero-note">No setup fees &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; 100% Remote</p>
+      </div>
+
+      <!-- Aside Card -->
+      <div class="hero-aside">
+        <div class="ha-header">
+          <span class="label">South Carolina Coverage</span>
+          <div class="ha-title">Serving SC Statewide</div>
+          <div class="ha-subtitle">All 46 counties · Every major city</div>
+        </div>
+        <div class="ha-body">
+          <div class="ha-row">
+            <strong>Monthly Bookkeeping</strong>
+            <span class="ha-badge green">Available</span>
+          </div>
+          <div class="ha-row">
+            <strong>Catch-Up Bookkeeping</strong>
+            <span class="ha-badge green">Available</span>
+          </div>
+          <div class="ha-row">
+            <strong>Payroll Support</strong>
+            <span class="ha-badge green">Available</span>
+          </div>
+          <div class="ha-row">
+            <strong>Bank Reconciliation</strong>
+            <span class="ha-badge green">Available</span>
+          </div>
+          <div class="ha-row">
+            <strong>Financial Reporting</strong>
+            <span class="ha-badge teal">Monthly</span>
+          </div>
+          <div class="ha-stat-row">
+            <div class="ha-stat">
+              <div class="ha-stat-val">46</div>
+              <div class="ha-stat-label">SC Counties</div>
+            </div>
+            <div class="ha-stat">
+              <div class="ha-stat-val">200+</div>
+              <div class="ha-stat-label">Cities Served</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num">46</div>
+      <div class="stat-label">Counties Covered</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">7</div>
+      <div class="stat-label">Core Services</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Remote Delivery</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">24hr</div>
+      <div class="stat-label">Avg. Response Time</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SC GUIDE — HISTORY & ECONOMY
+══════════════════════════════════════ -->
+<section class="section" id="sc-guide">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">📍 About South Carolina</div>
+      <h2 class="display">A State Built for Business.</h2>
+      <p>South Carolina is one of the fastest-growing states in the Southeast — with a diverse economy, business-friendly tax climate, and a distinct regional character that shapes how businesses operate from the Upstate to the Lowcountry.</p>
+    </div>
+
+    <!-- 4 Regions -->
+    <div class="sc-regions-grid">
+      <div class="region-card featured">
+        <div class="region-icon">⛰️</div>
+        <div class="region-name">The Upstate</div>
+        <div class="region-cities">Greenville · Spartanburg · Anderson</div>
+        <div class="region-desc">The economic engine of SC — anchored by global manufacturers (BMW, Michelin, GE), a thriving Greenville downtown, and a rapidly growing professional services sector. Our anchor market.</div>
+      </div>
+      <div class="region-card">
+        <div class="region-icon">🏛️</div>
+        <div class="region-name">The Midlands</div>
+        <div class="region-cities">Columbia · Lexington · Aiken</div>
+        <div class="region-desc">Home to the state capital, Fort Jackson, the University of South Carolina, and a government-heavy economy supplemented by growing private sector development in the suburbs.</div>
+      </div>
+      <div class="region-card">
+        <div class="region-icon">🌊</div>
+        <div class="region-name">The Lowcountry</div>
+        <div class="region-cities">Charleston · Beaufort · Hilton Head</div>
+        <div class="region-desc">Tourism, hospitality, and real estate reign in SC's coastal region — historic Charleston, the resort communities of Hilton Head, and the port economy that drives the Southeast.</div>
+      </div>
+      <div class="region-card">
+        <div class="region-icon">🌾</div>
+        <div class="region-name">The Pee Dee &amp; Grand Strand</div>
+        <div class="region-cities">Myrtle Beach · Florence · Conway</div>
+        <div class="region-desc">The Grand Strand is one of America's busiest tourist corridors — 60 miles of beach driving a massive hospitality economy, while the Pee Dee region is rooted in agriculture and manufacturing.</div>
+      </div>
+    </div>
+
+    <!-- Economy + Roads -->
+    <div class="sc-econ-layout">
+      <div>
+        <h3>South Carolina's Economy &amp; Business Climate</h3>
+        <p>South Carolina is one of the most business-friendly states in America — with no inventory tax, a competitive corporate income tax rate, and a state government that has aggressively recruited global manufacturers for decades. The results speak for themselves: Boeing, Volvo, BMW, Michelin, Mercedes-Benz Vans, and dozens of others have made SC home.</p>
+        <p style="margin-top:.85rem;">SC was one of the original 13 colonies, ratifying the U.S. Constitution in 1788. It has a deep agricultural heritage — cotton, tobacco, and peaches shaped its rural economy for generations — but today's South Carolina is increasingly defined by manufacturing, tourism, healthcare, real estate, and a fast-growing technology sector.</p>
+        <div class="econ-list" style="margin-top:1.75rem;">
+          <div class="econ-item">
+            <span class="econ-icon">🛳️</span>
+            <div>
+              <div class="econ-title">Port of Charleston — Southeast's Busiest Port</div>
+              <div class="econ-desc">One of the top container ports on the East Coast — handling over $90B in cargo annually and supporting thousands of import/export businesses across SC.</div>
+            </div>
+          </div>
+          <div class="econ-item">
+            <span class="econ-icon">✈️</span>
+            <div>
+              <div class="econ-title">Boeing South Carolina (North Charleston)</div>
+              <div class="econ-desc">Boeing's 787 Dreamliner is assembled in North Charleston — one of the largest industrial employers in SC's Lowcountry and a magnet for aerospace suppliers statewide.</div>
+            </div>
+          </div>
+          <div class="econ-item">
+            <span class="econ-icon">🏖️</span>
+            <div>
+              <div class="econ-title">Tourism — $24B+ Annual Industry</div>
+              <div class="econ-desc">Myrtle Beach, Hilton Head, Charleston, and the SC mountains collectively drive one of the Southeast's most powerful tourism economies — with restaurants, hotels, short-term rentals, and retail all benefiting.</div>
+            </div>
+          </div>
+          <div class="econ-item">
+            <span class="econ-icon">🪖</span>
+            <div>
+              <div class="econ-title">Military — Fort Jackson, Parris Island, JB Charleston</div>
+              <div class="econ-desc">Three major military installations create a massive economic footprint — training thousands of recruits annually, supporting defense contractors, and anchoring the economies of Columbia, Beaufort, and North Charleston.</div>
+            </div>
+          </div>
+          <div class="econ-item">
+            <span class="econ-icon">🏗️</span>
+            <div>
+              <div class="econ-title">Volvo Cars USA (Berkeley County)</div>
+              <div class="econ-desc">Volvo's only US manufacturing plant, opened in 2018 — part of a long line of global auto manufacturers choosing SC for its workforce, infrastructure, and business climate.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3>Key Interstate &amp; Highway Infrastructure</h3>
+        <p>South Carolina's road network is one of its most underrated assets — connecting the Upstate to the coast and positioning the state as a key Southeast logistics hub.</p>
+        <div class="sc-hwy-grid" style="margin-top:1.25rem;">
+          <div class="hwy-card">
+            <div class="hwy-name">I-85 — Upstate Spine</div>
+            <div class="hwy-desc">Connects Greenville–Spartanburg to Charlotte (NC) and Atlanta (GA) — the primary logistics artery for Upstate SC manufacturing.</div>
+          </div>
+          <div class="hwy-card">
+            <div class="hwy-name">I-26 — Columbia to Charleston</div>
+            <div class="hwy-desc">The primary corridor linking the Midlands to the coast — running from Spartanburg through Columbia to North Charleston and the port.</div>
+          </div>
+          <div class="hwy-card">
+            <div class="hwy-name">I-95 — East Coast Corridor</div>
+            <div class="hwy-desc">Runs the length of SC's eastern edge — connecting Myrtle Beach, Florence, and the Pee Dee to the national logistics network.</div>
+          </div>
+          <div class="hwy-card">
+            <div class="hwy-name">I-77 — York County Gateway</div>
+            <div class="hwy-desc">Connects Rock Hill and Fort Mill directly to Charlotte, NC — making York County one of SC's fastest-growing business corridors.</div>
+          </div>
+          <div class="hwy-card">
+            <div class="hwy-name">US-17 — Coastal Highway</div>
+            <div class="hwy-desc">The scenic coastal route linking Charleston, Myrtle Beach, and the Grand Strand — the commercial spine of SC's tourism economy.</div>
+          </div>
+          <div class="hwy-card">
+            <div class="hwy-name">I-20 — Augusta Connector</div>
+            <div class="hwy-desc">Connects Columbia to Augusta, GA — the primary route for Aiken County and the western Midlands commercial corridor.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;">
+          <h3>SC Landmarks &amp; Cultural Identity</h3>
+          <div class="econ-list" style="margin-top:1rem;">
+            <div class="econ-item">
+              <span class="econ-icon">🏛️</span>
+              <div>
+                <div class="econ-title">Charleston's Historic District</div>
+                <div class="econ-desc">One of the best-preserved antebellum cities in America — a world-class tourism destination and the state's most recognizable cultural export.</div>
+              </div>
+            </div>
+            <div class="econ-item">
+              <span class="econ-icon">🎓</span>
+              <div>
+                <div class="econ-title">University of South Carolina (Columbia)</div>
+                <div class="econ-desc">The state's flagship university with 35,000+ students — anchoring Columbia's economy and producing the workforce that powers SC's growing professional services sector.</div>
+              </div>
+            </div>
+            <div class="econ-item">
+              <span class="econ-icon">🌊</span>
+              <div>
+                <div class="econ-title">Myrtle Beach — Grand Strand</div>
+                <div class="econ-desc">60 miles of Atlantic coastline, 100+ golf courses, and millions of annual visitors — one of the most economically significant tourism corridors in the Southeast.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SERVICES
+══════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">What We Offer</div>
+      <h2 class="display">Everything SC Businesses Need<br/>to Stay Financially Clean.</h2>
+      <p>Seven core services designed for small businesses across every industry in South Carolina — all delivered remotely, all handled by our team.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Featured -->
+      <div class="svc-card featured">
+        <div class="svc-icon">📊</div>
+        <h3>Monthly Bookkeeping</h3>
+        <p>Your most important foundation. We categorize every transaction, reconcile your accounts, and deliver clean P&L and balance sheet reports every single month — so you always know exactly where your business stands.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">QuickBooks Online</span>
+          <span class="svc-tag">Monthly P&L</span>
+          <span class="svc-tag">Balance Sheet</span>
+          <span class="svc-tag">Bank Reconciliation</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">🔍</div>
+        <h3>Catch-Up Bookkeeping</h3>
+        <p>Months or years behind? We clean it all up — systematically organizing your past transactions so you can get current and stay compliant.</p>
+        <div class="svc-tags">
+          <span class="svc-tag light">Any Time Period</span>
+          <span class="svc-tag light">Tax-Ready</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">⚙️</div>
+        <h3>Bookkeeping Setup & Cleanup</h3>
+        <p>Starting fresh or inheriting a mess? We connect all your accounts, configure your chart of accounts, and set everything up correctly from day one.</p>
+        <div class="svc-tags">
+          <span class="svc-tag light">QuickBooks Setup</span>
+          <span class="svc-tag light">Chart of Accounts</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">🏦</div>
+        <h3>Bank Reconciliation</h3>
+        <p>Every account, every month. We match your books to your bank statements and flag any discrepancies before they become problems.</p>
+        <div class="svc-tags">
+          <span class="svc-tag light">All Accounts</span>
+          <span class="svc-tag light">Monthly</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">📈</div>
+        <h3>Financial Reporting</h3>
+        <p>P&L, balance sheets, and cash flow statements delivered monthly in a format you can actually read and act on.</p>
+        <div class="svc-tags">
+          <span class="svc-tag light">P&L</span>
+          <span class="svc-tag light">Cash Flow</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">💳</div>
+        <h3>Accounts Payable & Receivable</h3>
+        <p>We track what you owe and what's owed to you — keeping your cash flow picture clear and your vendor relationships clean.</p>
+        <div class="svc-tags">
+          <span class="svc-tag light">AP / AR</span>
+          <span class="svc-tag light">Aging Reports</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">👥</div>
+        <h3>Payroll Bookkeeping Support</h3>
+        <p>We ensure your payroll expenses hit your books correctly every pay period — working alongside your payroll processor to keep everything reconciled.</p>
+        <div class="svc-tags">
+          <span class="svc-tag light">Payroll Entries</span>
+          <span class="svc-tag light">Tax Sync</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     COVERAGE — SC CITIES & COUNTIES
+══════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="coverage-intro">
+      <div>
+        <div class="eyebrow">📍 SC Coverage</div>
+        <h2 class="display">We Serve Every Corner<br/>of South Carolina.</h2>
+        <p>From the Upstate to the Lowcountry, Tides Bookkeeping serves small businesses in every major county and city across SC. 100% remote means we're just as effective in Beaufort as we are in Rock Hill.</p>
+      </div>
+      <div>
+        <p style="font-size:.9rem; color:var(--muted); margin-bottom:1.25rem; text-transform:uppercase; letter-spacing:.08em; font-weight:600;">Popular SC Cities</p>
+        <div class="city-pills">
+          <a href="#" class="city-pill">Charleston</a>
+          <a href="#" class="city-pill">Columbia</a>
+          <a href="#" class="city-pill teal">Greenville</a>
+          <a href="#" class="city-pill">Spartanburg</a>
+          <a href="#" class="city-pill">Myrtle Beach</a>
+          <a href="#" class="city-pill">Hilton Head</a>
+          <a href="#" class="city-pill">Florence</a>
+          <a href="#" class="city-pill">Summerville</a>
+          <a href="#" class="city-pill">Anderson</a>
+          <a href="#" class="city-pill">Rock Hill</a>
+          <a href="#" class="city-pill">Aiken</a>
+          <a href="#" class="city-pill">Beaufort</a>
+          <a href="#" class="city-pill">Conway</a>
+          <a href="#" class="city-pill">Bluffton</a>
+          <a href="#" class="city-pill">Goose Creek</a>
+          <a href="#" class="city-pill">Easley</a>
+          <a href="#" class="city-pill">Simpsonville</a>
+          <a href="#" class="city-pill">Greer</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="counties-grid">
+      <div class="county-card featured">
+        <div class="county-badge">⭐ Anchor Market</div>
+        <div class="county-name">Greenville County</div>
+        <div class="county-cities">Our home county — serving the entire Upstate.</div>
+        <div class="city-pills" style="margin-top:.75rem;">
+          <a href="city-greenville-sc.html" class="city-pill teal">Greenville</a>
+          <a href="#" class="city-pill" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border-color:transparent;">Greer</a>
+          <a href="#" class="city-pill" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border-color:transparent;">Simpsonville</a>
+          <a href="#" class="city-pill" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border-color:transparent;">Mauldin</a>
+        </div>
+      </div>
+
+      <div class="county-card">
+        <div class="county-name">Charleston County</div>
+        <div class="county-cities">Charleston · Mount Pleasant · North Charleston · Summerville · Goose Creek</div>
+        <div class="city-pills">
+          <a href="#" class="city-pill">Charleston</a>
+          <a href="#" class="city-pill">Mt. Pleasant</a>
+        </div>
+      </div>
+
+      <div class="county-card">
+        <div class="county-name">Richland County</div>
+        <div class="county-cities">Columbia · Forest Acres · Blythewood · Irmo</div>
+        <div class="city-pills">
+          <a href="#" class="city-pill">Columbia</a>
+          <a href="#" class="city-pill">Irmo</a>
+        </div>
+      </div>
+
+      <div class="county-card">
+        <div class="county-name">Horry County</div>
+        <div class="county-cities">Myrtle Beach · Conway · North Myrtle Beach · Surfside Beach</div>
+        <div class="city-pills">
+          <a href="#" class="city-pill">Myrtle Beach</a>
+          <a href="#" class="city-pill">Conway</a>
+        </div>
+      </div>
+
+      <div class="county-card">
+        <div class="county-name">Spartanburg County</div>
+        <div class="county-cities">Spartanburg · Duncan · Boiling Springs · Gaffney · Inman</div>
+        <div class="city-pills">
+          <a href="#" class="city-pill">Spartanburg</a>
+          <a href="#" class="city-pill">Duncan</a>
+        </div>
+      </div>
+
+      <div class="county-card">
+        <div class="county-name">Beaufort County</div>
+        <div class="county-cities">Beaufort · Hilton Head Island · Bluffton · Port Royal</div>
+        <div class="city-pills">
+          <a href="#" class="city-pill">Hilton Head</a>
+          <a href="#" class="city-pill">Bluffton</a>
+        </div>
+      </div>
+
+      <div class="county-card">
+        <div class="county-name">Lexington County</div>
+        <div class="county-cities">Lexington · Cayce · West Columbia · Batesburg · Chapin</div>
+        <div class="city-pills">
+          <a href="#" class="city-pill">Lexington</a>
+          <a href="#" class="city-pill">Cayce</a>
+        </div>
+      </div>
+
+      <div class="county-card">
+        <div class="county-name">York County</div>
+        <div class="county-cities">Rock Hill · Fort Mill · Clover · York</div>
+        <div class="city-pills">
+          <a href="#" class="city-pill">Rock Hill</a>
+          <a href="#" class="city-pill">Fort Mill</a>
+        </div>
+      </div>
+
+      <div class="county-card">
+        <div class="county-name">Anderson County</div>
+        <div class="county-cities">Anderson · Clemson · Pendleton · Williamston · Honea Path</div>
+        <div class="city-pills">
+          <a href="#" class="city-pill">Anderson</a>
+          <a href="#" class="city-pill">Clemson</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     INDUSTRIES
+══════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">Industries We Serve</div>
+      <h2 class="display">Built for the Way SC<br/>Businesses Actually Work.</h2>
+      <p>From coastal hospitality to Upstate manufacturing, we understand the financial rhythms of South Carolina's most common industries.</p>
+    </div>
+    <div class="industries-grid">
+      <div class="ind-card">
+        <div class="ind-icon">🏗️</div>
+        <h4>Contractors & Construction</h4>
+        <p>Job costing, subcontractor payments, material expenses</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🍽️</div>
+        <h4>Restaurants & Food Service</h4>
+        <p>COGS tracking, tip payroll, inventory & vendor management</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🏠</div>
+        <h4>Real Estate</h4>
+        <p>Commission tracking, rental income, property expenses</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">💼</div>
+        <h4>Professional Services</h4>
+        <p>Consultants, attorneys, agencies — clean P&L every month</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🛍️</div>
+        <h4>Retail & eCommerce</h4>
+        <p>Inventory, merchant fees, platform reconciliation</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🏥</div>
+        <h4>Healthcare & Wellness</h4>
+        <p>Insurance billing, payroll, HIPAA-aware practices</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🚚</div>
+        <h4>Transportation & Logistics</h4>
+        <p>Fleet expenses, fuel costs, driver payroll</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🌴</div>
+        <h4>Tourism & Hospitality</h4>
+        <p>Seasonal revenue, short-term rentals, event bookings</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     WHY TIDES FOR SC
+══════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">Why Tides</div>
+      <h2 class="display">What Makes Tides Different<br/>for SC Business Owners.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num">01</div>
+        <h3>100% Remote — Built for It</h3>
+        <p>We're not a local firm that added remote services. We were built remote-first, which means our process, communication, and delivery are optimized for businesses that never need to meet in person.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <h3>SC Is Our Anchor State</h3>
+        <p>South Carolina isn't just another market for us — it's home. We understand the SC business landscape, local industries, and the seasonality patterns of Upstate, Midlands, and Lowcountry businesses.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <h3>Fixed Monthly Pricing</h3>
+        <p>No hourly billing surprises. You pay one flat rate each month based on your transaction volume — and you always know exactly what you're getting.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">04</div>
+        <h3>Reports You Actually Understand</h3>
+        <p>We don't just hand you a spreadsheet. We deliver clean, readable financial reports each month with plain-language summaries so you can make decisions — not just file paperwork.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">05</div>
+        <h3>Tax-Ready Books, Year Round</h3>
+        <p>Your CPA will thank you. Our books are consistently maintained at a level that makes tax season faster, cheaper, and less stressful for everyone involved.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">06</div>
+        <h3>No Long-Term Contracts</h3>
+        <p>We earn your business every month. There are no lock-in agreements — just great service that makes you want to stay. Cancel anytime if it's not working.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     TESTIMONIAL
+══════════════════════════════════════ -->
+<section class="testimonial-section">
+  <div class="container">
+    <div class="testimonial-inner">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-quote">"I've been running my contracting business in Greenville for 11 years and always struggled to keep my books straight during busy season. Tides got me completely caught up, set everything up in QuickBooks, and now I get a clean report every month without lifting a finger. Best money I spend."</p>
+      <div class="t-author">
+        <div class="t-avatar">JT</div>
+        <div>
+          <div class="t-name">James T.</div>
+          <div class="t-role">General Contractor · Greenville, SC</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FAQ
+══════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">FAQ</div>
+      <h2 class="display">Common Questions from<br/>SC Business Owners.</h2>
+    </div>
+    <div class="faq-cols">
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>Do I need to be located in South Carolina?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>No — we serve businesses nationally. But South Carolina is our anchor market, and we have deep familiarity with SC industries, seasonality, and the business climate across the Upstate, Midlands, and Lowcountry regions.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>How does remote bookkeeping work?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>Everything is handled through QuickBooks Online and Puzzle.io — giving you real-time dashboards and an instant snapshot of your books at any time. You connect your bank and credit card accounts, and we handle the rest. Monthly reports and communication happen via email and a dedicated client portal.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>What if I'm months behind on my books?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>That's what our Catch-Up Bookkeeping service is for. We work backward through however many months you're behind, clean everything up, and get you to a current and accurate starting point before beginning regular monthly service.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>Do you work with my existing CPA?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>Absolutely. We provide your CPA with clean, organized books and can share access directly through QuickBooks. Many of our clients find their tax prep bills drop significantly after working with us because their books are already clean.</p></div>
+        </div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>What industries do you specialize in for SC?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>We serve all industries, but have particularly deep experience with contractors, restaurants, real estate professionals, retail, healthcare, and tourism/hospitality businesses — all major sectors in South Carolina's economy.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>How much does bookkeeping in SC cost?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>Pricing is based on your monthly transaction volume, starting at $395/month for small businesses. We offer a free consultation to assess your needs and give you an exact quote — no obligation, no pressure.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>How long does onboarding take?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>Most clients are fully onboarded within 5–7 business days. We schedule a kickoff call, connect your accounts, review your chart of accounts, and begin categorizing from day one.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>Do you cover all cities in South Carolina?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>Yes — because we're 100% remote, we serve businesses across all 46 SC counties and every city in the state. Whether you're in Myrtle Beach, Aiken, or a smaller town, we can handle your books.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CTA
+══════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="eyebrow" style="color:var(--teal);background:rgba(65,207,208,.1);border-color:rgba(65,207,208,.2);">South Carolina's Bookkeeping Partner</div>
+      <h2 class="display">Let's Get Your SC Business<br/>Financially Clean.</h2>
+      <p>Schedule a free 15-minute consultation. No pressure, no commitments — just a clear picture of where your books stand and how we can help.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-teal btn-lg">Book Your Free Consultation</a>
+        <a href="#" class="btn btn-outline-white btn-lg">See Pricing</a>
+      </div>
+      <p class="cta-note">No setup fees &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; First month guaranteed</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="logo.png" alt="Tides Bookkeeping" class="footer-logo" />
+        <p class="footer-about">Remote bookkeeping, payroll support, and financial reporting for small businesses across South Carolina and beyond.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#">Monthly Bookkeeping</a></li>
+          <li><a href="#">Catch-Up Bookkeeping</a></li>
+          <li><a href="#">Payroll Support</a></li>
+          <li><a href="#">Bank Reconciliation</a></li>
+          <li><a href="#">Financial Reporting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>SC Cities</h4>
+        <ul class="footer-links">
+          <li><a href="#">Greenville</a></li>
+          <li><a href="#">Charleston</a></li>
+          <li><a href="#">Columbia</a></li>
+          <li><a href="#">Spartanburg</a></li>
+          <li><a href="#">Myrtle Beach</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="#">hello@tidesbookkeeping.com</a></li>
+          <li><a href="#">(843) 000-0000</a></li>
+          <li><a href="#">Book Free Call</a></li>
+          <li><a href="#">Client Portal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tides Bookkeeping LLC. All rights reserved. South Carolina Bookkeeping Services.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // FAQ
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const allItems = document.querySelectorAll('.faq-item');
+    allItems.forEach(i => { if (i !== item) i.classList.remove('open'); });
+    item.classList.toggle('open');
+  }
+
+  // Hamburger
+  (function() {
+    const btn   = document.getElementById('hamburger');
+    const links = document.getElementById('navLinks');
+    if (!btn || !links) return;
+    btn.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        btn.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

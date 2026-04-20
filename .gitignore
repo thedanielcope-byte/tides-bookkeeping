@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+._*
+
+# Internal / non-web files
+_internal/
+
+# Employee Hub (separate project)
+hub/
+
+# Notion reference screenshots
+Notion Screenshots/
+
+# Claude config
+.claude/
+
+# IDE
+.vscode/
+*.swp

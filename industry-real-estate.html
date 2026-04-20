@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookkeeping for Real Estate Agents & Investors | Tides Bookkeeping</title>
+  <meta name="description" content="Tides Bookkeeping specializes in bookkeeping for real estate agents, investors, and property managers. Commission tracking, rental income, expense management — handled monthly." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── TOKENS ─────────────────────────────────────── */
+    :root {
+      --teal:    #41cfd0;
+      --teal-lt: #e6f9f9;
+      --blue:    #66c1ee;
+      --blue-lt: #e8f4fd;
+      --navy:    #215197;
+      --navy-dk: #163872;
+      --ink:     #0f1c2e;
+      --body:    #4a5568;
+      --muted:   #94a3b8;
+      --border:  #e2eaf3;
+      --bg:      #ffffff;
+      --bg-alt:  #f7fbff;
+      --shadow:  0 1px 3px rgba(15,28,46,.06), 0 4px 16px rgba(15,28,46,.08);
+      --shadow-lg: 0 8px 40px rgba(15,28,46,.12);
+      --r:       16px;
+      --r-sm:    10px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── TYPE ───────────────────────────────────────── */
+    .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 0.95; }
+    h2.display { font-size: clamp(2.4rem, 5vw, 4rem); }
+    h3 { font-size: 1.1rem; font-weight: 700; color: var(--ink); }
+    p { color: var(--body); }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal);
+      background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
+      padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--blue) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* ── LAYOUT ─────────────────────────────────────── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+    .section { padding: 96px 0; }
+    .section-alt { background: var(--bg-alt); }
+    .section-navy { background: var(--navy); }
+    .section-ink { background: var(--ink); }
+
+    /* ── BUTTONS ────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .85rem 1.75rem; border-radius: 50px;
+      font-weight: 600; font-size: .9rem; cursor: pointer;
+      transition: all .2s ease; border: 2px solid transparent;
+    }
+    .btn-primary { background: var(--navy); color: #fff; }
+    .btn-primary:hover { background: var(--navy-dk); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(33,81,151,.3); }
+    .btn-teal { background: var(--teal); color: var(--ink); font-weight: 700; }
+    .btn-teal:hover { background: #38bfc0; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(65,207,208,.4); }
+    .btn-outline { border-color: var(--border); color: var(--ink); background: #fff; }
+    .btn-outline:hover { border-color: var(--navy); color: var(--navy); }
+    .btn-outline-white { border-color: rgba(255,255,255,.35); color: #fff; }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+    .btn-lg { padding: 1rem 2.2rem; font-size: 1rem; }
+
+    /* ── MOCKUP STRIP ───────────────────────────────── */
+    .mockup-strip {
+      background: var(--teal); color: var(--ink);
+      text-align: center; padding: 8px;
+      font-size: .75rem; font-weight: 700; letter-spacing: .08em;
+      position: sticky; top: 0; z-index: 300;
+    }
+
+    /* ── NAV ────────────────────────────────────────── */
+    .nav-wrap {
+      position: sticky; top: 33px; z-index: 200;
+      background: rgba(255,255,255,.92); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem; max-width: 1180px; margin: 0 auto;
+    }
+    .nav-logo img { height: 44px; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); font-weight: 700; }
+    .nav-cta { display: flex; align-items: center; gap: .75rem; }
+
+    /* ── BREADCRUMB ─────────────────────────────────── */
+    .breadcrumb {
+      background: var(--bg-alt); border-bottom: 1px solid var(--border); padding: .75rem 0;
+    }
+    .breadcrumb-inner {
+      display: flex; align-items: center; gap: .5rem;
+      max-width: 1180px; margin: 0 auto; padding: 0 2rem;
+      font-size: .78rem; color: var(--muted);
+    }
+    .breadcrumb-inner a { color: var(--muted); transition: color .2s; }
+    .breadcrumb-inner a:hover { color: var(--navy); }
+    .breadcrumb-sep { color: var(--border); }
+    .breadcrumb-current { color: var(--navy); font-weight: 600; }
+
+    /* ── PAGE HERO ──────────────────────────────────── */
+    .page-hero {
+      padding: 88px 0 80px;
+      background: #fff; position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 65% 75% at 88% 15%, rgba(65,207,208,.11) 0%, transparent 60%),
+        radial-gradient(ellipse 45% 45% at 10% 85%, rgba(102,193,238,.08) 0%, transparent 60%);
+    }
+    .page-hero-inner {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 420px; gap: 5rem; align-items: center;
+    }
+    .page-hero h1 {
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      line-height: .93; margin-bottom: 1.5rem; color: var(--ink);
+    }
+    .page-hero p {
+      font-size: 1.05rem; line-height: 1.78; color: var(--body); max-width: 520px; margin-bottom: 2.25rem;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .hero-note { font-size: .78rem; color: var(--muted); margin-top: .75rem; }
+
+    /* Hero aside card */
+    .hero-aside {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 24px; box-shadow: var(--shadow-lg); overflow: hidden;
+    }
+    .ha-header {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a3d7a 100%);
+      padding: 1.5rem 2rem; color: #fff;
+    }
+    .ha-header .label {
+      font-size: .68rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal); display: block; margin-bottom: .5rem;
+    }
+    .ha-title { font-size: 1.05rem; font-weight: 700; }
+    .ha-subtitle { font-size: .78rem; color: rgba(255,255,255,.55); margin-top: 3px; }
+    .ha-body { padding: 1.75rem 2rem; }
+    .ha-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .8rem 0; border-bottom: 1px solid var(--border);
+      font-size: .85rem;
+    }
+    .ha-row:last-child { border-bottom: none; }
+    .ha-row strong { font-weight: 600; color: var(--ink); }
+    .ha-row span { color: var(--muted); font-size: .78rem; }
+    .ha-badge {
+      font-size: .67rem; font-weight: 700; padding: 3px 10px; border-radius: 50px;
+      letter-spacing: .04em;
+    }
+    .ha-badge.green { background: #dcfce7; color: #16a34a; }
+    .ha-badge.teal { background: var(--teal-lt); color: var(--teal); }
+    .ha-badge.blue { background: var(--blue-lt); color: var(--navy); }
+    .ha-stat-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+      background: var(--border); border: 1px solid var(--border);
+      border-radius: var(--r-sm); overflow: hidden; margin-top: 1.5rem;
+    }
+    .ha-stat {
+      background: var(--bg-alt); padding: 1rem;
+      text-align: center;
+    }
+    .ha-stat-val { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--navy); line-height: 1; }
+    .ha-stat-label { font-size: .68rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-top: 3px; }
+
+    /* ── SECTION HEADER ─────────────────────────────── */
+    .section-header { max-width: 620px; }
+    .section-header.centered { max-width: 700px; margin: 0 auto; text-align: center; }
+    .section-header p { margin-top: 1rem; font-size: 1rem; line-height: 1.75; }
+
+    /* ── WHO IT'S FOR ───────────────────────────────── */
+    .who-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; margin-top: 3.5rem;
+    }
+    .who-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 20px; padding: 2rem; box-shadow: var(--shadow);
+      transition: all .2s;
+    }
+    .who-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    .who-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .who-card h3 { margin-bottom: .75rem; }
+    .who-card p { font-size: .88rem; line-height: 1.7; margin-bottom: 1.25rem; }
+    .who-list { list-style: none; display: flex; flex-direction: column; gap: .4rem; }
+    .who-list li {
+      display: flex; align-items: flex-start; gap: .5rem;
+      font-size: .82rem; color: var(--body);
+    }
+    .who-list li::before { content: '✓'; color: var(--teal); font-weight: 700; flex-shrink: 0; }
+
+    /* ── PAIN POINTS ────────────────────────────────── */
+    .pain-layout {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+    }
+    .pain-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 2.5rem; }
+    .pain-item {
+      display: flex; align-items: flex-start; gap: 1rem;
+      padding: 1.25rem 1.5rem; background: #fff;
+      border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow);
+    }
+    .pain-x { font-size: 1.1rem; flex-shrink: 0; }
+    .pain-item h4 { font-size: .93rem; font-weight: 700; color: var(--ink); margin-bottom: .2rem; }
+    .pain-item p { font-size: .82rem; color: var(--body); line-height: 1.6; }
+    .pain-visual {
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      border-radius: 24px; padding: 2.75rem; color: #fff;
+    }
+    .pain-visual-title {
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.9rem;
+      letter-spacing: .02em; line-height: 1; margin-bottom: .5rem; color: #fff;
+    }
+    .pain-visual-sub { font-size: .85rem; color: rgba(255,255,255,.5); margin-bottom: 2rem; }
+    .pain-check-list { display: flex; flex-direction: column; gap: .85rem; }
+    .pain-check {
+      display: flex; align-items: flex-start; gap: .85rem;
+      font-size: .88rem; color: rgba(255,255,255,.75);
+    }
+    .pain-check-icon { font-size: 1.1rem; flex-shrink: 0; }
+    .pain-check strong { color: #fff; display: block; font-size: .9rem; margin-bottom: .1rem; }
+
+    /* ── SERVICES ───────────────────────────────────── */
+    .services-list {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem; margin-top: 3.5rem;
+    }
+    .svc-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 20px; padding: 2rem; box-shadow: var(--shadow);
+      transition: all .25s;
+    }
+    .svc-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    .svc-card.featured {
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      border-color: transparent; grid-column: span 2;
+    }
+    .svc-icon {
+      width: 50px; height: 50px; border-radius: 13px;
+      background: var(--teal-lt); display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; margin-bottom: 1.25rem;
+    }
+    .svc-card.featured .svc-icon { background: rgba(255,255,255,.12); }
+    .svc-card h3 { margin-bottom: .6rem; }
+    .svc-card.featured h3 { color: #fff; font-size: 1.35rem; }
+    .svc-card p { font-size: .87rem; line-height: 1.7; }
+    .svc-card.featured p { color: rgba(255,255,255,.65); }
+    .svc-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
+    .svc-tag {
+      font-size: .68rem; font-weight: 700; letter-spacing: .04em;
+      padding: 4px 10px; border-radius: 50px;
+      background: rgba(255,255,255,.1); color: rgba(255,255,255,.75);
+    }
+    .svc-tag.light { background: var(--teal-lt); color: var(--teal); }
+
+    /* ── TESTIMONIAL ────────────────────────────────── */
+    .testimonial-section {
+      background: linear-gradient(135deg, var(--navy) 0%, #122f6b 100%);
+      padding: 88px 0;
+    }
+    .testimonial-inner {
+      max-width: 860px; margin: 0 auto; text-align: center;
+    }
+    .t-stars { color: #f59e0b; font-size: 1.1rem; letter-spacing: 3px; margin-bottom: 2rem; }
+    .t-quote {
+      font-size: clamp(1.05rem, 2.5vw, 1.35rem); line-height: 1.75;
+      color: rgba(255,255,255,.88); font-style: italic; margin-bottom: 2.5rem;
+    }
+    .t-author { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+    .t-avatar {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: rgba(255,255,255,.1); border: 2px solid rgba(65,207,208,.4);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: .9rem; color: var(--teal);
+    }
+    .t-name { font-size: 1rem; font-weight: 700; color: #fff; }
+    .t-role { font-size: .8rem; color: rgba(255,255,255,.5); margin-top: 2px; }
+
+    /* ── FAQ ────────────────────────────────────────── */
+    .faq-list { margin-top: 3rem; display: flex; flex-direction: column; gap: 0; }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.4rem 0; text-align: left; gap: 1rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .faq-question h4 {
+      font-size: .97rem; font-weight: 700; color: var(--ink); flex: 1;
+    }
+    .faq-toggle {
+      width: 28px; height: 28px; border-radius: 50%;
+      border: 1.5px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 1.1rem; color: var(--muted);
+      transition: all .2s;
+    }
+    .faq-item.open .faq-toggle {
+      background: var(--teal); border-color: var(--teal); color: var(--ink);
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      display: none; padding: 0 0 1.5rem;
+      font-size: .9rem; line-height: 1.8; color: var(--body); max-width: 780px;
+    }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-two-col {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0 4rem;
+    }
+
+    /* ── LOCATION CTA STRIP ─────────────────────────── */
+    .location-strip {
+      background: var(--bg-alt); border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border); padding: 48px 0;
+    }
+    .location-inner {
+      display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;
+    }
+    .location-text h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: .4rem; }
+    .location-text p { font-size: .9rem; color: var(--body); }
+    .location-pills { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .loc-pill {
+      padding: .35rem 1rem; border-radius: 50px; font-size: .78rem; font-weight: 600;
+      border: 1px solid var(--border); background: #fff; color: var(--body);
+      transition: all .2s;
+    }
+    .loc-pill:hover { border-color: var(--teal); color: var(--teal); }
+
+    /* ── CTA SECTION ────────────────────────────────── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--navy) 0%, #122f6b 100%);
+      position: relative; overflow: hidden;
+      padding: 96px 0; text-align: center;
+    }
+    .cta-section::before {
+      content: ''; position: absolute;
+      top: -100px; right: -100px; width: 500px; height: 500px;
+      border-radius: 50%; background: radial-gradient(circle, rgba(65,207,208,.12) 0%, transparent 70%);
+    }
+    .cta-section::after {
+      content: ''; position: absolute;
+      bottom: -80px; left: -80px; width: 400px; height: 400px;
+      border-radius: 50%; background: radial-gradient(circle, rgba(102,193,238,.08) 0%, transparent 70%);
+    }
+    .cta-section .container { position: relative; z-index: 1; }
+    .cta-section h2 { color: #fff; margin-bottom: 1.25rem; max-width: 640px; margin-left: auto; margin-right: auto; }
+    .cta-section p { color: rgba(255,255,255,.7); font-size: 1.05rem; max-width: 500px; margin: 0 auto 2.5rem; }
+    .cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .cta-fine { margin-top: 1.5rem; font-size: .78rem; color: rgba(255,255,255,.35); }
+
+    /* ── FOOTER ─────────────────────────────────────── */
+    .footer { background: var(--ink); padding: 64px 0 32px; border-top: 1px solid rgba(255,255,255,.06); }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 3rem; margin-bottom: 3rem;
+    }
+    .footer-brand p { font-size: .84rem; color: rgba(255,255,255,.4); line-height: 1.7; margin: 1rem 0 1.5rem; }
+    .footer-logo img { height: 40px; filter: brightness(0) invert(1) opacity(.9); }
+    .footer-social { display: flex; gap: .6rem; }
+    .social-btn {
+      width: 34px; height: 34px; border-radius: 8px;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .8rem; color: rgba(255,255,255,.5); transition: all .2s;
+    }
+    .social-btn:hover { background: rgba(65,207,208,.15); border-color: var(--teal); color: var(--teal); }
+    .footer-col h4 {
+      font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
+      color: rgba(255,255,255,.35); margin-bottom: 1.25rem;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: .55rem; }
+    .footer-links a { font-size: .84rem; color: rgba(255,255,255,.5); transition: color .2s; }
+    .footer-links a:hover { color: var(--teal); }
+    .footer-contact p { font-size: .84rem; color: rgba(255,255,255,.5); margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.07);
+      padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.25); margin: 0; }
+    .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-bottom-links a { font-size: .78rem; color: rgba(255,255,255,.25); transition: color .2s; }
+    .footer-bottom-links a:hover { color: var(--teal); }
+
+    /* ── HAMBURGER ──────────────────────────────── */
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 6px; z-index: 201;
+    }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); border-radius: 2px; transition: all .25s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: translateX(-8px); }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ── TABLET (≤1024px) ───────────────────────── */
+    @media (max-width: 1024px) {
+      .section { padding: 72px 0; }
+      .page-hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-aside { max-width: 520px; }
+      .who-grid { grid-template-columns: repeat(2, 1fr); }
+      .pain-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .pain-visual { max-width: 560px; }
+      .services-list { grid-template-columns: repeat(2, 1fr); }
+      .svc-card.featured { grid-column: span 2; }
+      .faq-two-col { grid-template-columns: 1fr; gap: 0; }
+      .location-inner { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+
+    /* ── MOBILE (≤768px) ────────────────────────── */
+    @media (max-width: 768px) {
+      .container { padding: 0 1.25rem; }
+      .section { padding: 56px 0; }
+      .mockup-strip { position: relative; top: auto; font-size: .65rem; }
+      .nav-wrap { top: 0; }
+      .nav-inner { padding: .875rem 1.25rem; }
+      .nav-links {
+        display: none; position: fixed; inset: 0; background: #fff;
+        flex-direction: column; justify-content: center; align-items: center;
+        gap: 2.25rem; z-index: 199; list-style: none;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 1.15rem; font-weight: 600; color: var(--ink); }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
+
+      /* Hero */
+      .page-hero { padding: 52px 0 44px; }
+      .page-hero-inner { grid-template-columns: 1fr; }
+      .hero-aside { display: none; }
+      .page-hero h1 { font-size: clamp(2.4rem, 11vw, 3.5rem); }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-actions .btn { justify-content: center; }
+
+      /* Who grid */
+      .who-grid { grid-template-columns: 1fr; }
+
+      /* Pain points */
+      .pain-layout { grid-template-columns: 1fr; gap: 2rem; }
+      .pain-visual { padding: 2rem 1.5rem; }
+
+      /* Services */
+      .services-list { grid-template-columns: 1fr; }
+      .svc-card.featured { grid-column: span 1; }
+
+      /* Testimonial */
+      .testimonial-section { padding: 64px 0; }
+      .t-quote { font-size: 1rem; }
+
+      /* FAQ */
+      .faq-two-col { grid-template-columns: 1fr; gap: 0; }
+
+      /* Location */
+      .location-strip { padding: 36px 0; }
+      .location-inner { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
+      .location-pills { gap: .4rem; }
+      .loc-pill { font-size: .72rem; padding: .3rem .8rem; }
+
+      /* CTA */
+      .cta-section { padding: 64px 0; }
+      .cta-btns { flex-direction: column; align-items: center; }
+      .cta-btns .btn { width: 100%; max-width: 320px; justify-content: center; }
+
+      /* Footer */
+      .footer { padding: 48px 0 28px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: .75rem; }
+      .footer-bottom-links { justify-content: center; flex-wrap: wrap; gap: 1rem; }
+
+      h2.display { font-size: clamp(2rem, 9vw, 3rem); }
+    }
+
+    @media (max-width: 480px) {
+      .who-grid { grid-template-columns: 1fr; }
+      .ha-stat-row { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- MOCKUP STRIP -->
+<div class="mockup-strip">PAGE MOCKUP — Real Estate Bookkeeping — TidesBookkeeping.com</div>
+
+<!-- NAV -->
+<nav class="nav-wrap">
+  <div class="nav-inner">
+    <div class="nav-logo"><img src="logo.png" alt="Tides Bookkeeping" /></div>
+    <ul class="nav-links">
+      <li><a href="#">How It Works</a></li>
+      <li><a href="#" class="active">Who We Serve</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Pricing</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-outline">Sign In</a>
+      <a href="#" class="btn btn-primary">Free Consultation</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="#">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="who-we-serve.html">Who We Serve</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">Real Estate</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span style="width:6px;height:6px;border-radius:50%;background:var(--teal);"></span>
+          Real Estate Bookkeeping
+        </div>
+        <h1 class="display">
+          Bookkeeping for<br/>
+          Real Estate<br/>
+          <span class="gradient-text">Professionals.</span>
+        </h1>
+        <p>
+          Agents, investors, and property managers — your finances are more complex than most. Commission cycles, rental income, property expenses, and 1099 tracking all in one place. We handle it monthly so you can stay focused on closing deals.
+        </p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-teal btn-lg">Schedule Free Call</a>
+          <a href="#" class="btn btn-outline btn-lg">View Pricing →</a>
+        </div>
+        <p class="hero-note">No setup fees &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; Dedicated bookkeeper</p>
+      </div>
+
+      <!-- Hero Aside Card -->
+      <div class="hero-aside">
+        <div class="ha-header">
+          <span class="label">At a Glance</span>
+          <div class="ha-title">What We Track for Real Estate</div>
+          <div class="ha-subtitle">Everything handled monthly — nothing falls through the cracks</div>
+        </div>
+        <div class="ha-body">
+          <div class="ha-row">
+            <strong>Commission Income</strong>
+            <span class="ha-badge green">✓ Tracked</span>
+          </div>
+          <div class="ha-row">
+            <strong>Property Expenses</strong>
+            <span class="ha-badge green">✓ Categorized</span>
+          </div>
+          <div class="ha-row">
+            <strong>Rental Income</strong>
+            <span class="ha-badge green">✓ Reconciled</span>
+          </div>
+          <div class="ha-row">
+            <strong>1099 Contractor Payments</strong>
+            <span class="ha-badge teal">✓ Organized</span>
+          </div>
+          <div class="ha-row">
+            <strong>Marketing & Advertising</strong>
+            <span class="ha-badge teal">✓ Deducted</span>
+          </div>
+          <div class="ha-row">
+            <strong>Mileage & Auto Expenses</strong>
+            <span class="ha-badge blue">✓ Logged</span>
+          </div>
+          <div class="ha-stat-row">
+            <div class="ha-stat">
+              <div class="ha-stat-val">5.0</div>
+              <div class="ha-stat-label">Star Rating</div>
+            </div>
+            <div class="ha-stat">
+              <div class="ha-stat-val">$0</div>
+              <div class="ha-stat-label">Setup Fees</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     WHO IT'S FOR
+══════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">Who It's For</div>
+      <h2 class="display">Built for Every Side<br/>of <span class="gradient-text">Real Estate</span></h2>
+      <p>Whether you're selling homes, building a rental portfolio, or managing properties for others — we have the bookkeeping structure that fits your business.</p>
+    </div>
+
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-icon">🏡</div>
+        <h3>Real Estate Agents & Realtors</h3>
+        <p>Commission-based income is unpredictable by nature. We keep your finances organized through the slow months and the busy ones alike — so nothing surprises you at tax time.</p>
+        <ul class="who-list">
+          <li>Commission income tracking</li>
+          <li>MLS fees, marketing, signs & staging</li>
+          <li>Mileage & vehicle expense deductions</li>
+          <li>NAR dues & continuing education</li>
+          <li>Quarterly estimated tax preparation</li>
+        </ul>
+      </div>
+
+      <div class="who-card">
+        <div class="who-icon">📊</div>
+        <h3>Real Estate Investors</h3>
+        <p>One property or twenty — tracking income, expenses, and depreciation across multiple assets requires a system that scales with your portfolio without creating chaos.</p>
+        <ul class="who-list">
+          <li>Rental income & vacancy tracking per property</li>
+          <li>Repairs vs. capital improvement classification</li>
+          <li>Mortgage interest & property tax tracking</li>
+          <li>Depreciation schedules & records</li>
+          <li>Investor-ready P&L by property</li>
+        </ul>
+      </div>
+
+      <div class="who-card">
+        <div class="who-icon">🏢</div>
+        <h3>Property Managers</h3>
+        <p>Managing properties on behalf of owners means your books have to be bulletproof. We track every dollar in and out — owner distributions, vendor payments, and reserves.</p>
+        <ul class="who-list">
+          <li>Owner distribution reconciliation</li>
+          <li>Vendor & contractor payment tracking</li>
+          <li>Reserve fund management</li>
+          <li>Maintenance & repair expense logs</li>
+          <li>Monthly owner statements support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PAIN POINTS
+══════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="pain-layout">
+      <div>
+        <div class="eyebrow">Sound Familiar?</div>
+        <h2 class="display" style="margin-bottom:1rem;">The Financial Headaches<br/><span class="gradient-text">We Fix</span></h2>
+        <p style="margin-bottom:2rem;font-size:.95rem;line-height:1.75;">Real estate professionals deal with financial complexity that most generic bookkeepers don't understand. Here's what we hear from nearly every new client.</p>
+        <div class="pain-list">
+          <div class="pain-item">
+            <span class="pain-x">😩</span>
+            <div>
+              <h4>Mixed Personal and Business Finances</h4>
+              <p>Running business expenses through personal accounts — or vice versa. It feels manageable until tax season hits and your CPA charges you extra to sort it out.</p>
+            </div>
+          </div>
+          <div class="pain-item">
+            <span class="pain-x">📉</span>
+            <div>
+              <h4>No Clarity on Actual Profitability</h4>
+              <p>You closed six deals this quarter — but after splits, fees, and marketing, what did you actually keep? Most agents have no idea until the end of the year.</p>
+            </div>
+          </div>
+          <div class="pain-item">
+            <span class="pain-x">🧾</span>
+            <div>
+              <h4>Missing Deductions Every Year</h4>
+              <p>Mileage, home office, technology, staging, photography, dues — real estate agents have dozens of deductions most people miss. Disorganized books mean leaving money on the table.</p>
+            </div>
+          </div>
+          <div class="pain-item">
+            <span class="pain-x">😰</span>
+            <div>
+              <h4>Scrambling at Tax Time</h4>
+              <p>Digging through emails, bank statements, and receipts in March to reconstruct a year of business activity. It's stressful, expensive, and completely avoidable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pain-visual">
+        <div class="pain-visual-title">What Tides Delivers<br/>Every Month</div>
+        <div class="pain-visual-sub">So you never deal with any of those problems again</div>
+        <div class="pain-check-list">
+          <div class="pain-check">
+            <span class="pain-check-icon">✅</span>
+            <div>
+              <strong>Clean, Categorized Books</strong>
+              Every transaction sorted, every account reconciled. No more mystery charges or misclassified expenses.
+            </div>
+          </div>
+          <div class="pain-check">
+            <span class="pain-check-icon">✅</span>
+            <div>
+              <strong>Monthly P&L Statement</strong>
+              See exactly what you earned, what you spent, and what you kept — broken down clearly every single month.
+            </div>
+          </div>
+          <div class="pain-check">
+            <span class="pain-check-icon">✅</span>
+            <div>
+              <strong>Tax-Ready Records Year-Round</strong>
+              Your CPA gets exactly what they need — organized, accurate, and complete. No extra work, no extra bill.
+            </div>
+          </div>
+          <div class="pain-check">
+            <span class="pain-check-icon">✅</span>
+            <div>
+              <strong>Estimated Tax Reminders</strong>
+              We track your income quarterly and flag when estimated tax payments are coming due — no more penalties.
+            </div>
+          </div>
+          <div class="pain-check">
+            <span class="pain-check-icon">✅</span>
+            <div>
+              <strong>One Dedicated Bookkeeper</strong>
+              A real person who knows your business and responds fast — not a ticket system or a call center.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SERVICES
+══════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">What's Included</div>
+      <h2 class="display">Everything You Need,<br/><span class="gradient-text">Nothing You Don't</span></h2>
+      <p>Every Tides plan includes all seven core services. Real estate clients also get specific treatment for the income types and deductions unique to your business.</p>
+    </div>
+
+    <div class="services-list">
+
+      <div class="svc-card featured">
+        <div class="svc-icon">📊</div>
+        <h3>Monthly Bookkeeping</h3>
+        <p>Every account reconciled, every transaction categorized, every month — without exception. You receive a clean P&L and balance sheet you can actually understand and use to make decisions about your business.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Bank Reconciliation</span>
+          <span class="svc-tag">P&L Statement</span>
+          <span class="svc-tag">Balance Sheet</span>
+          <span class="svc-tag">Commission Tracking</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon" style="background:var(--blue-lt);">📈</div>
+        <h3>Financial Reporting</h3>
+        <p>Monthly reports that show your income, expenses, and profit by category — so you always know where you stand and can make smarter business decisions.</p>
+        <div class="svc-tags"><span class="svc-tag light">Monthly Reports</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon" style="background:rgba(33,81,151,.08);">🏦</div>
+        <h3>Bank Reconciliation</h3>
+        <p>Every business account and credit card matched and verified each month. No mystery charges. No unresolved transactions. No surprises.</p>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">📑</div>
+        <h3>Accounts Payable & Receivable</h3>
+        <p>We track vendor bills, contractor payments, and outstanding invoices so your cash flow stays healthy and nothing gets missed or paid twice.</p>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon" style="background:var(--blue-lt);">🔄</div>
+        <h3>Catch-Up Bookkeeping</h3>
+        <p>Months or years behind? We clean it all up before we start your regular monthly service — no matter how far back the backlog goes.</p>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon" style="background:rgba(33,81,151,.08);">💼</div>
+        <h3>Payroll Support</h3>
+        <p>If you have team members or pay contractors, we coordinate payroll processing and keep your tax filings clean and on schedule.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     TESTIMONIAL
+══════════════════════════════════════ -->
+<section class="testimonial-section">
+  <div class="container">
+    <div class="testimonial-inner">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-quote">
+        "Daniel is a very important part of our Real Estate team. Dan not only does our accounting, he helps us lay out a yearly forecast. His checks and balances of our expenses are extremely crucial to our daily routine and strategy. He would be an asset to anyone using his skills."
+      </p>
+      <div class="t-author">
+        <div class="t-avatar">S5</div>
+        <div>
+          <div class="t-name">Steve 54</div>
+          <div class="t-role">Real Estate Team &nbsp;·&nbsp; Verified Client</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FAQ
+══════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">Common Questions</div>
+      <h2 class="display">Real Estate Bookkeeping<br/><span class="gradient-text">FAQ</span></h2>
+      <p>Questions we hear from real estate professionals before they sign on with Tides.</p>
+    </div>
+
+    <div class="faq-list faq-two-col" style="margin-top:3.5rem;">
+
+      <div>
+        <div class="faq-item open">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>Do you work with real estate investors who own multiple properties?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes — managing multiple properties is one of our specialties. We track income and expenses per property, flag the difference between repairs (deductible now) and capital improvements (depreciated over time), and give you a clear view of profitability by unit or property. Whether you have two doors or twenty, we build a system that scales with your portfolio.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>My income is commission-based and varies month to month. Can you handle that?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Absolutely. Variable income is exactly why you need a bookkeeper who understands real estate. We track your commission income as it comes in, reconcile it against your closings, and help you plan for the slower months by giving you a clear picture of your year-to-date income at all times. We also flag when quarterly estimated tax payments are due based on your actual earnings.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>What deductions should real estate agents be tracking?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Real estate agents have access to a wide range of deductions that are easy to miss without a system in place: mileage and vehicle expenses, home office deduction, MLS and association dues, technology and software subscriptions, marketing and advertising (photography, signs, social media), staging costs, continuing education and licensing, and professional fees. We make sure every eligible expense is captured and categorized properly so your CPA has everything they need.
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>I'm behind on my books. Can you catch me up?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes — catch-up bookkeeping is included as part of onboarding. Before we start your regular monthly service, we go back and clean up however much history you have, no matter how far behind you are. We reconcile accounts, categorize transactions, and bring your books fully current. Most clients are surprised how fast we can get it done.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>Do you work with property managers as well as investors?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. Property management bookkeeping is its own discipline — tracking owner distributions, security deposits, maintenance reserves, and vendor payments separately from your own operating income. We set up a clean structure from the start so your books satisfy both your operational needs and any reporting requirements you have to your property owners.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>How much does it cost and what's included?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            We use flat monthly pricing based on your business volume — there are no hourly rates, no surprise invoices, and no setup fees. Every plan includes all seven core services: monthly bookkeeping, bank reconciliation, financial reporting, catch-up bookkeeping, accounts payable/receivable, and a dedicated bookkeeper. Schedule a free 15-minute call and we'll give you an exact quote on the spot.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     LOCATION STRIP
+══════════════════════════════════════ -->
+<section class="location-strip">
+  <div class="container">
+    <div class="location-inner">
+      <div class="location-text">
+        <h3>Serving Real Estate Professionals Nationwide</h3>
+        <p>Based in South Carolina. Expanding across the Southeast and beyond. 100% remote — we work wherever you close.</p>
+      </div>
+      <div class="location-pills">
+        <span class="loc-pill">Columbia, SC</span>
+        <span class="loc-pill">Charleston, SC</span>
+        <span class="loc-pill">Greenville, SC</span>
+        <span class="loc-pill">Myrtle Beach, SC</span>
+        <span class="loc-pill">Charlotte, NC</span>
+        <span class="loc-pill">Atlanta, GA</span>
+        <span class="loc-pill">Nashville, TN</span>
+        <span class="loc-pill">+ Nationwide</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CTA
+══════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="eyebrow" style="background:rgba(65,207,208,.15);border-color:rgba(65,207,208,.3);color:var(--teal);">
+      Get Started Today
+    </div>
+    <h2 class="display" style="font-size:clamp(2.6rem,5.5vw,4rem);margin-bottom:1.25rem;">
+      Focus on Deals.<br/>We'll Handle<br/><span class="gradient-text">The Books.</span>
+    </h2>
+    <p>Schedule a free 15-minute call. We'll review your current setup, answer your questions, and give you a flat monthly quote — no pressure.</p>
+    <div class="cta-btns">
+      <a href="#" class="btn btn-teal btn-lg">Schedule Free Consultation</a>
+      <a href="#" class="btn btn-outline-white btn-lg">View Pricing</a>
+    </div>
+    <p class="cta-fine">No credit card required &nbsp;·&nbsp; No long-term contracts &nbsp;·&nbsp; Cancel anytime</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="logo.png" alt="Tides Bookkeeping" /></div>
+        <p>Remote bookkeeping and financial services for South Carolina small businesses and beyond. Clean books. Clear numbers. Confident decisions.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">in</a>
+          <a href="#" class="social-btn">f</a>
+          <a href="#" class="social-btn">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#">Monthly Bookkeeping</a></li>
+          <li><a href="#">Catch-Up Bookkeeping</a></li>
+          <li><a href="#">Payroll Support</a></li>
+          <li><a href="#">Accounting Software Setup</a></li>
+          <li><a href="#">Financial Reporting</a></li>
+          <li><a href="#">Bank Reconciliation</a></li>
+          <li><a href="#">Accounts Payable/Receivable</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Who We Serve</h4>
+        <ul class="footer-links">
+          <li><a href="#"><strong style="color:var(--teal);">Real Estate ←</strong></a></li>
+          <li><a href="#">Contractors & Trades</a></li>
+          <li><a href="#">Restaurants & Bars</a></li>
+          <li><a href="#">Healthcare Practices</a></li>
+          <li><a href="#">Professional Services</a></li>
+          <li><a href="#">E-Commerce & Retail</a></li>
+          <li><a href="who-we-serve.html">All Industries →</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact footer-col">
+        <h4>Contact</h4>
+        <p>📧 hello@tidesbookkeeping.com</p>
+        <p>📞 (843) 000-0000</p>
+        <p>📍 South Carolina</p>
+        <div style="margin-top:1.25rem;">
+          <a href="#" class="btn btn-teal" style="font-size:.82rem;padding:.65rem 1.4rem;">Book a Free Call</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tides Bookkeeping LLC. All rights reserved. Real Estate Bookkeeping Services.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  (function() {
+    const btn   = document.getElementById('hamburger');
+    const links = document.querySelector('.nav-links');
+    if (!btn || !links) return;
+    btn.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        btn.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

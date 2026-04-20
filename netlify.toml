@@ -1,0 +1,91 @@
+# ── Netlify Configuration for Tides Bookkeeping ──
+
+[build]
+  publish = "."
+  # No build command needed — static HTML
+
+# ── Clean URLs: /services instead of /services.html ──
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 200
+
+[[redirects]]
+  from = "/service-monthly-bookkeeping"
+  to = "/service-monthly-bookkeeping.html"
+  status = 200
+
+[[redirects]]
+  from = "/who-we-serve"
+  to = "/who-we-serve.html"
+  status = 200
+
+[[redirects]]
+  from = "/industry-real-estate"
+  to = "/industry-real-estate.html"
+  status = 200
+
+[[redirects]]
+  from = "/glossary"
+  to = "/glossary.html"
+  status = 200
+
+[[redirects]]
+  from = "/state-south-carolina"
+  to = "/state-south-carolina.html"
+  status = 200
+
+[[redirects]]
+  from = "/county-greenville-sc"
+  to = "/county-greenville-sc.html"
+  status = 200
+
+[[redirects]]
+  from = "/city-greenville-sc"
+  to = "/city-greenville-sc.html"
+  status = 200
+
+# ── Block _internal folder from being served ──
+[[redirects]]
+  from = "/_internal/*"
+  to = /
+  status = 404
+
+# ── Custom 404 (future) ──
+# [[redirects]]
+#   from = "/*"
+#   to = "/404.html"
+#   status = 404
+
+# ── Headers for performance + SEO ──
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

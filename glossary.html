@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookkeeping Glossary — Business Finance Terms Simply Explained | Tides Bookkeeping</title>
+  <meta name="description" content="107 bookkeeping, tax, payroll, and industry-specific financial terms defined in plain English. From accounts payable to year-end close — your complete small business finance glossary." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── TOKENS ─────────────────────────────────────── */
+    :root {
+      --teal:    #41cfd0;
+      --teal-lt: #e6f9f9;
+      --blue:    #66c1ee;
+      --blue-lt: #e8f4fd;
+      --navy:    #215197;
+      --navy-dk: #163872;
+      --ink:     #0f1c2e;
+      --body:    #4a5568;
+      --muted:   #94a3b8;
+      --border:  #e2eaf3;
+      --bg:      #ffffff;
+      --bg-alt:  #f7fbff;
+      --shadow:  0 1px 3px rgba(15,28,46,.06), 0 4px 16px rgba(15,28,46,.08);
+      --shadow-lg: 0 8px 40px rgba(15,28,46,.12);
+      --r:       16px;
+      --r-sm:    10px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── TYPE ───────────────────────────────────────── */
+    .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 0.95; }
+    h2.display { font-size: clamp(2.4rem, 5vw, 4rem); }
+    h3 { font-size: 1.1rem; font-weight: 700; color: var(--ink); }
+    p { color: var(--body); }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal);
+      background: rgba(65,207,208,.15); border: 1px solid rgba(65,207,208,.25);
+      padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--blue) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* ── LAYOUT ─────────────────────────────────────── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+    .section { padding: 96px 0; }
+    .section-alt { background: var(--bg-alt); }
+
+    /* ── BUTTONS ────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .85rem 1.75rem; border-radius: 50px;
+      font-weight: 600; font-size: .9rem; cursor: pointer;
+      transition: all .2s ease; border: 2px solid transparent;
+    }
+    .btn-primary { background: var(--navy); color: #fff; }
+    .btn-primary:hover { background: var(--navy-dk); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(33,81,151,.3); }
+    .btn-teal { background: var(--teal); color: var(--ink); font-weight: 700; }
+    .btn-teal:hover { background: #38bfc0; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(65,207,208,.4); }
+    .btn-outline { border-color: var(--border); color: var(--ink); background: #fff; }
+    .btn-outline:hover { border-color: var(--navy); color: var(--navy); }
+    .btn-outline-white { border-color: rgba(255,255,255,.35); color: #fff; }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+    .btn-lg { padding: 1rem 2.2rem; font-size: 1rem; }
+
+    /* ── MOCKUP STRIP ───────────────────────────────── */
+    .mockup-strip {
+      background: var(--teal); color: var(--ink);
+      text-align: center; padding: 8px;
+      font-size: .75rem; font-weight: 700; letter-spacing: .08em;
+      position: sticky; top: 0; z-index: 300;
+    }
+
+    /* ── NAV ────────────────────────────────────────── */
+    .nav-wrap {
+      position: sticky; top: 33px; z-index: 200;
+      background: rgba(255,255,255,.92); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem; max-width: 1180px; margin: 0 auto;
+    }
+    .nav-logo img { height: 44px; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); font-weight: 700; }
+    .nav-cta { display: flex; align-items: center; gap: .75rem; }
+    .nav-signin { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
+    .nav-signin:hover { color: var(--navy); }
+
+    /* ── HAMBURGER ──────────────────────────────────── */
+    .hamburger {
+      display: none; background: none; border: none; cursor: pointer;
+      padding: .4rem; flex-direction: column; gap: 5px; z-index: 1001;
+    }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); transition: all .25s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── BREADCRUMB ─────────────────────────────────── */
+    .breadcrumb { background: var(--bg-alt); border-bottom: 1px solid var(--border); padding: .75rem 0; }
+    .breadcrumb-inner {
+      display: flex; align-items: center; gap: .5rem; flex-wrap: wrap;
+      max-width: 1180px; margin: 0 auto; padding: 0 2rem;
+      font-size: .78rem; color: var(--muted);
+    }
+    .breadcrumb-inner a { color: var(--muted); transition: color .2s; }
+    .breadcrumb-inner a:hover { color: var(--navy); }
+    .breadcrumb-sep { color: var(--border); }
+    .breadcrumb-current { color: var(--navy); font-weight: 600; }
+
+    /* ── GLOSSARY HERO ──────────────────────────────── */
+    .glossary-hero {
+      background: var(--ink); padding: 80px 0 72px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .glossary-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 70% at 15% 50%, rgba(65,207,208,.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 85% 50%, rgba(102,193,238,.06) 0%, transparent 60%);
+    }
+    .glossary-hero .container { position: relative; z-index: 1; }
+    .glossary-hero h1 { color: #fff; margin-bottom: 1rem; }
+    .glossary-hero p { font-size: 1.05rem; color: rgba(255,255,255,.55); max-width: 600px; margin: 0 auto 2.5rem; }
+    .hero-meta {
+      display: flex; align-items: center; justify-content: center; gap: 2rem;
+      flex-wrap: wrap; margin-bottom: 2.5rem;
+    }
+    .hero-meta-item {
+      display: flex; align-items: center; gap: .5rem;
+      font-size: .82rem; color: rgba(255,255,255,.4);
+    }
+    .hero-meta-item span { color: var(--teal); font-weight: 700; }
+
+    /* Search Input */
+    .search-wrap {
+      position: relative; max-width: 600px; margin: 0 auto;
+    }
+    .search-wrap .search-icon {
+      position: absolute; left: 1.25rem; top: 50%; transform: translateY(-50%);
+      color: var(--muted); font-size: 1rem; pointer-events: none;
+    }
+    .search-input {
+      width: 100%; padding: 1.1rem 3.5rem 1.1rem 3.2rem;
+      border-radius: 50px; border: 2px solid rgba(255,255,255,.1);
+      background: rgba(255,255,255,.07); color: #fff;
+      font-size: 1rem; font-family: 'Inter', sans-serif;
+      transition: all .2s; outline: none;
+    }
+    .search-input::placeholder { color: rgba(255,255,255,.3); }
+    .search-input:focus { border-color: var(--teal); background: rgba(255,255,255,.1); }
+    .search-clear {
+      position: absolute; right: 1.25rem; top: 50%; transform: translateY(-50%);
+      background: none; border: none; cursor: pointer; color: rgba(255,255,255,.3);
+      font-size: 1.1rem; display: none; padding: .2rem; transition: color .15s;
+    }
+    .search-clear:hover { color: rgba(255,255,255,.7); }
+    .search-clear.visible { display: block; }
+
+    /* ── FILTER PILLS ───────────────────────────────── */
+    .filter-bar {
+      background: #fff; border-bottom: 1px solid var(--border);
+      padding: 1rem 0; position: sticky; top: 109px; z-index: 150;
+    }
+    .filter-pills-wrap {
+      max-width: 1180px; margin: 0 auto; padding: 0 2rem;
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .filter-pills-wrap::-webkit-scrollbar { display: none; }
+    .filter-pills {
+      display: flex; gap: .5rem; align-items: center;
+      white-space: nowrap; padding-bottom: 2px;
+    }
+    .filter-pill {
+      padding: .45rem 1rem; border-radius: 50px;
+      border: 1.5px solid var(--border); background: #fff;
+      font-size: .78rem; font-weight: 600; color: var(--body);
+      cursor: pointer; transition: all .18s; white-space: nowrap;
+      font-family: 'Inter', sans-serif;
+    }
+    .filter-pill:hover { border-color: var(--teal); color: var(--navy); }
+    .filter-pill.active { background: var(--navy); border-color: var(--navy); color: #fff; }
+    .filter-pill[data-filter="all"].active { background: var(--teal); border-color: var(--teal); color: var(--ink); }
+
+    /* ── ALPHA NAV ──────────────────────────────────── */
+    .alpha-nav {
+      background: var(--bg-alt); border-bottom: 1px solid var(--border);
+      padding: .6rem 0; position: sticky; top: 156px; z-index: 140;
+    }
+    .alpha-nav-inner {
+      max-width: 1180px; margin: 0 auto; padding: 0 2rem;
+      display: flex; align-items: center; gap: .15rem;
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .alpha-nav-inner::-webkit-scrollbar { display: none; }
+    .alpha-link {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 32px; height: 32px; border-radius: 6px;
+      font-size: .8rem; font-weight: 700; color: var(--body);
+      font-family: 'Bebas Neue', sans-serif; letter-spacing: .03em;
+      cursor: pointer; transition: all .15s; flex-shrink: 0;
+      border: none; background: none;
+    }
+    .alpha-link:hover { background: var(--teal-lt); color: var(--teal); }
+    .alpha-link.active { background: var(--teal); color: var(--ink); }
+    .alpha-link.disabled { color: var(--border); cursor: default; pointer-events: none; }
+
+    /* ── GLOSSARY CONTENT ───────────────────────────── */
+    .glossary-content { padding: 4rem 0 6rem; }
+    .glossary-inner { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+
+    /* Term count / results bar */
+    .results-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 2.5rem; padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .results-count {
+      font-size: .82rem; color: var(--muted);
+    }
+    .results-count strong { color: var(--ink); font-weight: 700; }
+    .reset-link {
+      font-size: .82rem; font-weight: 600; color: var(--teal); cursor: pointer;
+      display: none;
+    }
+    .reset-link.visible { display: block; }
+
+    /* Letter Section */
+    .letter-section { margin-bottom: 3.5rem; scroll-margin-top: 220px; }
+    .letter-divider {
+      display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.75rem;
+    }
+    .letter-divider .letter-char {
+      font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem;
+      line-height: 1; color: var(--teal); flex-shrink: 0; letter-spacing: .02em;
+    }
+    .letter-divider hr { flex: 1; border: none; border-top: 1px solid var(--border); }
+
+    /* Terms Grid */
+    .terms-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.1rem;
+    }
+
+    /* Term Card */
+    .term-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: var(--r); padding: 1.5rem 1.75rem;
+      box-shadow: var(--shadow); transition: all .2s;
+    }
+    .term-card:hover { border-color: rgba(65,207,208,.45); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .term-header {
+      display: flex; align-items: flex-start; justify-content: space-between;
+      gap: 1rem; margin-bottom: .75rem;
+    }
+    .term-name {
+      font-size: 1rem; font-weight: 700; color: var(--ink); line-height: 1.35;
+    }
+    .term-tag {
+      font-size: .63rem; font-weight: 700; letter-spacing: .05em;
+      text-transform: uppercase; padding: 3px 9px; border-radius: 50px;
+      flex-shrink: 0; white-space: nowrap;
+    }
+    .tag-core { background: var(--teal-lt); color: #1ab8b9; }
+    .tag-filing { background: var(--blue-lt); color: var(--navy); }
+    .tag-ind { background: #e8eef8; color: var(--navy); }
+    .term-def {
+      font-size: .87rem; line-height: 1.75; color: var(--body);
+    }
+
+    /* No results */
+    .no-results {
+      display: none; text-align: center; padding: 5rem 2rem;
+      color: var(--muted);
+    }
+    .no-results .nr-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .no-results h3 { font-size: 1.1rem; color: var(--body); margin-bottom: .5rem; }
+    .no-results p { font-size: .88rem; }
+
+    /* ── MID-PAGE CTA ───────────────────────────────── */
+    .mid-cta {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a3d7a 100%);
+      border-radius: 20px; padding: 3rem; margin: 3.5rem 0;
+      display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .mid-cta-text h3 { color: #fff; font-size: 1.3rem; margin-bottom: .5rem; }
+    .mid-cta-text p { font-size: .9rem; color: rgba(255,255,255,.55); }
+    .mid-cta .btn-teal { flex-shrink: 0; }
+
+    /* ── BOTTOM CTA ─────────────────────────────────── */
+    .cta-section { background: var(--ink); padding: 96px 0; }
+    .cta-inner { text-align: center; max-width: 720px; margin: 0 auto; }
+    .cta-inner h2 { font-size: clamp(2rem, 5vw, 3.5rem); color: #fff; margin-bottom: 1.25rem; }
+    .cta-inner p { font-size: 1.05rem; color: rgba(255,255,255,.6); margin-bottom: 2.5rem; }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .cta-note { font-size: .78rem; color: rgba(255,255,255,.3); margin-top: 1.25rem; }
+
+    /* ── FOOTER ─────────────────────────────────────── */
+    footer { background: #080f1a; padding: 72px 0 32px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-logo { height: 40px; margin-bottom: 1.25rem; filter: brightness(10); }
+    .footer-about { font-size: .84rem; color: rgba(255,255,255,.35); line-height: 1.75; max-width: 280px; }
+    .footer-col h4 {
+      font-size: .66rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: .12em; color: rgba(255,255,255,.25); margin-bottom: 1.25rem;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: .55rem; }
+    .footer-links a { font-size: .82rem; color: rgba(255,255,255,.4); transition: color .15s; }
+    .footer-links a:hover { color: rgba(255,255,255,.8); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.06); padding-top: 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: .72rem; color: rgba(255,255,255,.2); }
+    .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-bottom-links a { font-size: .72rem; color: rgba(255,255,255,.2); transition: color .15s; }
+    .footer-bottom-links a:hover { color: rgba(255,255,255,.5); }
+
+    /* ── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .terms-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column; position: fixed;
+        inset: 0; background: #fff; z-index: 1000;
+        align-items: center; justify-content: center; gap: 2rem;
+      }
+      .nav-links.open li a { font-size: 1.4rem; color: var(--ink); }
+      .terms-grid { grid-template-columns: 1fr; }
+      .mid-cta { flex-direction: column; text-align: center; }
+      .mid-cta .btn-teal { width: 100%; justify-content: center; }
+      .filter-bar { top: 109px; }
+      .alpha-nav { top: 156px; }
+      .cta-actions { flex-direction: column; align-items: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-bottom-links { justify-content: center; }
+      h2.display { font-size: 2.2rem; }
+    }
+    @media (max-width: 480px) {
+      .glossary-hero { padding: 60px 0 52px; }
+      .container { padding: 0 1rem; }
+      .hero-meta { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- MOCKUP STRIP -->
+<div class="mockup-strip">Glossary Page Mockup &nbsp;·&nbsp; <span>TidesBookkeeping.com/glossary</span> &nbsp;·&nbsp; For Review Only</div>
+
+<!-- NAV -->
+<nav class="nav-wrap">
+  <div class="nav-inner">
+    <div class="nav-logo"><img src="logo.png" alt="Tides Bookkeeping" /></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">How It Works</a></li>
+      <li><a href="#">Who We Serve</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Pricing</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#" class="nav-signin">Sign In</a>
+      <a href="#" class="btn btn-primary">Free Consultation</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="#">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="#">Resources</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">Bookkeeping Glossary</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="glossary-hero">
+  <div class="container">
+    <div class="eyebrow">📚 Bookkeeping Glossary</div>
+    <h1 class="display" style="font-size:clamp(3rem,7vw,5.5rem);">Business Finance Terms,<br/><span class="gradient-text">Simply Explained.</span></h1>
+    <p>107 bookkeeping, tax, payroll, and industry-specific terms — defined in plain English for small business owners who'd rather grow their business than decode financial jargon.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><span>107</span> Total Terms</div>
+      <div class="hero-meta-item"><span>13</span> Categories</div>
+      <div class="hero-meta-item"><span>8</span> Industry Verticals</div>
+    </div>
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" class="search-input" id="glossarySearch" placeholder="Search any term, e.g. &quot;depreciation&quot; or &quot;cash flow&quot;..." autocomplete="off" />
+      <button class="search-clear" id="searchClear" aria-label="Clear search">✕</button>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER PILLS -->
+<div class="filter-bar">
+  <div class="filter-pills-wrap">
+    <div class="filter-pills" id="filterPills">
+      <button class="filter-pill active" data-filter="all">All Terms</button>
+      <button class="filter-pill" data-filter="bookkeeping">Core Bookkeeping</button>
+      <button class="filter-pill" data-filter="tax">Tax &amp; Filing</button>
+      <button class="filter-pill" data-filter="payroll">Payroll</button>
+      <button class="filter-pill" data-filter="reporting">Financial Reporting</button>
+      <button class="filter-pill" data-filter="contractors">Contractors</button>
+      <button class="filter-pill" data-filter="restaurants">Restaurants</button>
+      <button class="filter-pill" data-filter="real-estate">Real Estate</button>
+      <button class="filter-pill" data-filter="healthcare">Healthcare</button>
+      <button class="filter-pill" data-filter="ecommerce">E-Commerce</button>
+      <button class="filter-pill" data-filter="transportation">Transportation</button>
+      <button class="filter-pill" data-filter="professional">Professional Services</button>
+      <button class="filter-pill" data-filter="tech">Tech &amp; Startups</button>
+    </div>
+  </div>
+</div>
+
+<!-- ALPHA NAV -->
+<div class="alpha-nav" id="alphNav">
+  <div class="alpha-nav-inner">
+    <button class="alpha-link" data-letter="num">#</button>
+    <button class="alpha-link" data-letter="A">A</button>
+    <button class="alpha-link" data-letter="B">B</button>
+    <button class="alpha-link" data-letter="C">C</button>
+    <button class="alpha-link" data-letter="D">D</button>
+    <button class="alpha-link" data-letter="E">E</button>
+    <button class="alpha-link" data-letter="F">F</button>
+    <button class="alpha-link" data-letter="G">G</button>
+    <button class="alpha-link disabled" data-letter="H">H</button>
+    <button class="alpha-link" data-letter="I">I</button>
+    <button class="alpha-link" data-letter="J">J</button>
+    <button class="alpha-link" data-letter="K">K</button>
+    <button class="alpha-link" data-letter="L">L</button>
+    <button class="alpha-link" data-letter="M">M</button>
+    <button class="alpha-link" data-letter="N">N</button>
+    <button class="alpha-link" data-letter="O">O</button>
+    <button class="alpha-link" data-letter="P">P</button>
+    <button class="alpha-link" data-letter="Q">Q</button>
+    <button class="alpha-link" data-letter="R">R</button>
+    <button class="alpha-link" data-letter="S">S</button>
+    <button class="alpha-link" data-letter="T">T</button>
+    <button class="alpha-link" data-letter="U">U</button>
+    <button class="alpha-link" data-letter="V">V</button>
+    <button class="alpha-link" data-letter="W">W</button>
+    <button class="alpha-link disabled" data-letter="X">X</button>
+    <button class="alpha-link" data-letter="Y">Y</button>
+    <button class="alpha-link disabled" data-letter="Z">Z</button>
+  </div>
+</div>
+
+<!-- GLOSSARY CONTENT -->
+<div class="glossary-content">
+  <div class="glossary-inner">
+
+    <!-- Results bar -->
+    <div class="results-bar">
+      <p class="results-count">Showing <strong id="visibleCount">107</strong> of 107 terms</p>
+      <span class="reset-link" id="resetLink">Clear filters ✕</span>
+    </div>
+
+    <!-- No results message -->
+    <div class="no-results" id="noResults">
+      <div class="nr-icon">🔍</div>
+      <h3>No terms found</h3>
+      <p>Try a different search term or <span class="reset-link visible" id="noResultsReset" style="display:inline;cursor:pointer;">clear your filters</span>.</p>
+    </div>
+
+    <!-- ── # (Numbers) ── -->
+    <section class="letter-section" id="letter-num">
+      <div class="letter-divider"><span class="letter-char">#</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="real-estate" data-search="1031 exchange tax deferred real estate investment property">
+          <div class="term-header"><span class="term-name">1031 Exchange</span><span class="term-tag tag-ind">Real Estate</span></div>
+          <p class="term-def">A tax-deferral strategy that allows real estate investors to sell one investment property and reinvest the proceeds into a "like-kind" property without paying capital gains taxes at the time of sale. The exchange must follow strict IRS timelines — 45 days to identify the replacement property and 180 days to close. Proper bookkeeping of your original property's cost basis is essential to calculate any deferred gain correctly.</p>
+        </div>
+
+        <div class="term-card" data-category="tax" data-search="1099 form independent contractor income reporting irs">
+          <div class="term-header"><span class="term-name">1099 Form</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">An IRS information return used to report income paid to non-employees, most commonly independent contractors. If your business pays a contractor $600 or more during the year, you're required to issue them a 1099-NEC. Accurate bookkeeping throughout the year makes 1099 preparation simple — disorganized records often lead to missed filings and IRS penalties.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── A ── -->
+    <section class="letter-section" id="letter-A">
+      <div class="letter-divider"><span class="letter-char">A</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="bookkeeping" data-search="accounts payable ap money owed vendors suppliers current liability">
+          <div class="term-header"><span class="term-name">Accounts Payable (AP)</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">The total amount your business currently owes to vendors, suppliers, and creditors for goods or services received but not yet paid. AP is listed as a current liability on your balance sheet. Keeping AP organized ensures you never miss a payment deadline, avoid late fees, and maintain strong vendor relationships.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="accounts receivable ar money owed customers invoices asset">
+          <div class="term-header"><span class="term-name">Accounts Receivable (AR)</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">Money that customers owe your business for products delivered or services rendered but not yet paid for. AR is listed as a current asset on your balance sheet. Monitoring AR closely is critical to cash flow — the longer invoices go unpaid, the harder it becomes to meet your own obligations.</p>
+        </div>
+
+        <div class="term-card" data-category="healthcare" data-search="accounts receivable days ar days healthcare practice billing collections">
+          <div class="term-header"><span class="term-name">Accounts Receivable Days</span><span class="term-tag tag-ind">Healthcare</span></div>
+          <p class="term-def">A metric that measures the average number of days it takes a healthcare practice to collect payments after services are rendered. Calculated as AR Balance ÷ Daily Revenue. A high AR days number can signal slow insurance reimbursements or billing inefficiencies — and is a key performance indicator for practice profitability.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="accrual accounting method revenue expenses earned incurred">
+          <div class="term-header"><span class="term-name">Accrual Accounting</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">An accounting method that records revenue when it's earned and expenses when they're incurred, regardless of when cash actually changes hands. For example, if you complete a job in December but don't get paid until January, the revenue is recorded in December. This method gives a more accurate picture of your business's financial health than cash basis accounting.</p>
+        </div>
+
+        <div class="term-card" data-category="contractors" data-search="aia billing construction american institute architects progress payment">
+          <div class="term-header"><span class="term-name">AIA Billing</span><span class="term-tag tag-ind">Contractors</span></div>
+          <p class="term-def">A standardized billing format developed by the American Institute of Architects, widely used in construction for progress billing on large projects. AIA billing documents (G702 and G703) show work completed, materials stored, and amounts previously billed. Clean bookkeeping is essential for accurately completing AIA pay applications and tracking retainage balances.</p>
+        </div>
+
+        <div class="term-card" data-category="tax" data-search="amortization intangible asset cost spread useful life loan">
+          <div class="term-header"><span class="term-name">Amortization</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">The process of spreading the cost of an intangible asset — such as a patent, trademark, or business loan — over its useful life. Similar to depreciation but applied to non-physical assets. For a business loan, amortization refers to the gradual reduction of the principal balance through scheduled payments, with each payment split between principal and interest.</p>
+        </div>
+
+        <div class="term-card" data-category="tech" data-search="arr annual recurring revenue subscription saas software">
+          <div class="term-header"><span class="term-name">ARR (Annual Recurring Revenue)</span><span class="term-tag tag-ind">Tech &amp; Startups</span></div>
+          <p class="term-def">The total value of predictable, recurring revenue generated by subscriptions or contracts on an annualized basis. ARR = MRR × 12. It's one of the most important financial metrics for SaaS and subscription businesses because it shows the stability and growth trajectory of revenue — making it essential for investor reporting and forecasting.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="assets owned business cash equipment property inventory value balance sheet">
+          <div class="term-header"><span class="term-name">Assets</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">Everything your business owns that has monetary value — including cash, accounts receivable, inventory, equipment, real estate, and intellectual property. Assets are listed on the balance sheet and classified as current (cash, AR, inventory) or non-current (property, equipment, long-term investments). Understanding your asset base is foundational to understanding your business's net worth.</p>
+        </div>
+
+        <div class="term-card" data-category="tax" data-search="audit irs examination financial records tax review">
+          <div class="term-header"><span class="term-name">Audit</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">A formal examination of your financial records and statements by either the IRS (tax audit) or an independent accounting firm (financial audit). IRS audits are triggered by red flags like unusually large deductions or income inconsistencies. Maintaining clean, well-organized books throughout the year is the best protection against audit risk — and makes the process far less stressful if one occurs.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── B ── -->
+    <section class="letter-section" id="letter-B">
+      <div class="letter-divider"><span class="letter-char">B</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="bookkeeping" data-search="balance sheet financial statement assets liabilities equity snapshot">
+          <div class="term-header"><span class="term-name">Balance Sheet</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">A financial statement that provides a snapshot of your business's financial position at a specific point in time, showing what you own (assets), what you owe (liabilities), and what's left (equity). The fundamental equation is: Assets = Liabilities + Equity. A well-maintained balance sheet is one of the three core financial reports your bookkeeper should deliver every month.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="bank reconciliation matching books bank statements discrepancies monthly">
+          <div class="term-header"><span class="term-name">Bank Reconciliation</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">The process of comparing your accounting records to your bank and credit card statements to ensure they match exactly. Reconciliation catches errors, duplicate charges, missing transactions, and potential fraud before they snowball. Tides reconciles every account every month so discrepancies are identified and resolved quickly.</p>
+        </div>
+
+        <div class="term-card" data-category="professional" data-search="billable hours client time invoiced service revenue">
+          <div class="term-header"><span class="term-name">Billable Hours</span><span class="term-tag tag-ind">Professional Services</span></div>
+          <p class="term-def">Time spent on client work that can be directly invoiced to a client. Tracking billable vs. non-billable hours is essential for service businesses — it directly impacts revenue recognition, project profitability analysis, and payroll calculations. Accurate time-tracking feeds directly into clean books and accurate financial reporting.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="bookkeeping recording organizing financial transactions daily">
+          <div class="term-header"><span class="term-name">Bookkeeping</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">The systematic process of recording, organizing, and maintaining a business's daily financial transactions — including income, expenses, invoices, and payments. Bookkeeping is the foundation of all accounting and financial reporting. Without accurate bookkeeping, it's impossible to produce reliable financial statements, prepare accurate taxes, or make confident business decisions.</p>
+        </div>
+
+        <div class="term-card" data-category="reporting" data-search="break even analysis revenue costs profit loss pricing">
+          <div class="term-header"><span class="term-name">Break-Even Analysis</span><span class="term-tag tag-core">Financial Reporting</span></div>
+          <p class="term-def">A calculation that identifies the exact point at which your total revenue equals your total costs — meaning you're making neither a profit nor a loss. Break-even point = Fixed Costs ÷ (Price per Unit − Variable Cost per Unit). Understanding your break-even point helps you set pricing, plan sales targets, and evaluate the viability of new products or services.</p>
+        </div>
+
+        <div class="term-card" data-category="reporting" data-search="budget forecast plan projection financial goals variance">
+          <div class="term-header"><span class="term-name">Budget vs. Forecast</span><span class="term-tag tag-core">Financial Reporting</span></div>
+          <p class="term-def">A budget is a financial plan set at the beginning of a period based on expected revenue and expenses. A forecast is an updated projection that reflects actual results to date and revised expectations going forward. Budgets are static goals; forecasts are dynamic predictions. Both are essential for managing cash flow and setting realistic financial targets.</p>
+        </div>
+
+        <div class="term-card" data-category="tech" data-search="burn rate startup cash spending monthly expenses runway">
+          <div class="term-header"><span class="term-name">Burn Rate</span><span class="term-tag tag-ind">Tech &amp; Startups</span></div>
+          <p class="term-def">The rate at which a startup or early-stage company is spending its cash reserves, typically expressed as a monthly figure. If a company has $500,000 in the bank and spends $50,000/month, its burn rate is $50,000 and it has 10 months of runway. Burn rate is a critical metric for any founder who has raised capital and needs to manage cash carefully before reaching profitability.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── C ── -->
+    <section class="letter-section" id="letter-C">
+      <div class="letter-divider"><span class="letter-char">C</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="tech" data-search="cac customer acquisition cost marketing sales advertising">
+          <div class="term-header"><span class="term-name">CAC (Customer Acquisition Cost)</span><span class="term-tag tag-ind">Tech &amp; Startups</span></div>
+          <p class="term-def">The total cost of acquiring a new customer, including sales, marketing, and advertising expenses. CAC = Total Sales & Marketing Spend ÷ Number of New Customers Acquired. Tracking CAC alongside LTV (lifetime value) is essential for understanding whether your customer acquisition strategy is profitable and sustainable at scale.</p>
+        </div>
+
+        <div class="term-card" data-category="real-estate" data-search="cap rate capitalization rate investment property return noi">
+          <div class="term-header"><span class="term-name">Cap Rate</span><span class="term-tag tag-ind">Real Estate</span></div>
+          <p class="term-def">Short for capitalization rate, it measures the expected annual return on an investment property relative to its value. Calculated as Net Operating Income ÷ Current Market Value. A higher cap rate generally indicates higher return potential but also higher risk. Real estate investors use cap rates to compare properties and evaluate investment performance across their portfolios.</p>
+        </div>
+
+        <div class="term-card" data-category="reporting" data-search="cash basis accounting method revenue expenses paid received">
+          <div class="term-header"><span class="term-name">Cash Basis Accounting</span><span class="term-tag tag-core">Financial Reporting</span></div>
+          <p class="term-def">An accounting method that records revenue when cash is actually received and expenses when cash is actually paid — regardless of when the work was done or invoice issued. Simpler than accrual accounting, cash basis is popular with very small businesses and sole proprietors. However, it can create a misleading picture of profitability if you have significant outstanding invoices or unpaid bills.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="cash flow money movement business inflows outflows positive negative">
+          <div class="term-header"><span class="term-name">Cash Flow</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">The movement of money into and out of your business over a given period. Positive cash flow means more money is coming in than going out; negative cash flow means the opposite. A business can be profitable on paper but still run out of cash — which is why cash flow management is often more important day-to-day than net income.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="cash flow statement report operating investing financing liquidity">
+          <div class="term-header"><span class="term-name">Cash Flow Statement</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">One of the three core financial statements, it shows all cash inflows and outflows from operating, investing, and financing activities during a reporting period. Unlike the P&L, which can include non-cash items, the cash flow statement shows exactly how much cash your business generated or consumed. It's the most accurate indicator of short-term liquidity.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="chart of accounts categories quickbooks accounting system list">
+          <div class="term-header"><span class="term-name">Chart of Accounts</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">A structured list of all the financial categories — accounts — used to organize your business's transactions in your accounting software. A well-built chart of accounts is the backbone of clean bookkeeping: it ensures transactions are categorized consistently so your reports are accurate and meaningful. Customizing it to your industry makes your financial reports far more useful.</p>
+        </div>
+
+        <div class="term-card" data-category="real-estate" data-search="closing costs fees transaction real estate purchase sale">
+          <div class="term-header"><span class="term-name">Closing Costs</span><span class="term-tag tag-ind">Real Estate</span></div>
+          <p class="term-def">The fees and expenses paid at the closing of a real estate transaction — including lender fees, title insurance, appraisal fees, attorney fees, and recording fees. Closing costs typically run 2–5% of the purchase price. For real estate investors, proper categorization of closing costs between capital expenses and deductible items is essential for accurate tax reporting.</p>
+        </div>
+
+        <div class="term-card" data-category="real-estate" data-search="commission split real estate agent brokerage referral">
+          <div class="term-header"><span class="term-name">Commission Split</span><span class="term-tag tag-ind">Real Estate</span></div>
+          <p class="term-def">The division of a real estate commission between the listing agent, buyer's agent, their respective brokerages, and any referral partners. For example, a 6% commission might be split 50/50 between listing and buyer sides, with each agent further splitting with their brokerage. Tracking commission splits accurately is one of the most important bookkeeping tasks for real estate agents.</p>
+        </div>
+
+        <div class="term-card" data-category="tax" data-search="cost basis original value asset capital gains tax">
+          <div class="term-header"><span class="term-name">Cost Basis</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">The original value of an asset — typically what you paid for it — used to calculate capital gains or losses when the asset is eventually sold. For real estate investors, cost basis includes the purchase price plus acquisition costs and capital improvements. Keeping accurate records of your cost basis from day one saves significant money and headaches at tax time.</p>
+        </div>
+
+        <div class="term-card" data-category="restaurants" data-search="cost of goods sold cogs food beverage ingredients direct cost">
+          <div class="term-header"><span class="term-name">Cost of Goods Sold (COGS)</span><span class="term-tag tag-ind">Restaurants</span></div>
+          <p class="term-def">The direct cost of producing the food and beverages you sell — including ingredients, packaging, and any supplies used in production. COGS is subtracted from revenue to calculate gross profit. For restaurants, keeping food cost low relative to revenue (typically 28–35% for full-service restaurants) is one of the most critical factors in overall profitability.</p>
+        </div>
+
+        <div class="term-card" data-category="ecommerce" data-search="cost per acquisition cpa marketing advertising ecommerce customer">
+          <div class="term-header"><span class="term-name">Cost Per Acquisition (CPA)</span><span class="term-tag tag-ind">E-Commerce</span></div>
+          <p class="term-def">The average amount you spend to acquire one new paying customer through advertising or marketing. CPA = Total Ad Spend ÷ Number of Customers Acquired. For e-commerce businesses, knowing your CPA against your average order value and customer lifetime value determines whether your marketing spend is profitable or burning through cash.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="credit accounting entry double entry liabilities equity revenue decrease asset">
+          <div class="term-header"><span class="term-name">Credit (Accounting)</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">In double-entry bookkeeping, a credit is an entry that increases liabilities, equity, or revenue accounts — and decreases asset or expense accounts. Credits are always recorded on the right side of a ledger entry. A credit to your bank account means money left the account; a credit to a revenue account means income was recorded. Understanding credits is foundational to how your books work.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── D ── -->
+    <section class="letter-section" id="letter-D">
+      <div class="letter-divider"><span class="letter-char">D</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="bookkeeping" data-search="debit accounting entry double entry assets expenses increase">
+          <div class="term-header"><span class="term-name">Debit (Accounting)</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">In double-entry bookkeeping, a debit is an entry that increases asset or expense accounts — and decreases liabilities, equity, or revenue accounts. Debits are always recorded on the left side of a ledger entry. For example, a debit to your bank account means money came in; a debit to an expense account means you recorded a cost. Debits and credits must always balance.</p>
+        </div>
+
+        <div class="term-card" data-category="tax" data-search="depreciation tangible asset cost equipment vehicle useful life tax">
+          <div class="term-header"><span class="term-name">Depreciation</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">The process of allocating the cost of a tangible asset (equipment, vehicles, machinery) over its expected useful life rather than expensing it all in the year of purchase. A $30,000 delivery truck might be depreciated over 5 years at $6,000/year. Depreciation reduces your taxable income each year and appears as a non-cash expense on your P&L.</p>
+        </div>
+
+        <div class="term-card" data-category="payroll" data-search="direct deposit payroll electronic transfer bank account ach">
+          <div class="term-header"><span class="term-name">Direct Deposit</span><span class="term-tag tag-filing">Payroll</span></div>
+          <p class="term-def">The electronic transfer of employee wages directly into their bank accounts via the ACH (Automated Clearing House) network — the standard payroll delivery method for most businesses. For bookkeeping purposes, each payroll run should be recorded with the correct gross wages, tax withholdings, and net pay amounts for each employee in your accounting system.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="double entry bookkeeping accounting system debits credits balanced">
+          <div class="term-header"><span class="term-name">Double-Entry Bookkeeping</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">The accounting system in which every financial transaction is recorded in at least two accounts — one as a debit and one as a credit — so the books always remain balanced. The equation Assets = Liabilities + Equity always holds. Double-entry bookkeeping is the foundation of modern accounting and is what makes financial statements reliable and auditable.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── E ── -->
+    <section class="letter-section" id="letter-E">
+      <div class="letter-divider"><span class="letter-char">E</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="real-estate" data-search="earnest money deposit buyer offer property good faith escrow">
+          <div class="term-header"><span class="term-name">Earnest Money</span><span class="term-tag tag-ind">Real Estate</span></div>
+          <p class="term-def">A good-faith deposit made by a homebuyer when submitting an offer on a property, typically 1–3% of the purchase price. Earnest money demonstrates serious buyer intent and is held in escrow until closing, at which point it's typically applied toward the down payment or closing costs. For investor bookkeeping, earnest money must be tracked carefully as it flows through transactions.</p>
+        </div>
+
+        <div class="term-card" data-category="tax" data-search="ein employer identification number business tax id irs federal">
+          <div class="term-header"><span class="term-name">EIN (Employer Identification Number)</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">A nine-digit number assigned by the IRS to identify your business for tax purposes — essentially the business equivalent of a Social Security Number. EINs are required to open a business bank account, hire employees, file business tax returns, and issue 1099s. All business financial accounts and records should be organized under your EIN, not your personal SSN.</p>
+        </div>
+
+        <div class="term-card" data-category="healthcare" data-search="eob explanation of benefits insurance payment claim healthcare">
+          <div class="term-header"><span class="term-name">EOB (Explanation of Benefits)</span><span class="term-tag tag-ind">Healthcare</span></div>
+          <p class="term-def">A document issued by an insurance company after a medical claim is processed, detailing what was billed, what the insurer covered, and what the patient owes. EOBs are not bills — they're informational statements that explain how the claim was adjudicated. For healthcare practice bookkeeping, EOBs are critical documents for reconciling insurance payments against expected reimbursements.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="equity owner equity assets liabilities net worth business">
+          <div class="term-header"><span class="term-name">Equity (Owner's Equity)</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">The owner's claim on the business's assets after all liabilities have been paid — essentially, what the business is "worth" to you. Equity = Assets − Liabilities. It includes paid-in capital (money you invested) and retained earnings (profits kept in the business). As your business grows and pays down debt, equity increases, appearing in the equity section of the balance sheet.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="expenses costs business operating rent utilities payroll supplies">
+          <div class="term-header"><span class="term-name">Expenses</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">The costs incurred in running your business — including rent, utilities, payroll, software, supplies, and professional fees. Expenses are categorized in your chart of accounts and recorded on your P&L, reducing taxable income when properly documented. Consistent, accurate expense categorization is one of the most valuable things a bookkeeper does for a small business owner.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── F ── -->
+    <section class="letter-section" id="letter-F">
+      <div class="letter-divider"><span class="letter-char">F</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="payroll" data-search="fica taxes social security medicare federal payroll withholding">
+          <div class="term-header"><span class="term-name">FICA Taxes</span><span class="term-tag tag-filing">Payroll</span></div>
+          <p class="term-def">Federal Insurance Contributions Act taxes — the mandatory payroll taxes that fund Social Security and Medicare. FICA = 7.65% from the employee (withheld from their paycheck) + 7.65% from the employer, for a total of 15.3% per employee. Self-employed individuals pay the full 15.3% as Self-Employment Tax. FICA taxes must be deposited with the IRS on a regular schedule throughout the year.</p>
+        </div>
+
+        <div class="term-card" data-category="reporting" data-search="financial statements pl balance sheet cash flow three reports">
+          <div class="term-header"><span class="term-name">Financial Statements</span><span class="term-tag tag-core">Financial Reporting</span></div>
+          <p class="term-def">The three core reports that summarize a business's financial health: the Profit &amp; Loss Statement (income and expenses), the Balance Sheet (assets, liabilities, equity), and the Cash Flow Statement (cash inflows and outflows). Together they give a complete picture of profitability, net worth, and liquidity. Tides delivers all three to clients every month.</p>
+        </div>
+
+        <div class="term-card" data-category="tax" data-search="fiscal year accounting period calendar year january december">
+          <div class="term-header"><span class="term-name">Fiscal Year</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">A 12-month accounting period used for financial reporting and tax filing that may or may not align with the calendar year (January–December). Most small businesses use the calendar year as their fiscal year. Choosing the right fiscal year for your business type can sometimes offer tax planning advantages worth discussing with your CPA.</p>
+        </div>
+
+        <div class="term-card" data-category="transportation" data-search="fleet depreciation vehicles trucks value decline over time">
+          <div class="term-header"><span class="term-name">Fleet Depreciation</span><span class="term-tag tag-ind">Transportation</span></div>
+          <p class="term-def">The reduction in value of a company's vehicles over time due to use, age, and wear. For trucking companies and logistics businesses, vehicle fleets are typically major assets that depreciate quickly. Tracking fleet depreciation accurately is essential for both tax purposes (Section 179 expensing and bonus depreciation) and for understanding the true cost of operating each vehicle.</p>
+        </div>
+
+        <div class="term-card" data-category="restaurants" data-search="food cost percentage cogs revenue restaurant ingredient ratio">
+          <div class="term-header"><span class="term-name">Food Cost Percentage</span><span class="term-tag tag-ind">Restaurants</span></div>
+          <p class="term-def">The ratio of the cost of ingredients used to prepare menu items compared to the revenue those items generate. Food Cost % = COGS ÷ Food Revenue × 100. Most successful restaurants target a food cost percentage of 28–35%. Tracking this metric monthly is essential for identifying menu pricing issues, waste problems, and vendor cost increases before they erode your margins.</p>
+        </div>
+
+        <div class="term-card" data-category="transportation" data-search="freight invoice billing carrier logistics shipping charges trucking">
+          <div class="term-header"><span class="term-name">Freight Invoice</span><span class="term-tag tag-ind">Transportation</span></div>
+          <p class="term-def">A billing document issued by a carrier or freight broker to the shipper for transportation services rendered. Freight invoices detail the shipment, weight, distance, rates, and accessorial charges. For transportation and logistics businesses, accurate recording and reconciliation of freight invoices is critical — billing errors and duplicate charges are common and can significantly impact margins.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── G ── -->
+    <section class="letter-section" id="letter-G">
+      <div class="letter-divider"><span class="letter-char">G</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="tax" data-search="gaap generally accepted accounting principles standards fasb">
+          <div class="term-header"><span class="term-name">GAAP (Generally Accepted Accounting Principles)</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">A standardized set of rules and conventions governing how businesses record and report financial information in the United States, established by the Financial Accounting Standards Board (FASB). While small businesses aren't required to follow GAAP strictly, adhering to GAAP principles — like consistency and full disclosure — makes financial statements more reliable, comparable, and useful to lenders and investors.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="general ledger master record transactions accounts source of truth">
+          <div class="term-header"><span class="term-name">General Ledger</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">The master record of all financial transactions in your business, organized by account. Every journal entry made in your accounting system flows into the general ledger, which serves as the source of truth for all financial reports. When your bookkeeper "closes the books" each month, they're ensuring the general ledger is complete, accurate, and reconciled.</p>
+        </div>
+
+        <div class="term-card" data-category="payroll" data-search="gross pay wages salary before deductions total compensation">
+          <div class="term-header"><span class="term-name">Gross Pay</span><span class="term-tag tag-filing">Payroll</span></div>
+          <p class="term-def">An employee's total compensation before any deductions are taken out — including base salary or hourly wages, overtime, bonuses, and commissions. Gross pay is what you budget for when planning labor costs, but it's not what hits your bank account per employee (that's net pay after taxes and deductions). Both figures must be recorded accurately in your payroll bookkeeping.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="gross profit revenue cogs direct cost margin efficiency">
+          <div class="term-header"><span class="term-name">Gross Profit</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">The revenue remaining after subtracting the direct cost of goods sold (COGS) or direct service delivery costs. Gross Profit = Revenue − COGS. It measures how efficiently you're producing your product or delivering your service, before accounting for overhead. Gross profit margin (gross profit ÷ revenue) is one of the most important indicators of business health and pricing adequacy.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── I ── -->
+    <section class="letter-section" id="letter-I">
+      <div class="letter-divider"><span class="letter-char">I</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="transportation" data-search="ifta international fuel tax agreement trucking states quarterly">
+          <div class="term-header"><span class="term-name">IFTA (International Fuel Tax Agreement)</span><span class="term-tag tag-ind">Transportation</span></div>
+          <p class="term-def">A tax collection agreement among US states and Canadian provinces that simplifies fuel tax reporting for motor carriers operating in multiple jurisdictions. Commercial truckers and fleet operators must file quarterly IFTA reports showing miles driven and fuel purchased in each state. Accurate fuel and mileage records are critical — improper IFTA filings can result in significant penalties and audits.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="income statement pl profit loss revenue expenses net income">
+          <div class="term-header"><span class="term-name">Income Statement</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">Also called the Profit &amp; Loss Statement (P&amp;L), it shows your business's revenue, expenses, and net profit or loss over a specific period. It answers the fundamental question: "Is my business making money?" It's one of the three core financial statements and should be reviewed every month by every business owner — not just at tax time.</p>
+        </div>
+
+        <div class="term-card" data-category="healthcare" data-search="insurance credentialing provider network in network payer approval">
+          <div class="term-header"><span class="term-name">Insurance Credentialing</span><span class="term-tag tag-ind">Healthcare</span></div>
+          <p class="term-def">The process by which a healthcare provider applies to and gets approved to participate in an insurance network as an in-network provider. Credentialing affects your revenue significantly — in-network reimbursement rates differ substantially from out-of-network rates. For bookkeeping, tracking which payers have credentialed your providers and their respective reimbursement rates is essential for revenue cycle management.</p>
+        </div>
+
+        <div class="term-card" data-category="ecommerce" data-search="inventory turnover stock sold replaced times period ecommerce retail">
+          <div class="term-header"><span class="term-name">Inventory Turnover</span><span class="term-tag tag-ind">E-Commerce</span></div>
+          <p class="term-def">A measure of how many times your business sells and replaces its inventory during a given period. Inventory Turnover = COGS ÷ Average Inventory. High turnover means you're selling efficiently; low turnover may indicate overstocking or poor demand forecasting. E-commerce businesses should track inventory turnover by product category to make smart purchasing and pricing decisions.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── J ── -->
+    <section class="letter-section" id="letter-J">
+      <div class="letter-divider"><span class="letter-char">J</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="contractors" data-search="job costing project costs labor materials overhead profitability">
+          <div class="term-header"><span class="term-name">Job Costing</span><span class="term-tag tag-ind">Contractors</span></div>
+          <p class="term-def">The practice of tracking all costs — labor, materials, subcontractors, equipment, and overhead — associated with a specific project or job and comparing them to the revenue earned. Job costing answers: "Did we actually make money on this project?" Without it, contractors often discover they've been underbidding or losing margin without realizing it until it's too late.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="journal entry transaction record debit credit accounting">
+          <div class="term-header"><span class="term-name">Journal Entry</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">The most basic unit of bookkeeping — a record of a financial transaction showing which accounts were debited and credited, along with the date, amount, and description. In QuickBooks, most journal entries are created automatically when you record invoices, bills, or bank transactions. Manual journal entries are used for adjustments, corrections, and complex transactions.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── K ── -->
+    <section class="letter-section" id="letter-K">
+      <div class="letter-divider"><span class="letter-char">K</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="reporting" data-search="kpis key performance indicators metrics financial goals tracking">
+          <div class="term-header"><span class="term-name">KPIs (Key Performance Indicators)</span><span class="term-tag tag-core">Financial Reporting</span></div>
+          <p class="term-def">Measurable financial and operational metrics used to evaluate how effectively a business is achieving its goals. Common financial KPIs include gross margin, net profit margin, cash runway, AR days, and revenue growth rate. The right KPIs vary by industry and business stage — but all of them depend on accurate bookkeeping data to be meaningful. Without clean books, your KPIs are just guesses.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── L ── -->
+    <section class="letter-section" id="letter-L">
+      <div class="letter-divider"><span class="letter-char">L</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="bookkeeping" data-search="liabilities debts obligations owed balance sheet current long term">
+          <div class="term-header"><span class="term-name">Liabilities</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">All financial obligations your business owes to outside parties — including accounts payable, business loans, credit card balances, accrued taxes, and deferred revenue. Liabilities are listed on the balance sheet and classified as current (due within one year) or long-term (due beyond one year). Managing liabilities carefully is essential to maintaining the financial health and creditworthiness of your business.</p>
+        </div>
+
+        <div class="term-card" data-category="contractors" data-search="lien waiver construction payment mechanic property document">
+          <div class="term-header"><span class="term-name">Lien Waiver</span><span class="term-tag tag-ind">Contractors</span></div>
+          <p class="term-def">A document signed by a contractor, subcontractor, or supplier waiving their right to file a mechanic's lien against a property in exchange for payment. Lien waivers are standard in construction and protect property owners from liens being placed on their properties after work has been paid. For contractor bookkeeping, tracking which lien waivers have been collected and issued is critical for job closeout and compliance.</p>
+        </div>
+
+        <div class="term-card" data-category="tax" data-search="llc limited liability company business structure protection tax flexible">
+          <div class="term-header"><span class="term-name">LLC (Limited Liability Company)</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">A flexible business structure that provides owners (called "members") with personal liability protection while offering tax flexibility. By default, a single-member LLC is taxed as a sole proprietorship and a multi-member LLC as a partnership — but LLCs can elect S-Corp taxation to potentially reduce self-employment tax. Most small business owners form an LLC as their first formal business structure.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── M ── -->
+    <section class="letter-section" id="letter-M">
+      <div class="letter-divider"><span class="letter-char">M</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="ecommerce" data-search="merchant fees payment processing stripe square credit card ecommerce">
+          <div class="term-header"><span class="term-name">Merchant Fees</span><span class="term-tag tag-ind">E-Commerce</span></div>
+          <p class="term-def">The fees charged by payment processors (Stripe, Square, PayPal, Shopify Payments) for processing credit and debit card transactions — typically 1.5–3.5% per transaction plus a flat fee. For e-commerce businesses with high sales volume, merchant fees can represent a significant expense that must be tracked carefully and recorded as a separate expense line item, not netted against revenue.</p>
+        </div>
+
+        <div class="term-card" data-category="tech" data-search="mrr monthly recurring revenue subscription saas software metric">
+          <div class="term-header"><span class="term-name">MRR (Monthly Recurring Revenue)</span><span class="term-tag tag-ind">Tech &amp; Startups</span></div>
+          <p class="term-def">The total predictable, recurring revenue your subscription-based business generates each month. MRR = Number of Paying Customers × Average Revenue per Account. Tracking MRR growth, churn, and expansion revenue each month is foundational for SaaS businesses. It's the single most important revenue metric for software and subscription companies when communicating with investors or evaluating business health.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MID-PAGE CTA -->
+    <div class="mid-cta">
+      <div class="mid-cta-text">
+        <h3>Questions about your bookkeeping?</h3>
+        <p>Schedule a free 15-minute consultation. No pressure, no commitments — just clear answers from a real bookkeeper.</p>
+      </div>
+      <a href="#" class="btn btn-teal">Book a Free Call →</a>
+    </div>
+
+    <!-- ── N ── -->
+    <section class="letter-section" id="letter-N">
+      <div class="letter-divider"><span class="letter-char">N</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="bookkeeping" data-search="net income bottom line profit revenue expenses total loss">
+          <div class="term-header"><span class="term-name">Net Income</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">The final "bottom line" profit remaining after all revenue has been earned and all expenses — COGS, operating expenses, taxes, interest, depreciation — have been deducted. Also called "net profit," it's the number that flows into retained earnings on your balance sheet at year-end. Positive net income means your business was profitable; negative means you operated at a loss.</p>
+        </div>
+
+        <div class="term-card" data-category="payroll" data-search="net pay take home pay deductions taxes withholding employee">
+          <div class="term-header"><span class="term-name">Net Pay</span><span class="term-tag tag-filing">Payroll</span></div>
+          <p class="term-def">The actual amount an employee takes home after all mandatory deductions — federal/state income tax, FICA, health insurance premiums, 401k contributions — are subtracted from gross pay. For payroll bookkeeping, it's important to record both the gross pay as a labor expense and the tax liabilities separately — not just the net pay amount that leaves your bank account.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── O ── -->
+    <section class="letter-section" id="letter-O">
+      <div class="letter-divider"><span class="letter-char">O</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="bookkeeping" data-search="operating expenses opex overhead rent utilities salaries day to day">
+          <div class="term-header"><span class="term-name">Operating Expenses (OpEx)</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">The ongoing costs required to run day-to-day business operations that are not directly tied to producing a product or service — including rent, utilities, insurance, salaries, software subscriptions, and office supplies. OpEx is distinct from COGS (direct production costs) and appears below gross profit on the P&amp;L. Keeping OpEx in check relative to revenue is essential for maintaining healthy profit margins.</p>
+        </div>
+
+        <div class="term-card" data-category="reporting" data-search="operating margin profitability ratio operating income revenue efficiency">
+          <div class="term-header"><span class="term-name">Operating Margin</span><span class="term-tag tag-core">Financial Reporting</span></div>
+          <p class="term-def">A profitability ratio that measures how much profit a business generates from its core operations as a percentage of revenue, before accounting for interest and taxes. Operating Margin = Operating Income ÷ Revenue × 100. A higher operating margin indicates better operational efficiency and is a key metric for comparing profitability between businesses in the same industry.</p>
+        </div>
+
+        <div class="term-card" data-category="contractors" data-search="overhead rate indirect costs labor ratio contractor bid project">
+          <div class="term-header"><span class="term-name">Overhead Rate</span><span class="term-tag tag-ind">Contractors</span></div>
+          <p class="term-def">The ratio of indirect business costs (office expenses, insurance, equipment, administrative staff) to direct labor costs, used by contractors to ensure indirect costs are factored into project bids. Overhead Rate = Total Indirect Costs ÷ Total Direct Labor Costs. Without an accurate overhead rate, contractors chronically underbid jobs and wonder why strong revenue doesn't translate to profit in the bank.</p>
+        </div>
+
+        <div class="term-card" data-category="healthcare" data-search="overhead ratio medical practice operating costs revenue benchmark">
+          <div class="term-header"><span class="term-name">Overhead Ratio</span><span class="term-tag tag-ind">Healthcare</span></div>
+          <p class="term-def">The percentage of a medical practice's total revenue consumed by non-clinical operating costs — staff salaries, rent, utilities, billing services, supplies. Overhead Ratio = Total Overhead Costs ÷ Total Revenue × 100. Industry benchmarks vary by specialty, but most practices aim to keep overhead below 55–60%. Tracking this ratio monthly is essential for practice profitability analysis.</p>
+        </div>
+
+        <div class="term-card" data-category="transportation" data-search="owner operator expenses trucking fuel insurance maintenance independent">
+          <div class="term-header"><span class="term-name">Owner-Operator Expenses</span><span class="term-tag tag-ind">Transportation</span></div>
+          <p class="term-def">The unique set of costs incurred by independent owner-operators in the trucking industry — including fuel, truck payments, insurance, maintenance, tires, permits, and IFTA taxes. Unlike employee drivers, owner-operators are responsible for all costs themselves, making accurate expense tracking essential for calculating true profitability per mile or per load. Many owner-operators are surprised by their effective hourly rate when all costs are properly accounted for.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── P ── -->
+    <section class="letter-section" id="letter-P">
+      <div class="letter-divider"><span class="letter-char">P</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="tax" data-search="pass through taxation business income personal return llc s corp sole">
+          <div class="term-header"><span class="term-name">Pass-Through Taxation</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">A tax structure in which business income is not taxed at the entity level but instead "passes through" to the owner's personal tax return, where it's taxed at individual rates. Sole proprietorships, partnerships, LLCs, and S-Corps all qualify as pass-through entities. The main advantage is avoiding the "double taxation" that C-Corps face — understanding your entity type is essential for tax planning.</p>
+        </div>
+
+        <div class="term-card" data-category="healthcare" data-search="patient revenue medical practice services income billing insurance">
+          <div class="term-header"><span class="term-name">Patient Revenue</span><span class="term-tag tag-ind">Healthcare</span></div>
+          <p class="term-def">The total income generated by a healthcare practice from patient services — including insurance reimbursements, patient copays, coinsurance, self-pay amounts, and cash-pay services. Patient revenue must be tracked separately from other income sources (ancillary services, retail, etc.). Accurate tracking requires reconciling EOBs, insurance remittances, and patient payments consistently every month.</p>
+        </div>
+
+        <div class="term-card" data-category="payroll" data-search="payroll processing employee wages taxes deductions schedule run">
+          <div class="term-header"><span class="term-name">Payroll Processing</span><span class="term-tag tag-filing">Payroll</span></div>
+          <p class="term-def">The complete cycle of calculating employee wages, withholding taxes and deductions, issuing payments, and filing required payroll tax reports with federal and state agencies. Payroll must be processed accurately and on schedule — errors result in unhappy employees, IRS penalties, and complicated corrections. Every payroll run must be recorded with gross wages, tax liabilities, and net disbursements in the correct accounts.</p>
+        </div>
+
+        <div class="term-card" data-category="payroll" data-search="payroll tax employer employee withhold social security medicare federal state">
+          <div class="term-header"><span class="term-name">Payroll Tax</span><span class="term-tag tag-filing">Payroll</span></div>
+          <p class="term-def">The taxes that employers are required to withhold from employee paychecks and/or contribute themselves — including federal and state income tax withholding, Social Security (6.2%), Medicare (1.45%), and federal and state unemployment taxes (FUTA/SUTA). Payroll taxes must be deposited with the IRS on a strict schedule. Late or missed deposits result in significant penalties that compound quickly.</p>
+        </div>
+
+        <div class="term-card" data-category="transportation" data-search="per diem daily allowance travel meals lodging truck driver expense">
+          <div class="term-header"><span class="term-name">Per Diem</span><span class="term-tag tag-ind">Transportation</span></div>
+          <p class="term-def">A daily allowance given to employees — particularly truck drivers and traveling workers — to cover meals, lodging, and incidental expenses while away from home for work. The IRS sets standard per diem rates that are tax-deductible by the business. For trucking companies and businesses with traveling staff, per diem is a significant expense line item that must be properly documented and recorded.</p>
+        </div>
+
+        <div class="term-card" data-category="restaurants" data-search="prime cost cogs labor restaurant most important metric profitability">
+          <div class="term-header"><span class="term-name">Prime Cost</span><span class="term-tag tag-ind">Restaurants</span></div>
+          <p class="term-def">The sum of a restaurant's two largest controllable costs: Cost of Goods Sold (food and beverage) plus total labor costs (wages, payroll taxes, benefits). Prime Cost = COGS + Labor. Most successful full-service restaurants target a prime cost of 55–65% of revenue. It's considered the most important financial metric in the restaurant industry because it directly reflects operational control and profitability.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="profit loss statement pl income statement revenue expenses profit">
+          <div class="term-header"><span class="term-name">Profit &amp; Loss Statement (P&amp;L)</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">Also called the Income Statement, it summarizes your business's revenues, costs, and expenses over a specific time period to show whether the business is profitable or operating at a loss. The P&amp;L is one of the three core financial statements. Business owners should review their P&amp;L every single month — it's the clearest window into whether your business is actually making money.</p>
+        </div>
+
+        <div class="term-card" data-category="reporting" data-search="profit margin net income revenue percentage profitability performance">
+          <div class="term-header"><span class="term-name">Profit Margin</span><span class="term-tag tag-core">Financial Reporting</span></div>
+          <p class="term-def">The percentage of revenue that translates into profit after expenses are paid. Net Profit Margin = Net Income ÷ Revenue × 100. For example, a 15% profit margin means you keep $0.15 of every dollar of revenue as profit. Profit margins vary significantly by industry — restaurant margins might be 3–9%, while software companies can run 20–40%+. Tracking your margin consistently is the best way to measure business improvement over time.</p>
+        </div>
+
+        <div class="term-card" data-category="contractors" data-search="progress billing construction invoice milestone percentage complete">
+          <div class="term-header"><span class="term-name">Progress Billing</span><span class="term-tag tag-ind">Contractors</span></div>
+          <p class="term-def">An invoicing method used in construction and project-based work where invoices are issued incrementally as a project reaches predefined milestones or completion percentages — rather than waiting until the full project is finished. Progress billing improves cash flow for contractors by aligning payments with work completed. Each progress invoice should be tracked against the total contract value and previously billed amounts.</p>
+        </div>
+
+        <div class="term-card" data-category="payroll" data-search="pto accrual paid time off earned employees liability balance sheet">
+          <div class="term-header"><span class="term-name">PTO Accrual</span><span class="term-tag tag-filing">Payroll</span></div>
+          <p class="term-def">The process by which employees earn paid time off over time, typically at a rate of hours per pay period worked. For bookkeeping purposes, PTO accrual creates a liability on the balance sheet — the value of PTO earned but not yet used. When employees take PTO, the liability is reduced and payroll expense is recorded. Properly accruing PTO ensures your balance sheet accurately reflects this obligation.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Q ── -->
+    <section class="letter-section" id="letter-Q">
+      <div class="letter-divider"><span class="letter-char">Q</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="tax" data-search="quarterly estimated taxes irs self employed payments april june september">
+          <div class="term-header"><span class="term-name">Quarterly Estimated Taxes</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">Prepayments of income tax made by self-employed individuals, business owners, freelancers, and others who don't have taxes automatically withheld from their income. The IRS requires quarterly estimated payments if you expect to owe at least $1,000 in taxes for the year. Due dates are typically April 15, June 15, September 15, and January 15. Accurate bookkeeping that tracks income throughout the year is essential for calculating the right payment amounts and avoiding underpayment penalties.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── R ── -->
+    <section class="letter-section" id="letter-R">
+      <div class="letter-divider"><span class="letter-char">R</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="tax" data-search="retained earnings net profit kept reinvested equity balance sheet cumulative">
+          <div class="term-header"><span class="term-name">Retained Earnings</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">The cumulative amount of net profit that a business has kept (retained) rather than distributing to owners as dividends or draws. Retained Earnings = Prior Retained Earnings + Net Income − Owner Draws/Dividends. It appears in the equity section of the balance sheet and grows over time as a profitable business reinvests its profits. A healthy retained earnings balance indicates financial stability.</p>
+        </div>
+
+        <div class="term-card" data-category="contractors" data-search="retainage construction withheld payment project owner completion">
+          <div class="term-header"><span class="term-name">Retainage</span><span class="term-tag tag-ind">Contractors</span></div>
+          <p class="term-def">A portion of a contractor's earned payment withheld by the project owner until the project is substantially or fully completed — typically 5–10% of each progress payment. For contractor bookkeeping, retainage must be tracked as a separate receivable because it doesn't hit your bank account until project closeout — sometimes months after the work is done and the invoice was submitted.</p>
+        </div>
+
+        <div class="term-card" data-category="professional" data-search="retainer fee upfront payment services ongoing access professional">
+          <div class="term-header"><span class="term-name">Retainer Fee</span><span class="term-tag tag-ind">Professional Services</span></div>
+          <p class="term-def">An upfront payment made by a client to secure ongoing access to a service provider's time and expertise over a specified period. Common in law, accounting, consulting, and marketing. From a bookkeeping standpoint, retainer fees are often deferred revenue — they should be recognized as income gradually as services are delivered, not all at once when payment is received.</p>
+        </div>
+
+        <div class="term-card" data-category="reporting" data-search="roi return on investment gain cost profit efficiency measure">
+          <div class="term-header"><span class="term-name">Return on Investment (ROI)</span><span class="term-tag tag-core">Financial Reporting</span></div>
+          <p class="term-def">A performance metric that measures the efficiency of an investment by comparing the gain or loss relative to its cost. ROI = (Net Gain − Cost of Investment) ÷ Cost of Investment × 100. ROI can be applied to any business decision — a marketing campaign, new equipment, or expanding a location. Accurate financial records are the foundation of any reliable ROI calculation.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="revenue income total sales top line business primary activity">
+          <div class="term-header"><span class="term-name">Revenue</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">The total income generated by a business from its primary activities — selling products, delivering services, or earning rental income — before any expenses are deducted. Revenue is the top line on your P&amp;L. Revenue growth is a key indicator of business momentum, but it must always be evaluated alongside expenses and margins to understand true financial health.</p>
+        </div>
+
+        <div class="term-card" data-category="restaurants" data-search="revpash revenue per available seat hour restaurant table turn efficiency">
+          <div class="term-header"><span class="term-name">Revenue per Available Seat Hour (RevPASH)</span><span class="term-tag tag-ind">Restaurants</span></div>
+          <p class="term-def">A metric that measures how much revenue a restaurant generates per available seat per hour of operation. RevPASH = Total Revenue ÷ (Number of Seats × Operating Hours). It's used to evaluate table turn rates, peak-hour performance, and the effectiveness of reservations management. Higher RevPASH generally means better utilization of your physical space and staff.</p>
+        </div>
+
+        <div class="term-card" data-category="tech" data-search="runway months cash burn rate startup when run out of money">
+          <div class="term-header"><span class="term-name">Runway</span><span class="term-tag tag-ind">Tech &amp; Startups</span></div>
+          <p class="term-def">The number of months a business can continue operating at its current spending rate before exhausting its cash reserves. Runway = Current Cash Balance ÷ Monthly Burn Rate. For funded startups, runway is the single most critical metric to monitor. A runway of 12–18 months is generally considered healthy; below 6 months creates urgency for fundraising or dramatic cost cuts. Clean books are essential for calculating accurate runway.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── S ── -->
+    <section class="letter-section" id="letter-S">
+      <div class="letter-divider"><span class="letter-char">S</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="tax" data-search="s corporation scorp tax entity pass through salary distribution self employment">
+          <div class="term-header"><span class="term-name">S-Corporation</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">A special IRS tax designation that allows a corporation or LLC to pass income, losses, deductions, and credits through to shareholders for federal tax purposes, while potentially allowing owners to reduce self-employment tax by splitting income between salary and distributions. S-Corp election can save thousands in SE taxes for profitable small businesses, but comes with specific IRS requirements including payroll obligations and reasonable compensation rules.</p>
+        </div>
+
+        <div class="term-card" data-category="tax" data-search="self employment tax se tax 15.3 percent social security medicare sole proprietor">
+          <div class="term-header"><span class="term-name">Self-Employment Tax</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">The 15.3% tax paid by self-employed individuals and business owners to cover Social Security (12.4%) and Medicare (2.9%) contributions — the equivalent of both the employer and employee FICA share. SE tax applies to net self-employment income. You can deduct half of SE tax as a business deduction. Accurate bookkeeping ensures you're calculating SE tax correctly and not over- or under-paying throughout the year.</p>
+        </div>
+
+        <div class="term-card" data-category="ecommerce" data-search="shrinkage inventory loss theft damage error retail ecommerce">
+          <div class="term-header"><span class="term-name">Shrinkage</span><span class="term-tag tag-ind">E-Commerce</span></div>
+          <p class="term-def">The loss of inventory due to theft, damage, administrative errors, or supplier fraud — resulting in fewer items on hand than your records show. Shrinkage directly impacts COGS and profit margin. For e-commerce and retail businesses, conducting regular physical inventory counts and reconciling them to your accounting records is the only way to accurately measure and address shrinkage before it erodes your margins.</p>
+        </div>
+
+        <div class="term-card" data-category="ecommerce" data-search="sku stock keeping unit product identifier inventory ecommerce retail">
+          <div class="term-header"><span class="term-name">SKU (Stock Keeping Unit)</span><span class="term-tag tag-ind">E-Commerce</span></div>
+          <p class="term-def">A unique identifier assigned to each distinct product variant in your inventory — tracking specific combinations of size, color, model, or other attributes. SKUs enable accurate inventory tracking, reorder management, and profitability analysis by product. For bookkeeping purposes, organizing COGS and inventory records by SKU allows you to identify which products are most and least profitable.</p>
+        </div>
+
+        <div class="term-card" data-category="tax" data-search="sole proprietorship business structure simple single owner personal return schedule c">
+          <div class="term-header"><span class="term-name">Sole Proprietorship</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">The simplest and most common business structure, in which the business and owner are considered the same legal entity. There's no formal registration required, and all business income flows to your personal tax return on Schedule C. While easy to set up, sole proprietors have unlimited personal liability for business debts and pay self-employment tax on all net profits — making it worth reviewing other structures as the business grows.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── T ── -->
+    <section class="letter-section" id="letter-T">
+      <div class="letter-divider"><span class="letter-char">T</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="tax" data-search="tax deductions business expenses reduce taxable income irs deductible">
+          <div class="term-header"><span class="term-name">Tax Deductions</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">Business expenses that the IRS allows you to subtract from your gross income, reducing the amount of income subject to tax. Common deductions include rent, utilities, equipment, professional fees, health insurance premiums, vehicle mileage, and home office costs. Every legitimate business expense is a potential deduction — which is why organized bookkeeping throughout the year is directly tied to a lower tax bill.</p>
+        </div>
+
+        <div class="term-card" data-category="tax" data-search="tax liability total amount owed federal state taxes irs year">
+          <div class="term-header"><span class="term-name">Tax Liability</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">The total amount of tax a business or individual legally owes to federal, state, and local governments for a given tax period. Clean books throughout the year allow you to estimate your tax liability in real time, avoid surprises, and plan accordingly — rather than facing a large unexpected bill at filing time when options to reduce it are limited.</p>
+        </div>
+
+        <div class="term-card" data-category="professional" data-search="time materials billing client charge actual hours expenses consulting">
+          <div class="term-header"><span class="term-name">Time &amp; Materials Billing</span><span class="term-tag tag-ind">Professional Services</span></div>
+          <p class="term-def">A billing method in which clients are charged based on the actual time spent on their project plus the cost of any materials or expenses used, often with a markup. T&amp;M billing is common in consulting, IT services, engineering, and some construction work. It protects service providers from scope creep but requires meticulous time and expense tracking to bill accurately and avoid disputes.</p>
+        </div>
+
+        <div class="term-card" data-category="restaurants" data-search="tip pooling restaurant tipped employees pool redistribute back of house flsa">
+          <div class="term-header"><span class="term-name">Tip Pooling</span><span class="term-tag tag-ind">Restaurants</span></div>
+          <p class="term-def">A practice in which servers, bartenders, and other tipped employees contribute a portion of their tips into a communal pool redistributed among a broader group of employees, potentially including back-of-house staff. Tip pooling rules are regulated by the Fair Labor Standards Act (FLSA) and vary by state. For restaurant bookkeeping, tip income must be tracked carefully for payroll tax withholding and accurate labor cost reporting.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── U ── -->
+    <section class="letter-section" id="letter-U">
+      <div class="letter-divider"><span class="letter-char">U</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="professional" data-search="utilization rate billable hours total available percentage professional services">
+          <div class="term-header"><span class="term-name">Utilization Rate</span><span class="term-tag tag-ind">Professional Services</span></div>
+          <p class="term-def">The percentage of a team member's total available working hours that are spent on billable client work. Utilization Rate = Billable Hours ÷ Total Available Hours × 100. For professional services firms, utilization rate is a direct driver of revenue and profitability. A fully loaded staff member billing 75–80% of their time is generally a healthy benchmark — below 60% often signals a capacity or sales problem worth investigating.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── V ── -->
+    <section class="letter-section" id="letter-V">
+      <div class="letter-divider"><span class="letter-char">V</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="reporting" data-search="variance analysis actual budget forecast difference management insight">
+          <div class="term-header"><span class="term-name">Variance Analysis</span><span class="term-tag tag-core">Financial Reporting</span></div>
+          <p class="term-def">The process of comparing actual financial results to a budget, forecast, or prior period to understand why numbers came in higher or lower than expected. Variance analysis turns raw financial data into actionable insight — it's how business owners identify cost overruns, underperforming revenue streams, or unexpected efficiency gains. Without it, a P&amp;L is just a scoreboard; with it, it becomes a management tool.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── W ── -->
+    <section class="letter-section" id="letter-W">
+      <div class="letter-divider"><span class="letter-char">W</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="tax" data-search="w2 form employee wages taxes withheld irs employer january">
+          <div class="term-header"><span class="term-name">W-2 Form</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">An IRS form issued by employers to employees each January showing the employee's total wages earned and taxes withheld during the prior calendar year. Employees use their W-2 to file their personal income tax returns. Employers are required to distribute W-2s by January 31. W-2 data must reconcile precisely with your payroll records — discrepancies raise red flags with the IRS.</p>
+        </div>
+
+        <div class="term-card" data-category="payroll" data-search="w4 form employee withholding allowance federal income tax paycheck">
+          <div class="term-header"><span class="term-name">W-4 Form</span><span class="term-tag tag-filing">Payroll</span></div>
+          <p class="term-def">An IRS form completed by employees when starting a new job (or when their tax situation changes) that tells the employer how much federal income tax to withhold from each paycheck. Accurate W-4s on file ensure employees aren't over- or under-withheld — both of which create problems at tax time and are a common source of employee complaints if not handled correctly.</p>
+        </div>
+
+        <div class="term-card" data-category="tax" data-search="w9 form contractor vendor taxpayer information 1099 ein ssn">
+          <div class="term-header"><span class="term-name">W-9 Form</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">An IRS form used to collect a contractor's or vendor's taxpayer identification information (name, address, Social Security Number or EIN) before you pay them for services. You need a completed W-9 from any independent contractor you pay $600 or more per year so you can issue them a 1099. Collecting W-9s before issuing payment — not after — is a best practice that saves significant headaches at year-end.</p>
+        </div>
+
+        <div class="term-card" data-category="payroll" data-search="withholding employee paycheck taxes federal state ira deduction employer">
+          <div class="term-header"><span class="term-name">Withholding</span><span class="term-tag tag-filing">Payroll</span></div>
+          <p class="term-def">The amount deducted from an employee's paycheck and remitted to the IRS and state tax agencies on their behalf throughout the year — covering federal and state income taxes, Social Security, and Medicare. Employers are legally responsible for withholding the correct amounts and remitting them on time. Under-withholding leads to employee tax bills; over-withholding is essentially an interest-free loan to the government.</p>
+        </div>
+
+        <div class="term-card" data-category="professional" data-search="work in progress wip services rendered not billed asset balance sheet">
+          <div class="term-header"><span class="term-name">Work in Progress (WIP)</span><span class="term-tag tag-ind">Professional Services</span></div>
+          <p class="term-def">Services that have been performed but not yet billed to or paid by the client — representing revenue that has been "earned" but not yet recognized. WIP is tracked as an asset on the balance sheet. For project-based businesses and professional services firms, accurate WIP tracking is essential for understanding true revenue and profitability, especially at month-end and year-end close.</p>
+        </div>
+
+        <div class="term-card" data-category="payroll" data-search="workers compensation insurance employee injury work related state required">
+          <div class="term-header"><span class="term-name">Workers' Compensation</span><span class="term-tag tag-filing">Payroll</span></div>
+          <p class="term-def">A state-mandated insurance program that provides wage replacement and medical benefits to employees who suffer work-related injuries or illnesses. Workers' comp premiums are paid by the employer (not withheld from employees) and are calculated as a percentage of payroll, varying by industry risk classification. Workers' comp is a required operating expense for almost all employers and must be tracked as a separate insurance cost in your books.</p>
+        </div>
+
+        <div class="term-card" data-category="bookkeeping" data-search="working capital current assets liabilities operations short term liquidity">
+          <div class="term-header"><span class="term-name">Working Capital</span><span class="term-tag tag-core">Core Bookkeeping</span></div>
+          <p class="term-def">The difference between your current assets (cash, AR, inventory) and current liabilities (AP, short-term debt, accrued expenses). Working Capital = Current Assets − Current Liabilities. Positive working capital means your business can cover its short-term obligations; negative working capital is a warning sign. Maintaining adequate working capital is especially critical in businesses with seasonal revenue cycles.</p>
+        </div>
+
+        <div class="term-card" data-category="tax" data-search="write off deduct expense reduce taxable income bad debt asset irs">
+          <div class="term-header"><span class="term-name">Write-Off</span><span class="term-tag tag-filing">Tax &amp; Filing</span></div>
+          <p class="term-def">The act of recording an expense or reducing the value of an asset to decrease taxable income. In everyday business usage, a "write-off" refers to any legitimate business expense that can be deducted from taxable income. More technically, it can also refer to writing off a bad debt (uncollectible AR) or a worthless asset. Write-offs are legal and often significant — but must be properly documented to survive an audit.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Y ── -->
+    <section class="letter-section" id="letter-Y">
+      <div class="letter-divider"><span class="letter-char">Y</span><hr /></div>
+      <div class="terms-grid">
+
+        <div class="term-card" data-category="reporting" data-search="year end close fiscal year reconciliation final adjustments tax ready">
+          <div class="term-header"><span class="term-name">Year-End Close</span><span class="term-tag tag-core">Financial Reporting</span></div>
+          <p class="term-def">The process of finalizing all financial records at the end of a fiscal year — including completing all reconciliations, recording adjusting journal entries, depreciating assets, reconciling payroll, and ensuring the financial statements are accurate and complete. The year-end close is critical: it's the foundation for your tax return, provides the final baseline for the new year, and closes the books so they can't be accidentally changed going forward.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </div><!-- /glossary-inner -->
+</div><!-- /glossary-content -->
+
+<!-- BOTTOM CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="eyebrow" style="color:var(--teal);background:rgba(65,207,208,.1);border-color:rgba(65,207,208,.2);">Ready to Put This Into Practice?</div>
+      <h2 class="display">Stop Managing Your Books.<br/>Start Running Your Business.</h2>
+      <p>Now that you know the terms — let Tides handle the actual work. Remote bookkeeping, monthly reports, and clean books year-round.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-teal btn-lg">Book a Free Consultation</a>
+        <a href="#" class="btn btn-outline-white btn-lg">View Pricing</a>
+      </div>
+      <p class="cta-note">No setup fees &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; First month guaranteed</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="logo.png" alt="Tides Bookkeeping" class="footer-logo" />
+        <p class="footer-about">Remote bookkeeping, payroll support, and financial reporting for small businesses across South Carolina and beyond.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#">Monthly Bookkeeping</a></li>
+          <li><a href="#">Catch-Up Bookkeeping</a></li>
+          <li><a href="#">Payroll Support</a></li>
+          <li><a href="#">Bank Reconciliation</a></li>
+          <li><a href="#">Financial Reporting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul class="footer-links">
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="who-we-serve.html">Who We Serve</a></li>
+          <li><a href="state-south-carolina.html">South Carolina</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="#">hello@tidesbookkeeping.com</a></li>
+          <li><a href="#">(843) 000-0000</a></li>
+          <li><a href="#">Book Free Call</a></li>
+          <li><a href="#">Client Portal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tides Bookkeeping LLC. All rights reserved. South Carolina Bookkeeping Services.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  // ── State ────────────────────────────────────────────
+  let activeCategory = 'all';
+  let activeSearch   = '';
+
+  const searchInput   = document.getElementById('glossarySearch');
+  const searchClear   = document.getElementById('searchClear');
+  const filterPills   = document.querySelectorAll('.filter-pill');
+  const termCards     = document.querySelectorAll('.term-card');
+  const letterSections= document.querySelectorAll('.letter-section');
+  const alphaLinks    = document.querySelectorAll('.alpha-link');
+  const noResults     = document.getElementById('noResults');
+  const visibleCount  = document.getElementById('visibleCount');
+  const resetLink     = document.getElementById('resetLink');
+  const noResultsReset= document.getElementById('noResultsReset');
+
+  // ── Filter Logic ────────────────────────────────────
+  function filterTerms() {
+    let count = 0;
+
+    termCards.forEach(card => {
+      const cat    = card.dataset.category;
+      const search = (card.dataset.search + ' ' + card.querySelector('.term-name').textContent).toLowerCase();
+      const def    = card.querySelector('.term-def').textContent.toLowerCase();
+
+      const matchCat    = activeCategory === 'all' || cat === activeCategory;
+      const matchSearch = activeSearch === '' || search.includes(activeSearch) || def.includes(activeSearch);
+      const visible     = matchCat && matchSearch;
+
+      card.style.display = visible ? '' : 'none';
+      if (visible) count++;
+    });
+
+    // Show/hide letter sections based on visible cards
+    letterSections.forEach(sec => {
+      const hasVisible = [...sec.querySelectorAll('.term-card')].some(c => c.style.display !== 'none');
+      sec.style.display = hasVisible ? '' : 'none';
+    });
+
+    // Update count display
+    visibleCount.textContent = count;
+    noResults.style.display  = count === 0 ? 'block' : 'none';
+
+    // Show/hide reset
+    const isFiltered = activeCategory !== 'all' || activeSearch !== '';
+    resetLink.classList.toggle('visible', isFiltered);
+
+    // Update alpha nav
+    updateAlphaNav();
+  }
+
+  // ── Alpha Nav ────────────────────────────────────────
+  function updateAlphaNav() {
+    alphaLinks.forEach(link => {
+      const letter  = link.dataset.letter;
+      const section = document.getElementById('letter-' + letter);
+      if (!section) { link.classList.add('disabled'); return; }
+      const hasVisible = section.style.display !== 'none' &&
+        [...section.querySelectorAll('.term-card')].some(c => c.style.display !== 'none');
+      link.classList.toggle('disabled', !hasVisible);
+    });
+  }
+
+  // ── IntersectionObserver for active letter ───────────
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const letter = entry.target.id.replace('letter-', '');
+        alphaLinks.forEach(l => l.classList.toggle('active', l.dataset.letter === letter));
+      }
+    });
+  }, { rootMargin: '-15% 0px -75% 0px' });
+
+  letterSections.forEach(sec => observer.observe(sec));
+
+  // ── Alphabet Click ───────────────────────────────────
+  alphaLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (link.classList.contains('disabled')) return;
+      const target = document.getElementById('letter-' + link.dataset.letter);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // ── Search ───────────────────────────────────────────
+  searchInput.addEventListener('input', () => {
+    activeSearch = searchInput.value.toLowerCase().trim();
+    searchClear.classList.toggle('visible', activeSearch !== '');
+    filterTerms();
+  });
+
+  searchClear.addEventListener('click', () => {
+    searchInput.value = '';
+    activeSearch = '';
+    searchClear.classList.remove('visible');
+    filterTerms();
+  });
+
+  // ── Category Pills ───────────────────────────────────
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      activeCategory = pill.dataset.filter;
+      filterTerms();
+    });
+  });
+
+  // ── Reset ────────────────────────────────────────────
+  function resetAll() {
+    activeSearch = '';
+    activeCategory = 'all';
+    searchInput.value = '';
+    searchClear.classList.remove('visible');
+    filterPills.forEach(p => p.classList.remove('active'));
+    document.querySelector('.filter-pill[data-filter="all"]').classList.add('active');
+    filterTerms();
+  }
+
+  resetLink.addEventListener('click', resetAll);
+  noResultsReset.addEventListener('click', resetAll);
+
+  // ── Hamburger ────────────────────────────────────────
+  const btn   = document.getElementById('hamburger');
+  const links = document.getElementById('navLinks');
+  btn.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      links.classList.remove('open');
+      btn.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // ── Init ─────────────────────────────────────────────
+  updateAlphaNav();
+
+})();
+</script>
+
+</body>
+</html>

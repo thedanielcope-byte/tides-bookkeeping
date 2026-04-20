@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookkeeping Services in Greenville, SC | Tides Bookkeeping</title>
+  <meta name="description" content="Tides Bookkeeping provides remote bookkeeping, payroll support, and financial reporting for small businesses in Greenville, SC. Monthly service, flat-rate pricing, and clean books guaranteed." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── TOKENS ─────────────────────────────────────── */
+    :root {
+      --teal:    #41cfd0;
+      --teal-lt: #e6f9f9;
+      --blue:    #66c1ee;
+      --blue-lt: #e8f4fd;
+      --navy:    #215197;
+      --navy-dk: #163872;
+      --ink:     #0f1c2e;
+      --body:    #4a5568;
+      --muted:   #94a3b8;
+      --border:  #e2eaf3;
+      --bg:      #ffffff;
+      --bg-alt:  #f7fbff;
+      --shadow:  0 1px 3px rgba(15,28,46,.06), 0 4px 16px rgba(15,28,46,.08);
+      --shadow-lg: 0 8px 40px rgba(15,28,46,.12);
+      --r:       16px;
+      --r-sm:    10px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── TYPE ───────────────────────────────────────── */
+    .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 0.95; }
+    h2.display { font-size: clamp(2.4rem, 5vw, 4rem); }
+    h3 { font-size: 1.1rem; font-weight: 700; color: var(--ink); }
+    p { color: var(--body); }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal);
+      background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
+      padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--blue) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* ── LAYOUT ─────────────────────────────────────── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+    .section { padding: 96px 0; }
+    .section-alt { background: var(--bg-alt); }
+
+    /* ── BUTTONS ────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .85rem 1.75rem; border-radius: 50px;
+      font-weight: 600; font-size: .9rem; cursor: pointer;
+      transition: all .2s ease; border: 2px solid transparent;
+    }
+    .btn-primary { background: var(--navy); color: #fff; }
+    .btn-primary:hover { background: var(--navy-dk); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(33,81,151,.3); }
+    .btn-teal { background: var(--teal); color: var(--ink); font-weight: 700; }
+    .btn-teal:hover { background: #38bfc0; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(65,207,208,.4); }
+    .btn-outline { border-color: var(--border); color: var(--ink); background: #fff; }
+    .btn-outline:hover { border-color: var(--navy); color: var(--navy); }
+    .btn-outline-white { border-color: rgba(255,255,255,.35); color: #fff; }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+    .btn-lg { padding: 1rem 2.2rem; font-size: 1rem; }
+
+    /* ── MOCKUP STRIP ───────────────────────────────── */
+    .mockup-strip {
+      background: var(--teal); color: var(--ink);
+      text-align: center; padding: 8px;
+      font-size: .75rem; font-weight: 700; letter-spacing: .08em;
+      position: sticky; top: 0; z-index: 300;
+    }
+
+    /* ── NAV ────────────────────────────────────────── */
+    .nav-wrap {
+      position: sticky; top: 33px; z-index: 200;
+      background: rgba(255,255,255,.92); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem; max-width: 1180px; margin: 0 auto;
+    }
+    .nav-logo img { height: 44px; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); font-weight: 700; }
+    .nav-cta { display: flex; align-items: center; gap: .75rem; }
+    .nav-signin { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
+    .nav-signin:hover { color: var(--navy); }
+
+    /* ── HAMBURGER ──────────────────────────────────── */
+    .hamburger {
+      display: none; background: none; border: none; cursor: pointer;
+      padding: .4rem; flex-direction: column; gap: 5px; z-index: 1001;
+    }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); transition: all .25s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── BREADCRUMB ─────────────────────────────────── */
+    .breadcrumb { background: var(--bg-alt); border-bottom: 1px solid var(--border); padding: .75rem 0; }
+    .breadcrumb-inner {
+      display: flex; align-items: center; gap: .5rem; flex-wrap: wrap;
+      max-width: 1180px; margin: 0 auto; padding: 0 2rem;
+      font-size: .78rem; color: var(--muted);
+    }
+    .breadcrumb-inner a { color: var(--muted); transition: color .2s; }
+    .breadcrumb-inner a:hover { color: var(--navy); }
+    .breadcrumb-sep { color: var(--border); }
+    .breadcrumb-current { color: var(--navy); font-weight: 600; }
+
+    /* ── PAGE HERO ──────────────────────────────────── */
+    .page-hero {
+      padding: 88px 0 80px;
+      background: #fff; position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 65% 75% at 88% 15%, rgba(65,207,208,.11) 0%, transparent 60%),
+        radial-gradient(ellipse 45% 45% at 10% 85%, rgba(102,193,238,.08) 0%, transparent 60%);
+    }
+    .page-hero-inner {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 420px; gap: 5rem; align-items: center;
+    }
+    .page-hero h1 {
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: .93; margin-bottom: 1.5rem; color: var(--ink);
+    }
+    .page-hero p {
+      font-size: 1.05rem; line-height: 1.78; color: var(--body); max-width: 520px; margin-bottom: 2.25rem;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .hero-note { font-size: .78rem; color: var(--muted); margin-top: .75rem; }
+
+    /* Trust pills */
+    .trust-pills { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2rem; }
+    .trust-pill {
+      display: flex; align-items: center; gap: .5rem;
+      padding: 6px 14px; border-radius: 50px;
+      background: #fff; border: 1px solid var(--border);
+      font-size: .78rem; font-weight: 600; color: var(--ink);
+      box-shadow: 0 1px 4px rgba(0,0,0,.05);
+    }
+    .trust-pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); flex-shrink: 0; }
+
+    /* Hero aside card */
+    .hero-aside {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 24px; box-shadow: var(--shadow-lg); overflow: hidden;
+    }
+    .ha-header {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a3d7a 100%);
+      padding: 1.5rem 2rem; color: #fff;
+    }
+    .ha-header .label {
+      font-size: .68rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal); display: block; margin-bottom: .5rem;
+    }
+    .ha-title { font-size: 1.05rem; font-weight: 700; }
+    .ha-subtitle { font-size: .78rem; color: rgba(255,255,255,.55); margin-top: 3px; }
+    .ha-body { padding: 1.75rem 2rem; }
+    .ha-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .8rem 0; border-bottom: 1px solid var(--border); font-size: .85rem;
+    }
+    .ha-row:last-child { border-bottom: none; }
+    .ha-row strong { font-weight: 600; color: var(--ink); }
+    .ha-badge {
+      font-size: .67rem; font-weight: 700; padding: 3px 10px; border-radius: 50px; letter-spacing: .04em;
+    }
+    .ha-badge.green { background: #dcfce7; color: #16a34a; }
+    .ha-badge.teal { background: var(--teal-lt); color: var(--teal); }
+    .ha-badge.blue { background: var(--blue-lt); color: var(--navy); }
+    .ha-stat-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+      background: var(--border); border: 1px solid var(--border);
+      border-radius: var(--r-sm); overflow: hidden; margin-top: 1.5rem;
+    }
+    .ha-stat { background: var(--bg-alt); padding: 1rem; text-align: center; }
+    .ha-stat-val { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--navy); line-height: 1; }
+    .ha-stat-label { font-size: .68rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-top: 3px; }
+
+    /* ── SECTION HEADER ─────────────────────────────── */
+    .section-header { max-width: 620px; }
+    .section-header.centered { max-width: 700px; margin: 0 auto; text-align: center; }
+    .section-header p { margin-top: 1rem; font-size: 1rem; line-height: 1.75; }
+
+    /* ── LOCAL LANDSCAPE ────────────────────────────── */
+    .landscape-layout {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;
+    }
+    .landscape-visual {
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      border-radius: 24px; padding: 2.75rem;
+    }
+    .lv-title {
+      font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem;
+      letter-spacing: .02em; color: #fff; margin-bottom: 1.75rem;
+    }
+    .lv-stat-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;
+    }
+    .lv-stat {
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
+      border-radius: 12px; padding: 1.25rem; text-align: center;
+    }
+    .lv-stat-num {
+      font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem;
+      color: var(--teal); line-height: 1;
+    }
+    .lv-stat-label { font-size: .72rem; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: .06em; margin-top: .3rem; }
+    .landscape-points { display: flex; flex-direction: column; gap: 1rem; margin-top: 2.5rem; }
+    .lp-item {
+      display: flex; align-items: flex-start; gap: 1rem;
+      padding: 1.25rem 1.5rem; background: #fff;
+      border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow);
+    }
+    .lp-icon { font-size: 1.1rem; flex-shrink: 0; }
+    .lp-item h4 { font-size: .93rem; font-weight: 700; color: var(--ink); margin-bottom: .15rem; }
+    .lp-item p { font-size: .82rem; color: var(--body); line-height: 1.6; }
+
+    /* ── SERVICES ───────────────────────────────────── */
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem; margin-top: 3.5rem;
+    }
+    .svc-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 20px; padding: 2rem; box-shadow: var(--shadow); transition: all .25s;
+    }
+    .svc-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    .svc-card.featured {
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      border-color: transparent; grid-column: span 2;
+    }
+    .svc-icon {
+      width: 50px; height: 50px; border-radius: 13px;
+      background: var(--teal-lt); display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; margin-bottom: 1.25rem;
+    }
+    .svc-card.featured .svc-icon { background: rgba(255,255,255,.12); }
+    .svc-card h3 { margin-bottom: .6rem; }
+    .svc-card.featured h3 { color: #fff; font-size: 1.35rem; }
+    .svc-card p { font-size: .87rem; line-height: 1.7; }
+    .svc-card.featured p { color: rgba(255,255,255,.65); }
+    .svc-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
+    .svc-tag {
+      font-size: .68rem; font-weight: 700; letter-spacing: .04em;
+      padding: 4px 10px; border-radius: 50px;
+      background: rgba(255,255,255,.1); color: rgba(255,255,255,.75);
+    }
+    .svc-tag.light { background: var(--teal-lt); color: var(--teal); }
+
+    /* ── INDUSTRIES ─────────────────────────────────── */
+    .industries-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 3.5rem;
+    }
+    .ind-card {
+      background: #fff; border: 1px solid var(--border); border-radius: 16px;
+      padding: 1.5rem; text-align: center; box-shadow: var(--shadow); transition: all .2s;
+    }
+    .ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    .ind-icon { font-size: 1.8rem; margin-bottom: .75rem; }
+    .ind-card h4 { font-size: .9rem; font-weight: 700; color: var(--ink); margin-bottom: .4rem; }
+    .ind-card p { font-size: .78rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── WHY TIDES ───────────────────────────────────── */
+    .why-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .why-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 2.5rem; }
+    .why-item {
+      display: flex; align-items: flex-start; gap: 1rem;
+      padding: 1.25rem 1.5rem; background: #fff;
+      border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow);
+      transition: all .2s;
+    }
+    .why-item:hover { border-color: rgba(65,207,208,.35); box-shadow: var(--shadow-lg); }
+    .why-check {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--teal-lt); border: 1.5px solid rgba(65,207,208,.3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .85rem; flex-shrink: 0; color: var(--teal);
+    }
+    .why-item h4 { font-size: .95rem; font-weight: 700; color: var(--ink); margin-bottom: .2rem; }
+    .why-item p { font-size: .84rem; color: var(--body); line-height: 1.65; }
+    .why-visual {
+      background: var(--bg-alt); border: 1px solid var(--border);
+      border-radius: 24px; padding: 2.5rem; box-shadow: var(--shadow);
+    }
+    .why-visual h3 { font-size: 1.25rem; margin-bottom: 1.75rem; }
+    .pricing-preview {
+      display: flex; flex-direction: column; gap: 1px;
+      background: var(--border); border: 1px solid var(--border);
+      border-radius: 14px; overflow: hidden; margin-bottom: 1.5rem;
+    }
+    .pp-row {
+      display: flex; align-items: center; justify-content: space-between;
+      background: #fff; padding: .9rem 1.25rem; font-size: .88rem;
+    }
+    .pp-label { font-weight: 600; color: var(--ink); }
+    .pp-price { font-weight: 700; color: var(--navy); }
+    .pp-row.featured { background: var(--navy); }
+    .pp-row.featured .pp-label { color: rgba(255,255,255,.8); }
+    .pp-row.featured .pp-price { color: var(--teal); font-size: 1rem; }
+
+    /* ── TESTIMONIAL ────────────────────────────────── */
+    .testimonial-section {
+      background: linear-gradient(135deg, var(--navy) 0%, #122f6b 100%); padding: 88px 0;
+    }
+    .testimonial-inner { max-width: 860px; margin: 0 auto; text-align: center; }
+    .t-stars { color: #f59e0b; font-size: 1.1rem; letter-spacing: 3px; margin-bottom: 2rem; }
+    .t-quote {
+      font-size: clamp(1.05rem, 2.5vw, 1.35rem); line-height: 1.75;
+      color: rgba(255,255,255,.88); font-style: italic; margin-bottom: 2.5rem;
+    }
+    .t-author { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+    .t-avatar {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: rgba(255,255,255,.1); border: 2px solid rgba(65,207,208,.4);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: .9rem; color: var(--teal);
+    }
+    .t-name { font-size: 1rem; font-weight: 700; color: #fff; }
+    .t-role { font-size: .8rem; color: rgba(255,255,255,.5); margin-top: 2px; }
+
+    /* ── NEARBY AREAS ───────────────────────────────── */
+    .nearby-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 3rem;
+    }
+    .nearby-card {
+      background: var(--bg-alt); border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.25rem; text-align: center; transition: all .2s;
+    }
+    .nearby-card:hover { border-color: rgba(65,207,208,.4); background: #fff; box-shadow: var(--shadow); }
+    .nearby-card h4 { font-size: .9rem; font-weight: 700; color: var(--ink); margin-bottom: .25rem; }
+    .nearby-card p { font-size: .75rem; color: var(--muted); }
+
+    /* ── FAQ ────────────────────────────────────────── */
+    .faq-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 4rem; margin-top: 3rem; }
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.4rem 0; text-align: left; gap: 1rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .faq-question h4 { font-size: .97rem; font-weight: 700; color: var(--ink); flex: 1; }
+    .faq-toggle {
+      width: 28px; height: 28px; border-radius: 50%;
+      border: 1.5px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 1.1rem; color: var(--muted); transition: all .2s;
+    }
+    .faq-item.open .faq-toggle { background: var(--teal); border-color: var(--teal); color: var(--ink); transform: rotate(45deg); }
+    .faq-answer { display: none; padding: 0 0 1.4rem; }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-answer p { font-size: .9rem; line-height: 1.75; color: var(--body); }
+
+    /* ── CTA ────────────────────────────────────────── */
+    .cta-section { background: var(--ink); padding: 96px 0; }
+    .cta-inner { text-align: center; max-width: 720px; margin: 0 auto; }
+    .cta-inner h2 { font-size: clamp(2rem, 5vw, 3.5rem); color: #fff; margin-bottom: 1.25rem; }
+    .cta-inner p { font-size: 1.05rem; color: rgba(255,255,255,.6); margin-bottom: 2.5rem; }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .cta-note { font-size: .78rem; color: rgba(255,255,255,.3); margin-top: 1.25rem; }
+
+    /* ── FOOTER ─────────────────────────────────────── */
+    footer { background: #080f1a; padding: 72px 0 32px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-logo { height: 40px; margin-bottom: 1.25rem; filter: brightness(10); }
+    .footer-about { font-size: .84rem; color: rgba(255,255,255,.35); line-height: 1.75; max-width: 280px; }
+    .footer-col h4 {
+      font-size: .66rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: .12em; color: rgba(255,255,255,.25); margin-bottom: 1.25rem;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: .55rem; }
+    .footer-links a { font-size: .82rem; color: rgba(255,255,255,.4); transition: color .15s; }
+    .footer-links a:hover { color: rgba(255,255,255,.8); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.06); padding-top: 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: .72rem; color: rgba(255,255,255,.2); }
+    .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-bottom-links a { font-size: .72rem; color: rgba(255,255,255,.2); transition: color .15s; }
+    .footer-bottom-links a:hover { color: rgba(255,255,255,.5); }
+
+    /* ── LOCAL GUIDE ────────────────────────────────── */
+    .local-history {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 4rem;
+    }
+    .local-history h3 { font-size: 1.2rem; margin-bottom: 1.25rem; }
+    .employer-list { display: flex; flex-direction: column; gap: .6rem; margin-top: 1.75rem; }
+    .emp-row {
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      padding: .85rem 1.25rem; background: #fff;
+      border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow);
+    }
+    .emp-name { font-size: .9rem; font-weight: 700; color: var(--ink); }
+    .emp-industry { font-size: .75rem; color: var(--muted); margin-top: 2px; }
+    .emp-badge {
+      font-size: .67rem; font-weight: 700; padding: 4px 10px; border-radius: 50px;
+      background: var(--blue-lt); color: var(--navy); white-space: nowrap; flex-shrink: 0;
+    }
+    .neighborhood-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; margin-top: 1.25rem;
+    }
+    .nbhd-card {
+      background: #fff; border: 1px solid var(--border); border-radius: 12px;
+      padding: 1.1rem 1.25rem; box-shadow: var(--shadow); transition: all .2s;
+    }
+    .nbhd-card:hover { border-color: rgba(65,207,208,.4); box-shadow: var(--shadow-lg); }
+    .nbhd-name { font-size: .9rem; font-weight: 700; color: var(--ink); margin-bottom: .3rem; }
+    .nbhd-desc { font-size: .78rem; color: var(--body); line-height: 1.6; }
+    .roads-lm-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3.5rem;
+    }
+    .roads-lm-grid h3 { font-size: 1.2rem; margin-bottom: 1.25rem; }
+    .road-list { display: flex; flex-direction: column; gap: .6rem; }
+    .road-row {
+      display: flex; align-items: flex-start; gap: .85rem;
+      padding: .85rem 1.1rem; background: #fff;
+      border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow);
+    }
+    .road-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+    .road-name { font-size: .88rem; font-weight: 700; color: var(--ink); }
+    .road-desc { font-size: .78rem; color: var(--body); line-height: 1.6; margin-top: .15rem; }
+    .landmark-list { display: flex; flex-direction: column; gap: .65rem; }
+    .lm-row {
+      display: flex; align-items: flex-start; gap: 1rem;
+      padding: 1rem 1.25rem; background: var(--bg-alt);
+      border: 1px solid var(--border); border-radius: 12px; transition: all .2s;
+    }
+    .lm-row:hover { background: #fff; box-shadow: var(--shadow); border-color: rgba(65,207,208,.3); }
+    .lm-icon { font-size: 1.25rem; flex-shrink: 0; }
+    .lm-name { font-size: .9rem; font-weight: 700; color: var(--ink); margin-bottom: .2rem; }
+    .lm-desc { font-size: .78rem; color: var(--body); line-height: 1.6; }
+
+    /* ── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .local-history { grid-template-columns: 1fr; gap: 2.5rem; }
+      .roads-lm-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .page-hero-inner { grid-template-columns: 1fr; }
+      .hero-aside { display: none; }
+      .landscape-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .lv-stat-grid { grid-template-columns: repeat(4, 1fr); }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .svc-card.featured { grid-column: span 2; }
+      .industries-grid { grid-template-columns: repeat(3, 1fr); }
+      .why-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .nearby-grid { grid-template-columns: repeat(2, 1fr); }
+      .faq-cols { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column; position: fixed;
+        inset: 0; background: #fff; z-index: 1000;
+        align-items: center; justify-content: center; gap: 2rem;
+      }
+      .nav-links.open li a { font-size: 1.4rem; color: var(--ink); }
+      .page-hero h1 { font-size: 2.8rem; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+      .lv-stat-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: 1fr; }
+      .svc-card.featured { grid-column: span 1; }
+      .industries-grid { grid-template-columns: 1fr 1fr; }
+      .nearby-grid { grid-template-columns: 1fr 1fr; }
+      .cta-actions { flex-direction: column; align-items: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-bottom-links { justify-content: center; }
+      h2.display { font-size: 2.2rem; }
+    }
+    @media (max-width: 480px) {
+      .industries-grid { grid-template-columns: 1fr; }
+      .nearby-grid { grid-template-columns: 1fr 1fr; }
+      .lv-stat-grid { grid-template-columns: 1fr 1fr; }
+      .container { padding: 0 1rem; }
+      .section { padding: 3rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- MOCKUP STRIP -->
+<div class="mockup-strip">City Page Mockup &nbsp;·&nbsp; <span>TidesBookkeeping.com/south-carolina/greenville-county/greenville</span> &nbsp;·&nbsp; For Review Only</div>
+
+<!-- NAV -->
+<nav class="nav-wrap">
+  <div class="nav-inner">
+    <div class="nav-logo"><img src="logo.png" alt="Tides Bookkeeping" /></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">How It Works</a></li>
+      <li><a href="#">Who We Serve</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Pricing</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#" class="nav-signin">Sign In</a>
+      <a href="#" class="btn btn-primary">Free Consultation</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="#">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="state-south-carolina.html">South Carolina</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="county-greenville-sc.html">Greenville County</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">Greenville</span>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div>
+        <div class="eyebrow">📍 Greenville, South Carolina</div>
+        <h1 class="display">Bookkeeping<br/>Services in<br/><span class="gradient-text">Greenville, SC.</span></h1>
+        <p>Greenville's small business scene is booming — and great books are the foundation of every business that grows with it. Tides Bookkeeping provides remote bookkeeping, payroll support, and monthly financial reporting for Greenville business owners who'd rather focus on running their business than managing their books.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-teal btn-lg">Schedule a Free Call</a>
+          <a href="#" class="btn btn-outline btn-lg">See Services</a>
+        </div>
+        <p class="hero-note">No setup fees &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; 100% Remote</p>
+        <div class="trust-pills">
+          <div class="trust-pill"><span class="dot"></span>QuickBooks Online</div>
+          <div class="trust-pill"><span class="dot"></span>Clean Books Monthly</div>
+          <div class="trust-pill"><span class="dot"></span>Flat-Rate Pricing</div>
+          <div class="trust-pill"><span class="dot"></span>Tax-Ready Year-Round</div>
+        </div>
+      </div>
+
+      <!-- Aside Card -->
+      <div class="hero-aside">
+        <div class="ha-header">
+          <span class="label">Greenville, SC</span>
+          <div class="ha-title">Your Dedicated Bookkeeping Team</div>
+          <div class="ha-subtitle">Serving Greenville businesses remotely</div>
+        </div>
+        <div class="ha-body">
+          <div class="ha-row">
+            <strong>Monthly Bookkeeping</strong>
+            <span class="ha-badge green">Available</span>
+          </div>
+          <div class="ha-row">
+            <strong>Catch-Up Bookkeeping</strong>
+            <span class="ha-badge green">Available</span>
+          </div>
+          <div class="ha-row">
+            <strong>Payroll Support</strong>
+            <span class="ha-badge green">Available</span>
+          </div>
+          <div class="ha-row">
+            <strong>Setup &amp; Cleanup</strong>
+            <span class="ha-badge green">Available</span>
+          </div>
+          <div class="ha-row">
+            <strong>Financial Reporting</strong>
+            <span class="ha-badge teal">Monthly</span>
+          </div>
+          <div class="ha-stat-row">
+            <div class="ha-stat">
+              <div class="ha-stat-val">72k+</div>
+              <div class="ha-stat-label">City Pop.</div>
+            </div>
+            <div class="ha-stat">
+              <div class="ha-stat-val">24hr</div>
+              <div class="ha-stat-label">Response Time</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     GREENVILLE BUSINESS LANDSCAPE
+══════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="landscape-layout">
+      <div>
+        <div class="eyebrow">Greenville's Business Scene</div>
+        <h2 class="display">Greenville Is One of<br/>America's Fastest-Growing<br/>Business Cities.</h2>
+        <p>With its vibrant downtown, an influx of new residents, and a growing reputation as a Southeast business hub, Greenville, SC is home to thousands of small businesses — from local restaurants on Main Street to tech startups, contractors, real estate investors, and professional service firms.</p>
+        <p style="margin-top:1rem;">That growth creates opportunity — and financial complexity. Business owners in Greenville need clean books, clear cash flow visibility, and a partner who can keep up with them as they scale.</p>
+        <div class="landscape-points">
+          <div class="lp-item">
+            <span class="lp-icon">📈</span>
+            <div>
+              <h4>Rapid Business Growth</h4>
+              <p>Greenville consistently ranks among the top cities in the Southeast for small business formation and economic growth.</p>
+            </div>
+          </div>
+          <div class="lp-item">
+            <span class="lp-icon">🏙️</span>
+            <div>
+              <h4>Diverse Economy</h4>
+              <p>From Main Street restaurants to suburban contractors — Greenville's economy spans nearly every industry we serve.</p>
+            </div>
+          </div>
+          <div class="lp-item">
+            <span class="lp-icon">🤝</span>
+            <div>
+              <h4>Business-Friendly Climate</h4>
+              <p>Low taxes and strong infrastructure make Greenville an attractive home base for small business owners and entrepreneurs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="landscape-visual">
+        <div class="lv-title">Greenville By the Numbers</div>
+        <div class="lv-stat-grid">
+          <div class="lv-stat">
+            <div class="lv-stat-num">72k+</div>
+            <div class="lv-stat-label">Population</div>
+          </div>
+          <div class="lv-stat">
+            <div class="lv-stat-num">8k+</div>
+            <div class="lv-stat-label">Local Businesses</div>
+          </div>
+          <div class="lv-stat">
+            <div class="lv-stat-num">#1</div>
+            <div class="lv-stat-label">SC Business Hub</div>
+          </div>
+          <div class="lv-stat">
+            <div class="lv-stat-num">Top 10</div>
+            <div class="lv-stat-label">SE Growth City</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     LOCAL GUIDE — GREENVILLE
+══════════════════════════════════════ -->
+<section class="section" id="greenville-guide">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">📍 About Greenville, SC</div>
+      <h2 class="display">The City Behind the Business.</h2>
+      <p>Greenville is more than a zip code — it's one of the Southeast's most dynamic cities. Understanding its neighborhoods, roads, history, and economy is how we serve our clients better.</p>
+    </div>
+
+    <!-- History + Employers | Neighborhoods -->
+    <div class="local-history">
+      <div>
+        <h3>History &amp; Economic Growth</h3>
+        <p>Chartered in 1786 and incorporated in 1869, Greenville spent much of the 20th century as the <strong>"Textile Capital of the World"</strong> — home to dozens of mills lining the Reedy River. When the textile industry declined in the 1970s and '80s, Greenville made a deliberate pivot: recruiting global manufacturers, investing in a world-class downtown, and repositioning itself as a Southeast business hub.</p>
+        <p style="margin-top:.85rem;">The arrival of <strong>BMW's first US manufacturing plant in neighboring Greer in 1994</strong> was the turning point — drawing hundreds of suppliers, engineers, and professional service firms to the region. The revival of Falls Park and the iconic Liberty Bridge in the early 2000s anchored a downtown renaissance that continues today. Greenville now ranks consistently among the best small cities in America to start and grow a business.</p>
+        <p style="margin-top:.85rem;">That growth means more small business owners than ever — and more small business owners who need clean books to grow with confidence.</p>
+        <h3 style="margin-top:2rem;">Major Employers</h3>
+        <div class="employer-list">
+          <div class="emp-row">
+            <div><div class="emp-name">Michelin North America</div><div class="emp-industry">Manufacturing / HQ</div></div>
+            <span class="emp-badge">2,500+ local</span>
+          </div>
+          <div class="emp-row">
+            <div><div class="emp-name">Prisma Health</div><div class="emp-industry">Healthcare System</div></div>
+            <span class="emp-badge">17,000+ regional</span>
+          </div>
+          <div class="emp-row">
+            <div><div class="emp-name">GE Gas Power</div><div class="emp-industry">Industrial Manufacturing</div></div>
+            <span class="emp-badge">Major employer</span>
+          </div>
+          <div class="emp-row">
+            <div><div class="emp-name">Fluor Corporation</div><div class="emp-industry">Engineering / Global Firm</div></div>
+            <span class="emp-badge">Major SC presence</span>
+          </div>
+          <div class="emp-row">
+            <div><div class="emp-name">TD Bank / Hubbell Power</div><div class="emp-industry">Finance / Industrial</div></div>
+            <span class="emp-badge">Downtown + area</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3>Greenville's Neighborhoods</h3>
+        <div class="neighborhood-grid">
+          <div class="nbhd-card">
+            <div class="nbhd-name">Downtown / Main Street</div>
+            <div class="nbhd-desc">The commercial heart of Greenville — restaurants, marketing agencies, law firms, and boutiques surrounding Falls Park on the Reedy.</div>
+          </div>
+          <div class="nbhd-card">
+            <div class="nbhd-name">West End</div>
+            <div class="nbhd-desc">Revitalized arts and entertainment district anchored by Fluor Field. Craft breweries, creative studios, and growing independent retail.</div>
+          </div>
+          <div class="nbhd-card">
+            <div class="nbhd-name">Augusta Road Corridor</div>
+            <div class="nbhd-desc">Southwest commercial strip with a strong mix of local restaurants, salons, boutiques, and professional offices.</div>
+          </div>
+          <div class="nbhd-card">
+            <div class="nbhd-name">Woodruff Road</div>
+            <div class="nbhd-desc">Greenville's primary commercial corridor — dense with retail, dining, and offices from Haywood Mall to the I-385 interchange.</div>
+          </div>
+          <div class="nbhd-card">
+            <div class="nbhd-name">North Main</div>
+            <div class="nbhd-desc">Historic residential-commercial mix north of downtown — locally-owned shops, galleries, and professional service businesses.</div>
+          </div>
+          <div class="nbhd-card">
+            <div class="nbhd-name">Pleasantburg Drive</div>
+            <div class="nbhd-desc">Central midtown spine — medical offices, service businesses, and dense small-business retail connecting downtown to the I-85 corridor.</div>
+          </div>
+          <div class="nbhd-card">
+            <div class="nbhd-name">White Horse Road</div>
+            <div class="nbhd-desc">Northwest corridor heavy with trades, auto services, light industrial businesses, and working-class small businesses.</div>
+          </div>
+          <div class="nbhd-card">
+            <div class="nbhd-name">Overbrook / East Greenville</div>
+            <div class="nbhd-desc">Growing east-side neighborhoods with a mix of established businesses and new residential and commercial development.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Roads + Landmarks -->
+    <div class="roads-lm-grid">
+      <div>
+        <h3>Major Roads &amp; Interstates</h3>
+        <div class="road-list">
+          <div class="road-row">
+            <span class="road-icon">🛣️</span>
+            <div>
+              <div class="road-name">Woodruff Road (Hwy 146)</div>
+              <div class="road-desc">Greenville's primary commercial corridor — running southeast from Haywood Mall past Five Forks to I-385. The highest-traffic business strip in the Upstate.</div>
+            </div>
+          </div>
+          <div class="road-row">
+            <span class="road-icon">🛣️</span>
+            <div>
+              <div class="road-name">Wade Hampton Boulevard (US-29)</div>
+              <div class="road-desc">Major north-south arterial connecting downtown through Taylors toward Greer and the GSP Airport corridor.</div>
+            </div>
+          </div>
+          <div class="road-row">
+            <span class="road-icon">🛣️</span>
+            <div>
+              <div class="road-name">Augusta Road / US-25</div>
+              <div class="road-desc">Key southwest corridor dense with food, retail, and professional services running from downtown to I-185 toward Laurens.</div>
+            </div>
+          </div>
+          <div class="road-row">
+            <span class="road-icon">🛣️</span>
+            <div>
+              <div class="road-name">Pleasantburg Drive / SC-291</div>
+              <div class="road-desc">Midtown spine connecting North Main to the I-85 corridor through a dense mix of medical offices and commercial development.</div>
+            </div>
+          </div>
+          <div class="road-row">
+            <span class="road-icon">🛣️</span>
+            <div>
+              <div class="road-name">I-385 &amp; I-85 Interchange</div>
+              <div class="road-desc">The main interstate gateway into Greenville — I-385 runs directly into downtown and connects to I-85 (Charlotte to Atlanta), putting Greenville at the center of the Southeast corridor.</div>
+            </div>
+          </div>
+          <div class="road-row">
+            <span class="road-icon">🛣️</span>
+            <div>
+              <div class="road-name">Laurens Road / Peters Creek Pkwy</div>
+              <div class="road-desc">Southeast and western connectors serving industrial, automotive, and trade businesses in Greenville's outer commercial zones.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3>Local Landmarks &amp; Community</h3>
+        <div class="landmark-list">
+          <div class="lm-row">
+            <span class="lm-icon">🌊</span>
+            <div>
+              <div class="lm-name">Falls Park on the Reedy</div>
+              <div class="lm-desc">The anchor of downtown Greenville's transformation — a 32-acre park surrounding a natural waterfall, with the iconic Liberty Bridge suspension footbridge as its centerpiece. One of the most photographed spots in SC.</div>
+            </div>
+          </div>
+          <div class="lm-row">
+            <span class="lm-icon">🚴</span>
+            <div>
+              <div class="lm-name">Swamp Rabbit Trail</div>
+              <div class="lm-desc">22-mile multi-use greenway connecting downtown Greenville to Travelers Rest — a major economic driver for restaurants, breweries, and outdoor businesses along the route.</div>
+            </div>
+          </div>
+          <div class="lm-row">
+            <span class="lm-icon">⚾</span>
+            <div>
+              <div class="lm-name">Fluor Field at the West End</div>
+              <div class="lm-desc">Home of the Greenville Drive (Red Sox Double-A affiliate) and the anchor of the revitalized West End entertainment district — packed with bars, restaurants, and event-night crowds.</div>
+            </div>
+          </div>
+          <div class="lm-row">
+            <span class="lm-icon">🏟️</span>
+            <div>
+              <div class="lm-name">Bon Secours Wellness Arena</div>
+              <div class="lm-desc">Major entertainment and sports venue downtown — home to Greenville Swamp Rabbits hockey and major concerts, drawing thousands of visitors to the city monthly.</div>
+            </div>
+          </div>
+          <div class="lm-row">
+            <span class="lm-icon">🌳</span>
+            <div>
+              <div class="lm-name">Unity Park</div>
+              <div class="lm-desc">Greenville's newest 60-acre flagship park, opened 2022 — a transformational development that has sparked a wave of new investment along the west side of downtown.</div>
+            </div>
+          </div>
+          <div class="lm-row">
+            <span class="lm-icon">🎨</span>
+            <div>
+              <div class="lm-name">Artisphere &amp; TD Saturday Market</div>
+              <div class="lm-desc">Annual arts festival drawing 70,000+ visitors to downtown and the weekly TD Saturday Market — community events that make Greenville's small business economy thrive year-round.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SERVICES
+══════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">What We Offer</div>
+      <h2 class="display">Everything Greenville<br/>Businesses Need to Stay<br/>Financially Clean.</h2>
+      <p>Seven core bookkeeping services, all delivered remotely — designed specifically for the pace and complexity of Greenville's growing small business economy.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="svc-card featured">
+        <div class="svc-icon">📊</div>
+        <h3>Monthly Bookkeeping</h3>
+        <p>Your most important financial foundation. We categorize every transaction, reconcile every account, and deliver clean P&L and balance sheet reports to your inbox every month — so you always know exactly where your Greenville business stands financially.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">QuickBooks Online</span>
+          <span class="svc-tag">Monthly P&L</span>
+          <span class="svc-tag">Balance Sheet</span>
+          <span class="svc-tag">Bank Reconciliation</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">🔍</div>
+        <h3>Catch-Up Bookkeeping</h3>
+        <p>Got months or years of backlog? We clean it all up so you can move forward with an accurate set of books — ready for your CPA and ready for decisions.</p>
+        <div class="svc-tags"><span class="svc-tag light">Any Period</span><span class="svc-tag light">Tax-Ready</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">⚙️</div>
+        <h3>Setup &amp; Cleanup</h3>
+        <p>Starting fresh or inheriting a mess? We configure QuickBooks, connect your accounts, and build a chart of accounts tailored to your industry and business model.</p>
+        <div class="svc-tags"><span class="svc-tag light">QuickBooks Setup</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">🏦</div>
+        <h3>Bank Reconciliation</h3>
+        <p>Every account reconciled every month — ensuring your books match your bank statements and every transaction is accounted for accurately.</p>
+        <div class="svc-tags"><span class="svc-tag light">All Accounts</span><span class="svc-tag light">Monthly</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">📈</div>
+        <h3>Financial Reporting</h3>
+        <p>P&L statements, balance sheets, and cash flow reports that are easy to read, understand, and act on — delivered every month, on time.</p>
+        <div class="svc-tags"><span class="svc-tag light">P&L</span><span class="svc-tag light">Cash Flow</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">💳</div>
+        <h3>Accounts Payable &amp; Receivable</h3>
+        <p>We track what you owe and what's owed to you, keeping your cash flow picture clear and your vendor relationships organized.</p>
+        <div class="svc-tags"><span class="svc-tag light">AP / AR</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">👥</div>
+        <h3>Payroll Bookkeeping Support</h3>
+        <p>We ensure payroll expenses hit your books correctly every pay period, syncing with your payroll processor to keep everything reconciled and tax-ready.</p>
+        <div class="svc-tags"><span class="svc-tag light">Payroll Entries</span><span class="svc-tag light">Tax Sync</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     WHO WE HELP IN GREENVILLE
+══════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">Industries We Serve</div>
+      <h2 class="display">Built for Greenville's<br/>Most Common Business Types.</h2>
+      <p>We work with business owners across every major industry in Greenville — from contractors in the West End to real estate investors near Verdae to restaurant owners on Augusta Road.</p>
+    </div>
+    <div class="industries-grid">
+      <div class="ind-card">
+        <div class="ind-icon">🏗️</div>
+        <h4>Contractors &amp; Trades</h4>
+        <p>Job costing, subcontractor payments, material expenses, seasonal flow</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🏠</div>
+        <h4>Real Estate</h4>
+        <p>Commission tracking, rental income, investor portfolios, property expenses</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🍽️</div>
+        <h4>Restaurants &amp; Cafes</h4>
+        <p>COGS, tip payroll, vendor reconciliation, inventory management</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">💼</div>
+        <h4>Professional Services</h4>
+        <p>Consultants, marketing agencies, attorneys — clean monthly P&L</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🏥</div>
+        <h4>Healthcare &amp; Wellness</h4>
+        <p>Medical practices, gyms, spas — payroll and insurance billing support</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🛍️</div>
+        <h4>Retail &amp; Boutiques</h4>
+        <p>Inventory costs, merchant fees, online and in-store reconciliation</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">💻</div>
+        <h4>Tech &amp; Startups</h4>
+        <p>SaaS, subscription revenue, runway tracking, investor-ready reports</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">✂️</div>
+        <h4>Personal Services</h4>
+        <p>Salons, barbershops, cleaners — simple, consistent monthly books</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     WHY TIDES FOR GREENVILLE
+══════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="why-layout">
+      <div>
+        <div class="eyebrow">Why Tides</div>
+        <h2 class="display">Why Greenville Business<br/>Owners Choose Tides.</h2>
+        <p>There's no shortage of bookkeepers in Greenville — but most are local firms with hourly billing, slow turnarounds, and outdated processes. Tides was built differently.</p>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>Built Remote — Optimized for It</h4>
+              <p>We're not a local firm that went remote reluctantly. We were built remote-first from day one, which means faster delivery, better systems, and no overhead passed to you.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>Flat Monthly Pricing — No Surprises</h4>
+              <p>One flat rate based on your transaction volume. No hourly billing, no surprise invoices, no "extra work" fees. You know exactly what you're paying every month.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>Reports You Can Actually Use</h4>
+              <p>We don't just hand you a spreadsheet. Clean, readable reports with plain-language summaries — so you can make real business decisions from your financials.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>Your CPA Will Love You</h4>
+              <p>Tax season gets dramatically easier when your books are maintained properly year-round. Most clients report lower CPA bills after working with Tides.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <div>
+              <h4>No Contracts. Cancel Anytime.</h4>
+              <p>We earn your business every month. No lock-in agreements, no early termination fees. If we're not delivering, you can leave. That keeps us sharp.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="why-visual">
+        <h3>Greenville Monthly Pricing</h3>
+        <div class="pricing-preview">
+          <div class="pp-row">
+            <span class="pp-label">Starter (up to $50k/mo expenses)</span>
+            <span class="pp-price">$395/mo</span>
+          </div>
+          <div class="pp-row featured">
+            <span class="pp-label">Growth (up to $75k/mo expenses)</span>
+            <span class="pp-price">$595/mo</span>
+          </div>
+          <div class="pp-row">
+            <span class="pp-label">Scale (up to $125k/mo expenses)</span>
+            <span class="pp-price">$895/mo</span>
+          </div>
+          <div class="pp-row">
+            <span class="pp-label">Enterprise ($125k+ expenses)</span>
+            <span class="pp-price">Custom</span>
+          </div>
+        </div>
+        <p style="font-size:.82rem;color:var(--muted);line-height:1.7;">All plans include monthly P&L, balance sheet, bank reconciliation, and dedicated support. Payroll bookkeeping support available as an add-on.</p>
+        <a href="#" class="btn btn-teal" style="width:100%;justify-content:center;margin-top:1.5rem;">Get My Custom Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial-section">
+  <div class="container">
+    <div class="testimonial-inner">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-quote">"I own a boutique marketing agency in downtown Greenville and my books were always the last thing I wanted to deal with. Tides completely changed that. I get a clean report every month, my accountant is happy, and I actually know what's going on in my business financially. Couldn't recommend them more."</p>
+      <div class="t-author">
+        <div class="t-avatar">SL</div>
+        <div>
+          <div class="t-name">Sarah L.</div>
+          <div class="t-role">Marketing Agency Owner · Downtown Greenville, SC</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     NEARBY AREAS
+══════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">Also Serving Nearby</div>
+      <h2 class="display">We Serve the Entire<br/>Greenville Area.</h2>
+      <p>Based in or near Greenville? We also serve these nearby communities throughout Greenville County and the surrounding Upstate region.</p>
+    </div>
+    <div class="nearby-grid">
+      <div class="nearby-card">
+        <h4>Greer</h4>
+        <p>BMW Country · Industrial Corridor</p>
+      </div>
+      <div class="nearby-card">
+        <h4>Simpsonville</h4>
+        <p>Fast-Growing Suburb · Retail Hub</p>
+      </div>
+      <div class="nearby-card">
+        <h4>Mauldin</h4>
+        <p>South Greenville · Light Industrial</p>
+      </div>
+      <div class="nearby-card">
+        <h4>Travelers Rest</h4>
+        <p>Swamp Rabbit Trail · Outdoor Business</p>
+      </div>
+      <div class="nearby-card">
+        <h4>Spartanburg</h4>
+        <p>30 min East · Upstate Business Hub</p>
+      </div>
+      <div class="nearby-card">
+        <h4>Anderson</h4>
+        <p>30 min South · Lakeside Business</p>
+      </div>
+      <div class="nearby-card">
+        <h4>Easley</h4>
+        <p>Pickens County · Growing Market</p>
+      </div>
+      <div class="nearby-card">
+        <h4>Fountain Inn</h4>
+        <p>Laurens County · Small Business</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FAQ
+══════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">FAQ</div>
+      <h2 class="display">Questions from Greenville<br/>Business Owners.</h2>
+    </div>
+    <div class="faq-cols">
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>How quickly can you get my books caught up?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>It depends on how far behind you are, but most catch-up projects are completed within 2–4 weeks. We work methodically through each month, ensure everything is accurate, and give you a clean set of books before beginning regular monthly service.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>What accounting software do you use?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>We work in QuickBooks Online for your bookkeeping and Puzzle.io for real-time dashboards and an instant snapshot of your financials. If you're not on QBO yet, we can set it up as part of onboarding.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>Do you work with Greenville-area CPAs?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>Absolutely. We can coordinate directly with your CPA or tax preparer — sharing access to QuickBooks, exporting reports in whatever format they need, and making tax season as smooth as possible for everyone involved.</p></div>
+        </div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>Is there a setup fee?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>No setup fees. You pay your first month's rate after onboarding is complete and we've begun your first month of bookkeeping. We also offer a satisfaction guarantee on your first month of service.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>How do I get started?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>Book a free 15-minute consultation. We'll review your current situation, walk you through our process, and give you an exact quote. If it's a fit, we'll start onboarding right away — most Greenville clients are up and running within a week.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>Can I cancel if it's not working?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>Yes. No contracts, no cancellation fees. We work month to month and believe our results speak for themselves. If for any reason Tides isn't the right fit, you can cancel with 30 days' notice and we'll ensure a smooth transition.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>Do you only work with businesses in Greenville city limits?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>Not at all. We serve businesses across all of Greenville County, the full SC Upstate region, and small businesses nationwide. Location doesn't matter — our process is 100% remote and works just as well anywhere in the country.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="eyebrow" style="color:var(--teal);background:rgba(65,207,208,.1);border-color:rgba(65,207,208,.2);">Greenville's Bookkeeping Partner</div>
+      <h2 class="display">Ready to Stop Stressing<br/>About Your Books?</h2>
+      <p>Schedule a free 15-minute consultation. We'll review your current situation and give you a clear, honest picture of what it will take to get your Greenville business financially clean.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-teal btn-lg">Book Your Free Consultation</a>
+        <a href="#" class="btn btn-outline-white btn-lg">See All Services</a>
+      </div>
+      <p class="cta-note">No setup fees &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; First month guaranteed</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="logo.png" alt="Tides Bookkeeping" class="footer-logo" />
+        <p class="footer-about">Remote bookkeeping, payroll support, and financial reporting for small businesses in Greenville, SC and across the nation.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#">Monthly Bookkeeping</a></li>
+          <li><a href="#">Catch-Up Bookkeeping</a></li>
+          <li><a href="#">Payroll Support</a></li>
+          <li><a href="#">Bank Reconciliation</a></li>
+          <li><a href="#">Financial Reporting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Nearby Areas</h4>
+        <ul class="footer-links">
+          <li><a href="county-greenville-sc.html">Greenville County</a></li>
+          <li><a href="#">Greer, SC</a></li>
+          <li><a href="#">Simpsonville, SC</a></li>
+          <li><a href="#">Mauldin, SC</a></li>
+          <li><a href="state-south-carolina.html">All SC Locations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="#">hello@tidesbookkeeping.com</a></li>
+          <li><a href="#">(843) 000-0000</a></li>
+          <li><a href="#">Book Free Call</a></li>
+          <li><a href="#">Client Portal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tides Bookkeeping LLC. All rights reserved. Bookkeeping Services in Greenville, SC.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const allItems = document.querySelectorAll('.faq-item');
+    allItems.forEach(i => { if (i !== item) i.classList.remove('open'); });
+    item.classList.toggle('open');
+  }
+
+  (function() {
+    const btn   = document.getElementById('hamburger');
+    const links = document.getElementById('navLinks');
+    if (!btn || !links) return;
+    btn.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        btn.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

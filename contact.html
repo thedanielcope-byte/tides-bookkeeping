@@ -364,7 +364,7 @@
   <div class="breadcrumb-inner">
     <a href="index.html">Home</a>
     <span class="breadcrumb-sep">›</span>
-    <span class="breadcrumb-current">Contact</span>
+    <span class="breadcrumb-current">Contact Us</span>
   </div>
 </div>
 
@@ -434,34 +434,16 @@
           </div>
         </div>
 
-        <!-- Contact Form Card -->
-        <div class="contact-card contact-form-card">
-          <div class="contact-form-header">
-            <div class="contact-card-icon" style="background:rgba(33,81,151,.08);">📝</div>
-            <div>
-              <h4>Send Us a Message</h4>
-              <p style="font-size:.8rem;color:var(--muted);margin:0;">We'll get back to you within 1 business day.</p>
-            </div>
-          </div>
-          <div class="contact-form-embed">
-            <iframe
-              src="https://api.leadconnectorhq.com/widget/form/W58E97U00MwRqtAQ60ct"
-              style="display:block;width:100%;height:795px;border:none;border-radius:8px;"
-              id="inline-W58E97U00MwRqtAQ60ct"
-              data-layout="{'id':'POPUP'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="Contact Us Form on Website"
-              data-height="795"
-              data-layout-iframe-id="inline-W58E97U00MwRqtAQ60ct"
-              data-form-id="W58E97U00MwRqtAQ60ct"
-              title="Contact Us Form on Website"
-            ></iframe>
-            <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+        <!-- Contact Form Card (click to open modal) -->
+        <div class="contact-card" id="open-form-tile" role="button" tabindex="0"
+          style="cursor:pointer;transition:all .2s;"
+          onclick="document.getElementById('ghl-form-modal').style.display='flex'"
+          onkeydown="if(event.key==='Enter'||event.key===' ')document.getElementById('ghl-form-modal').style.display='flex'">
+          <div class="contact-card-icon" style="background:rgba(33,81,151,.08);">📝</div>
+          <div class="contact-card-body">
+            <h4>Send Us a Message</h4>
+            <p style="font-size:.88rem;color:var(--body);margin-bottom:.75rem;">Prefer to write it out? Fill out our contact form and we'll get back to you within 1 business day.</p>
+            <span class="btn btn-primary" style="font-size:.82rem;padding:.55rem 1.25rem;pointer-events:none;">Open Contact Form →</span>
           </div>
         </div>
 
@@ -567,6 +549,51 @@
       });
     });
   })();
+</script>
+
+<!-- GHL Contact Form Modal -->
+<div id="ghl-form-modal" style="display:none;position:fixed;inset:0;background:rgba(15,28,46,.72);z-index:9999;align-items:center;justify-content:center;padding:1rem;" onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:#fff;border-radius:20px;width:100%;max-width:620px;max-height:92vh;overflow-y:auto;position:relative;box-shadow:0 24px 80px rgba(15,28,46,.3);">
+    <!-- Modal header -->
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:1.5rem 1.75rem 1rem;border-bottom:1px solid #e2eaf3;">
+      <div>
+        <div style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#41cfd0;margin-bottom:.3rem;">Get in Touch</div>
+        <h3 style="font-size:1.15rem;font-weight:700;color:#0f1c2e;margin:0;">Send Us a Message</h3>
+      </div>
+      <button onclick="document.getElementById('ghl-form-modal').style.display='none'"
+        style="background:none;border:1px solid #e2eaf3;border-radius:50%;width:36px;height:36px;font-size:1.2rem;cursor:pointer;color:#94a3b8;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;"
+        onmouseover="this.style.borderColor='#215197';this.style.color='#215197'"
+        onmouseout="this.style.borderColor='#e2eaf3';this.style.color='#94a3b8'"
+        aria-label="Close form">×</button>
+    </div>
+    <!-- Embedded form (INLINE — no popup behavior) -->
+    <iframe
+      src="https://api.leadconnectorhq.com/widget/form/W58E97U00MwRqtAQ60ct"
+      style="display:block;width:100%;height:740px;border:none;border-radius:0 0 20px 20px;"
+      id="modal-form-W58E97U00MwRqtAQ60ct"
+      data-layout="{'id':'INLINE'}"
+      data-trigger-type="alwaysShow"
+      data-trigger-value=""
+      data-activation-type="alwaysActivated"
+      data-activation-value=""
+      data-deactivation-type="neverDeactivate"
+      data-deactivation-value=""
+      data-form-name="Contact Us Form on Website"
+      data-height="740"
+      data-layout-iframe-id="modal-form-W58E97U00MwRqtAQ60ct"
+      data-form-id="W58E97U00MwRqtAQ60ct"
+      title="Contact Us Form on Website"
+    ></iframe>
+  </div>
+</div>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+<!-- Close modal on Escape key -->
+<script>
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.getElementById('ghl-form-modal').style.display = 'none';
+    }
+  });
 </script>
 
 <!-- GHL Chat Widget -->

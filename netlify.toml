@@ -48,8 +48,9 @@
 # ── Block _internal folder from being served ──
 [[redirects]]
   from = "/_internal/*"
-  to = /
+  to = "/"
   status = 404
+  force = true
 
 # ── Custom 404 (future) ──
 # [[redirects]]

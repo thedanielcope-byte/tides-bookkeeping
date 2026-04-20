@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /_internal/
+
+Sitemap: https://tidesbookkeeping.com/sitemap.xml

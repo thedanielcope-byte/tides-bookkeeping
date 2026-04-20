@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Tides Bookkeeping — Remote Bookkeeping for Small Businesses</title>
+  <meta name="description" content="Learn about Tides Bookkeeping — who we are, why we started, and how we help small business owners across the U.S. get clear, confident, and in control of their finances." />
+  <link rel="canonical" href="https://tidesbookkeeping.com/about" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About Us | Tides Bookkeeping" />
+  <meta property="og:description" content="Meet the Tides Bookkeeping team. Remote, dedicated bookkeeping for small businesses nationwide." />
+  <meta property="og:url" content="https://tidesbookkeeping.com/about" />
+  <meta property="og:image" content="https://tidesbookkeeping.com/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── TOKENS ─────────────────────────────────────── */
+    :root {
+      --teal:    #41cfd0;
+      --teal-lt: #e6f9f9;
+      --blue:    #66c1ee;
+      --blue-lt: #e8f4fd;
+      --navy:    #215197;
+      --navy-dk: #163872;
+      --ink:     #0f1c2e;
+      --body:    #4a5568;
+      --muted:   #94a3b8;
+      --border:  #e2eaf3;
+      --bg:      #ffffff;
+      --bg-alt:  #f7fbff;
+      --shadow:  0 1px 3px rgba(15,28,46,.06), 0 4px 16px rgba(15,28,46,.08);
+      --shadow-lg: 0 8px 40px rgba(15,28,46,.12);
+      --r:       16px;
+      --r-sm:    10px;
+    }
+
+    /* ── RESET ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── TYPE ───────────────────────────────────────── */
+    .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 0.95; }
+    h2.display { font-size: clamp(2.4rem, 5vw, 4rem); }
+    h3 { font-size: 1.1rem; font-weight: 700; color: var(--ink); }
+    p { color: var(--body); }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal);
+      background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
+      padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--blue) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* ── LAYOUT ─────────────────────────────────────── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+    .section { padding: 96px 0; }
+    .section-alt { background: var(--bg-alt); }
+    .section-navy { background: var(--navy); }
+
+    /* ── BUTTONS ────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .85rem 1.75rem; border-radius: 50px;
+      font-weight: 600; font-size: .9rem; cursor: pointer;
+      transition: all .2s ease; border: 2px solid transparent;
+    }
+    .btn-primary { background: var(--navy); color: #fff; }
+    .btn-primary:hover { background: var(--navy-dk); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(33,81,151,.3); }
+    .btn-teal { background: var(--teal); color: var(--ink); font-weight: 700; }
+    .btn-teal:hover { background: #38bfc0; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(65,207,208,.4); }
+    .btn-outline { border-color: var(--border); color: var(--ink); background: #fff; }
+    .btn-outline:hover { border-color: var(--navy); color: var(--navy); }
+    .btn-outline-white { border-color: rgba(255,255,255,.35); color: #fff; }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+    .btn-lg { padding: 1rem 2.2rem; font-size: 1rem; }
+
+    /* ── MOCKUP STRIP ───────────────────────────────── */
+    .mockup-strip {
+      background: var(--teal); color: var(--ink);
+      text-align: center; padding: 8px;
+      font-size: .75rem; font-weight: 700; letter-spacing: .08em;
+      position: sticky; top: 0; z-index: 300;
+    }
+
+    /* ── NAV ────────────────────────────────────────── */
+    .nav-wrap {
+      position: sticky; top: 33px; z-index: 200;
+      background: rgba(255,255,255,.92); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem; max-width: 1180px; margin: 0 auto;
+    }
+    .nav-logo img { height: 44px; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); }
+    .nav-links a.active { font-weight: 700; }
+    .nav-cta { display: flex; align-items: center; gap: .75rem; }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .hamburger span {
+      width: 24px; height: 2px; background: var(--ink); border-radius: 2px;
+      transition: all .25s;
+    }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ── BREADCRUMB ─────────────────────────────────── */
+    .breadcrumb {
+      background: var(--bg-alt); border-bottom: 1px solid var(--border);
+      padding: .75rem 0;
+    }
+    .breadcrumb-inner {
+      display: flex; align-items: center; gap: .5rem;
+      max-width: 1180px; margin: 0 auto; padding: 0 2rem;
+      font-size: .78rem; color: var(--muted);
+    }
+    .breadcrumb-inner a { color: var(--muted); transition: color .2s; }
+    .breadcrumb-inner a:hover { color: var(--navy); }
+    .breadcrumb-sep { color: var(--border); }
+    .breadcrumb-current { color: var(--navy); font-weight: 600; }
+
+    /* ── PAGE HERO ──────────────────────────────────── */
+    .page-hero {
+      padding: 88px 0 72px;
+      background: #fff;
+      position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 70% at 85% 20%, rgba(65,207,208,.1) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 15% 80%, rgba(102,193,238,.08) 0%, transparent 60%);
+    }
+    .page-hero-inner {
+      position: relative; z-index: 1;
+      max-width: 800px; margin: 0 auto; text-align: center;
+    }
+    .page-hero h1 {
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: .93; margin-bottom: 1.5rem; color: var(--ink);
+    }
+    .page-hero p {
+      font-size: 1.1rem; line-height: 1.75; color: var(--body);
+      max-width: 600px; margin: 0 auto 2rem;
+    }
+    .hero-stats {
+      display: flex; gap: 2.5rem; flex-wrap: wrap; margin-top: 2.5rem;
+      padding-top: 2rem; border-top: 1px solid var(--border);
+      justify-content: center;
+    }
+    .hero-stat-val {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.4rem; color: var(--navy); line-height: 1;
+    }
+    .hero-stat-label { font-size: .78rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-top: 4px; }
+
+    /* ── SECTION HEADER ─────────────────────────────── */
+    .section-header { max-width: 620px; }
+    .section-header.centered { max-width: 720px; margin: 0 auto; text-align: center; }
+    .section-header p { margin-top: 1rem; font-size: 1rem; line-height: 1.75; }
+
+    /* ── STORY LAYOUT ───────────────────────────────── */
+    .story-layout {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: center;
+    }
+    .story-text p { font-size: 1rem; line-height: 1.8; color: var(--body); margin-bottom: 1.25rem; }
+    .story-text p:last-child { margin-bottom: 0; }
+    .story-visual {
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      border-radius: 24px; padding: 2.75rem;
+    }
+    .story-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+    .story-stat {
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
+      border-radius: 14px; padding: 1.25rem;
+    }
+    .story-stat-val {
+      font-family: 'Bebas Neue', sans-serif; font-size: 2.4rem;
+      color: var(--teal); line-height: 1;
+    }
+    .story-stat-label { font-size: .72rem; color: rgba(255,255,255,.5); text-transform: uppercase; letter-spacing: .06em; margin-top: 4px; }
+    .story-badge {
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
+      border-radius: 14px; padding: 1.25rem; display: flex; align-items: center; gap: 1rem;
+    }
+    .story-badge-icon { font-size: 2rem; flex-shrink: 0; }
+    .story-badge-text strong { color: #fff; display: block; font-size: .95rem; margin-bottom: 2px; }
+    .story-badge-text span { color: rgba(255,255,255,.55); font-size: .8rem; }
+
+    /* ── TEAM ───────────────────────────────────────── */
+    .team-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 2rem; margin-top: 3.5rem; max-width: 720px; margin-left: auto; margin-right: auto;
+    }
+    .team-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 20px; padding: 2.5rem 2rem;
+      box-shadow: var(--shadow); transition: all .2s;
+      text-align: center;
+    }
+    .team-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.4); }
+    .team-avatar {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--teal);
+      margin: 0 auto 1.25rem;
+      border: 3px solid var(--teal-lt);
+    }
+    .team-name { font-size: 1.3rem; font-weight: 700; color: var(--ink); margin-bottom: .25rem; }
+    .team-role {
+      display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--teal);
+      background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
+      padding: 3px 12px; border-radius: 50px; margin-bottom: 1rem;
+    }
+    .team-bio { font-size: .9rem; color: var(--body); line-height: 1.7; }
+
+    /* ── VALUES ─────────────────────────────────────── */
+    .values-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .value-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 20px; padding: 2rem 1.75rem;
+      box-shadow: var(--shadow); transition: all .2s;
+    }
+    .value-card:hover { border-color: rgba(65,207,208,.4); box-shadow: var(--shadow-lg); }
+    .value-card.full { grid-column: span 2; }
+    .value-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: var(--teal-lt); display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin-bottom: 1.25rem;
+    }
+    .value-card:nth-child(2) .value-icon { background: var(--blue-lt); }
+    .value-card:nth-child(3) .value-icon { background: rgba(33,81,151,.08); }
+    .value-card:nth-child(4) .value-icon { background: rgba(65,207,208,.1); }
+    .value-card.full .value-icon { background: linear-gradient(135deg, var(--teal-lt) 0%, var(--blue-lt) 100%); }
+    .value-card h3 { font-size: 1.05rem; margin-bottom: .6rem; }
+    .value-card p { font-size: .87rem; color: var(--body); line-height: 1.65; }
+
+    /* ── STATS STRIP ────────────────────────────────── */
+    .stats-strip {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dk) 100%);
+      padding: 60px 0;
+    }
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 2rem; text-align: center;
+    }
+    .stat-val {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.5rem; color: var(--teal); line-height: 1;
+    }
+    .stat-label { font-size: .82rem; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .08em; margin-top: .4rem; }
+
+    /* ── CTA SECTION ────────────────────────────────── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      padding: 88px 0; text-align: center;
+    }
+    .cta-section .eyebrow { background: rgba(65,207,208,.15); border-color: rgba(65,207,208,.3); color: var(--teal); }
+    .cta-section h2 { color: #fff; margin-bottom: 1.25rem; }
+    .cta-section p { color: rgba(255,255,255,.7); font-size: 1.05rem; max-width: 520px; margin: 0 auto 2.25rem; }
+    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .cta-fine { font-size: .78rem; color: rgba(255,255,255,.35); margin-top: 1.25rem; }
+
+    /* ── FOOTER ─────────────────────────────────────── */
+    .footer {
+      background: var(--ink); color: #fff;
+      padding: 64px 0 32px;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+      gap: 3rem; margin-bottom: 3rem;
+    }
+    .footer-logo img { height: 40px; margin-bottom: 1.25rem; filter: brightness(0) invert(1); }
+    .footer-brand p { font-size: .84rem; color: rgba(255,255,255,.45); line-height: 1.7; max-width: 280px; margin-bottom: 1.5rem; }
+    .footer-social { display: flex; gap: .6rem; }
+    .social-btn {
+      width: 34px; height: 34px; border-radius: 8px;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .8rem; color: rgba(255,255,255,.5); transition: all .2s;
+    }
+    .social-btn:hover { background: rgba(65,207,208,.15); border-color: var(--teal); color: var(--teal); }
+    .footer-col h4 {
+      font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
+      color: rgba(255,255,255,.35); margin-bottom: 1.25rem;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: .55rem; }
+    .footer-links a { font-size: .84rem; color: rgba(255,255,255,.5); transition: color .2s; }
+    .footer-links a:hover { color: var(--teal); }
+    .footer-contact p { font-size: .84rem; color: rgba(255,255,255,.5); margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.07);
+      padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.25); margin: 0; }
+    .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-bottom-links a { font-size: .78rem; color: rgba(255,255,255,.25); transition: color .2s; }
+    .footer-bottom-links a:hover { color: var(--teal); }
+
+    /* ── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 900px) {
+      .story-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .team-grid { grid-template-columns: 1fr; max-width: 420px; }
+      .values-grid { grid-template-columns: 1fr; }
+      .value-card.full { grid-column: span 1; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    @media (max-width: 640px) {
+      .container { padding: 0 1.25rem; }
+      .section { padding: 56px 0; }
+      .mockup-strip { position: relative; top: auto; font-size: .65rem; }
+      .nav-wrap { top: 0; position: sticky; }
+      .nav-inner { padding: .875rem 1.25rem; }
+      .nav-links {
+        display: none; position: fixed;
+        inset: 0; background: #fff;
+        flex-direction: column; justify-content: center; align-items: center;
+        gap: 2.25rem; z-index: 199; list-style: none;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 1.15rem; font-weight: 600; color: var(--ink); }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      h2.display { font-size: clamp(2rem, 9vw, 3rem); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: .75rem; }
+      .footer-bottom-links { justify-content: center; flex-wrap: wrap; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- MOCKUP STRIP -->
+<div class="mockup-strip">CURRENTLY A DESIGN MOCKUP — FINAL SITE COMING SOON</div>
+
+<!-- NAV -->
+<nav class="nav-wrap">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="who-we-serve.html">Who We Serve</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://tidesbookkeeping.com/tiered-pricing" target="_blank" rel="noopener">Pricing</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-outline">Sign In</a>
+      <a href="https://api.leadconnectorhq.com/widget/booking/1WyrZDhnArNyiiwT2GQQ" target="_blank" rel="noopener" class="btn btn-primary">Free Consultation</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">About Us</span>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="eyebrow">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--teal);"></span>
+        About Us
+      </div>
+      <h1 class="display">
+        We're in Your Corner<br/>
+        <span class="gradient-text">Every Single Month.</span>
+      </h1>
+      <p>
+        Tides Bookkeeping was built by business owners who know what it feels like to run a company without a clear picture of the numbers. We fix that — with dedicated bookkeepers, clean books, and reports you can actually understand.
+      </p>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-val">12+</div>
+          <div class="hero-stat-label">Industries Served</div>
+        </div>
+        <div>
+          <div class="hero-stat-val">5.0</div>
+          <div class="hero-stat-label">Star Rating</div>
+        </div>
+        <div>
+          <div class="hero-stat-val">100%</div>
+          <div class="hero-stat-label">Remote Service</div>
+        </div>
+        <div>
+          <div class="hero-stat-val">Flat</div>
+          <div class="hero-stat-label">Monthly Rate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="section">
+  <div class="container">
+    <div class="story-layout">
+
+      <div class="story-text">
+        <div class="eyebrow">Our Story</div>
+        <h2 class="display" style="margin-bottom:1.5rem;">
+          Built on the Belief That<br/>
+          <span class="gradient-text">Every Business Deserves</span><br/>
+          Clean Books.
+        </h2>
+        <p>
+          Tides Bookkeeping was founded in Greenville, South Carolina with one goal in mind: give small business owners the financial clarity they need to grow with confidence. Too many great businesses struggle not because they lack drive, but because they don't have an accurate, up-to-date picture of their finances.
+        </p>
+        <p>
+          We set out to change that. We built a remote bookkeeping service that combines the attentiveness of a local firm with the efficiency of a modern, tech-forward operation. One flat monthly rate. One dedicated bookkeeper. Clean books every single month.
+        </p>
+        <p>
+          Today, we serve clients across industries — from real estate investors and contractors to travel agencies, healthcare practices, and tech startups. No matter the business, our approach is the same: accurate books, proactive communication, and reports you can understand without an accounting degree.
+        </p>
+        <div style="margin-top:2rem;">
+          <a href="https://api.leadconnectorhq.com/widget/booking/1WyrZDhnArNyiiwT2GQQ" target="_blank" rel="noopener" class="btn btn-primary">Schedule a Free Call</a>
+        </div>
+      </div>
+
+      <div class="story-visual">
+        <div class="story-stat-grid">
+          <div class="story-stat">
+            <div class="story-stat-val">200+</div>
+            <div class="story-stat-label">Target Clients</div>
+          </div>
+          <div class="story-stat">
+            <div class="story-stat-val">12+</div>
+            <div class="story-stat-label">Industries</div>
+          </div>
+          <div class="story-stat">
+            <div class="story-stat-val">5.0★</div>
+            <div class="story-stat-label">Avg. Rating</div>
+          </div>
+          <div class="story-stat">
+            <div class="story-stat-val">SC</div>
+            <div class="story-stat-label">Founded In</div>
+          </div>
+        </div>
+        <div class="story-badge">
+          <div class="story-badge-icon">🌊</div>
+          <div class="story-badge-text">
+            <strong>Tides Bookkeeping</strong>
+            <span>Greenville, SC · Serving Clients Nationwide</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="container">
+    <div class="stats-grid">
+      <div>
+        <div class="stat-val">$0</div>
+        <div class="stat-label">Hidden Fees</div>
+      </div>
+      <div>
+        <div class="stat-val">1</div>
+        <div class="stat-label">Dedicated Bookkeeper</div>
+      </div>
+      <div>
+        <div class="stat-val">2–3</div>
+        <div class="stat-label">Day Onboarding</div>
+      </div>
+      <div>
+        <div class="stat-val">100%</div>
+        <div class="stat-label">Remote & Nationwide</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MISSION & VALUES -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">What We Stand For</div>
+      <h2 class="display">
+        The Values Behind<br/>
+        <span class="gradient-text">Every Decision We Make</span>
+      </h2>
+      <p>We exist to give business owners clarity and confidence in their finances — so they can focus on running their business, not chasing receipts. These core values shape how we work every day.</p>
+    </div>
+
+    <div class="values-grid">
+
+      <div class="value-card">
+        <div class="value-icon">⚡</div>
+        <h3>Accuracy Over Speed</h3>
+        <p>Get it right the first time. Errors in bookkeeping cost clients time and money — precision is non-negotiable in everything we do.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">📣</div>
+        <h3>Proactive Communication</h3>
+        <p>No surprises. We flag issues early, update clients before they have to ask, and keep everyone in the loop — always.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">✨</div>
+        <h3>Simplicity</h3>
+        <p>Make finances easy to understand. If a client can't follow it, we haven't done our job well enough. Clarity is the goal.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">🤝</div>
+        <h3>Ownership</h3>
+        <p>We treat every client's books like our own business. Full responsibility — no blame-shifting, no excuses, just results.</p>
+      </div>
+
+      <div class="value-card full">
+        <div class="value-icon">⚙️</div>
+        <h3>Systematize Everything</h3>
+        <p>If we do it twice, we automate it. We build systems that scale so our team spends time on high-value work — not repetitive tasks — and our clients get consistent, reliable results month after month.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MEET THE TEAM -->
+<section class="section">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">Meet the Team</div>
+      <h2 class="display">
+        The People Behind<br/>
+        <span class="gradient-text">Your Books</span>
+      </h2>
+      <p>Tides Bookkeeping is led by a team that combines financial expertise with a genuine passion for helping small businesses succeed.</p>
+    </div>
+
+    <div class="team-grid">
+
+      <div class="team-card">
+        <div class="team-avatar">JC</div>
+        <div class="team-name">Joe Cope</div>
+        <div class="team-role">Chief Executive Officer</div>
+        <p class="team-bio">
+          Joe leads Tides Bookkeeping with a focus on growth, client relationships, and building a company that genuinely serves small business owners. His vision drives the team's commitment to transparency and excellence.
+        </p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar">DC</div>
+        <div class="team-name">Dan Cope</div>
+        <div class="team-role">Chief Financial Officer</div>
+        <p class="team-bio">
+          Dan oversees the financial operations and systems that keep Tides running at a high standard. His expertise ensures that every client receives accurate, reliable bookkeeping they can count on.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="eyebrow">Get Started Today</div>
+    <h2 class="display" style="font-size:clamp(2.6rem,5.5vw,4rem);margin-bottom:1.25rem;">
+      Ready to Get Your<br/><span class="gradient-text">Books in Order?</span>
+    </h2>
+    <p>Schedule a free 15-minute call. No pressure — just a real conversation about your business and what you need.</p>
+    <div class="cta-btns">
+      <a href="https://api.leadconnectorhq.com/widget/booking/1WyrZDhnArNyiiwT2GQQ" target="_blank" rel="noopener" class="btn btn-teal btn-lg">Schedule Free Consultation</a>
+      <a href="https://tidesbookkeeping.com/tiered-pricing" target="_blank" rel="noopener" class="btn btn-outline-white btn-lg">View Pricing</a>
+    </div>
+    <p class="cta-fine">No credit card required &nbsp;·&nbsp; No long-term contracts &nbsp;·&nbsp; Cancel anytime</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><a href="index.html"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+        <p>Remote bookkeeping and financial services for small businesses nationwide. Clean books. Clear numbers. Confident decisions.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/tides-bookkeeping" target="_blank" rel="noopener" class="social-btn">in</a>
+          <a href="https://www.facebook.com/thetidesbookkeeping" target="_blank" rel="noopener" class="social-btn">f</a>
+          <a href="https://www.instagram.com/tidesbookkeeping/" target="_blank" rel="noopener" class="social-btn">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="services.html">Monthly Bookkeeping</a></li>
+          <li><a href="services.html">Catch-Up Bookkeeping</a></li>
+          <li><a href="services.html">Payroll Support</a></li>
+          <li><a href="services.html">Financial Reporting</a></li>
+          <li><a href="services.html">Bank Reconciliation</a></li>
+          <li><a href="services.html">View All Services →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="who-we-serve.html">Who We Serve</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://tidesbookkeeping.com/tiered-pricing" target="_blank" rel="noopener">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact footer-col">
+        <h4>Contact</h4>
+        <p>📧 support@tidesbookkeeping.com</p>
+        <p>📞 (864) 653-2320</p>
+        <p>📍 Greenville, South Carolina</p>
+        <div style="margin-top:1.25rem;">
+          <a href="https://api.leadconnectorhq.com/widget/booking/1WyrZDhnArNyiiwT2GQQ" target="_blank" rel="noopener" class="btn btn-teal" style="font-size:.82rem;padding:.65rem 1.4rem;">Book a Free Call</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tides Bookkeeping LLC. All rights reserved.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    const btn   = document.getElementById('hamburger');
+    const links = document.querySelector('.nav-links');
+    if (!btn || !links) return;
+    btn.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        btn.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
+</script>
+</body>
+</html>

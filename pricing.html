@@ -152,10 +152,13 @@
     .starter-banner {
       display: flex; gap: 4rem; align-items: center;
       background: linear-gradient(135deg, var(--navy) 0%, #1a3d7c 100%);
-      border-radius: 24px; padding: 3rem 3.5rem;
+      border-radius: 24px; padding: 2rem 3.5rem;
       margin-top: 3.5rem;
       box-shadow: 0 8px 40px rgba(33,81,151,.25);
       position: relative; overflow: hidden;
+    }
+    .starter-btn {
+      position: absolute; top: 1.75rem; right: 2.5rem; z-index: 2;
     }
     .starter-banner::before {
       content: ''; position: absolute; top: -80px; right: -80px;
@@ -178,9 +181,9 @@
       margin-bottom: .75rem;
     }
     .starter-name { font-size: 2.25rem; font-weight: 800; color: #fff; margin-bottom: .35rem; }
-    .starter-desc { font-size: .87rem; color: rgba(255,255,255,.6); line-height: 1.55; margin-bottom: 1.5rem; max-width: 230px; }
-    .starter-price-wrap { margin-bottom: 1.75rem; }
-    .starter-price { font-family: 'Bebas Neue', sans-serif; font-size: 5rem; color: #fff; line-height: 1; }
+    .starter-desc { font-size: .87rem; color: rgba(255,255,255,.6); line-height: 1.55; margin-bottom: 1rem; max-width: 230px; }
+    .starter-price-wrap { margin-bottom: 0; }
+    .starter-price { font-family: 'Bebas Neue', sans-serif; font-size: 4.5rem; color: #fff; line-height: 1; }
     .starter-period { font-size: .78rem; color: rgba(255,255,255,.45); margin-top: .2rem; }
     .starter-right { flex: 1; position: relative; z-index: 1; }
     .starter-features {
@@ -341,13 +344,14 @@
       .pricing-grid { grid-template-columns: repeat(3, 1fr); }
       .tier-card.popular { transform: none; }
       .tier-card.popular:hover { transform: translateY(-4px); }
-      .starter-banner { gap: 2.5rem; padding: 2.5rem 2.5rem; }
+      .starter-banner { gap: 2.5rem; padding: 2rem 2.5rem; }
     }
     @media (max-width: 860px) {
-      .starter-banner { flex-direction: column; gap: 2rem; padding: 2.5rem 2rem; }
+      .starter-banner { flex-direction: column; gap: 1.5rem; padding: 2.5rem 2rem; }
       .starter-left { min-width: unset; width: 100%; }
       .starter-desc { max-width: 100%; }
       .starter-features { grid-template-columns: 1fr; }
+      .starter-btn { position: static; margin-top: .5rem; align-self: flex-start; }
       .pricing-grid { grid-template-columns: repeat(2, 1fr); }
       .tier-card.popular { transform: none; }
       .included-grid { grid-template-columns: repeat(2, 1fr); }
@@ -369,8 +373,8 @@
       .section { padding: 56px 0; }
       .nav-inner { padding: .875rem 1.25rem; }
       h2.display { font-size: clamp(2rem, 9vw, 3rem); }
-      .starter-banner { padding: 2rem 1.5rem; }
-      .starter-price { font-size: 4rem; }
+      .starter-banner { padding: 1.75rem 1.5rem; }
+      .starter-price { font-size: 3.5rem; }
       .pricing-grid { grid-template-columns: 1fr; }
       .included-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -441,6 +445,7 @@
 
     <!-- Starter — Landscape Banner -->
     <div class="starter-banner">
+      <a href="schedule.html" class="btn btn-teal starter-btn">Get Started →</a>
       <div class="starter-left">
         <div class="starter-tag">Entry Plan</div>
         <div class="starter-name">Starter</div>
@@ -449,7 +454,6 @@
           <div class="starter-price">$299</div>
           <div class="starter-period">per month, billed monthly</div>
         </div>
-        <a href="schedule.html" class="btn btn-teal">Get Started →</a>
       </div>
       <div class="starter-right">
         <ul class="starter-features">

@@ -45,6 +45,16 @@
   to = "/city-greenville-sc.html"
   status = 200
 
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
 # ── Block _internal folder from being served ──
 [[redirects]]
   from = "/_internal/*"

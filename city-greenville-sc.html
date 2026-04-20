@@ -476,8 +476,10 @@
         align-items: center; justify-content: center; gap: 2rem;
       }
       .nav-links.open li a { font-size: 1.4rem; color: var(--ink); }
-      .page-hero h1 { font-size: 2.8rem; }
-      .hero-actions { flex-direction: column; align-items: flex-start; }
+      .page-hero h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-actions .btn { justify-content: center; }
+      .neighborhood-grid { grid-template-columns: 1fr; }
       .lv-stat-grid { grid-template-columns: repeat(2, 1fr); }
       .services-grid { grid-template-columns: 1fr; }
       .svc-card.featured { grid-column: span 1; }
@@ -552,6 +554,7 @@
         <p class="hero-note">No setup fees &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; 100% Remote</p>
         <div class="trust-pills">
           <div class="trust-pill"><span class="dot"></span>QuickBooks Online</div>
+          <div class="trust-pill"><span class="dot"></span>Puzzle.io</div>
           <div class="trust-pill"><span class="dot"></span>Clean Books Monthly</div>
           <div class="trust-pill"><span class="dot"></span>Flat-Rate Pricing</div>
           <div class="trust-pill"><span class="dot"></span>Tax-Ready Year-Round</div>

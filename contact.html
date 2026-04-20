@@ -177,6 +177,18 @@
     .contact-card-body a { color: var(--navy); font-weight: 600; }
     .contact-card-body a:hover { color: var(--teal); }
 
+    /* ── CONTACT FORM CARD ──────────────────────────── */
+    .contact-form-card {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 1.25rem !important;
+      padding: 1.75rem !important;
+    }
+    .contact-form-header {
+      display: flex; align-items: center; gap: 1.25rem;
+    }
+    .contact-form-embed { width: 100%; }
+
     /* ── BOOKING CARD ───────────────────────────────── */
     .booking-card {
       background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
@@ -241,22 +253,20 @@
       .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
     }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column; position: fixed;
+        inset: 0; background: #fff; z-index: 199; list-style: none;
+        justify-content: center; align-items: center; gap: 2.25rem;
+      }
+      .nav-links.open a { font-size: 1.15rem; font-weight: 600; color: var(--ink); }
+    }
     @media (max-width: 640px) {
       .container { padding: 0 1.25rem; }
       .section { padding: 56px 0; }
-      .mockup-strip { position: relative; top: auto; font-size: .65rem; }
-      .nav-wrap { top: 0; position: sticky; }
       .nav-inner { padding: .875rem 1.25rem; }
-      .nav-links {
-        display: none; position: fixed;
-        inset: 0; background: #fff;
-        flex-direction: column; justify-content: center; align-items: center;
-        gap: 2.25rem; z-index: 199; list-style: none;
-      }
-      .nav-links.open { display: flex; }
-      .nav-links a { font-size: 1.15rem; font-weight: 600; color: var(--ink); }
-      .nav-cta { display: none; }
-      .hamburger { display: flex; }
       h2.display { font-size: clamp(2rem, 9vw, 3rem); }
       .booking-card { padding: 2rem 1.5rem; }
       .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -362,6 +372,37 @@
               <a href="https://www.instagram.com/tidesbookkeeping/" target="_blank" rel="noopener">Instagram</a>
               <a href="https://www.facebook.com/thetidesbookkeeping" target="_blank" rel="noopener">Facebook</a>
             </p>
+          </div>
+        </div>
+
+        <!-- Contact Form Card -->
+        <div class="contact-card contact-form-card">
+          <div class="contact-form-header">
+            <div class="contact-card-icon" style="background:rgba(33,81,151,.08);">📝</div>
+            <div>
+              <h4>Send Us a Message</h4>
+              <p style="font-size:.8rem;color:var(--muted);margin:0;">We'll get back to you within 1 business day.</p>
+            </div>
+          </div>
+          <div class="contact-form-embed">
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/W58E97U00MwRqtAQ60ct"
+              style="display:block;width:100%;height:795px;border:none;border-radius:8px;"
+              id="inline-W58E97U00MwRqtAQ60ct"
+              data-layout="{'id':'POPUP'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Contact Us Form on Website"
+              data-height="795"
+              data-layout-iframe-id="inline-W58E97U00MwRqtAQ60ct"
+              data-form-id="W58E97U00MwRqtAQ60ct"
+              title="Contact Us Form on Website"
+            ></iframe>
+            <script src="https://link.msgsndr.com/js/form_embed.js"></script>
           </div>
         </div>
 

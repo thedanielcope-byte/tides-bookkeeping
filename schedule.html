@@ -263,27 +263,28 @@
       .booking-cards { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
     }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column; position: fixed;
+        inset: 0; background: #fff; z-index: 199; list-style: none;
+        justify-content: center; align-items: center; gap: 2.25rem;
+      }
+      .nav-links.open a { font-size: 1.15rem; font-weight: 600; color: var(--ink); }
+    }
     @media (max-width: 640px) {
       .container { padding: 0 1.25rem; }
-      .mockup-strip { position: relative; top: auto; font-size: .65rem; }
-      .nav-wrap { top: 0; }
       .nav-inner { padding: .875rem 1.25rem; }
-      .nav-links {
-        display: none; position: fixed; inset: 0;
-        background: #fff; flex-direction: column;
-        justify-content: center; align-items: center;
-        gap: 2.25rem; z-index: 199; list-style: none;
-      }
-      .nav-links.open { display: flex; }
-      .nav-links a { font-size: 1.15rem; font-weight: 600; color: var(--ink); }
-      .nav-cta { display: none; }
-      .hamburger { display: flex; }
       h2.display { font-size: clamp(2rem, 9vw, 3rem); }
       .perks-inner { gap: 1.5rem; }
       .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
       .footer-bottom { flex-direction: column; text-align: center; gap: .75rem; }
       .footer-bottom-links { justify-content: center; flex-wrap: wrap; gap: 1rem; }
       .calendar-header { padding: 1rem 1.25rem; }
+      .calendar-frame { min-height: 580px; }
+      .booking-card { padding: 1.25rem; }
+      .booking-cards { gap: .75rem; }
     }
   </style>
 </head>

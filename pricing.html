@@ -148,13 +148,61 @@
     }
     .hero-trust-item span { color: var(--teal); font-size: 1rem; }
 
+    /* ── STARTER BANNER ────────────────────────────── */
+    .starter-banner {
+      display: flex; gap: 4rem; align-items: center;
+      background: linear-gradient(135deg, var(--navy) 0%, #1a3d7c 100%);
+      border-radius: 24px; padding: 3rem 3.5rem;
+      margin-top: 3.5rem;
+      box-shadow: 0 8px 40px rgba(33,81,151,.25);
+      position: relative; overflow: hidden;
+    }
+    .starter-banner::before {
+      content: ''; position: absolute; top: -80px; right: -80px;
+      width: 360px; height: 360px;
+      background: radial-gradient(circle, rgba(65,207,208,.18) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .starter-banner::after {
+      content: ''; position: absolute; bottom: -60px; left: 30%;
+      width: 240px; height: 240px;
+      background: radial-gradient(circle, rgba(102,193,238,.1) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .starter-left { flex-shrink: 0; min-width: 250px; position: relative; z-index: 1; }
+    .starter-tag {
+      display: inline-flex; font-size: .68rem; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase;
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+      color: rgba(255,255,255,.75); padding: 4px 14px; border-radius: 50px;
+      margin-bottom: .75rem;
+    }
+    .starter-name { font-size: 2.25rem; font-weight: 800; color: #fff; margin-bottom: .35rem; }
+    .starter-desc { font-size: .87rem; color: rgba(255,255,255,.6); line-height: 1.55; margin-bottom: 1.5rem; max-width: 230px; }
+    .starter-price-wrap { margin-bottom: 1.75rem; }
+    .starter-price { font-family: 'Bebas Neue', sans-serif; font-size: 5rem; color: #fff; line-height: 1; }
+    .starter-period { font-size: .78rem; color: rgba(255,255,255,.45); margin-top: .2rem; }
+    .starter-right { flex: 1; position: relative; z-index: 1; }
+    .starter-features {
+      list-style: none;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0 2rem; margin-bottom: 1.75rem;
+    }
+    .starter-feature {
+      display: flex; align-items: center; gap: .6rem;
+      font-size: .85rem; color: rgba(255,255,255,.8);
+      padding: .5rem 0; border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+    .starter-feature:last-child { border-bottom: none; }
+    .sf-check { color: var(--teal); font-weight: 700; flex-shrink: 0; font-size: .9rem; }
+
     /* ── PRICING GRID ───────────────────────────────── */
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
       align-items: start;
-      margin-top: 3.5rem;
+      margin-top: 1.5rem;
     }
     .tier-card {
       background: #fff; border: 1.5px solid var(--border);
@@ -290,30 +338,39 @@
 
     /* ── RESPONSIVE ─────────────────────────────────── */
     @media (max-width: 1100px) {
-      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-grid { grid-template-columns: repeat(3, 1fr); }
       .tier-card.popular { transform: none; }
       .tier-card.popular:hover { transform: translateY(-4px); }
+      .starter-banner { gap: 2.5rem; padding: 2.5rem 2.5rem; }
     }
     @media (max-width: 860px) {
+      .starter-banner { flex-direction: column; gap: 2rem; padding: 2.5rem 2rem; }
+      .starter-left { min-width: unset; width: 100%; }
+      .starter-desc { max-width: 100%; }
+      .starter-features { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+      .tier-card.popular { transform: none; }
       .included-grid { grid-template-columns: repeat(2, 1fr); }
       .faq-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
     }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column; position: fixed;
+        inset: 0; background: #fff; z-index: 199; list-style: none;
+        justify-content: center; align-items: center; gap: 2.25rem;
+      }
+      .nav-links.open a { font-size: 1.15rem; font-weight: 600; color: var(--ink); }
+    }
     @media (max-width: 640px) {
       .container { padding: 0 1.25rem; }
       .section { padding: 56px 0; }
-      .nav-wrap { top: 0; }
       .nav-inner { padding: .875rem 1.25rem; }
-      .nav-links {
-        display: none; position: fixed; inset: 0; background: #fff;
-        flex-direction: column; justify-content: center; align-items: center;
-        gap: 2.25rem; z-index: 199; list-style: none;
-      }
-      .nav-links.open { display: flex; }
-      .nav-links a { font-size: 1.15rem; font-weight: 600; color: var(--ink); }
-      .nav-cta { display: none; }
-      .hamburger { display: flex; }
       h2.display { font-size: clamp(2rem, 9vw, 3rem); }
+      .starter-banner { padding: 2rem 1.5rem; }
+      .starter-price { font-size: 4rem; }
       .pricing-grid { grid-template-columns: 1fr; }
       .included-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -382,28 +439,32 @@
 <section class="section">
   <div class="container">
 
-    <div class="pricing-grid">
-
-      <!-- Starter -->
-      <div class="tier-card">
-        <div class="tier-name">Starter</div>
-        <div class="tier-desc">Perfect for small businesses just getting started with clean books.</div>
-        <div class="tier-price-wrap">
-          <div class="tier-price">$299</div>
-          <div class="tier-period">per month, billed monthly</div>
+    <!-- Starter — Landscape Banner -->
+    <div class="starter-banner">
+      <div class="starter-left">
+        <div class="starter-tag">Entry Plan</div>
+        <div class="starter-name">Starter</div>
+        <div class="starter-desc">Perfect for small businesses just getting started with clean books.</div>
+        <div class="starter-price-wrap">
+          <div class="starter-price">$299</div>
+          <div class="starter-period">per month, billed monthly</div>
         </div>
-        <div class="tier-divider"></div>
-        <ul class="tier-features">
-          <li class="tier-feature"><span class="tf-check">✓</span> Up to $25,000 monthly expenses</li>
-          <li class="tier-feature"><span class="tf-check">✓</span> Up to 2 bank/credit card accounts</li>
-          <li class="tier-feature"><span class="tf-check">✓</span> Weekly bookkeeping</li>
-          <li class="tier-feature"><span class="tf-check">✓</span> Dedicated bookkeeping team</li>
-          <li class="tier-feature"><span class="tf-check">✓</span> QBO &amp; all major platform integrations</li>
-          <li class="tier-feature"><span class="tf-check">✓</span> Software subscription included</li>
-          <li class="tier-feature"><span class="tf-check">✓</span> Client portal — reports &amp; communication</li>
-        </ul>
-        <a href="schedule.html" class="btn btn-outline btn-full">Get Started</a>
+        <a href="schedule.html" class="btn btn-teal">Get Started →</a>
       </div>
+      <div class="starter-right">
+        <ul class="starter-features">
+          <li class="starter-feature"><span class="sf-check">✓</span> Up to $25,000 monthly expenses</li>
+          <li class="starter-feature"><span class="sf-check">✓</span> Up to 2 bank/credit card accounts</li>
+          <li class="starter-feature"><span class="sf-check">✓</span> Weekly bookkeeping</li>
+          <li class="starter-feature"><span class="sf-check">✓</span> Dedicated bookkeeping team</li>
+          <li class="starter-feature"><span class="sf-check">✓</span> QBO &amp; all major platform integrations</li>
+          <li class="starter-feature"><span class="sf-check">✓</span> Software subscription included</li>
+          <li class="starter-feature"><span class="sf-check">✓</span> Client portal — reports &amp; communication</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pricing-grid">
 
       <!-- Essential -->
       <div class="tier-card">

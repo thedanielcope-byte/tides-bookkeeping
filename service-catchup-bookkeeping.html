@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catch-Up Bookkeeping Services for Small Business | Tides Bookkeeping</title>
+  <meta name="description" content="Behind on your books? Tides Bookkeeping provides professional catch-up bookkeeping for small businesses. We go back months or years, reconcile every account, and get you tax-ready fast." />
+  <link rel="canonical" href="https://tidesbookkeeping.com/service-catchup-bookkeeping" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Catch-Up Bookkeeping Services for Small Business | Tides Bookkeeping" />
+  <meta property="og:description" content="Behind on your books? Tides Bookkeeping provides professional catch-up bookkeeping for small businesses. We go back months or years, reconcile every account, and get you tax-ready fast." />
+  <meta property="og:url" content="https://tidesbookkeeping.com/service-catchup-bookkeeping" />
+  <meta property="og:image" content="https://tidesbookkeeping.com/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── TOKENS ─────────────────────────────────────── */
+    :root {
+      --teal:    #41cfd0;
+      --teal-lt: #e6f9f9;
+      --blue:    #66c1ee;
+      --blue-lt: #e8f4fd;
+      --navy:    #215197;
+      --navy-dk: #163872;
+      --ink:     #0f1c2e;
+      --body:    #4a5568;
+      --muted:   #94a3b8;
+      --border:  #e2eaf3;
+      --bg:      #ffffff;
+      --bg-alt:  #f7fbff;
+      --shadow:  0 1px 3px rgba(15,28,46,.06), 0 4px 16px rgba(15,28,46,.08);
+      --shadow-lg: 0 8px 40px rgba(15,28,46,.12);
+      --r:       16px;
+      --r-sm:    10px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── TYPE ───────────────────────────────────────── */
+    .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 0.95; }
+    h2.display { font-size: clamp(2.4rem, 5vw, 4rem); }
+    h3 { font-size: 1.1rem; font-weight: 700; color: var(--ink); }
+    p { color: var(--body); }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal);
+      background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
+      padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--blue) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* ── LAYOUT ─────────────────────────────────────── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+    .section { padding: 96px 0; }
+    .section-alt { background: var(--bg-alt); }
+
+    /* ── BUTTONS ────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .85rem 1.75rem; border-radius: 50px;
+      font-weight: 600; font-size: .9rem; cursor: pointer;
+      transition: all .2s ease; border: 2px solid transparent;
+    }
+    .btn-primary { background: var(--navy); color: #fff; }
+    .btn-primary:hover { background: var(--navy-dk); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(33,81,151,.3); }
+    .btn-teal { background: var(--teal); color: var(--ink); font-weight: 700; }
+    .btn-teal:hover { background: #38bfc0; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(65,207,208,.4); }
+    .btn-outline { border-color: var(--border); color: var(--ink); background: #fff; }
+    .btn-outline:hover { border-color: var(--navy); color: var(--navy); }
+    .btn-outline-white { border-color: rgba(255,255,255,.35); color: #fff; }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+    .btn-lg { padding: 1rem 2.2rem; font-size: 1rem; }
+
+    /* ── NAV ────────────────────────────────────────── */
+    .nav-wrap {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(255,255,255,.92); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem; max-width: 1180px; margin: 0 auto;
+    }
+    .nav-logo img { height: 44px; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); font-weight: 700; }
+    .nav-cta { display: flex; align-items: center; gap: .75rem; }
+
+    /* ── BREADCRUMB ─────────────────────────────────── */
+    .breadcrumb { background: var(--bg-alt); border-bottom: 1px solid var(--border); padding: .75rem 0; }
+    .breadcrumb-inner {
+      display: flex; align-items: center; gap: .5rem;
+      max-width: 1180px; margin: 0 auto; padding: 0 2rem;
+      font-size: .78rem; color: var(--muted);
+    }
+    .breadcrumb-inner a { color: var(--muted); transition: color .2s; }
+    .breadcrumb-inner a:hover { color: var(--navy); }
+    .breadcrumb-sep { color: var(--border); }
+    .breadcrumb-current { color: var(--navy); font-weight: 600; }
+
+    /* ── PAGE HERO ──────────────────────────────────── */
+    .page-hero { padding: 88px 0 80px; background: #fff; position: relative; overflow: hidden; }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 65% 75% at 88% 15%, rgba(65,207,208,.11) 0%, transparent 60%),
+        radial-gradient(ellipse 45% 45% at 10% 85%, rgba(102,193,238,.08) 0%, transparent 60%);
+    }
+    .page-hero-inner {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 420px; gap: 5rem; align-items: center;
+    }
+    .page-hero h1 { font-size: clamp(3rem, 6vw, 5.2rem); line-height: .93; margin-bottom: 1.5rem; color: var(--ink); }
+    .page-hero p { font-size: 1.05rem; line-height: 1.78; color: var(--body); max-width: 520px; margin-bottom: 2.25rem; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .hero-note { font-size: .78rem; color: var(--muted); margin-top: .75rem; }
+
+    /* Trust pills */
+    .trust-pills { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2rem; }
+    .trust-pill {
+      display: flex; align-items: center; gap: .5rem;
+      padding: 6px 14px; border-radius: 50px;
+      background: #fff; border: 1px solid var(--border);
+      font-size: .78rem; font-weight: 600; color: var(--ink);
+      box-shadow: 0 1px 4px rgba(0,0,0,.05);
+    }
+    .trust-pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); flex-shrink: 0; }
+
+    /* Hero aside card */
+    .hero-aside { background: #fff; border: 1px solid var(--border); border-radius: 24px; box-shadow: var(--shadow-lg); overflow: hidden; }
+    .ha-header { background: linear-gradient(135deg, var(--navy) 0%, #1a3d7a 100%); padding: 1.5rem 2rem; color: #fff; }
+    .ha-header .label { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); display: block; margin-bottom: .5rem; }
+    .ha-title { font-size: 1.05rem; font-weight: 700; }
+    .ha-subtitle { font-size: .78rem; color: rgba(255,255,255,.55); margin-top: 3px; }
+    .ha-body { padding: 1.75rem 2rem; }
+    .ha-row { display: flex; align-items: center; justify-content: space-between; padding: .8rem 0; border-bottom: 1px solid var(--border); font-size: .85rem; }
+    .ha-row:last-of-type { border-bottom: none; }
+    .ha-row strong { font-weight: 600; color: var(--ink); }
+    .ha-badge { font-size: .67rem; font-weight: 700; padding: 3px 10px; border-radius: 50px; letter-spacing: .04em; }
+    .ha-badge.green { background: #dcfce7; color: #16a34a; }
+    .ha-badge.teal { background: var(--teal-lt); color: var(--teal); }
+    .ha-badge.blue { background: var(--blue-lt); color: var(--navy); }
+    .ha-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--r-sm); overflow: hidden; margin-top: 1.5rem; }
+    .ha-stat { background: var(--bg-alt); padding: 1rem; text-align: center; }
+    .ha-stat-val { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--navy); line-height: 1; }
+    .ha-stat-label { font-size: .68rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-top: 3px; }
+
+    /* ── STATS BAR ──────────────────────────────────── */
+    .stats-bar { background: var(--ink); padding: 2.5rem 0; }
+    .stats-inner { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+    .stat-item { text-align: center; }
+    .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; line-height: 1; color: var(--teal); letter-spacing: .02em; }
+    .stat-label { font-size: .78rem; color: rgba(255,255,255,.5); text-transform: uppercase; letter-spacing: .08em; margin-top: .3rem; }
+
+    /* ── SECTION HEADER ─────────────────────────────── */
+    .section-header { max-width: 620px; }
+    .section-header.centered { max-width: 700px; margin: 0 auto; text-align: center; }
+    .section-header p { margin-top: 1rem; font-size: 1rem; line-height: 1.75; }
+
+    /* ── PAIN / DELIVERABLES LAYOUT ─────────────────── */
+    .pain-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .pain-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 2.5rem; }
+    .pain-item { display: flex; align-items: flex-start; gap: 1rem; padding: 1.25rem 1.5rem; background: #fff; border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); }
+    .pain-x { font-size: 1.1rem; flex-shrink: 0; }
+    .pain-item h4 { font-size: .93rem; font-weight: 700; color: var(--ink); margin-bottom: .2rem; }
+    .pain-item p { font-size: .82rem; color: var(--body); line-height: 1.6; }
+    .pain-visual { background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%); border-radius: 24px; padding: 2.75rem; color: #fff; }
+    .pain-visual-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.9rem; letter-spacing: .02em; line-height: 1; margin-bottom: .5rem; color: #fff; }
+    .pain-visual-sub { font-size: .85rem; color: rgba(255,255,255,.5); margin-bottom: 2rem; }
+    .pain-check-list { display: flex; flex-direction: column; gap: .85rem; }
+    .pain-check { display: flex; align-items: flex-start; gap: .85rem; font-size: .88rem; color: rgba(255,255,255,.75); }
+    .pain-check-icon { font-size: 1.1rem; flex-shrink: 0; }
+    .pain-check strong { color: #fff; display: block; font-size: .9rem; margin-bottom: .1rem; }
+
+    /* ── PROCESS STEPS ───────────────────────────────── */
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
+    .process-card { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 2rem; box-shadow: var(--shadow); transition: all .2s; position: relative; }
+    .process-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    .process-card::after { content: '→'; position: absolute; top: 50%; right: -1.1rem; transform: translateY(-50%); font-size: 1.2rem; color: var(--border); font-weight: 300; }
+    .process-card:last-child::after { display: none; }
+    .step-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: var(--teal); line-height: 1; margin-bottom: .75rem; }
+    .process-card h3 { margin-bottom: .6rem; font-size: 1rem; }
+    .process-card p { font-size: .85rem; line-height: 1.7; }
+
+    /* ── WHO IT'S FOR ───────────────────────────────── */
+    .who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
+    .who-card { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 2rem; box-shadow: var(--shadow); transition: all .2s; }
+    .who-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    .who-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .who-card h3 { margin-bottom: .75rem; }
+    .who-card p { font-size: .88rem; line-height: 1.7; margin-bottom: 1.25rem; }
+    .who-list { list-style: none; display: flex; flex-direction: column; gap: .4rem; }
+    .who-list li { display: flex; align-items: flex-start; gap: .5rem; font-size: .82rem; color: var(--body); }
+    .who-list li::before { content: '✓'; color: var(--teal); font-weight: 700; flex-shrink: 0; }
+
+    /* ── INDUSTRIES ─────────────────────────────────── */
+    .industries-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 3.5rem; }
+    .ind-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; text-align: center; box-shadow: var(--shadow); transition: all .2s; }
+    .ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    .ind-icon { font-size: 1.8rem; margin-bottom: .75rem; }
+    .ind-card h4 { font-size: .9rem; font-weight: 700; color: var(--ink); margin-bottom: .4rem; }
+    .ind-card p { font-size: .78rem; color: var(--muted); line-height: 1.6; }
+    .ind-note { text-align: center; margin-top: 2.5rem; }
+    .ind-note p { font-size: .9rem; }
+
+    /* ── LOCATION STRIP ─────────────────────────────── */
+    .location-strip { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px 0; }
+    .location-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .location-text h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: .4rem; }
+    .location-text p { font-size: .9rem; color: var(--body); }
+    .location-pills { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .loc-pill { padding: .35rem 1rem; border-radius: 50px; font-size: .78rem; font-weight: 600; border: 1px solid var(--border); background: #fff; color: var(--body); transition: all .2s; }
+    .loc-pill:hover { border-color: var(--teal); color: var(--teal); }
+
+    /* ── TESTIMONIAL ────────────────────────────────── */
+    .testimonial-section { background: linear-gradient(135deg, var(--navy) 0%, #122f6b 100%); padding: 88px 0; }
+    .testimonial-inner { max-width: 860px; margin: 0 auto; text-align: center; }
+    .t-stars { color: #f59e0b; font-size: 1.1rem; letter-spacing: 3px; margin-bottom: 2rem; }
+    .t-quote { font-size: clamp(1.05rem, 2.5vw, 1.35rem); line-height: 1.75; color: rgba(255,255,255,.88); font-style: italic; margin-bottom: 2.5rem; }
+    .t-author { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+    .t-avatar { width: 52px; height: 52px; border-radius: 50%; background: rgba(255,255,255,.1); border: 2px solid rgba(65,207,208,.4); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: .9rem; color: var(--teal); }
+    .t-name { font-size: 1rem; font-weight: 700; color: #fff; }
+    .t-role { font-size: .8rem; color: rgba(255,255,255,.5); margin-top: 2px; }
+
+    /* ── RELATED SERVICES ───────────────────────────── */
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 3.5rem; }
+    .rel-card { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 1.75rem; box-shadow: var(--shadow); transition: all .25s; }
+    .rel-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    .rel-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--teal-lt); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 1rem; }
+    .rel-card h3 { font-size: 1rem; margin-bottom: .5rem; }
+    .rel-card p { font-size: .84rem; line-height: 1.65; }
+    .rel-link { display: inline-flex; align-items: center; gap: .35rem; margin-top: 1rem; font-size: .82rem; font-weight: 700; color: var(--navy); transition: gap .2s; }
+    .rel-link:hover { gap: .6rem; color: var(--teal); }
+
+    /* ── FAQ ────────────────────────────────────────── */
+    .faq-list { margin-top: 3rem; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question { width: 100%; background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 0; text-align: left; gap: 1rem; font-family: 'Inter', sans-serif; }
+    .faq-question h4 { font-size: .97rem; font-weight: 700; color: var(--ink); flex: 1; }
+    .faq-toggle { width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.1rem; color: var(--muted); transition: all .2s; }
+    .faq-item.open .faq-toggle { background: var(--teal); border-color: var(--teal); color: var(--ink); transform: rotate(45deg); }
+    .faq-answer { display: none; padding: 0 0 1.5rem; font-size: .9rem; line-height: 1.8; color: var(--body); max-width: 780px; }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 4rem; }
+
+    /* ── CTA SECTION ────────────────────────────────── */
+    .cta-section { background: linear-gradient(135deg, var(--navy) 0%, #122f6b 100%); position: relative; overflow: hidden; padding: 96px 0; text-align: center; }
+    .cta-section::before { content: ''; position: absolute; top: -100px; right: -100px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(65,207,208,.12) 0%, transparent 70%); }
+    .cta-section::after { content: ''; position: absolute; bottom: -80px; left: -80px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(102,193,238,.08) 0%, transparent 70%); }
+    .cta-section .container { position: relative; z-index: 1; }
+    .cta-section h2 { color: #fff; margin-bottom: 1.25rem; max-width: 640px; margin-left: auto; margin-right: auto; }
+    .cta-section p { color: rgba(255,255,255,.7); font-size: 1.05rem; max-width: 500px; margin: 0 auto 2.5rem; }
+    .cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .cta-fine { margin-top: 1.5rem; font-size: .78rem; color: rgba(255,255,255,.35); }
+
+    /* ── FOOTER ─────────────────────────────────────── */
+    .footer { background: var(--ink); padding: 64px 0 32px; border-top: 1px solid rgba(255,255,255,.06); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand p { font-size: .84rem; color: rgba(255,255,255,.4); line-height: 1.7; margin: 1rem 0 1.5rem; }
+    .footer-logo img { height: 40px; filter: brightness(0) invert(1) opacity(.9); }
+    .footer-social { display: flex; gap: .6rem; }
+    .social-btn { width: 34px; height: 34px; border-radius: 8px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; font-size: .8rem; color: rgba(255,255,255,.5); transition: all .2s; }
+    .social-btn:hover { background: rgba(65,207,208,.15); border-color: var(--teal); color: var(--teal); }
+    .footer-col h4 { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.35); margin-bottom: 1.25rem; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: .55rem; }
+    .footer-links a { font-size: .84rem; color: rgba(255,255,255,.5); transition: color .2s; }
+    .footer-links a:hover { color: var(--teal); }
+    .footer-contact p { font-size: .84rem; color: rgba(255,255,255,.5); margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.07); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.25); margin: 0; }
+    .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-bottom-links a { font-size: .78rem; color: rgba(255,255,255,.25); transition: color .2s; }
+    .footer-bottom-links a:hover { color: var(--teal); }
+
+    /* ── HAMBURGER ──────────────────────────────── */
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; z-index: 201; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); border-radius: 2px; transition: all .25s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: translateX(-8px); }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ── TABLET ─────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .section { padding: 72px 0; }
+      .page-hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-aside { max-width: 520px; }
+      .pain-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .pain-visual { max-width: 560px; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .process-card::after { display: none; }
+      .who-grid { grid-template-columns: repeat(2, 1fr); }
+      .industries-grid { grid-template-columns: repeat(3, 1fr); }
+      .related-grid { grid-template-columns: repeat(2, 1fr); }
+      .faq-two-col { grid-template-columns: 1fr; gap: 0; }
+      .location-inner { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ── MOBILE ──────────────────────────────────── */
+    @media (max-width: 768px) {
+      .container { padding: 0 1.25rem; }
+      .section { padding: 56px 0; }
+      .mockup-strip { position: relative; top: auto; font-size: .65rem; }
+      .nav-wrap { top: 0; }
+      .nav-inner { padding: .875rem 1.25rem; }
+      .nav-links { display: none; position: fixed; inset: 0; background: #fff; flex-direction: column; justify-content: center; align-items: center; gap: 2.25rem; z-index: 199; list-style: none; }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 1.15rem; font-weight: 600; color: var(--ink); }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .page-hero { padding: 52px 0 44px; }
+      .page-hero-inner { grid-template-columns: 1fr; }
+      .hero-aside { display: none; }
+      .page-hero h1 { font-size: clamp(2.4rem, 11vw, 3.5rem); }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-actions .btn { justify-content: center; }
+      .pain-layout { grid-template-columns: 1fr; gap: 2rem; }
+      .pain-visual { padding: 2rem 1.5rem; }
+      .process-steps { grid-template-columns: 1fr; }
+      .who-grid { grid-template-columns: 1fr; }
+      .industries-grid { grid-template-columns: 1fr 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .faq-two-col { grid-template-columns: 1fr; gap: 0; }
+      .testimonial-section { padding: 64px 0; }
+      .t-quote { font-size: 1rem; }
+      .location-strip { padding: 36px 0; }
+      .location-inner { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
+      .location-pills { gap: .4rem; }
+      .loc-pill { font-size: .72rem; padding: .3rem .8rem; }
+      .cta-section { padding: 64px 0; }
+      .cta-btns { flex-direction: column; align-items: center; }
+      .cta-btns .btn { width: 100%; max-width: 320px; justify-content: center; }
+      .footer { padding: 48px 0 28px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: .75rem; }
+      .footer-bottom-links { justify-content: center; flex-wrap: wrap; gap: 1rem; }
+      h2.display { font-size: clamp(2rem, 9vw, 3rem); }
+    }
+
+    @media (max-width: 480px) {
+      .industries-grid { grid-template-columns: 1fr 1fr; }
+      .stats-inner { grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .container { padding: 0 1rem; }
+      .section { padding: 3rem 0; }
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBFJKD962N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JBFJKD962N');
+  </script>
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AccountingService",
+      "name": "Tides Bookkeeping",
+      "description": "Remote bookkeeping and financial services for small businesses nationwide.",
+      "url": "https://tidesbookkeeping.com",
+      "telephone": "+18645592686",
+      "email": "support@tidesbookkeeping.com",
+      "image": "https://tidesbookkeeping.com/logo.png",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Greenville",
+        "addressRegion": "SC",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/tides-bookkeeping",
+        "https://www.facebook.com/thetidesbookkeeping",
+        "https://www.instagram.com/tidesbookkeeping/"
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Catch-Up Bookkeeping",
+      "provider": {
+        "@type": "AccountingService",
+        "name": "Tides Bookkeeping"
+      },
+      "description": "Professional catch-up bookkeeping that clears months or years of backlog, reconciles all accounts, and delivers tax-ready financials.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "url": "https://tidesbookkeeping.com/service-catchup-bookkeeping"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://tidesbookkeeping.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://tidesbookkeeping.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Catch-Up Bookkeeping",
+          "item": "https://tidesbookkeeping.com/service-catchup-bookkeeping"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+<nav class="nav-wrap">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="who-we-serve.html">Who We Serve</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#" class="btn btn-outline">Sign In</a>
+      <a href="schedule.html" class="btn btn-primary">Book Appointment</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="services.html">Services</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">Catch-Up Bookkeeping</span>
+  </div>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="hero-content">
+        <div class="eyebrow"><span style="width:6px;height:6px;border-radius:50%;background:var(--teal);display:inline-block;"></span> Catch-Up Bookkeeping Services</div>
+        <h1 class="display">Behind on Your Books?<br/>We'll Get You<br/><span class="gradient-text">Caught Up Fast.</span></h1>
+        <p>Months or years of unreconciled accounts, uncategorized transactions, and missing records — we've seen it all. Our catch-up bookkeeping service clears the backlog completely, so you can move forward with clean books and no lingering anxiety about your financials.</p>
+        <div class="hero-actions">
+          <a href="schedule.html" class="btn btn-teal btn-lg">Schedule Free Consultation</a>
+          <a href="#whats-included" class="btn btn-outline btn-lg">See What's Included ↓</a>
+        </div>
+        <p class="hero-note">No setup fees &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; Dedicated bookkeeper</p>
+        <div class="trust-pills"><div class="trust-pill"><span class="dot"></span>QuickBooks Online</div><div class="trust-pill"><span class="dot"></span>Any Industry</div><div class="trust-pill"><span class="dot"></span>Months or Years Back</div><div class="trust-pill"><span class="dot"></span>CPA-Ready Output</div><div class="trust-pill"><span class="dot"></span>No Judgment</div></div>
+      </div>
+      <div class="hero-aside">
+        <div class="ha-header">
+          <span class="label">What We Deliver</span>
+          <div class="ha-title">Your Complete Catch-Up Package</div>
+          <div class="ha-subtitle">Everything cleaned up before you move forward</div>
+        </div>
+        <div class="ha-body">
+          <div class="ha-row"><strong>All Transactions Categorized</strong><span class="ha-badge green">✓ Done</span></div><div class="ha-row"><strong>All Accounts Reconciled</strong><span class="ha-badge green">✓ Reconciled</span></div><div class="ha-row"><strong>Chart of Accounts Cleaned</strong><span class="ha-badge teal">✓ Fixed</span></div><div class="ha-row"><strong>P&amp;L Per Period</strong><span class="ha-badge teal">✓ Delivered</span></div><div class="ha-row"><strong>CPA-Ready Year-End Package</strong><span class="ha-badge blue">✓ Included</span></div>
+          <div class="ha-stat-row">
+            <div class="ha-stat"><div class="ha-stat-val">$0</div><div class="ha-stat-label">Setup Fees</div></div>
+            <div class="ha-stat"><div class="ha-stat-val">24hr</div><div class="ha-stat-label">Response Time</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-num">3+</div><div class="stat-label">Years Back Handled</div></div>
+    <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Remote Service</div></div>
+    <div class="stat-item"><div class="stat-num">$0</div><div class="stat-label">Setup Fees</div></div>
+    <div class="stat-item"><div class="stat-num">1</div><div class="stat-label">Dedicated Bookkeeper</div></div>
+  </div>
+</div>
+
+<section class="section section-alt" id="whats-included">
+  <div class="container">
+    <div class="pain-layout">
+      <div>
+        <div class="eyebrow">What's Included</div>
+        <h2 class="display">What's Included in<br/><span class="gradient-text">Every Catch-Up.</span></h2>
+        <p style="margin-top:1rem;font-size:1rem;line-height:1.75;">Catch-up bookkeeping isn't just data entry. It's a systematic process that touches every account, every period, and every inconsistency — so your books are accurate when we're done.</p>
+        <div class="pain-list"><div class="pain-item"><span class="pain-x">✅</span><div><h4>Complete Transaction Categorization</h4><p>Every transaction across every period is reviewed, categorized, and assigned to the correct account. We use your actual business activity to determine categories — not guesses.</p></div></div><div class="pain-item"><span class="pain-x">✅</span><div><h4>Full Account Reconciliation</h4><p>Every bank account, credit card, and loan account is reconciled against statements for every month in the catch-up period. Every discrepancy is identified and resolved.</p></div></div><div class="pain-item"><span class="pain-x">✅</span><div><h4>Chart of Accounts Review & Cleanup</h4><p>Duplicate accounts, miscategorized items, and structural problems in your QuickBooks are fixed. You get a clean, logical account structure going forward.</p></div></div><div class="pain-item"><span class="pain-x">✅</span><div><h4>Period-by-Period P&L Statements</h4><p>Once catch-up is complete, we deliver profit and loss statements for each year or period covered — so you have a real financial history, not a black hole.</p></div></div></div>
+      </div>
+      <div>
+        <div class="pain-visual" style="margin-top:4.75rem;">
+          <div class="pain-visual-title">Also Included</div>
+          <div class="pain-visual-sub">All part of your service</div>
+          <div class="pain-check-list"><div class="pain-check"><span class="pain-check-icon">✅</span><div><strong>Balance Sheet per Period</strong>Know your business's financial position at every point in the catch-up window.</div></div><div class="pain-check"><span class="pain-check-icon">✅</span><div><strong>CPA-Ready Year-End Package</strong>Everything your accountant needs for taxes — organized and ready.</div></div><div class="pain-check"><span class="pain-check-icon">✅</span><div><strong>Duplicate Transaction Review</strong>Duplicate entries and bank feed errors are identified and removed.</div></div><div class="pain-check"><span class="pain-check-icon">✅</span><div><strong>Opening Balance Verification</strong>Starting balances are verified and corrected if they were off.</div></div><div class="pain-check"><span class="pain-check-icon">✅</span><div><strong>Transition to Monthly Service</strong>Once caught up, we seamlessly begin your monthly bookkeeping cycle.</div></div><div class="pain-check"><span class="pain-check-icon">✅</span><div><strong>QuickBooks Setup or Cleanup</strong>We configure QBO correctly if it's a mess — no extra charge.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">How It Works</div>
+      <h2 class="display">Simple Process.<br/><span class="gradient-text">Fast Results.</span></h2>
+      <p>Here's exactly what happens from your first call to completed work.</p>
+    </div>
+    <div class="process-steps"><div class="process-card"><div class="step-num">01</div><h3>Free Assessment</h3><p>We review your current books, identify the scope of the backlog, and give you a flat project quote. No hourly billing — you know the price before we start.</p></div><div class="process-card"><div class="step-num">02</div><h3>Secure Access Setup</h3><p>You grant us access to QuickBooks Online and your bank statements. We handle everything from there — no need to export data or send spreadsheets.</p></div><div class="process-card"><div class="step-num">03</div><h3>Systematic Catch-Up</h3><p>We work backward through each period, reconciling accounts and categorizing transactions. We flag anything that needs your input, but the bulk of the work happens without you.</p></div><div class="process-card"><div class="step-num">04</div><h3>Review & Handoff</h3><p>We walk you through the completed books, deliver your financial reports, and either hand off to your CPA or begin your monthly service cycle.</p></div></div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">Who It's For</div>
+      <h2 class="display">Catch-Up Bookkeeping for<br/><span class="gradient-text">Every Situation.</span></h2>
+      <p>Whether you've never had a bookkeeper or your last one left things in chaos, catch-up bookkeeping gets you back to solid ground.</p>
+    </div>
+    <div class="who-grid"><div class="who-card"><div class="who-icon">📅</div><h3>New Business Owners</h3><p>You've been running your business for a year or more and have never properly reconciled your books. Tax season is coming and you have no accurate financials.</p><ul class="who-list"><li>Catch up on all missed months</li><li>Reconcile all business accounts</li><li>Categorize every transaction correctly</li><li>Prepare for first tax filing</li><li>Set up proper monthly system going forward</li></ul></div><div class="who-card"><div class="who-icon">🔄</div><h3>Switching Bookkeepers</h3><p>Your previous bookkeeper left, passed away, or did the work incorrectly. You've inherited a mess and don't know where to start.</p><ul class="who-list"><li>Audit existing books for errors</li><li>Correct miscategorized transactions</li><li>Fix chart of accounts structure</li><li>Reconcile all outstanding periods</li><li>Establish clean baseline for new service</li></ul></div><div class="who-card"><div class="who-icon">🧾</div><h3>Tax Season Scramble</h3><p>It's Q1 and your books are 12 months behind. Your CPA is waiting. You need the year cleaned up fast so you can file on time without penalties.</p><ul class="who-list"><li>Priority turnaround on the current year</li><li>All reconciliations completed</li><li>Year-end financial statements delivered</li><li>CPA-ready package prepared</li><li>Estimated tax catch-up if needed</li></ul></div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="pain-layout">
+      <div>
+        <div class="eyebrow">Sound Familiar?</div>
+        <h2 class="display">The Real Cost of<br/><span class="gradient-text">Falling Behind.</span></h2>
+        <p style="margin-top:1rem;font-size:1rem;line-height:1.75;">Most business owners know their books are behind. What they underestimate is what that actually costs them in time, money, and missed opportunities.</p>
+        <div class="pain-list"><div class="pain-item"><span class="pain-x">😩</span><div><h4>CPA Cleanup Charges</h4><p>When your accountant has to reconcile 12 months of transactions to file your taxes, they charge accordingly — often hundreds or thousands in extra fees that clean books would have eliminated.</p></div></div><div class="pain-item"><span class="pain-x">💸</span><div><h4>Missed Deductions</h4><p>Transactions that aren't categorized correctly don't show up as deductions. Behind books mean you're likely overpaying on taxes every year.</p></div></div><div class="pain-item"><span class="pain-x">📊</span><div><h4>No Real Financial Picture</h4><p>Without accurate records, you can't know if your business is truly profitable. Decisions about hiring, pricing, and growth are made on gut instinct instead of facts.</p></div></div><div class="pain-item"><span class="pain-x">⏰</span><div><h4>Lost Time Every Tax Season</h4><p>Spending January and February tracking down receipts, matching bank statements, and reconstructing a year of activity costs dozens of hours you'll never get back.</p></div></div></div>
+      </div>
+      <div>
+        <div class="pain-visual" style="margin-top:4.75rem;">
+          <div class="pain-visual-title">What Changes</div>
+          <div class="pain-visual-sub">The difference it makes</div>
+          <div class="pain-check-list"><div class="pain-check"><span class="pain-check-icon">✅</span><div><strong>Fixed CPA bill</strong>Clean books = less billable cleanup time at year-end.</div></div><div class="pain-check"><span class="pain-check-icon">✅</span><div><strong>Recovered deductions</strong>Properly categorized expenses show up where they belong.</div></div><div class="pain-check"><span class="pain-check-icon">✅</span><div><strong>Real financial clarity</strong>Know your actual profit, not just your bank balance.</div></div><div class="pain-check"><span class="pain-check-icon">✅</span><div><strong>Tax-ready year-round</strong>No scramble, no panic, no rushing to file.</div></div><div class="pain-check"><span class="pain-check-icon">✅</span><div><strong>Loan-ready financials</strong>Accurate statements available when you need them fast.</div></div><div class="pain-check"><span class="pain-check-icon">✅</span><div><strong>Foundation for growth</strong>Clean historical data supports better decisions going forward.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="location-strip">
+  <div class="container">
+    <div class="location-inner">
+      <div class="location-text">
+        <h3>Serving Small Businesses Across South Carolina &amp; Beyond</h3>
+        <p>Based in Greenville, SC. 100% remote — we serve clients statewide and nationwide.</p>
+      </div>
+      <div class="location-pills">
+        <a href="state-south-carolina.html" class="loc-pill">South Carolina</a>
+        <a href="city-greenville-sc.html" class="loc-pill">Greenville, SC</a>
+        <a href="county-greenville-sc.html" class="loc-pill">Greenville County</a>
+        <span class="loc-pill">Columbia, SC</span>
+        <span class="loc-pill">Charleston, SC</span>
+        <span class="loc-pill">+ Nationwide</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial-section">
+  <div class="container">
+    <div class="testimonial-inner">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-quote">"Dan is crucial to the financial management of my business. He helped me beyond simply bookkeeping — resourceful, detail oriented, and most importantly responsive and fast."</p>
+      <div class="t-author">
+        <div class="t-avatar">SL</div>
+        <div>
+          <div class="t-name">S. Longfellow</div>
+          <div class="t-role">Small Business Owner · Verified Client</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">Common Questions</div>
+      <h2 class="display">Catch-Up Bookkeeping<br/><span class="gradient-text">FAQ</span></h2>
+    </div>
+    <div class="faq-list faq-two-col" style="margin-top:3.5rem;">
+      <div><div class="faq-item open">
+  <button class="faq-question" onclick="toggleFaq(this)">
+    <h4>How far back can you go?</h4><span class="faq-toggle">+</span>
+  </button>
+  <div class="faq-answer">There's no limit. We've cleaned up books that were 3+ years behind. The further back the work goes, the more it costs, but we always give you a firm quote upfront so you know exactly what you're paying before we start.</div>
+</div><div class="faq-item">
+  <button class="faq-question" onclick="toggleFaq(this)">
+    <h4>How long does catch-up take?</h4><span class="faq-toggle">+</span>
+  </button>
+  <div class="faq-answer">It depends on the volume of transactions and how many months are involved. A single year with moderate transaction volume typically takes 2–3 weeks. We'll give you a realistic timeline in your free assessment.</div>
+</div><div class="faq-item">
+  <button class="faq-question" onclick="toggleFaq(this)">
+    <h4>Do I need to have QuickBooks?</h4><span class="faq-toggle">+</span>
+  </button>
+  <div class="faq-answer">No. If you're not on QuickBooks Online, we'll set it up as part of the process. If you're on a different platform or have no accounting software at all, we migrate or build from scratch.</div>
+</div><div class="faq-item">
+  <button class="faq-question" onclick="toggleFaq(this)">
+    <h4>What do I need to provide?</h4><span class="faq-toggle">+</span>
+  </button>
+  <div class="faq-answer">Access to your QuickBooks Online account and bank statements for the periods being cleaned up. If you don't have statements, we can work with bank feed data in most cases.</div>
+</div></div>
+      <div><div class="faq-item">
+  <button class="faq-question" onclick="toggleFaq(this)">
+    <h4>Will I get actual financial reports?</h4><span class="faq-toggle">+</span>
+  </button>
+  <div class="faq-answer">Yes. Once the catch-up is complete, we deliver P&L statements and balance sheets for each year covered. You'll have real financials — not just reconciled data.</div>
+</div><div class="faq-item">
+  <button class="faq-question" onclick="toggleFaq(this)">
+    <h4>How is catch-up bookkeeping priced?</h4><span class="faq-toggle">+</span>
+  </button>
+  <div class="faq-answer">It's a flat project fee based on the number of months and average transaction volume. No hourly billing. We quote the full project upfront so there are no surprises.</div>
+</div><div class="faq-item">
+  <button class="faq-question" onclick="toggleFaq(this)">
+    <h4>Can I move to monthly service after catch-up?</h4><span class="faq-toggle">+</span>
+  </button>
+  <div class="faq-answer">Absolutely — that's the most common path. Once your books are current, we start your monthly bookkeeping cycle immediately. The transition is seamless.</div>
+</div><div class="faq-item">
+  <button class="faq-question" onclick="toggleFaq(this)">
+    <h4>What if my previous bookkeeper made errors?</h4><span class="faq-toggle">+</span>
+  </button>
+  <div class="faq-answer">We audit the prior work, identify errors, and correct them as part of the catch-up. We don't assume prior work is accurate — everything gets verified.</div>
+</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">Also Available</div>
+      <h2 class="display">Explore Our Other<br/><span class="gradient-text">Services.</span></h2>
+    </div>
+    <div class="related-grid"><div class="rel-card"><div class="rel-icon" style="background:var(--teal-lt);">📊</div><h3>Monthly Bookkeeping</h3><p>Clean books delivered every month — reconciled, categorized, and reported.</p><a href="service-monthly-bookkeeping.html" class="rel-link">Learn More →</a></div><div class="rel-card"><div class="rel-icon" style="background:rgba(33,81,151,.08);">💼</div><h3>Payroll Support</h3><p>Gusto-certified payroll processing, tax filings, and W-2 management.</p><a href="service-payroll.html" class="rel-link">Learn More →</a></div><div class="rel-card"><div class="rel-icon" style="background:var(--teal-lt);">⚙️</div><h3>Software Setup & Cleanup</h3><p>QuickBooks configured correctly from scratch — or cleaned up if it's a mess.</p><a href="service-software-setup.html" class="rel-link">Learn More →</a></div><div class="rel-card"><div class="rel-icon" style="background:var(--blue-lt);">📈</div><h3>Financial Reporting</h3><p>Monthly P&L, balance sheet, and cash flow delivered clean every month.</p><a href="service-financial-reporting.html" class="rel-link">Learn More →</a></div><div class="rel-card"><div class="rel-icon" style="background:rgba(33,81,151,.08);">🏦</div><h3>Bank Reconciliation</h3><p>Every account matched and verified monthly. No mystery charges.</p><a href="service-bank-reconciliation.html" class="rel-link">Learn More →</a></div><div class="rel-card"><div class="rel-icon" style="background:var(--teal-lt);">📑</div><h3>Accounts Payable & Receivable</h3><p>Track what you owe and what you're owed — managed and reported monthly.</p><a href="service-accounts-payable-receivable.html" class="rel-link">Learn More →</a></div></div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="eyebrow" style="background:rgba(65,207,208,.15);border-color:rgba(65,207,208,.3);color:var(--teal);">Ready to Get Started?</div>
+    <h2 class="display" style="font-size:clamp(2.6rem,5.5vw,4rem);margin-bottom:1.25rem;">Stop Dreading<br/><span class="gradient-text">Your Books.</span></h2>
+    <p>Schedule a free assessment. We'll tell you exactly what the catch-up involves, how long it takes, and what it costs — no surprises, no pressure.</p>
+    <div class="cta-btns">
+      <a href="schedule.html" class="btn btn-teal btn-lg">Schedule Free Consultation</a>
+      <a href="services.html" class="btn btn-outline-white btn-lg">See All Services →</a>
+    </div>
+    <p class="cta-fine">No credit card required &nbsp;·&nbsp; No long-term contracts &nbsp;·&nbsp; Cancel anytime</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="logo.png" alt="Tides Bookkeeping" /></div>
+        <p>Remote bookkeeping for small businesses across South Carolina and beyond. Clean books. Clear numbers. Confident decisions.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/tides-bookkeeping" target="_blank" rel="noopener" class="social-btn">in</a>
+          <a href="https://www.facebook.com/thetidesbookkeeping" target="_blank" rel="noopener" class="social-btn">f</a>
+          <a href="https://www.instagram.com/tidesbookkeeping/" target="_blank" rel="noopener" class="social-btn">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="services.html">All Services</a></li>
+          <li><a href="service-monthly-bookkeeping.html">Monthly Bookkeeping</a></li>
+          <li><a href="service-catchup-bookkeeping.html">Catch-Up Bookkeeping</a></li>
+          <li><a href="service-payroll.html">Payroll Support</a></li>
+          <li><a href="service-financial-reporting.html">Financial Reporting</a></li>
+          <li><a href="service-bank-reconciliation.html">Bank Reconciliation</a></li>
+          <li><a href="service-accounts-payable-receivable.html">Accounts Payable/Receivable</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="who-we-serve.html">Who We Serve</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact footer-col">
+        <h4>Contact</h4>
+        <p>📧 support@tidesbookkeeping.com</p>
+        <p>📞 (864) 559-2686</p>
+        <p>📍 Greenville, South Carolina</p>
+        <div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:.6rem;">
+          <a href="contact.html" class="btn btn-outline-white" style="font-size:.82rem;padding:.65rem 1.4rem;justify-content:center;">Contact Us →</a>
+          <a href="schedule.html" class="btn btn-teal" style="font-size:.82rem;padding:.65rem 1.4rem;">Book a Free Call</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tides Bookkeeping LLC. All rights reserved.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+  (function() {
+    const btn = document.getElementById('hamburger');
+    const links = document.getElementById('navLinks');
+    if (!btn || !links) return;
+    btn.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        btn.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
+</script>
+<div data-chat-widget data-widget-id="69614819668b0f723ec311b9" data-location-id="MbY1ICQ6HdzVOrgFncoI"></div>
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69614819668b0f723ec311b9"></script>
+</body>
+</html>

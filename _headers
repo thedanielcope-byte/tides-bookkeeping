@@ -1,0 +1,10 @@
+# ═══════════════════════════════════════════════════════════════
+# IMPORTANT: BEFORE GOING LIVE AT tidesbookkeeping.com
+# ═══════════════════════════════════════════════════════════════
+# Delete this entire file (or at minimum the X-Robots-Tag lines)
+# to allow Google to index the production site.
+# ═══════════════════════════════════════════════════════════════
+
+# Block all search engines while in review mode at pages.dev
+/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet

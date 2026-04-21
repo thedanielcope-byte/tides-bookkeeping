@@ -412,6 +412,40 @@
     .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
     /* ── TABLET (≤1024px) ───────────────────────── */
+    /* ── OTHER INDUSTRIES ──────────────────────── */
+    .also-section { background: var(--bg-alt); padding: 80px 0; }
+    .also-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1rem; margin-top: 3rem;
+    }
+    .also-card {
+      display: flex; align-items: center; gap: .85rem;
+      padding: 1rem 1.25rem;
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 14px; text-decoration: none;
+      transition: all .2s ease;
+    }
+    .also-card:hover {
+      border-color: rgba(65,207,208,.5); background: var(--teal-lt);
+      transform: translateY(-2px); box-shadow: var(--shadow);
+    }
+    .also-card.current-industry {
+      border-color: var(--teal); background: var(--teal-lt);
+      pointer-events: none; cursor: default;
+    }
+    .also-card.current-industry .also-name { color: var(--teal); }
+    .also-emoji { font-size: 1.5rem; flex-shrink: 0; line-height: 1; }
+    .also-info { min-width: 0; }
+    .also-name {
+      font-size: .87rem; font-weight: 700; color: var(--ink);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .also-desc { font-size: .72rem; color: var(--muted); margin-top: 2px; line-height: 1.4; }
+
+    /* also-grid responsive */
+    @media (max-width: 1024px) { .also-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 768px)  { .also-grid { grid-template-columns: repeat(2, 1fr); gap: .75rem; } .also-section { padding: 56px 0; } }
+    @media (max-width: 480px)  { .also-grid { grid-template-columns: 1fr 1fr; } .also-card { padding: .85rem 1rem; } }
     @media (max-width: 1024px) {
       .section { padding: 72px 0; }
       .page-hero-inner { grid-template-columns: 1fr; gap: 3rem; }
@@ -1004,6 +1038,108 @@
 <!-- ══════════════════════════════════════
      CTA
 ══════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════
+     OTHER INDUSTRIES WE SERVE
+════════════════════════════════════════════ -->
+<section class="also-section">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">12 Industries</div>
+      <h2 class="display">Beyond Contractors,<br/><span class="gradient-text">We Serve All These Businesses</span></h2>
+      <p>Tides Bookkeeping specializes in bookkeeping across 12 distinct industries. Industry-specific expertise means fewer errors, better categorization, and a bookkeeper who already understands how your business makes money.</p>
+    </div>
+    <div class="also-grid">
+      <a href="industry-real-estate.html" class="also-card">
+        <span class="also-emoji">🏡</span>
+        <div class="also-info">
+          <div class="also-name">Real Estate</div>
+          <div class="also-desc">Agents, investors &amp; property managers</div>
+        </div>
+      </a>
+      <a href="#" class="also-card current-industry">
+        <span class="also-emoji">🔨</span>
+        <div class="also-info">
+          <div class="also-name">Contractors &amp; Trades</div>
+          <div class="also-desc">Construction, HVAC, electrical &amp; plumbing</div>
+        </div>
+      </a>
+      <a href="industry-restaurants-bars.html" class="also-card">
+        <span class="also-emoji">🍽️</span>
+        <div class="also-info">
+          <div class="also-name">Restaurants &amp; Bars</div>
+          <div class="also-desc">Food service, cafes &amp; hospitality</div>
+        </div>
+      </a>
+      <a href="industry-healthcare.html" class="also-card">
+        <span class="also-emoji">🏥</span>
+        <div class="also-info">
+          <div class="also-name">Healthcare Practices</div>
+          <div class="also-desc">Medical, dental &amp; private practices</div>
+        </div>
+      </a>
+      <a href="industry-professional-services.html" class="also-card">
+        <span class="also-emoji">⚖️</span>
+        <div class="also-info">
+          <div class="also-name">Professional Services</div>
+          <div class="also-desc">Law firms, consultants &amp; agencies</div>
+        </div>
+      </a>
+      <a href="industry-ecommerce-retail.html" class="also-card">
+        <span class="also-emoji">🛍️</span>
+        <div class="also-info">
+          <div class="also-name">E-Commerce &amp; Retail</div>
+          <div class="also-desc">Online stores, DTC &amp; brick-and-mortar</div>
+        </div>
+      </a>
+      <a href="industry-solo-entrepreneurs.html" class="also-card">
+        <span class="also-emoji">💼</span>
+        <div class="also-info">
+          <div class="also-name">Solo Entrepreneurs</div>
+          <div class="also-desc">Freelancers, coaches &amp; independents</div>
+        </div>
+      </a>
+      <a href="industry-small-businesses.html" class="also-card">
+        <span class="also-emoji">🏢</span>
+        <div class="also-info">
+          <div class="also-name">Small Businesses</div>
+          <div class="also-desc">Growing teams across every sector</div>
+        </div>
+      </a>
+      <a href="industry-automotive.html" class="also-card">
+        <span class="also-emoji">🚗</span>
+        <div class="also-info">
+          <div class="also-name">Automotive Services</div>
+          <div class="also-desc">Dealerships, repair shops &amp; detailing</div>
+        </div>
+      </a>
+      <a href="industry-logistics-transportation.html" class="also-card">
+        <span class="also-emoji">🚚</span>
+        <div class="also-info">
+          <div class="also-name">Logistics &amp; Transportation</div>
+          <div class="also-desc">Freight, delivery &amp; fleet operators</div>
+        </div>
+      </a>
+      <a href="industry-nonprofits.html" class="also-card">
+        <span class="also-emoji">🤝</span>
+        <div class="also-info">
+          <div class="also-name">Non-Profit Organizations</div>
+          <div class="also-desc">501(c)(3) compliance &amp; grant tracking</div>
+        </div>
+      </a>
+      <a href="industry-tech-startups.html" class="also-card">
+        <span class="also-emoji">💡</span>
+        <div class="also-info">
+          <div class="also-name">Tech &amp; Startups</div>
+          <div class="also-desc">SaaS, apps &amp; early-stage companies</div>
+        </div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="who-we-serve.html" class="btn btn-outline">View All Industries →</a>
+    </div>
+  </div>
+</section>
+
 <section class="cta-section">
   <div class="container">
     <div class="eyebrow" style="background:rgba(65,207,208,.15);border-color:rgba(65,207,208,.3);color:var(--teal);">

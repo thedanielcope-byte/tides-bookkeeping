@@ -260,36 +260,6 @@
       padding: 3px 10px; border-radius: 50px;
     }
 
-    /* ── DISTRICTS ──────────────────────────────────── */
-    .district-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
-    }
-    .district-card {
-      background: #fff; border: 1px solid var(--border);
-      border-radius: 18px; padding: 1.5rem 1.75rem;
-      box-shadow: var(--shadow); transition: all .22s;
-    }
-    .district-card:hover { box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.3); }
-    .district-city {
-      font-size: 1rem; font-weight: 700; color: var(--ink);
-      margin-bottom: 1rem; display: flex; align-items: center; gap: .45rem;
-    }
-    .district-sub {
-      font-size: .66rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .09em; color: var(--muted);
-      margin: .9rem 0 .5rem; display: flex; align-items: center; gap: .5rem;
-    }
-    .district-sub::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-    .district-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
-    .district-tag {
-      font-size: .73rem; font-weight: 500; color: var(--body);
-      background: var(--bg-alt); border: 1px solid var(--border);
-      padding: 3px 10px; border-radius: 50px; transition: all .18s;
-      white-space: nowrap;
-    }
-    .district-tag:hover { background: var(--teal-lt); border-color: rgba(65,207,208,.4); color: var(--ink); }
-    .district-tag.cs { opacity: .6; }
-
     /* ── OTHER STATES ────────────────────────────────── */
     .states-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2.5rem; }
     .state-card {
@@ -358,8 +328,7 @@
     /* ── RESPONSIVE ─────────────────────────────────── */
     @media (max-width: 1024px) {
       .loc-grid { grid-template-columns: repeat(2, 1fr); }
-      .district-grid { grid-template-columns: repeat(2, 1fr); }
-      .states-grid { grid-template-columns: repeat(3, 1fr); }
+.states-grid { grid-template-columns: repeat(3, 1fr); }
       .how-grid { grid-template-columns: 1fr 1fr; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
     }
@@ -375,8 +344,7 @@
       .sc-hero { padding: 2rem 1.5rem; }
       .sc-hero h2 { font-size: 2rem; }
       .loc-grid { grid-template-columns: 1fr; }
-      .district-grid { grid-template-columns: 1fr; }
-      .states-grid { grid-template-columns: repeat(2, 1fr); }
+.states-grid { grid-template-columns: repeat(2, 1fr); }
       .how-grid { grid-template-columns: 1fr; }
       .map-scroll-note { display: block; }
       .tile-map { grid-template-columns: repeat(12, 40px); grid-template-rows: repeat(9, 32px); gap: 4px; }
@@ -603,140 +571,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Districts & Neighborhoods -->
-    <div class="loc-section-label">Districts &amp; Neighborhoods</div>
-    <div class="district-grid">
-
-      <!-- Greenville -->
-      <div class="district-card">
-        <div class="district-city">🏙️ Greenville</div>
-        <div class="district-sub">Downtown / Urban Core</div>
-        <div class="district-tags">
-          <span class="district-tag">Main Street / Downtown</span>
-          <span class="district-tag">West End</span>
-          <span class="district-tag">North Main</span>
-          <span class="district-tag">Pettigru Historic District</span>
-          <span class="district-tag">Haynie-Sirrine</span>
-          <span class="district-tag">Augusta Road</span>
-          <span class="district-tag">Overbrook Historic District</span>
-          <span class="district-tag">West Greenville</span>
-          <span class="district-tag">Southernside</span>
-        </div>
-        <div class="district-sub">Suburbs / Greater Greenville</div>
-        <div class="district-tags">
-          <span class="district-tag">Mauldin</span>
-          <span class="district-tag">Simpsonville</span>
-          <span class="district-tag">Five Forks</span>
-          <span class="district-tag">Taylors</span>
-          <span class="district-tag">Greer</span>
-          <span class="district-tag">Travelers Rest</span>
-          <span class="district-tag">Fountain Inn</span>
-        </div>
-      </div>
-
-      <!-- Columbia -->
-      <div class="district-card">
-        <div class="district-city">🏛️ Columbia</div>
-        <div class="district-sub">Downtown / Urban Core</div>
-        <div class="district-tags">
-          <span class="district-tag">The Vista</span>
-          <span class="district-tag">Main Street District</span>
-          <span class="district-tag">Five Points</span>
-          <span class="district-tag">Arsenal Hill</span>
-          <span class="district-tag">The Mill District</span>
-          <span class="district-tag">NOMA (North Main)</span>
-        </div>
-        <div class="district-sub">Residential Neighborhoods</div>
-        <div class="district-tags">
-          <span class="district-tag">Shandon</span>
-          <span class="district-tag">Rosewood</span>
-          <span class="district-tag">Forest Acres</span>
-          <span class="district-tag">Eau Claire</span>
-          <span class="district-tag">Devine Street Corridor</span>
-          <span class="district-tag">Irmo</span>
-          <span class="district-tag">West Columbia</span>
-          <span class="district-tag">Lake Murray Area</span>
-        </div>
-      </div>
-
-      <!-- Charleston -->
-      <div class="district-card">
-        <div class="district-city">🌊 Charleston</div>
-        <div class="district-sub">Downtown Peninsula</div>
-        <div class="district-tags">
-          <span class="district-tag">South of Broad</span>
-          <span class="district-tag">French Quarter</span>
-          <span class="district-tag">King Street</span>
-          <span class="district-tag">Harleston Village</span>
-          <span class="district-tag">Cannonborough / Elliottborough</span>
-          <span class="district-tag">Radcliffeborough</span>
-          <span class="district-tag">Garden District</span>
-          <span class="district-tag">Ansonborough</span>
-          <span class="district-tag">NoMo</span>
-        </div>
-        <div class="district-sub">Greater Charleston</div>
-        <div class="district-tags">
-          <span class="district-tag">West Ashley</span>
-          <span class="district-tag">James Island</span>
-          <span class="district-tag">Daniel Island</span>
-          <span class="district-tag">Mount Pleasant</span>
-          <span class="district-tag">North Charleston</span>
-          <span class="district-tag">Johns Island</span>
-          <span class="district-tag">Folly Beach</span>
-          <span class="district-tag">Sullivan's Island</span>
-          <span class="district-tag">Kiawah Island</span>
-        </div>
-      </div>
-
-      <!-- Myrtle Beach -->
-      <div class="district-card">
-        <div class="district-city">🏖️ Myrtle Beach</div>
-        <div class="district-sub">Districts &amp; Communities</div>
-        <div class="district-tags">
-          <span class="district-tag">Downtown Myrtle Beach</span>
-          <span class="district-tag">Grand Strand</span>
-          <span class="district-tag">Market Common</span>
-          <span class="district-tag">The Dunes</span>
-          <span class="district-tag">Arcadian Shores</span>
-          <span class="district-tag">North Myrtle Beach</span>
-          <span class="district-tag">Surfside Beach</span>
-          <span class="district-tag">Socastee</span>
-          <span class="district-tag">Carolina Forest</span>
-        </div>
-      </div>
-
-      <!-- Spartanburg -->
-      <div class="district-card">
-        <div class="district-city">🏙️ Spartanburg</div>
-        <div class="district-sub">Districts &amp; Communities</div>
-        <div class="district-tags">
-          <span class="district-tag">Downtown / Historic District</span>
-          <span class="district-tag">Converse Heights</span>
-          <span class="district-tag">Beaumont</span>
-          <span class="district-tag">Hampton Heights</span>
-          <span class="district-tag">Saxon</span>
-          <span class="district-tag">Glendale</span>
-          <span class="district-tag">Duncan</span>
-          <span class="district-tag">Lyman</span>
-        </div>
-      </div>
-
-      <!-- Rock Hill -->
-      <div class="district-card">
-        <div class="district-city">🏙️ Rock Hill</div>
-        <div class="district-sub">Districts &amp; Communities</div>
-        <div class="district-tags">
-          <span class="district-tag">Downtown / Arts District</span>
-          <span class="district-tag">Winthrop University Area</span>
-          <span class="district-tag">Manchester</span>
-          <span class="district-tag">Cherry Park</span>
-          <span class="district-tag">Riverview / Catawba River</span>
-          <span class="district-tag">Fort Mill</span>
-        </div>
-      </div>
-
-    </div><!-- /district-grid -->
   </div>
 </section>
 

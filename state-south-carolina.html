@@ -591,24 +591,30 @@
       <div class="hero-aside">
         <div class="ha-header" style="padding:1.25rem 1.75rem 1rem;">
           <span class="label">South Carolina</span>
-          <!-- SC State Shape SVG -->
-          <svg viewBox="0 0 280 175" xmlns="http://www.w3.org/2000/svg"
-               style="width:100%;max-height:145px;display:block;margin:.5rem 0 .75rem;overflow:visible;">
-            <!-- SC state outline (simplified geographic border) -->
-            <path d="M 26,14 C 60,10 100,6 140,4 C 170,2 200,2 228,10 C 240,14 248,22 252,34 C 256,46 254,60 250,74 C 245,90 236,105 224,120 C 210,137 193,151 172,160 C 150,169 124,170 99,164 C 76,158 54,145 36,126 C 20,110 10,89 8,67 C 6,46 12,26 26,14 Z"
-                  fill="rgba(65,207,208,0.18)" stroke="#41cfd0" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-            <!-- Greenville (NW Upstate) -->
-            <circle cx="64" cy="52" r="5.5" fill="#41cfd0"/>
-            <text x="74" y="57" font-size="10" font-weight="700" fill="#fff" font-family="Inter,sans-serif">Greenville ★</text>
-            <!-- Columbia (center) -->
-            <circle cx="138" cy="96" r="4" fill="rgba(255,255,255,0.75)"/>
-            <text x="146" y="100" font-size="9" fill="rgba(255,255,255,.65)" font-family="Inter,sans-serif">Columbia</text>
-            <!-- Charleston (SE coast) -->
-            <circle cx="202" cy="137" r="4" fill="rgba(255,255,255,0.75)"/>
-            <text x="165" y="155" font-size="9" fill="rgba(255,255,255,.65)" font-family="Inter,sans-serif">Charleston</text>
-            <!-- Myrtle Beach (NE coast) -->
-            <circle cx="238" cy="76" r="3.5" fill="rgba(255,255,255,0.6)"/>
-            <text x="210" y="71" font-size="8" fill="rgba(255,255,255,.5)" font-family="Inter,sans-serif">Myrtle Bch</text>
+          <!-- SC State Shape SVG — correct triangular wedge shape -->
+          <svg viewBox="0 0 300 205" xmlns="http://www.w3.org/2000/svg"
+               style="width:100%;max-height:150px;display:block;margin:.5rem 0 .75rem;overflow:visible;">
+            <!-- SC outline: wide NC border on top, Atlantic coast runs NE→SW to Hilton Head, GA/Savannah River returns NW -->
+            <path d="M 8,38
+                     L 55,28 L 110,18 L 168,12 L 220,10 L 268,12 L 284,18
+                     L 282,35 L 276,58 L 265,84 L 250,112
+                     L 232,136 L 210,156 L 185,172 L 160,184
+                     L 138,192 L 118,196
+                     L 96,184 L 70,164 L 46,136 L 26,104 L 10,70 L 6,50 Z"
+                  fill="rgba(65,207,208,0.18)" stroke="#41cfd0" stroke-width="2.5"
+                  stroke-linejoin="round" stroke-linecap="round"/>
+            <!-- Greenville — NW Upstate -->
+            <circle cx="52" cy="55" r="5.5" fill="#41cfd0"/>
+            <text x="62" y="59" font-size="10" font-weight="700" fill="#fff" font-family="Inter,sans-serif">Greenville ★</text>
+            <!-- Columbia — center of state -->
+            <circle cx="152" cy="118" r="4" fill="rgba(255,255,255,0.75)"/>
+            <text x="160" y="122" font-size="9" fill="rgba(255,255,255,.65)" font-family="Inter,sans-serif">Columbia</text>
+            <!-- Charleston — SE coast -->
+            <circle cx="226" cy="150" r="4" fill="rgba(255,255,255,0.75)"/>
+            <text x="190" y="168" font-size="9" fill="rgba(255,255,255,.65)" font-family="Inter,sans-serif">Charleston</text>
+            <!-- Myrtle Beach — NE coast -->
+            <circle cx="272" cy="55" r="3.5" fill="rgba(255,255,255,0.6)"/>
+            <text x="243" y="48" font-size="8" fill="rgba(255,255,255,.5)" font-family="Inter,sans-serif">Myrtle Bch</text>
           </svg>
           <div class="ha-title">Serving SC Statewide</div>
           <div class="ha-subtitle">All 46 counties · Every major city</div>
@@ -1266,6 +1272,7 @@
           <li><a href="#">Columbia</a></li>
           <li><a href="#">Spartanburg</a></li>
           <li><a href="#">Myrtle Beach</a></li>
+          <li><a href="areas-we-serve.html">All Areas →</a></li>
         </ul>
       </div>
       <div class="footer-col">

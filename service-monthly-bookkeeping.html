@@ -215,13 +215,26 @@
     .ind-note p { font-size: .9rem; }
 
     /* ── LOCATION STRIP ─────────────────────────────── */
-    .location-strip { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 48px 0; }
-    .location-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
-    .location-text h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: .4rem; }
-    .location-text p { font-size: .9rem; color: var(--body); }
-    .location-pills { display: flex; flex-wrap: wrap; gap: .5rem; }
-    .loc-pill { padding: .35rem 1rem; border-radius: 50px; font-size: .78rem; font-weight: 600; border: 1px solid var(--border); background: #fff; color: var(--body); transition: all .2s; }
-    .loc-pill:hover { border-color: var(--teal); color: var(--teal); }
+    /* ── SERVICE AREA ──────────────────────────────── */
+    .svc-area { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 52px 0; }
+    .svc-area-wrap { display: grid; grid-template-columns: 260px 1fr; gap: 3.5rem; align-items: flex-start; }
+    .svc-area-eyebrow { font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); margin-bottom: .5rem; }
+    .svc-area-left h3 { font-size: 1.1rem; font-weight: 800; color: var(--ink); line-height: 1.35; margin-bottom: .4rem; }
+    .svc-area-left > p { font-size: .84rem; color: var(--body); line-height: 1.65; }
+    .svc-area-groups { display: flex; align-items: stretch; gap: 0; }
+    .svc-area-group { flex: 1; padding: 0 2rem; }
+    .svc-area-group:first-child { padding-left: 0; }
+    .svc-area-group-label { font-size: .62rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .6rem; }
+    .svc-area-pills { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .svc-area-pill { display: inline-block; padding: .3rem .85rem; border-radius: 50px; font-size: .74rem; font-weight: 600; border: 1px solid var(--border); background: #fff; color: var(--body); transition: all .2s; white-space: nowrap; text-decoration: none; }
+    a.svc-area-pill:hover { border-color: var(--teal); color: var(--teal); background: var(--teal-lt); }
+    .svc-area-pill.state-pill { border-color: rgba(33,81,151,.25); color: var(--navy); background: rgba(33,81,151,.06); }
+    a.svc-area-pill.state-pill:hover { background: rgba(33,81,151,.12); border-color: var(--navy); }
+    .svc-area-pill.nationwide-pill { border-color: rgba(65,207,208,.35); color: var(--teal); background: var(--teal-lt); }
+    .svc-area-divider { width: 1px; background: var(--border); flex-shrink: 0; }
+    .svc-area-footer { margin-top: 1.75rem; display: flex; justify-content: flex-end; align-items: center; gap: 1.5rem; border-top: 1px solid var(--border); padding-top: 1.25rem; }
+    .svc-area-link { display: inline-flex; align-items: center; gap: .35rem; font-size: .84rem; font-weight: 700; color: var(--navy); transition: all .2s; }
+    .svc-area-link:hover { gap: .55rem; color: var(--teal); }
 
     /* ── TESTIMONIAL ────────────────────────────────── */
     .testimonial-section { background: linear-gradient(135deg, var(--navy) 0%, #122f6b 100%); padding: 88px 0; }
@@ -304,7 +317,8 @@
       .industries-grid { grid-template-columns: repeat(3, 1fr); }
       .related-grid { grid-template-columns: repeat(2, 1fr); }
       .faq-two-col { grid-template-columns: 1fr; gap: 0; }
-      .location-inner { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+      .svc-area-wrap { grid-template-columns: 1fr; gap: 2rem; }
+      .svc-area-footer { justify-content: flex-start; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
       .stats-inner { grid-template-columns: repeat(2, 1fr); }
     }
@@ -336,10 +350,10 @@
       .faq-two-col { grid-template-columns: 1fr; gap: 0; }
       .testimonial-section { padding: 64px 0; }
       .t-quote { font-size: 1rem; }
-      .location-strip { padding: 36px 0; }
-      .location-inner { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
-      .location-pills { gap: .4rem; }
-      .loc-pill { font-size: .72rem; padding: .3rem .8rem; }
+      .svc-area { padding: 36px 0; }
+      .svc-area-groups { flex-direction: column; gap: 1.5rem; }
+      .svc-area-divider { display: none; }
+      .svc-area-group { padding: 0; }
       .cta-section { padding: 64px 0; }
       .cta-btns { flex-direction: column; align-items: center; }
       .cta-btns .btn { width: 100%; max-width: 320px; justify-content: center; }
@@ -892,25 +906,43 @@
 </section>
 
 <!-- ══════════════════════════════════════
-     LOCATION STRIP
+     SERVICE COVERAGE AREA
 ══════════════════════════════════════ -->
-<section class="location-strip">
+<section class="svc-area" aria-label="Service Coverage Area">
   <div class="container">
-    <div class="location-inner">
-      <div class="location-text">
-        <h3>Serving Small Businesses Across South Carolina &amp; Beyond</h3>
-        <p>Based in South Carolina. 100% remote — we serve clients statewide and nationwide. Wherever your business is, your books can be clean.</p>
+    <div class="svc-area-wrap">
+
+      <div class="svc-area-left">
+        <div class="svc-area-eyebrow">📍 Service Coverage</div>
+        <h3>Based in Greenville, SC —<br/>Serving Clients Nationwide</h3>
+        <p>100% remote bookkeeping for small businesses across South Carolina and throughout the United States.</p>
       </div>
-      <div class="location-pills">
-        <a href="state-south-carolina.html" class="loc-pill">South Carolina</a>
-        <a href="city-greenville-sc.html" class="loc-pill">Greenville, SC</a>
-        <a href="county-greenville-sc.html" class="loc-pill">Greenville County</a>
-        <span class="loc-pill">Columbia, SC</span>
-        <span class="loc-pill">Charleston, SC</span>
-        <span class="loc-pill">Myrtle Beach, SC</span>
-        <span class="loc-pill">Spartanburg, SC</span>
-        <span class="loc-pill">+ Nationwide</span>
+
+      <div class="svc-area-groups">
+        <div class="svc-area-group">
+          <div class="svc-area-group-label">States We Serve</div>
+          <div class="svc-area-pills">
+            <a href="state-south-carolina.html" class="svc-area-pill state-pill">South Carolina</a>
+            <a href="areas-we-serve.html" class="svc-area-pill nationwide-pill">+ Nationwide</a>
+          </div>
+        </div>
+        <div class="svc-area-divider"></div>
+        <div class="svc-area-group">
+          <div class="svc-area-group-label">Key Cities</div>
+          <div class="svc-area-pills">
+            <a href="city-greenville-sc.html" class="svc-area-pill">Greenville, SC</a>
+            <a href="county-greenville-sc.html" class="svc-area-pill">Greenville County</a>
+            <a href="areas-we-serve.html" class="svc-area-pill">Columbia, SC</a>
+            <a href="areas-we-serve.html" class="svc-area-pill">Charleston, SC</a>
+            <a href="areas-we-serve.html" class="svc-area-pill">Spartanburg, SC</a>
+            <a href="areas-we-serve.html" class="svc-area-pill">Myrtle Beach, SC</a>
+          </div>
+        </div>
       </div>
+
+    </div>
+    <div class="svc-area-footer">
+      <a href="areas-we-serve.html" class="svc-area-link">View All Service Areas →</a>
     </div>
   </div>
 </section>

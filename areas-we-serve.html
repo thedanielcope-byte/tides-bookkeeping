@@ -260,26 +260,73 @@
       padding: 3px 10px; border-radius: 50px;
     }
 
-    /* ── OTHER STATES ────────────────────────────────── */
-    .states-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2.5rem; }
-    .state-card {
+    /* ── STATE SEARCH ────────────────────────────────── */
+    .state-finder-wrap {
+      max-width: 600px; margin: 2.5rem auto 0; position: relative;
+    }
+    .state-search-box {
+      display: flex; align-items: center; gap: .75rem;
+      background: #fff; border: 2px solid var(--border);
+      border-radius: 14px; padding: .9rem 1.25rem;
+      box-shadow: var(--shadow-lg); transition: border-color .2s;
+    }
+    .state-search-box:focus-within { border-color: var(--teal); }
+    .state-search-icon { color: var(--muted); font-size: 1.1rem; flex-shrink: 0; }
+    .state-search-input {
+      flex: 1; border: none; outline: none; font-family: 'Inter', sans-serif;
+      font-size: .95rem; color: var(--ink); background: transparent;
+    }
+    .state-search-input::placeholder { color: var(--muted); }
+    .state-search-count {
+      font-size: .72rem; font-weight: 600; color: var(--muted);
+      background: var(--bg-alt); padding: 3px 9px; border-radius: 50px;
+      border: 1px solid var(--border); white-space: nowrap; flex-shrink: 0;
+    }
+    .state-dropdown {
+      position: absolute; top: calc(100% + 8px); left: 0; right: 0;
       background: #fff; border: 1px solid var(--border);
-      border-radius: 14px; padding: 1.25rem 1.5rem;
+      border-radius: 14px; box-shadow: var(--shadow-lg);
+      max-height: 360px; overflow-y: auto;
+      display: none; z-index: 50;
+      scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+    }
+    .state-dropdown.open { display: block; }
+    .state-dropdown-item {
       display: flex; align-items: center; gap: 1rem;
-      box-shadow: var(--shadow); transition: all .2s;
+      padding: .75rem 1.25rem; border-bottom: 1px solid var(--border);
+      transition: background .15s; cursor: default;
+      text-decoration: none; color: inherit;
     }
-    .state-card:hover { border-color: rgba(65,207,208,.3); box-shadow: var(--shadow-lg); }
-    .state-card-abbr {
-      width: 44px; height: 44px; border-radius: 10px;
-      background: var(--bg-alt); border: 1px solid var(--border);
+    .state-dropdown-item:last-child { border-bottom: none; }
+    .state-dropdown-item.live { cursor: pointer; }
+    .state-dropdown-item.live:hover { background: var(--teal-lt); }
+    .state-dropdown-item:not(.live):hover { background: var(--bg-alt); }
+    .sdi-abbr {
+      width: 38px; height: 38px; border-radius: 9px; flex-shrink: 0;
       display: flex; align-items: center; justify-content: center;
-      font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: var(--muted);
-      flex-shrink: 0;
+      font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: .03em;
+      background: var(--bg-alt); border: 1px solid var(--border); color: var(--muted);
     }
-    .state-card-body h5 { font-size: .88rem; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
-    .state-card-body p { font-size: .72rem; color: var(--muted); }
+    .state-dropdown-item.live .sdi-abbr {
+      background: var(--navy); border-color: var(--navy); color: #fff;
+    }
+    .sdi-body { flex: 1; min-width: 0; }
+    .sdi-name { font-size: .9rem; font-weight: 600; color: var(--ink); }
+    .state-dropdown-item.live .sdi-name { color: var(--navy); }
+    .sdi-meta { font-size: .72rem; color: var(--muted); margin-top: 1px; }
+    .state-dropdown-item.live .sdi-meta { color: var(--teal); font-weight: 600; }
+    .sdi-arrow {
+      font-size: .8rem; color: var(--teal); opacity: 0;
+      transition: opacity .15s, transform .15s;
+    }
+    .state-dropdown-item.live:hover .sdi-arrow { opacity: 1; transform: translateX(3px); }
+    .state-no-results {
+      padding: 2rem; text-align: center;
+      font-size: .88rem; color: var(--muted);
+      display: none;
+    }
     .all-states-note {
-      text-align: center; margin-top: 2.5rem;
+      text-align: center; margin-top: 2rem;
       background: var(--bg-alt); border: 1px solid var(--border);
       border-radius: 16px; padding: 2rem;
     }
@@ -583,36 +630,19 @@
       <p>Because we work 100% remotely, your location is never a barrier. We're actively building dedicated service pages for every state — but we're ready to work with you right now, wherever you are.</p>
     </div>
 
-    <div class="states-grid">
-      <!-- Southeast -->
-      <div class="state-card"><div class="state-card-abbr">FL</div><div class="state-card-body"><h5>Florida</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">GA</div><div class="state-card-body"><h5>Georgia</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">NC</div><div class="state-card-body"><h5>North Carolina</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">TN</div><div class="state-card-body"><h5>Tennessee</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">VA</div><div class="state-card-body"><h5>Virginia</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">AL</div><div class="state-card-body"><h5>Alabama</h5><p>Page coming soon</p></div></div>
-      <!-- South / Southwest -->
-      <div class="state-card"><div class="state-card-abbr">TX</div><div class="state-card-body"><h5>Texas</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">LA</div><div class="state-card-body"><h5>Louisiana</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">AZ</div><div class="state-card-body"><h5>Arizona</h5><p>Page coming soon</p></div></div>
-      <!-- Northeast -->
-      <div class="state-card"><div class="state-card-abbr">NY</div><div class="state-card-body"><h5>New York</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">NJ</div><div class="state-card-body"><h5>New Jersey</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">PA</div><div class="state-card-body"><h5>Pennsylvania</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">MA</div><div class="state-card-body"><h5>Massachusetts</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">CT</div><div class="state-card-body"><h5>Connecticut</h5><p>Page coming soon</p></div></div>
-      <!-- Midwest -->
-      <div class="state-card"><div class="state-card-abbr">IL</div><div class="state-card-body"><h5>Illinois</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">OH</div><div class="state-card-body"><h5>Ohio</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">MI</div><div class="state-card-body"><h5>Michigan</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">MN</div><div class="state-card-body"><h5>Minnesota</h5><p>Page coming soon</p></div></div>
-      <!-- West -->
-      <div class="state-card"><div class="state-card-abbr">CA</div><div class="state-card-body"><h5>California</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">CO</div><div class="state-card-body"><h5>Colorado</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">WA</div><div class="state-card-body"><h5>Washington</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">OR</div><div class="state-card-body"><h5>Oregon</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">NV</div><div class="state-card-body"><h5>Nevada</h5><p>Page coming soon</p></div></div>
-      <div class="state-card"><div class="state-card-abbr">UT</div><div class="state-card-body"><h5>Utah</h5><p>Page coming soon</p></div></div>
+    <!-- State Finder Search -->
+    <div class="state-finder-wrap">
+      <div class="state-search-box">
+        <span class="state-search-icon">🔍</span>
+        <input class="state-search-input" id="stateSearch" type="text"
+               placeholder="Search your state — e.g. Texas, FL, New York…"
+               autocomplete="off" />
+        <span class="state-search-count" id="stateCount">49 states</span>
+      </div>
+      <div class="state-dropdown" id="stateDropdown">
+        <div id="stateList"></div>
+        <div class="state-no-results" id="stateNoResults">No state found — try a different spelling.</div>
+      </div>
     </div>
 
     <div class="all-states-note">
@@ -791,6 +821,112 @@
     el.innerHTML = `<span class="tile-abbr">${s.a}</span>`;
     map.appendChild(el);
   });
+
+  /* ── STATE FINDER ────────────────────────────────────────────────── */
+  (function() {
+    // All 50 states, alphabetical
+    const ALL_STATES = [
+      {a:'AK',n:'Alaska'},
+      {a:'AL',n:'Alabama'},
+      {a:'AR',n:'Arkansas'},
+      {a:'AZ',n:'Arizona'},
+      {a:'CA',n:'California'},
+      {a:'CO',n:'Colorado'},
+      {a:'CT',n:'Connecticut'},
+      {a:'DE',n:'Delaware'},
+      {a:'FL',n:'Florida'},
+      {a:'GA',n:'Georgia'},
+      {a:'HI',n:'Hawaii'},
+      {a:'IA',n:'Iowa'},
+      {a:'ID',n:'Idaho'},
+      {a:'IL',n:'Illinois'},
+      {a:'IN',n:'Indiana'},
+      {a:'KS',n:'Kansas'},
+      {a:'KY',n:'Kentucky'},
+      {a:'LA',n:'Louisiana'},
+      {a:'MA',n:'Massachusetts'},
+      {a:'MD',n:'Maryland'},
+      {a:'ME',n:'Maine'},
+      {a:'MI',n:'Michigan'},
+      {a:'MN',n:'Minnesota'},
+      {a:'MO',n:'Missouri'},
+      {a:'MS',n:'Mississippi'},
+      {a:'MT',n:'Montana'},
+      {a:'NC',n:'North Carolina'},
+      {a:'ND',n:'North Dakota'},
+      {a:'NE',n:'Nebraska'},
+      {a:'NH',n:'New Hampshire'},
+      {a:'NJ',n:'New Jersey'},
+      {a:'NM',n:'New Mexico'},
+      {a:'NV',n:'Nevada'},
+      {a:'NY',n:'New York'},
+      {a:'OH',n:'Ohio'},
+      {a:'OK',n:'Oklahoma'},
+      {a:'OR',n:'Oregon'},
+      {a:'PA',n:'Pennsylvania'},
+      {a:'RI',n:'Rhode Island'},
+      {a:'SC',n:'South Carolina'},
+      {a:'SD',n:'South Dakota'},
+      {a:'TN',n:'Tennessee'},
+      {a:'TX',n:'Texas'},
+      {a:'UT',n:'Utah'},
+      {a:'VA',n:'Virginia'},
+      {a:'VT',n:'Vermont'},
+      {a:'WA',n:'Washington'},
+      {a:'WI',n:'Wisconsin'},
+      {a:'WV',n:'West Virginia'},
+      {a:'WY',n:'Wyoming'},
+    ];
+    // States that have a live page — add href when page is created
+    const LIVE_STATES = {
+      'SC': 'state-south-carolina.html',
+      // 'FL': 'state-florida.html',
+    };
+
+    const input    = document.getElementById('stateSearch');
+    const dropdown = document.getElementById('stateDropdown');
+    const list     = document.getElementById('stateList');
+    const noRes    = document.getElementById('stateNoResults');
+    const counter  = document.getElementById('stateCount');
+
+    function buildItem(s) {
+      const isLive = LIVE_STATES[s.a];
+      const el = document.createElement(isLive ? 'a' : 'div');
+      el.className = 'state-dropdown-item' + (isLive ? ' live' : '');
+      if (isLive) { el.href = isLive; }
+      el.innerHTML = `
+        <div class="sdi-abbr">${s.a}</div>
+        <div class="sdi-body">
+          <div class="sdi-name">${s.n}</div>
+          <div class="sdi-meta">${isLive ? 'View dedicated page →' : 'We serve you — page coming soon'}</div>
+        </div>
+        ${isLive ? '<span class="sdi-arrow">→</span>' : ''}
+      `;
+      return el;
+    }
+
+    function render(query) {
+      const q = query.trim().toLowerCase();
+      const filtered = ALL_STATES.filter(s =>
+        s.n.toLowerCase().includes(q) || s.a.toLowerCase().includes(q)
+      );
+      list.innerHTML = '';
+      noRes.style.display = filtered.length === 0 ? 'block' : 'none';
+      filtered.forEach(s => list.appendChild(buildItem(s)));
+      counter.textContent = filtered.length + (filtered.length === 1 ? ' state' : ' states');
+    }
+
+    input.addEventListener('focus', () => {
+      render(input.value);
+      dropdown.classList.add('open');
+    });
+    input.addEventListener('input', () => render(input.value));
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.state-finder-wrap')) dropdown.classList.remove('open');
+    });
+    // Initialize counter
+    counter.textContent = '50 states';
+  })();
 
   /* ── NAV HAMBURGER ────────────────────────────────────────────────── */
   (function() {

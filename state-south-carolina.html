@@ -214,6 +214,7 @@
       border-radius: 20px; padding: 2rem; box-shadow: var(--shadow); transition: all .25s;
     }
     .svc-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    a.svc-card { display: block; text-decoration: none; color: inherit; }
     .svc-card.featured {
       background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
       border-color: transparent; grid-column: span 2;
@@ -252,6 +253,7 @@
       background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
       border-color: transparent;
     }
+    a.county-card { display: block; text-decoration: none; color: inherit; }
     .county-name {
       font-weight: 700; font-size: 1rem; color: var(--ink); margin-bottom: .35rem;
     }
@@ -282,6 +284,7 @@
       padding: 1.5rem; text-align: center; box-shadow: var(--shadow); transition: all .2s;
     }
     .ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    a.ind-card { display: block; text-decoration: none; color: inherit; }
     .ind-icon { font-size: 1.8rem; margin-bottom: .75rem; }
     .ind-card h4 { font-size: .9rem; font-weight: 700; color: var(--ink); margin-bottom: .4rem; }
     .ind-card p { font-size: .78rem; color: var(--muted); line-height: 1.6; }
@@ -1030,7 +1033,7 @@
 
     <div class="services-grid">
       <!-- Featured -->
-      <div class="svc-card featured">
+      <a href="service-monthly-bookkeeping.html" class="svc-card featured">
         <div class="svc-icon">📊</div>
         <h3>Monthly Bookkeeping</h3>
         <p>Your most important foundation. We categorize every transaction, reconcile your accounts, and deliver clean P&L and balance sheet reports every single month — so you always know exactly where your business stands.</p>
@@ -1040,9 +1043,9 @@
           <span class="svc-tag">Balance Sheet</span>
           <span class="svc-tag">Bank Reconciliation</span>
         </div>
-      </div>
+      </a>
 
-      <div class="svc-card">
+      <a href="service-catchup-bookkeeping.html" class="svc-card">
         <div class="svc-icon">🔍</div>
         <h3>Catch-Up Bookkeeping</h3>
         <p>Months or years behind? We clean it all up — systematically organizing your past transactions so you can get current and stay compliant.</p>
@@ -1050,9 +1053,9 @@
           <span class="svc-tag light">Any Time Period</span>
           <span class="svc-tag light">Tax-Ready</span>
         </div>
-      </div>
+      </a>
 
-      <div class="svc-card">
+      <a href="service-software-setup.html" class="svc-card">
         <div class="svc-icon">⚙️</div>
         <h3>Bookkeeping Setup & Cleanup</h3>
         <p>Starting fresh or inheriting a mess? We connect all your accounts, configure your chart of accounts, and set everything up correctly from day one.</p>
@@ -1060,9 +1063,9 @@
           <span class="svc-tag light">QuickBooks Setup</span>
           <span class="svc-tag light">Chart of Accounts</span>
         </div>
-      </div>
+      </a>
 
-      <div class="svc-card">
+      <a href="service-bank-reconciliation.html" class="svc-card">
         <div class="svc-icon">🏦</div>
         <h3>Bank Reconciliation</h3>
         <p>Every account, every month. We match your books to your bank statements and flag any discrepancies before they become problems.</p>
@@ -1070,9 +1073,9 @@
           <span class="svc-tag light">All Accounts</span>
           <span class="svc-tag light">Monthly</span>
         </div>
-      </div>
+      </a>
 
-      <div class="svc-card">
+      <a href="service-financial-reporting.html" class="svc-card">
         <div class="svc-icon">📈</div>
         <h3>Financial Reporting</h3>
         <p>P&L, balance sheets, and cash flow statements delivered monthly in a format you can actually read and act on.</p>
@@ -1080,9 +1083,9 @@
           <span class="svc-tag light">P&L</span>
           <span class="svc-tag light">Cash Flow</span>
         </div>
-      </div>
+      </a>
 
-      <div class="svc-card">
+      <a href="service-accounts-payable-receivable.html" class="svc-card">
         <div class="svc-icon">💳</div>
         <h3>Accounts Payable & Receivable</h3>
         <p>We track what you owe and what's owed to you — keeping your cash flow picture clear and your vendor relationships clean.</p>
@@ -1090,9 +1093,9 @@
           <span class="svc-tag light">AP / AR</span>
           <span class="svc-tag light">Aging Reports</span>
         </div>
-      </div>
+      </a>
 
-      <div class="svc-card">
+      <a href="service-payroll.html" class="svc-card">
         <div class="svc-icon">👥</div>
         <h3>Payroll Bookkeeping Support</h3>
         <p>We ensure your payroll expenses hit your books correctly every pay period — working alongside your payroll processor to keep everything reconciled.</p>
@@ -1100,7 +1103,7 @@
           <span class="svc-tag light">Payroll Entries</span>
           <span class="svc-tag light">Tax Sync</span>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -1124,11 +1127,11 @@
           <a href="city-greenville-sc.html" class="city-pill teal">Greenville</a>
           <a href="city-spartanburg-sc.html" class="city-pill">Spartanburg</a>
           <a href="city-myrtle-beach-sc.html" class="city-pill">Myrtle Beach</a>
-          <a href="areas-we-serve.html" class="city-pill">Hilton Head</a>
+          <a href="city-hilton-head-sc.html" class="city-pill">Hilton Head</a>
           <a href="areas-we-serve.html" class="city-pill">Florence</a>
-          <a href="areas-we-serve.html" class="city-pill">Summerville</a>
+          <a href="city-summerville-sc.html" class="city-pill">Summerville</a>
           <a href="areas-we-serve.html" class="city-pill">Anderson</a>
-          <a href="areas-we-serve.html" class="city-pill">Rock Hill</a>
+          <a href="city-rock-hill-sc.html" class="city-pill">Rock Hill</a>
           <a href="areas-we-serve.html" class="city-pill">Aiken</a>
           <a href="areas-we-serve.html" class="city-pill">Beaufort</a>
           <a href="areas-we-serve.html" class="city-pill">Conway</a>
@@ -1142,7 +1145,7 @@
     </div>
 
     <div class="counties-grid">
-      <div class="county-card featured">
+      <a href="county-greenville-sc.html" class="county-card featured">
         <div class="county-badge">⭐ Anchor Market</div>
         <div class="county-name">Greenville County</div>
         <div class="county-cities">Our home county — serving the entire Upstate.</div>
@@ -1152,70 +1155,71 @@
           <a href="areas-we-serve.html" class="city-pill" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border-color:transparent;">Simpsonville</a>
           <a href="areas-we-serve.html" class="city-pill" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border-color:transparent;">Mauldin</a>
         </div>
-      </div>
+      </a>
 
-      <div class="county-card">
+      <a href="county-charleston-sc.html" class="county-card">
         <div class="county-name">Charleston County</div>
         <div class="county-cities">Charleston · Mount Pleasant · North Charleston · Summerville · Goose Creek</div>
         <div class="city-pills">
           <a href="city-charleston-sc.html" class="city-pill">Charleston</a>
           <a href="areas-we-serve.html" class="city-pill">Mt. Pleasant</a>
+          <a href="city-summerville-sc.html" class="city-pill">Summerville</a>
         </div>
-      </div>
+      </a>
 
-      <div class="county-card">
+      <a href="county-richland-sc.html" class="county-card">
         <div class="county-name">Richland County</div>
         <div class="county-cities">Columbia · Forest Acres · Blythewood · Irmo</div>
         <div class="city-pills">
           <a href="city-columbia-sc.html" class="city-pill">Columbia</a>
           <a href="areas-we-serve.html" class="city-pill">Irmo</a>
         </div>
-      </div>
+      </a>
 
-      <div class="county-card">
+      <a href="county-horry-sc.html" class="county-card">
         <div class="county-name">Horry County</div>
         <div class="county-cities">Myrtle Beach · Conway · North Myrtle Beach · Surfside Beach</div>
         <div class="city-pills">
           <a href="city-myrtle-beach-sc.html" class="city-pill">Myrtle Beach</a>
           <a href="areas-we-serve.html" class="city-pill">Conway</a>
         </div>
-      </div>
+      </a>
 
-      <div class="county-card">
+      <a href="county-spartanburg-sc.html" class="county-card">
         <div class="county-name">Spartanburg County</div>
         <div class="county-cities">Spartanburg · Duncan · Boiling Springs · Gaffney · Inman</div>
         <div class="city-pills">
           <a href="city-spartanburg-sc.html" class="city-pill">Spartanburg</a>
           <a href="areas-we-serve.html" class="city-pill">Duncan</a>
         </div>
-      </div>
+      </a>
 
-      <div class="county-card">
+      <a href="county-beaufort-sc.html" class="county-card">
         <div class="county-name">Beaufort County</div>
         <div class="county-cities">Beaufort · Hilton Head Island · Bluffton · Port Royal</div>
         <div class="city-pills">
-          <a href="areas-we-serve.html" class="city-pill">Hilton Head</a>
+          <a href="city-hilton-head-sc.html" class="city-pill">Hilton Head</a>
           <a href="areas-we-serve.html" class="city-pill">Bluffton</a>
         </div>
-      </div>
+      </a>
 
-      <div class="county-card">
+      <a href="county-lexington-sc.html" class="county-card">
         <div class="county-name">Lexington County</div>
         <div class="county-cities">Lexington · Cayce · West Columbia · Batesburg · Chapin</div>
         <div class="city-pills">
           <a href="areas-we-serve.html" class="city-pill">Lexington</a>
           <a href="areas-we-serve.html" class="city-pill">Cayce</a>
         </div>
-      </div>
+      </a>
 
-      <div class="county-card">
+      <a href="county-york-sc.html" class="county-card">
         <div class="county-name">York County</div>
         <div class="county-cities">Rock Hill · Fort Mill · Clover · York</div>
         <div class="city-pills">
-          <a href="areas-we-serve.html" class="city-pill">Rock Hill</a>
+          <a href="city-rock-hill-sc.html" class="city-pill">Rock Hill</a>
           <a href="areas-we-serve.html" class="city-pill">Fort Mill</a>
         </div>
-      </div>
+      </a>
 
       <div class="county-card">
         <div class="county-name">Anderson County</div>
@@ -1240,46 +1244,46 @@
       <p>From coastal hospitality to Upstate manufacturing, we understand the financial rhythms of South Carolina's most common industries.</p>
     </div>
     <div class="industries-grid">
-      <div class="ind-card">
+      <a href="industry-contractors-trades.html" class="ind-card">
         <div class="ind-icon">🏗️</div>
         <h4>Contractors & Construction</h4>
         <p>Job costing, subcontractor payments, material expenses</p>
-      </div>
-      <div class="ind-card">
+      </a>
+      <a href="industry-restaurants-bars.html" class="ind-card">
         <div class="ind-icon">🍽️</div>
         <h4>Restaurants & Food Service</h4>
         <p>COGS tracking, tip payroll, inventory & vendor management</p>
-      </div>
-      <div class="ind-card">
+      </a>
+      <a href="industry-real-estate.html" class="ind-card">
         <div class="ind-icon">🏠</div>
         <h4>Real Estate</h4>
         <p>Commission tracking, rental income, property expenses</p>
-      </div>
-      <div class="ind-card">
+      </a>
+      <a href="industry-professional-services.html" class="ind-card">
         <div class="ind-icon">💼</div>
         <h4>Professional Services</h4>
         <p>Consultants, attorneys, agencies — clean P&L every month</p>
-      </div>
-      <div class="ind-card">
+      </a>
+      <a href="industry-ecommerce-retail.html" class="ind-card">
         <div class="ind-icon">🛍️</div>
         <h4>Retail & eCommerce</h4>
         <p>Inventory, merchant fees, platform reconciliation</p>
-      </div>
-      <div class="ind-card">
+      </a>
+      <a href="industry-healthcare.html" class="ind-card">
         <div class="ind-icon">🏥</div>
         <h4>Healthcare & Wellness</h4>
         <p>Insurance billing, payroll, HIPAA-aware practices</p>
-      </div>
-      <div class="ind-card">
+      </a>
+      <a href="industry-logistics-transportation.html" class="ind-card">
         <div class="ind-icon">🚚</div>
         <h4>Transportation & Logistics</h4>
         <p>Fleet expenses, fuel costs, driver payroll</p>
-      </div>
-      <div class="ind-card">
+      </a>
+      <a href="industry-restaurants-bars.html" class="ind-card">
         <div class="ind-icon">🌴</div>
         <h4>Tourism & Hospitality</h4>
         <p>Seasonal revenue, short-term rentals, event bookings</p>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -1467,7 +1471,9 @@
           <li><a href="city-columbia-sc.html">Columbia</a></li>
           <li><a href="city-spartanburg-sc.html">Spartanburg</a></li>
           <li><a href="city-myrtle-beach-sc.html">Myrtle Beach</a></li>
-          <li><a href="areas-we-serve.html">All Areas →</a></li>
+          <li><a href="city-rock-hill-sc.html">Rock Hill</a></li>
+          <li><a href="city-summerville-sc.html">Summerville</a></li>
+          <li><a href="city-hilton-head-sc.html">Hilton Head Island</a></li>
         </ul>
       </div>
       <div class="footer-col">

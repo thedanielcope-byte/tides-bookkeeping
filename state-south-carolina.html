@@ -253,7 +253,7 @@
       background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
       border-color: transparent;
     }
-    a.county-card { display: block; text-decoration: none; color: inherit; }
+    .county-card { cursor: pointer; }
     .county-name {
       font-weight: 700; font-size: 1rem; color: var(--ink); margin-bottom: .35rem;
     }
@@ -788,30 +788,28 @@
       <div class="hero-aside">
         <div class="ha-header" style="padding:1.25rem 1.75rem 1rem;">
           <span class="label">South Carolina</span>
-          <!-- SC State Shape SVG — correct triangular wedge shape -->
-          <svg viewBox="0 0 300 205" xmlns="http://www.w3.org/2000/svg"
-               style="width:100%;max-height:150px;display:block;margin:.5rem 0 .75rem;overflow:visible;">
-            <!-- SC outline: wide NC border on top, Atlantic coast runs NE→SW to Hilton Head, GA/Savannah River returns NW -->
-            <path d="M 8,38
-                     L 55,28 L 110,18 L 168,12 L 220,10 L 268,12 L 284,18
-                     L 282,35 L 276,58 L 265,84 L 250,112
-                     L 232,136 L 210,156 L 185,172 L 160,184
-                     L 138,192 L 118,196
-                     L 96,184 L 70,164 L 46,136 L 26,104 L 10,70 L 6,50 Z"
+          <!-- SC State Shape SVG -->
+          <svg viewBox="0 0 300 210" xmlns="http://www.w3.org/2000/svg"
+               style="width:100%;height:auto;display:block;margin:.5rem 0 .75rem;">
+            <!-- SC outline: NC border arcs slightly north in center; Atlantic coast sweeps NE→SW to Hilton Head; Savannah River returns NW -->
+            <path d="M 15,30
+                     L 68,22 L 120,18 L 180,22 L 218,36 L 248,62 L 268,90
+                     L 252,102 L 236,116 L 220,132 L 204,148 L 188,160 L 170,170 L 152,180 L 136,188 L 128,192
+                     L 114,188 L 92,176 L 70,156 L 50,130 L 34,104 L 20,74 L 14,48 Z"
                   fill="rgba(65,207,208,0.18)" stroke="#41cfd0" stroke-width="2.5"
                   stroke-linejoin="round" stroke-linecap="round"/>
             <!-- Greenville — NW Upstate -->
-            <circle cx="52" cy="55" r="5.5" fill="#41cfd0"/>
-            <text x="62" y="59" font-size="10" font-weight="700" fill="#fff" font-family="Inter,sans-serif">Greenville ★</text>
+            <circle cx="62" cy="40" r="5.5" fill="#41cfd0"/>
+            <text x="72" y="44" font-size="10" font-weight="700" fill="#fff" font-family="Inter,sans-serif">Greenville ★</text>
             <!-- Columbia — center of state -->
-            <circle cx="152" cy="118" r="4" fill="rgba(255,255,255,0.75)"/>
-            <text x="160" y="122" font-size="9" fill="rgba(255,255,255,.65)" font-family="Inter,sans-serif">Columbia</text>
+            <circle cx="138" cy="90" r="4" fill="rgba(255,255,255,0.75)"/>
+            <text x="146" y="94" font-size="9" fill="rgba(255,255,255,.65)" font-family="Inter,sans-serif">Columbia</text>
             <!-- Charleston — SE coast -->
-            <circle cx="226" cy="150" r="4" fill="rgba(255,255,255,0.75)"/>
-            <text x="190" y="168" font-size="9" fill="rgba(255,255,255,.65)" font-family="Inter,sans-serif">Charleston</text>
+            <circle cx="192" cy="154" r="4" fill="rgba(255,255,255,0.75)"/>
+            <text x="156" y="168" font-size="9" fill="rgba(255,255,255,.65)" font-family="Inter,sans-serif">Charleston</text>
             <!-- Myrtle Beach — NE coast -->
-            <circle cx="272" cy="55" r="3.5" fill="rgba(255,255,255,0.6)"/>
-            <text x="243" y="48" font-size="8" fill="rgba(255,255,255,.5)" font-family="Inter,sans-serif">Myrtle Bch</text>
+            <circle cx="252" cy="102" r="3.5" fill="rgba(255,255,255,0.6)"/>
+            <text x="218" y="96" font-size="8" fill="rgba(255,255,255,.5)" font-family="Inter,sans-serif">Myrtle Bch</text>
           </svg>
           <div class="ha-title">Serving SC Statewide</div>
           <div class="ha-subtitle">All 46 counties · Every major city</div>
@@ -1145,81 +1143,81 @@
     </div>
 
     <div class="counties-grid">
-      <a href="county-greenville-sc.html" class="county-card featured">
+      <div class="county-card featured" onclick="location.href='county-greenville-sc.html'">
         <div class="county-badge">⭐ Anchor Market</div>
         <div class="county-name">Greenville County</div>
         <div class="county-cities">Our home county — serving the entire Upstate.</div>
         <div class="city-pills" style="margin-top:.75rem;">
-          <a href="city-greenville-sc.html" class="city-pill teal">Greenville</a>
-          <a href="areas-we-serve.html" class="city-pill" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border-color:transparent;">Greer</a>
-          <a href="areas-we-serve.html" class="city-pill" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border-color:transparent;">Simpsonville</a>
-          <a href="areas-we-serve.html" class="city-pill" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border-color:transparent;">Mauldin</a>
+          <a href="city-greenville-sc.html" class="city-pill teal" onclick="event.stopPropagation()">Greenville</a>
+          <a href="areas-we-serve.html" class="city-pill" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border-color:transparent;" onclick="event.stopPropagation()">Greer</a>
+          <a href="areas-we-serve.html" class="city-pill" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border-color:transparent;" onclick="event.stopPropagation()">Simpsonville</a>
+          <a href="areas-we-serve.html" class="city-pill" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border-color:transparent;" onclick="event.stopPropagation()">Mauldin</a>
         </div>
-      </a>
+      </div>
 
-      <a href="county-charleston-sc.html" class="county-card">
+      <div class="county-card" onclick="location.href='county-charleston-sc.html'">
         <div class="county-name">Charleston County</div>
         <div class="county-cities">Charleston · Mount Pleasant · North Charleston · Summerville · Goose Creek</div>
         <div class="city-pills">
-          <a href="city-charleston-sc.html" class="city-pill">Charleston</a>
-          <a href="areas-we-serve.html" class="city-pill">Mt. Pleasant</a>
-          <a href="city-summerville-sc.html" class="city-pill">Summerville</a>
+          <a href="city-charleston-sc.html" class="city-pill" onclick="event.stopPropagation()">Charleston</a>
+          <a href="areas-we-serve.html" class="city-pill" onclick="event.stopPropagation()">Mt. Pleasant</a>
+          <a href="city-summerville-sc.html" class="city-pill" onclick="event.stopPropagation()">Summerville</a>
         </div>
-      </a>
+      </div>
 
-      <a href="county-richland-sc.html" class="county-card">
+      <div class="county-card" onclick="location.href='county-richland-sc.html'">
         <div class="county-name">Richland County</div>
         <div class="county-cities">Columbia · Forest Acres · Blythewood · Irmo</div>
         <div class="city-pills">
-          <a href="city-columbia-sc.html" class="city-pill">Columbia</a>
-          <a href="areas-we-serve.html" class="city-pill">Irmo</a>
+          <a href="city-columbia-sc.html" class="city-pill" onclick="event.stopPropagation()">Columbia</a>
+          <a href="areas-we-serve.html" class="city-pill" onclick="event.stopPropagation()">Irmo</a>
         </div>
-      </a>
+      </div>
 
-      <a href="county-horry-sc.html" class="county-card">
+      <div class="county-card" onclick="location.href='county-horry-sc.html'">
         <div class="county-name">Horry County</div>
         <div class="county-cities">Myrtle Beach · Conway · North Myrtle Beach · Surfside Beach</div>
         <div class="city-pills">
-          <a href="city-myrtle-beach-sc.html" class="city-pill">Myrtle Beach</a>
-          <a href="areas-we-serve.html" class="city-pill">Conway</a>
+          <a href="city-myrtle-beach-sc.html" class="city-pill" onclick="event.stopPropagation()">Myrtle Beach</a>
+          <a href="areas-we-serve.html" class="city-pill" onclick="event.stopPropagation()">Conway</a>
         </div>
-      </a>
+      </div>
 
-      <a href="county-spartanburg-sc.html" class="county-card">
+      <div class="county-card" onclick="location.href='county-spartanburg-sc.html'">
         <div class="county-name">Spartanburg County</div>
         <div class="county-cities">Spartanburg · Duncan · Boiling Springs · Gaffney · Inman</div>
         <div class="city-pills">
-          <a href="city-spartanburg-sc.html" class="city-pill">Spartanburg</a>
-          <a href="areas-we-serve.html" class="city-pill">Duncan</a>
+          <a href="city-spartanburg-sc.html" class="city-pill" onclick="event.stopPropagation()">Spartanburg</a>
+          <a href="areas-we-serve.html" class="city-pill" onclick="event.stopPropagation()">Duncan</a>
         </div>
-      </a>
+      </div>
 
-      <a href="county-beaufort-sc.html" class="county-card">
+      <div class="county-card" onclick="location.href='county-beaufort-sc.html'">
         <div class="county-name">Beaufort County</div>
         <div class="county-cities">Beaufort · Hilton Head Island · Bluffton · Port Royal</div>
         <div class="city-pills">
-          <a href="city-hilton-head-sc.html" class="city-pill">Hilton Head</a>
-          <a href="areas-we-serve.html" class="city-pill">Bluffton</a>
+          <a href="city-hilton-head-sc.html" class="city-pill" onclick="event.stopPropagation()">Hilton Head</a>
+          <a href="areas-we-serve.html" class="city-pill" onclick="event.stopPropagation()">Bluffton</a>
         </div>
-      </a>
+      </div>
 
-      <a href="county-lexington-sc.html" class="county-card">
+      <div class="county-card" onclick="location.href='county-lexington-sc.html'">
         <div class="county-name">Lexington County</div>
         <div class="county-cities">Lexington · Cayce · West Columbia · Batesburg · Chapin</div>
         <div class="city-pills">
-          <a href="areas-we-serve.html" class="city-pill">Lexington</a>
-          <a href="areas-we-serve.html" class="city-pill">Cayce</a>
+          <a href="areas-we-serve.html" class="city-pill" onclick="event.stopPropagation()">Lexington</a>
+          <a href="areas-we-serve.html" class="city-pill" onclick="event.stopPropagation()">Cayce</a>
         </div>
-      </a>
+      </div>
 
-      <a href="county-york-sc.html" class="county-card">
+      <div class="county-card" onclick="location.href='county-york-sc.html'">
         <div class="county-name">York County</div>
         <div class="county-cities">Rock Hill · Fort Mill · Clover · York</div>
         <div class="city-pills">
-          <a href="city-rock-hill-sc.html" class="city-pill">Rock Hill</a>
-          <a href="areas-we-serve.html" class="city-pill">Fort Mill</a>
+          <a href="city-rock-hill-sc.html" class="city-pill" onclick="event.stopPropagation()">Rock Hill</a>
+          <a href="areas-we-serve.html" class="city-pill" onclick="event.stopPropagation()">Fort Mill</a>
         </div>
-      </a>
+      </div>
 
       <div class="county-card">
         <div class="county-name">Anderson County</div>

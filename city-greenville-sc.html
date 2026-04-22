@@ -451,6 +451,25 @@
     .lm-name { font-size: .9rem; font-weight: 700; color: var(--ink); margin-bottom: .2rem; }
     .lm-desc { font-size: .78rem; color: var(--body); line-height: 1.6; }
 
+    /* ── SVC AREA ───────────────────────────────────── */
+    .svc-area { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 52px 0; }
+    .svc-area-wrap { display: grid; grid-template-columns: 260px 1fr; gap: 3.5rem; align-items: flex-start; }
+    .svc-area-eyebrow { font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); margin-bottom: .5rem; }
+    .svc-area-left h3 { font-size: 1.1rem; font-weight: 800; color: var(--ink); line-height: 1.35; margin-bottom: .4rem; }
+    .svc-area-left > p { font-size: .84rem; color: var(--body); line-height: 1.65; }
+    .svc-area-groups { display: flex; align-items: stretch; gap: 0; }
+    .svc-area-group { flex: 1; padding: 0 2rem; }
+    .svc-area-group:first-child { padding-left: 0; }
+    .svc-area-group-label { font-size: .62rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .6rem; }
+    .svc-area-pills { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .svc-area-pill { display: inline-block; padding: .3rem .85rem; border-radius: 50px; font-size: .74rem; font-weight: 600; border: 1px solid var(--border); background: #fff; color: var(--body); transition: all .2s; white-space: nowrap; text-decoration: none; }
+    a.svc-area-pill:hover { border-color: var(--teal); color: var(--teal); background: var(--teal-lt); }
+    .svc-area-pill.state-pill { border-color: rgba(33,81,151,.25); color: var(--navy); background: rgba(33,81,151,.06); }
+    .svc-area-pill.nationwide-pill { border-color: rgba(65,207,208,.35); color: var(--teal); background: var(--teal-lt); }
+    .svc-area-divider { width: 1px; background: var(--border); flex-shrink: 0; }
+    .svc-area-footer { margin-top: 1.75rem; display: flex; justify-content: flex-end; align-items: center; gap: 1.5rem; border-top: 1px solid var(--border); padding-top: 1.25rem; }
+    .svc-area-link { display: inline-flex; align-items: center; gap: .35rem; font-size: .84rem; font-weight: 700; color: var(--navy); transition: all .2s; }
+
     /* ── RESPONSIVE ─────────────────────────────────── */
     @media (max-width: 1024px) {
       .local-history { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -466,6 +485,7 @@
       .nearby-grid { grid-template-columns: repeat(2, 1fr); }
       .faq-cols { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
+      .svc-area-wrap { grid-template-columns: 1fr; gap: 2rem; }
     }
     @media (max-width: 768px) {
       .nav-links, .nav-cta { display: none; }
@@ -490,6 +510,9 @@
       .footer-bottom { flex-direction: column; text-align: center; }
       .footer-bottom-links { justify-content: center; }
       h2.display { font-size: 2.2rem; }
+      .svc-area-groups { flex-direction: column; gap: 1.5rem; }
+      .svc-area-divider { width: 100%; height: 1px; }
+      .svc-area-group { padding: 0; }
     }
     @media (max-width: 480px) {
       .industries-grid { grid-template-columns: 1fr; }
@@ -1463,6 +1486,43 @@
           <div class="faq-answer"><p>Not at all. We serve businesses across all of Greenville County, the full SC Upstate region, and small businesses nationwide. Location doesn't matter — our process is 100% remote and works just as well anywhere in the country.</p></div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- SVC AREA -->
+<section class="svc-area" aria-label="Service Coverage Area">
+  <div class="container">
+    <div class="svc-area-wrap">
+      <div class="svc-area-left">
+        <div class="svc-area-eyebrow">📍 Service Coverage</div>
+        <h3>Based in Greenville, SC —<br/>Serving Clients Nationwide</h3>
+        <p>100% remote bookkeeping for small businesses across South Carolina and throughout the United States.</p>
+      </div>
+      <div class="svc-area-groups">
+        <div class="svc-area-group">
+          <div class="svc-area-group-label">States We Serve</div>
+          <div class="svc-area-pills">
+            <a href="state-south-carolina.html" class="svc-area-pill state-pill">South Carolina</a>
+            <a href="areas-we-serve.html" class="svc-area-pill nationwide-pill">+ Nationwide</a>
+          </div>
+        </div>
+        <div class="svc-area-divider"></div>
+        <div class="svc-area-group">
+          <div class="svc-area-group-label">Key Cities</div>
+          <div class="svc-area-pills">
+            <a href="city-greenville-sc.html" class="svc-area-pill">Greenville, SC</a>
+            <a href="county-greenville-sc.html" class="svc-area-pill">Greenville County</a>
+            <a href="city-columbia-sc.html" class="svc-area-pill">Columbia, SC</a>
+            <a href="city-charleston-sc.html" class="svc-area-pill">Charleston, SC</a>
+            <a href="city-spartanburg-sc.html" class="svc-area-pill">Spartanburg, SC</a>
+            <a href="city-myrtle-beach-sc.html" class="svc-area-pill">Myrtle Beach, SC</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="svc-area-footer">
+      <a href="areas-we-serve.html" class="svc-area-link">View All Service Areas →</a>
     </div>
   </div>
 </section>

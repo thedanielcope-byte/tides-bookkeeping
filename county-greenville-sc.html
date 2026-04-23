@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bookkeeping Services in Greenville County, SC | Tides Bookkeeping</title>
-  <meta name="description" content="Tides Bookkeeping serves small businesses across Greenville County, SC — including Greenville, Greer, Simpsonville, Mauldin, and Taylors. Remote bookkeeping, payroll, and financial reporting." />
+  <title>Greenville County Bookkeeping | Tides Bookkeeping</title>
+  <meta name="description" content="Bookkeeping for small businesses across Greenville County, SC — Greenville, Greer, Simpsonville, Mauldin, Taylors. Remote monthly service." />
   <link rel="canonical" href="https://tidesbookkeeping.com/county-greenville-sc" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Bookkeeping Services in Greenville County, SC | Tides Bookkeeping" />
-  <meta property="og:description" content="Remote bookkeeping for small businesses across Greenville County — Greenville, Greer, Simpsonville, Mauldin, Taylors." />
+  <meta property="og:title" content="Greenville County Bookkeeping | Tides Bookkeeping" />
+  <meta property="og:description" content="Bookkeeping for small businesses across Greenville County, SC — Greenville, Greer, Simpsonville, Mauldin, Taylors. Remote monthly service." />
   <meta property="og:url" content="https://tidesbookkeeping.com/county-greenville-sc" />
   <meta property="og:image" content="https://tidesbookkeeping.com/logo.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -447,7 +447,59 @@
       .container { padding: 0 1rem; }
       .section { padding: 3rem 0; }
     }
-  </style>
+  
+/* mobile-menu-fix-start */
+@media (max-width: 768px) {
+  /* Kill stacking context on nav-wrap when menu is open */
+  body.menu-open .nav-wrap {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  /* Bulletproof full-screen mobile menu overlay */
+  .nav-links.open {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    background: #ffffff !important;
+    z-index: 9999 !important;
+    list-style: none !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    margin: 0 !important;
+    padding: 2rem !important;
+    overflow-y: auto !important;
+  }
+  .nav-links.open a {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    color: var(--ink) !important;
+    padding: .75rem 1.5rem !important;
+    display: block !important;
+  }
+  .nav-links.open li {
+    list-style: none !important;
+  }
+  /* Hamburger sits on top of overlay */
+  .hamburger {
+    z-index: 10000 !important;
+    position: relative;
+  }
+  /* Prevent horizontal scroll site-wide on mobile */
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+}
+/* mobile-menu-fix-end */
+</style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBFJKD962N"></script>
   <script>
@@ -708,7 +760,7 @@
       <li><a href="https://wp.tidesbookkeeping.com">Blog</a></li>
     </ul>
     <div class="nav-cta">
-      <a href="#" class="nav-signin">Sign In</a>
+      <a href="https://portal.tidesbookkeeping.com" class="nav-signin">Sign In</a>
       <a href="schedule.html" class="btn btn-primary">Book Appointment</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -1320,7 +1372,7 @@
           <li><a href="tel:+18645592686">(864) 559-2686</a></li>
           <li><a href="/contact">Contact Us →</a></li>
           <li><a href="schedule.html">Book Free Call</a></li>
-          <li><a href="#">Client Portal</a></li>
+          <li><a href="https://portal.tidesbookkeeping.com">Client Portal</a></li>
         </ul>
       </div>
     </div>
@@ -1366,6 +1418,39 @@
 <!-- GHL Chat Widget -->
 <div data-chat-widget data-widget-id="69614819668b0f723ec311b9" data-location-id="MbY1ICQ6HdzVOrgFncoI"></div>
 <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69614819668b0f723ec311b9"></script>
+
+
+<script>
+/* mobile-menu-js-fix-start */
+(function(){
+  const btn = document.getElementById('hamburger');
+  const links = document.querySelector('.nav-links');
+  if (!btn || !links) return;
+  const close = () => {
+    links.classList.remove('open');
+    btn.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    document.body.style.overflow = '';
+  };
+  // Remove any existing listeners by cloning
+  const newBtn = btn.cloneNode(true);
+  btn.parentNode.replaceChild(newBtn, btn);
+  newBtn.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    newBtn.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', close);
+  });
+  // Close menu on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+})();
+/* mobile-menu-js-fix-end */
+</script>
 
 </body>
 </html>

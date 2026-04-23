@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Financial Reporting Services for Small Business | Tides Bookkeeping</title><meta name="description" content="Tides Bookkeeping delivers monthly financial reports for small businesses — P&L, balance sheet, cash flow statements, and custom Puzzle.io dashboards. Clean, accurate, and actionable every month."/>
+  <title>Financial Reporting Services | Tides Bookkeeping</title><meta name="description" content="Monthly financial reports for small businesses — P&L, balance sheet, cash flow, and custom Puzzle.io dashboards. Clean, accurate, actionable." />
   <link rel="canonical" href="https://tidesbookkeeping.com/service-financial-reporting"/>
-  <meta property="og:type" content="website"/><meta property="og:title" content="Financial Reporting Services for Small Business | Tides Bookkeeping"/><meta property="og:description" content="Tides Bookkeeping delivers monthly financial reports for small businesses — P&L, balance sheet, cash flow statements, and custom Puzzle.io dashboards. Clean, accurate, and actionable every month."/><meta property="og:url" content="https://tidesbookkeeping.com/service-financial-reporting"/><meta property="og:image" content="https://tidesbookkeeping.com/logo.png"/>
+  <meta property="og:type" content="website"/><meta property="og:title" content="Financial Reporting Services | Tides Bookkeeping" /><meta property="og:description" content="Monthly financial reports for small businesses — P&L, balance sheet, cash flow, and custom Puzzle.io dashboards. Clean, accurate, actionable." /><meta property="og:url" content="https://tidesbookkeeping.com/service-financial-reporting"/><meta property="og:image" content="https://tidesbookkeeping.com/logo.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <link rel="icon" type="image/png" href="/logo.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -363,7 +363,59 @@
       .container { padding: 0 1rem; }
       .section { padding: 3rem 0; }
     }
-  </style>
+  
+/* mobile-menu-fix-start */
+@media (max-width: 768px) {
+  /* Kill stacking context on nav-wrap when menu is open */
+  body.menu-open .nav-wrap {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  /* Bulletproof full-screen mobile menu overlay */
+  .nav-links.open {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    background: #ffffff !important;
+    z-index: 9999 !important;
+    list-style: none !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    margin: 0 !important;
+    padding: 2rem !important;
+    overflow-y: auto !important;
+  }
+  .nav-links.open a {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    color: var(--ink) !important;
+    padding: .75rem 1.5rem !important;
+    display: block !important;
+  }
+  .nav-links.open li {
+    list-style: none !important;
+  }
+  /* Hamburger sits on top of overlay */
+  .hamburger {
+    z-index: 10000 !important;
+    position: relative;
+  }
+  /* Prevent horizontal scroll site-wide on mobile */
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+}
+/* mobile-menu-fix-end */
+</style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBFJKD962N"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JBFJKD962N');</script>
@@ -512,7 +564,7 @@
 <!-- auto-schema-end -->
 </head><body>
 <nav class="nav-wrap"><div class="nav-inner"><div class="nav-logo"><a href="index.html"><img src="logo.png" alt="Tides Bookkeeping" /></a></div><ul class="nav-links" id="navLinks"><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="services.html" class="active">Services</a></li><li><a href="who-we-serve.html">Who We Serve</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="pricing.html">Pricing</a></li>
-      <li><a href="https://wp.tidesbookkeeping.com">Blog</a></li></ul><div class="nav-cta"><a href="#" class="btn btn-outline">Sign In</a><a href="schedule.html" class="btn btn-primary">Book Appointment</a></div><button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button></div></nav>
+      <li><a href="https://wp.tidesbookkeeping.com">Blog</a></li></ul><div class="nav-cta"><a href="https://portal.tidesbookkeeping.com" class="btn btn-outline">Sign In</a><a href="schedule.html" class="btn btn-primary">Book Appointment</a></div><button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button></div></nav>
 <div class="breadcrumb"><div class="breadcrumb-inner"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><a href="services.html">Services</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Financial Reporting</span></div></div>
 <section class="page-hero"><div class="container"><div class="page-hero-inner">
 <div class="hero-content"><div class="eyebrow"><span style="width:6px;height:6px;border-radius:50%;background:var(--teal);display:inline-block;"></span> Financial Reporting & Statements</div><h1 class="display">Reports That Actually<br/>Tell You How Your<br/><span class="gradient-text">Business Is Doing.</span></h1><p>Most business owners check their bank balance and call it financial reporting. That's not a picture — it's a snapshot of one moment with no context. We deliver monthly financial statements that show you exactly how much you made, what you spent, what you own, what you owe, and where your cash actually went.</p><div class="hero-actions"><a href="schedule.html" class="btn btn-teal btn-lg">Schedule Free Consultation</a><a href="#whats-included" class="btn btn-outline btn-lg">See What's Included ↓</a></div><p class="hero-note">No setup fees &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; Dedicated bookkeeper</p><div class="trust-pills"><div class="trust-pill"><span class="dot"></span>Profit & Loss Statement</div><div class="trust-pill"><span class="dot"></span>Balance Sheet</div><div class="trust-pill"><span class="dot"></span>Cash Flow Statement</div><div class="trust-pill"><span class="dot"></span>Puzzle.io Dashboard</div><div class="trust-pill"><span class="dot"></span>Monthly Delivery</div></div></div>
@@ -600,4 +652,37 @@
           <li><a href="areas-we-serve.html">Areas We Serve</a></li>
         </ul></div><div class="footer-contact footer-col"><h4>Contact</h4><p>📧 support@tidesbookkeeping.com</p><p>📞 (864) 559-2686</p><p>📍 Greenville, South Carolina</p><div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:.6rem;"><a href="contact.html" class="btn btn-outline-white" style="font-size:.82rem;padding:.65rem 1.4rem;justify-content:center;">Contact Us →</a><a href="schedule.html" class="btn btn-teal" style="font-size:.82rem;padding:.65rem 1.4rem;">Book a Free Call</a></div></div></div><div class="footer-bottom"><p>© 2026 Tides Bookkeeping LLC. All rights reserved.</p><ul class="footer-bottom-links"><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div></div></footer>
 <script>function toggleFaq(btn){const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open');}(function(){const btn=document.getElementById('hamburger');const links=document.getElementById('navLinks');if(!btn||!links)return;btn.addEventListener('click',()=>{const open=links.classList.toggle('open');btn.classList.toggle('open',open);document.body.style.overflow=open?'hidden':'';});links.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{links.classList.remove('open');btn.classList.remove('open');document.body.style.overflow='';});});})();</script><div data-chat-widget data-widget-id="69614819668b0f723ec311b9" data-location-id="MbY1ICQ6HdzVOrgFncoI"></div><script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69614819668b0f723ec311b9"></script>
+
+<script>
+/* mobile-menu-js-fix-start */
+(function(){
+  const btn = document.getElementById('hamburger');
+  const links = document.querySelector('.nav-links');
+  if (!btn || !links) return;
+  const close = () => {
+    links.classList.remove('open');
+    btn.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    document.body.style.overflow = '';
+  };
+  // Remove any existing listeners by cloning
+  const newBtn = btn.cloneNode(true);
+  btn.parentNode.replaceChild(newBtn, btn);
+  newBtn.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    newBtn.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', close);
+  });
+  // Close menu on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+})();
+/* mobile-menu-js-fix-end */
+</script>
+
 </body></html>

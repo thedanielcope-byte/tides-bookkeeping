@@ -56,6 +56,58 @@
     @media(max-width:1024px){.section{padding:72px 0}.page-hero-inner{grid-template-columns:1fr;gap:3rem}.hero-aside{max-width:520px}.who-grid{grid-template-columns:repeat(2,1fr)}.pain-layout{grid-template-columns:1fr;gap:3rem}.pain-visual{max-width:560px}.services-list{grid-template-columns:repeat(2,1fr)}.svc-card.featured{grid-column:span 2}.faq-two-col{grid-template-columns:1fr;gap:0}.svc-area-wrap{grid-template-columns:1fr;gap:2rem}.svc-area-footer{justify-content:flex-start}.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}}
     @media(max-width:768px){.container{padding:0 1.25rem}.section{padding:56px 0}.nav-wrap{top:0}.nav-inner{padding:.875rem 1.25rem}.nav-links{display:none;position:fixed;inset:0;background:#fff;flex-direction:column;justify-content:center;align-items:center;gap:2.25rem;z-index:199;list-style:none}.nav-links.open{display:flex}.nav-links a{font-size:1.15rem;font-weight:600;color:var(--ink)}.nav-cta{display:none}.hamburger{display:flex}.page-hero{padding:52px 0 44px}.page-hero-inner{grid-template-columns:1fr}.hero-aside{display:none}.page-hero h1{font-size:clamp(2.4rem,11vw,3.5rem)}.hero-actions{flex-direction:column;align-items:stretch}.hero-actions .btn{justify-content:center}.who-grid{grid-template-columns:1fr}.pain-layout{grid-template-columns:1fr;gap:2rem}.pain-visual{padding:2rem 1.5rem}.services-list{grid-template-columns:1fr}.svc-card.featured{grid-column:span 1}.testimonial-section{padding:64px 0}.t-quote{font-size:1rem}.faq-two-col{grid-template-columns:1fr;gap:0}.svc-area{padding:36px 0}.svc-area-groups{flex-direction:column;gap:1.5rem}.svc-area-divider{display:none}.svc-area-group{padding:0}.cta-section{padding:64px 0}.cta-btns{flex-direction:column;align-items:center}.cta-btns .btn{width:100%;max-width:320px;justify-content:center}.footer{padding:48px 0 28px}.footer-grid{grid-template-columns:1fr;gap:2rem}.footer-bottom{flex-direction:column;text-align:center;gap:.75rem}.footer-bottom-links{justify-content:center;flex-wrap:wrap;gap:1rem}h2.display{font-size:clamp(2rem,9vw,3rem)}}
     @media(max-width:480px){.who-grid{grid-template-columns:1fr}.ha-stat-row{grid-template-columns:1fr 1fr}}
+
+/* mobile-menu-fix-start */
+@media (max-width: 768px) {
+  /* Kill stacking context on nav-wrap when menu is open */
+  body.menu-open .nav-wrap {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  /* Bulletproof full-screen mobile menu overlay */
+  .nav-links.open {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    background: #ffffff !important;
+    z-index: 9999 !important;
+    list-style: none !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    margin: 0 !important;
+    padding: 2rem !important;
+    overflow-y: auto !important;
+  }
+  .nav-links.open a {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    color: var(--ink) !important;
+    padding: .75rem 1.5rem !important;
+    display: block !important;
+  }
+  .nav-links.open li {
+    list-style: none !important;
+  }
+  /* Hamburger sits on top of overlay */
+  .hamburger {
+    z-index: 10000 !important;
+    position: relative;
+  }
+  /* Prevent horizontal scroll site-wide on mobile */
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+}
+/* mobile-menu-fix-end */
 </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBFJKD962N"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-JBFJKD962N');</script>
@@ -133,7 +185,7 @@
       <li><a href="https://wp.tidesbookkeeping.com">Blog</a></li>
     </ul>
     <div class="nav-cta">
-      <a href="#" class="btn btn-outline">Sign In</a>
+      <a href="https://portal.tidesbookkeeping.com" class="btn btn-outline">Sign In</a>
       <a href="schedule.html" class="btn btn-primary">Book Appointment</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
@@ -535,5 +587,38 @@ Every Month</div>
 </script>
 <div data-chat-widget data-widget-id="69614819668b0f723ec311b9" data-location-id="MbY1ICQ6HdzVOrgFncoI"></div>
 <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69614819668b0f723ec311b9"></script>
+
+<script>
+/* mobile-menu-js-fix-start */
+(function(){
+  const btn = document.getElementById('hamburger');
+  const links = document.querySelector('.nav-links');
+  if (!btn || !links) return;
+  const close = () => {
+    links.classList.remove('open');
+    btn.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    document.body.style.overflow = '';
+  };
+  // Remove any existing listeners by cloning
+  const newBtn = btn.cloneNode(true);
+  btn.parentNode.replaceChild(newBtn, btn);
+  newBtn.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    newBtn.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', close);
+  });
+  // Close menu on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+})();
+/* mobile-menu-js-fix-end */
+</script>
+
 </body>
 </html>

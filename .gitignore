@@ -10,8 +10,9 @@
 * 2.py
 * 2.txt
 
-# Internal / non-web files
+# Internal / non-web files (build tools, page templates with placeholders)
 _internal/
+_templates/
 
 # Employee Hub (separate project)
 hub/

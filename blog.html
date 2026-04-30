@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Tides Bookkeeping | Remote Bookkeepers</title>
-  <meta name="description" content="Meet Tides Bookkeeping — small-business bookkeepers based in Greenville, SC, serving clients nationwide. Clean books, clear numbers, confident decisions." />
-  <link rel="canonical" href="https://www.tidesbookkeeping.com/about" />
+  <title>Blog | Tides Bookkeeping — Bookkeeping Tips for Small Businesses</title>
+  <meta name="description" content="Practical bookkeeping, accounting, and small-business finance tips from Tides Bookkeeping. New posts every week." />
+  <link rel="canonical" href="https://www.tidesbookkeeping.com/blog" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="About Tides Bookkeeping | Remote Bookkeepers" />
-  <meta property="og:description" content="Meet Tides Bookkeeping — small-business bookkeepers based in Greenville, SC, serving clients nationwide. Clean books, clear numbers, confident decisions." />
-  <meta property="og:url" content="https://www.tidesbookkeeping.com/about" />
+  <meta property="og:title" content="Blog | Tides Bookkeeping" />
+  <meta property="og:description" content="Practical bookkeeping tips for small business owners." />
+  <meta property="og:url" content="https://www.tidesbookkeeping.com/blog" />
   <meta property="og:image" content="https://www.tidesbookkeeping.com/logo.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" href="/logo.png" />
@@ -65,7 +65,6 @@
     .container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
     .section { padding: 96px 0; }
     .section-alt { background: var(--bg-alt); }
-    .section-navy { background: var(--navy); }
 
     /* ── BUTTONS ────────────────────────────────────── */
     .btn {
@@ -141,7 +140,7 @@
     }
     .page-hero-inner {
       position: relative; z-index: 1;
-      max-width: 800px; margin: 0 auto; text-align: center;
+      max-width: 700px; margin: 0 auto; text-align: center;
     }
     .page-hero h1 {
       font-size: clamp(3rem, 6vw, 5rem);
@@ -149,152 +148,68 @@
     }
     .page-hero p {
       font-size: 1.1rem; line-height: 1.75; color: var(--body);
-      max-width: 600px; margin: 0 auto 2rem;
+      max-width: 560px; margin: 0 auto;
     }
-    .hero-stats {
-      display: flex; gap: 2.5rem; flex-wrap: wrap; margin-top: 2.5rem;
-      padding-top: 2rem; border-top: 1px solid var(--border);
-      justify-content: center;
-    }
-    .hero-stat-val {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2.4rem; color: var(--navy); line-height: 1;
-    }
-    .hero-stat-label { font-size: .78rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-top: 4px; }
 
-    /* ── SECTION HEADER ─────────────────────────────── */
-    .section-header { max-width: 620px; }
-    .section-header.centered { max-width: 720px; margin: 0 auto; text-align: center; }
-    .section-header p { margin-top: 1rem; font-size: 1rem; line-height: 1.75; }
-
-    /* ── STORY LAYOUT ───────────────────────────────── */
-    .story-layout {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 5rem; align-items: center;
+    /* ── CONTACT LAYOUT ─────────────────────────────── */
+    .contact-layout {
+      display: grid; grid-template-columns: 1fr 1.4fr;
+      gap: 4rem; align-items: start;
     }
-    .story-text p { font-size: 1rem; line-height: 1.8; color: var(--body); margin-bottom: 1.25rem; }
-    .story-text p:last-child { margin-bottom: 0; }
-    .story-visual {
-      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
-      border-radius: 24px; padding: 2.75rem;
-    }
-    .story-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
-    .story-stat {
-      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
-      border-radius: 14px; padding: 1.25rem;
-    }
-    .story-stat-val {
-      font-family: 'Bebas Neue', sans-serif; font-size: 2.4rem;
-      color: var(--teal); line-height: 1;
-    }
-    .story-stat-label { font-size: .72rem; color: rgba(255,255,255,.5); text-transform: uppercase; letter-spacing: .06em; margin-top: 4px; }
-    .story-badge {
-      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
-      border-radius: 14px; padding: 1.25rem; display: flex; align-items: center; gap: 1rem;
-    }
-    .story-badge-icon { font-size: 2rem; flex-shrink: 0; }
-    .story-badge-text strong { color: #fff; display: block; font-size: .95rem; margin-bottom: 2px; }
-    .story-badge-text span { color: rgba(255,255,255,.55); font-size: .8rem; }
-
-    /* ── TEAM ───────────────────────────────────────── */
-    .team-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr);
-      gap: 2rem; margin-top: 3.5rem; max-width: 760px; margin-left: auto; margin-right: auto;
-    }
-    .team-card {
-      background: #fff; border: 1px solid var(--border);
-      border-radius: 20px; overflow: hidden;
-      box-shadow: var(--shadow); transition: all .2s;
-    }
-    .team-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-    .team-card-header {
-      background: linear-gradient(135deg, var(--navy) 0%, #1a3d7c 100%);
-      padding: 2rem 2rem 0; min-height: 130px;
-      position: relative;
-    }
-    .team-card-header::after {
-      content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 1px;
-      background: rgba(65,207,208,.2);
-    }
-    .team-photo-wrap {
-      width: 96px; height: 96px; border-radius: 50%; overflow: hidden;
-      border: 3px solid rgba(65,207,208,.5);
-      background: rgba(255,255,255,.1);
-      margin-bottom: -48px;
-    }
-    .team-photo-wrap img {
-      width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;
-    }
-    .team-card-body { padding: 3.75rem 2rem 2rem; }
-    .team-role {
-      display: inline-block; font-size: .68rem; font-weight: 700; letter-spacing: .1em;
-      text-transform: uppercase; color: var(--teal);
-      background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
-      padding: 3px 12px; border-radius: 50px; margin-bottom: .65rem;
-    }
-    .team-name { font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: .2rem; }
-    .team-creds { font-size: .85rem; color: var(--muted); margin-bottom: 1.25rem; }
-    .team-divider { height: 1px; background: var(--border); margin-bottom: 1.25rem; }
-    .team-contact { display: flex; flex-direction: column; gap: .6rem; }
-    .team-contact-item {
-      display: flex; align-items: center; gap: .75rem;
-      font-size: .87rem; color: var(--body);
-    }
-    .team-contact-icon {
-      width: 34px; height: 34px; border-radius: 8px; flex-shrink: 0;
+    .contact-info { display: flex; flex-direction: column; gap: 1.25rem; }
+    .contact-card {
       background: var(--bg-alt); border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center; font-size: .85rem;
+      border-radius: 16px; padding: 1.5rem 1.75rem;
+      display: flex; align-items: flex-start; gap: 1.25rem;
+      transition: all .2s;
     }
-
-    /* ── VALUES ─────────────────────────────────────── */
-    .values-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem; margin-top: 3rem;
-    }
-    .value-card {
-      background: #fff; border: 1px solid var(--border);
-      border-radius: 20px; padding: 2rem 1.75rem;
-      box-shadow: var(--shadow); transition: all .2s;
-    }
-    .value-card:hover { border-color: rgba(65,207,208,.4); box-shadow: var(--shadow-lg); }
-    .value-card.full { grid-column: span 2; }
-    .value-icon {
-      width: 52px; height: 52px; border-radius: 14px;
+    .contact-card:hover { border-color: rgba(65,207,208,.4); box-shadow: var(--shadow); }
+    .contact-card-icon {
+      width: 48px; height: 48px; border-radius: 12px;
       background: var(--teal-lt); display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem; margin-bottom: 1.25rem;
+      font-size: 1.25rem; flex-shrink: 0;
     }
-    .value-card:nth-child(2) .value-icon { background: var(--blue-lt); }
-    .value-card:nth-child(3) .value-icon { background: rgba(33,81,151,.08); }
-    .value-card:nth-child(4) .value-icon { background: rgba(65,207,208,.1); }
-    .value-card.full .value-icon { background: linear-gradient(135deg, var(--teal-lt) 0%, var(--blue-lt) 100%); }
-    .value-card h3 { font-size: 1.05rem; margin-bottom: .6rem; }
-    .value-card p { font-size: .87rem; color: var(--body); line-height: 1.65; }
+    .contact-card:nth-child(2) .contact-card-icon { background: var(--blue-lt); }
+    .contact-card:nth-child(3) .contact-card-icon { background: rgba(33,81,151,.08); }
+    .contact-card:nth-child(4) .contact-card-icon { background: rgba(65,207,208,.1); }
+    .contact-card-body h4 { font-size: .95rem; font-weight: 700; color: var(--ink); margin-bottom: .25rem; }
+    .contact-card-body p { font-size: .88rem; color: var(--body); line-height: 1.6; margin: 0; }
+    .contact-card-body a { color: var(--navy); font-weight: 600; }
+    .contact-card-body a:hover { color: var(--teal); }
 
-    /* ── STATS STRIP ────────────────────────────────── */
-    .stats-strip {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dk) 100%);
-      padding: 60px 0;
+    /* ── CONTACT FORM CARD ──────────────────────────── */
+    .contact-form-card {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 1.25rem !important;
+      padding: 1.75rem !important;
     }
-    .stats-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 2rem; text-align: center;
+    .contact-form-header {
+      display: flex; align-items: center; gap: 1.25rem;
     }
-    .stat-val {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 3.5rem; color: var(--teal); line-height: 1;
-    }
-    .stat-label { font-size: .82rem; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .08em; margin-top: .4rem; }
+    .contact-form-embed { width: 100%; }
 
-    /* ── CTA SECTION ────────────────────────────────── */
-    .cta-section {
+    /* ── BOOKING CARD ───────────────────────────────── */
+    .booking-card {
       background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
-      padding: 88px 0; text-align: center;
+      border-radius: 24px; padding: 3rem; color: #fff;
+      box-shadow: var(--shadow-lg);
     }
-    .cta-section .eyebrow { background: rgba(65,207,208,.15); border-color: rgba(65,207,208,.3); color: var(--teal); }
-    .cta-section h2 { color: #fff; margin-bottom: 1.25rem; }
-    .cta-section p { color: rgba(255,255,255,.7); font-size: 1.05rem; max-width: 520px; margin: 0 auto 2.25rem; }
-    .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .cta-fine { font-size: .78rem; color: rgba(255,255,255,.35); margin-top: 1.25rem; }
+    .booking-card .eyebrow { background: rgba(65,207,208,.15); border-color: rgba(65,207,208,.3); color: var(--teal); }
+    .booking-card h2 { color: #fff; font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 1rem; }
+    .booking-card p { color: rgba(255,255,255,.7); font-size: .95rem; line-height: 1.7; margin-bottom: 2rem; }
+    .booking-perks { display: flex; flex-direction: column; gap: .75rem; margin-bottom: 2rem; }
+    .booking-perk {
+      display: flex; align-items: center; gap: .75rem;
+      font-size: .88rem; color: rgba(255,255,255,.8);
+    }
+    .booking-perk::before {
+      content: '✓'; width: 22px; height: 22px; border-radius: 50%;
+      background: rgba(65,207,208,.2); border: 1px solid rgba(65,207,208,.4);
+      color: var(--teal); font-size: .8rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .booking-fine { font-size: .78rem; color: rgba(255,255,255,.35); margin-top: 1rem; }
 
     /* ── FOOTER ─────────────────────────────────────── */
     .footer {
@@ -335,11 +250,7 @@
 
     /* ── RESPONSIVE ─────────────────────────────────── */
     @media (max-width: 900px) {
-      .story-layout { grid-template-columns: 1fr; gap: 2.5rem; }
-      .team-grid { grid-template-columns: 1fr; max-width: 420px; }
-      .values-grid { grid-template-columns: 1fr; }
-      .value-card.full { grid-column: span 1; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
     }
     @media (max-width: 768px) {
@@ -357,7 +268,7 @@
       .section { padding: 56px 0; }
       .nav-inner { padding: .875rem 1.25rem; }
       h2.display { font-size: clamp(2rem, 9vw, 3rem); }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .booking-card { padding: 2rem 1.5rem; }
       .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
       .footer-bottom { flex-direction: column; text-align: center; gap: .75rem; }
       .footer-bottom-links { justify-content: center; flex-wrap: wrap; gap: 1rem; }
@@ -466,8 +377,8 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "About Us",
-          "item": "https://tidesbookkeeping.com/about"
+          "name": "Contact",
+          "item": "https://tidesbookkeeping.com/contact"
         }
       ]
     }
@@ -486,7 +397,7 @@
       <li><a href="index.html#how-it-works">How It Works</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="who-we-serve.html">Who We Serve</a></li>
-      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="about.html">About Us</a></li>
       <li><a href="contact.html">Contact Us</a></li>
       <li><a href="https://tidesbookkeeping.com/tiered-pricing">Pricing</a></li>
       <li><a href="/blog">Blog</a></li>
@@ -506,7 +417,7 @@
   <div class="breadcrumb-inner">
     <a href="index.html">Home</a>
     <span class="breadcrumb-sep">›</span>
-    <span class="breadcrumb-current">About Us</span>
+    <span class="breadcrumb-current">Blog</span>
   </div>
 </div>
 
@@ -516,248 +427,44 @@
     <div class="page-hero-inner">
       <div class="eyebrow">
         <span style="width:6px;height:6px;border-radius:50%;background:var(--teal);"></span>
-        About Us
+        The Tides Blog
       </div>
       <h1 class="display">
-        We're in Your Corner<br/>
-        <span class="gradient-text">Every Single Month.</span>
+        Bookkeeping Tips for<br/>
+        <span class="gradient-text">Small Business Owners.</span>
       </h1>
-      <p>
-        Tides Bookkeeping was built by business owners who know what it feels like to run a company without a clear picture of the numbers. We fix that — with dedicated bookkeepers, clean books, and reports you can actually understand.
-      </p>
-      <div class="hero-stats">
-        <div>
-          <div class="hero-stat-val">12+</div>
-          <div class="hero-stat-label">Industries Served</div>
-        </div>
-        <div>
-          <div class="hero-stat-val">5.0</div>
-          <div class="hero-stat-label">Star Rating</div>
-        </div>
-        <div>
-          <div class="hero-stat-val">100%</div>
-          <div class="hero-stat-label">Remote Service</div>
-        </div>
-        <div>
-          <div class="hero-stat-val">Flat</div>
-          <div class="hero-stat-label">Monthly Rate</div>
-        </div>
-      </div>
+      <p>Practical advice on bookkeeping, taxes, payroll, and small-business finance — written by a team that does this every day.</p>
     </div>
   </div>
 </section>
 
-<!-- OUR STORY -->
-<section class="section">
-  <div class="container">
-    <div class="story-layout">
-
-      <div class="story-text">
-        <div class="eyebrow">Our Story</div>
-        <h2 class="display" style="margin-bottom:1.5rem;">
-          Built on the Belief That<br/>
-          <span class="gradient-text">Every Business Deserves</span><br/>
-          Clean Books.
-        </h2>
-        <p>
-          Tides Bookkeeping was founded in Greenville, South Carolina with one goal in mind: give small business owners the financial clarity they need to grow with confidence. Too many great businesses struggle not because they lack drive, but because they don't have an accurate, up-to-date picture of their finances.
-        </p>
-        <p>
-          We set out to change that. We built a remote bookkeeping service that combines the attentiveness of a local firm with the efficiency of a modern, tech-forward operation. One flat monthly rate. One dedicated bookkeeper. Clean books every single month.
-        </p>
-        <p>
-          Today, we serve clients across industries — from real estate investors and contractors to travel agencies, healthcare practices, and tech startups. No matter the business, our approach is the same: accurate books, proactive communication, and reports you can understand without an accounting degree.
-        </p>
-        <div style="margin-top:2rem;">
-          <a href="schedule.html" class="btn btn-primary">Schedule a Free Call</a>
-        </div>
-      </div>
-
-      <div class="story-visual">
-        <div class="story-stat-grid">
-          <div class="story-stat">
-            <div class="story-stat-val">200+</div>
-            <div class="story-stat-label">Target Clients</div>
-          </div>
-          <div class="story-stat">
-            <div class="story-stat-val">12+</div>
-            <div class="story-stat-label">Industries</div>
-          </div>
-          <div class="story-stat">
-            <div class="story-stat-val">5.0★</div>
-            <div class="story-stat-label">Avg. Rating</div>
-          </div>
-          <div class="story-stat">
-            <div class="story-stat-val">SC</div>
-            <div class="story-stat-label">Founded In</div>
-          </div>
-        </div>
-        <div class="story-badge">
-          <div class="story-badge-icon">🌊</div>
-          <div class="story-badge-text">
-            <strong>Tides Bookkeeping</strong>
-            <span>Greenville, SC · Serving Clients Nationwide</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- STATS STRIP -->
-<div class="stats-strip">
-  <div class="container">
-    <div class="stats-grid">
-      <div>
-        <div class="stat-val">$0</div>
-        <div class="stat-label">Hidden Fees</div>
-      </div>
-      <div>
-        <div class="stat-val">1</div>
-        <div class="stat-label">Dedicated Bookkeeper</div>
-      </div>
-      <div>
-        <div class="stat-val">2–3</div>
-        <div class="stat-label">Day Onboarding</div>
-      </div>
-      <div>
-        <div class="stat-val">100%</div>
-        <div class="stat-label">Remote & Nationwide</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- MISSION & VALUES -->
+<!-- BLOG GRID -->
 <section class="section section-alt">
   <div class="container">
-    <div class="section-header centered">
-      <div class="eyebrow">What We Stand For</div>
-      <h2 class="display">
-        The Values Behind<br/>
-        <span class="gradient-text">Every Decision We Make</span>
-      </h2>
-      <p>We exist to give business owners clarity and confidence in their finances — so they can focus on running their business, not chasing receipts. These core values shape how we work every day.</p>
+    <style>
+      .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
+      .blog-card { background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 2rem 1.75rem; transition: all .2s; display: flex; flex-direction: column; }
+      .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.4); }
+      .blog-card-meta { font-size: .78rem; color: var(--muted); margin-bottom: .65rem; display: flex; gap: .5rem; align-items: center; }
+      .blog-card-tag { background: var(--teal-lt); color: var(--teal); padding: 2px 10px; border-radius: 50px; font-weight: 700; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
+      .blog-card h3 { font-size: 1.15rem; line-height: 1.35; margin-bottom: .5rem; color: var(--ink); }
+      .blog-card p { font-size: .88rem; color: var(--body); line-height: 1.6; margin-bottom: 1.25rem; flex: 1; }
+      .blog-card a.read { font-size: .85rem; font-weight: 700; color: var(--navy); }
+      @media (max-width: 900px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } }
+    </style>
+
+    <div class="blog-grid">
+      <!-- blog-list-start -->
+      <!-- Auto-populated by _internal/related-links.py — list of all blog-*.html posts, newest first -->
+      <div class="blog-card">
+        <div class="blog-card-meta"><span class="blog-card-tag">Coming Soon</span></div>
+        <h3>First Post Coming Soon</h3>
+        <p>We're cooking up our first blog post. Check back next week — or sign up for our list to know when it drops.</p>
+        <a href="contact.html" class="read">Get notified →</a>
+      </div>
+      <!-- blog-list-end -->
     </div>
-
-    <div class="values-grid">
-
-      <div class="value-card">
-        <div class="value-icon">⚡</div>
-        <h3>Accuracy Over Speed</h3>
-        <p>Get it right the first time. Errors in bookkeeping cost clients time and money — precision is non-negotiable in everything we do.</p>
-      </div>
-
-      <div class="value-card">
-        <div class="value-icon">📣</div>
-        <h3>Proactive Communication</h3>
-        <p>No surprises. We flag issues early, update clients before they have to ask, and keep everyone in the loop — always.</p>
-      </div>
-
-      <div class="value-card">
-        <div class="value-icon">✨</div>
-        <h3>Simplicity</h3>
-        <p>Make finances easy to understand. If a client can't follow it, we haven't done our job well enough. Clarity is the goal.</p>
-      </div>
-
-      <div class="value-card">
-        <div class="value-icon">🤝</div>
-        <h3>Ownership</h3>
-        <p>We treat every client's books like our own business. Full responsibility — no blame-shifting, no excuses, just results.</p>
-      </div>
-
-      <div class="value-card full">
-        <div class="value-icon">⚙️</div>
-        <h3>Systematize Everything</h3>
-        <p>If we do it twice, we automate it. We build systems that scale so our team spends time on high-value work — not repetitive tasks — and our clients get consistent, reliable results month after month.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- MEET THE TEAM -->
-<section class="section">
-  <div class="container">
-    <div class="section-header centered">
-      <div class="eyebrow">Meet the Team</div>
-      <h2 class="display">
-        The People Behind<br/>
-        <span class="gradient-text">Your Books</span>
-      </h2>
-      <p>Tides Bookkeeping is led by a team that combines financial expertise with a genuine passion for helping small businesses succeed.</p>
-    </div>
-
-    <div class="team-grid">
-
-      <!-- Joe Cope -->
-      <div class="team-card">
-        <div class="team-card-header">
-          <div class="team-photo-wrap">
-            <img src="Headshots/Joe Cope.png" alt="Joe Cope" />
-          </div>
-        </div>
-        <div class="team-card-body">
-          <div class="team-role">Owner &amp; Bookkeeper</div>
-          <div class="team-name">Joe Cope</div>
-          <div class="team-creds">MBA &nbsp;·&nbsp; US Army Veteran</div>
-          <div class="team-divider"></div>
-          <div class="team-contact">
-            <div class="team-contact-item">
-              <div class="team-contact-icon">📞</div>
-              <a href="tel:8643567902" style="color:var(--body);">(864) 356-7902</a>
-            </div>
-            <div class="team-contact-item">
-              <div class="team-contact-icon">✉️</div>
-              <a href="mailto:joe@tidesbookkeeping.com" style="color:var(--body);">joe@tidesbookkeeping.com</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dan Cope -->
-      <div class="team-card">
-        <div class="team-card-header">
-          <div class="team-photo-wrap">
-            <img src="Headshots/Dan Cope Headshot.png" alt="Daniel Cope" />
-          </div>
-        </div>
-        <div class="team-card-body">
-          <div class="team-role">Lead Bookkeeper</div>
-          <div class="team-name">Daniel Cope</div>
-          <div class="team-creds">B.S. Finance &nbsp;·&nbsp; Indiana University</div>
-          <div class="team-divider"></div>
-          <div class="team-contact">
-            <div class="team-contact-item">
-              <div class="team-contact-icon">📞</div>
-              <a href="tel:8645592686" style="color:var(--body);">(864) 559-2686</a>
-            </div>
-            <div class="team-contact-item">
-              <div class="team-contact-icon">✉️</div>
-              <a href="mailto:dan@tidesbookkeeping.com" style="color:var(--body);">dan@tidesbookkeeping.com</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <div class="container">
-    <div class="eyebrow">Get Started Today</div>
-    <h2 class="display" style="font-size:clamp(2.6rem,5.5vw,4rem);margin-bottom:1.25rem;">
-      Ready to Get Your<br/><span class="gradient-text">Books in Order?</span>
-    </h2>
-    <p>Schedule a free 15-minute call. No pressure — just a real conversation about your business and what you need.</p>
-    <div class="cta-btns">
-      <a href="schedule.html" class="btn btn-teal btn-lg">Schedule Free Consultation</a>
-      <a href="https://tidesbookkeeping.com/tiered-pricing" class="btn btn-outline-white btn-lg">View Pricing</a>
-    </div>
-    <p class="cta-fine">No credit card required &nbsp;·&nbsp; No long-term contracts &nbsp;·&nbsp; Cancel anytime</p>
   </div>
 </section>
 

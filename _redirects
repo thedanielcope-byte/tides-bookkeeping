@@ -1,0 +1,6 @@
+# Cloudflare Pages redirects
+# Format: /from /to STATUS
+
+# Pricing — funnel lives at GHL /tiered-pricing, redirect any old links
+/pricing  /tiered-pricing  301
+/pricing/  /tiered-pricing  301

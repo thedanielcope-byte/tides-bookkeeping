@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 
 Disallow: /_internal/
+Disallow: /_templates/
 
-Sitemap: https://tidesbookkeeping.com/sitemap.xml
+Sitemap: https://www.tidesbookkeeping.com/sitemap.xml

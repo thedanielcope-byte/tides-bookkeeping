@@ -128,6 +128,54 @@
     }
     /* Tight gap between hero and the pricing tiers section that follows */
     .page-hero + .section { padding-top: 32px; }
+
+    /* ── BILLING TOGGLE ───────────────────────────── */
+    .billing-toggle {
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 2.5rem; gap: .5rem;
+    }
+    .billing-toggle-pill {
+      display: inline-flex; background: #fff;
+      border: 1px solid var(--border); border-radius: 50px;
+      padding: 4px; box-shadow: var(--shadow);
+      position: relative;
+    }
+    .billing-toggle-pill button {
+      position: relative; z-index: 1;
+      padding: .65rem 1.5rem; font-size: .87rem;
+      font-weight: 600; color: var(--body);
+      background: transparent; border: none; cursor: pointer;
+      border-radius: 50px; transition: color .25s ease;
+      font-family: 'Inter', sans-serif;
+      display: inline-flex; align-items: center; gap: .5rem;
+    }
+    .billing-toggle-pill button.active { color: #fff; }
+    .billing-toggle-pill .toggle-slider {
+      position: absolute; top: 4px; left: 4px;
+      height: calc(100% - 8px);
+      background: var(--navy); border-radius: 50px;
+      transition: all .3s cubic-bezier(.4,0,.2,1);
+      z-index: 0;
+    }
+    .save-badge {
+      display: inline-block;
+      background: var(--teal-lt); color: var(--teal);
+      font-size: .65rem; font-weight: 700;
+      letter-spacing: .08em; text-transform: uppercase;
+      padding: 2px 8px; border-radius: 50px;
+      border: 1px solid rgba(65,207,208,.3);
+      margin-left: .25rem;
+    }
+    .billing-toggle-pill button.active .save-badge {
+      background: rgba(255,255,255,.18); color: #fff;
+      border-color: rgba(255,255,255,.25);
+    }
+    .annual-note {
+      display: none; text-align: center;
+      margin-top: .75rem; font-size: .82rem;
+      color: var(--teal); font-weight: 600;
+    }
+    .annual-note.visible { display: block; }
     .page-hero::before {
       content: ''; position: absolute; inset: 0;
       background:
@@ -557,15 +605,30 @@
 <section class="section">
   <div class="container">
 
+    <!-- BILLING TOGGLE -->
+    <div class="billing-toggle">
+      <div class="billing-toggle-pill" id="billing-toggle">
+        <div class="toggle-slider" id="toggle-slider"></div>
+        <button type="button" class="active" data-billing="monthly">Monthly</button>
+        <button type="button" data-billing="annual">
+          Annual
+          <span class="save-badge">1 month free</span>
+        </button>
+      </div>
+    </div>
+    <div class="annual-note" id="annual-note">
+      ✨ You're saving with annual billing — 1 month free, every year.
+    </div>
+
     <!-- Starter — Landscape Banner -->
     <div class="starter-banner">
-      <a href="https://tidesbookkeeping.com/contact-info-for-pricing?plan=starter" class="btn btn-teal starter-btn">Get Started →</a>
+      <a href="https://tidesbookkeeping.com/contact-info-for-pricing?plan=starter&amp;billing=monthly" class="btn btn-teal starter-btn" data-plan-btn="starter">Get Started →</a>
       <div class="starter-left">
         <div class="starter-tag">Entry Plan</div>
         <div class="starter-name">Starter</div>
         <div class="starter-desc">Perfect for small businesses just getting started with clean books.</div>
-        <div class="starter-price-wrap">
-          <div class="starter-price">$299</div>
+        <div class="starter-price-wrap" data-monthly="299" data-annual="274" data-annual-total="3289">
+          <div class="starter-price">$<span class="price-num">299</span></div>
           <div class="starter-period">per month, billed monthly</div>
         </div>
       </div>
@@ -588,8 +651,8 @@
       <div class="tier-card">
         <div class="tier-name">Essential</div>
         <div class="tier-desc">Perfect for growing businesses keeping clean books from day one.</div>
-        <div class="tier-price-wrap">
-          <div class="tier-price">$395</div>
+        <div class="tier-price-wrap" data-monthly="395" data-annual="362" data-annual-total="4345">
+          <div class="tier-price">$<span class="price-num">395</span></div>
           <div class="tier-period">per month, billed monthly</div>
         </div>
         <div class="tier-divider"></div>
@@ -602,7 +665,7 @@
           <li class="tier-feature"><span class="tf-check">✓</span> Software subscription included</li>
           <li class="tier-feature"><span class="tf-check">✓</span> Client portal — reports &amp; communication</li>
         </ul>
-        <a href="https://tidesbookkeeping.com/contact-info-for-pricing?plan=essential" class="btn btn-outline btn-full">Get Started</a>
+        <a href="https://tidesbookkeeping.com/contact-info-for-pricing?plan=essential&amp;billing=monthly" class="btn btn-outline btn-full" data-plan-btn="essential">Get Started</a>
       </div>
 
       <!-- Growth — Most Popular -->
@@ -610,8 +673,8 @@
         <div class="popular-badge">⭐ Most Popular</div>
         <div class="tier-name">Growth</div>
         <div class="tier-desc">For scaling businesses that need deeper financial visibility.</div>
-        <div class="tier-price-wrap">
-          <div class="tier-price">$595</div>
+        <div class="tier-price-wrap" data-monthly="595" data-annual="545" data-annual-total="6545">
+          <div class="tier-price">$<span class="price-num">595</span></div>
           <div class="tier-period">per month, billed monthly</div>
         </div>
         <div class="tier-divider"></div>
@@ -624,15 +687,15 @@
           <li class="tier-feature"><span class="tf-check">✓</span> Software subscription included</li>
           <li class="tier-feature"><span class="tf-check">✓</span> Client portal — reports &amp; communication</li>
         </ul>
-        <a href="https://tidesbookkeeping.com/contact-info-for-pricing?plan=growth" class="btn btn-primary btn-full">Get Started</a>
+        <a href="https://tidesbookkeeping.com/contact-info-for-pricing?plan=growth&amp;billing=monthly" class="btn btn-primary btn-full" data-plan-btn="growth">Get Started</a>
       </div>
 
       <!-- Scale -->
       <div class="tier-card">
         <div class="tier-name">Scale</div>
         <div class="tier-desc">Full-service bookkeeping for high-volume real estate &amp; travel portfolios.</div>
-        <div class="tier-price-wrap">
-          <div class="tier-price">$895</div>
+        <div class="tier-price-wrap" data-monthly="895" data-annual="820" data-annual-total="9845">
+          <div class="tier-price">$<span class="price-num">895</span></div>
           <div class="tier-period">per month, billed monthly</div>
         </div>
         <div class="tier-divider"></div>
@@ -645,7 +708,7 @@
           <li class="tier-feature"><span class="tf-check">✓</span> Software subscription included</li>
           <li class="tier-feature"><span class="tf-check">✓</span> Client portal — reports &amp; communication</li>
         </ul>
-        <a href="https://tidesbookkeeping.com/contact-info-for-pricing?plan=scale" class="btn btn-outline btn-full">Get Started</a>
+        <a href="https://tidesbookkeeping.com/contact-info-for-pricing?plan=scale&amp;billing=monthly" class="btn btn-outline btn-full" data-plan-btn="scale">Get Started</a>
       </div>
 
     </div>
@@ -858,6 +921,75 @@
 <!-- GHL Chat Widget -->
 <div data-chat-widget data-widget-id="69614819668b0f723ec311b9" data-location-id="MbY1ICQ6HdzVOrgFncoI"></div>
 <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69614819668b0f723ec311b9"></script>
+
+<!-- Billing toggle (monthly / annual) -->
+<script>
+(function(){
+  var toggle = document.getElementById('billing-toggle');
+  if (!toggle) return;
+  var slider = document.getElementById('toggle-slider');
+  var note = document.getElementById('annual-note');
+  var buttons = toggle.querySelectorAll('button');
+  var priceWraps = document.querySelectorAll('[data-monthly][data-annual]');
+  var planBtns = document.querySelectorAll('[data-plan-btn]');
+
+  function positionSlider(activeBtn) {
+    slider.style.width = activeBtn.offsetWidth + 'px';
+    slider.style.left = activeBtn.offsetLeft + 'px';
+  }
+
+  function setBilling(mode) {
+    // Update toggle visuals
+    buttons.forEach(function(b) {
+      var on = b.dataset.billing === mode;
+      b.classList.toggle('active', on);
+      if (on) positionSlider(b);
+    });
+    // Show / hide annual note
+    note.classList.toggle('visible', mode === 'annual');
+    // Update each price card
+    priceWraps.forEach(function(wrap) {
+      var monthly = wrap.dataset.monthly;
+      var annual = wrap.dataset.annual;
+      var annualTotal = wrap.dataset.annualTotal;
+      var num = wrap.querySelector('.price-num');
+      var period = wrap.querySelector('.starter-period, .tier-period');
+      if (mode === 'annual') {
+        num.textContent = annual;
+        period.innerHTML = 'per month, billed annually <span style="color:var(--teal);font-weight:700;">— save $' + monthly + '/yr</span>';
+      } else {
+        num.textContent = monthly;
+        period.textContent = 'per month, billed monthly';
+      }
+    });
+    // Update Get Started button URLs to pass billing param
+    planBtns.forEach(function(btn) {
+      var plan = btn.dataset.planBtn;
+      btn.href = 'https://tidesbookkeeping.com/contact-info-for-pricing?plan=' + plan + '&billing=' + mode;
+    });
+  }
+
+  buttons.forEach(function(b) {
+    b.addEventListener('click', function() { setBilling(b.dataset.billing); });
+  });
+
+  // Position the slider on initial load (after fonts load to size correctly)
+  window.addEventListener('load', function() {
+    var active = toggle.querySelector('button.active');
+    if (active) positionSlider(active);
+  });
+  // Also try immediately in case load already fired
+  setTimeout(function() {
+    var active = toggle.querySelector('button.active');
+    if (active) positionSlider(active);
+  }, 100);
+  // Reposition slider on viewport resize (button widths change)
+  window.addEventListener('resize', function() {
+    var active = toggle.querySelector('button.active');
+    if (active) positionSlider(active);
+  });
+})();
+</script>
 
 
 <script>

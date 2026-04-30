@@ -1,20 +1,23 @@
 # Cloudflare Pages redirects
 # Format: /from /to STATUS
+#
+# Order matters: first match wins.
+# Funnel-path rules MUST come before the apex catch-all so that
+# tidesbookkeeping.com/tiered-pricing → go.subdomain (not www.).
 
 # ─────────────────────────────────────────────
-# Apex → www canonical redirect
-# Forces tidesbookkeeping.com/* → www.tidesbookkeeping.com/*
-# Trailing "!" on 301 = force (overrides any conflicting rules)
-# ─────────────────────────────────────────────
-https://tidesbookkeeping.com/* https://www.tidesbookkeeping.com/:splat 301!
-
-# ─────────────────────────────────────────────
-# Old funnel URLs → new go. subdomain (preserve any old links/backlinks)
+# Funnel paths → go. subdomain (works on apex AND www)
 # ─────────────────────────────────────────────
 /tiered-pricing                  https://go.tidesbookkeeping.com/tiered-pricing                  301
 /contact-info-for-pricing        https://go.tidesbookkeeping.com/contact-info-for-pricing        301
 /pricing-engagement-agreement    https://go.tidesbookkeeping.com/pricing-engagement-agreement    301
+/pricing                         https://go.tidesbookkeeping.com/tiered-pricing                  301
+/pricing/                        https://go.tidesbookkeeping.com/tiered-pricing                  301
 
-# Old /pricing path → new go. subdomain
-/pricing  https://go.tidesbookkeeping.com/tiered-pricing  301
-/pricing/  https://go.tidesbookkeeping.com/tiered-pricing  301
+# ─────────────────────────────────────────────
+# Apex → www canonical redirect (catch-all)
+# Note: if this doesn't fire reliably, set up a Cloudflare Dashboard
+# Redirect Rule instead (Domain → Rules → Redirect Rules) — that
+# operates at the edge before reaching Pages.
+# ─────────────────────────────────────────────
+https://tidesbookkeeping.com/*  https://www.tidesbookkeeping.com/:splat  301!

@@ -472,47 +472,41 @@
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "AccountingService",
-        "name": "Tides Bookkeeping",
-        "description": "Remote bookkeeping and financial services for small businesses nationwide.",
-        "url": "https://www.tidesbookkeeping.com",
-        "telephone": "+18645592686",
-        "email": "support@tidesbookkeeping.com",
-        "image": "https://www.tidesbookkeeping.com/logo.png",
-        "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Greenville",
-          "addressRegion": "SC",
-          "addressCountry": "US"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.tidesbookkeeping.com"
         },
-        "areaServed": { "@type": "Country", "name": "United States" },
-        "sameAs": [
-          "https://www.linkedin.com/company/tides-bookkeeping",
-          "https://www.facebook.com/thetidesbookkeeping",
-          "https://www.instagram.com/tidesbookkeeping/"
-        ]
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Areas We Serve",
+          "item": "https://www.tidesbookkeeping.com/areas-we-serve"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Remote Bookkeeping \u2014 Nationwide Service Areas",
+      "provider": {
+        "@type": "AccountingService",
+        "name": "Tides Bookkeeping"
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.tidesbookkeeping.com" },
-          { "@type": "ListItem", "position": 2, "name": "Areas We Serve", "item": "https://www.tidesbookkeeping.com/areas-we-serve" }
-        ]
+      "description": "Remote bookkeeping services available to small businesses in all 50 states. Based in Greenville, SC.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
       },
-      {
-        "@type": "Service",
-        "name": "Remote Bookkeeping — Nationwide Service Areas",
-        "provider": { "@type": "AccountingService", "name": "Tides Bookkeeping" },
-        "description": "Remote bookkeeping services available to small businesses in all 50 states. Based in Greenville, SC.",
-        "areaServed": { "@type": "Country", "name": "United States" },
-        "url": "https://www.tidesbookkeeping.com/areas-we-serve"
-      }
-    ]
-  }
+      "url": "https://www.tidesbookkeeping.com/areas-we-serve"
+    }
+  ]
+}
   </script>
 <!-- auto-schema-start -->
 <script type="application/ld+json">

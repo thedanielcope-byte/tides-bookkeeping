@@ -483,58 +483,33 @@
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "AccountingService",
-        "name": "Tides Bookkeeping",
-        "description": "Remote bookkeeping and financial services for small businesses in Richland County, SC and nationwide.",
-        "url": "https://www.tidesbookkeeping.com",
-        "telephone": "+18645592686",
-        "email": "support@tidesbookkeeping.com",
-        "image": "https://www.tidesbookkeeping.com/logo.png",
-        "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Greenville",
-          "addressRegion": "SC",
-          "addressCountry": "US"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.tidesbookkeeping.com"
         },
-        "areaServed": { "@type": "Country", "name": "United States" }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.tidesbookkeeping.com" },
-          { "@type": "ListItem", "position": 2, "name": "South Carolina", "item": "https://www.tidesbookkeeping.com/state-south-carolina" },
-          { "@type": "ListItem", "position": 3, "name": "Richland County, SC", "item": "https://www.tidesbookkeeping.com/county-richland-sc" }
-        ]
-      }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Do you serve all of Richland County?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes — we serve businesses throughout all of Richland County, including Columbia, Forest Acres, Blythewood, Irmo, Hopkins, and all unincorporated areas. We're 100% remote, so your exact location within the county doesn't affect service." }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you work with government contractors in Columbia?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We serve many government contractors and professional service firms in the Columbia area, helping them keep clean books, track project costs, and stay tax-ready throughout the year." }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does onboarding take?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Most Richland County businesses are fully onboarded within 5–7 business days. We connect your accounts, review your chart of accounts, and begin regular monthly service right away." }
-      }
-    ]
-  }
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "South Carolina",
+          "item": "https://www.tidesbookkeeping.com/state-south-carolina"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Richland County, SC",
+          "item": "https://www.tidesbookkeeping.com/county-richland-sc"
+        }
+      ]
+    }
+  ]
+}
   </script>
 <!-- auto-schema-start -->
 <script type="application/ld+json">

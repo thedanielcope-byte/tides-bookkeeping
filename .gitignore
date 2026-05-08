@@ -14,6 +14,9 @@
 _internal/
 _templates/
 
+# Source state SVGs — only used to extract path data, not deployed
+assets/states/*-source.svg
+
 # Employee Hub (separate project)
 hub/
 

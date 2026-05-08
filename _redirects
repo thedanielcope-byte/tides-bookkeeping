@@ -6,6 +6,12 @@
 # tidesbookkeeping.com/tiered-pricing → go.subdomain (not www.).
 
 # ─────────────────────────────────────────────
+# Legacy URLs from previous platforms → current pages
+# ─────────────────────────────────────────────
+/home   /        301
+/post   /blog    301
+
+# ─────────────────────────────────────────────
 # Funnel paths → go. subdomain (works on apex AND www)
 # ─────────────────────────────────────────────
 /tiered-pricing                  https://go.tidesbookkeeping.com/tiered-pricing                  301

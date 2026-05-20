@@ -65,6 +65,17 @@
   to = "/contact.html"
   status = 200
 
+# ── Lead magnet: Real Estate Agent Tax Deduction Checklist ──
+[[redirects]]
+  from = "/tax-checklist"
+  to = "/tax-checklist.html"
+  status = 200
+
+[[redirects]]
+  from = "/tax-checklist/thanks"
+  to = "/tax-checklist-thanks.html"
+  status = 200
+
 # ── Block _internal folder from being served ──
 [[redirects]]
   from = "/_internal/*"

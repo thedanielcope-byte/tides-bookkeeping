@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Checklist Is On The Way | Tides Bookkeeping</title>
+  <meta name="description" content="Your Real Estate Agent Tax Deduction Checklist is on its way. Check your inbox in the next minute or two." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://www.tidesbookkeeping.com/tax-checklist/thanks" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Your Checklist Is On The Way | Tides Bookkeeping" />
+  <meta property="og:description" content="Your Real Estate Agent Tax Deduction Checklist is on its way. Check your inbox in the next minute or two." />
+  <meta property="og:url" content="https://www.tidesbookkeeping.com/tax-checklist/thanks" />
+  <meta property="og:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal: #41cfd0; --teal-lt: #e6f9f9;
+      --blue: #66c1ee; --blue-lt: #e8f4fd;
+      --navy: #215197; --navy-dk: #163872;
+      --ink: #0f1c2e; --body: #4a5568; --muted: #94a3b8;
+      --border: #e2eaf3; --bg: #ffffff; --bg-alt: #f7fbff;
+      --shadow: 0 1px 3px rgba(15,28,46,.06), 0 4px 16px rgba(15,28,46,.08);
+      --shadow-lg: 0 8px 40px rgba(15,28,46,.12);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: .02em; line-height: .95; }
+    p { color: var(--body); }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal);
+      background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
+      padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--blue) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+      padding: .85rem 1.75rem; border-radius: 50px;
+      font-weight: 600; font-size: .9rem; cursor: pointer;
+      transition: all .2s ease; border: 2px solid transparent;
+    }
+    .btn-primary { background: var(--navy); color: #fff; }
+    .btn-primary:hover { background: var(--navy-dk); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(33,81,151,.3); }
+    .btn-teal { background: var(--teal); color: var(--ink); font-weight: 700; }
+    .btn-teal:hover { background: #38bfc0; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(65,207,208,.4); }
+    .btn-outline { border-color: var(--border); color: var(--ink); background: #fff; }
+    .btn-outline:hover { border-color: var(--navy); color: var(--navy); }
+    .btn-outline-white { border-color: rgba(255,255,255,.35); color: #fff; }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+    .btn-lg { padding: 1rem 2.2rem; font-size: 1rem; }
+
+    /* NAV */
+    .nav-wrap {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(255,255,255,.92); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem; max-width: 1180px; margin: 0 auto;
+    }
+    .nav-logo img { height: 44px; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-cta { display: flex; align-items: center; gap: .75rem; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { width: 24px; height: 2px; background: var(--ink); border-radius: 2px; transition: all .25s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* HERO */
+    .thanks-hero {
+      position: relative; overflow: hidden;
+      padding: 96px 0 80px;
+      background: linear-gradient(180deg, #fff 0%, var(--bg-alt) 100%);
+      text-align: center;
+    }
+    .thanks-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 55% 65% at 90% 10%, rgba(65,207,208,.14) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 55% at 5% 95%, rgba(102,193,238,.10) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .thanks-inner { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+    .check-circle {
+      width: 88px; height: 88px; border-radius: 50%; margin: 0 auto 1.75rem;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--blue) 100%);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 2.4rem; font-weight: 800;
+      box-shadow: 0 12px 40px rgba(65,207,208,.35);
+    }
+    .thanks-hero h1 {
+      font-family: 'Bebas Neue', sans-serif; letter-spacing: .02em;
+      font-size: clamp(2.6rem, 5.5vw, 4.4rem); line-height: 1;
+      color: var(--ink); margin-bottom: 1.25rem;
+    }
+    .thanks-hero p.lead {
+      font-size: 1.1rem; line-height: 1.7; color: var(--body); margin-bottom: 2rem;
+    }
+    .thanks-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* INSTRUCTIONS CARD */
+    .instructions {
+      max-width: 640px; margin: -32px auto 0; position: relative; z-index: 2;
+      background: #fff; border: 1px solid var(--border); border-radius: 20px;
+      padding: 2rem; box-shadow: var(--shadow);
+    }
+    .instructions h3 { font-size: 1rem; margin-bottom: 1rem; }
+    .instruction-step {
+      display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem;
+    }
+    .instruction-step:last-child { margin-bottom: 0; }
+    .instruction-num {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--teal-lt); color: var(--teal);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: .85rem; flex-shrink: 0;
+    }
+    .instruction-body { font-size: .92rem; color: var(--body); line-height: 1.6; }
+    .instruction-body strong { color: var(--ink); }
+
+    /* SOFT CTA */
+    .soft-cta {
+      padding: 88px 0;
+      background: var(--bg-alt);
+    }
+    .soft-cta-card {
+      max-width: 720px; margin: 0 auto;
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      border-radius: 24px; padding: 3rem; color: #fff;
+      box-shadow: var(--shadow-lg); text-align: center;
+    }
+    .soft-cta-card .eyebrow {
+      background: rgba(65,207,208,.15); border-color: rgba(65,207,208,.3); color: var(--teal);
+    }
+    .soft-cta-card h2 { color: #fff; font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin-bottom: 1rem; }
+    .soft-cta-card p { color: rgba(255,255,255,.75); font-size: 1rem; line-height: 1.7; margin-bottom: 2rem; }
+    .soft-cta-perks {
+      display: flex; flex-direction: column; gap: .65rem; margin: 0 auto 2rem;
+      max-width: 380px; text-align: left;
+    }
+    .soft-cta-perk {
+      display: flex; align-items: center; gap: .75rem;
+      font-size: .9rem; color: rgba(255,255,255,.85);
+    }
+    .soft-cta-perk::before {
+      content: '✓'; width: 22px; height: 22px; border-radius: 50%;
+      background: rgba(65,207,208,.2); border: 1px solid rgba(65,207,208,.4);
+      color: var(--teal); font-size: .8rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+
+    /* FOOTER */
+    .footer { background: var(--ink); color: #fff; padding: 64px 0 32px; }
+    .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-logo img { height: 40px; margin-bottom: 1.25rem; filter: brightness(0) invert(1); }
+    .footer-brand p { font-size: .84rem; color: rgba(255,255,255,.45); line-height: 1.7; max-width: 280px; margin-bottom: 1.5rem; }
+    .footer-social { display: flex; gap: .6rem; }
+    .social-btn { width: 34px; height: 34px; border-radius: 8px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; font-size: .8rem; color: rgba(255,255,255,.5); transition: all .2s; }
+    .social-btn:hover { background: rgba(65,207,208,.15); border-color: var(--teal); color: var(--teal); }
+    .footer-col h4 { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.35); margin-bottom: 1.25rem; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: .55rem; }
+    .footer-links a { font-size: .84rem; color: rgba(255,255,255,.5); transition: color .2s; }
+    .footer-links a:hover { color: var(--teal); }
+    .footer-contact p { font-size: .84rem; color: rgba(255,255,255,.5); margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.07); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.25); margin: 0; }
+    .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-bottom-links a { font-size: .78rem; color: rgba(255,255,255,.25); transition: color .2s; }
+    .footer-bottom-links a:hover { color: var(--teal); }
+
+    @media (max-width: 980px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex !important; flex-direction: column !important;
+        position: fixed !important; inset: 0 !important;
+        background: #fff !important; z-index: 9999 !important; list-style: none !important;
+        justify-content: center !important; align-items: center !important; gap: 1.5rem !important;
+        padding: 2rem !important;
+      }
+      .nav-links.open a { font-size: 1.25rem !important; font-weight: 600 !important; color: var(--ink) !important; padding: .75rem 1.5rem !important; }
+      .hamburger { z-index: 10000 !important; position: relative; }
+    }
+    @media (max-width: 640px) {
+      .container { padding: 0 1.25rem; }
+      .thanks-hero { padding: 64px 0 56px; }
+      .instructions { padding: 1.5rem; margin: -24px 1.25rem 0; }
+      .soft-cta { padding: 56px 0; }
+      .soft-cta-card { padding: 2rem 1.5rem; border-radius: 18px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: .75rem; }
+      .footer-bottom-links { justify-content: center; flex-wrap: wrap; gap: 1rem; }
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBFJKD962N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JBFJKD962N');
+    // Fire conversion event on page load
+    gtag('event', 'generate_lead', {
+      'event_category': 'lead_magnet',
+      'event_label': 'tax-deduction-checklist'
+    });
+  </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav-wrap">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="who-we-serve.html">Who We Serve</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="https://go.tidesbookkeeping.com/tiered-pricing">Pricing</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://portal.tidesbookkeeping.com" class="btn btn-outline">Sign In</a>
+      <a href="schedule.html" class="btn btn-primary">Book Appointment</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="thanks-hero">
+  <div class="container">
+    <div class="thanks-inner">
+      <div class="check-circle">✓</div>
+      <h1>Your checklist is <span class="gradient-text">on the way.</span></h1>
+      <p class="lead">
+        Check your inbox in the next minute or two. If you don't see it, check your promotions tab or spam folder.
+      </p>
+      <div class="thanks-actions">
+        <a href="https://tidesbookkeeping-my.sharepoint.com/:b:/p/dan/IQDJkiXC1wNPR71jT6YYlTZ5AXc8r-MQlXNBFBTyaDwjSt0?e=tjlQUP&download=1" class="btn btn-teal btn-lg" target="_blank" rel="noopener">
+          ↓ Download The Checklist Now
+        </a>
+        <a href="https://go.tidesbookkeeping.com/book-a-call" class="btn btn-outline btn-lg">
+          Book a 15-Min Call →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTRUCTIONS -->
+<div class="container">
+  <div class="instructions">
+    <h3>While you wait — three things worth knowing:</h3>
+    <div class="instruction-step">
+      <div class="instruction-num">1</div>
+      <div class="instruction-body"><strong>Print it.</strong> This one's meant to live on your desk, not in your downloads folder.</div>
+    </div>
+    <div class="instruction-step">
+      <div class="instruction-num">2</div>
+      <div class="instruction-body"><strong>Start a mileage app today.</strong> MileIQ or Stride — pick one. You can't recreate accurate mileage at the end of the year.</div>
+    </div>
+    <div class="instruction-step">
+      <div class="instruction-num">3</div>
+      <div class="instruction-body"><strong>Hit reply.</strong> When the email lands, reply with any questions — Dan reads every one.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SOFT CTA -->
+<section class="soft-cta">
+  <div class="container">
+    <div class="soft-cta-card">
+      <div class="eyebrow">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--teal);"></span>
+        While You're Here
+      </div>
+      <h2>Want a quick look at how Tides handles bookkeeping for agents?</h2>
+      <p>Clean monthly reports. No spreadsheet headaches. Books that are actually ready when your CPA needs them.</p>
+      <div class="soft-cta-perks">
+        <div class="soft-cta-perk">15 minutes, no pitch — just a conversation</div>
+        <div class="soft-cta-perk">Honest take on whether bookkeeping makes sense for you yet</div>
+        <div class="soft-cta-perk">Bookkeeping starts at $299/mo for agents</div>
+      </div>
+      <a href="https://go.tidesbookkeeping.com/book-a-call" class="btn btn-teal btn-lg">Book a 15-Minute Call →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><a href="index.html"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+        <p>Remote bookkeeping and financial services for small businesses nationwide. Clean books. Clear numbers. Confident decisions.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/tides-bookkeeping" target="_blank" rel="noopener" class="social-btn">in</a>
+          <a href="https://www.facebook.com/thetidesbookkeeping" target="_blank" rel="noopener" class="social-btn">f</a>
+          <a href="https://www.instagram.com/tidesbookkeeping/" target="_blank" rel="noopener" class="social-btn">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="service-monthly-bookkeeping.html">Monthly Bookkeeping</a></li>
+          <li><a href="service-catchup-bookkeeping.html">Catch-Up Bookkeeping</a></li>
+          <li><a href="service-payroll.html">Payroll Support</a></li>
+          <li><a href="service-financial-reporting.html">Financial Reporting</a></li>
+          <li><a href="service-bank-reconciliation.html">Bank Reconciliation</a></li>
+          <li><a href="services.html">View All Services →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Who We Serve</h4>
+        <ul class="footer-links">
+          <li><a href="industry-real-estate.html">Real Estate</a></li>
+          <li><a href="industry-contractors-trades.html">Contractors &amp; Trades</a></li>
+          <li><a href="industry-restaurants-bars.html">Restaurants &amp; Bars</a></li>
+          <li><a href="industry-healthcare.html">Healthcare Practices</a></li>
+          <li><a href="industry-professional-services.html">Professional Services</a></li>
+          <li><a href="industry-ecommerce-retail.html">E-Commerce &amp; Retail</a></li>
+          <li><a href="who-we-serve.html">All Industries →</a></li>
+          <li><a href="areas-we-serve.html">Areas We Serve</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact footer-col">
+        <h4>Contact</h4>
+        <p>📧 support@tidesbookkeeping.com</p>
+        <p>📞 (864) 559-2686</p>
+        <p>📍 Greenville, South Carolina</p>
+        <div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:.6rem;">
+          <a href="contact.html" class="btn btn-outline-white" style="font-size:.82rem;padding:.65rem 1.4rem;justify-content:center;">Contact Us →</a>
+          <a href="schedule.html" class="btn btn-teal" style="font-size:.82rem;padding:.65rem 1.4rem;">Book a Free Call</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tides Bookkeeping LLC. All rights reserved.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="sitemap.xml">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    const btn   = document.getElementById('hamburger');
+    const links = document.querySelector('.nav-links');
+    if (!btn || !links) return;
+    btn.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        btn.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

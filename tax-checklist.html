@@ -492,42 +492,27 @@
           </div>
         </div>
 
-        <!--
-          GHL FORM EMBED — REPLACE THIS BLOCK WITH YOUR REAL EMBED ONCE YOU BUILD THE GHL FORM
-          (Build order step 2). Form name: "Tax Checklist Opt-in".
-          Hidden fields to add inside the GHL form:
-            source = tax-checklist-landing
-            lead_magnet = tax-deduction-checklist
-          Tags applied on submit (pipe-separated):
-            realtor | tax-checklist | lead-magnet | state-unknown | source-landing-page
-          Redirect URL after submit: /tax-checklist/thanks
-
-          Example GHL iframe (replace FORM_ID and height):
-
+        <!-- GHL Form: Tax Checklist Opt-In -->
+        <div class="form-embed">
           <iframe
-            src="https://api.leadconnectorhq.com/widget/form/FORM_ID"
-            class="form-embed"
-            style="display:block;width:100%;height:380px;border:none;border-radius:12px;"
-            id="inline-FORM_ID"
-            data-layout='{"id":"INLINE"}'
+            src="https://api.leadconnectorhq.com/widget/form/dD7beuF9Y0ecr0M0hAPc"
+            style="width:100%;height:460px;border:none;border-radius:12px;"
+            id="inline-dD7beuF9Y0ecr0M0hAPc"
+            data-layout="{'id':'INLINE'}"
             data-trigger-type="alwaysShow"
-            data-form-id="FORM_ID"
-            title="Tax Checklist Opt-in"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Tax Checklist Opt-In"
+            data-height="434"
+            data-layout-iframe-id="inline-dD7beuF9Y0ecr0M0hAPc"
+            data-form-id="dD7beuF9Y0ecr0M0hAPc"
+            title="Tax Checklist Opt-In"
           ></iframe>
-          <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-        -->
-
-        <!-- TEMPORARY native form fallback — delete once GHL iframe is wired -->
-        <form class="lead-form" action="/tax-checklist/thanks" method="get" netlify-honeypot="bot-field" data-netlify="true" name="tax-checklist">
-          <input type="hidden" name="form-name" value="tax-checklist" />
-          <input type="hidden" name="source" value="tax-checklist-landing" />
-          <input type="hidden" name="lead_magnet" value="tax-deduction-checklist" />
-          <p style="display:none;"><label>Don't fill: <input name="bot-field" /></label></p>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="you@yourbrokerage.com" autocomplete="email" aria-label="Email address" />
-          <button type="submit">Send Me The Checklist →</button>
-          <p class="form-micro">Instant download. No spam, ever.</p>
-        </form>
+        </div>
+        <p class="form-micro">Instant download. No spam, ever.</p>
       </div>
     </div>
   </div>
@@ -752,6 +737,9 @@
     });
   })();
 </script>
+
+<!-- GHL form embed loader -->
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
 </body>
 </html>

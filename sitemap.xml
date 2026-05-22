@@ -62,6 +62,12 @@
   </url>
 
   <url>
+    <loc>https://www.tidesbookkeeping.com/city-carolina-forest-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://www.tidesbookkeeping.com/city-charleston-sc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -146,7 +152,19 @@
   </url>
 
   <url>
+    <loc>https://www.tidesbookkeeping.com/city-north-augusta-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://www.tidesbookkeeping.com/city-north-charleston-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-north-myrtle-beach-sc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -159,6 +177,12 @@
 
   <url>
     <loc>https://www.tidesbookkeeping.com/city-simpsonville-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-socastee-sc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -177,6 +201,18 @@
 
   <url>
     <loc>https://www.tidesbookkeeping.com/city-sumter-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-travelers-rest-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-williamston-sc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

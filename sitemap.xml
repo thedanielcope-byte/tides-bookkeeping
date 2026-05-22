@@ -74,7 +74,25 @@
   </url>
 
   <url>
+    <loc>https://www.tidesbookkeeping.com/city-conway-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-easley-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://www.tidesbookkeeping.com/city-florence-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-fort-mill-sc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -92,6 +110,12 @@
   </url>
 
   <url>
+    <loc>https://www.tidesbookkeeping.com/city-greer-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://www.tidesbookkeeping.com/city-hilton-head-sc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -99,6 +123,12 @@
 
   <url>
     <loc>https://www.tidesbookkeeping.com/city-lexington-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-mauldin-sc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -123,6 +153,12 @@
 
   <url>
     <loc>https://www.tidesbookkeeping.com/city-rock-hill-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-simpsonville-sc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

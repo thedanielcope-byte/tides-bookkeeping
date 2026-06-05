@@ -56,6 +56,12 @@
   </url>
 
   <url>
+    <loc>https://www.tidesbookkeeping.com/city-beaufort-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://www.tidesbookkeeping.com/city-bluffton-sc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -68,7 +74,19 @@
   </url>
 
   <url>
+    <loc>https://www.tidesbookkeeping.com/city-cayce-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://www.tidesbookkeeping.com/city-charleston-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-clemson-sc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -170,6 +188,12 @@
   </url>
 
   <url>
+    <loc>https://www.tidesbookkeeping.com/city-port-royal-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://www.tidesbookkeeping.com/city-rock-hill-sc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -207,6 +231,12 @@
 
   <url>
     <loc>https://www.tidesbookkeeping.com/city-travelers-rest-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-west-columbia-sc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

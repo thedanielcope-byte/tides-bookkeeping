@@ -26,7 +26,25 @@
   </url>
 
   <url>
+    <loc>https://www.tidesbookkeeping.com/blog-catch-up-bookkeeping-cost</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://www.tidesbookkeeping.com/blog-how-much-does-a-bookkeeper-cost</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/blog-how-to-read-pl-like-ceo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/blog-quickbooks-online-vs-xero</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -410,7 +428,49 @@
   </url>
 
   <url>
+    <loc>https://www.tidesbookkeeping.com/service-bank-reconciliation-charleston-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-bank-reconciliation-columbia-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-bank-reconciliation-greenville-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://www.tidesbookkeeping.com/service-bank-reconciliation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-charleston-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-columbia-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-greenville-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-spartanburg-sc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -446,6 +506,24 @@
   </url>
 
   <url>
+    <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-hilton-head-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-myrtle-beach-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-rock-hill-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-spartanburg-sc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -476,6 +554,12 @@
   </url>
 
   <url>
+    <loc>https://www.tidesbookkeeping.com/state-florida</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://www.tidesbookkeeping.com/state-georgia</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -489,6 +573,12 @@
 
   <url>
     <loc>https://www.tidesbookkeeping.com/state-south-carolina</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/state-tennessee</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

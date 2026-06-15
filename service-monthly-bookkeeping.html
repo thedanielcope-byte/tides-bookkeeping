@@ -1083,6 +1083,142 @@
   </div>
 </section>
 
+<!-- CATCH-UP PRICING -->
+<style>
+  /* Pricing grid styles scoped for the catch-up pricing section */
+  #catch-up-pricing .pricing-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem; align-items: start; margin-top: 1.5rem;
+  }
+  #catch-up-pricing .tier-card {
+    background: #fff; border: 1.5px solid var(--border);
+    border-radius: 24px; padding: 2rem;
+    box-shadow: var(--shadow); transition: all .2s;
+    display: flex; flex-direction: column; position: relative;
+  }
+  #catch-up-pricing .tier-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  #catch-up-pricing .tier-card.popular {
+    border-color: var(--navy);
+    box-shadow: 0 8px 40px rgba(33,81,151,.15);
+    transform: translateY(-6px);
+  }
+  #catch-up-pricing .tier-card.popular:hover { transform: translateY(-10px); }
+  #catch-up-pricing .popular-badge {
+    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--navy), #1d3d7e);
+    color: #fff; font-size: .68rem; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase;
+    padding: 5px 18px; border-radius: 50px; white-space: nowrap;
+  }
+  #catch-up-pricing .tier-name { font-size: 1.25rem; font-weight: 800; color: var(--ink); margin-bottom: .25rem; }
+  #catch-up-pricing .tier-desc { font-size: .83rem; color: var(--muted); line-height: 1.5; margin-bottom: 1.5rem; min-height: 52px; }
+  #catch-up-pricing .tier-price-wrap { margin-bottom: 1.5rem; }
+  #catch-up-pricing .tier-price { font-family: 'Bebas Neue', sans-serif; font-size: 3.6rem; color: var(--navy); line-height: 1; }
+  #catch-up-pricing .tier-period { font-size: .8rem; color: var(--muted); margin-top: .2rem; }
+  #catch-up-pricing .tier-divider { height: 1px; background: var(--border); margin-bottom: 1.5rem; }
+  #catch-up-pricing .tier-features { list-style: none; flex: 1; margin-bottom: 1.75rem; padding: 0; }
+  #catch-up-pricing .tier-feature {
+    display: flex; align-items: flex-start; gap: .65rem;
+    font-size: .84rem; color: var(--body); padding: .55rem 0;
+    border-bottom: 1px solid #f3f4f6; line-height: 1.45;
+  }
+  #catch-up-pricing .tier-feature:last-child { border-bottom: none; }
+  #catch-up-pricing .tf-check { color: var(--teal); font-size: .9rem; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  #catch-up-pricing .btn-full { width: 100%; justify-content: center; }
+  @media (max-width: 900px) {
+    #catch-up-pricing .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+    #catch-up-pricing .tier-card.popular { transform: none; }
+  }
+  @media (max-width: 640px) {
+    #catch-up-pricing .pricing-grid { grid-template-columns: 1fr; }
+  }
+</style>
+<section class="section section-alt" id="catch-up-pricing">
+  <div class="container">
+    <div style="max-width:720px;margin:0 auto 3rem;text-align:center;">
+      <div class="eyebrow" style="background:#fee2e2;border-color:#fecaca;color:#b91c1c;">🔥 50% Off · Catch-Up Special</div>
+      <h2 class="display">Behind on Your Books?<br/><span class="gradient-text">Get Caught Up — Half Off.</span></h2>
+      <p style="margin-top:1rem;font-size:1rem;line-height:1.75;">Most clients need a catch-up before monthly service begins. <strong>50% off our regular catch-up rate</strong> right now — flat per-month pricing tiered to your business size, quoted upfront, no hourly billing. We get you current first, then run monthly service from there. <a href="service-catchup-bookkeeping.html" style="color:var(--navy);font-weight:700;">More on catch-up &rarr;</a></p>
+    </div>
+
+    <div class="pricing-grid">
+
+      <!-- Catch-Up Essential -->
+      <div class="tier-card">
+        <div class="tier-name">Catch-Up Essential</div>
+        <div class="tier-desc">For Essential-tier businesses: up to $50,000 monthly expenses, up to 4 accounts.</div>
+        <div class="tier-price-wrap">
+          <div style="display:inline-block;background:#fee2e2;color:#b91c1c;font-size:.7rem;font-weight:800;letter-spacing:.08em;padding:3px 10px;border-radius:50px;margin-bottom:.5rem;text-transform:uppercase;">Save 50%</div>
+          <div style="font-size:1.05rem;color:var(--muted);text-decoration:line-through;font-weight:600;margin-bottom:.2rem;">Reg. $390</div>
+          <div class="tier-price">$195</div>
+          <div class="tier-period">per month behind</div>
+        </div>
+        <div class="tier-divider"></div>
+        <ul class="tier-features">
+          <li class="tier-feature"><span class="tf-check">✓</span> Flat per-month pricing</li>
+          <li class="tier-feature"><span class="tf-check">✓</span> Full bank &amp; credit-card reconciliation</li>
+          <li class="tier-feature"><span class="tf-check">✓</span> Every transaction categorized</li>
+          <li class="tier-feature"><span class="tf-check">✓</span> Prior-period P&amp;L &amp; balance sheet</li>
+          <li class="tier-feature"><span class="tf-check">✓</span> CPA-ready handoff package</li>
+          <li class="tier-feature"><span class="tf-check">✓</span> No hourly billing — quoted upfront</li>
+        </ul>
+        <a href="https://buy.stripe.com/dRmdRabZCdp837Lciu3wQ06" class="btn btn-outline btn-full">Start Catch-Up →</a>
+      </div>
+
+      <!-- Catch-Up Growth -->
+      <div class="tier-card popular">
+        <div class="popular-badge">⭐ Most Common</div>
+        <div class="tier-name">Catch-Up Growth</div>
+        <div class="tier-desc">For Growth-tier businesses: up to $75,000 monthly expenses, up to 6 accounts.</div>
+        <div class="tier-price-wrap">
+          <div style="display:inline-block;background:#fee2e2;color:#b91c1c;font-size:.7rem;font-weight:800;letter-spacing:.08em;padding:3px 10px;border-radius:50px;margin-bottom:.5rem;text-transform:uppercase;">Save 50%</div>
+          <div style="font-size:1.05rem;color:var(--muted);text-decoration:line-through;font-weight:600;margin-bottom:.2rem;">Reg. $650</div>
+          <div class="tier-price">$325</div>
+          <div class="tier-period">per month behind</div>
+        </div>
+        <div class="tier-divider"></div>
+        <ul class="tier-features">
+          <li class="tier-feature"><span class="tf-check">✓</span> Flat per-month pricing</li>
+          <li class="tier-feature"><span class="tf-check">✓</span> Full bank &amp; credit-card reconciliation</li>
+          <li class="tier-feature"><span class="tf-check">✓</span> Every transaction categorized</li>
+          <li class="tier-feature"><span class="tf-check">✓</span> Prior-period P&amp;L &amp; balance sheet</li>
+          <li class="tier-feature"><span class="tf-check">✓</span> CPA-ready handoff package</li>
+          <li class="tier-feature"><span class="tf-check">✓</span> No hourly billing — quoted upfront</li>
+        </ul>
+        <a href="https://buy.stripe.com/6oUeVed3G70K5fT96i3wQ07" class="btn btn-primary btn-full">Start Catch-Up →</a>
+      </div>
+
+      <!-- Catch-Up Scale -->
+      <div class="tier-card">
+        <div class="tier-name">Catch-Up Scale</div>
+        <div class="tier-desc">For Scale-tier businesses: up to $125,000 monthly expenses, up to 12 accounts.</div>
+        <div class="tier-price-wrap">
+          <div style="display:inline-block;background:#fee2e2;color:#b91c1c;font-size:.7rem;font-weight:800;letter-spacing:.08em;padding:3px 10px;border-radius:50px;margin-bottom:.5rem;text-transform:uppercase;">Save 50%</div>
+          <div style="font-size:1.05rem;color:var(--muted);text-decoration:line-through;font-weight:600;margin-bottom:.2rem;">Reg. $990</div>
+          <div class="tier-price">$495</div>
+          <div class="tier-period">per month behind</div>
+        </div>
+        <div class="tier-divider"></div>
+        <ul class="tier-features">
+          <li class="tier-feature"><span class="tf-check">✓</span> Flat per-month pricing</li>
+          <li class="tier-feature"><span class="tf-check">✓</span> Full bank &amp; credit-card reconciliation</li>
+          <li class="tier-feature"><span class="tf-check">✓</span> Every transaction categorized</li>
+          <li class="tier-feature"><span class="tf-check">✓</span> Prior-period P&amp;L &amp; balance sheet</li>
+          <li class="tier-feature"><span class="tf-check">✓</span> CPA-ready handoff package</li>
+          <li class="tier-feature"><span class="tf-check">✓</span> No hourly billing — quoted upfront</li>
+        </ul>
+        <a href="https://buy.stripe.com/fZueVe4xa98SaAd82e3wQ08" class="btn btn-outline btn-full">Start Catch-Up →</a>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:2.5rem;">
+      <p style="color:var(--muted);font-size:.9rem;">Not sure how far behind you are? <a href="schedule.html" style="color:var(--navy);font-weight:700;">Book a free 15-minute call →</a></p>
+    </div>
+
+  </div>
+</section>
+
 <!-- ══════════════════════════════════════
      FAQ
 ══════════════════════════════════════ -->

@@ -542,6 +542,24 @@
   </url>
 
   <url>
+    <loc>https://www.tidesbookkeeping.com/industry-healthcare-charleston-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-healthcare-columbia-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-healthcare-greenville-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://www.tidesbookkeeping.com/industry-healthcare</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -555,6 +573,24 @@
 
   <url>
     <loc>https://www.tidesbookkeeping.com/industry-nonprofits</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-professional-services-charleston-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-professional-services-columbia-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-professional-services-greenville-sc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -620,7 +656,43 @@
   </url>
 
   <url>
+    <loc>https://www.tidesbookkeeping.com/industry-solo-entrepreneurs-charleston-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-solo-entrepreneurs-columbia-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-solo-entrepreneurs-greenville-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://www.tidesbookkeeping.com/industry-solo-entrepreneurs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-tech-startups-charleston-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-tech-startups-columbia-sc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-tech-startups-greenville-sc</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

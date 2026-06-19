@@ -956,6 +956,413 @@
   </url>
 
   <url>
+    <loc>https://www.tidesbookkeeping.com/state-indiana</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Indiana Cities -->
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-indianapolis-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-fort-wayne-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-evansville-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-south-bend-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-carmel-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-fishers-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-bloomington-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-hammond-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-lafayette-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-noblesville-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-muncie-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-terre-haute-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-kokomo-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-anderson-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.tidesbookkeeping.com/city-greenwood-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-indianapolis-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-indianapolis-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-fort-wayne-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-fort-wayne-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-evansville-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-evansville-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-south-bend-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-south-bend-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-carmel-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-carmel-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-fishers-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-fishers-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-bloomington-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-bloomington-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-hammond-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-hammond-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-lafayette-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-lafayette-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-noblesville-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-noblesville-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-muncie-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-muncie-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-terre-haute-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-terre-haute-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-kokomo-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-kokomo-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-anderson-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-anderson-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-monthly-bookkeeping-greenwood-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/service-catchup-bookkeeping-greenwood-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-contractors-trades-indianapolis-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-contractors-trades-fort-wayne-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-contractors-trades-carmel-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-ecommerce-retail-indianapolis-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-ecommerce-retail-fort-wayne-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-ecommerce-retail-carmel-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-healthcare-indianapolis-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-healthcare-fort-wayne-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-healthcare-carmel-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-professional-services-indianapolis-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-professional-services-fort-wayne-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-professional-services-carmel-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-real-estate-indianapolis-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-real-estate-fort-wayne-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-real-estate-carmel-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-restaurants-bars-indianapolis-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-restaurants-bars-fort-wayne-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-restaurants-bars-carmel-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-solo-entrepreneurs-indianapolis-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-solo-entrepreneurs-fort-wayne-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-solo-entrepreneurs-carmel-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-tech-startups-indianapolis-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-tech-startups-fort-wayne-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.tidesbookkeeping.com/industry-tech-startups-carmel-in</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://www.tidesbookkeeping.com/tax-checklist</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

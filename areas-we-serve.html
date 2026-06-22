@@ -197,25 +197,33 @@
     .legend-dot.inactive { background: rgba(255,255,255,.08); }
     .map-scroll-note { display: none; text-align: center; font-size: .72rem; color: rgba(255,255,255,.35); margin-bottom: 1.25rem; }
 
-    /* ── SC FEATURED ─────────────────────────────────── */
+    /* ── STATE CARDS GRID ───────────────────────────── */
+    .states-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
     .sc-hero {
       background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
-      border-radius: 24px; padding: 2.5rem 3rem;
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 2rem; flex-wrap: wrap; margin-bottom: 3rem;
-      box-shadow: var(--shadow-lg);
+      border-radius: 16px; padding: 1.5rem 1.75rem;
+      display: flex; flex-direction: column;
+      box-shadow: var(--shadow);
+      transition: transform .2s, box-shadow .2s;
+      text-decoration: none;
     }
-    .sc-hero-left { flex: 1; min-width: 220px; }
+    .sc-hero:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .sc-hero-left { }
     .sc-hero-badge {
       display: inline-flex; align-items: center; gap: .5rem;
       background: rgba(65,207,208,.15); border: 1px solid rgba(65,207,208,.3);
-      color: var(--teal); font-size: .7rem; font-weight: 700;
+      color: var(--teal); font-size: .62rem; font-weight: 700;
       letter-spacing: .1em; text-transform: uppercase;
-      padding: 4px 12px; border-radius: 50px; margin-bottom: 1rem;
+      padding: 3px 10px; border-radius: 50px; margin-bottom: .75rem;
     }
-    .sc-hero h2 { font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; color: #fff; letter-spacing: .02em; line-height: .95; margin-bottom: .75rem; }
-    .sc-hero p { font-size: .9rem; color: rgba(255,255,255,.65); line-height: 1.65; max-width: 380px; }
-    .sc-hero-right { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .sc-hero h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: #fff; letter-spacing: .02em; line-height: .95; margin-bottom: .5rem; }
+    .sc-hero p { font-size: .8rem; color: rgba(255,255,255,.6); line-height: 1.55; }
+    .sc-hero .btn { margin-top: auto; padding-top: .75rem; }
+    .sc-hero .btn-teal { font-size: .78rem; padding: .55rem 1.2rem; }
+    .sc-hero-right { display: none; }
     .sc-mini-stat { text-align: center; }
     .sc-mini-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; color: var(--teal); line-height: 1; }
     .sc-mini-label { font-size: .68rem; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: .07em; margin-top: 2px; }
@@ -355,8 +363,8 @@
       .nav-links.open a { font-size: 1.15rem; font-weight: 600; color: var(--ink); }
       .page-hero { padding: 56px 0 44px; }
       .hero-stats { gap: 1.5rem; }
-      .sc-hero { padding: 2rem 1.5rem; }
-      .sc-hero h2 { font-size: 2rem; }
+      .sc-hero { padding: 1.25rem 1.25rem; }
+      .sc-hero h2 { font-size: 1.5rem; }
 .states-grid { grid-template-columns: repeat(2, 1fr); }
       .how-grid { grid-template-columns: 1fr; }
       .map-scroll-note { display: block; }
@@ -370,7 +378,7 @@
       .cta-btns .btn { width: 100%; max-width: 320px; justify-content: center; }
     }
     @media (max-width: 480px) {
-      .states-grid { grid-template-columns: 1fr 1fr; }
+      .states-grid { grid-template-columns: 1fr; }
     }
   
 /* mobile-menu-fix-start */
@@ -683,86 +691,78 @@
   </div>
 </section>
 
-<!-- SOUTH CAROLINA FEATURED -->
-<section class="section" id="south-carolina">
+<!-- STATE CARDS -->
+<section class="section" id="state-cards">
   <div class="container">
-    <div class="sc-hero">
-      <div class="sc-hero-left">
-        <div class="sc-hero-badge">🏛️ South Carolina</div>
-        <h2>South Carolina<br/>Bookkeeping Services</h2>
-        <p>From the Upstate to the Lowcountry, we serve SC businesses of every size — 8 counties, 45+ cities, remote delivery, flat monthly rate.</p>
-        <a href="state-south-carolina.html" class="btn btn-teal" style="margin-top:1.5rem;">View South Carolina Page →</a>
-      </div>
+    <div class="section-header centered" style="margin-bottom:2.5rem;">
+      <div class="eyebrow">Active State Pages</div>
+      <h2 class="display">Explore by State</h2>
     </div>
-  </div>
-</section>
+    <div class="states-grid">
 
-<!-- NORTH CAROLINA FEATURED -->
-<section class="section section-alt" id="north-carolina">
-  <div class="container">
-    <div class="sc-hero">
-      <div class="sc-hero-left">
-        <div class="sc-hero-badge">🏛️ North Carolina</div>
-        <h2>North Carolina<br/>Bookkeeping Services</h2>
-        <p>From the Blue Ridge Mountains to the Outer Banks, we serve NC businesses across Charlotte, the Research Triangle, the Triad, and the Coastal Plain — 100% remote, flat monthly rate.</p>
-        <a href="state-north-carolina.html" class="btn btn-teal" style="margin-top:1.5rem;">View North Carolina Page →</a>
-      </div>
-    </div>
-  </div>
-</section>
+      <a href="state-south-carolina.html" class="sc-hero" id="south-carolina">
+        <div class="sc-hero-left">
+          <div class="sc-hero-badge">🏛️ South Carolina</div>
+          <h2>South Carolina</h2>
+          <p>8 counties, 45+ cities — from the Upstate to the Lowcountry.</p>
+        </div>
+        <div class="btn btn-teal">View State Page →</div>
+      </a>
 
-<!-- GEORGIA FEATURED -->
-<section class="section section-alt" id="georgia">
-  <div class="container">
-    <div class="sc-hero">
-      <div class="sc-hero-left">
-        <div class="sc-hero-badge">🏛️ Georgia</div>
-        <h2>Georgia<br/>Bookkeeping Services</h2>
-        <p>We serve Georgia businesses 100% remotely — flat monthly rate, dedicated bookkeeper, no commute required.</p>
-        <a href="state-georgia.html" class="btn btn-teal" style="margin-top:1.5rem;">View Georgia Page →</a>
-      </div>
-    </div>
-  </div>
-</section>
+      <a href="state-north-carolina.html" class="sc-hero" id="north-carolina">
+        <div class="sc-hero-left">
+          <div class="sc-hero-badge">🏛️ North Carolina</div>
+          <h2>North Carolina</h2>
+          <p>Charlotte, the Research Triangle, the Triad, and the Coastal Plain.</p>
+        </div>
+        <div class="btn btn-teal">View State Page →</div>
+      </a>
 
-<!-- FLORIDA FEATURED -->
-<section class="section section-alt" id="florida">
-  <div class="container">
-    <div class="sc-hero">
-      <div class="sc-hero-left">
-        <div class="sc-hero-badge">🏛️ Florida</div>
-        <h2>Florida<br/>Bookkeeping Services</h2>
-        <p>We serve Florida businesses 100% remotely — flat monthly rate, dedicated bookkeeper, no commute required.</p>
-        <a href="state-florida.html" class="btn btn-teal" style="margin-top:1.5rem;">View Florida Page →</a>
-      </div>
-    </div>
-  </div>
-</section>
+      <a href="state-georgia.html" class="sc-hero" id="georgia">
+        <div class="sc-hero-left">
+          <div class="sc-hero-badge">🏛️ Georgia</div>
+          <h2>Georgia</h2>
+          <p>Atlanta, Savannah, Augusta, and 15+ cities across the Peach State.</p>
+        </div>
+        <div class="btn btn-teal">View State Page →</div>
+      </a>
 
-<!-- TENNESSEE FEATURED -->
-<section class="section section-alt" id="tennessee">
-  <div class="container">
-    <div class="sc-hero">
-      <div class="sc-hero-left">
-        <div class="sc-hero-badge">🏛️ Tennessee</div>
-        <h2>Tennessee<br/>Bookkeeping Services</h2>
-        <p>We serve Tennessee businesses 100% remotely — flat monthly rate, dedicated bookkeeper, no commute required.</p>
-        <a href="state-tennessee.html" class="btn btn-teal" style="margin-top:1.5rem;">View Tennessee Page →</a>
-      </div>
-    </div>
-  </div>
-</section>
+      <a href="state-florida.html" class="sc-hero" id="florida">
+        <div class="sc-hero-left">
+          <div class="sc-hero-badge">🏛️ Florida</div>
+          <h2>Florida</h2>
+          <p>Miami, Orlando, Tampa, and 15 cities across the Sunshine State.</p>
+        </div>
+        <div class="btn btn-teal">View State Page →</div>
+      </a>
 
-<!-- INDIANA FEATURED -->
-<section class="section section-alt" id="indiana">
-  <div class="container">
-    <div class="sc-hero">
-      <div class="sc-hero-left">
-        <div class="sc-hero-badge">🏛️ Indiana</div>
-        <h2>Indiana<br/>Bookkeeping Services</h2>
-        <p>From Indianapolis and the Circle City metro to Fort Wayne, Carmel, and across the Hoosier State — we serve Indiana businesses 100% remotely with flat monthly pricing and a dedicated bookkeeper.</p>
-        <a href="state-indiana.html" class="btn btn-teal" style="margin-top:1.5rem;">View Indiana Page →</a>
-      </div>
+      <a href="state-tennessee.html" class="sc-hero" id="tennessee">
+        <div class="sc-hero-left">
+          <div class="sc-hero-badge">🏛️ Tennessee</div>
+          <h2>Tennessee</h2>
+          <p>Nashville, Memphis, Knoxville, and 15+ cities across the Volunteer State.</p>
+        </div>
+        <div class="btn btn-teal">View State Page →</div>
+      </a>
+
+      <a href="state-indiana.html" class="sc-hero" id="indiana">
+        <div class="sc-hero-left">
+          <div class="sc-hero-badge">🏛️ Indiana</div>
+          <h2>Indiana</h2>
+          <p>Indianapolis, Fort Wayne, Carmel, and cities across the Hoosier State.</p>
+        </div>
+        <div class="btn btn-teal">View State Page →</div>
+      </a>
+
+      <a href="state-texas.html" class="sc-hero" id="texas">
+        <div class="sc-hero-left">
+          <div class="sc-hero-badge">🏛️ Texas</div>
+          <h2>Texas</h2>
+          <p>Houston, Dallas, Austin, San Antonio, and 15 cities across the Lone Star State.</p>
+        </div>
+        <div class="btn btn-teal">View State Page →</div>
+      </a>
+
     </div>
   </div>
 </section>
@@ -950,7 +950,7 @@
     {a:'TN',n:'Tennessee',        c:7, r:6, active:true,  href:'state-tennessee.html'},
     {a:'NC',n:'North Carolina',   c:8, r:6, active:true,  href:'state-north-carolina.html'},
     {a:'SC',n:'South Carolina',   c:9, r:6, active:true,  href:'state-south-carolina.html'},
-    {a:'TX',n:'Texas',            c:3, r:7, active:false},
+    {a:'TX',n:'Texas',            c:3, r:7, active:true,  href:'state-texas.html'},
     {a:'LA',n:'Louisiana',        c:5, r:7, active:false},
     {a:'MS',n:'Mississippi',      c:6, r:7, active:false},
     {a:'AL',n:'Alabama',          c:7, r:7, active:false},
@@ -1033,7 +1033,8 @@
       'GA': 'state-georgia.html',
       'NC': 'state-north-carolina.html',
       'IN': 'state-indiana.html',
-      // 'FL': 'state-florida.html',
+      'FL': 'state-florida.html',
+      'TX': 'state-texas.html',
     };
 
     const input    = document.getElementById('stateSearch');

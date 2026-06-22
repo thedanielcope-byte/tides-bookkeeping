@@ -17,6 +17,14 @@ _templates/
 # Source state SVGs — only used to extract path data, not deployed
 assets/states/*-source.*
 
+# Internal assets (spreadsheets, GHL screenshots, realtor lists)
+assets/Bookkeepers/
+assets/GHL/
+assets/Realtor Lists/
+
+# Embedded repos
+tides-portal/
+
 # Employee Hub (separate project)
 hub/
 

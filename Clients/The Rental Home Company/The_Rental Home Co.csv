@@ -1,0 +1,130 @@
+Account number,Account name,Account type,Detail type
+,Money Market Ameris,Bank,Cash on hand
+,Second Mile Investments (6125) - 4 - 1,Bank,Checking
+,Accounts Receivable (A/R),Accounts receivable (A/R),Accounts Receivable (A/R)
+120,Loan to Others,Other Current Assets,Loans to Others
+130,Lender Reserve Escrow,Other Current Assets,Other Current Assets
+140,PM Reserves,Other Current Assets,Other Current Assets
+140.01,PM Reserves:Security Deposits,Other Current Assets,Other Current Assets
+140.02,PM Reserves:Required Reserves,Other Current Assets,Other Current Assets
+150,Inventory Asset,Other Current Assets,Inventory
+,Payments to deposit,Other Current Assets,Undeposited Funds
+,Uncategorized Asset,Other Current Assets,Other Current Assets
+200,Fixed Assets,Fixed Assets,Other fixed assets
+200.01,Fixed Assets:Buildings,Fixed Assets,Buildings
+200.02,Fixed Assets:Land,Fixed Assets,Land
+200.04,Fixed Assets:Loan Costs,Fixed Assets,Buildings
+200.05,Fixed Assets:Vehicles,Fixed Assets,Vehicles
+,Fixed Assets:Vehicles:Dodge Ram,Fixed Assets,Vehicles
+,Fixed Assets:Vehicles:Ford Expedition,Fixed Assets,Vehicles
+200.06,Fixed Assets:Earnest Money Deposit,Fixed Assets,Other fixed assets
+800.01,Fixed Assets:Accumulated Amortization,Fixed Assets,Accumulated Amortization
+900.01,Fixed Assets:Accumulated Depreciation,Fixed Assets,Accumulated Depreciation
+210,Capital Improvements,Fixed Assets,Other fixed assets
+210.01,Capital Improvements:5 year property,Fixed Assets,Other fixed assets
+210.02,Capital Improvements:15 year property,Fixed Assets,Other fixed assets
+210.03,Capital Improvements:27.55 year property,Fixed Assets,Other fixed assets
+,Accounts Payable (A/P),Accounts payable (A/P),Accounts Payable (A/P)
+,Capital One Spark Card,Credit Card,Credit Card
+300,Other Current Liabilities,Other Current Liabilities,Other Current Liabilities
+300.01,Other Current Liabilities:Line of Credit,Other Current Liabilities,Line of Credit
+300.02,Other Current Liabilities:Loan Payable,Other Current Liabilities,Loan Payable
+,Other Current Liabilities:Loan Payable:Ford Expedition,Other Current Liabilities,Loan Payable
+300.03,Other Current Liabilities:Tenant Security Deposits,Other Current Liabilities,Other Current Liabilities
+300.04,Payroll Liabilities,Other Current Liabilities,Payroll Tax Payable
+310,Long Term Liabilities,Long Term Liabilities,Notes Payable
+310.01,Long Term Liabilities:Real Estate Mortgages,Long Term Liabilities,Notes Payable
+,Long Term Liabilities:Real Estate Mortgages:Church Street Duplexes,Long Term Liabilities,Notes Payable
+,Long Term Liabilities:Real Estate Mortgages:Penny & Konica Loan,Long Term Liabilities,Notes Payable
+,Long Term Liabilities:Real Estate Mortgages:Synovus Umbrella Loan,Long Term Liabilities,Notes Payable
+,Long Term Liabilities:Real Estate Mortgages:Woodsong Loan (CARO),Long Term Liabilities,Notes Payable
+,Long Term Liabilites,Long Term Liabilities,Notes Payable
+310.03,Long Term Liabilites:HELOC,Long Term Liabilities,Notes Payable
+400,Opening balance equity,Equity,Opening Balance Equity
+410,Owner's Equity,Equity,Owner's Equity
+410.01,Owner's Equity:Contributions,Equity,Owner's Equity
+410.02,Owner's Equity:Distributions,Equity,Owner's Equity
+420,Partner's Equity,Equity,Partner's Equity
+420.01,Partner's Equity:Contributions,Equity,Partner's Equity
+420.02,Partner's Equity:Distributions,Equity,Partner's Equity
+430,Non Rental Expenses,Equity,Personal Expense
+,Options Trading Expense,Equity,Owner's Equity
+,Retained Earnings,Equity,Retained Earnings
+500,Rental Income,Income,Service/Fee Income
+500.01,Rental Income:Rental Income,Income,Service/Fee Income
+500.02,Rental Income:Prepaid Rental Income,Income,Service/Fee Income
+500.03,Rental Income:Other Rental Income,Income,Service/Fee Income
+500.04,Rental Income:Utility Income,Income,Service/Fee Income
+510,Sale of Property Income,Income,Service/Fee Income
+515,Commission Income,Income,Other Primary Income
+530,Tax Refund,Income,Service/Fee Income
+540,Billable Expense Income Account,Income,Service/Fee Income
+550,Discounts/Refunds Given,Income,Service/Fee Income
+560,Unapplied Cash Payment Income,Income,Service/Fee Income
+,Billable Expense Income,Income,Sales of Product Income
+,Sales,Income,Sales of Product Income
+,Sales of Product Income,Income,Sales of Product Income
+,Uncategorized Income,Income,Sales of Product Income
+600,Cost of Goods Sold,Cost of Goods Sold,Other Costs of Services - COS
+670,Sale of Property Costs,Cost of Goods Sold,Other Costs of Services - COS
+670.01,Sale of Property Costs:Broker Commission,Cost of Goods Sold,Other Costs of Services - COS
+670.02,Sale of Property Costs:Closing Costs,Cost of Goods Sold,Other Costs of Services - COS
+670.03,Sale of Property Costs:HOA Fees,Cost of Goods Sold,Other Costs of Services - COS
+670.04,Sale of Property Costs:Home Warranty,Cost of Goods Sold,Other Costs of Services - COS
+670.05,Sale of Property Costs:Property Taxes,Cost of Goods Sold,Other Costs of Services - COS
+670.06,Sale of Property Costs:Insurance,Cost of Goods Sold,Other Costs of Services - COS
+,Sale of Property Costs:Property Basis,Cost of Goods Sold,Other Costs of Services - COS
+,Cost of Goods Sold-1,Cost of Goods Sold,Supplies & Materials - COGS
+,Inventory Shrinkage,Cost of Goods Sold,Supplies & Materials - COGS
+700,Buy & Hold Expenses,Expenses,Repair & Maintenance
+700.01,Buy & Hold Expenses:HOA,Expenses,Dues & subscriptions
+700.1,Buy & Hold Expenses:Utilities,Expenses,Repair & Maintenance
+,Buy & Hold Expenses:Repairs & Maintenance,Expenses,Repair & Maintenance
+700.02,Buy & Hold Expenses:Repairs & Maintenance:General,Expenses,Repair & Maintenance
+700.03,Buy & Hold Expenses:Repairs & Maintenance:Cleaning,Expenses,Repair & Maintenance
+700.04,Buy & Hold Expenses:Repairs & Maintenance:Contractor,Expenses,Repair & Maintenance
+700.05,Buy & Hold Expenses:Repairs & Maintenance:Inspections,Expenses,Repair & Maintenance
+700.06,Buy & Hold Expenses:Repairs & Maintenance:Landscaping,Expenses,Repair & Maintenance
+700.08,Buy & Hold Expenses:Repairs & Maintenance:Materials,Expenses,Repair & Maintenance
+700.09,Buy & Hold Expenses:Repairs & Maintenance:Pest Control,Expenses,Repair & Maintenance
+710,General Expenses,Expenses,Other Miscellaneous Service Cost
+710.01,General Expenses:Bank Charges & Fees,Expenses,Bank Charges
+710.02,General Expenses:Business Meals,Expenses,Entertainment Meals
+710.03,General Expenses:Dues & Subscriptions,Expenses,Dues & subscriptions
+710.04,General Expenses:Office Supplies & Postage,Expenses,Office/General Administrative Expenses
+710.05,General Expenses:Marketing,Expenses,Supplies & Materials
+710.06,General Expenses:Other Business Expenses,Expenses,Advertising/Promotional
+710.07,General Expenses:Licenses & Registration Fees,Expenses,Office/General Administrative Expenses
+710.08,General Expenses:Rent & Lease,Expenses,Rent or Lease of Buildings
+710.09,General Expenses:Admin Contractor,Expenses,Cost of Labor
+710.1,General Expenses:Client Expenses,Expenses,Office/General Administrative Expenses
+710.11,General Expenses:Business Utilities,Expenses,Utilities
+710.12,General Expenses:Continuing Education,Expenses,Office/General Administrative Expenses
+720,Insurance,Expenses,Insurance
+730,Interest Paid,Expenses,Interest Paid
+740,Legal & Professional Fees,Expenses,Legal & Professional Fees
+740.01,Legal & Professional Fees:Accountant,Expenses,Legal & Professional Fees
+740.02,Legal & Professional Fees:Legal,Expenses,Legal & Professional Fees
+740.03,Legal & Professional Fees:Property Manager,Expenses,Legal & Professional Fees
+750,Charity,Expenses,Charitable Contributions
+765,Payroll Expense,Expenses,Payroll Expenses
+765.01,Payroll Expense:Payroll Net,Expenses,Payroll Expenses
+765.02,Payroll Expense:Payroll Tax,Expenses,Payroll Expenses
+765.03,Payroll Expense:Payroll Fee,Expenses,Payroll Expenses
+765.03,Payroll Expense:Payroll Fee ( 223 ),Expenses,Payroll Expenses
+,Payroll Expense:Officer Salaries,Expenses,Payroll Wage Expenses
+770,Taxes Paid,Expenses,Taxes Paid
+780,Travel,Expenses,Travel
+780,Travel ( 225 ),Expenses,Travel
+785,Mileage,Expenses,Travel
+785,Mileage ( 228 ),Expenses,Travel
+790.01,Ask My Client,Expenses,Other Miscellaneous Service Cost
+,Purchases,Expenses,Supplies & Materials
+,Unapplied Cash Bill Payment Expense,Expenses,Unapplied Cash Bill Payment Expense
+,Uncategorized Expense,Expenses,Other Miscellaneous Service Cost
+520,Interest Income,Other Income,Interest Earned
+800.02,Amortization Expense,Other Expense,Amortization
+800.02,Amortization Expense ( 230 ),Other Expense,Amortization
+900.02,Depreciation Expense,Other Expense,Depreciation
+900.02,Depreciation Expense ( 232 ),Other Expense,Depreciation
+,Reconciliation Discrepancies,Other Expense,Other Miscellaneous Expense

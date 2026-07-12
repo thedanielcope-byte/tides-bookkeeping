@@ -2,13 +2,16 @@
 .DS_Store
 ._*
 
-# iCloud Drive duplicate files (created when same file touched on 2 devices)
-* 2.html
-* 2.css
-* 2.js
-* 2.md
-* 2.py
-* 2.txt
+# iCloud Drive duplicate files (created when same file touched while syncing — any copy number)
+* [0-9].html
+* [0-9].css
+* [0-9].js
+* [0-9].md
+* [0-9].py
+* [0-9].txt
+* [0-9].json
+* [0-9].xml
+* [0-9][0-9].html
 
 # Internal / non-web files (build tools, page templates with placeholders)
 _internal/

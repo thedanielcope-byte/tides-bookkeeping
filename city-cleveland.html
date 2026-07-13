@@ -579,7 +579,15 @@
   }
 }
 /* mobile-menu-fix-end */
-</style>
+
+    .res-section{background:var(--bg-alt,#f7fafc);border-top:1px solid var(--border,#e5eaf0);padding:3rem 0;}
+    .res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;max-width:1100px;margin:1.5rem auto 0;padding:0 1.5rem;}
+    .res-card{display:block;background:#fff;border:1px solid var(--border,#e5eaf0);border-radius:14px;padding:1.1rem 1.25rem;text-decoration:none;transition:all .2s;}
+    .res-card:hover{border-color:var(--teal,#41cfd0);box-shadow:0 6px 20px rgba(15,28,46,.08);transform:translateY(-2px);}
+    .res-card .res-name{font-weight:700;color:var(--navy,#215197);font-size:.92rem;margin-bottom:.25rem;}
+    .res-card .res-name::after{content:" \2197";color:var(--teal,#41cfd0);font-weight:600;}
+    .res-card .res-desc{font-size:.78rem;color:var(--muted,#5a6b82);line-height:1.5;}
+    </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBFJKD962N"></script>
   <script>
@@ -1570,6 +1578,19 @@
 </section>
 
 <!-- FOOTER -->
+<section class="res-section">
+  <div class="container">
+    <div class="section-header centered"><div class="eyebrow">Local &amp; State Resources</div><h2 class="display" style="font-size:1.6rem;">Business &amp; Tax Resources</h2><p style="max-width:640px;margin:.5rem auto 0;">Official government resources for registering, filing, and staying compliant. Tides handles your books; these help with the rest.</p></div>
+    <div class="res-grid">
+      <a class="res-card" href="https://clevelandtn.gov/" target="_blank" rel="noopener noreferrer"><div class="res-name">City of Cleveland</div><div class="res-desc">Official City of Cleveland website — local licensing, permits, and business resources.</div></a>
+      <a class="res-card" href="https://www.tn.gov/revenue.html" target="_blank" rel="noopener noreferrer"><div class="res-name">Tennessee Dept. of Revenue</div><div class="res-desc">Sales tax, business tax, and franchise &amp; excise tax</div></a>
+      <a class="res-card" href="https://sos.tn.gov/" target="_blank" rel="noopener noreferrer"><div class="res-name">TN Secretary of State — Business Services</div><div class="res-desc">Register or manage a Tennessee business entity</div></a>
+      <a class="res-card" href="https://www.irs.gov/businesses/small-businesses-self-employed" target="_blank" rel="noopener noreferrer"><div class="res-name">IRS — Small Business &amp; Self-Employed</div><div class="res-desc">Federal taxes, EIN, forms, and recordkeeping guidance</div></a>
+      <a class="res-card" href="https://www.sba.gov/" target="_blank" rel="noopener noreferrer"><div class="res-name">U.S. Small Business Administration</div><div class="res-desc">Federal programs, guidance, and local SBA resources</div></a>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="container">
     <div class="footer-grid">

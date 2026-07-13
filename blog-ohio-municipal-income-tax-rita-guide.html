@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ohio Municipal Income Tax &amp; RITA: A Small Business Owner's Guide | Tides Blog</title>
+  <meta name="description" content="Ohio's 600+ cities levy their own income tax. A plain-English guide to RITA vs CCA, employer withholding, the 20-day rule, net-profit returns, and the CAT." />
+  <link rel="canonical" href="https://www.tidesbookkeeping.com/blog-ohio-municipal-income-tax-rita-guide" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2026-07-13" />
+  <meta property="article:author" content="Tides Bookkeeping" />
+  <meta property="og:title" content="Ohio Municipal Income Tax &amp; RITA: A Small Business Owner's Guide" />
+  <meta property="og:description" content="Ohio's 600+ cities levy their own income tax. A plain-English guide to RITA vs CCA, employer withholding, the 20-day rule, net-profit returns, and the CAT." />
+  <meta property="og:url" content="https://www.tidesbookkeeping.com/blog-ohio-municipal-income-tax-rita-guide" />
+  <meta property="og:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta property="og:site_name" content="Tides Bookkeeping" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ohio Municipal Income Tax &amp; RITA: A Small Business Owner's Guide" />
+  <meta name="twitter:description" content="Ohio's 600+ cities levy their own income tax. A plain-English guide to RITA vs CCA, employer withholding, the 20-day rule, net-profit returns, and the CAT." />
+  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── TOKENS ─────────────────────────────────────── */
+    :root {
+      --teal:    #41cfd0;
+      --teal-lt: #e6f9f9;
+      --blue:    #66c1ee;
+      --blue-lt: #e8f4fd;
+      --navy:    #215197;
+      --navy-dk: #163872;
+      --ink:     #0f1c2e;
+      --body:    #4a5568;
+      --muted:   #94a3b8;
+      --border:  #e2eaf3;
+      --bg:      #ffffff;
+      --bg-alt:  #f7fbff;
+      --shadow:  0 1px 3px rgba(15,28,46,.06), 0 4px 16px rgba(15,28,46,.08);
+      --shadow-lg: 0 8px 40px rgba(15,28,46,.12);
+      --r:       16px;
+      --r-sm:    10px;
+    }
+
+    /* ── RESET ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── TYPE ───────────────────────────────────────── */
+    .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 0.95; }
+    h2.display { font-size: clamp(2.4rem, 5vw, 4rem); }
+    h3 { font-size: 1.1rem; font-weight: 700; color: var(--ink); }
+    p { color: var(--body); }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal);
+      background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
+      padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--blue) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* ── LAYOUT ─────────────────────────────────────── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+    .section { padding: 96px 0; }
+    .section-alt { background: var(--bg-alt); }
+
+    /* ── BUTTONS ────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .85rem 1.75rem; border-radius: 50px;
+      font-weight: 600; font-size: .9rem; cursor: pointer;
+      transition: all .2s ease; border: 2px solid transparent;
+    }
+    .btn-primary { background: var(--navy); color: #fff; }
+    .btn-primary:hover { background: var(--navy-dk); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(33,81,151,.3); }
+    .btn-teal { background: var(--teal); color: var(--ink); font-weight: 700; }
+    .btn-teal:hover { background: #38bfc0; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(65,207,208,.4); }
+    .btn-outline { border-color: var(--border); color: var(--ink); background: #fff; }
+    .btn-outline:hover { border-color: var(--navy); color: var(--navy); }
+    .btn-outline-white { border-color: rgba(255,255,255,.35); color: #fff; }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+    .btn-lg { padding: 1rem 2.2rem; font-size: 1rem; }
+
+    /* ── NAV ────────────────────────────────────────── */
+    .nav-wrap {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(255,255,255,.92); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem; max-width: 1180px; margin: 0 auto;
+    }
+    .nav-logo img { height: 44px; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); }
+    .nav-links a.active { font-weight: 700; }
+    .nav-cta { display: flex; align-items: center; gap: .75rem; }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .hamburger span {
+      width: 24px; height: 2px; background: var(--ink); border-radius: 2px;
+      transition: all .25s;
+    }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ── BREADCRUMB ─────────────────────────────────── */
+    .breadcrumb {
+      background: var(--bg-alt); border-bottom: 1px solid var(--border);
+      padding: .75rem 0;
+    }
+    .breadcrumb-inner {
+      display: flex; align-items: center; gap: .5rem;
+      max-width: 1180px; margin: 0 auto; padding: 0 2rem;
+      font-size: .78rem; color: var(--muted);
+    }
+    .breadcrumb-inner a { color: var(--muted); transition: color .2s; }
+    .breadcrumb-inner a:hover { color: var(--navy); }
+    .breadcrumb-sep { color: var(--border); }
+    .breadcrumb-current { color: var(--navy); font-weight: 600; }
+
+    /* ── PAGE HERO ──────────────────────────────────── */
+    .page-hero {
+      padding: 88px 0 72px;
+      background: #fff;
+      position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 70% at 85% 20%, rgba(65,207,208,.1) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 15% 80%, rgba(102,193,238,.08) 0%, transparent 60%);
+    }
+    .page-hero-inner {
+      position: relative; z-index: 1;
+      max-width: 700px; margin: 0 auto; text-align: center;
+    }
+    .page-hero h1 {
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: .93; margin-bottom: 1.5rem; color: var(--ink);
+    }
+    .page-hero p {
+      font-size: 1.1rem; line-height: 1.75; color: var(--body);
+      max-width: 560px; margin: 0 auto;
+    }
+
+    /* ── CONTACT LAYOUT ─────────────────────────────── */
+    .contact-layout {
+      display: grid; grid-template-columns: 1fr 1.4fr;
+      gap: 4rem; align-items: start;
+    }
+    .contact-info { display: flex; flex-direction: column; gap: 1.25rem; }
+    .contact-card {
+      background: var(--bg-alt); border: 1px solid var(--border);
+      border-radius: 16px; padding: 1.5rem 1.75rem;
+      display: flex; align-items: flex-start; gap: 1.25rem;
+      transition: all .2s;
+    }
+    .contact-card:hover { border-color: rgba(65,207,208,.4); box-shadow: var(--shadow); }
+    .contact-card-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: var(--teal-lt); display: flex; align-items: center; justify-content: center;
+      font-size: 1.25rem; flex-shrink: 0;
+    }
+    .contact-card:nth-child(2) .contact-card-icon { background: var(--blue-lt); }
+    .contact-card:nth-child(3) .contact-card-icon { background: rgba(33,81,151,.08); }
+    .contact-card:nth-child(4) .contact-card-icon { background: rgba(65,207,208,.1); }
+    .contact-card-body h4 { font-size: .95rem; font-weight: 700; color: var(--ink); margin-bottom: .25rem; }
+    .contact-card-body p { font-size: .88rem; color: var(--body); line-height: 1.6; margin: 0; }
+    .contact-card-body a { color: var(--navy); font-weight: 600; }
+    .contact-card-body a:hover { color: var(--teal); }
+
+    /* ── CONTACT FORM CARD ──────────────────────────── */
+    .contact-form-card {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 1.25rem !important;
+      padding: 1.75rem !important;
+    }
+    .contact-form-header {
+      display: flex; align-items: center; gap: 1.25rem;
+    }
+    .contact-form-embed { width: 100%; }
+
+    /* ── BOOKING CARD ───────────────────────────────── */
+    .booking-card {
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      border-radius: 24px; padding: 3rem; color: #fff;
+      box-shadow: var(--shadow-lg);
+    }
+    .booking-card .eyebrow { background: rgba(65,207,208,.15); border-color: rgba(65,207,208,.3); color: var(--teal); }
+    .booking-card h2 { color: #fff; font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 1rem; }
+    .booking-card p { color: rgba(255,255,255,.7); font-size: .95rem; line-height: 1.7; margin-bottom: 2rem; }
+    .booking-perks { display: flex; flex-direction: column; gap: .75rem; margin-bottom: 2rem; }
+    .booking-perk {
+      display: flex; align-items: center; gap: .75rem;
+      font-size: .88rem; color: rgba(255,255,255,.8);
+    }
+    .booking-perk::before {
+      content: '✓'; width: 22px; height: 22px; border-radius: 50%;
+      background: rgba(65,207,208,.2); border: 1px solid rgba(65,207,208,.4);
+      color: var(--teal); font-size: .8rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .booking-fine { font-size: .78rem; color: rgba(255,255,255,.35); margin-top: 1rem; }
+
+    /* ── FOOTER ─────────────────────────────────────── */
+    .footer {
+      background: var(--ink); color: #fff;
+      padding: 64px 0 32px;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+      gap: 3rem; margin-bottom: 3rem;
+    }
+    .footer-logo img { height: 40px; margin-bottom: 1.25rem; filter: brightness(0) invert(1); }
+    .footer-brand p { font-size: .84rem; color: rgba(255,255,255,.45); line-height: 1.7; max-width: 280px; margin-bottom: 1.5rem; }
+    .footer-social { display: flex; gap: .6rem; }
+    .social-btn {
+      width: 34px; height: 34px; border-radius: 8px;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .8rem; color: rgba(255,255,255,.5); transition: all .2s;
+    }
+    .social-btn:hover { background: rgba(65,207,208,.15); border-color: var(--teal); color: var(--teal); }
+    .footer-col h4 {
+      font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
+      color: rgba(255,255,255,.35); margin-bottom: 1.25rem;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: .55rem; }
+    .footer-links a { font-size: .84rem; color: rgba(255,255,255,.5); transition: color .2s; }
+    .footer-links a:hover { color: var(--teal); }
+    .footer-contact p { font-size: .84rem; color: rgba(255,255,255,.5); margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.07);
+      padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.25); margin: 0; }
+    .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-bottom-links a { font-size: .78rem; color: rgba(255,255,255,.25); transition: color .2s; }
+    .footer-bottom-links a:hover { color: var(--teal); }
+
+    /* ── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 900px) {
+      .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column; position: fixed;
+        inset: 0; background: #fff; z-index: 199; list-style: none;
+        justify-content: center; align-items: center; gap: 2.25rem;
+      }
+      .nav-links.open a { font-size: 1.15rem; font-weight: 600; color: var(--ink); }
+    }
+    @media (max-width: 640px) {
+      .container { padding: 0 1.25rem; }
+      .section { padding: 56px 0; }
+      .nav-inner { padding: .875rem 1.25rem; }
+      h2.display { font-size: clamp(2rem, 9vw, 3rem); }
+      .booking-card { padding: 2rem 1.5rem; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: .75rem; }
+      .footer-bottom-links { justify-content: center; flex-wrap: wrap; gap: 1rem; }
+    }
+
+/* mobile-menu-fix-start */
+@media (max-width: 768px) {
+  /* Kill stacking context on nav-wrap when menu is open */
+  body.menu-open .nav-wrap {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  /* Bulletproof full-screen mobile menu overlay */
+  .nav-links.open {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    background: #ffffff !important;
+    z-index: 9999 !important;
+    list-style: none !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    margin: 0 !important;
+    padding: 2rem !important;
+    overflow-y: auto !important;
+  }
+  .nav-links.open a {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    color: var(--ink) !important;
+    padding: .75rem 1.5rem !important;
+    display: block !important;
+  }
+  .nav-links.open li {
+    list-style: none !important;
+  }
+  /* Hamburger sits on top of overlay */
+  .hamburger {
+    z-index: 10000 !important;
+    position: relative;
+  }
+  /* Prevent horizontal scroll site-wide on mobile */
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+}
+/* mobile-menu-fix-end */
+</style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBFJKD962N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JBFJKD962N');
+  </script>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AccountingService",
+      "name": "Tides Bookkeeping LLC",
+      "description": "Remote bookkeeping and financial services for small businesses nationwide. Clean books, clear numbers, confident decisions.",
+      "url": "https://www.tidesbookkeeping.com",
+      "telephone": "+1-864-559-2686",
+      "email": "support@tidesbookkeeping.com",
+      "image": "https://www.tidesbookkeeping.com/logo.png",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Greenville",
+        "addressRegion": "SC",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/tides-bookkeeping",
+        "https://www.facebook.com/thetidesbookkeeping",
+        "https://www.instagram.com/tidesbookkeeping/"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.tidesbookkeeping.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.tidesbookkeeping.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ohio Municipal Income Tax & RITA: A Small Business Owner's Guide",
+          "item": "https://www.tidesbookkeeping.com/blog-ohio-municipal-income-tax-rita-guide"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+<!-- auto-schema-start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Ohio Municipal Income Tax & RITA: A Small Business Owner's Guide",
+  "description": "Ohio's 600+ cities levy their own income tax. A plain-English guide to RITA vs CCA, employer withholding, the 20-day rule, net-profit returns, and the CAT.",
+  "url": "https://www.tidesbookkeeping.com/blog-ohio-municipal-income-tax-rita-guide",
+  "mainEntityOfPage": "https://www.tidesbookkeeping.com/blog-ohio-municipal-income-tax-rita-guide",
+  "image": "https://www.tidesbookkeeping.com/logo.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Tides Bookkeeping",
+    "url": "https://www.tidesbookkeeping.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tides Bookkeeping",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.tidesbookkeeping.com/logo.png"
+    }
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-07-13"
+}
+</script>
+<!-- auto-schema-end -->
+</head>
+<body>
+
+
+<!-- NAV -->
+<nav class="nav-wrap">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="who-we-serve.html">Who We Serve</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="https://go.tidesbookkeeping.com/tiered-pricing">Pricing</a></li>
+      <li><a href="/blog" class="active">Blog</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://portal.tidesbookkeeping.com" class="btn btn-outline">Sign In</a>
+      <a href="schedule.html" class="btn btn-primary">Book Appointment</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="blog.html">Blog</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">Ohio Municipal Income Tax &amp; RITA: A Small Business Owner's Guide</span>
+  </div>
+</div>
+
+<!-- ARTICLE HERO -->
+<section class="page-hero" style="padding:48px 0 16px;">
+  <div class="container" style="max-width:760px;">
+    <div class="eyebrow">
+      <span style="width:6px;height:6px;border-radius:50%;background:var(--teal);"></span>
+      Blog
+    </div>
+    <h1 class="display" style="font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.05;margin-bottom:1rem;">Ohio Municipal Income Tax &amp; RITA: A Small Business Owner's Guide</h1>
+    <div style="display:flex;gap:1.25rem;align-items:center;color:var(--muted);font-size:.86rem;margin-top:1.25rem;flex-wrap:wrap;">
+      <span style="display:flex;align-items:center;gap:.4rem;">
+        <span style="width:28px;height:28px;border-radius:50%;background:var(--teal-lt);display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;">T</span>
+        Tides Bookkeeping
+      </span>
+      <span>·</span>
+      <time datetime="2026-07-13">July 13, 2026</time>
+      <span>·</span>
+      <span>13 min read</span>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE BODY -->
+<article class="section" style="padding:24px 0 64px;">
+  <div class="container" style="max-width:740px;">
+
+    <p style="font-size:1.15rem;line-height:1.7;color:var(--body);margin-bottom:1.75rem;">
+      Ohio is one of the most complicated states in the country for local taxes — not because the rates are high, but because there are so many taxing bodies. More than 600 cities and villages each levy their own income tax, each with its own rate and rules. Add in three separate collection systems (RITA, CCA, and self-administered cities like Columbus and Cincinnati), employer withholding rules that hinge on <em>where</em> your people physically work, and a separate gross-receipts tax on top, and you have a compliance puzzle that trips up even experienced owners. This guide walks through how it all actually works — as of 2026 — so you know what you owe, to whom, and how to keep it clean.
+    </p>
+
+    <div style="background:var(--bg-alt);border:1px solid var(--border);border-left:4px solid var(--teal);border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0 2rem;">
+      <p style="font-size:.9rem;color:var(--body);margin:0;"><strong>A note on numbers:</strong> Ohio rewrote several of these rules in the last few years — the Commercial Activity Tax exclusion in particular jumped dramatically. The figures below are current as of 2026, but municipal rates and thresholds change. Always confirm the current rate for your specific city and the current CAT threshold before filing. This article is educational, not tax advice.</p>
+    </div>
+
+    <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-top:2.5rem;margin-bottom:.75rem;">The 600-municipality problem</h2>
+    <p>Most states have a single state income tax and, at most, a handful of local ones. Ohio has hundreds. Under Ohio Revised Code Chapter 718 — the statewide framework that governs all of them — individual cities and villages are allowed to levy their own municipal income tax, and roughly 600-plus of them do. Rates generally run from about 0.5% at the low end to 3.0% at the high end, with 2.0% to 2.5% being the common range for larger cities.</p>
+    <p>What makes this hard for a business owner isn't any one rate. It's that the tax follows two different triggers at once:</p>
+    <ul style="padding-left:1.5rem;margin-bottom:1.25rem;">
+      <li style="margin-bottom:.5rem;"><strong>Where your business earns its money.</strong> If your company does business in a city — has a location there, sends employees there, performs work there — that city generally wants a net-profit return and a slice of the profit apportioned to it.</li>
+      <li style="margin-bottom:.5rem;"><strong>Where your employees physically work.</strong> As an employer, you're required to withhold municipal income tax from each employee's wages based on the city where they actually perform the work — which is not always the city where your office sits, and definitely not always the city where they live.</li>
+    </ul>
+    <p>A single Ohio business can easily touch four or five municipalities: the city where the office is, the cities where a couple of remote employees live and work, the cities where crews perform jobs, and the city where the owner lives. Each of those relationships can create a filing obligation. That's the core of the Ohio problem, and it's why local tax here demands real bookkeeping discipline rather than a once-a-year scramble. If you operate across the state, our <a href="state-ohio.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">Ohio bookkeeping overview</a> lays out how we handle multi-city clients.</p>
+
+    <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-top:2.5rem;margin-bottom:.75rem;">Who administers what: RITA vs CCA vs self-administered cities</h2>
+    <p>Here's the part that confuses almost everyone. Even though the rules come from one state statute, the <em>collection</em> is split across three systems. Figuring out which one applies to a given city is the first practical step in getting a filing right.</p>
+
+    <h3 style="font-size:1.15rem;color:var(--ink);margin-top:1.75rem;margin-bottom:.5rem;">RITA — the Regional Income Tax Agency</h3>
+    <p>RITA is the largest collector. It administers municipal income tax for close to 400 Ohio cities and villages — roughly half of all the municipalities in the state that levy the tax. If your city is a RITA member, you register, withhold, and file with RITA (using forms like the Form 11 for employer withholding and the Form 27 net-profit return), not directly with the city. One agency, one portal, many member cities. RITA publishes a member list and a rates table showing each city's rate and how it handles resident credits.</p>
+
+    <h3 style="font-size:1.15rem;color:var(--ink);margin-top:1.75rem;margin-bottom:.5rem;">CCA — the Central Collection Agency</h3>
+    <p>CCA is the second collector. It's run principally on behalf of the City of Cleveland but also collects for roughly three to four dozen other municipalities. Functionally it works like RITA — a shared collector standing in for a group of member cities — but it's a separate agency with separate forms, separate logins, and its own member list. A business with locations in <a href="city-cleveland-oh.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">Cleveland</a> and a RITA suburb will end up filing in <em>both</em> systems.</p>
+
+    <h3 style="font-size:1.15rem;color:var(--ink);margin-top:1.75rem;margin-bottom:.5rem;">Self-administered cities — Columbus, Cincinnati, Toledo and others</h3>
+    <p>Several large cities don't outsource to RITA or CCA at all — they run their own income tax offices. The big three are <a href="city-columbus-oh.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">Columbus</a>, <a href="city-cincinnati-oh.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">Cincinnati</a>, and Toledo, but they're not the only ones. If you do business in a self-administered city, you register and file directly with that city's tax division on that city's forms and deadlines.</p>
+    <p>A quick sense of the rates in the biggest markets, as of 2026:</p>
+    <ul style="padding-left:1.5rem;margin-bottom:1.25rem;">
+      <li style="margin-bottom:.5rem;"><strong>Columbus:</strong> 2.5% (self-administered)</li>
+      <li style="margin-bottom:.5rem;"><strong>Cleveland:</strong> 2.5% (collected through CCA)</li>
+      <li style="margin-bottom:.5rem;"><strong>Cincinnati:</strong> 1.8% (self-administered)</li>
+      <li style="margin-bottom:.5rem;"><strong>Toledo, Akron, and many others:</strong> commonly around 2.25%–2.5% (varies; some via RITA, some self-administered)</li>
+    </ul>
+    <p>The practical takeaway: before you can file, you have to answer "who collects for this city?" for every municipality you touch. Get that wrong and you file with the wrong agency, miss the actual deadline, and end up with a delinquency notice from a city you thought you'd already paid.</p>
+
+    <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-top:2.5rem;margin-bottom:.75rem;">How the tax works: residence, work location, and the resident credit</h2>
+    <p>Municipal income tax in Ohio generally follows the money to two places: where it's <em>earned</em> (the work-location city) and where the earner <em>lives</em> (the residence city). Both can have a claim, which is why the "resident credit" exists to prevent full double taxation.</p>
+    <p>Here's the typical pattern for an individual. Say an employee lives in a suburb that levies 2.0% and commutes to work in a city that levies 2.5%. The work city taxes the wages earned there — that's withheld from the paycheck. The residence city <em>also</em> has the right to tax its residents' income, but most Ohio cities with a rate of 2.0% or higher grant a credit for tax already paid to the work city, often up to 100% of the residence-city rate. So the employee frequently ends up owing little or nothing extra to the home city — but the residence city still gets to decide the credit, and some grant only a partial credit, leaving a balance due when the resident files.</p>
+    <p>This matters to you in two ways. If you or family members draw wages, your personal residence-city return can carry a balance even when withholding looked complete. And as an employer, you're responsible for withholding correctly to the <em>work</em> city — the credit is the individual's issue to settle at filing, not something you net out in payroll.</p>
+
+    <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-top:2.5rem;margin-bottom:.75rem;">Employer withholding — the rule that catches everyone</h2>
+    <p>If you have even one W-2 employee in Ohio, this is the section that matters most. The general rule: you must withhold municipal income tax based on where the employee <em>physically performs the work</em>. Not where your office is. Not where the employee lives. Where the work actually happens.</p>
+    <p>For a single-location business with everyone in one building, that's simple — you withhold to that one city. It gets complicated the moment work happens in more than one municipality: a plumber running jobs across four cities, a sales rep visiting client sites, a consultant splitting time between the office and a client's downtown location, or a remote employee working from a home in a different city than the office. Each place work is performed can, in principle, create a withholding obligation.</p>
+
+    <h3 style="font-size:1.15rem;color:var(--ink);margin-top:1.75rem;margin-bottom:.5rem;">The 20-day occasional-entrant rule</h3>
+    <p>Because withholding to a new city every time someone works there for an afternoon would be unworkable, Ohio Revised Code Section 718.011 provides the <strong>20-day occasional-entrant exception</strong>. In plain terms:</p>
+    <ul style="padding-left:1.5rem;margin-bottom:1.25rem;">
+      <li style="margin-bottom:.5rem;">You generally do <strong>not</strong> have to withhold to a non-principal-place-of-work city if the employee works there <strong>20 or fewer days</strong> in the calendar year. For those first 20 days, you can keep withholding to the employee's principal place of work instead.</li>
+      <li style="margin-bottom:.5rem;">Once an employee exceeds 20 days in that other city, the rule flips: <strong>beginning on the 21st day</strong>, you must withhold municipal tax to that city for the work performed there going forward.</li>
+      <li style="margin-bottom:.5rem;">A "day" counts if the employee spends more time working in that city than in any other single municipality that day — so it's a day-counting exercise, not an hour-by-hour split.</li>
+      <li style="margin-bottom:.5rem;">The exception is a <strong>shield you may choose to use</strong>, not a mandate. A qualifying employer can rely on it to simplify withholding, but you have to actually track the days to know when the 21st-day trigger hits.</li>
+    </ul>
+    <p>The trap is obvious once you say it out loud: you cannot apply a 20-day rule if you aren't counting days. Businesses with mobile crews — contractors, trades, field service, delivery — need a system that records which city each employee worked in each day. Without it, you either over-withhold everywhere (annoying and refund-generating) or under-withhold and get hit with delinquency notices from cities you didn't realize you'd crossed a threshold in. This is exactly the kind of tracking that belongs in a well-run <a href="service-payroll.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">payroll process</a>, not in a shoebox at year-end.</p>
+
+    <h3 style="font-size:1.15rem;color:var(--ink);margin-top:1.75rem;margin-bottom:.5rem;">The small-employer exception</h3>
+    <p>There's a genuine simplifier for the smallest businesses. A "small employer" — generally one with less than $500,000 in total revenue in the preceding taxable year — may withhold municipal tax only to the city of its fixed location, even when employees perform work in other municipalities. If you qualify, you withhold to your one home city and skip the multi-city day-counting entirely. It's one of the few places Ohio's rules cut a small business a break, so it's worth confirming whether you're under the threshold before you build a complicated tracking system you may not need.</p>
+
+    <h3 style="font-size:1.15rem;color:var(--ink);margin-top:1.75rem;margin-bottom:.5rem;">Remote work made this messier</h3>
+    <p>Remote and hybrid work turned a manageable problem into a live one. When employees work from home in a city different from the office, the "where the work is performed" test points to the home city — creating withholding obligations in municipalities where your business has no office at all. Ohio's temporary pandemic-era rules that let employers keep withholding to the office city have expired, so you now generally have to withhold based on where remote employees actually sit. If your team went hybrid and your withholding setup didn't change, it's very likely out of date.</p>
+
+    <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-top:2.5rem;margin-bottom:.75rem;">Net-profit returns: the business's own filing</h2>
+    <p>Withholding covers your employees' wages. Separately, your <em>business</em> owes municipal income tax on its own net profit in each city where it does business. That's the net-profit return — Form 27 in RITA cities, the equivalent form in CCA and self-administered cities.</p>
+    <p>How much profit each city can tax comes down to <strong>apportionment</strong>. Rather than taxing your entire company profit in every city, Ohio uses a three-factor formula that splits taxable profit among cities based on the share of your property, payroll, and sales located in each. A contractor headquartered in one city but running most of its jobs in another will apportion a large chunk of profit to the city where the work — and the payroll and the sales — actually happened. Each city then taxes its apportioned slice at its own rate.</p>
+    <p>A few practical notes on net-profit returns:</p>
+    <ul style="padding-left:1.5rem;margin-bottom:1.25rem;">
+      <li style="margin-bottom:.5rem;"><strong>Entity type doesn't excuse you.</strong> Sole proprietors, single-member LLCs, partnerships, S-corps, and C-corps can all owe municipal net-profit tax where they do business. Pass-through owners may report differently, but the business activity still triggers filings.</li>
+      <li style="margin-bottom:.5rem;"><strong>Small balances still require returns.</strong> Even if apportionment leaves only a small amount taxable in a given city, that city generally still expects a return. Non-filing — not underpayment — is what generates most of the ugly notices.</li>
+      <li style="margin-bottom:.5rem;"><strong>Estimated payments apply.</strong> Cities generally require quarterly estimates once your liability passes a modest threshold, just like the state and federal systems.</li>
+      <li style="margin-bottom:.5rem;"><strong>Your accounting method flows through.</strong> The net-profit base starts from your federal taxable income with municipal adjustments, so whether you keep your books on <a href="blog-cash-vs-accrual-accounting.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">cash or accrual</a> ripples straight into what each city sees.</li>
+    </ul>
+
+    <h3 style="font-size:1.15rem;color:var(--ink);margin-top:1.75rem;margin-bottom:.5rem;">The centralized-filing option — one return for all your cities</h3>
+    <p>Ohio does offer relief here, and it's underused. Since the 2018 tax year, a business can elect to have the <strong>state</strong> administer its municipal net-profit tax through the Ohio Business Gateway. Instead of filing separate net-profit returns city by city, you make a one-time election with the Ohio Tax Commissioner and then file a <em>single</em> municipal net-profit return with the Ohio Department of Taxation, which calculates the apportionment, collects the money, and distributes it to the appropriate municipalities for you.</p>
+    <p>For a business operating in a handful of cities, this can collapse a stack of separate filings into one process. It doesn't change what you owe — apportionment and rates are the same — but it dramatically reduces the portals, logins, forms, and deadlines you manage. Whether it's worth electing depends on how many cities you touch and how your books are set up.</p>
+
+    <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-top:2.5rem;margin-bottom:.75rem;">The Ohio CAT: the gross-receipts tax that just got a lot friendlier</h2>
+    <p>On top of municipal income tax, Ohio levies the <strong>Commercial Activity Tax (CAT)</strong> — a tax on gross receipts, not on profit. It's a state tax, separate from the city taxes above, and it's the one item where recent law changes are overwhelmingly good news for small and mid-size businesses. This is the number the spec flagged to verify, so here it is precisely, as of 2026:</p>
+    <ul style="padding-left:1.5rem;margin-bottom:1.25rem;">
+      <li style="margin-bottom:.5rem;"><strong>Exclusion amount:</strong> For 2025 and forward, only businesses with <strong>more than $6 million</strong> in annual taxable gross receipts are subject to the CAT. If your Ohio taxable gross receipts are $6 million or less in the calendar year, you owe <strong>no CAT at all</strong>.</li>
+      <li style="margin-bottom:.5rem;"><strong>Rate:</strong> 0.26%, applied only to the taxable gross receipts <em>above</em> the $6 million exclusion.</li>
+      <li style="margin-bottom:.5rem;"><strong>Filing frequency:</strong> All active CAT accounts now file <strong>quarterly</strong>. The old annual-filing option was eliminated starting in 2024.</li>
+      <li style="margin-bottom:.5rem;"><strong>No more annual minimum tax.</strong> The former annual minimum tax (which ranged from $150 up to $2,600) was eliminated beginning in 2024. You either owe 0.26% on receipts over $6 million or you owe nothing.</li>
+    </ul>
+    <p>The scale of that shift is worth appreciating. Not long ago the CAT reached businesses with as little as $150,000 in gross receipts. The exclusion climbed to $3 million for 2024 and then to $6 million for 2025 and beyond. The result: the vast majority of Ohio small businesses that used to file and pay CAT now owe nothing — and many can cancel their accounts entirely (a final return is required to close the account).</p>
+    <p>Two cautions for a growing firm, though. First, this is a <strong>gross-receipts</strong> tax — it's measured on total revenue, not profit, so a high-volume, thin-margin business (think distribution, wholesale, high-throughput retail) can cross $6 million in receipts while still running modest profit. If you're scaling toward that line, watch receipts, not net income. Second, once you exceed the threshold you must register within 30 days, and if you closed your account earlier you'll need to reactivate it. Tracking gross receipts against the $6 million mark is a bookkeeping job — one more reason to have current numbers rather than a year-end surprise.</p>
+
+    <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-top:2.5rem;margin-bottom:.75rem;">Common pitfalls we see</h2>
+    <p>After enough Ohio clients, the same handful of mistakes show up again and again. None of them are exotic — they're the predictable result of a many-jurisdiction system meeting once-a-year bookkeeping.</p>
+    <ul style="padding-left:1.5rem;margin-bottom:1.25rem;">
+      <li style="margin-bottom:.65rem;"><strong>Withholding to the office city for remote employees.</strong> The number-one error since 2021. Work performed from a home in another city generally has to be withheld to that city. If your payroll setup froze in place when your team went hybrid, it's probably wrong now.</li>
+      <li style="margin-bottom:.65rem;"><strong>Not counting days for mobile crews.</strong> The 20-day rule only protects you if you actually track where each employee worked each day. No tracking, no defensible position — just guesswork and notices.</li>
+      <li style="margin-bottom:.65rem;"><strong>Filing with the wrong agency.</strong> Assuming a suburb is a RITA city when it's actually CCA or self-administered — or vice versa — means the money goes to the wrong place and the right city still shows you as delinquent.</li>
+      <li style="margin-bottom:.65rem;"><strong>Ignoring net-profit returns because "the balance is tiny."</strong> Cities pursue <em>non-filing</em> aggressively even when the tax due is small. A missing return generates penalties that dwarf the actual liability.</li>
+      <li style="margin-bottom:.65rem;"><strong>Missing residence-city returns.</strong> Owners who assume payroll withholding covered everything, then discover their home city grants only a partial credit and expects an individual return with a balance due.</li>
+      <li style="margin-bottom:.65rem;"><strong>Still filing (or fearing) the CAT unnecessarily.</strong> Plenty of small businesses keep filing CAT out of habit, or set aside money for it, without realizing the $6 million exclusion took them out of the tax entirely.</li>
+      <li style="margin-bottom:.65rem;"><strong>Treating S-corp owner wages casually.</strong> If you run an S-corp, the payroll you must run for yourself has to be withheld to the right municipality too. That interacts with the <a href="blog-reasonable-compensation-s-corp.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">reasonable-compensation</a> rules the IRS enforces — get the wage right for federal purposes, then make sure the municipal withholding on it is right as well.</li>
+    </ul>
+
+    <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-top:2.5rem;margin-bottom:.75rem;">How good bookkeeping keeps municipal filings clean</h2>
+    <p>Almost every Ohio local-tax headache traces back to one root cause: the information needed to file correctly wasn't captured when the activity happened. You can't reconstruct in April which city an employee worked in last August if nobody recorded it as you went. Clean municipal compliance isn't a tax-season project — it's a bookkeeping-discipline project that pays off at tax time.</p>
+    <p>Here's what "set up right" looks like for an Ohio business:</p>
+    <ul style="padding-left:1.5rem;margin-bottom:1.25rem;">
+      <li style="margin-bottom:.5rem;"><strong>A jurisdiction map.</strong> A living list of every city your business touches — office, employee home cities, job-site cities — tagged with who collects for each (RITA, CCA, or self-administered) and the rate. This is the reference that stops wrong-agency filings.</li>
+      <li style="margin-bottom:.5rem;"><strong>Payroll configured to the right work cities.</strong> Withholding set to where people actually work, updated whenever someone moves, goes remote, or shifts job sites — with day tracking for anyone who triggers the 20-day rule.</li>
+      <li style="margin-bottom:.5rem;"><strong>Revenue tagged by location.</strong> Enough detail in your books to support the apportionment on each net-profit return, so the three-factor formula rests on real numbers instead of estimates.</li>
+      <li style="margin-bottom:.5rem;"><strong>A running view of gross receipts.</strong> So you know well before year-end whether you're approaching the $6 million CAT line — or comfortably clear of it.</li>
+      <li style="margin-bottom:.5rem;"><strong>A filing calendar.</strong> Every city, agency, and CAT deadline in one place, so nothing lapses into a delinquency notice.</li>
+    </ul>
+    <p>That's the everyday work of <a href="service-monthly-bookkeeping.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">monthly bookkeeping</a> done with Ohio in mind. When your books are current and coded to the right jurisdictions, and your <a href="service-payroll.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">payroll</a> is withholding to the correct work cities, the returns almost fill themselves — RITA, CCA, and the self-administered cities all read from the same clean set of numbers. At Tides we run this for clients across the state, from <a href="service-monthly-bookkeeping-columbus-oh.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">Columbus</a> to <a href="service-monthly-bookkeeping-cincinnati-oh.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">Cincinnati</a> and the RITA and CCA suburbs in between, and for <a href="industry-professional-services-columbus-oh.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">professional-services firms</a> whose people are constantly moving between client sites. The goal is simple: never guess at a municipal filing again.</p>
+    <p>The same discipline also keeps you off the IRS radar federally — the sloppy, reconstruct-it-later habits that create municipal problems are the same ones behind most of the <a href="blog-bookkeeping-mistakes-that-trigger-irs-audits.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">bookkeeping mistakes that trigger audits</a>. Clean books solve both at once.</p>
+
+    <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-top:2.5rem;margin-bottom:.75rem;">The bottom line</h2>
+    <p>Ohio's local-tax system is a lot to hold in your head: 600-plus municipalities, three collection systems, withholding that follows your employees around the map, a 20-day exception you can only use if you count days, net-profit returns in every city you do business, and a gross-receipts tax that now spares almost everyone under $6 million. But all of it depends on capturing the right information as business happens rather than digging for it under deadline. Get the bookkeeping right, keep payroll pointed at the correct work cities, watch your gross-receipts line, and confirm current rates before you file — and Ohio's most complicated tax layer becomes a routine monthly process instead of an annual fire drill.</p>
+
+    <!-- Inline CTA card -->
+    <div style="background:linear-gradient(135deg,var(--navy) 0%,#1d3d7e 100%);border-radius:20px;padding:2rem;margin:3rem 0 1.5rem;color:#fff;text-align:center;">
+      <h3 style="color:#fff;font-size:1.4rem;margin-bottom:.5rem;">Filing in more than one Ohio city?</h3>
+      <p style="color:rgba(255,255,255,.75);font-size:.95rem;margin-bottom:1.25rem;">Book a free 15-minute call. We'll map your municipalities, check your withholding, and tell you exactly what you owe — no sales pitch.</p>
+      <a href="schedule.html" class="btn btn-teal">Schedule Free Consultation →</a>
+    </div>
+
+    <!-- RELATED POSTS — auto-injected by _internal/related-links.py -->
+    <!-- related-start -->
+    <div style="margin-top:4rem;padding-top:3rem;border-top:1px solid var(--border);">
+      <div class="eyebrow">Keep Reading</div>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--navy);margin-bottom:1.5rem;letter-spacing:.02em;">Keep Reading</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
+      <a href="blog-sales-tax-nexus-explained.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;">
+        <div style="font-weight:700;color:var(--ink);font-size:.95rem;margin-bottom:.2rem;">Sales Tax Nexus: When Do You Owe Tax in Another State?</div>
+        <div style="font-size:.78rem;color:var(--muted);">Sales tax nexus explained: physical vs economic nexus, post-Wayfair state thresh...</div>
+      </a>
+      <a href="blog-hawaii-general-excise-tax-explained.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;">
+        <div style="font-weight:700;color:var(--ink);font-size:.95rem;margin-bottom:.2rem;">Hawaii's General Excise Tax (GET), Explained for Small Businesses</div>
+        <div style="font-size:.78rem;color:var(--muted);">Hawaii's General Excise Tax (GET) isn't a sales tax — it's a gross-receipts tax ...</div>
+      </a>
+      <a href="blog-bookkeeping-for-restaurants.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;">
+        <div style="font-weight:700;color:var(--ink);font-size:.95rem;margin-bottom:.2rem;">Bookkeeping for Restaurants: COGS, Tips &amp; Payroll</div>
+        <div style="font-size:.78rem;color:var(--muted);">Restaurant bookkeeping made clear: track COGS and food-cost %, prime cost, tips ...</div>
+      </a>
+      <a href="service-accounts-payable-receivable.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;">
+        <div style="font-weight:700;color:var(--ink);font-size:.95rem;margin-bottom:.2rem;">Accounts Payable Receivable</div>
+        <div style="font-size:.78rem;color:var(--muted);">Service</div>
+      </a>
+      </div>
+    </div>
+      <!-- related-end -->
+
+  </div>
+</article>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><a href="index.html"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+        <p>Remote bookkeeping and financial services for small businesses nationwide. Clean books. Clear numbers. Confident decisions.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/tides-bookkeeping" target="_blank" rel="noopener" class="social-btn">in</a>
+          <a href="https://www.facebook.com/thetidesbookkeeping" target="_blank" rel="noopener" class="social-btn">f</a>
+          <a href="https://www.instagram.com/tidesbookkeeping/" target="_blank" rel="noopener" class="social-btn">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="service-monthly-bookkeeping.html">Monthly Bookkeeping</a></li>
+          <li><a href="service-catchup-bookkeeping.html">Catch-Up Bookkeeping</a></li>
+          <li><a href="service-payroll.html">Payroll Support</a></li>
+          <li><a href="service-financial-reporting.html">Financial Reporting</a></li>
+          <li><a href="service-bank-reconciliation.html">Bank Reconciliation</a></li>
+          <li><a href="services.html">View All Services →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Who We Serve</h4>
+        <ul class="footer-links">
+          <li><a href="industry-real-estate.html">Real Estate</a></li>
+          <li><a href="industry-contractors-trades.html">Contractors &amp; Trades</a></li>
+          <li><a href="industry-restaurants-bars.html">Restaurants &amp; Bars</a></li>
+          <li><a href="industry-healthcare.html">Healthcare Practices</a></li>
+          <li><a href="industry-professional-services.html">Professional Services</a></li>
+          <li><a href="industry-ecommerce-retail.html">E-Commerce &amp; Retail</a></li>
+          <li><a href="who-we-serve.html">All Industries →</a></li>
+          <li><a href="areas-we-serve.html">Areas We Serve</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact footer-col">
+        <h4>Contact</h4>
+        <p>📧 support@tidesbookkeeping.com</p>
+        <p>📞 (864) 559-2686</p>
+        <p>📍 Greenville, South Carolina</p>
+        <div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:.6rem;">
+          <a href="contact.html" class="btn btn-outline-white" style="font-size:.82rem;padding:.65rem 1.4rem;justify-content:center;">Contact Us →</a>
+          <a href="schedule.html" class="btn btn-teal" style="font-size:.82rem;padding:.65rem 1.4rem;">Book a Free Call</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tides Bookkeeping LLC. All rights reserved.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="sitemap.xml">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    const btn   = document.getElementById('hamburger');
+    const links = document.querySelector('.nav-links');
+    if (!btn || !links) return;
+    btn.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        btn.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
+</script>
+
+<!-- GHL Chat Widget -->
+<div data-chat-widget data-widget-id="69614819668b0f723ec311b9" data-location-id="MbY1ICQ6HdzVOrgFncoI"></div>
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69614819668b0f723ec311b9"></script>
+
+
+<script>
+/* mobile-menu-js-fix-start */
+(function(){
+  const btn = document.getElementById('hamburger');
+  const links = document.querySelector('.nav-links');
+  if (!btn || !links) return;
+  const close = () => {
+    links.classList.remove('open');
+    btn.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    document.body.style.overflow = '';
+  };
+  // Remove any existing listeners by cloning
+  const newBtn = btn.cloneNode(true);
+  btn.parentNode.replaceChild(newBtn, btn);
+  newBtn.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    newBtn.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', close);
+  });
+  // Close menu on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+})();
+/* mobile-menu-js-fix-end */
+</script>
+
+</body>
+</html>

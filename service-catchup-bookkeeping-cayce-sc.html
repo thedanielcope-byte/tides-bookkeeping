@@ -426,6 +426,16 @@
   }
 }
 /* mobile-menu-fix-end */
+    .location-strip{background:var(--navy);color:#fff;padding:2.25rem 0;}
+    .location-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;}
+    .location-text h3{font-size:1.15rem;margin:0 0 .25rem;color:#fff;}
+    .location-text p{margin:0;color:rgba(255,255,255,.82);font-size:.95rem;}
+    .location-pills{display:flex;gap:.5rem;flex-wrap:wrap;}
+    .loc-pill{display:inline-block;padding:.4rem .85rem;border-radius:999px;background:rgba(255,255,255,.12);
+      color:#fff;text-decoration:none;font-size:.85rem;font-weight:600;transition:background .15s;}
+    .loc-pill:hover{background:var(--teal);color:var(--ink);}
+    @media(max-width:700px){.location-inner{flex-direction:column;align-items:flex-start;}}
+
 </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBFJKD962N"></script>
@@ -437,7 +447,7 @@
   </script>
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
-  {
+{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -445,12 +455,23 @@
       "name": "Catch-Up Bookkeeping",
       "provider": {
         "@type": "AccountingService",
-        "name": "Tides Bookkeeping"
+        "name": "Tides Bookkeeping",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Greenville",
+          "addressRegion": "SC",
+          "addressCountry": "US"
+        },
+        "telephone": "+1-864-559-2686"
       },
       "description": "Professional catch-up bookkeeping that clears months or years of backlog, reconciles all accounts, and delivers tax-ready financials.",
       "areaServed": {
-        "@type": "Country",
-        "name": "United States"
+        "@type": "City",
+        "name": "Cayce",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "South Carolina"
+        }
       },
       "url": "https://www.tidesbookkeeping.com/service-catchup-bookkeeping-cayce-sc"
     },
@@ -466,12 +487,29 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Services",
-          "item": "https://www.tidesbookkeeping.com/services"
+          "name": "Areas We Serve",
+          "item": "https://www.tidesbookkeeping.com/areas-we-serve"
         },
         {
           "@type": "ListItem",
           "position": 3,
+          "name": "South Carolina",
+          "item": "https://www.tidesbookkeeping.com/state-south-carolina"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Lexington County",
+          "item": "https://www.tidesbookkeeping.com/county-lexington-sc"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Cayce, SC"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
           "name": "Catch-Up Bookkeeping",
           "item": "https://www.tidesbookkeeping.com/service-catchup-bookkeeping-cayce-sc"
         }
@@ -479,7 +517,7 @@
     }
   ]
 }
-  </script>
+</script>
 <!-- auto-schema-start -->
 <script type="application/ld+json">
 {
@@ -590,12 +628,16 @@
 <div class="breadcrumb">
   <div class="breadcrumb-inner">
     <a href="index.html">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <a href="services.html">Services</a>
-    <span class="breadcrumb-sep">›</span>
-    <a href="service-catchup-bookkeeping.html">Catch-Up Bookkeeping</a>
-    <span class="breadcrumb-sep">›</span>
-    <span class="breadcrumb-current">Cayce, SC</span>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <a href="areas-we-serve.html">Areas We Serve</a>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <a href="state-south-carolina.html">South Carolina</a>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <a href="county-lexington-sc.html">Lexington County</a>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <a href="city-cayce-sc.html">Cayce, SC</a>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <span class="breadcrumb-current">Catch-Up Bookkeeping</span>
   </div>
 </div>
 
@@ -1031,6 +1073,18 @@
       <a href="services.html" class="btn btn-outline-white btn-lg">See All Services →</a>
     </div>
     <p class="cta-fine">No credit card required &nbsp;·&nbsp; No long-term contracts &nbsp;·&nbsp; Cancel anytime</p>
+  </div>
+</section>
+
+<section class="res-section">
+  <div class="container">
+    <div class="section-header centered"><div class="eyebrow">Local &amp; State Resources</div><h2 class="display" style="font-size:1.6rem;">Business &amp; Tax Resources</h2><p style="max-width:640px;margin:.5rem auto 0;">Official government resources for registering, filing, and staying compliant. Tides handles your books; these help with the rest.</p></div>
+    <div class="res-grid">
+      <a class="res-card" href="https://dor.sc.gov" target="_blank" rel="noopener noreferrer"><div class="res-name">South Carolina Dept. of Revenue</div><div class="res-desc">State tax filing, sales &amp; use tax, business tax accounts</div></a>
+      <a class="res-card" href="https://sos.sc.gov" target="_blank" rel="noopener noreferrer"><div class="res-name">SC Secretary of State — Business Filings</div><div class="res-desc">Register or manage a business entity in South Carolina</div></a>
+      <a class="res-card" href="https://www.irs.gov/businesses/small-businesses-self-employed" target="_blank" rel="noopener noreferrer"><div class="res-name">IRS — Small Business &amp; Self-Employed</div><div class="res-desc">Federal taxes, EIN, forms, and recordkeeping guidance</div></a>
+      <a class="res-card" href="https://www.sba.gov/" target="_blank" rel="noopener noreferrer"><div class="res-name">U.S. Small Business Administration</div><div class="res-desc">Federal programs, guidance, and local SBA resources</div></a>
+    </div>
   </div>
 </section>
 

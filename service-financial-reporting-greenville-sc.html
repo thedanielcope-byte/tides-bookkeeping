@@ -419,12 +419,22 @@
   }
 }
 /* mobile-menu-fix-end */
+    .location-strip{background:var(--navy);color:#fff;padding:2.25rem 0;}
+    .location-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;}
+    .location-text h3{font-size:1.15rem;margin:0 0 .25rem;color:#fff;}
+    .location-text p{margin:0;color:rgba(255,255,255,.82);font-size:.95rem;}
+    .location-pills{display:flex;gap:.5rem;flex-wrap:wrap;}
+    .loc-pill{display:inline-block;padding:.4rem .85rem;border-radius:999px;background:rgba(255,255,255,.12);
+      color:#fff;text-decoration:none;font-size:.85rem;font-weight:600;transition:background .15s;}
+    .loc-pill:hover{background:var(--teal);color:var(--ink);}
+    @media(max-width:700px){.location-inner{flex-direction:column;align-items:flex-start;}}
+
 </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBFJKD962N"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JBFJKD962N');</script>
   <script type="application/ld+json">
-  {
+{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -432,12 +442,23 @@
       "name": "Financial Reporting & Statements",
       "provider": {
         "@type": "AccountingService",
-        "name": "Tides Bookkeeping"
+        "name": "Tides Bookkeeping",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Greenville",
+          "addressRegion": "SC",
+          "addressCountry": "US"
+        },
+        "telephone": "+1-864-559-2686"
       },
       "description": "Monthly P&L, balance sheet, cash flow statements, and custom Puzzle.io dashboards delivered clean and on time every month.",
       "areaServed": {
-        "@type": "Country",
-        "name": "United States"
+        "@type": "City",
+        "name": "Greenville",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "South Carolina"
+        }
       },
       "url": "https://www.tidesbookkeeping.com/service-financial-reporting-greenville-sc"
     },
@@ -453,12 +474,29 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Services",
-          "item": "https://www.tidesbookkeeping.com/services"
+          "name": "Areas We Serve",
+          "item": "https://www.tidesbookkeeping.com/areas-we-serve"
         },
         {
           "@type": "ListItem",
           "position": 3,
+          "name": "South Carolina",
+          "item": "https://www.tidesbookkeeping.com/state-south-carolina"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Greenville County",
+          "item": "https://www.tidesbookkeeping.com/county-greenville-sc"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Greenville, SC"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
           "name": "Financial Reporting",
           "item": "https://www.tidesbookkeeping.com/service-financial-reporting-greenville-sc"
         }
@@ -466,7 +504,7 @@
     }
   ]
 }
-  </script>
+</script>
 <!-- auto-schema-start -->
 <script type="application/ld+json">
 {
@@ -552,7 +590,21 @@
 </head><body>
 <nav class="nav-wrap"><div class="nav-inner"><div class="nav-logo"><a href="index.html"><img src="logo.png" alt="Tides Bookkeeping" /></a></div><ul class="nav-links" id="navLinks"><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="services.html" class="active">Services</a></li><li><a href="who-we-serve.html">Who We Serve</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="https://go.tidesbookkeeping.com/tiered-pricing">Pricing</a></li>
       <li><a href="/blog">Blog</a></li></ul><div class="nav-cta"><a href="https://portal.tidesbookkeeping.com" class="btn btn-outline">Sign In</a><a href="schedule.html" class="btn btn-primary">Book Appointment</a></div><button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button></div></nav>
-<div class="breadcrumb"><div class="breadcrumb-inner"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><a href="services.html">Services</a><span class="breadcrumb-sep">›</span><a href="service-financial-reporting.html">Financial Reporting</a><span class="breadcrumb-sep">›</span><span class="breadcrumb-current">Greenville, SC</span></div></div>
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">Home</a>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <a href="areas-we-serve.html">Areas We Serve</a>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <a href="state-south-carolina.html">South Carolina</a>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <a href="county-greenville-sc.html">Greenville County</a>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <a href="city-greenville-sc.html">Greenville, SC</a>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <span class="breadcrumb-current">Financial Reporting</span>
+  </div>
+</div>
 <section class="page-hero"><div class="container"><div class="page-hero-inner">
 <div class="hero-content"><div class="eyebrow"><span style="width:6px;height:6px;border-radius:50%;background:var(--teal);display:inline-block;"></span> Financial Reporting · Greenville, SC</div><h1 class="display">Financial Reporting<br/>for Greenville<br/><span class="gradient-text">Small Businesses.</span></h1><p>Upstate owners — Main Street restaurants and breweries, manufacturing suppliers serving the BMW and Michelin corridor, and contractors riding Greenville's growth — need more than a bank balance. Every month we deliver a clean P&L, balance sheet, and cash flow statement so you know exactly what your business made, owns, owes, and earned.</p><div class="hero-actions"><a href="schedule.html" class="btn btn-teal btn-lg">Schedule Free Consultation</a><a href="#whats-included" class="btn btn-outline btn-lg">See What's Included ↓</a></div><p class="hero-note">No setup fees &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; Dedicated bookkeeper</p><div class="trust-pills"><div class="trust-pill"><span class="dot"></span>Profit & Loss Statement</div><div class="trust-pill"><span class="dot"></span>Balance Sheet</div><div class="trust-pill"><span class="dot"></span>Cash Flow Statement</div><div class="trust-pill"><span class="dot"></span>Puzzle.io Dashboard</div><div class="trust-pill"><span class="dot"></span>Monthly Delivery</div></div></div>
 <div class="hero-aside"><div class="ha-header"><span class="label">Monthly Reports</span><div class="ha-title">What You Receive Every Month</div><div class="ha-subtitle">Delivered by your dedicated bookkeeper</div></div><div class="ha-body"><div class="ha-row"><strong>Profit & Loss Statement</strong><span class="ha-badge green">✓ Delivered</span></div><div class="ha-row"><strong>Balance Sheet</strong><span class="ha-badge green">✓ Delivered</span></div><div class="ha-row"><strong>Cash Flow Statement</strong><span class="ha-badge teal">✓ Included</span></div><div class="ha-row"><strong>Puzzle.io Live Dashboard</strong><span class="ha-badge teal">✓ Always On</span></div><div class="ha-row"><strong>Year-End CPA Package</strong><span class="ha-badge blue">✓ Included</span></div><div class="ha-stat-row"><div class="ha-stat"><div class="ha-stat-val">$0</div><div class="ha-stat-label">Setup Fees</div></div><div class="ha-stat"><div class="ha-stat-val">24hr</div><div class="ha-stat-label">Response Time</div></div></div></div></div>
@@ -648,6 +700,18 @@
 </section>
 
 <section class="cta-section"><div class="container"><div class="eyebrow" style="background:rgba(65,207,208,.15);border-color:rgba(65,207,208,.3);color:var(--teal);">Ready to Get Started?</div><h2 class="display" style="font-size:clamp(2.6rem,5.5vw,4rem);margin-bottom:1.25rem;">Know Your Numbers.<br/><span class="gradient-text">Every Month.</span></h2><p>Schedule a free call. We'll show you exactly what your monthly reporting package looks like and what it costs.</p><div class="cta-btns"><a href="schedule.html" class="btn btn-teal btn-lg">Schedule Free Consultation</a><a href="services.html" class="btn btn-outline-white btn-lg">See All Services →</a></div><p class="cta-fine">No credit card required &nbsp;·&nbsp; No long-term contracts &nbsp;·&nbsp; Cancel anytime</p></div></section>
+<section class="res-section">
+  <div class="container">
+    <div class="section-header centered"><div class="eyebrow">Local &amp; State Resources</div><h2 class="display" style="font-size:1.6rem;">Business &amp; Tax Resources</h2><p style="max-width:640px;margin:.5rem auto 0;">Official government resources for registering, filing, and staying compliant. Tides handles your books; these help with the rest.</p></div>
+    <div class="res-grid">
+      <a class="res-card" href="https://dor.sc.gov" target="_blank" rel="noopener noreferrer"><div class="res-name">South Carolina Dept. of Revenue</div><div class="res-desc">State tax filing, sales &amp; use tax, business tax accounts</div></a>
+      <a class="res-card" href="https://sos.sc.gov" target="_blank" rel="noopener noreferrer"><div class="res-name">SC Secretary of State — Business Filings</div><div class="res-desc">Register or manage a business entity in South Carolina</div></a>
+      <a class="res-card" href="https://www.irs.gov/businesses/small-businesses-self-employed" target="_blank" rel="noopener noreferrer"><div class="res-name">IRS — Small Business &amp; Self-Employed</div><div class="res-desc">Federal taxes, EIN, forms, and recordkeeping guidance</div></a>
+      <a class="res-card" href="https://www.sba.gov/" target="_blank" rel="noopener noreferrer"><div class="res-name">U.S. Small Business Administration</div><div class="res-desc">Federal programs, guidance, and local SBA resources</div></a>
+    </div>
+  </div>
+</section>
+
 <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="footer-logo"><img src="logo.png" alt="Tides Bookkeeping" /></div><p>Remote bookkeeping for small businesses across South Carolina and beyond.</p><div class="footer-social"><a href="https://www.linkedin.com/company/tides-bookkeeping" target="_blank" rel="noopener" class="social-btn">in</a><a href="https://www.facebook.com/thetidesbookkeeping" target="_blank" rel="noopener" class="social-btn">f</a><a href="https://www.instagram.com/tidesbookkeeping/" target="_blank" rel="noopener" class="social-btn">ig</a></div></div><div class="footer-col"><h4>Services</h4><ul class="footer-links"><li><a href="services.html">All Services</a></li><li><a href="service-monthly-bookkeeping.html">Monthly Bookkeeping</a></li><li><a href="service-catchup-bookkeeping.html">Catch-Up Bookkeeping</a></li><li><a href="service-payroll.html">Payroll Support</a></li><li><a href="service-financial-reporting-greenville-sc.html">Financial Reporting</a></li><li><a href="service-bank-reconciliation.html">Bank Reconciliation</a></li><li><a href="service-accounts-payable-receivable.html">AP &amp; AR</a></li>
           <li><a href="/blog">Blog →</a></li></ul></div><div class="footer-col"><h4>Who We Serve</h4>
         <ul class="footer-links">

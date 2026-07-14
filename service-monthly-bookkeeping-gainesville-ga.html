@@ -438,7 +438,7 @@
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
-  {
+{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -446,12 +446,23 @@
       "name": "Monthly Bookkeeping",
       "provider": {
         "@type": "AccountingService",
-        "name": "Tides Bookkeeping"
+        "name": "Tides Bookkeeping",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Greenville",
+          "addressRegion": "SC",
+          "addressCountry": "US"
+        },
+        "telephone": "+1-864-559-2686"
       },
       "description": "Dedicated monthly bookkeeping including bank reconciliation, transaction categorization, P&L and balance sheet delivery, and catch-up bookkeeping.",
       "areaServed": {
-        "@type": "Country",
-        "name": "United States"
+        "@type": "City",
+        "name": "Gainesville",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Georgia"
+        }
       },
       "url": "https://www.tidesbookkeeping.com/service-monthly-bookkeeping-gainesville-ga"
     },
@@ -467,12 +478,29 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Services",
-          "item": "https://www.tidesbookkeeping.com/services"
+          "name": "Areas We Serve",
+          "item": "https://www.tidesbookkeeping.com/areas-we-serve"
         },
         {
           "@type": "ListItem",
           "position": 3,
+          "name": "Georgia",
+          "item": "https://www.tidesbookkeeping.com/state-georgia"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Hall County",
+          "item": "https://www.tidesbookkeeping.com/county-hall-ga"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Gainesville, GA"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
           "name": "Monthly Bookkeeping",
           "item": "https://www.tidesbookkeeping.com/service-monthly-bookkeeping-gainesville-ga"
         }
@@ -480,7 +508,7 @@
     }
   ]
 }
-  </script>
+</script>
 <!-- auto-schema-start -->
 <script type="application/ld+json">
 {
@@ -593,12 +621,16 @@
 <div class="breadcrumb">
   <div class="breadcrumb-inner">
     <a href="index.html">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <a href="services.html">Services</a>
-    <span class="breadcrumb-sep">›</span>
-    <a href="service-monthly-bookkeeping.html">Monthly Bookkeeping</a>
-    <span class="breadcrumb-sep">›</span>
-    <span class="breadcrumb-current">Gainesville, GA</span>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <a href="areas-we-serve.html">Areas We Serve</a>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <a href="state-georgia.html">Georgia</a>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <a href="county-hall-ga.html">Hall County</a>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <a href="city-gainesville.html">Gainesville, GA</a>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <span class="breadcrumb-current">Monthly Bookkeeping</span>
   </div>
 </div>
 
@@ -1284,6 +1316,18 @@
       <a href="services.html" class="btn btn-outline-white btn-lg">See All Services →</a>
     </div>
     <p class="cta-fine">No credit card required &nbsp;·&nbsp; No long-term contracts &nbsp;·&nbsp; Cancel anytime</p>
+  </div>
+</section>
+
+<section class="res-section">
+  <div class="container">
+    <div class="section-header centered"><div class="eyebrow">Local &amp; State Resources</div><h2 class="display" style="font-size:1.6rem;">Business &amp; Tax Resources</h2><p style="max-width:640px;margin:.5rem auto 0;">Official government resources for registering, filing, and staying compliant. Tides handles your books; these help with the rest.</p></div>
+    <div class="res-grid">
+      <a class="res-card" href="https://dor.georgia.gov/" target="_blank" rel="noopener noreferrer"><div class="res-name">Georgia Dept. of Revenue</div><div class="res-desc">State tax filing, sales &amp; use tax, withholding</div></a>
+      <a class="res-card" href="https://sos.ga.gov/" target="_blank" rel="noopener noreferrer"><div class="res-name">Georgia Secretary of State — Corporations</div><div class="res-desc">Register or manage a Georgia business entity</div></a>
+      <a class="res-card" href="https://www.irs.gov/businesses/small-businesses-self-employed" target="_blank" rel="noopener noreferrer"><div class="res-name">IRS — Small Business &amp; Self-Employed</div><div class="res-desc">Federal taxes, EIN, forms, and recordkeeping guidance</div></a>
+      <a class="res-card" href="https://www.sba.gov/" target="_blank" rel="noopener noreferrer"><div class="res-name">U.S. Small Business Administration</div><div class="res-desc">Federal programs, guidance, and local SBA resources</div></a>
+    </div>
   </div>
 </section>
 

@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kodiak Island Borough Bookkeeping | Tides Bookkeeping</title>
+  <meta name="description" content="Bookkeeping for small businesses across the Kodiak Island Borough, AK - Kodiak, Coast Guard Base Kodiak, seafood processing. Remote monthly service." />
+  <link rel="canonical" href="https://www.tidesbookkeeping.com/county-kodiak-island-ak" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kodiak Island Borough Bookkeeping | Tides Bookkeeping" />
+  <meta property="og:description" content="Bookkeeping for small businesses across the Kodiak Island Borough, AK - Kodiak, Coast Guard Base Kodiak, seafood processing. Remote monthly service." />
+  <meta property="og:url" content="https://www.tidesbookkeeping.com/county-kodiak-island-ak" />
+  <meta property="og:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta property="og:site_name" content="Tides Bookkeeping" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Kodiak Island Borough Bookkeeping | Tides Bookkeeping" />
+  <meta name="twitter:description" content="Bookkeeping for small businesses across the Kodiak Island Borough, AK - Kodiak, Coast Guard Base Kodiak, seafood processing. Remote monthly service." />
+  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── TOKENS ─────────────────────────────────────── */
+    :root {
+      --teal:    #41cfd0;
+      --teal-lt: #e6f9f9;
+      --blue:    #66c1ee;
+      --blue-lt: #e8f4fd;
+      --navy:    #215197;
+      --navy-dk: #163872;
+      --ink:     #0f1c2e;
+      --body:    #4a5568;
+      --muted:   #94a3b8;
+      --border:  #e2eaf3;
+      --bg:      #ffffff;
+      --bg-alt:  #f7fbff;
+      --shadow:  0 1px 3px rgba(15,28,46,.06), 0 4px 16px rgba(15,28,46,.08);
+      --shadow-lg: 0 8px 40px rgba(15,28,46,.12);
+      --r:       16px;
+      --r-sm:    10px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── TYPE ───────────────────────────────────────── */
+    .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 0.95; }
+    h2.display { font-size: clamp(2.4rem, 5vw, 4rem); }
+    h3 { font-size: 1.1rem; font-weight: 700; color: var(--ink); }
+    p { color: var(--body); }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal);
+      background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
+      padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--blue) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* ── LAYOUT ─────────────────────────────────────── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+    .section { padding: 96px 0; }
+    .section-alt { background: var(--bg-alt); }
+    .section-navy { background: var(--navy); }
+
+    /* ── BUTTONS ────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .85rem 1.75rem; border-radius: 50px;
+      font-weight: 600; font-size: .9rem; cursor: pointer;
+      transition: all .2s ease; border: 2px solid transparent;
+    }
+    .btn-primary { background: var(--navy); color: #fff; }
+    .btn-primary:hover { background: var(--navy-dk); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(33,81,151,.3); }
+    .btn-teal { background: var(--teal); color: var(--ink); font-weight: 700; }
+    .btn-teal:hover { background: #38bfc0; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(65,207,208,.4); }
+    .btn-outline { border-color: var(--border); color: var(--ink); background: #fff; }
+    .btn-outline:hover { border-color: var(--navy); color: var(--navy); }
+    .btn-outline-white { border-color: rgba(255,255,255,.35); color: #fff; }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+    .btn-lg { padding: 1rem 2.2rem; font-size: 1rem; }
+
+    /* ── NAV ────────────────────────────────────────── */
+    .nav-wrap {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(255,255,255,.92); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem; max-width: 1180px; margin: 0 auto;
+    }
+    .nav-logo img { height: 44px; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); font-weight: 700; }
+    .nav-cta { display: flex; align-items: center; gap: .75rem; }
+    .nav-signin { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
+    .nav-signin:hover { color: var(--navy); }
+
+    /* ── HAMBURGER ──────────────────────────────────── */
+    .hamburger {
+      display: none; background: none; border: none; cursor: pointer;
+      padding: .4rem; flex-direction: column; gap: 5px; z-index: 1001;
+    }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); transition: all .25s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── BREADCRUMB ─────────────────────────────────── */
+    .breadcrumb { background: var(--bg-alt); border-bottom: 1px solid var(--border); padding: .75rem 0; }
+    .breadcrumb-inner {
+      display: flex; align-items: center; gap: .5rem; flex-wrap: wrap;
+      max-width: 1180px; margin: 0 auto; padding: 0 2rem;
+      font-size: .78rem; color: var(--muted);
+    }
+    .breadcrumb-inner a { color: var(--muted); transition: color .2s; }
+    .breadcrumb-inner a:hover { color: var(--navy); }
+    .breadcrumb-sep { color: var(--border); }
+    .breadcrumb-current { color: var(--navy); font-weight: 600; }
+
+    /* ── PAGE HERO ──────────────────────────────────── */
+    .page-hero {
+      padding: 88px 0 80px;
+      background: #fff; position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 65% 75% at 88% 15%, rgba(65,207,208,.11) 0%, transparent 60%),
+        radial-gradient(ellipse 45% 45% at 10% 85%, rgba(102,193,238,.08) 0%, transparent 60%);
+    }
+    .page-hero-inner {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 420px; gap: 5rem; align-items: center;
+    }
+    .page-hero h1 {
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: .93; margin-bottom: 1.5rem; color: var(--ink);
+    }
+    .page-hero p {
+      font-size: 1.05rem; line-height: 1.78; color: var(--body); max-width: 520px; margin-bottom: 2.25rem;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .hero-note { font-size: .78rem; color: var(--muted); margin-top: .75rem; }
+
+    /* Hero aside card */
+    .hero-aside {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 24px; box-shadow: var(--shadow-lg); overflow: hidden;
+    }
+    .ha-header {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a3d7a 100%);
+      padding: 1.5rem 2rem; color: #fff;
+    }
+    .ha-header .label {
+      font-size: .68rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal); display: block; margin-bottom: .5rem;
+    }
+    .ha-title { font-size: 1.05rem; font-weight: 700; }
+    .ha-subtitle { font-size: .78rem; color: rgba(255,255,255,.55); margin-top: 3px; }
+    .ha-body { padding: 1.75rem 2rem; }
+    .ha-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .8rem 0; border-bottom: 1px solid var(--border);
+      font-size: .85rem;
+    }
+    .ha-row:last-child { border-bottom: none; }
+    .ha-row strong { font-weight: 600; color: var(--ink); }
+    .ha-badge {
+      font-size: .67rem; font-weight: 700; padding: 3px 10px; border-radius: 50px; letter-spacing: .04em;
+    }
+    .ha-badge.green { background: #dcfce7; color: #16a34a; }
+    .ha-badge.teal { background: var(--teal-lt); color: var(--teal); }
+    .ha-badge.blue { background: var(--blue-lt); color: var(--navy); }
+    .ha-stat-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+      background: var(--border); border: 1px solid var(--border);
+      border-radius: var(--r-sm); overflow: hidden; margin-top: 1.5rem;
+    }
+    .ha-stat { background: var(--bg-alt); padding: 1rem; text-align: center; }
+    .ha-stat-val { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--navy); line-height: 1; }
+    .ha-stat-label { font-size: .68rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-top: 3px; }
+
+    /* ── SECTION HEADER ─────────────────────────────── */
+    .section-header { max-width: 620px; }
+    .section-header.centered { max-width: 700px; margin: 0 auto; text-align: center; }
+    .section-header p { margin-top: 1rem; font-size: 1rem; line-height: 1.75; }
+
+    /* ── COUNTY OVERVIEW ────────────────────────────── */
+    .county-overview {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;
+    }
+    .fact-list { display: flex; flex-direction: column; gap: .85rem; margin-top: 2rem; }
+    .fact-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .9rem 1.25rem; background: #fff;
+      border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow);
+    }
+    .fact-label { font-size: .88rem; font-weight: 600; color: var(--ink); }
+    .fact-value { font-size: .88rem; font-weight: 700; color: var(--navy); }
+
+    /* ── CITIES WE SERVE ────────────────────────────── */
+    .cities-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 3.5rem;
+    }
+    .city-card {
+      background: #fff; border: 1px solid var(--border); border-radius: 20px;
+      padding: 1.75rem; box-shadow: var(--shadow); transition: all .2s;
+    }
+    .city-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.4); }
+    .city-card.featured {
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      border-color: transparent;
+    }
+    .city-card-icon { font-size: 1.5rem; margin-bottom: .75rem; }
+    .city-card-name { font-size: 1.1rem; font-weight: 700; color: var(--ink); margin-bottom: .35rem; }
+    .city-card.featured .city-card-name { color: #fff; }
+    .city-card-desc { font-size: .84rem; color: var(--body); line-height: 1.65; }
+    .city-card.featured .city-card-desc { color: rgba(255,255,255,.6); }
+    .city-card-pop {
+      display: inline-flex; align-items: center; gap: .3rem;
+      font-size: .7rem; font-weight: 700; color: var(--muted);
+      text-transform: uppercase; letter-spacing: .06em; margin-top: .75rem;
+    }
+    .city-card.featured .city-card-pop { color: rgba(255,255,255,.4); }
+    .city-link {
+      display: inline-flex; align-items: center; gap: .35rem;
+      font-size: .82rem; font-weight: 700; color: var(--teal);
+      margin-top: 1rem; transition: gap .2s;
+    }
+    .city-link:hover { gap: .6rem; }
+
+    /* ── SERVICES ───────────────────────────────────── */
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem; margin-top: 3.5rem;
+    }
+    .svc-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 20px; padding: 2rem; box-shadow: var(--shadow); transition: all .25s;
+    }
+    .svc-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    .svc-card.featured {
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      border-color: transparent; grid-column: span 2;
+    }
+    .svc-icon {
+      width: 50px; height: 50px; border-radius: 13px;
+      background: var(--teal-lt); display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; margin-bottom: 1.25rem;
+    }
+    .svc-card.featured .svc-icon { background: rgba(255,255,255,.12); }
+    .svc-card h3 { margin-bottom: .6rem; }
+    .svc-card.featured h3 { color: #fff; font-size: 1.35rem; }
+    .svc-card p { font-size: .87rem; line-height: 1.7; }
+    .svc-card.featured p { color: rgba(255,255,255,.65); }
+    .svc-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
+    .svc-tag {
+      font-size: .68rem; font-weight: 700; letter-spacing: .04em;
+      padding: 4px 10px; border-radius: 50px;
+      background: rgba(255,255,255,.1); color: rgba(255,255,255,.75);
+    }
+    .svc-tag.light { background: var(--teal-lt); color: var(--teal); }
+
+    /* ── INDUSTRIES ─────────────────────────────────── */
+    .industries-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 3.5rem;
+    }
+    .ind-card {
+      background: #fff; border: 1px solid var(--border); border-radius: 16px;
+      padding: 1.5rem; text-align: center; box-shadow: var(--shadow); transition: all .2s;
+    }
+    .ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    .ind-icon { font-size: 1.8rem; margin-bottom: .75rem; }
+    .ind-card h4 { font-size: .9rem; font-weight: 700; color: var(--ink); margin-bottom: .4rem; }
+    .ind-card p { font-size: .78rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── TESTIMONIAL ────────────────────────────────── */
+    .testimonial-section {
+      background: linear-gradient(135deg, var(--navy) 0%, #122f6b 100%); padding: 88px 0;
+    }
+    .testimonial-inner { max-width: 860px; margin: 0 auto; text-align: center; }
+    .t-stars { color: #f59e0b; font-size: 1.1rem; letter-spacing: 3px; margin-bottom: 2rem; }
+    .t-quote {
+      font-size: clamp(1.05rem, 2.5vw, 1.35rem); line-height: 1.75;
+      color: rgba(255,255,255,.88); font-style: italic; margin-bottom: 2.5rem;
+    }
+    .t-author { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+    .t-avatar {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: rgba(255,255,255,.1); border: 2px solid rgba(65,207,208,.4);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: .9rem; color: var(--teal);
+    }
+    .t-name { font-size: 1rem; font-weight: 700; color: #fff; }
+    .t-role { font-size: .8rem; color: rgba(255,255,255,.5); margin-top: 2px; }
+
+    /* ── FAQ ────────────────────────────────────────── */
+    .faq-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 4rem; margin-top: 3rem; }
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.4rem 0; text-align: left; gap: 1rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .faq-question h4 { font-size: .97rem; font-weight: 700; color: var(--ink); flex: 1; }
+    .faq-toggle {
+      width: 28px; height: 28px; border-radius: 50%;
+      border: 1.5px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 1.1rem; color: var(--muted); transition: all .2s;
+    }
+    .faq-item.open .faq-toggle { background: var(--teal); border-color: var(--teal); color: var(--ink); transform: rotate(45deg); }
+    .faq-answer { display: none; padding: 0 0 1.4rem; }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-answer p { font-size: .9rem; line-height: 1.75; color: var(--body); }
+
+    /* ── NEARBY COUNTIES ────────────────────────────── */
+    .nearby-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 3rem;
+    }
+    .nearby-card {
+      background: var(--bg-alt); border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.25rem; text-align: center; transition: all .2s;
+    }
+    .nearby-card:hover { border-color: rgba(65,207,208,.4); background: #fff; box-shadow: var(--shadow); }
+    .nearby-card h4 { font-size: .9rem; font-weight: 700; color: var(--ink); margin-bottom: .25rem; }
+    .nearby-card p { font-size: .75rem; color: var(--muted); }
+
+    /* ── CTA ────────────────────────────────────────── */
+    .cta-section { background: var(--ink); padding: 96px 0; }
+    .cta-inner { text-align: center; max-width: 720px; margin: 0 auto; }
+    .cta-inner h2 { font-size: clamp(2rem, 5vw, 3.5rem); color: #fff; margin-bottom: 1.25rem; }
+    .cta-inner p { font-size: 1.05rem; color: rgba(255,255,255,.6); margin-bottom: 2.5rem; }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .cta-note { font-size: .78rem; color: rgba(255,255,255,.3); margin-top: 1.25rem; }
+
+    /* ── FOOTER ─────────────────────────────────────── */
+    footer { background: #080f1a; padding: 72px 0 32px; }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem;
+    }
+    .footer-logo { height: 40px; margin-bottom: 1.25rem; filter: brightness(10); }
+    .footer-about { font-size: .84rem; color: rgba(255,255,255,.35); line-height: 1.75; max-width: 280px; }
+    .footer-col h4 {
+      font-size: .66rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: .12em; color: rgba(255,255,255,.25); margin-bottom: 1.25rem;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: .55rem; }
+    .footer-links a { font-size: .82rem; color: rgba(255,255,255,.4); transition: color .15s; }
+    .footer-links a:hover { color: rgba(255,255,255,.8); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.06); padding-top: 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: .72rem; color: rgba(255,255,255,.2); }
+    .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-bottom-links a { font-size: .72rem; color: rgba(255,255,255,.2); transition: color .15s; }
+    .footer-bottom-links a:hover { color: rgba(255,255,255,.5); }
+
+    /* ── LOCAL GUIDE ────────────────────────────────── */
+    .local-two-col {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 3.5rem;
+    }
+    .local-two-col h3 { font-size: 1.15rem; margin-bottom: 1.25rem; }
+    .highlight-list { display: flex; flex-direction: column; gap: .65rem; }
+    .hl-item {
+      display: flex; align-items: flex-start; gap: .85rem;
+      padding: .9rem 1.25rem; background: #fff;
+      border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); transition: all .2s;
+    }
+    .hl-item:hover { border-color: rgba(65,207,208,.35); box-shadow: var(--shadow-lg); }
+    .hl-icon { font-size: 1.05rem; flex-shrink: 0; margin-top: 2px; }
+    .hl-title { font-size: .9rem; font-weight: 700; color: var(--ink); }
+    .hl-desc { font-size: .78rem; color: var(--body); line-height: 1.6; margin-top: .15rem; }
+    .corridor-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; margin-top: 1.25rem;
+    }
+    .corridor-card {
+      background: #fff; border: 1px solid var(--border); border-radius: 12px;
+      padding: 1rem 1.25rem; box-shadow: var(--shadow); transition: all .2s;
+    }
+    .corridor-card:hover { border-color: rgba(65,207,208,.4); }
+    .corridor-name { font-size: .88rem; font-weight: 700; color: var(--ink); margin-bottom: .25rem; }
+    .corridor-desc { font-size: .76rem; color: var(--body); line-height: 1.6; }
+    .county-stat-strip {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+      background: var(--border); border: 1px solid var(--border);
+      border-radius: 16px; overflow: hidden; margin-top: 3.5rem;
+    }
+    .css-item { background: var(--bg-alt); padding: 1.75rem; text-align: center; }
+    .css-val {
+      font-family: 'Bebas Neue', sans-serif; font-size: 2.4rem;
+      color: var(--navy); line-height: 1;
+    }
+    .css-label { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-top: .4rem; }
+
+    /* ── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .local-two-col { grid-template-columns: 1fr; gap: 2.5rem; }
+      .county-stat-strip { grid-template-columns: repeat(2, 1fr); }
+      .page-hero-inner { grid-template-columns: 1fr; }
+      .hero-aside { display: none; }
+      .county-overview { grid-template-columns: 1fr; gap: 2rem; }
+      .cities-grid { grid-template-columns: 1fr 1fr; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .svc-card.featured { grid-column: span 2; }
+      .industries-grid { grid-template-columns: repeat(3, 1fr); }
+      .nearby-grid { grid-template-columns: repeat(2, 1fr); }
+      .faq-cols { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column; position: fixed;
+        inset: 0; background: #fff; z-index: 1000;
+        align-items: center; justify-content: center; gap: 2rem;
+      }
+      .nav-links.open li a { font-size: 1.4rem; color: var(--ink); }
+      .page-hero h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-actions .btn { justify-content: center; }
+      .corridor-grid { grid-template-columns: 1fr; }
+      .cities-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .svc-card.featured { grid-column: span 1; }
+      .industries-grid { grid-template-columns: 1fr 1fr; }
+      .nearby-grid { grid-template-columns: 1fr 1fr; }
+      .cta-actions { flex-direction: column; align-items: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-bottom-links { justify-content: center; }
+      h2.display { font-size: 2.2rem; }
+    }
+    @media (max-width: 480px) {
+      .industries-grid { grid-template-columns: 1fr; }
+      .nearby-grid { grid-template-columns: 1fr 1fr; }
+      .container { padding: 0 1rem; }
+      .section { padding: 3rem 0; }
+    }
+  
+/* mobile-menu-fix-start */
+@media (max-width: 768px) {
+  /* Kill stacking context on nav-wrap when menu is open */
+  body.menu-open .nav-wrap {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  /* Bulletproof full-screen mobile menu overlay */
+  .nav-links.open {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    background: #ffffff !important;
+    z-index: 9999 !important;
+    list-style: none !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    margin: 0 !important;
+    padding: 2rem !important;
+    overflow-y: auto !important;
+  }
+  .nav-links.open a {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    color: var(--ink) !important;
+    padding: .75rem 1.5rem !important;
+    display: block !important;
+  }
+  .nav-links.open li {
+    list-style: none !important;
+  }
+  /* Hamburger sits on top of overlay */
+  .hamburger {
+    z-index: 10000 !important;
+    position: relative;
+  }
+  /* Prevent horizontal scroll site-wide on mobile */
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+}
+/* mobile-menu-fix-end */
+
+    .res-section{background:var(--bg-alt,#f7fafc);border-top:1px solid var(--border,#e5eaf0);padding:3rem 0;}
+    .res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;max-width:1100px;margin:1.5rem auto 0;padding:0 1.5rem;}
+    .res-card{display:block;background:#fff;border:1px solid var(--border,#e5eaf0);border-radius:14px;padding:1.1rem 1.25rem;text-decoration:none;transition:all .2s;}
+    .res-card:hover{border-color:var(--teal,#41cfd0);box-shadow:0 6px 20px rgba(15,28,46,.08);transform:translateY(-2px);}
+    .res-card .res-name{font-weight:700;color:var(--navy,#215197);font-size:.92rem;margin-bottom:.25rem;}
+    .res-card .res-name::after{content:" \2197";color:var(--teal,#41cfd0);font-weight:600;}
+    .res-card .res-desc{font-size:.78rem;color:var(--muted,#5a6b82);line-height:1.5;}
+    </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBFJKD962N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JBFJKD962N');
+  </script>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.tidesbookkeeping.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Alaska",
+          "item": "https://www.tidesbookkeeping.com/state-alaska"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Kodiak Island Borough",
+          "item": "https://www.tidesbookkeeping.com/county-kodiak-island-ak"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+<!-- auto-schema-start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "@id": "https://www.tidesbookkeeping.com/#organization",
+  "name": "Tides Bookkeeping LLC",
+  "alternateName": "Tides Bookkeeping",
+  "description": "Tides Bookkeeping delivers dedicated monthly bookkeeping, bank reconciliation, financial reporting, and payroll support for small businesses across the United States.",
+  "url": "https://www.tidesbookkeeping.com",
+  "logo": "https://www.tidesbookkeeping.com/logo.png",
+  "image": "https://www.tidesbookkeeping.com/logo.png",
+  "telephone": "+1-864-559-2686",
+  "email": "support@tidesbookkeeping.com",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Greenville",
+    "addressRegion": "SC",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/tides-bookkeeping",
+    "https://www.facebook.com/thetidesbookkeeping",
+    "https://www.instagram.com/tidesbookkeeping/"
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "State",
+      "name": "Alaska"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Kodiak Island Borough"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Bookkeeping Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Monthly Bookkeeping",
+          "url": "https://www.tidesbookkeeping.com/service-monthly-bookkeeping"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bank Reconciliation",
+          "url": "https://www.tidesbookkeeping.com/service-bank-reconciliation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Catch-Up Bookkeeping",
+          "url": "https://www.tidesbookkeeping.com/service-catchup-bookkeeping"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Financial Reporting",
+          "url": "https://www.tidesbookkeeping.com/service-financial-reporting"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Accounts Payable & Receivable",
+          "url": "https://www.tidesbookkeeping.com/service-accounts-payable-receivable"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Payroll Support",
+          "url": "https://www.tidesbookkeeping.com/service-payroll"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "QuickBooks Setup & Cleanup",
+          "url": "https://www.tidesbookkeeping.com/service-software-setup"
+        }
+      }
+    ]
+  },
+  "knowsAbout": [
+    "Bookkeeping",
+    "Small Business Accounting",
+    "Financial Reporting",
+    "QuickBooks Online",
+    "Payroll",
+    "Alaska Local Sales Tax",
+    "Alaska Remote Sellers Sales Tax Commission"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does the Kodiak Island Borough have a sales tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The borough does not levy a general sales tax. The City of Kodiak does - 7% as of 2026, plus an additional 5% hotel and motel tax on lodging. So the question is simply whether the sale happened inside city limits. A sale downtown is taxed; the same sale out at Bells Flats or Womens Bay is not. Confirm current rates with the City of Kodiak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you actually understand commercial fishing bookkeeping?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes - and it is genuinely different. Fish tickets, crew share splits, IFQ and permit costs, gear depreciation, and Alaska's fisheries business tax and fishery resource landing tax are not things a typical Lower 48 bookkeeper has encountered. We handle them, keep the records organized and tax-ready, and work alongside your CPA on the filings so nothing gets guessed at."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I do contract work on Coast Guard Base Kodiak. Does that change anything?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It does. Federal contracting means separating allowable from unallowable costs, keeping timekeeping records that will survive scrutiny, and being able to produce clean documentation on request. We keep the books audit-ready and coordinate with your CPA or contract accountant on the compliance requirements. It is a discipline, and it is a lot easier to maintain than to reconstruct."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "We sell to processors and also run a small retail shop. Can you handle both?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and that mix is common in Kodiak. The retail side needs the 7% city sales tax handled correctly; the seafood side needs fish tickets, landed weights, and possibly fisheries tax treatment. We keep the two revenue streams cleanly separated so your margins on each are real and your filings are straightforward."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need QuickBooks before signing up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. If you do not have QuickBooks Online, we set it up as part of onboarding. If you already have an account, we connect to it and clean it up as needed. We also connect Puzzle.io for real-time dashboards and an instant snapshot of your books before regular monthly service begins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is pricing determined?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pricing is based on your monthly transaction volume, not your zip code. Most small businesses land between $395 and $895 per month. You get an exact quote during your free consultation - no guesswork, no setup fees."
+      }
+    }
+  ]
+}
+</script>
+<!-- auto-schema-end -->
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav-wrap">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/#how-it-works">How It Works</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/who-we-serve">Who We Serve</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/contact">Contact Us</a></li>
+      <li><a href="https://go.tidesbookkeeping.com/tiered-pricing">Pricing</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://portal.tidesbookkeeping.com" class="nav-signin">Sign In</a>
+      <a href="schedule.html" class="btn btn-primary">Book Appointment</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="state-alaska.html">Alaska</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">Kodiak Island Borough</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div>
+        <div class="eyebrow">📍 Kodiak Island Borough, Alaska</div>
+        <h1 class="display">Bookkeeping for the<br/><span class="gradient-text">Kodiak Island<br/>Borough</span></h1>
+        <p>One of the biggest fishing ports in America, the largest Coast Guard base in the country, and a borough that levies no sales tax while its main city levies 7%. Tides handles the books for Kodiak businesses. 100% remote.</p>
+        <div class="hero-actions">
+          <a href="schedule.html" class="btn btn-teal btn-lg">Schedule a Free Call</a>
+          <a href="city-kodiak-ak.html" class="btn btn-outline btn-lg">Kodiak City Page →</a>
+        </div>
+        <p class="hero-note">No setup fees &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; 100% Remote</p>
+      </div>
+
+      <!-- Aside Card -->
+      <div class="hero-aside">
+        <div class="ha-header">
+          <span class="label">Island Coverage</span>
+          <div class="ha-title">Serving the Whole Island</div>
+          <div class="ha-subtitle">Kodiak and the village communities</div>
+        </div>
+        <div class="ha-body">
+          <div class="ha-row">
+            <strong>City of Kodiak</strong>
+            <span class="ha-badge green">Served</span>
+          </div>
+          <div class="ha-row">
+            <strong>Coast Guard Base</strong>
+            <span class="ha-badge green">Served</span>
+          </div>
+          <div class="ha-row">
+            <strong>Womens Bay &amp; Bells Flats</strong>
+            <span class="ha-badge green">Served</span>
+          </div>
+          <div class="ha-row">
+            <strong>Chiniak &amp; Pasagshak</strong>
+            <span class="ha-badge green">Served</span>
+          </div>
+          <div class="ha-row">
+            <strong>Village Communities</strong>
+            <span class="ha-badge teal">Served</span>
+          </div>
+          <div class="ha-stat-row">
+            <div class="ha-stat">
+              <div class="ha-stat-val">13k+</div>
+              <div class="ha-stat-label">Borough Pop.</div>
+            </div>
+            <div class="ha-stat">
+              <div class="ha-stat-val">0%</div>
+              <div class="ha-stat-label">Borough Sales Tax</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOROUGH OVERVIEW -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="county-overview">
+      <div>
+        <div class="eyebrow">About the Area</div>
+        <h2 class="display">Fish, the Coast<br/>Guard, and a<br/>Rocket Range.</h2>
+        <p>The Kodiak Island Borough covers Kodiak Island and the surrounding archipelago in the Gulf of Alaska. The City of Kodiak is the hub; scattered around the island are the village communities of Old Harbor, Ouzinkie, Port Lions, Larsen Bay, Karluk, and Akhiok, reachable only by air or boat.</p>
+        <p style="margin-top:1rem;">Kodiak is consistently one of the <strong>largest fishing ports in the United States</strong> by volume and value landed. Salmon, pollock, cod, halibut, and crab come across these docks, and the processors that handle them are the economic backbone of the island.</p>
+        <p style="margin-top:1rem;">Layered on top: <strong>Coast Guard Base Kodiak</strong>, the largest Coast Guard installation in the country, and the <strong>Pacific Spaceport Complex</strong> at Narrow Cape, from which orbital rockets are actually launched. It is a genuinely unusual economic mix for a town of 6,000.</p>
+      </div>
+      <div>
+        <div class="fact-list">
+          <div class="fact-row">
+            <span class="fact-label">📍 Borough Seat</span>
+            <span class="fact-value">Kodiak</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">👥 Population</span>
+            <span class="fact-value">13,000+</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">💰 Borough Sales Tax</span>
+            <span class="fact-value">None (City of Kodiak: 7%)</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">⚓ Port</span>
+            <span class="fact-value">One of the largest U.S. fishing ports</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">🚢 Military</span>
+            <span class="fact-value">Largest U.S. Coast Guard base</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">📊 Top Sectors</span>
+            <span class="fact-value">Seafood, Coast Guard, Aerospace, Tourism</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITIES WE SERVE -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Coverage</div>
+      <h2 class="display">Every Community in<br/>Kodiak Island Borough — Covered.</h2>
+      <p>Wherever your business sits, we serve the whole area with the same level of service. We are 100% remote, so your exact location does not change anything about how we work.</p>
+    </div>
+
+    <div class="cities-grid">
+      <div class="city-card featured">
+        <div class="city-card-icon">⚓</div>
+        <div class="city-card-name">Kodiak</div>
+        <p class="city-card-desc">The borough seat and one of America's biggest fishing ports. The harbor, the processors, and downtown - and a 7% city sales tax that the borough itself does not levy.</p>
+        <div class="city-card-pop">👥 5,600+ residents</div>
+        <a href="city-kodiak-ak.html" class="city-link" style="color:var(--teal);">View Kodiak Page →</a>
+      </div>
+      <div class="city-card">
+        <div class="city-card-icon">🚢</div>
+        <div class="city-card-name">Coast Guard Base Kodiak</div>
+        <p class="city-card-desc">The largest Coast Guard installation in the United States. Air Station Kodiak flies search and rescue across the Gulf of Alaska - and drives a steady contractor and services economy.</p>
+        <div class="city-card-pop">Largest USCG base</div>
+        <a href="city-kodiak-ak.html" class="city-link">Learn More →</a>
+      </div>
+      <div class="city-card">
+        <div class="city-card-icon">🐟</div>
+        <div class="city-card-name">The Processors</div>
+        <p class="city-card-desc">Trident, Ocean Beauty, Pacific Seafood and others line the channel. Salmon, pollock, cod, and crab - the industrial base that makes Kodiak work.</p>
+        <div class="city-card-pop">Seafood industry</div>
+        <a href="city-kodiak-ak.html" class="city-link">Learn More →</a>
+      </div>
+      <div class="city-card">
+        <div class="city-card-icon">🚀</div>
+        <div class="city-card-name">Pacific Spaceport Complex</div>
+        <p class="city-card-desc">Alaska Aerospace's launch site at Narrow Cape - orbital rockets genuinely launch from Kodiak Island, supporting a small aerospace services cluster.</p>
+        <div class="city-card-pop">Narrow Cape</div>
+        <a href="city-kodiak-ak.html" class="city-link">Learn More →</a>
+      </div>
+      <div class="city-card">
+        <div class="city-card-icon">🏘️</div>
+        <div class="city-card-name">Womens Bay &amp; Bells Flats</div>
+        <p class="city-card-desc">The communities along Kodiak's limited road system - residential, trades, and small businesses outside the city sales tax boundary.</p>
+        <div class="city-card-pop">Road system communities</div>
+        <a href="city-kodiak-ak.html" class="city-link">Learn More →</a>
+      </div>
+      <div class="city-card">
+        <div class="city-card-icon">🛶</div>
+        <div class="city-card-name">The Village Communities</div>
+        <p class="city-card-desc">Old Harbor, Ouzinkie, Port Lions, Larsen Bay, Karluk, and Akhiok - Alutiiq communities reachable only by floatplane or boat.</p>
+        <div class="city-card-pop">All borough communities</div>
+        <a href="areas-we-serve.html" class="city-link">See All Areas →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCAL GUIDE -->
+<section class="section section-alt" id="borough-guide">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">📍 Know the Area</div>
+      <h2 class="display">Kodiak:<br/>The Fish Come<br/>In By the Ton.</h2>
+      <p>Serving Kodiak means knowing fish tickets and crew shares, a 7% city tax that stops at the city line, and an island where the biggest employers are a fleet, a base, and a spaceport.</p>
+    </div>
+
+    <div class="county-stat-strip">
+      <div class="css-item">
+        <div class="css-val">13k+</div>
+        <div class="css-label">Borough Population</div>
+      </div>
+      <div class="css-item">
+        <div class="css-val">0% / 7%</div>
+        <div class="css-label">Borough / City Sales Tax</div>
+      </div>
+      <div class="css-item">
+        <div class="css-val">Top 5</div>
+        <div class="css-label">U.S. Fishing Port by Landings</div>
+      </div>
+      <div class="css-item">
+        <div class="css-val">#1</div>
+        <div class="css-label">Largest USCG Base</div>
+      </div>
+    </div>
+
+    <div class="local-two-col">
+      <div>
+        <h3>History &amp; Economic Identity</h3>
+        <p>Kodiak is the oldest European settlement in Alaska - the Russians established a colony at Three Saints Bay in 1784, and Kodiak became the first capital of Russian America before the seat moved to Sitka. The Alutiiq people had already been on the archipelago for some 7,500 years.</p>
+        <p style="margin-top:.85rem;">The modern island has been reshaped twice by catastrophe: the 1912 Novarupta eruption buried Kodiak in volcanic ash, and the 1964 Good Friday earthquake sent a tsunami through the harbor that destroyed the fishing fleet and much of downtown. The town rebuilt around the thing that has always defined it - <strong>fish</strong>.</p>
+        <p style="margin-top:.85rem;">Today Kodiak ranks among the very top fishing ports in the United States by volume and value of seafood landed. Salmon, pollock, Pacific cod, halibut, and crab move across the docks and into the processing plants that line the channel. Add <strong>Coast Guard Base Kodiak</strong> - the largest Coast Guard installation in the country, flying search and rescue across the Gulf of Alaska - and the <strong>Pacific Spaceport Complex</strong> at Narrow Cape, and you have an island economy that is far more sophisticated than its population would suggest.</p>
+        <div class="highlight-list" style="margin-top:1.75rem;">
+          <div class="hl-item">
+            <span class="hl-icon">⚓</span>
+            <div>
+              <div class="hl-title">One of America's Biggest Fishing Ports</div>
+              <div class="hl-desc">By volume and value landed, Kodiak is consistently among the top ports in the United States. The processors - Trident, Ocean Beauty, Pacific Seafood and others - are the island's industrial core and its largest private employers.</div>
+            </div>
+          </div>
+          <div class="hl-item">
+            <span class="hl-icon">🚢</span>
+            <div>
+              <div class="hl-title">Coast Guard Base Kodiak</div>
+              <div class="hl-desc">The largest Coast Guard installation in the country. Air Station Kodiak runs search and rescue across the Gulf of Alaska. The base drives housing, contracting, and a steady year-round services economy.</div>
+            </div>
+          </div>
+          <div class="hl-item">
+            <span class="hl-icon">🚀</span>
+            <div>
+              <div class="hl-title">Pacific Spaceport Complex - Alaska</div>
+              <div class="hl-desc">At Narrow Cape, about forty miles from town. Alaska Aerospace operates a genuine orbital launch site on Kodiak Island, supporting a small but real aerospace and logistics cluster.</div>
+            </div>
+          </div>
+          <div class="hl-item">
+            <span class="hl-icon">🐻</span>
+            <div>
+              <div class="hl-title">Kodiak Brown Bears &amp; Sportfishing</div>
+              <div class="hl-desc">The Kodiak National Wildlife Refuge and the world's largest brown bears bring hunting and photography clients, and the sportfishing lodges run a serious summer trade.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3>Key Corridors &amp; Communities</h3>
+        <div class="corridor-grid">
+          <div class="corridor-card">
+            <div class="corridor-name">Downtown Kodiak</div>
+            <div class="corridor-desc">The harbor, the channel, the processors, and the compact commercial core. Inside the 7% city sales tax boundary.</div>
+          </div>
+          <div class="corridor-card">
+            <div class="corridor-name">St. Paul &amp; St. Herman Harbors</div>
+            <div class="corridor-desc">The working waterfront. Hundreds of commercial vessels, the marine trades, gear suppliers, and the fuel docks.</div>
+          </div>
+          <div class="corridor-card">
+            <div class="corridor-name">Mill Bay Road</div>
+            <div class="corridor-desc">The main commercial artery - groceries, retail, the hospital, and the everyday businesses of the island.</div>
+          </div>
+          <div class="corridor-card">
+            <div class="corridor-name">Coast Guard Base</div>
+            <div class="corridor-desc">Down Rezanof Drive - housing, the air station, and the contractors and service businesses that support the largest USCG base in the country.</div>
+          </div>
+          <div class="corridor-card">
+            <div class="corridor-name">Womens Bay &amp; Bells Flats</div>
+            <div class="corridor-desc">Outside the city limits and outside the city sales tax. Residential, trades, and small businesses along the road system.</div>
+          </div>
+          <div class="corridor-card">
+            <div class="corridor-name">Chiniak Highway</div>
+            <div class="corridor-desc">The road southeast toward Chiniak and Pasagshak - past the spaceport, the bison ranch, and some of the most spectacular coastline in Alaska.</div>
+          </div>
+          <div class="corridor-card">
+            <div class="corridor-name">Narrow Cape / Pasagshak</div>
+            <div class="corridor-desc">The launch complex and the surf beach. Aerospace, ranching, and remote lodges at the end of the road.</div>
+          </div>
+          <div class="corridor-card">
+            <div class="corridor-name">The Villages</div>
+            <div class="corridor-desc">Old Harbor, Ouzinkie, Port Lions, Larsen Bay, Karluk, Akhiok - no roads, no ferries most of the time. Floatplane and boat only.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;">
+          <h3>Getting Around</h3>
+          <div class="highlight-list" style="margin-top:1rem;">
+            <div class="hl-item">
+              <span class="hl-icon">⚓</span>
+              <div>
+                <div class="hl-title">The Port of Kodiak</div>
+                <div class="hl-desc">The reason the town exists. One of the highest-volume fishing ports in America - the docks, the processors, and the fleet that keeps them fed.</div>
+              </div>
+            </div>
+            <div class="hl-item">
+              <span class="hl-icon">✈️</span>
+              <div>
+                <div class="hl-title">Kodiak Airport</div>
+                <div class="hl-desc">Jet service to Anchorage plus the floatplanes and air taxis that connect the villages. There is no road off this island.</div>
+              </div>
+            </div>
+            <div class="hl-item">
+              <span class="hl-icon">🛣️</span>
+              <div>
+                <div class="hl-title">Rezanof Drive &amp; Chiniak Highway</div>
+                <div class="hl-desc">The island's road system - roughly a hundred miles of it, running from Womens Bay out to Chiniak and Pasagshak, and then stopping.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALASKA SALES TAX -->
+<section class="section" id="sales-tax">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">💰 The Alaska Tax Angle</div>
+      <h2 class="display">No State Sales Tax.<br/>But Read This Anyway.</h2>
+      <p>Alaska has no state sales tax and no state personal income tax — which is exactly why so many business owners get Alaska tax wrong. More than 100 local jurisdictions levy their own sales tax, and the rules change borough by borough and city by city.</p>
+    </div>
+
+    <div class="local-two-col" style="margin-top:3rem;">
+      <div>
+        <h3>Kodiak Island Borough: The Numbers</h3>
+        <p>Kodiak has an inverted structure compared to the Kenai Peninsula: the borough levies no general sales tax at all, while the City of Kodiak levies 7%. Which means the tax question here is simply whether the sale happened inside the city line.</p>
+        <div class="fact-list">
+          <div class="fact-row">
+            <span class="fact-label">Alaska State Sales Tax</span>
+            <span class="fact-value">None</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Alaska Personal Income Tax</span>
+            <span class="fact-value">None</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Kodiak Island Borough Sales Tax</span>
+            <span class="fact-value">None</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">City of Kodiak Sales Tax</span>
+            <span class="fact-value">7% (as of 2026)</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">City Hotel / Motel Tax</span>
+            <span class="fact-value">5% (in addition to sales tax)</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">ARSSTC Remote Seller Threshold</span>
+            <span class="fact-value">$100,000 gross</span>
+          </div>
+        </div>
+        <p style="margin-top:1rem;font-size:.8rem;color:var(--muted);">Rates shown are as of 2026 and can change. Always confirm the current rate with the taxing jurisdiction before you rely on it. Tides keeps your books tax-ready and works alongside your CPA — we do not file returns for you.</p>
+      </div>
+      <div>
+        <h3>What It Means for Your Books</h3>
+        <div class="highlight-list" style="margin-top:1.25rem;">
+          <div class="hl-item">
+            <span class="hl-icon">📍</span>
+            <div>
+              <div class="hl-title">The city line is the tax line</div>
+              <div class="hl-desc">The Kodiak Island Borough levies no general sales tax. The City of Kodiak levies 7%, plus an additional 5% hotel and motel tax on lodging. So a sale downtown is taxed and the same sale out at Bells Flats or Womens Bay is not. If you deliver, install, or run a mobile service across that line, you need to know which side each job landed on. Rates are as of 2026 - confirm with the City of Kodiak.</div>
+            </div>
+          </div>
+          <div class="hl-item">
+            <span class="hl-icon">🐟</span>
+            <div>
+              <div class="hl-title">Fisheries taxes are the real complexity here</div>
+              <div class="hl-desc">Sales tax is the easy part in Kodiak. If you catch, buy, or process fish, Alaska's fisheries business tax and fishery resource landing tax may apply, and the books have to handle fish tickets, crew share splits, IFQ and permit costs, and gear depreciation correctly. Most bookkeepers have never seen any of it. We have, and we keep it clean and tax-ready for your CPA.</div>
+            </div>
+          </div>
+          <div class="hl-item">
+            <span class="hl-icon">🚢</span>
+            <div>
+              <div class="hl-title">Coast Guard contracting has its own rules</div>
+              <div class="hl-desc">Working on or around Base Kodiak means federal contracting - which means separating allowable from unallowable costs, keeping timekeeping records that hold up, and being ready if anyone asks. We keep the records audit-ready and work alongside your CPA or contract accountant on the compliance side.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Our Services</div>
+      <h2 class="display">Complete Bookkeeping for<br/>Kodiak Island Borough Businesses.</h2>
+      <p>Seven core services, all delivered remotely. Everything your business needs to stay financially clean and tax-ready year-round.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="svc-card featured">
+        <div class="svc-icon">📊</div>
+        <h3>Monthly Bookkeeping</h3>
+        <p>Our flagship service. Every transaction categorized, every account reconciled, and clean financial reports delivered to your inbox each month — without you lifting a finger. The financial foundation every Alaska business deserves.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">QuickBooks Online</span>
+          <span class="svc-tag">Monthly P&amp;L</span>
+          <span class="svc-tag">Balance Sheet</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">🔍</div>
+        <h3>Catch-Up Bookkeeping</h3>
+        <p>Behind on your books? We clean up any backlog — whether it is 3 months or 3 years — so you can move forward with accurate, up-to-date records.</p>
+        <div class="svc-tags"><span class="svc-tag light">Any Period</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">⚙️</div>
+        <h3>Setup &amp; Cleanup</h3>
+        <p>New business or inherited a mess? We configure QuickBooks, connect your accounts, and build a chart of accounts that actually makes sense for your industry — including landed cost and job costing where Alaska demands it.</p>
+        <div class="svc-tags"><span class="svc-tag light">QuickBooks</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">🏦</div>
+        <h3>Bank Reconciliation</h3>
+        <p>Monthly reconciliation of every bank account and credit card — ensuring your books match your statements and no transactions fall through the cracks.</p>
+        <div class="svc-tags"><span class="svc-tag light">All Accounts</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">📈</div>
+        <h3>Financial Reporting</h3>
+        <p>P&amp;L statements, balance sheets, and cash flow reports delivered monthly in a format you can actually understand and act on.</p>
+        <div class="svc-tags"><span class="svc-tag light">Monthly</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">💳</div>
+        <h3>Accounts Payable &amp; Receivable</h3>
+        <p>We keep your AP and AR organized so you always know what is coming in, what is going out, and what is overdue.</p>
+        <div class="svc-tags"><span class="svc-tag light">AP / AR</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">👥</div>
+        <h3>Payroll Bookkeeping Support</h3>
+        <p>We make sure your payroll expenses hit your books correctly and stay in sync with your payroll processor every pay period — including seasonal crews.</p>
+        <div class="svc-tags"><span class="svc-tag light">Payroll Entries</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="section">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">Industries</div>
+      <h2 class="display">We Know Kodiak Island Borough's<br/>Business Landscape.</h2>
+      <p>We understand the financial patterns of the industries that actually drive this economy — not a generic list copied from somewhere in the Lower 48.</p>
+    </div>
+    <div class="industries-grid">
+      <div class="ind-card">
+        <div class="ind-icon">🐟</div>
+        <h4>Commercial Fishing</h4>
+        <p>Fish tickets, crew shares, IFQ costs, fisheries tax</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🧊</div>
+        <h4>Seafood Processing</h4>
+        <p>Inventory, cold storage, seasonal labor, landed cost</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🚢</div>
+        <h4>Coast Guard Contractors</h4>
+        <p>Federal billing, allowable costs, audit-ready records</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🛥️</div>
+        <h4>Marine Trades</h4>
+        <p>Vessel repair, welding, gear supply, job costing</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🏨</div>
+        <h4>Lodges &amp; Guides</h4>
+        <p>Bear hunts and fishing packages booked a year out</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🍽️</div>
+        <h4>Restaurants</h4>
+        <p>COGS, tip payroll, 7% inside the city line</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🏗️</div>
+        <h4>Contractors &amp; Trades</h4>
+        <p>Barged materials, job costing, the city tax boundary</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🚀</div>
+        <h4>Aerospace Services</h4>
+        <p>Launch support, logistics, specialized contracts</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial-section">
+  <div class="container">
+    <div class="testimonial-inner">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-quote">"I have been running a longline boat out of Kodiak for twenty years and my books were shoeboxes and a prayer. Crew shares, fish tickets, IFQ payments - my last bookkeeper had never seen any of it and just guessed. Tides actually knew what a fish ticket was. They rebuilt three years of books, got the crew share splits right, and my CPA said it was the cleanest set of fishing books he had seen."</p>
+      <div class="t-author">
+        <div class="t-avatar">MO</div>
+        <div>
+          <div class="t-name">Mike O.</div>
+          <div class="t-role">Longline Vessel Owner · Kodiak, AK</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">FAQ</div>
+      <h2 class="display">Questions from Kodiak Island Borough<br/>Business Owners.</h2>
+    </div>
+    <div class="faq-cols">
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>Does the Kodiak Island Borough have a sales tax?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>The borough does not levy a general sales tax. The City of Kodiak does - 7% as of 2026, plus an additional 5% hotel and motel tax on lodging. So the question is simply whether the sale happened inside city limits. A sale downtown is taxed; the same sale out at Bells Flats or Womens Bay is not. Confirm current rates with the City of Kodiak.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>Do you actually understand commercial fishing bookkeeping?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>Yes - and it is genuinely different. Fish tickets, crew share splits, IFQ and permit costs, gear depreciation, and Alaska's fisheries business tax and fishery resource landing tax are not things a typical Lower 48 bookkeeper has encountered. We handle them, keep the records organized and tax-ready, and work alongside your CPA on the filings so nothing gets guessed at.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>I do contract work on Coast Guard Base Kodiak. Does that change anything?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>It does. Federal contracting means separating allowable from unallowable costs, keeping timekeeping records that will survive scrutiny, and being able to produce clean documentation on request. We keep the books audit-ready and coordinate with your CPA or contract accountant on the compliance requirements. It is a discipline, and it is a lot easier to maintain than to reconstruct.</p></div>
+        </div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>We sell to processors and also run a small retail shop. Can you handle both?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>Yes, and that mix is common in Kodiak. The retail side needs the 7% city sales tax handled correctly; the seafood side needs fish tickets, landed weights, and possibly fisheries tax treatment. We keep the two revenue streams cleanly separated so your margins on each are real and your filings are straightforward.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>Do I need QuickBooks before signing up?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>No. If you do not have QuickBooks Online, we set it up as part of onboarding. If you already have an account, we connect to it and clean it up as needed. We also connect Puzzle.io for real-time dashboards and an instant snapshot of your books before regular monthly service begins.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>How is pricing determined?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>Pricing is based on your monthly transaction volume, not your zip code. Most small businesses land between $395 and $895 per month. You get an exact quote during your free consultation - no guesswork, no setup fees.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEARBY BOROUGHS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">Serving All of Alaska</div>
+      <h2 class="display">Also Serving Other<br/>Alaska Boroughs.</h2>
+      <p>Alaska does not border another state, so we do not pretend to serve one. We serve Alaska — from Southeast to the Interior to the Y-K Delta.</p>
+    </div>
+    <div class="nearby-grid">
+      <a class="nearby-card" href="county-kenai-peninsula-ak.html">
+        <h4>Kenai Peninsula Borough</h4>
+        <p>Kenai · Soldotna · Homer</p>
+      </a>
+      <a class="nearby-card" href="county-anchorage-ak.html">
+        <h4>Municipality of Anchorage</h4>
+        <p>Anchorage · Eagle River</p>
+      </a>
+      <a class="nearby-card" href="county-sitka-ak.html">
+        <h4>City &amp; Borough of Sitka</h4>
+        <p>Sitka · Baranof Island</p>
+      </a>
+      <a class="nearby-card" href="county-bethel-ak.html">
+        <h4>Bethel Census Area</h4>
+        <p>Bethel · Y-K Delta</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="eyebrow" style="color:var(--teal);background:rgba(65,207,208,.1);border-color:rgba(65,207,208,.2);">Kodiak's Bookkeeping Partner</div>
+      <h2 class="display">Let's Clean Up Your<br/>Kodiak Books.</h2>
+      <p>Schedule a free 15-minute consultation. Fishing, contracting, retail - tell us about your business and we will show you exactly where your books stand.</p>
+      <div class="cta-actions">
+        <a href="schedule.html" class="btn btn-teal btn-lg">Book Your Free Consultation</a>
+        <a href="https://go.tidesbookkeeping.com/tiered-pricing" class="btn btn-outline-white btn-lg">See Pricing</a>
+      </div>
+      <p class="cta-note">No setup fees &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; First month guaranteed</p>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="res-section">
+  <div class="container">
+    <div class="section-header centered"><div class="eyebrow">Local &amp; State Resources</div><h2 class="display" style="font-size:1.6rem;">Business &amp; Tax Resources</h2><p style="max-width:640px;margin:.5rem auto 0;">Official government resources for registering, filing, and staying compliant. Tides handles your books; these help with the rest.</p></div>
+    <div class="res-grid">
+      <a class="res-card" href="https://www.city.kodiak.ak.us/finance/page/tax-ordinances-rates-and-forms" target="_blank" rel="noopener noreferrer"><div class="res-name">City of Kodiak - Tax Rates and Forms</div><div class="res-desc">City sales tax, hotel/motel tax, ordinances, and filing forms</div></a>
+      <a class="res-card" href="https://tax.alaska.gov/" target="_blank" rel="noopener noreferrer"><div class="res-name">Alaska Dept. of Revenue - Tax Division</div><div class="res-desc">Corporate income tax, fisheries taxes, and state tax filing</div></a>
+      <a class="res-card" href="https://www.commerce.alaska.gov/web/cbpl/BusinessLicensing.aspx" target="_blank" rel="noopener noreferrer"><div class="res-name">Alaska Business Licensing (DCCED)</div><div class="res-desc">Alaska business license, professional licensing, and renewals</div></a>
+      <a class="res-card" href="https://arsstc.org/" target="_blank" rel="noopener noreferrer"><div class="res-name">Alaska Remote Sellers Sales Tax Commission</div><div class="res-desc">Single-point sales tax registration and filing for remote sellers</div></a>
+      <a class="res-card" href="https://www.irs.gov/businesses/small-businesses-self-employed" target="_blank" rel="noopener noreferrer"><div class="res-name">IRS - Small Business and Self-Employed</div><div class="res-desc">Federal taxes, EIN, forms, and recordkeeping guidance</div></a>
+      <a class="res-card" href="https://www.sba.gov/" target="_blank" rel="noopener noreferrer"><div class="res-name">U.S. Small Business Administration</div><div class="res-desc">Federal programs, guidance, and Alaska SBA district resources</div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="logo.png" alt="Tides Bookkeeping" class="footer-logo" />
+        <p class="footer-about">Remote bookkeeping, payroll support, and financial reporting for small businesses across the Kodiak Island Borough and all of Alaska.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="service-monthly-bookkeeping.html">Monthly Bookkeeping</a></li>
+          <li><a href="service-catchup-bookkeeping.html">Catch-Up Bookkeeping</a></li>
+          <li><a href="service-payroll.html">Payroll Support</a></li>
+          <li><a href="service-bank-reconciliation.html">Bank Reconciliation</a></li>
+          <li><a href="service-financial-reporting.html">Financial Reporting</a></li>
+          <li><a href="/glossary">Glossary</a></li>
+          <li><a href="who-we-serve.html">Who We Serve →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kodiak &amp; Nearby</h4>
+        <ul class="footer-links">
+          <li><a href="city-kodiak-ak.html">Kodiak</a></li>
+          <li><a href="state-alaska.html">Alaska Bookkeeping</a></li>
+          <li><a href="county-kenai-peninsula-ak.html">Kenai Peninsula Borough</a></li>
+          <li><a href="county-anchorage-ak.html">Anchorage</a></li>
+          <li><a href="areas-we-serve.html">Areas We Serve</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:support@tidesbookkeeping.com">support@tidesbookkeeping.com</a></li>
+          <li><a href="tel:+18645592686">(864) 559-2686</a></li>
+          <li>📍 Greenville, South Carolina</li>
+          <li><a href="/contact">Contact Us →</a></li>
+          <li><a href="schedule.html">Book Free Call</a></li>
+          <li><a href="https://portal.tidesbookkeeping.com">Client Portal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tides Bookkeeping LLC. All rights reserved. Kodiak Island Borough, Alaska Bookkeeping Services. Tides Bookkeeping LLC is a 100% remote firm headquartered in Greenville, South Carolina.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="sitemap.xml">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const allItems = document.querySelectorAll('.faq-item');
+    allItems.forEach(i => { if (i !== item) i.classList.remove('open'); });
+    item.classList.toggle('open');
+  }
+</script>
+
+
+<!-- GHL Chat Widget -->
+<div data-chat-widget data-widget-id="69614819668b0f723ec311b9" data-location-id="MbY1ICQ6HdzVOrgFncoI"></div>
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69614819668b0f723ec311b9"></script>
+
+
+<script>
+/* mobile-menu-js-fix-start */
+(function(){
+  const btn = document.getElementById('hamburger');
+  const links = document.querySelector('.nav-links');
+  if (!btn || !links) return;
+  const close = () => {
+    links.classList.remove('open');
+    btn.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    document.body.style.overflow = '';
+  };
+  const newBtn = btn.cloneNode(true);
+  btn.parentNode.replaceChild(newBtn, btn);
+  newBtn.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    newBtn.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', close);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+})();
+/* mobile-menu-js-fix-end */
+</script>
+
+</body>
+</html>

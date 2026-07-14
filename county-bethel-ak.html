@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bethel Census Area Bookkeeping | Tides Bookkeeping</title>
+  <meta name="description" content="Bookkeeping for small businesses across the Bethel Census Area, AK - Bethel and the Yukon-Kuskokwim Delta. Remote monthly service." />
+  <link rel="canonical" href="https://www.tidesbookkeeping.com/county-bethel-ak" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bethel Census Area Bookkeeping | Tides Bookkeeping" />
+  <meta property="og:description" content="Bookkeeping for small businesses across the Bethel Census Area, AK - Bethel and the Yukon-Kuskokwim Delta. Remote monthly service." />
+  <meta property="og:url" content="https://www.tidesbookkeeping.com/county-bethel-ak" />
+  <meta property="og:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta property="og:site_name" content="Tides Bookkeeping" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bethel Census Area Bookkeeping | Tides Bookkeeping" />
+  <meta name="twitter:description" content="Bookkeeping for small businesses across the Bethel Census Area, AK - Bethel and the Yukon-Kuskokwim Delta. Remote monthly service." />
+  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── TOKENS ─────────────────────────────────────── */
+    :root {
+      --teal:    #41cfd0;
+      --teal-lt: #e6f9f9;
+      --blue:    #66c1ee;
+      --blue-lt: #e8f4fd;
+      --navy:    #215197;
+      --navy-dk: #163872;
+      --ink:     #0f1c2e;
+      --body:    #4a5568;
+      --muted:   #94a3b8;
+      --border:  #e2eaf3;
+      --bg:      #ffffff;
+      --bg-alt:  #f7fbff;
+      --shadow:  0 1px 3px rgba(15,28,46,.06), 0 4px 16px rgba(15,28,46,.08);
+      --shadow-lg: 0 8px 40px rgba(15,28,46,.12);
+      --r:       16px;
+      --r-sm:    10px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── TYPE ───────────────────────────────────────── */
+    .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 0.95; }
+    h2.display { font-size: clamp(2.4rem, 5vw, 4rem); }
+    h3 { font-size: 1.1rem; font-weight: 700; color: var(--ink); }
+    p { color: var(--body); }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal);
+      background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
+      padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--blue) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* ── LAYOUT ─────────────────────────────────────── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+    .section { padding: 96px 0; }
+    .section-alt { background: var(--bg-alt); }
+    .section-navy { background: var(--navy); }
+
+    /* ── BUTTONS ────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .85rem 1.75rem; border-radius: 50px;
+      font-weight: 600; font-size: .9rem; cursor: pointer;
+      transition: all .2s ease; border: 2px solid transparent;
+    }
+    .btn-primary { background: var(--navy); color: #fff; }
+    .btn-primary:hover { background: var(--navy-dk); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(33,81,151,.3); }
+    .btn-teal { background: var(--teal); color: var(--ink); font-weight: 700; }
+    .btn-teal:hover { background: #38bfc0; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(65,207,208,.4); }
+    .btn-outline { border-color: var(--border); color: var(--ink); background: #fff; }
+    .btn-outline:hover { border-color: var(--navy); color: var(--navy); }
+    .btn-outline-white { border-color: rgba(255,255,255,.35); color: #fff; }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+    .btn-lg { padding: 1rem 2.2rem; font-size: 1rem; }
+
+    /* ── NAV ────────────────────────────────────────── */
+    .nav-wrap {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(255,255,255,.92); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem; max-width: 1180px; margin: 0 auto;
+    }
+    .nav-logo img { height: 44px; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); font-weight: 700; }
+    .nav-cta { display: flex; align-items: center; gap: .75rem; }
+    .nav-signin { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
+    .nav-signin:hover { color: var(--navy); }
+
+    /* ── HAMBURGER ──────────────────────────────────── */
+    .hamburger {
+      display: none; background: none; border: none; cursor: pointer;
+      padding: .4rem; flex-direction: column; gap: 5px; z-index: 1001;
+    }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); transition: all .25s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── BREADCRUMB ─────────────────────────────────── */
+    .breadcrumb { background: var(--bg-alt); border-bottom: 1px solid var(--border); padding: .75rem 0; }
+    .breadcrumb-inner {
+      display: flex; align-items: center; gap: .5rem; flex-wrap: wrap;
+      max-width: 1180px; margin: 0 auto; padding: 0 2rem;
+      font-size: .78rem; color: var(--muted);
+    }
+    .breadcrumb-inner a { color: var(--muted); transition: color .2s; }
+    .breadcrumb-inner a:hover { color: var(--navy); }
+    .breadcrumb-sep { color: var(--border); }
+    .breadcrumb-current { color: var(--navy); font-weight: 600; }
+
+    /* ── PAGE HERO ──────────────────────────────────── */
+    .page-hero {
+      padding: 88px 0 80px;
+      background: #fff; position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 65% 75% at 88% 15%, rgba(65,207,208,.11) 0%, transparent 60%),
+        radial-gradient(ellipse 45% 45% at 10% 85%, rgba(102,193,238,.08) 0%, transparent 60%);
+    }
+    .page-hero-inner {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 420px; gap: 5rem; align-items: center;
+    }
+    .page-hero h1 {
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: .93; margin-bottom: 1.5rem; color: var(--ink);
+    }
+    .page-hero p {
+      font-size: 1.05rem; line-height: 1.78; color: var(--body); max-width: 520px; margin-bottom: 2.25rem;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .hero-note { font-size: .78rem; color: var(--muted); margin-top: .75rem; }
+
+    /* Hero aside card */
+    .hero-aside {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 24px; box-shadow: var(--shadow-lg); overflow: hidden;
+    }
+    .ha-header {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a3d7a 100%);
+      padding: 1.5rem 2rem; color: #fff;
+    }
+    .ha-header .label {
+      font-size: .68rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal); display: block; margin-bottom: .5rem;
+    }
+    .ha-title { font-size: 1.05rem; font-weight: 700; }
+    .ha-subtitle { font-size: .78rem; color: rgba(255,255,255,.55); margin-top: 3px; }
+    .ha-body { padding: 1.75rem 2rem; }
+    .ha-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .8rem 0; border-bottom: 1px solid var(--border);
+      font-size: .85rem;
+    }
+    .ha-row:last-child { border-bottom: none; }
+    .ha-row strong { font-weight: 600; color: var(--ink); }
+    .ha-badge {
+      font-size: .67rem; font-weight: 700; padding: 3px 10px; border-radius: 50px; letter-spacing: .04em;
+    }
+    .ha-badge.green { background: #dcfce7; color: #16a34a; }
+    .ha-badge.teal { background: var(--teal-lt); color: var(--teal); }
+    .ha-badge.blue { background: var(--blue-lt); color: var(--navy); }
+    .ha-stat-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+      background: var(--border); border: 1px solid var(--border);
+      border-radius: var(--r-sm); overflow: hidden; margin-top: 1.5rem;
+    }
+    .ha-stat { background: var(--bg-alt); padding: 1rem; text-align: center; }
+    .ha-stat-val { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--navy); line-height: 1; }
+    .ha-stat-label { font-size: .68rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-top: 3px; }
+
+    /* ── SECTION HEADER ─────────────────────────────── */
+    .section-header { max-width: 620px; }
+    .section-header.centered { max-width: 700px; margin: 0 auto; text-align: center; }
+    .section-header p { margin-top: 1rem; font-size: 1rem; line-height: 1.75; }
+
+    /* ── COUNTY OVERVIEW ────────────────────────────── */
+    .county-overview {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;
+    }
+    .fact-list { display: flex; flex-direction: column; gap: .85rem; margin-top: 2rem; }
+    .fact-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .9rem 1.25rem; background: #fff;
+      border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow);
+    }
+    .fact-label { font-size: .88rem; font-weight: 600; color: var(--ink); }
+    .fact-value { font-size: .88rem; font-weight: 700; color: var(--navy); }
+
+    /* ── CITIES WE SERVE ────────────────────────────── */
+    .cities-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 3.5rem;
+    }
+    .city-card {
+      background: #fff; border: 1px solid var(--border); border-radius: 20px;
+      padding: 1.75rem; box-shadow: var(--shadow); transition: all .2s;
+    }
+    .city-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.4); }
+    .city-card.featured {
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      border-color: transparent;
+    }
+    .city-card-icon { font-size: 1.5rem; margin-bottom: .75rem; }
+    .city-card-name { font-size: 1.1rem; font-weight: 700; color: var(--ink); margin-bottom: .35rem; }
+    .city-card.featured .city-card-name { color: #fff; }
+    .city-card-desc { font-size: .84rem; color: var(--body); line-height: 1.65; }
+    .city-card.featured .city-card-desc { color: rgba(255,255,255,.6); }
+    .city-card-pop {
+      display: inline-flex; align-items: center; gap: .3rem;
+      font-size: .7rem; font-weight: 700; color: var(--muted);
+      text-transform: uppercase; letter-spacing: .06em; margin-top: .75rem;
+    }
+    .city-card.featured .city-card-pop { color: rgba(255,255,255,.4); }
+    .city-link {
+      display: inline-flex; align-items: center; gap: .35rem;
+      font-size: .82rem; font-weight: 700; color: var(--teal);
+      margin-top: 1rem; transition: gap .2s;
+    }
+    .city-link:hover { gap: .6rem; }
+
+    /* ── SERVICES ───────────────────────────────────── */
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem; margin-top: 3.5rem;
+    }
+    .svc-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 20px; padding: 2rem; box-shadow: var(--shadow); transition: all .25s;
+    }
+    .svc-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    .svc-card.featured {
+      background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
+      border-color: transparent; grid-column: span 2;
+    }
+    .svc-icon {
+      width: 50px; height: 50px; border-radius: 13px;
+      background: var(--teal-lt); display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; margin-bottom: 1.25rem;
+    }
+    .svc-card.featured .svc-icon { background: rgba(255,255,255,.12); }
+    .svc-card h3 { margin-bottom: .6rem; }
+    .svc-card.featured h3 { color: #fff; font-size: 1.35rem; }
+    .svc-card p { font-size: .87rem; line-height: 1.7; }
+    .svc-card.featured p { color: rgba(255,255,255,.65); }
+    .svc-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
+    .svc-tag {
+      font-size: .68rem; font-weight: 700; letter-spacing: .04em;
+      padding: 4px 10px; border-radius: 50px;
+      background: rgba(255,255,255,.1); color: rgba(255,255,255,.75);
+    }
+    .svc-tag.light { background: var(--teal-lt); color: var(--teal); }
+
+    /* ── INDUSTRIES ─────────────────────────────────── */
+    .industries-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 3.5rem;
+    }
+    .ind-card {
+      background: #fff; border: 1px solid var(--border); border-radius: 16px;
+      padding: 1.5rem; text-align: center; box-shadow: var(--shadow); transition: all .2s;
+    }
+    .ind-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+    .ind-icon { font-size: 1.8rem; margin-bottom: .75rem; }
+    .ind-card h4 { font-size: .9rem; font-weight: 700; color: var(--ink); margin-bottom: .4rem; }
+    .ind-card p { font-size: .78rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── TESTIMONIAL ────────────────────────────────── */
+    .testimonial-section {
+      background: linear-gradient(135deg, var(--navy) 0%, #122f6b 100%); padding: 88px 0;
+    }
+    .testimonial-inner { max-width: 860px; margin: 0 auto; text-align: center; }
+    .t-stars { color: #f59e0b; font-size: 1.1rem; letter-spacing: 3px; margin-bottom: 2rem; }
+    .t-quote {
+      font-size: clamp(1.05rem, 2.5vw, 1.35rem); line-height: 1.75;
+      color: rgba(255,255,255,.88); font-style: italic; margin-bottom: 2.5rem;
+    }
+    .t-author { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+    .t-avatar {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: rgba(255,255,255,.1); border: 2px solid rgba(65,207,208,.4);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: .9rem; color: var(--teal);
+    }
+    .t-name { font-size: 1rem; font-weight: 700; color: #fff; }
+    .t-role { font-size: .8rem; color: rgba(255,255,255,.5); margin-top: 2px; }
+
+    /* ── FAQ ────────────────────────────────────────── */
+    .faq-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 4rem; margin-top: 3rem; }
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.4rem 0; text-align: left; gap: 1rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .faq-question h4 { font-size: .97rem; font-weight: 700; color: var(--ink); flex: 1; }
+    .faq-toggle {
+      width: 28px; height: 28px; border-radius: 50%;
+      border: 1.5px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 1.1rem; color: var(--muted); transition: all .2s;
+    }
+    .faq-item.open .faq-toggle { background: var(--teal); border-color: var(--teal); color: var(--ink); transform: rotate(45deg); }
+    .faq-answer { display: none; padding: 0 0 1.4rem; }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-answer p { font-size: .9rem; line-height: 1.75; color: var(--body); }
+
+    /* ── NEARBY COUNTIES ────────────────────────────── */
+    .nearby-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 3rem;
+    }
+    .nearby-card {
+      background: var(--bg-alt); border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.25rem; text-align: center; transition: all .2s;
+    }
+    .nearby-card:hover { border-color: rgba(65,207,208,.4); background: #fff; box-shadow: var(--shadow); }
+    .nearby-card h4 { font-size: .9rem; font-weight: 700; color: var(--ink); margin-bottom: .25rem; }
+    .nearby-card p { font-size: .75rem; color: var(--muted); }
+
+    /* ── CTA ────────────────────────────────────────── */
+    .cta-section { background: var(--ink); padding: 96px 0; }
+    .cta-inner { text-align: center; max-width: 720px; margin: 0 auto; }
+    .cta-inner h2 { font-size: clamp(2rem, 5vw, 3.5rem); color: #fff; margin-bottom: 1.25rem; }
+    .cta-inner p { font-size: 1.05rem; color: rgba(255,255,255,.6); margin-bottom: 2.5rem; }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .cta-note { font-size: .78rem; color: rgba(255,255,255,.3); margin-top: 1.25rem; }
+
+    /* ── FOOTER ─────────────────────────────────────── */
+    footer { background: #080f1a; padding: 72px 0 32px; }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem;
+    }
+    .footer-logo { height: 40px; margin-bottom: 1.25rem; filter: brightness(10); }
+    .footer-about { font-size: .84rem; color: rgba(255,255,255,.35); line-height: 1.75; max-width: 280px; }
+    .footer-col h4 {
+      font-size: .66rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: .12em; color: rgba(255,255,255,.25); margin-bottom: 1.25rem;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: .55rem; }
+    .footer-links a { font-size: .82rem; color: rgba(255,255,255,.4); transition: color .15s; }
+    .footer-links a:hover { color: rgba(255,255,255,.8); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.06); padding-top: 1.5rem;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: .72rem; color: rgba(255,255,255,.2); }
+    .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-bottom-links a { font-size: .72rem; color: rgba(255,255,255,.2); transition: color .15s; }
+    .footer-bottom-links a:hover { color: rgba(255,255,255,.5); }
+
+    /* ── LOCAL GUIDE ────────────────────────────────── */
+    .local-two-col {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 3.5rem;
+    }
+    .local-two-col h3 { font-size: 1.15rem; margin-bottom: 1.25rem; }
+    .highlight-list { display: flex; flex-direction: column; gap: .65rem; }
+    .hl-item {
+      display: flex; align-items: flex-start; gap: .85rem;
+      padding: .9rem 1.25rem; background: #fff;
+      border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); transition: all .2s;
+    }
+    .hl-item:hover { border-color: rgba(65,207,208,.35); box-shadow: var(--shadow-lg); }
+    .hl-icon { font-size: 1.05rem; flex-shrink: 0; margin-top: 2px; }
+    .hl-title { font-size: .9rem; font-weight: 700; color: var(--ink); }
+    .hl-desc { font-size: .78rem; color: var(--body); line-height: 1.6; margin-top: .15rem; }
+    .corridor-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; margin-top: 1.25rem;
+    }
+    .corridor-card {
+      background: #fff; border: 1px solid var(--border); border-radius: 12px;
+      padding: 1rem 1.25rem; box-shadow: var(--shadow); transition: all .2s;
+    }
+    .corridor-card:hover { border-color: rgba(65,207,208,.4); }
+    .corridor-name { font-size: .88rem; font-weight: 700; color: var(--ink); margin-bottom: .25rem; }
+    .corridor-desc { font-size: .76rem; color: var(--body); line-height: 1.6; }
+    .county-stat-strip {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+      background: var(--border); border: 1px solid var(--border);
+      border-radius: 16px; overflow: hidden; margin-top: 3.5rem;
+    }
+    .css-item { background: var(--bg-alt); padding: 1.75rem; text-align: center; }
+    .css-val {
+      font-family: 'Bebas Neue', sans-serif; font-size: 2.4rem;
+      color: var(--navy); line-height: 1;
+    }
+    .css-label { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-top: .4rem; }
+
+    /* ── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .local-two-col { grid-template-columns: 1fr; gap: 2.5rem; }
+      .county-stat-strip { grid-template-columns: repeat(2, 1fr); }
+      .page-hero-inner { grid-template-columns: 1fr; }
+      .hero-aside { display: none; }
+      .county-overview { grid-template-columns: 1fr; gap: 2rem; }
+      .cities-grid { grid-template-columns: 1fr 1fr; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .svc-card.featured { grid-column: span 2; }
+      .industries-grid { grid-template-columns: repeat(3, 1fr); }
+      .nearby-grid { grid-template-columns: repeat(2, 1fr); }
+      .faq-cols { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column; position: fixed;
+        inset: 0; background: #fff; z-index: 1000;
+        align-items: center; justify-content: center; gap: 2rem;
+      }
+      .nav-links.open li a { font-size: 1.4rem; color: var(--ink); }
+      .page-hero h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-actions .btn { justify-content: center; }
+      .corridor-grid { grid-template-columns: 1fr; }
+      .cities-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .svc-card.featured { grid-column: span 1; }
+      .industries-grid { grid-template-columns: 1fr 1fr; }
+      .nearby-grid { grid-template-columns: 1fr 1fr; }
+      .cta-actions { flex-direction: column; align-items: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-bottom-links { justify-content: center; }
+      h2.display { font-size: 2.2rem; }
+    }
+    @media (max-width: 480px) {
+      .industries-grid { grid-template-columns: 1fr; }
+      .nearby-grid { grid-template-columns: 1fr 1fr; }
+      .container { padding: 0 1rem; }
+      .section { padding: 3rem 0; }
+    }
+  
+/* mobile-menu-fix-start */
+@media (max-width: 768px) {
+  /* Kill stacking context on nav-wrap when menu is open */
+  body.menu-open .nav-wrap {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  /* Bulletproof full-screen mobile menu overlay */
+  .nav-links.open {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    background: #ffffff !important;
+    z-index: 9999 !important;
+    list-style: none !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    margin: 0 !important;
+    padding: 2rem !important;
+    overflow-y: auto !important;
+  }
+  .nav-links.open a {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    color: var(--ink) !important;
+    padding: .75rem 1.5rem !important;
+    display: block !important;
+  }
+  .nav-links.open li {
+    list-style: none !important;
+  }
+  /* Hamburger sits on top of overlay */
+  .hamburger {
+    z-index: 10000 !important;
+    position: relative;
+  }
+  /* Prevent horizontal scroll site-wide on mobile */
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+}
+/* mobile-menu-fix-end */
+
+    .res-section{background:var(--bg-alt,#f7fafc);border-top:1px solid var(--border,#e5eaf0);padding:3rem 0;}
+    .res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;max-width:1100px;margin:1.5rem auto 0;padding:0 1.5rem;}
+    .res-card{display:block;background:#fff;border:1px solid var(--border,#e5eaf0);border-radius:14px;padding:1.1rem 1.25rem;text-decoration:none;transition:all .2s;}
+    .res-card:hover{border-color:var(--teal,#41cfd0);box-shadow:0 6px 20px rgba(15,28,46,.08);transform:translateY(-2px);}
+    .res-card .res-name{font-weight:700;color:var(--navy,#215197);font-size:.92rem;margin-bottom:.25rem;}
+    .res-card .res-name::after{content:" \2197";color:var(--teal,#41cfd0);font-weight:600;}
+    .res-card .res-desc{font-size:.78rem;color:var(--muted,#5a6b82);line-height:1.5;}
+    </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBFJKD962N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JBFJKD962N');
+  </script>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.tidesbookkeeping.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Alaska",
+          "item": "https://www.tidesbookkeeping.com/state-alaska"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Bethel Census Area",
+          "item": "https://www.tidesbookkeeping.com/county-bethel-ak"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+<!-- auto-schema-start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "@id": "https://www.tidesbookkeeping.com/#organization",
+  "name": "Tides Bookkeeping LLC",
+  "alternateName": "Tides Bookkeeping",
+  "description": "Tides Bookkeeping delivers dedicated monthly bookkeeping, bank reconciliation, financial reporting, and payroll support for small businesses across the United States.",
+  "url": "https://www.tidesbookkeeping.com",
+  "logo": "https://www.tidesbookkeeping.com/logo.png",
+  "image": "https://www.tidesbookkeeping.com/logo.png",
+  "telephone": "+1-864-559-2686",
+  "email": "support@tidesbookkeeping.com",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Greenville",
+    "addressRegion": "SC",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/tides-bookkeeping",
+    "https://www.facebook.com/thetidesbookkeeping",
+    "https://www.instagram.com/tidesbookkeeping/"
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "State",
+      "name": "Alaska"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Bethel Census Area"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Bookkeeping Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Monthly Bookkeeping",
+          "url": "https://www.tidesbookkeeping.com/service-monthly-bookkeeping"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bank Reconciliation",
+          "url": "https://www.tidesbookkeeping.com/service-bank-reconciliation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Catch-Up Bookkeeping",
+          "url": "https://www.tidesbookkeeping.com/service-catchup-bookkeeping"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Financial Reporting",
+          "url": "https://www.tidesbookkeeping.com/service-financial-reporting"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Accounts Payable & Receivable",
+          "url": "https://www.tidesbookkeeping.com/service-accounts-payable-receivable"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Payroll Support",
+          "url": "https://www.tidesbookkeeping.com/service-payroll"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "QuickBooks Setup & Cleanup",
+          "url": "https://www.tidesbookkeeping.com/service-software-setup"
+        }
+      }
+    ]
+  },
+  "knowsAbout": [
+    "Bookkeeping",
+    "Small Business Accounting",
+    "Financial Reporting",
+    "QuickBooks Online",
+    "Payroll",
+    "Alaska Local Sales Tax",
+    "Alaska Remote Sellers Sales Tax Commission"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a census area, and why is Bethel not a borough?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most of Alaska is organized into boroughs, but a large portion of the state - including the Y-K Delta - remains part of the unorganized borough, which has no borough-level government at all. The Census Bureau divides that unorganized area into census areas purely for statistical reporting. So the Bethel Census Area has no assembly, no borough property tax, and no borough sales tax. The only local government with taxing power here is the City of Bethel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the sales tax in Bethel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The City of Bethel levies a 6% sales tax as of 2026. Because the census area is in the unorganized borough, there is no borough tax stacked on top of it, and outside city limits there is no general sales tax at all. Confirm the current rate with the City of Bethel Sales Tax Division before you rely on it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should I handle freight costs in my books?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As landed cost, and it is the single most important thing to get right out here. Nothing drives to Bethel - inventory arrives by jet, by summer barge, or over the winter ice road, and the price gap between those is enormous. If freight sits in a general expense account, your gross margin is fiction. We structure the books so landed cost is visible per product and you can actually see which shipping method pays for itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does being 100% remote work for a business in the Delta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It works better here than almost anywhere, because everything in the Delta already runs remotely. There is no road to Bethel; every professional service the region uses arrives by phone, email, or plane. We work with Delta clients over secure file sharing and video calls, and our clients tell us we are more responsive than the in-person options they had - because we are not also flying to a village that week."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need QuickBooks before signing up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. If you do not have QuickBooks Online, we set it up as part of onboarding. If you already have an account, we connect to it and clean it up as needed. We also connect Puzzle.io for real-time dashboards and an instant snapshot of your books before regular monthly service begins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is pricing determined?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pricing is based on your monthly transaction volume, not your zip code. Most small businesses land between $395 and $895 per month. You get an exact quote during your free consultation - no guesswork, no setup fees."
+      }
+    }
+  ]
+}
+</script>
+<!-- auto-schema-end -->
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav-wrap">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/#how-it-works">How It Works</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/who-we-serve">Who We Serve</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/contact">Contact Us</a></li>
+      <li><a href="https://go.tidesbookkeeping.com/tiered-pricing">Pricing</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://portal.tidesbookkeeping.com" class="nav-signin">Sign In</a>
+      <a href="schedule.html" class="btn btn-primary">Book Appointment</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="state-alaska.html">Alaska</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">Bethel Census Area</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div>
+        <div class="eyebrow">📍 Bethel Census Area, Alaska</div>
+        <h1 class="display">Bookkeeping for the<br/><span class="gradient-text">Bethel Census<br/>Area</span></h1>
+        <p>The Bethel Census Area sits in the unorganized borough - there is no borough government here at all. Bethel is the hub of the Yukon-Kuskokwim Delta, with no road connection to anywhere. Tides keeps the books clean, entirely by air and internet. 100% remote.</p>
+        <div class="hero-actions">
+          <a href="schedule.html" class="btn btn-teal btn-lg">Schedule a Free Call</a>
+          <a href="city-bethel-ak.html" class="btn btn-outline btn-lg">Bethel City Page →</a>
+        </div>
+        <p class="hero-note">No setup fees &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; 100% Remote</p>
+      </div>
+
+      <!-- Aside Card -->
+      <div class="hero-aside">
+        <div class="ha-header">
+          <span class="label">Y-K Delta Coverage</span>
+          <div class="ha-title">Serving the Whole Delta</div>
+          <div class="ha-subtitle">Bethel and the surrounding villages</div>
+        </div>
+        <div class="ha-body">
+          <div class="ha-row">
+            <strong>City of Bethel</strong>
+            <span class="ha-badge green">Served</span>
+          </div>
+          <div class="ha-row">
+            <strong>Kuskokwim Villages</strong>
+            <span class="ha-badge green">Served</span>
+          </div>
+          <div class="ha-row">
+            <strong>Lower Yukon Communities</strong>
+            <span class="ha-badge green">Served</span>
+          </div>
+          <div class="ha-row">
+            <strong>Coastal Villages</strong>
+            <span class="ha-badge green">Served</span>
+          </div>
+          <div class="ha-row">
+            <strong>Unorganized Borough</strong>
+            <span class="ha-badge teal">Served</span>
+          </div>
+          <div class="ha-stat-row">
+            <div class="ha-stat">
+              <div class="ha-stat-val">18k+</div>
+              <div class="ha-stat-label">Census Area Pop.</div>
+            </div>
+            <div class="ha-stat">
+              <div class="ha-stat-val">6%</div>
+              <div class="ha-stat-label">Bethel Sales Tax</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOROUGH OVERVIEW -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="county-overview">
+      <div>
+        <div class="eyebrow">About the Area</div>
+        <h2 class="display">The Hub of the<br/>Yukon-Kuskokwim<br/>Delta.</h2>
+        <p>The Bethel Census Area is not a borough - it is part of Alaska's <strong>unorganized borough</strong>, meaning there is no borough government at all. The Census Bureau draws the boundary for statistical purposes; there is no borough assembly, no borough tax, and no borough services. The only local government here is municipal.</p>
+        <p style="margin-top:1rem;">The City of Bethel is the hub for roughly 50 villages spread across the Yukon-Kuskokwim Delta, an area the size of a small state. <strong>There is no road connection to anywhere</strong> - not to Anchorage, not to the villages. Everything moves by plane, by barge up the Kuskokwim in summer, or over the river ice road in winter.</p>
+        <p style="margin-top:1rem;">The economy is unlike anywhere else in the country: a <strong>mixed subsistence and cash economy</strong>, with regional health, education, and Alaska Native corporations as the largest employers, and freight costs that dominate every business decision made here.</p>
+      </div>
+      <div>
+        <div class="fact-list">
+          <div class="fact-row">
+            <span class="fact-label">📍 Status</span>
+            <span class="fact-value">Unorganized Borough (Census Area)</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">👥 Population</span>
+            <span class="fact-value">18,000+</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">💰 Census Area Tax</span>
+            <span class="fact-value">None (City of Bethel: 6%)</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">🛩️ Access</span>
+            <span class="fact-value">Air and river only - no roads</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">🏥 Largest Employer</span>
+            <span class="fact-value">YKHC</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">📊 Top Sectors</span>
+            <span class="fact-value">Health, Education, Native Corps, Fishing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITIES WE SERVE -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Coverage</div>
+      <h2 class="display">Every Community in<br/>Bethel Census Area — Covered.</h2>
+      <p>Wherever your business sits, we serve the whole area with the same level of service. We are 100% remote, so your exact location does not change anything about how we work.</p>
+    </div>
+
+    <div class="cities-grid">
+      <div class="city-card featured">
+        <div class="city-card-icon">🏙️</div>
+        <div class="city-card-name">Bethel</div>
+        <p class="city-card-desc">The hub of the Y-K Delta and the only city in the census area with a sales tax - 6%. Regional health, education, retail, and the freight that supplies fifty villages.</p>
+        <div class="city-card-pop">👥 6,300+ residents</div>
+        <a href="city-bethel-ak.html" class="city-link" style="color:var(--teal);">View Bethel Page →</a>
+      </div>
+      <div class="city-card">
+        <div class="city-card-icon">🏥</div>
+        <div class="city-card-name">YKHC &amp; the Hospital</div>
+        <p class="city-card-desc">The Yukon-Kuskokwim Health Corporation runs the regional hospital and clinics across the Delta. It is by a wide margin the largest employer in the census area.</p>
+        <div class="city-card-pop">Largest employer</div>
+        <a href="city-bethel-ak.html" class="city-link">Learn More →</a>
+      </div>
+      <div class="city-card">
+        <div class="city-card-icon">✈️</div>
+        <div class="city-card-name">Bethel Airport</div>
+        <p class="city-card-desc">One of the busiest airports in Alaska. Everything - mail, groceries, medical patients, freight - moves through here to reach the villages. Air taxis are the road system.</p>
+        <div class="city-card-pop">Aviation hub</div>
+        <a href="city-bethel-ak.html" class="city-link">Learn More →</a>
+      </div>
+      <div class="city-card">
+        <div class="city-card-icon">🏢</div>
+        <div class="city-card-name">Native Corporations</div>
+        <p class="city-card-desc">Calista Corporation is the ANCSA regional corporation for the Delta, and Bethel Native Corporation is the village corporation - both major economic forces in the region.</p>
+        <div class="city-card-pop">Calista · Bethel Native Corp</div>
+        <a href="city-bethel-ak.html" class="city-link">Learn More →</a>
+      </div>
+      <div class="city-card">
+        <div class="city-card-icon">🛶</div>
+        <div class="city-card-name">The Kuskokwim Villages</div>
+        <p class="city-card-desc">Napaskiak, Kwethluk, Akiachak, Aniak, Tuntutuliak and dozens more - all reachable only by air, boat, or the winter ice road on the river.</p>
+        <div class="city-card-pop">~50 communities</div>
+        <a href="areas-we-serve.html" class="city-link">See All Areas →</a>
+      </div>
+      <div class="city-card">
+        <div class="city-card-icon">🐟</div>
+        <div class="city-card-name">Coastal Villages</div>
+        <p class="city-card-desc">The Bering Sea coast communities and the CDQ fisheries that support them. Also serving every community across the Bethel Census Area.</p>
+        <div class="city-card-pop">All Delta communities</div>
+        <a href="areas-we-serve.html" class="city-link">See All Areas →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCAL GUIDE -->
+<section class="section section-alt" id="borough-guide">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">📍 Know the Area</div>
+      <h2 class="display">Bethel:<br/>No Roads,<br/>No Borough.</h2>
+      <p>Serving the Delta means understanding a place with no borough government, no road access, freight costs that dwarf anything in the Lower 48, and a 6% city sales tax that is the only local sales tax for hundreds of miles.</p>
+    </div>
+
+    <div class="county-stat-strip">
+      <div class="css-item">
+        <div class="css-val">18k+</div>
+        <div class="css-label">Census Area Population</div>
+      </div>
+      <div class="css-item">
+        <div class="css-val">~50</div>
+        <div class="css-label">Villages Served from Bethel</div>
+      </div>
+      <div class="css-item">
+        <div class="css-val">0</div>
+        <div class="css-label">Miles of Road Out</div>
+      </div>
+      <div class="css-item">
+        <div class="css-val">6%</div>
+        <div class="css-label">City of Bethel Sales Tax</div>
+      </div>
+    </div>
+
+    <div class="local-two-col">
+      <div>
+        <h3>History &amp; Economic Identity</h3>
+        <p>Bethel began as a Moravian mission in 1885 on a site the Yup'ik had used for generations as Mumtrekhlagamute. It grew into the commercial and administrative hub of the Yukon-Kuskokwim Delta - a region roughly the size of Oregon, home to about fifty villages, and one of the largest and most culturally intact Alaska Native regions in the state.</p>
+        <p style="margin-top:.85rem;">The defining fact of doing business here is <strong>logistics</strong>. There is no road to Bethel from anywhere. Goods arrive by jet, by barge up the Kuskokwim during the ice-free months, or over the river ice road in deep winter. A gallon of milk, a sheet of plywood, a replacement part - all of it flies or floats. Freight is not a line item you optimize; it is the central economic reality, and it means a business here operates on cost structures that would be incomprehensible in Seattle.</p>
+        <p style="margin-top:.85rem;">The economy runs on <strong>institutions and subsistence together</strong>. The Yukon-Kuskokwim Health Corporation is the largest employer; the Lower Kuskokwim School District is another major one. Calista Corporation, the ANCSA regional corporation, and Bethel Native Corporation are significant economic forces. And underneath the cash economy is a subsistence economy - salmon, moose, berries - that is not a hobby but a genuine and substantial part of how families here live.</p>
+        <div class="highlight-list" style="margin-top:1.75rem;">
+          <div class="hl-item">
+            <span class="hl-icon">🏥</span>
+            <div>
+              <div class="hl-title">Yukon-Kuskokwim Health Corporation</div>
+              <div class="hl-desc">YKHC operates the regional hospital in Bethel and clinics throughout the Delta, serving about fifty villages. It is the largest employer in the census area by a wide margin and the anchor of the regional economy.</div>
+            </div>
+          </div>
+          <div class="hl-item">
+            <span class="hl-icon">✈️</span>
+            <div>
+              <div class="hl-title">Bethel as an Aviation Hub</div>
+              <div class="hl-desc">Bethel Airport is among the busiest in Alaska. Mail, groceries, freight, and medical patients all move through it to reach villages with no roads. The air taxi and cargo operators here are infrastructure, not convenience.</div>
+            </div>
+          </div>
+          <div class="hl-item">
+            <span class="hl-icon">🏢</span>
+            <div>
+              <div class="hl-title">Calista Corporation &amp; Native Corporations</div>
+              <div class="hl-desc">Calista is the ANCSA regional corporation for the Y-K Delta and one of the largest Alaska Native corporations. Together with Bethel Native Corporation and the village corporations, it shapes much of the regional economy.</div>
+            </div>
+          </div>
+          <div class="hl-item">
+            <span class="hl-icon">🐟</span>
+            <div>
+              <div class="hl-title">Subsistence and the CDQ Fisheries</div>
+              <div class="hl-desc">Salmon on the Kuskokwim, and Bering Sea fisheries through the Community Development Quota program that channels a share of the pollock and crab harvest back into Delta communities.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3>Key Corridors &amp; Communities</h3>
+        <div class="corridor-grid">
+          <div class="corridor-card">
+            <div class="corridor-name">Downtown Bethel</div>
+            <div class="corridor-desc">The commercial core - retail, offices, the port, and the businesses supplying fifty villages. Inside the 6% city sales tax.</div>
+          </div>
+          <div class="corridor-card">
+            <div class="corridor-name">The Bethel Airport District</div>
+            <div class="corridor-desc">Air taxi operators, cargo carriers, and the freight forwarders that make the Delta function. The busiest ground in the region.</div>
+          </div>
+          <div class="corridor-card">
+            <div class="corridor-name">YKHC Campus</div>
+            <div class="corridor-desc">The regional hospital and its clinics - the largest employer in the census area and the reason many people travel to Bethel at all.</div>
+          </div>
+          <div class="corridor-card">
+            <div class="corridor-name">The Kuskokwim Waterfront</div>
+            <div class="corridor-desc">The barge landing and the port. Summer barges bring in the heavy freight that cannot economically fly.</div>
+          </div>
+          <div class="corridor-card">
+            <div class="corridor-name">Chief Eddie Hoffman Highway</div>
+            <div class="corridor-desc">Bethel's main road - and one of only a few. The city road system runs a handful of miles and connects nothing outside it.</div>
+          </div>
+          <div class="corridor-card">
+            <div class="corridor-name">The Ice Road</div>
+            <div class="corridor-desc">In deep winter the frozen Kuskokwim becomes a marked road connecting Bethel to upriver villages. It is real infrastructure, and it lasts a few months.</div>
+          </div>
+          <div class="corridor-card">
+            <div class="corridor-name">The Upriver Villages</div>
+            <div class="corridor-desc">Akiachak, Akiak, Kwethluk, Tuluksak, Aniak and beyond - the Kuskokwim communities that Bethel supplies.</div>
+          </div>
+          <div class="corridor-card">
+            <div class="corridor-name">The Coastal Villages</div>
+            <div class="corridor-desc">The Bering Sea communities of the lower Delta, tied to Bethel by air and to the CDQ fisheries by quota.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem;">
+          <h3>Getting Around</h3>
+          <div class="highlight-list" style="margin-top:1rem;">
+            <div class="hl-item">
+              <span class="hl-icon">✈️</span>
+              <div>
+                <div class="hl-title">Bethel Airport</div>
+                <div class="hl-desc">The road system. Jets from Anchorage, and the air taxis that fan out to fifty villages. If it did not fly, it did not get here.</div>
+              </div>
+            </div>
+            <div class="hl-item">
+              <span class="hl-icon">🚢</span>
+              <div>
+                <div class="hl-title">The Kuskokwim River</div>
+                <div class="hl-desc">Barges in summer carrying the heavy freight - fuel, lumber, vehicles. A marked ice road in winter. And nothing at all during freeze-up and break-up.</div>
+              </div>
+            </div>
+            <div class="hl-item">
+              <span class="hl-icon">🚛</span>
+              <div>
+                <div class="hl-title">Freeze-Up and Break-Up</div>
+                <div class="hl-desc">Twice a year the river is neither navigable nor drivable, and the Delta goes air-only. Inventory planning here is a survival skill, not a best practice.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALASKA SALES TAX -->
+<section class="section" id="sales-tax">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">💰 The Alaska Tax Angle</div>
+      <h2 class="display">No State Sales Tax.<br/>But Read This Anyway.</h2>
+      <p>Alaska has no state sales tax and no state personal income tax — which is exactly why so many business owners get Alaska tax wrong. More than 100 local jurisdictions levy their own sales tax, and the rules change borough by borough and city by city.</p>
+    </div>
+
+    <div class="local-two-col" style="margin-top:3rem;">
+      <div>
+        <h3>Bethel Census Area: The Numbers</h3>
+        <p>Bethel is in the unorganized borough, which means something specific and useful: there is no borough government, so there is no borough sales tax. The only local sales tax in the census area is the one the City of Bethel levies.</p>
+        <div class="fact-list">
+          <div class="fact-row">
+            <span class="fact-label">Alaska State Sales Tax</span>
+            <span class="fact-value">None</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Alaska Personal Income Tax</span>
+            <span class="fact-value">None</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Census Area / Borough Tax</span>
+            <span class="fact-value">None (unorganized borough)</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">City of Bethel Sales Tax</span>
+            <span class="fact-value">6% (as of 2026)</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">Outside City Limits</span>
+            <span class="fact-value">No general sales tax</span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-label">ARSSTC Remote Seller Threshold</span>
+            <span class="fact-value">$100,000 gross</span>
+          </div>
+        </div>
+        <p style="margin-top:1rem;font-size:.8rem;color:var(--muted);">Rates shown are as of 2026 and can change. Always confirm the current rate with the taxing jurisdiction before you rely on it. Tides keeps your books tax-ready and works alongside your CPA — we do not file returns for you.</p>
+      </div>
+      <div>
+        <h3>What It Means for Your Books</h3>
+        <div class="highlight-list" style="margin-top:1.25rem;">
+          <div class="hl-item">
+            <span class="hl-icon">🗺️</span>
+            <div>
+              <div class="hl-title">No borough government means no borough tax</div>
+              <div class="hl-desc">The Bethel Census Area is part of Alaska's unorganized borough. A census area is a Census Bureau statistical boundary, not a government - there is no borough assembly, no borough property tax, and no borough sales tax. The City of Bethel levies a 6% sales tax as of 2026; outside city limits there is no general sales tax at all. Confirm the current rate with the City of Bethel Sales Tax Division.</div>
+            </div>
+          </div>
+          <div class="hl-item">
+            <span class="hl-icon">✈️</span>
+            <div>
+              <div class="hl-title">Freight is the biggest number on your P&amp;L</div>
+              <div class="hl-desc">Nothing drives to Bethel. Inventory arrives by jet, by summer barge, or over the winter ice road, and the cost difference between those three is enormous. If freight is buried in a general expense account, you do not know what anything actually costs you. We build the chart of accounts so landed cost is visible per product and you can see which shipping method is actually paying for itself.</div>
+            </div>
+          </div>
+          <div class="hl-item">
+            <span class="hl-icon">🗓️</span>
+            <div>
+              <div class="hl-title">Break-up and freeze-up are accounting events</div>
+              <div class="hl-desc">Twice a year the Kuskokwim is neither navigable nor drivable, and the only way in is by air at air freight prices. Businesses here buy inventory around that calendar, which means large seasonal purchases, real inventory carrying costs, and cash flow that has to be planned months out. We build the books to make that visible instead of surprising.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Our Services</div>
+      <h2 class="display">Complete Bookkeeping for<br/>Bethel Census Area Businesses.</h2>
+      <p>Seven core services, all delivered remotely. Everything your business needs to stay financially clean and tax-ready year-round.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="svc-card featured">
+        <div class="svc-icon">📊</div>
+        <h3>Monthly Bookkeeping</h3>
+        <p>Our flagship service. Every transaction categorized, every account reconciled, and clean financial reports delivered to your inbox each month — without you lifting a finger. The financial foundation every Alaska business deserves.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">QuickBooks Online</span>
+          <span class="svc-tag">Monthly P&amp;L</span>
+          <span class="svc-tag">Balance Sheet</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">🔍</div>
+        <h3>Catch-Up Bookkeeping</h3>
+        <p>Behind on your books? We clean up any backlog — whether it is 3 months or 3 years — so you can move forward with accurate, up-to-date records.</p>
+        <div class="svc-tags"><span class="svc-tag light">Any Period</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">⚙️</div>
+        <h3>Setup &amp; Cleanup</h3>
+        <p>New business or inherited a mess? We configure QuickBooks, connect your accounts, and build a chart of accounts that actually makes sense for your industry — including landed cost and job costing where Alaska demands it.</p>
+        <div class="svc-tags"><span class="svc-tag light">QuickBooks</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">🏦</div>
+        <h3>Bank Reconciliation</h3>
+        <p>Monthly reconciliation of every bank account and credit card — ensuring your books match your statements and no transactions fall through the cracks.</p>
+        <div class="svc-tags"><span class="svc-tag light">All Accounts</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">📈</div>
+        <h3>Financial Reporting</h3>
+        <p>P&amp;L statements, balance sheets, and cash flow reports delivered monthly in a format you can actually understand and act on.</p>
+        <div class="svc-tags"><span class="svc-tag light">Monthly</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">💳</div>
+        <h3>Accounts Payable &amp; Receivable</h3>
+        <p>We keep your AP and AR organized so you always know what is coming in, what is going out, and what is overdue.</p>
+        <div class="svc-tags"><span class="svc-tag light">AP / AR</span></div>
+      </div>
+
+      <div class="svc-card">
+        <div class="svc-icon">👥</div>
+        <h3>Payroll Bookkeeping Support</h3>
+        <p>We make sure your payroll expenses hit your books correctly and stay in sync with your payroll processor every pay period — including seasonal crews.</p>
+        <div class="svc-tags"><span class="svc-tag light">Payroll Entries</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="section">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">Industries</div>
+      <h2 class="display">We Know Bethel Census Area's<br/>Business Landscape.</h2>
+      <p>We understand the financial patterns of the industries that actually drive this economy — not a generic list copied from somewhere in the Lower 48.</p>
+    </div>
+    <div class="industries-grid">
+      <div class="ind-card">
+        <div class="ind-icon">🏥</div>
+        <h4>Healthcare &amp; Clinics</h4>
+        <p>YKHC coordination, insurance billing, payroll</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">✈️</div>
+        <h4>Air Taxi &amp; Cargo</h4>
+        <p>Aircraft depreciation, fuel, per-village route costing</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🛒</div>
+        <h4>Retail &amp; Supply</h4>
+        <p>Landed cost, barge vs. air freight, inventory timing</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🏗️</div>
+        <h4>Contractors &amp; Trades</h4>
+        <p>Barged materials, village jobs, brutal logistics</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🐟</div>
+        <h4>Fishing &amp; CDQ</h4>
+        <p>Fish tickets, subsistence and cash mix, CDQ programs</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">💼</div>
+        <h4>Professional Services</h4>
+        <p>Consultants and contractors serving the Delta</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🍽️</div>
+        <h4>Food Service</h4>
+        <p>COGS with air-freighted inventory, 6% city sales tax</p>
+      </div>
+      <div class="ind-card">
+        <div class="ind-icon">🏢</div>
+        <h4>Native Corp Contractors</h4>
+        <p>8(a) contracts, joint ventures, federal billing</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial-section">
+  <div class="container">
+    <div class="testimonial-inner">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-quote">"We fly freight to villages up and down the Kuskokwim and our books never told us which routes actually made money. Tides set it up so we can see cost per route including fuel and crew, and it turned out two of our runs had been losing money for years. Also nobody had ever explained to me that there is no borough tax out here - only Bethel's 6%. That alone was worth the call."</p>
+      <div class="t-author">
+        <div class="t-avatar">EN</div>
+        <div>
+          <div class="t-name">Evan N.</div>
+          <div class="t-role">Air Cargo Operator · Bethel, AK</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">FAQ</div>
+      <h2 class="display">Questions from Bethel Census Area<br/>Business Owners.</h2>
+    </div>
+    <div class="faq-cols">
+      <div class="faq-list">
+        <div class="faq-item open">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>What is a census area, and why is Bethel not a borough?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>Most of Alaska is organized into boroughs, but a large portion of the state - including the Y-K Delta - remains part of the unorganized borough, which has no borough-level government at all. The Census Bureau divides that unorganized area into census areas purely for statistical reporting. So the Bethel Census Area has no assembly, no borough property tax, and no borough sales tax. The only local government with taxing power here is the City of Bethel.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>What is the sales tax in Bethel?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>The City of Bethel levies a 6% sales tax as of 2026. Because the census area is in the unorganized borough, there is no borough tax stacked on top of it, and outside city limits there is no general sales tax at all. Confirm the current rate with the City of Bethel Sales Tax Division before you rely on it.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>How should I handle freight costs in my books?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>As landed cost, and it is the single most important thing to get right out here. Nothing drives to Bethel - inventory arrives by jet, by summer barge, or over the winter ice road, and the price gap between those is enormous. If freight sits in a general expense account, your gross margin is fiction. We structure the books so landed cost is visible per product and you can actually see which shipping method pays for itself.</p></div>
+        </div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>Does being 100% remote work for a business in the Delta?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>It works better here than almost anywhere, because everything in the Delta already runs remotely. There is no road to Bethel; every professional service the region uses arrives by phone, email, or plane. We work with Delta clients over secure file sharing and video calls, and our clients tell us we are more responsive than the in-person options they had - because we are not also flying to a village that week.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>Do I need QuickBooks before signing up?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>No. If you do not have QuickBooks Online, we set it up as part of onboarding. If you already have an account, we connect to it and clean it up as needed. We also connect Puzzle.io for real-time dashboards and an instant snapshot of your books before regular monthly service begins.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <h4>How is pricing determined?</h4>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer"><p>Pricing is based on your monthly transaction volume, not your zip code. Most small businesses land between $395 and $895 per month. You get an exact quote during your free consultation - no guesswork, no setup fees.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEARBY BOROUGHS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="eyebrow">Serving All of Alaska</div>
+      <h2 class="display">Also Serving Other<br/>Alaska Boroughs.</h2>
+      <p>Alaska does not border another state, so we do not pretend to serve one. We serve Alaska — from Southeast to the Interior to the Y-K Delta.</p>
+    </div>
+    <div class="nearby-grid">
+      <a class="nearby-card" href="county-anchorage-ak.html">
+        <h4>Municipality of Anchorage</h4>
+        <p>Anchorage · Eagle River</p>
+      </a>
+      <a class="nearby-card" href="county-kodiak-island-ak.html">
+        <h4>Kodiak Island Borough</h4>
+        <p>Kodiak · Old Harbor</p>
+      </a>
+      <a class="nearby-card" href="county-fairbanks-north-star-ak.html">
+        <h4>Fairbanks North Star Borough</h4>
+        <p>Fairbanks · North Pole</p>
+      </a>
+      <a class="nearby-card" href="county-kenai-peninsula-ak.html">
+        <h4>Kenai Peninsula Borough</h4>
+        <p>Kenai · Soldotna · Homer</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="eyebrow" style="color:var(--teal);background:rgba(65,207,208,.1);border-color:rgba(65,207,208,.2);">The Delta's Bookkeeping Partner</div>
+      <h2 class="display">Let's Clean Up Your<br/>Bethel Books.</h2>
+      <p>Schedule a free 15-minute consultation. Tell us about your business and we will give you a clear picture of where your books stand - freight, sales tax, and all.</p>
+      <div class="cta-actions">
+        <a href="schedule.html" class="btn btn-teal btn-lg">Book Your Free Consultation</a>
+        <a href="https://go.tidesbookkeeping.com/tiered-pricing" class="btn btn-outline-white btn-lg">See Pricing</a>
+      </div>
+      <p class="cta-note">No setup fees &nbsp;·&nbsp; Cancel anytime &nbsp;·&nbsp; First month guaranteed</p>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="res-section">
+  <div class="container">
+    <div class="section-header centered"><div class="eyebrow">Local &amp; State Resources</div><h2 class="display" style="font-size:1.6rem;">Business &amp; Tax Resources</h2><p style="max-width:640px;margin:.5rem auto 0;">Official government resources for registering, filing, and staying compliant. Tides handles your books; these help with the rest.</p></div>
+    <div class="res-grid">
+      <a class="res-card" href="https://www.cityofbethel.org/187/Sales-Tax-Division" target="_blank" rel="noopener noreferrer"><div class="res-name">City of Bethel - Sales Tax Division</div><div class="res-desc">Bethel sales tax rate, registration, and filing requirements</div></a>
+      <a class="res-card" href="https://tax.alaska.gov/" target="_blank" rel="noopener noreferrer"><div class="res-name">Alaska Dept. of Revenue - Tax Division</div><div class="res-desc">Corporate income tax, fisheries taxes, and state tax filing</div></a>
+      <a class="res-card" href="https://www.commerce.alaska.gov/web/cbpl/BusinessLicensing.aspx" target="_blank" rel="noopener noreferrer"><div class="res-name">Alaska Business Licensing (DCCED)</div><div class="res-desc">Alaska business license, professional licensing, and renewals</div></a>
+      <a class="res-card" href="https://arsstc.org/" target="_blank" rel="noopener noreferrer"><div class="res-name">Alaska Remote Sellers Sales Tax Commission</div><div class="res-desc">Single-point sales tax registration and filing for remote sellers</div></a>
+      <a class="res-card" href="https://www.irs.gov/businesses/small-businesses-self-employed" target="_blank" rel="noopener noreferrer"><div class="res-name">IRS - Small Business and Self-Employed</div><div class="res-desc">Federal taxes, EIN, forms, and recordkeeping guidance</div></a>
+      <a class="res-card" href="https://www.sba.gov/" target="_blank" rel="noopener noreferrer"><div class="res-name">U.S. Small Business Administration</div><div class="res-desc">Federal programs, guidance, and Alaska SBA district resources</div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="logo.png" alt="Tides Bookkeeping" class="footer-logo" />
+        <p class="footer-about">Remote bookkeeping, payroll support, and financial reporting for small businesses across the Bethel Census Area, the Yukon-Kuskokwim Delta, and all of Alaska.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="service-monthly-bookkeeping.html">Monthly Bookkeeping</a></li>
+          <li><a href="service-catchup-bookkeeping.html">Catch-Up Bookkeeping</a></li>
+          <li><a href="service-payroll.html">Payroll Support</a></li>
+          <li><a href="service-bank-reconciliation.html">Bank Reconciliation</a></li>
+          <li><a href="service-financial-reporting.html">Financial Reporting</a></li>
+          <li><a href="/glossary">Glossary</a></li>
+          <li><a href="who-we-serve.html">Who We Serve →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Bethel &amp; the Delta</h4>
+        <ul class="footer-links">
+          <li><a href="city-bethel-ak.html">Bethel</a></li>
+          <li><a href="state-alaska.html">Alaska Bookkeeping</a></li>
+          <li><a href="county-anchorage-ak.html">Anchorage</a></li>
+          <li><a href="county-kodiak-island-ak.html">Kodiak Island Borough</a></li>
+          <li><a href="areas-we-serve.html">Areas We Serve</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:support@tidesbookkeeping.com">support@tidesbookkeeping.com</a></li>
+          <li><a href="tel:+18645592686">(864) 559-2686</a></li>
+          <li>📍 Greenville, South Carolina</li>
+          <li><a href="/contact">Contact Us →</a></li>
+          <li><a href="schedule.html">Book Free Call</a></li>
+          <li><a href="https://portal.tidesbookkeeping.com">Client Portal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tides Bookkeeping LLC. All rights reserved. Bethel Census Area, Alaska Bookkeeping Services. Tides Bookkeeping LLC is a 100% remote firm headquartered in Greenville, South Carolina.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="sitemap.xml">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const allItems = document.querySelectorAll('.faq-item');
+    allItems.forEach(i => { if (i !== item) i.classList.remove('open'); });
+    item.classList.toggle('open');
+  }
+</script>
+
+
+<!-- GHL Chat Widget -->
+<div data-chat-widget data-widget-id="69614819668b0f723ec311b9" data-location-id="MbY1ICQ6HdzVOrgFncoI"></div>
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="69614819668b0f723ec311b9"></script>
+
+
+<script>
+/* mobile-menu-js-fix-start */
+(function(){
+  const btn = document.getElementById('hamburger');
+  const links = document.querySelector('.nav-links');
+  if (!btn || !links) return;
+  const close = () => {
+    links.classList.remove('open');
+    btn.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    document.body.style.overflow = '';
+  };
+  const newBtn = btn.cloneNode(true);
+  btn.parentNode.replaceChild(newBtn, btn);
+  newBtn.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    newBtn.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', close);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+})();
+/* mobile-menu-js-fix-end */
+</script>
+
+</body>
+</html>

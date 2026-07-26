@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pricing | Tides Bookkeeping — Flat-Rate Bookkeeping Plans</title>
   <meta name="description" content="Simple, transparent pricing for remote bookkeeping. Four flat-rate plans starting at $299/mo — no hidden fees, no long-term contracts, one dedicated bookkeeper." />
-  <meta name="robots" content="noindex, follow" />
-  <link rel="canonical" href="https://go.tidesbookkeeping.com/tiered-pricing" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.tidesbookkeeping.com/pricing" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Pricing | Tides Bookkeeping" />
   <meta property="og:description" content="Flat-rate bookkeeping plans starting at $299/mo. No hidden fees. One dedicated bookkeeper." />
@@ -536,7 +536,7 @@
       <li><a href="who-we-serve.html">Who We Serve</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="contact.html">Contact Us</a></li>
-      <li><a href="https://go.tidesbookkeeping.com/tiered-pricing" class="active">Pricing</a></li>
+      <li><a href="/pricing" class="active">Pricing</a></li>
     </ul>
     <div class="nav-cta">
       <a href="https://portal.tidesbookkeeping.com" class="btn btn-outline">Sign In</a>
@@ -601,7 +601,7 @@
 
     <!-- Starter — Landscape Banner -->
     <div class="starter-banner">
-      <a href="https://go.tidesbookkeeping.com/contact-info-for-pricing?plan=starter&amp;billing=monthly" class="btn btn-teal starter-btn" data-plan-btn="starter">Get Started →</a>
+      <a href="https://buy.stripe.com/aFabJ21kYcl4eQt5U63wQ05" class="btn btn-teal starter-btn" data-plan-btn="starter">Get Started →</a>
       <div class="starter-left">
         <div class="starter-tag">Entry Plan</div>
         <div class="starter-name">Starter</div>
@@ -644,7 +644,7 @@
           <li class="tier-feature"><span class="tf-check">✓</span> Software subscription included</li>
           <li class="tier-feature"><span class="tf-check">✓</span> Client portal — reports &amp; communication</li>
         </ul>
-        <a href="https://go.tidesbookkeeping.com/contact-info-for-pricing?plan=essential&amp;billing=monthly" class="btn btn-outline btn-full" data-plan-btn="essential">Get Started</a>
+        <a href="https://buy.stripe.com/6oU14o8Nqetc0ZDdmy3wQ02" class="btn btn-outline btn-full" data-plan-btn="essential">Get Started</a>
       </div>
 
       <!-- Growth — Most Popular -->
@@ -666,7 +666,7 @@
           <li class="tier-feature"><span class="tf-check">✓</span> Software subscription included</li>
           <li class="tier-feature"><span class="tf-check">✓</span> Client portal — reports &amp; communication</li>
         </ul>
-        <a href="https://go.tidesbookkeeping.com/contact-info-for-pricing?plan=growth&amp;billing=monthly" class="btn btn-primary btn-full" data-plan-btn="growth">Get Started</a>
+        <a href="https://buy.stripe.com/fZueVe7Jm98SbEh6Ya3wQ03" class="btn btn-primary btn-full" data-plan-btn="growth">Get Started</a>
       </div>
 
       <!-- Scale -->
@@ -687,7 +687,7 @@
           <li class="tier-feature"><span class="tf-check">✓</span> Software subscription included</li>
           <li class="tier-feature"><span class="tf-check">✓</span> Client portal — reports &amp; communication</li>
         </ul>
-        <a href="https://go.tidesbookkeeping.com/contact-info-for-pricing?plan=scale&amp;billing=monthly" class="btn btn-outline btn-full" data-plan-btn="scale">Get Started</a>
+        <a href="https://buy.stripe.com/00w00kd3GfxgaAdeqC3wQ04" class="btn btn-outline btn-full" data-plan-btn="scale">Get Started</a>
       </div>
 
     </div>
@@ -1028,11 +1028,7 @@
         period.textContent = 'per month, billed monthly';
       }
     });
-    // Update Get Started button URLs to pass billing param
-    planBtns.forEach(function(btn) {
-      var plan = btn.dataset.planBtn;
-      btn.href = 'https://go.tidesbookkeeping.com/contact-info-for-pricing?plan=' + plan + '&billing=' + mode;
-    });
+    // Plan buttons go straight to Stripe checkout (monthly/annual chosen there).
   }
 
   buttons.forEach(function(b) {

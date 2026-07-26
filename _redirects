@@ -17,11 +17,10 @@
 # Lead-magnet thank-you page: clean funnel URL → built file (Cloudflare ignores netlify.toml)
 /tax-checklist/thanks            /tax-checklist-thanks.html                                      200
 
-/tiered-pricing                  https://go.tidesbookkeeping.com/tiered-pricing                  301
-/contact-info-for-pricing        https://go.tidesbookkeeping.com/contact-info-for-pricing        301
-/pricing-engagement-agreement    https://go.tidesbookkeeping.com/pricing-engagement-agreement    301
-/pricing                         https://go.tidesbookkeeping.com/tiered-pricing                  301
-/pricing/                        https://go.tidesbookkeeping.com/tiered-pricing                  301
+# Pricing now lives on-site at /pricing (pricing.html). Old GHL funnel URLs → local page.
+/tiered-pricing                  /pricing                                                        301
+/contact-info-for-pricing        /pricing                                                        301
+/pricing-engagement-agreement    /pricing                                                        301
 
 # ─────────────────────────────────────────────
 # Apex → www canonical redirect (catch-all)

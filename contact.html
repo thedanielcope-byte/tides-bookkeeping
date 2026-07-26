@@ -600,27 +600,56 @@
         onmouseout="this.style.borderColor='#e2eaf3';this.style.color='#94a3b8'"
         aria-label="Close form">×</button>
     </div>
-    <!-- Embedded form (INLINE — no popup behavior) -->
-    <iframe
-      src="https://api.leadconnectorhq.com/widget/form/W58E97U00MwRqtAQ60ct"
-      style="display:block;width:100%;height:740px;border:none;border-radius:0 0 20px 20px;"
-      id="modal-form-W58E97U00MwRqtAQ60ct"
-      data-layout="{'id':'INLINE'}"
-      data-trigger-type="alwaysShow"
-      data-trigger-value=""
-      data-activation-type="alwaysActivated"
-      data-activation-value=""
-      data-deactivation-type="neverDeactivate"
-      data-deactivation-value=""
-      data-form-name="Contact Us Form on Website"
-      data-height="740"
-      data-layout-iframe-id="modal-form-W58E97U00MwRqtAQ60ct"
-      data-form-id="W58E97U00MwRqtAQ60ct"
-      title="Contact Us Form on Website"
-    ></iframe>
+    <!-- Native contact form → Nomad capture endpoint (replaces GHL) -->
+    <form id="tides-contact-form" style="padding:1.5rem 1.75rem 1.75rem;display:flex;flex-direction:column;gap:1rem;">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
+      <input type="hidden" name="business" value="tides">
+      <input type="hidden" name="source" value="tides-contact">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        <label style="font-size:.85rem;font-weight:600;color:#0f1c2e;">Name*
+          <input name="name" required autocomplete="name" style="width:100%;margin-top:.35rem;padding:.7rem .85rem;border:1px solid #e2eaf3;border-radius:10px;font-size:.95rem;font-family:inherit;box-sizing:border-box;">
+        </label>
+        <label style="font-size:.85rem;font-weight:600;color:#0f1c2e;">Phone
+          <input name="phone" type="tel" autocomplete="tel" style="width:100%;margin-top:.35rem;padding:.7rem .85rem;border:1px solid #e2eaf3;border-radius:10px;font-size:.95rem;font-family:inherit;box-sizing:border-box;">
+        </label>
+      </div>
+      <label style="font-size:.85rem;font-weight:600;color:#0f1c2e;">Email*
+        <input name="email" type="email" required autocomplete="email" style="width:100%;margin-top:.35rem;padding:.7rem .85rem;border:1px solid #e2eaf3;border-radius:10px;font-size:.95rem;font-family:inherit;box-sizing:border-box;">
+      </label>
+      <label style="font-size:.85rem;font-weight:600;color:#0f1c2e;">How can we help?
+        <textarea name="message" rows="4" style="width:100%;margin-top:.35rem;padding:.7rem .85rem;border:1px solid #e2eaf3;border-radius:10px;font-size:.95rem;font-family:inherit;resize:vertical;box-sizing:border-box;"></textarea>
+      </label>
+      <button type="submit" style="background:#215197;color:#fff;border:none;border-radius:10px;padding:.85rem 1.5rem;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit;">Send message</button>
+      <div id="tides-form-status" role="status" style="font-size:.9rem;text-align:center;min-height:1.2em;"></div>
+    </form>
   </div>
 </div>
-<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+<script>
+(function(){
+  var f = document.getElementById('tides-contact-form');
+  if (!f) return;
+  f.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var status = document.getElementById('tides-form-status');
+    var btn = f.querySelector('button[type=submit]');
+    btn.disabled = true; var label = btn.textContent; btn.textContent = 'Sending…';
+    status.style.color = '#64748b'; status.textContent = '';
+    try {
+      var data = Object.fromEntries(new FormData(f).entries());
+      var r = await fetch('https://wdvolamasztetwpitbwg.supabase.co/functions/v1/capture-lead', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data)
+      });
+      var j = await r.json();
+      if (j.ok) { f.reset(); status.style.color = '#0a7d33'; status.textContent = 'Thanks! We got your message and will be in touch shortly.'; }
+      else { throw new Error(j.error || 'error'); }
+    } catch (err) {
+      status.style.color = '#b3261e';
+      status.innerHTML = 'Something went wrong — please email <a href="mailto:hello@tidesbookkeeping.com">hello@tidesbookkeeping.com</a>.';
+    }
+    btn.disabled = false; btn.textContent = label;
+  });
+})();
+</script>
 <!-- Close modal on Escape key -->
 <script>
   document.addEventListener('keydown', function(e) {

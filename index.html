@@ -1632,7 +1632,7 @@
     <div class="section-header centered">
       <div class="eyebrow">Client Stories</div>
       <h2 class="display">Real Business Owners,<br/><span class="gradient-text">Real Results</span></h2>
-      <p style="margin-top:.75rem;">5.0 ★ across 8 reviews — verified on QuickBooks ProAdvisor</p>
+      <p id="reviewsSummary" style="margin-top:.75rem;">5.0 ★ across 8 reviews — verified on QuickBooks ProAdvisor</p>
     </div>
 
     <div class="carousel-wrap" id="reviewCarousel">
@@ -1974,50 +1974,72 @@
 </footer>
 
 <script>
-  /* ── CAROUSEL ─────────────────────────────── */
+  /* ── CAROUSEL — hydrates from the live reviews feed; static cards are the fallback ── */
   (function() {
-    const track    = document.getElementById('carouselTrack');
-    const prevBtn  = document.getElementById('carouselPrev');
-    const nextBtn  = document.getElementById('carouselNext');
-    const dotsWrap = document.getElementById('carouselDots');
-    const cards    = track.querySelectorAll('.review-card');
-    const total    = cards.length;
-    let current    = 0;
-    let pages      = 0;
-
-    function getPerPage() { return window.innerWidth <= 768 ? 1 : 3; }
-
-    function buildDots() {
-      dotsWrap.innerHTML = '';
-      const perPage = getPerPage();
-      pages = Math.ceil(total / perPage);
-      for (let i = 0; i < pages; i++) {
-        const d = document.createElement('button');
-        d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-        d.setAttribute('aria-label', 'Go to page ' + (i + 1));
-        d.addEventListener('click', () => goTo(i));
-        dotsWrap.appendChild(d);
+    const track = document.getElementById('carouselTrack');
+    if (!track) return;
+    const AV = ['t', 'b', 'n'];
+    const esc = (s) => String(s == null ? '' : s).replace(/[<>&"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' }[c]));
+    function card(rv, i) {
+      const rating = Math.max(0, Math.min(5, rv.rating || 5));
+      const stars = '★★★★★☆☆☆☆☆'.slice(5 - rating, 10 - rating);
+      const initials = (esc(rv.author_name).replace(/[^A-Za-z0-9 ]/g, '').split(/\s+/).filter(Boolean).map(w => w[0]).join('').slice(0, 2).toUpperCase()) || '★';
+      return '<div class="review-card"><div class="stars">' + stars + '</div>' +
+        '<blockquote>"' + esc(rv.body) + '"</blockquote>' +
+        '<div class="reviewer"><div class="reviewer-avatar ' + AV[i % 3] + '">' + initials + '</div><div>' +
+        '<div class="reviewer-name">' + esc(rv.author_name) + '</div>' +
+        (rv.role ? '<div class="reviewer-role" style="font-size:.72rem;color:var(--muted);">' + esc(rv.role) + '</div>' : '') +
+        '</div></div></div>';
+    }
+    function initCarousel() {
+      const prevBtn = document.getElementById('carouselPrev');
+      const nextBtn = document.getElementById('carouselNext');
+      const dotsWrap = document.getElementById('carouselDots');
+      const cards = track.querySelectorAll('.review-card');
+      const total = cards.length;
+      let current = 0, pages = 0;
+      if (!total || !prevBtn) return;
+      function getPerPage() { return window.innerWidth <= 768 ? 1 : 3; }
+      function buildDots() {
+        dotsWrap.innerHTML = '';
+        const perPage = getPerPage();
+        pages = Math.ceil(total / perPage);
+        for (let i = 0; i < pages; i++) {
+          const d = document.createElement('button');
+          d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+          d.setAttribute('aria-label', 'Go to page ' + (i + 1));
+          d.addEventListener('click', () => goTo(i));
+          dotsWrap.appendChild(d);
+        }
       }
+      function goTo(page) {
+        const perPage = getPerPage();
+        pages = Math.ceil(total / perPage);
+        current = Math.min(page, pages - 1);
+        const cardWidth = cards[0].offsetWidth;
+        const gap = window.innerWidth <= 768 ? 0 : 24;
+        track.style.transform = 'translateX(-' + (current * perPage * (cardWidth + gap)) + 'px)';
+        dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current >= pages - 1;
+      }
+      prevBtn.addEventListener('click', () => { if (current > 0) goTo(current - 1); });
+      nextBtn.addEventListener('click', () => { if (current < pages - 1) goTo(current + 1); });
+      buildDots();
+      goTo(0);
+      window.addEventListener('resize', () => { buildDots(); goTo(0); });
     }
-
-    function goTo(page) {
-      const perPage = getPerPage();
-      pages = Math.ceil(total / perPage);
-      current = Math.min(page, pages - 1);
-      const cardWidth = cards[0].offsetWidth;
-      const gap = window.innerWidth <= 768 ? 0 : 24;
-      track.style.transform = 'translateX(-' + (current * perPage * (cardWidth + gap)) + 'px)';
-      dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === current));
-      prevBtn.disabled = current === 0;
-      nextBtn.disabled = current >= pages - 1;
-    }
-
-    prevBtn.addEventListener('click', () => { if (current > 0) goTo(current - 1); });
-    nextBtn.addEventListener('click', () => { if (current < pages - 1) goTo(current + 1); });
-
-    buildDots();
-    goTo(0);
-    window.addEventListener('resize', () => { buildDots(); goTo(0); });
+    fetch('https://wdvolamasztetwpitbwg.supabase.co/functions/v1/reviews?company=tides&limit=12')
+      .then(r => r.json())
+      .then(d => {
+        if (d && d.reviews && d.reviews.length) {
+          track.innerHTML = d.reviews.map(card).join('');
+          const sum = document.getElementById('reviewsSummary');
+          if (sum && d.average) sum.innerHTML = d.average.toFixed(1) + ' ★ across ' + d.count + ' reviews — verified on QuickBooks ProAdvisor';
+        }
+      })
+      .catch(() => {})
+      .finally(() => initCarousel());
   })();
 
   /* ── HAMBURGER ────────────────────────────── */

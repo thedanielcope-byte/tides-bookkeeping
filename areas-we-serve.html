@@ -1375,7 +1375,7 @@
     if (!svg) return;
     const HREF = {};
     STATES.forEach(s => { if (s.href) HREF[s.a] = s.href; });
-    const DEEP = new Set(['SC','NC','IN','TX','TN','FL','GA','HI','OH','AK','WA','CO','AZ','PA','MI','VA','IL','NV','KY','UT','OK','NJ','ID','WI','ME','NM','WV','AL','MS','LA','AR','MO','KS','MD','DE','OR','IA','MN','MA','RI','CT','VT','NH','NE','MT','ND','SD','WY']);
+    const DEEP = new Set(['SC','NC','IN','TX','TN','FL','GA','HI','OH','AK','WA','CO','AZ','PA','MI','VA','IL','NV','KY','UT','OK','NJ','ID','WI','ME','NM','WV','AL','MS','LA','AR','MO','KS','MD','DE','OR','IA','MN','MA','RI','CT','VT','NH','NE','MT','ND','SD','WY','CA']);
     svg.querySelectorAll('.us-state').forEach(p => {
       const a = p.getAttribute('data-a');
       if (DEEP.has(a)) p.classList.add('deep');

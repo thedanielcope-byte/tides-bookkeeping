@@ -356,6 +356,16 @@
 }
 </script>
 <!-- auto-schema-end -->
+<style>
+.nav-dd{position:relative;}
+.nav-dd-menu{display:none;position:absolute;top:100%;left:0;margin:0;padding:.4rem;list-style:none;background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 10px 30px rgba(15,28,46,.12);min-width:180px;z-index:250;}
+.nav-dd:hover>.nav-dd-menu,.nav-dd:focus-within>.nav-dd-menu{display:block;}
+.nav-dd-menu li{margin:0;}
+.nav-dd-menu a{display:block;padding:.5rem .75rem;border-radius:6px;white-space:nowrap;}
+.nav-dd-menu a:hover{background:var(--teal-lt);color:var(--navy);}
+.nav-dd-caret{font-size:.7em;opacity:.65;}
+.nav-links.open .nav-dd-menu{display:block;position:static;box-shadow:none;border:none;background:transparent;padding:.15rem 0 .15rem 1rem;min-width:0;}
+</style>
 </head>
 <body>
 
@@ -364,8 +374,7 @@
     <div class="nav-logo"><a href="index.html"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
     <ul class="nav-links" id="navLinks">
       <li><a href="/#how-it-works">How It Works</a></li><li><a href="/services">Services</a></li>
-      <li><a href="/who-we-serve" class="active">Who We Serve</a></li><li><a href="/about">About Us</a></li>
-      <li><a href="/contact">Contact Us</a></li><li><a href="/pricing">Pricing</a></li><li><a href="/tools">Tools</a></li>
+      <li><a href="/who-we-serve" class="active">Who We Serve</a></li><li class="nav-dd"><a href="/about">About<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/about">About Us</a></li><li><a href="/contact">Contact Us</a></li></ul></li><li><a href="/pricing">Pricing</a></li><li><a href="/tools">Tools</a></li>
       <li><a href="/blog">Blog</a></li>
     </ul>
     <div class="nav-cta">

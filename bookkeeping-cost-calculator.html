@@ -527,6 +527,18 @@
         <div class="calc-sub" id="costSub">Starter plan &middot; up to $25k/mo in expenses</div>
         <div class="calc-note" id="costNote">Most flat-rate bookkeeping runs <strong>$300&ndash;$1,000/month</strong>. Anything under ~$300 is usually offshore data-entry, not a dedicated bookkeeper.</div>
         <div class="calc-cta"><a href="schedule.html" class="btn btn-teal" style="width:100%;justify-content:center;">Get your exact quote — free 15-min call &rarr;</a></div>
+        <div style="margin-top:1.25rem;border-top:1px dashed var(--border);padding-top:1.25rem;text-align:left;">
+          <div style="font-weight:800;color:var(--navy);font-size:1rem;margin-bottom:.25rem;">Prefer your estimate in writing?</div>
+          <p style="color:var(--muted);font-size:.85rem;margin-bottom:.8rem;line-height:1.5;">We'll email your estimate plus a custom quote for your business — no spam, ever.</p>
+          <form id="leadForm" onsubmit="return submitLead(event)">
+            <input name="website_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;" />
+            <div style="display:flex;gap:.5rem;flex-wrap:wrap;">
+              <input name="email" type="email" required autocomplete="email" placeholder="you@business.com" style="flex:1 1 200px;border:2px solid var(--border);border-radius:10px;padding:.75rem 1rem;font-size:.95rem;font-family:inherit;color:var(--ink);" />
+              <button type="submit" id="leadBtn" class="btn btn-navy" style="width:auto;padding:.75rem 1.4rem;">Email it to me &rarr;</button>
+            </div>
+            <div id="leadMsg" style="font-size:.85rem;margin-top:.6rem;min-height:1.1rem;"></div>
+          </form>
+        </div>
       </div>
     </div>
     <p style="font-size:.8rem;color:var(--muted);text-align:center;">Estimates reflect Tides' current published monthly plans. Your exact quote comes from a quick call &mdash; no obligation.</p>
@@ -698,6 +710,26 @@
   seg('segCur',function(v){cur=v;render();});
   render();
 })();
+</script>
+<script>
+function submitLead(e){
+  e.preventDefault();
+  var f=e.target, btn=document.getElementById('leadBtn'), msg=document.getElementById('leadMsg');
+  if(f.website_hp.value){return false;}
+  var est=document.getElementById('costFig').textContent.trim()+' — '+document.getElementById('costSub').textContent.trim();
+  btn.disabled=true; var lbl=btn.textContent; btn.textContent='Sending…'; msg.textContent='';
+  fetch('https://wdvolamasztetwpitbwg.supabase.co/functions/v1/capture-lead',{
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({business:'tides', source:'bookkeeping-cost-calculator', tags:'calculator-lead',
+      email:f.email.value, website_hp:f.website_hp.value,
+      message:'Used the bookkeeping cost calculator — estimate: '+est})
+  }).then(function(r){return r.json();}).then(function(j){
+    if(j&&j.ok){ f.reset(); msg.style.color='#0a7d33'; msg.textContent="Done — check your inbox. We'll follow up with a custom quote."; }
+    else { throw new Error(j&&j.error||'err'); }
+  }).catch(function(){ msg.style.color='#b3261e'; msg.innerHTML='Something went wrong — email <a href="mailto:hello@tidesbookkeeping.com" style="color:var(--navy);font-weight:600;">hello@tidesbookkeeping.com</a>.'; })
+  .then(function(){ btn.disabled=false; btn.textContent=lbl; });
+  return false;
+}
 </script>
 </body>
 </html>

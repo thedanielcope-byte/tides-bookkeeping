@@ -23,11 +23,6 @@
 /pricing-engagement-agreement    /pricing                                                        301
 
 # ─────────────────────────────────────────────
-# Unlisted client proposals (noindex; NOT in any sitemap; clean URL → built file)
-# ─────────────────────────────────────────────
-/proposals/pilar-halstead        /proposals/pilar-halstead.html                                  200
-
-# ─────────────────────────────────────────────
 # Apex → www canonical redirect (catch-all)
 # Note: if this doesn't fire reliably, set up a Cloudflare Dashboard
 # Redirect Rule instead (Domain → Rules → Redirect Rules) — that

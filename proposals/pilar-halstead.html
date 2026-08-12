@@ -206,6 +206,8 @@
   .foot .sub { font-size: 13px; color: var(--muted); }
   .foot a { color: var(--accent); text-decoration: none; font-size: 13.5px; }
   .foot a:hover { text-decoration: underline; }
+  .contact { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .contact .dot { color: var(--muted); }
 
   @page { size: Letter; margin: 13mm; }
   @media print {
@@ -321,7 +323,11 @@
       <div class="who">Tides Bookkeeping</div>
       <div class="sub">Bookkeeping for real estate &amp; travel businesses</div>
     </div>
-    <a href="mailto:dan@tidesbookkeeping.com">dan@tidesbookkeeping.com</a>
+    <div class="contact">
+      <a href="tel:+18645592686">864-559-2686</a>
+      <span class="dot">&middot;</span>
+      <a href="mailto:dan@tidesbookkeeping.com">dan@tidesbookkeeping.com</a>
+    </div>
   </div>
 </main>
 

@@ -473,6 +473,17 @@
 .nav-dd-caret{font-size:.7em;opacity:.65;}
 .nav-links.open .nav-dd-menu{display:block;position:static;box-shadow:none;border:none;background:transparent;padding:.15rem 0 .15rem 1rem;min-width:0;}
 </style>
+<style id="r365-mobile-fix">
+  .r365-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center;}
+  @media (max-width:860px){
+    .r365-hero-grid{grid-template-columns:1fr;gap:1.75rem;}
+    .r365-hero-grid > div:last-child{order:2;}
+    .r365-hero-grid > div:last-child svg{max-width:440px;}
+  }
+  @media (max-width:480px){
+    .r365-hero-grid > div:last-child svg{max-width:100%;}
+  }
+</style>
 </head>
 <body>
 
@@ -514,7 +525,7 @@
 <!-- HERO -->
 <section class="page-hero" style="padding:52px 0 8px;">
   <div class="container" style="max-width:1120px;position:relative;z-index:1;">
-    <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center;">
+    <div class="r365-hero-grid">
       <div>
         <div class="eyebrow"><span style="width:6px;height:6px;border-radius:50%;background:var(--teal);"></span> Restaurant365 Bookkeeping Specialists</div>
         <h1 class="display" style="font-size:clamp(2.2rem,4.8vw,3.6rem);line-height:1.03;margin-bottom:1.1rem;">Restaurant365 Bookkeeping,<br/><span class="gradient-text">Done Right</span></h1>

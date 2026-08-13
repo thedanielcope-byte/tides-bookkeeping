@@ -483,6 +483,10 @@
   @media (max-width:480px){
     .r365-hero-grid > div:last-child svg{max-width:100%;}
   }
+  /* Lead-magnet card: collapse to single column on mobile */
+  @media (max-width:640px){
+    #r365-checklist > div{grid-template-columns:1fr !important;gap:1.4rem !important;}
+  }
 </style>
 </head>
 <body>
@@ -682,6 +686,26 @@
 <div class="faq-item" style="border-bottom:1px solid var(--border);padding:1.1rem 0;"><button class="faq-question" onclick="toggleFaq(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;background:none;border:none;cursor:pointer;text-align:left;padding:0;"><h3 style="font-size:1.05rem;color:var(--ink);">How is Restaurant365 bookkeeping priced?</h3><span class="faq-toggle" style="color:var(--teal);font-size:1.4rem;font-weight:700;flex-shrink:0;">+</span></button><div class="faq-answer" style="padding-top:.7rem;color:var(--body);line-height:1.7;">Flat monthly pricing based on your transaction volume and number of locations — no hourly billing and no surprise invoices. Most restaurants land in a predictable monthly range, and multi-location groups are quoted on the number of units and the depth of reporting you need. You can see current tiers on our pricing page or book a free call for a specific quote.</div></div>
 </div>
 
+    <!-- LEAD MAGNET: R365 Month-End Close Checklist -->
+    <div id="r365-checklist" style="margin-top:2.5rem;background:linear-gradient(135deg,var(--teal-lt),var(--blue-lt));border:1px solid var(--border);border-radius:16px;padding:2.25rem 2rem;">
+      <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;">
+        <div>
+          <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--navy);margin-bottom:.5rem;">Free Download</div>
+          <h2 class="display" style="font-size:1.8rem;color:var(--navy);margin-bottom:.6rem;">The Restaurant365 Month-End Close Checklist</h2>
+          <p style="color:var(--body);font-size:1rem;line-height:1.6;">The 7-phase checklist a restaurant specialist actually works through to close the books inside R365 — sales reconciliation, AP, bank &amp; card recon, payroll, inventory &amp; COGS, accruals, and the prime-cost review. Steal our process.</p>
+        </div>
+        <div>
+          <form id="r365-checklist-form" style="display:flex;flex-direction:column;gap:.7rem;background:#fff;padding:1.4rem;border-radius:12px;box-shadow:var(--shadow);">
+            <input name="name" type="text" placeholder="First name" autocomplete="given-name" style="width:100%;padding:.7rem .85rem;border:1px solid var(--border);border-radius:10px;font-size:.95rem;font-family:inherit;">
+            <input name="email" type="email" required placeholder="Work email*" autocomplete="email" style="width:100%;padding:.7rem .85rem;border:1px solid var(--border);border-radius:10px;font-size:.95rem;font-family:inherit;">
+            <button type="submit" class="btn btn-teal" style="width:100%;justify-content:center;">Send me the checklist</button>
+            <div id="r365-checklist-status" role="status" style="font-size:.85rem;text-align:center;min-height:1em;color:var(--muted);"></div>
+            <p style="font-size:.72rem;color:var(--muted);text-align:center;line-height:1.4;">No spam. Occasional R365 tips you can unsubscribe from anytime.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <div style="margin-top:2.5rem;background:var(--navy);border-radius:16px;padding:2.25rem 2rem;text-align:center;">
       <h2 class="display" style="font-size:1.8rem;color:#fff;margin-bottom:.6rem;">Running on Restaurant365? Let's make the numbers clean.</h2>
       <p style="color:rgba(255,255,255,.82);max-width:520px;margin:0 auto 1.4rem;">Book a free call and we'll take a look at your R365 setup, your close, and where your prime cost is really landing.</p>
@@ -691,7 +715,19 @@
       </div>
     </div>
 
-    <p style="margin-top:2rem;font-size:.8rem;color:var(--muted);line-height:1.6;border-top:1px solid var(--border);padding-top:1.25rem;">
+    <!-- COMMUNITY MODULE -->
+    <div style="margin-top:2.5rem;text-align:center;">
+      <h2 class="display" style="font-size:1.6rem;color:var(--navy);margin-bottom:.4rem;">Get Restaurant365 tips, free</h2>
+      <p style="color:var(--body);max-width:520px;margin:0 auto 1.3rem;font-size:.97rem;">We share R365 setup fixes, close tips, and prime-cost breakdowns across our channels. Follow along — and bring your R365 questions.</p>
+      <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;">
+        <a href="https://www.linkedin.com/company/tides-bookkeeping" target="_blank" rel="noopener" class="btn btn-outline" style="border:1px solid var(--border);">in&nbsp;&nbsp;LinkedIn</a>
+        <a href="https://www.instagram.com/tidesbookkeeping/" target="_blank" rel="noopener" class="btn btn-outline" style="border:1px solid var(--border);">◎&nbsp;&nbsp;Instagram</a>
+        <a href="https://www.facebook.com/thetidesbookkeeping" target="_blank" rel="noopener" class="btn btn-outline" style="border:1px solid var(--border);">f&nbsp;&nbsp;Facebook</a>
+        <!-- TODO: once the "Restaurant365 Users" Facebook group is live, add a featured button here linking to the group. -->
+      </div>
+    </div>
+
+    <p style="margin-top:2.5rem;font-size:.8rem;color:var(--muted);line-height:1.6;border-top:1px solid var(--border);padding-top:1.25rem;">
       Tides Bookkeeping is an independent bookkeeping firm and is not affiliated with, endorsed by,
       or a certified partner of Restaurant365, Inc. "Restaurant365" is a trademark of its respective
       owner and is used here only to identify the software our clients use.
@@ -713,6 +749,42 @@
     const ans = it.querySelector('.faq-answer');
     if (ans) ans.style.display = open ? 'block' : 'none';
   });
+</script>
+
+<!-- R365 checklist lead-magnet form -->
+<script>
+(function(){
+  var f = document.getElementById('r365-checklist-form');
+  if (!f) return;
+  var CHECKLIST_URL = 'r365-month-end-close-checklist.html';
+  f.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var status = document.getElementById('r365-checklist-status');
+    var btn = f.querySelector('button[type=submit]');
+    btn.disabled = true; var label = btn.textContent; btn.textContent = 'Sending…';
+    status.style.color = 'var(--muted)'; status.textContent = '';
+    try {
+      var data = Object.fromEntries(new FormData(f).entries());
+      data.source = 'r365-checklist';
+      data.message = 'Requested the Restaurant365 Month-End Close Checklist';
+      var r = await fetch('https://wdvolamasztetwpitbwg.supabase.co/functions/v1/capture-lead', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data)
+      });
+      var j = await r.json();
+      if (j.ok) {
+        window.open(CHECKLIST_URL, '_blank');
+        f.innerHTML = '<div style="text-align:center;padding:.5rem 0;">'
+          + '<div style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.5rem;">✓ Your checklist is ready</div>'
+          + '<p style="font-size:.9rem;color:var(--body);margin-bottom:1rem;">It opened in a new tab — or grab it below.</p>'
+          + '<a href="' + CHECKLIST_URL + '" target="_blank" class="btn btn-teal" style="width:100%;justify-content:center;">Open the checklist</a></div>';
+      } else { throw new Error(j.error || 'error'); }
+    } catch (err) {
+      status.style.color = '#b3261e';
+      status.innerHTML = 'Something went wrong — email <a href="mailto:support@tidesbookkeeping.com">support@tidesbookkeeping.com</a> and we\'ll send it over.';
+      btn.disabled = false; btn.textContent = label;
+    }
+  });
+})();
 </script>
 
 <!-- FOOTER -->

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant365 Month-End Close Checklist | Tides Bookkeeping</title>
+  <meta name="description" content="A free, step-by-step Restaurant365 month-end close checklist — sales reconciliation, AP, bank & credit card recon, payroll, inventory & COGS, accruals, and prime-cost review. Built by restaurant bookkeeping specialists." />
+  <link rel="canonical" href="https://www.tidesbookkeeping.com/r365-month-end-close-checklist" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Restaurant365 Month-End Close Checklist" />
+  <meta property="og:description" content="A free, step-by-step Restaurant365 month-end close checklist from the restaurant bookkeeping team at Tides." />
+  <meta property="og:url" content="https://www.tidesbookkeeping.com/r365-month-end-close-checklist" />
+  <meta property="og:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal:#41cfd0; --teal-lt:#e6f9f9; --blue:#66c1ee; --navy:#215197; --navy-dk:#163872;
+      --ink:#0f1c2e; --body:#4a5568; --muted:#94a3b8; --border:#e2eaf3; --bg:#ffffff; --bg-alt:#f7fbff;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Inter',sans-serif;color:var(--ink);line-height:1.6;background:var(--bg-alt);}
+    .display{font-family:'Bebas Neue',sans-serif;letter-spacing:.02em;line-height:.98;}
+    a{color:var(--navy);}
+    .wrap{max-width:820px;margin:0 auto;padding:0 20px;}
+
+    /* Toolbar (screen only) */
+    .toolbar{background:var(--navy);color:#fff;padding:.7rem 0;position:sticky;top:0;z-index:10;box-shadow:0 2px 12px rgba(15,28,46,.15);}
+    .toolbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+    .toolbar a.back{color:rgba(255,255,255,.85);font-size:.9rem;font-weight:600;}
+    .toolbar a.back:hover{color:#fff;}
+    .btn-print{background:var(--teal);color:#08343a;border:none;border-radius:9px;padding:.6rem 1.1rem;font-size:.9rem;font-weight:700;cursor:pointer;font-family:inherit;}
+    .btn-print:hover{background:#38bfc0;}
+
+    /* Document */
+    .doc{background:#fff;max-width:820px;margin:28px auto 40px;border-radius:16px;box-shadow:0 8px 40px rgba(15,28,46,.10);overflow:hidden;}
+    .doc-head{background:linear-gradient(135deg,#215197,#163872);color:#fff;padding:2.4rem 2.4rem 2rem;}
+    .doc-head img{height:34px;margin-bottom:1.3rem;filter:brightness(0) invert(1);}
+    .kicker{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--teal);margin-bottom:.5rem;}
+    .doc-head h1{font-size:clamp(2rem,5vw,2.9rem);margin-bottom:.6rem;}
+    .doc-head p{color:rgba(255,255,255,.85);font-size:1.02rem;max-width:600px;}
+    .doc-body{padding:2.2rem 2.4rem 2.6rem;}
+    .intro{color:var(--body);font-size:1.02rem;margin-bottom:1.8rem;padding-bottom:1.6rem;border-bottom:1px solid var(--border);}
+
+    .phase{margin-bottom:1.9rem;break-inside:avoid;}
+    .phase-head{display:flex;align-items:center;gap:.7rem;margin-bottom:.9rem;}
+    .phase-num{flex-shrink:0;width:30px;height:30px;border-radius:8px;background:var(--teal-lt);color:var(--navy);font-weight:800;font-size:.95rem;display:flex;align-items:center;justify-content:center;}
+    .phase h2{font-size:1.3rem;color:var(--navy);font-weight:800;letter-spacing:-.01em;}
+    .phase .why{font-size:.86rem;color:var(--muted);margin:-.4rem 0 .8rem 42px;font-style:italic;}
+    ul.checks{list-style:none;margin-left:42px;}
+    ul.checks li{position:relative;padding:.42rem 0 .42rem 2rem;font-size:.96rem;color:var(--ink);border-bottom:1px dashed var(--border);}
+    ul.checks li:last-child{border-bottom:none;}
+    ul.checks li::before{content:"";position:absolute;left:0;top:.62rem;width:15px;height:15px;border:2px solid var(--teal);border-radius:4px;}
+    ul.checks li strong{color:var(--navy-dk);}
+    ul.checks li .note{display:block;font-size:.83rem;color:var(--muted);margin-top:.15rem;}
+
+    .cta-block{margin-top:2.2rem;background:var(--bg-alt);border:1px solid var(--border);border-radius:14px;padding:1.7rem;text-align:center;}
+    .cta-block h3{font-size:1.35rem;color:var(--navy);margin-bottom:.5rem;}
+    .cta-block p{color:var(--body);max-width:520px;margin:0 auto 1.2rem;font-size:.97rem;}
+    .cta-block a{display:inline-block;background:var(--navy);color:#fff;border-radius:10px;padding:.8rem 1.6rem;font-weight:700;font-size:1rem;}
+    .cta-block a:hover{background:var(--navy-dk);}
+    .disclaimer{max-width:820px;margin:0 auto 50px;padding:0 20px;font-size:.78rem;color:var(--muted);line-height:1.6;text-align:center;}
+
+    @media print{
+      .toolbar,.disclaimer{display:none;}
+      body{background:#fff;}
+      .doc{box-shadow:none;margin:0;border-radius:0;max-width:100%;}
+      .doc-head{background:#215197 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+      .phase-num,ul.checks li::before{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+      .cta-block{background:#f7fbff !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <a href="restaurant365-bookkeeping.html" class="back">&larr; Back to Restaurant365 Bookkeeping</a>
+    <button class="btn-print" onclick="window.print()">🖨️ Print / Save as PDF</button>
+  </div>
+</div>
+
+<article class="doc">
+  <div class="doc-head">
+    <img src="logo.png" alt="Tides Bookkeeping" />
+    <div class="kicker">Free Resource · Restaurant Bookkeeping</div>
+    <h1 class="display">The Restaurant365 Month-End Close Checklist</h1>
+    <p>Everything that has to be true before you trust the P&amp;L — in the order a restaurant specialist actually works it inside R365.</p>
+  </div>
+
+  <div class="doc-body">
+    <p class="intro">Most restaurant closes go wrong in the same handful of places: sales that don't tie to the deposit, AP entered to the wrong period, inventory never counted, and a P&amp;L reviewed before it's actually done. Work these seven phases in order every period and your prime cost will finally mean something. Check each box as you go.</p>
+
+    <!-- PHASE 1 -->
+    <div class="phase">
+      <div class="phase-head"><span class="phase-num">1</span><h2>Daily Sales Reconciliation</h2></div>
+      <p class="why">If sales don't tie out daily, nothing downstream is trustworthy.</p>
+      <ul class="checks">
+        <li><strong>Confirm every day has a sales entry.</strong> No gaps in the daily sales journal for the whole period — including closed days.</li>
+        <li><strong>POS ties to R365.</strong> Net sales, comps, voids, and discounts per the POS (Toast, Square, Aloha, etc.) match the daily sales journal.</li>
+        <li><strong>Deposits match sales.</strong> Credit card batches and cash deposits landing in the bank reconcile to recorded sales, day by day.<span class="note">Chase the timing gap: cards settle 1–2 days after the sale.</span></li>
+        <li><strong>Tips reconciled.</strong> Charged tips, tip-outs, and tips paid on payroll all account for each other — no tips stuck in a clearing account.</li>
+        <li><strong>Gift cards &amp; 3rd-party.</strong> Gift card sales/redemptions and delivery apps (DoorDash, Uber Eats) recorded to the right accounts, net of fees.</li>
+      </ul>
+    </div>
+
+    <!-- PHASE 2 -->
+    <div class="phase">
+      <div class="phase-head"><span class="phase-num">2</span><h2>Accounts Payable</h2></div>
+      <p class="why">COGS is only as accurate as the invoices entered in the right period.</p>
+      <ul class="checks">
+        <li><strong>All invoices entered.</strong> Every vendor invoice with an in-period date is in R365 — including ones that arrived after month-end.</li>
+        <li><strong>No duplicates.</strong> Run the duplicate-invoice check; confirm nothing was entered twice via AP automation + manual entry.</li>
+        <li><strong>Correct GL &amp; category.</strong> Food, beverage, supplies, and expense invoices are coded to the right GL account and item category.</li>
+        <li><strong>Approvals cleared.</strong> No invoices stuck in the approval workflow at close.</li>
+        <li><strong>Statements reconciled.</strong> Key vendor statements agree to AP — catch missing credits and unbilled deliveries.</li>
+      </ul>
+    </div>
+
+    <!-- PHASE 3 -->
+    <div class="phase">
+      <div class="phase-head"><span class="phase-num">3</span><h2>Bank &amp; Credit Card Reconciliation</h2></div>
+      <p class="why">The books aren't done until every account reconciles to the statement.</p>
+      <ul class="checks">
+        <li><strong>Every bank account reconciled</strong> to the statement, ending balance matched, zero unexplained items.</li>
+        <li><strong>Credit cards reconciled</strong> and expenses coded (not dumped into a single "credit card" account).</li>
+        <li><strong>Merchant fees booked.</strong> Processor fees recorded as expense, not netted silently against sales.</li>
+        <li><strong>Clearing accounts flat.</strong> Undeposited funds / sales clearing / tips clearing net to zero or a known, explainable balance.</li>
+        <li><strong>Transfers matched</strong> between accounts and entities — no double-counted movement.</li>
+      </ul>
+    </div>
+
+    <!-- PHASE 4 -->
+    <div class="phase">
+      <div class="phase-head"><span class="phase-num">4</span><h2>Payroll &amp; Labor</h2></div>
+      <p class="why">Labor is half of prime cost — book it to the right period.</p>
+      <ul class="checks">
+        <li><strong>Payroll posted</strong> for every run in the period, split to the correct locations and GL accounts.</li>
+        <li><strong>Wages accrued.</strong> Days worked but not yet paid (period-end split pay periods) accrued so labor isn't understated.</li>
+        <li><strong>Employer taxes &amp; benefits</strong> recorded alongside gross wages.</li>
+        <li><strong>Tips reconciled to payroll</strong> — charged tips collected vs. tips paid out agree.</li>
+      </ul>
+    </div>
+
+    <!-- PHASE 5 -->
+    <div class="phase">
+      <div class="phase-head"><span class="phase-num">5</span><h2>Inventory &amp; COGS</h2></div>
+      <p class="why">No ending inventory count = a food cost number you're guessing at.</p>
+      <ul class="checks">
+        <li><strong>Ending inventory counted</strong> and entered for the period (not rolled forward from last month).</li>
+        <li><strong>COGS calculated</strong> as beginning + purchases − ending, by category (food vs. beverage).</li>
+        <li><strong>Waste, comps &amp; spoilage</strong> accounted for so they don't hide inside food cost.</li>
+        <li><strong>Theoretical vs. actual</strong> food cost variance reviewed for anything out of range.</li>
+      </ul>
+    </div>
+
+    <!-- PHASE 6 -->
+    <div class="phase">
+      <div class="phase-head"><span class="phase-num">6</span><h2>Journal Entries &amp; Accruals</h2></div>
+      <p class="why">Match expenses to the period they belong to, not the month they were paid.</p>
+      <ul class="checks">
+        <li><strong>Prepaids amortized</strong> — insurance, rent, subscriptions spread to the right months.</li>
+        <li><strong>Accruals booked</strong> for utilities, invoices not yet received, and other known unbilled costs.</li>
+        <li><strong>Depreciation</strong> recorded for equipment and build-out.</li>
+        <li><strong>Recurring &amp; allocation entries</strong> (rent allocations across locations, management fees) posted.</li>
+        <li><strong>Sales tax liability</strong> reconciled to what's owed.</li>
+      </ul>
+    </div>
+
+    <!-- PHASE 7 -->
+    <div class="phase">
+      <div class="phase-head"><span class="phase-num">7</span><h2>Review, Report &amp; Lock</h2></div>
+      <p class="why">A close you didn't review is just data entry.</p>
+      <ul class="checks">
+        <li><strong>P&amp;L reviewed by location</strong> — margins sane, no account with an obviously wrong balance.</li>
+        <li><strong>Prime cost calculated</strong> (COGS + labor as a % of sales) and compared to target and prior periods.</li>
+        <li><strong>Balance sheet scanned</strong> — no negative assets, stale balances, or clearing accounts left open.</li>
+        <li><strong>Period-over-period review</strong> — explain any line that moved more than expected.</li>
+        <li><strong>Reports delivered</strong> to ownership with a short narrative, not just a raw export.</li>
+        <li><strong>Period locked</strong> in R365 so the numbers can't shift after close.</li>
+      </ul>
+    </div>
+
+    <div class="cta-block">
+      <h3>Rather have someone run this every month?</h3>
+      <p>This is exactly what we do — the full close, inside your Restaurant365, so you get a clean prime cost and a P&amp;L you can trust without touching the platform.</p>
+      <a href="restaurant365-bookkeeping.html">See Restaurant365 Bookkeeping &rarr;</a>
+    </div>
+  </div>
+</article>
+
+<p class="disclaimer">
+  Tides Bookkeeping is an independent bookkeeping firm and is not affiliated with, endorsed by, or a certified partner of Restaurant365, Inc.
+  "Restaurant365" is a trademark of its respective owner and is used here only to identify the software our clients use.
+  This checklist is general guidance, not accounting or tax advice.
+</p>
+
+</body>
+</html>

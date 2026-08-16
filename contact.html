@@ -628,6 +628,12 @@
       <label style="font-size:.85rem;font-weight:600;color:#0f1c2e;">How can we help?
         <textarea name="message" rows="4" style="width:100%;margin-top:.35rem;padding:.7rem .85rem;border:1px solid #e2eaf3;border-radius:10px;font-size:.95rem;font-family:inherit;resize:vertical;box-sizing:border-box;"></textarea>
       </label>
+      <!-- A2P 10DLC opt-in. Unchecked by default and optional on purpose: consent to
+           texts must never be a condition of contacting us (TCPA + carrier rules). -->
+      <label style="display:flex;gap:.6rem;align-items:flex-start;font-size:.8rem;font-weight:400;color:#475569;line-height:1.5;">
+        <input type="checkbox" name="sms_consent" value="yes" style="margin-top:.2rem;flex-shrink:0;width:16px;height:16px;accent-color:#215197;">
+        <span>By checking this box, you agree to receive text messages from Tides Bookkeeping at the number provided, including appointment reminders, account and document requests, and occasional offers. Consent is not a condition of purchase. Msg &amp; data rates may apply. Msg frequency varies. Reply <strong>STOP</strong> to opt out or <strong>HELP</strong> for help. See our <a href="/privacy" style="color:#215197;">Privacy Policy</a> and <a href="/terms#sms" style="color:#215197;">Terms</a>.</span>
+      </label>
       <button type="submit" style="background:#215197;color:#fff;border:none;border-radius:10px;padding:.85rem 1.5rem;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit;">Send message</button>
       <div id="tides-form-status" role="status" style="font-size:.9rem;text-align:center;min-height:1.2em;"></div>
     </form>
@@ -645,6 +651,14 @@
     status.style.color = '#64748b'; status.textContent = '';
     try {
       var data = Object.fromEntries(new FormData(f).entries());
+      // Record proof of SMS opt-in: tags the CRM contact and writes a timestamped
+      // audit line into the activity log. Carriers can ask us to produce this.
+      if (data.sms_consent === 'yes') {
+        data.tags = (data.tags ? data.tags + ',' : '') + 'sms-consent';
+        data.message = (data.message ? data.message + '\n\n' : '') +
+          '[SMS consent: YES — checkbox on ' + location.host + location.pathname +
+          ' at ' + new Date().toISOString() + ']';
+      }
       var r = await fetch('https://wdvolamasztetwpitbwg.supabase.co/functions/v1/capture-lead', {
         method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data)
       });

@@ -783,6 +783,7 @@
     status.style.color = 'var(--muted)'; status.textContent = '';
     try {
       var data = Object.fromEntries(new FormData(f).entries());
+      data.business = 'tides';
       data.source = 'r365-checklist';
       data.message = 'Requested the Restaurant365 Month-End Close Checklist';
       var r = await fetch('https://wdvolamasztetwpitbwg.supabase.co/functions/v1/capture-lead', {

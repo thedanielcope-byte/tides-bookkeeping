@@ -1,0 +1,11 @@
+{
+  // Static-assets-only Worker that serves the Tides link-in-bio page.
+  // Deployed by a dedicated Cloudflare Workers Build (repo: tides-bookkeeping,
+  // Path: linktree) so linktree.tidesbookkeeping.com serves linktree/index.html
+  // with a clean URL. Isolated from the main site's Pages project.
+  "name": "tides-linktree",
+  "compatibility_date": "2025-01-01",
+  "assets": {
+    "directory": "./"
+  }
+}

@@ -21,15 +21,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --teal:#41cfd0; --blue:#66c1ee; --ink:#0f1c2e; --muted:#64748b;
-  }
+  :root{ --teal:#41cfd0; --blue:#66c1ee; --navy:#215197; --ink:#0f1c2e; --muted:#64748b; --qb:#2ca01c; }
   *{box-sizing:border-box; margin:0; padding:0}
   html{-webkit-text-size-adjust:100%}
   body{
     font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
-    color:#e9f2fb; line-height:1.5; -webkit-font-smoothing:antialiased;
-    min-height:100vh;
+    color:#e9f2fb; line-height:1.5; -webkit-font-smoothing:antialiased; min-height:100vh;
     background:
       radial-gradient(120% 55% at 50% 0%, rgba(65,207,208,.20), transparent 62%),
       linear-gradient(180deg,#11315c 0%, #0c2340 55%, #081628 100%);
@@ -39,7 +36,6 @@
   }
   .wrap{width:100%; max-width:460px; display:flex; flex-direction:column; align-items:center}
 
-  /* Header */
   .avatar{
     width:94px; height:94px; border-radius:50%; background:#fff;
     display:flex; align-items:center; justify-content:center; overflow:hidden;
@@ -47,35 +43,36 @@
     outline:2px solid rgba(65,207,208,.55); outline-offset:3px;
   }
   .avatar img{width:80%; height:80%; object-fit:contain}
-  h1{
-    font-family:'Bebas Neue',sans-serif; font-weight:400; letter-spacing:.6px;
-    font-size:2.55rem; line-height:1; margin-top:20px; color:#fff;
-  }
+  h1{font-family:'Bebas Neue',sans-serif; font-weight:400; letter-spacing:.6px; font-size:2.55rem; line-height:1; margin-top:20px; color:#fff}
   .handle{margin-top:6px; color:var(--teal); font-size:.9rem; font-weight:600; letter-spacing:.2px}
-  .bio{margin-top:12px; color:#c3d6ec; font-size:.96rem; text-align:center; max-width:330px; font-weight:400}
+  .bio{margin-top:12px; color:#c3d6ec; font-size:.96rem; text-align:center; max-width:330px}
 
-  /* Links */
   .links{width:100%; margin-top:30px; display:flex; flex-direction:column; gap:14px}
   .btn{
-    display:block; width:100%; text-align:center; text-decoration:none;
+    position:relative; display:block; width:100%; text-align:center; text-decoration:none;
     background:#fff; color:var(--ink);
-    padding:16px 20px; border-radius:16px; font-weight:600; font-size:.98rem; letter-spacing:.1px;
-    border:1px solid rgba(255,255,255,.65);
-    box-shadow:0 8px 20px rgba(4,14,32,.30);
+    padding:14px 52px; border-radius:16px;
+    border:1px solid rgba(255,255,255,.65); box-shadow:0 8px 20px rgba(4,14,32,.30);
     transition:transform .15s ease, box-shadow .15s ease;
   }
   .btn:hover{transform:translateY(-3px); box-shadow:0 15px 30px rgba(4,14,32,.44)}
   .btn:active{transform:translateY(-1px)}
-  .btn .sub{display:block; font-weight:500; font-size:.75rem; color:var(--muted); margin-top:3px; letter-spacing:0}
-  .btn.primary{
-    background:linear-gradient(135deg,var(--teal),var(--blue)); color:#062639;
-    font-weight:800; border:none; box-shadow:0 12px 26px rgba(65,207,208,.42);
+  .btn .t{display:block; font-weight:600; font-size:.98rem; line-height:1.25; letter-spacing:.1px}
+  .btn .sub{display:block; font-weight:500; font-size:.74rem; color:var(--muted); margin-top:2px}
+  .btn .ic{
+    position:absolute; left:11px; top:50%; transform:translateY(-50%);
+    width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center;
+    background:rgba(33,81,151,.10); color:var(--navy);
   }
+  .btn .ic svg{width:20px; height:20px}
+  .btn .ic.qb{background:rgba(44,160,28,.12); color:var(--qb)}
+  .btn.primary{background:linear-gradient(135deg,var(--teal),var(--blue)); color:#062639; border:none; box-shadow:0 12px 26px rgba(65,207,208,.42)}
   .btn.primary:hover{box-shadow:0 18px 34px rgba(65,207,208,.55)}
+  .btn.primary .t{font-weight:800}
   .btn.primary .sub{color:#0a3452}
+  .btn.primary .ic{background:rgba(6,38,57,.16); color:#062639}
 
-  /* Socials */
-  .socials{display:flex; gap:15px; margin-top:32px}
+  .socials{display:flex; gap:15px; margin-top:32px; flex-wrap:wrap; justify-content:center}
   .socials a{
     width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center;
     background:rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.20); color:#e9f2fb;
@@ -87,8 +84,7 @@
   footer{margin-top:32px; text-align:center; color:#7f97b4; font-size:.78rem; line-height:1.8}
   footer a{color:#aecbe8; text-decoration:none; font-weight:600}
   footer a:hover{text-decoration:underline}
-
-  @media (max-width:380px){ h1{font-size:2.2rem} .btn{font-size:.94rem} }
+  @media (max-width:380px){ h1{font-size:2.2rem} .btn{padding-left:48px; padding-right:48px} .btn .t{font-size:.92rem} }
 </style>
 </head>
 <body>
@@ -100,18 +96,41 @@
 
     <nav class="links" aria-label="Tides Bookkeeping links">
       <a class="btn primary" href="https://www.tidesbookkeeping.com/schedule">
-        Book a Free Call<span class="sub">15-min intro — no pressure</span>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg></span>
+        <span class="t">Book a Free Call</span><span class="sub">15-min intro — no pressure</span>
       </a>
       <a class="btn" href="https://www.tidesbookkeeping.com/restaurant365-bookkeeping">
-        Restaurant365 Bookkeeping<span class="sub">Specialist books for restaurants on R365</span>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 19h17M5 19a7 7 0 0 1 14 0M12 8V6"/></svg></span>
+        <span class="t">Restaurant365 Bookkeeping</span><span class="sub">Specialist books for restaurants on R365</span>
       </a>
-      <a class="btn" href="https://www.tidesbookkeeping.com/">Visit Our Website</a>
-      <a class="btn" href="https://www.tidesbookkeeping.com/pricing">Pricing &amp; Plans</a>
-      <a class="btn" href="https://www.tidesbookkeeping.com/tools">Free Bookkeeping Tools</a>
-      <a class="btn" href="https://www.tidesbookkeeping.com/blog">The Tides Report — Blog</a>
-      <a class="btn" href="https://www.tidesbookkeeping.com/services">Our Services</a>
-      <a class="btn" href="https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope" target="_blank" rel="noopener">QuickBooks ProAdvisor — Daniel Cope</a>
-      <a class="btn" href="https://proadvisor.intuit.com/app/accountant/search?searchId=joseph-cope" target="_blank" rel="noopener">QuickBooks ProAdvisor — Joseph Cope</a>
+      <a class="btn" href="https://www.tidesbookkeeping.com/">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18"/></svg></span>
+        <span class="t">Visit Our Website</span>
+      </a>
+      <a class="btn" href="https://www.tidesbookkeeping.com/pricing">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13 21a2 2 0 0 1-2.8 0l-6.2-6.2A2 2 0 0 1 3.4 13V5.4A2 2 0 0 1 5.4 3.4H13a2 2 0 0 1 1.4.6l6.2 6.2a2 2 0 0 1 0 2.8z"/><circle cx="8" cy="8" r="1.3"/></svg></span>
+        <span class="t">Pricing &amp; Plans</span>
+      </a>
+      <a class="btn" href="https://www.tidesbookkeeping.com/tools">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8.5 7h7"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01M8.5 15.5h.01M12 15.5h.01M15.5 15.5v3"/></svg></span>
+        <span class="t">Free Bookkeeping Tools</span>
+      </a>
+      <a class="btn" href="https://www.tidesbookkeeping.com/blog">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M8.5 13h7M8.5 17h4.5"/></svg></span>
+        <span class="t">The Tides Report — Blog</span>
+      </a>
+      <a class="btn" href="https://www.tidesbookkeeping.com/services">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2.5"/><path d="M9 4V3.2A1.2 1.2 0 0 1 10.2 2h3.6A1.2 1.2 0 0 1 15 3.2V4M9 12.5l2 2 3.5-3.5"/></svg></span>
+        <span class="t">Our Services</span>
+      </a>
+      <a class="btn" href="https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope" target="_blank" rel="noopener">
+        <span class="ic qb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.5 1.9 3.1-.2 1 3 2.7 1.5-1 3 1 3-2.7 1.5-1 3-3.1-.2L12 22l-2.5-1.9-3.1.2-1-3L2.7 15.3l1-3-1-3 2.7-1.5 1-3 3.1.2z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></span>
+        <span class="t">QuickBooks ProAdvisor</span><span class="sub">Daniel Cope</span>
+      </a>
+      <a class="btn" href="https://proadvisor.intuit.com/app/accountant/search?searchId=joseph-cope" target="_blank" rel="noopener">
+        <span class="ic qb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.5 1.9 3.1-.2 1 3 2.7 1.5-1 3 1 3-2.7 1.5-1 3-3.1-.2L12 22l-2.5-1.9-3.1.2-1-3L2.7 15.3l1-3-1-3 2.7-1.5 1-3 3.1.2z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></span>
+        <span class="t">QuickBooks ProAdvisor</span><span class="sub">Joseph Cope</span>
+      </a>
     </nav>
 
     <div class="socials" aria-label="Social profiles">
@@ -123,6 +142,9 @@
       </a>
       <a href="https://www.linkedin.com/company/tides-bookkeeping" target="_blank" rel="noopener" aria-label="LinkedIn">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg>
+      </a>
+      <a href="https://www.youtube.com/@TidesBookkeeping" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.39.58A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12C4.5 20.5 12 20.5 12 20.5s7.5 0 9.39-.58A3 3 0 0 0 23.5 17.8 31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>
       </a>
     </div>
 

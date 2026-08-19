@@ -990,6 +990,7 @@
 {
   "@context": "https://schema.org",
   "@type": "AccountingService",
+    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "8", "bestRating": "5"},
   "@id": "https://www.tidesbookkeeping.com/#organization",
   "name": "Tides Bookkeeping LLC",
   "alternateName": "Tides Bookkeeping",
@@ -1641,7 +1642,7 @@
     <div class="section-header centered">
       <div class="eyebrow">Client Stories</div>
       <h2 class="display">Real Business Owners,<br/><span class="gradient-text">Real Results</span></h2>
-      <p id="reviewsSummary" style="margin-top:.75rem;">5.0 ★ across 8 reviews — verified on QuickBooks ProAdvisor</p>
+      <p id="reviewsSummary" style="margin-top:.75rem;">5.0 ★ across 8 reviews — verified on Google</p>
     </div>
 
     <div class="carousel-wrap" id="reviewCarousel">
@@ -2078,7 +2079,7 @@
         if (d && d.reviews && d.reviews.length) {
           track.innerHTML = d.reviews.map(card).join('');
           const sum = document.getElementById('reviewsSummary');
-          if (sum && d.average) sum.innerHTML = d.average.toFixed(1) + ' ★ across ' + d.count + ' reviews — verified on QuickBooks ProAdvisor';
+          if (sum && d.average) sum.innerHTML = d.average.toFixed(1) + ' ★ across ' + d.count + ' reviews — verified on Google';
         }
       })
       .catch(() => {})

@@ -351,12 +351,12 @@ export async function onRequestGet(context) {
     .nav-links.open .nav-dd-menu{display:block;position:static;box-shadow:none;border:none;background:transparent;padding:.15rem 0 .15rem 1rem;min-width:0;}
   </style>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBFJKD962N"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXQS7FCLF2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-JBFJKD962N');
+    gtag('config', 'G-KXQS7FCLF2');
   </script>
 
   <!-- Schema.org Structured Data -->

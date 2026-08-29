@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bar & Nightclub Bookkeeping: The Complete Guide | Tides Bookkeeping</title>
+  <meta name="description" content="The complete guide to bar and nightclub bookkeeping — pour cost, liquor inventory and shrinkage, cash and comps, tabs and bottle service, POS reconciliation, tips, liquor tax, and catch-up. Every topic linked to a deeper guide." />
+  <link rel="canonical" href="https://www.tidesbookkeeping.com/bar-bookkeeping-guide" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Bar & Nightclub Bookkeeping: The Complete Guide" />
+  <meta property="og:description" content="Pour cost, liquor inventory and shrinkage, cash and comps, tabs and bottle service, POS reconciliation, tips, and liquor tax — the complete bar bookkeeping guide, each topic linked to a deeper deep-dive." />
+  <meta property="og:url" content="https://www.tidesbookkeeping.com/bar-bookkeeping-guide" />
+  <meta property="og:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta property="og:site_name" content="Tides Bookkeeping" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bar & Nightclub Bookkeeping: The Complete Guide" />
+  <meta name="twitter:description" content="Pour cost, liquor inventory and shrinkage, cash and comps, tabs and bottle service, POS reconciliation, tips, and liquor tax — the complete bar bookkeeping guide." />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXQS7FCLF2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KXQS7FCLF2');
+  </script>
+<style>
+    /* ── TOKENS ─────────────────────────────────────── */
+    :root {
+      --teal:    #41cfd0;
+      --teal-lt: #e6f9f9;
+      --blue:    #66c1ee;
+      --blue-lt: #e8f4fd;
+      --navy:    #215197;
+      --navy-dk: #163872;
+      --ink:     #0f1c2e;
+      --body:    #4a5568;
+      --muted:   #94a3b8;
+      --border:  #e2eaf3;
+      --bg:      #ffffff;
+      --bg-alt:  #f7fbff;
+      --shadow:  0 1px 3px rgba(15,28,46,.06), 0 4px 16px rgba(15,28,46,.08);
+      --shadow-lg: 0 8px 40px rgba(15,28,46,.12);
+      --r:       16px;
+      --r-sm:    10px;
+    }
+
+    /* ── RESET ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── TYPE ───────────────────────────────────────── */
+    .display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.02em; line-height: 0.95; }
+    h2.display { font-size: clamp(2.4rem, 5vw, 4rem); }
+    h3 { font-size: 1.1rem; font-weight: 700; color: var(--ink); }
+    p { color: var(--body); }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--teal);
+      background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
+      padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--blue) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* ── LAYOUT ─────────────────────────────────────── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+    .section { padding: 96px 0; }
+    .section-alt { background: var(--bg-alt); }
+
+    /* ── BUTTONS ────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .85rem 1.75rem; border-radius: 50px;
+      font-weight: 600; font-size: .9rem; cursor: pointer;
+      transition: all .2s ease; border: 2px solid transparent;
+    }
+    .btn-primary { background: var(--navy); color: #fff; }
+    .btn-primary:hover { background: var(--navy-dk); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(33,81,151,.3); }
+    .btn-teal { background: var(--teal); color: var(--ink); font-weight: 700; }
+    .btn-teal:hover { background: #38bfc0; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(65,207,208,.4); }
+    .btn-outline { border-color: var(--border); color: var(--ink); background: #fff; }
+    .btn-outline:hover { border-color: var(--navy); color: var(--navy); }
+    .btn-outline-white { border-color: rgba(255,255,255,.35); color: #fff; }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+    .btn-lg { padding: 1rem 2.2rem; font-size: 1rem; }
+
+    /* ── NAV ────────────────────────────────────────── */
+    .nav-wrap {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(255,255,255,.92); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem; max-width: 1180px; margin: 0 auto;
+    }
+    .nav-logo img { height: 44px; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); }
+    .nav-links a.active { font-weight: 700; }
+    .nav-cta { display: flex; align-items: center; gap: .75rem; }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .hamburger span {
+      width: 24px; height: 2px; background: var(--ink); border-radius: 2px;
+      transition: all .25s;
+    }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ── BREADCRUMB ─────────────────────────────────── */
+    .breadcrumb {
+      background: var(--bg-alt); border-bottom: 1px solid var(--border);
+      padding: .75rem 0;
+    }
+    .breadcrumb-inner {
+      display: flex; align-items: center; gap: .5rem;
+      max-width: 1180px; margin: 0 auto; padding: 0 2rem;
+      font-size: .78rem; color: var(--muted);
+    }
+    .breadcrumb-inner a { color: var(--muted); transition: color .2s; }
+    .breadcrumb-inner a:hover { color: var(--navy); }
+    .breadcrumb-sep { color: var(--border); }
+    .breadcrumb-current { color: var(--navy); font-weight: 600; }
+
+    /* ── PAGE HERO ──────────────────────────────────── */
+    .page-hero {
+      padding: 88px 0 72px;
+      background: #fff;
+      position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 70% at 85% 20%, rgba(65,207,208,.1) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 15% 80%, rgba(102,193,238,.08) 0%, transparent 60%);
+    }
+    .page-hero-inner {
+      position: relative; z-index: 1;
+      max-width: 700px; margin: 0 auto; text-align: center;
+    }
+    .page-hero h1 {
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: .93; margin-bottom: 1.5rem; color: var(--ink);
+    }
+    .page-hero p {
+      font-size: 1.1rem; line-height: 1.75; color: var(--body);
+      max-width: 560px; margin: 0 auto;
+    }
+
+    /* ── FOOTER ─────────────────────────────────────── */
+    .footer {
+      background: var(--ink); color: #fff;
+      padding: 64px 0 32px;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+      gap: 3rem; margin-bottom: 3rem;
+    }
+    .footer-logo img { height: 40px; margin-bottom: 1.25rem; filter: brightness(0) invert(1); }
+    .footer-brand p { font-size: .84rem; color: rgba(255,255,255,.45); line-height: 1.7; max-width: 280px; margin-bottom: 1.5rem; }
+    .footer-social { display: flex; gap: .6rem; }
+    .social-btn {
+      width: 34px; height: 34px; border-radius: 8px;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .8rem; color: rgba(255,255,255,.5); transition: all .2s;
+    }
+    .social-btn:hover { background: rgba(65,207,208,.15); border-color: var(--teal); color: var(--teal); }
+    .footer-col h4 {
+      font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
+      color: rgba(255,255,255,.35); margin-bottom: 1.25rem;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: .55rem; }
+    .footer-links a { font-size: .84rem; color: rgba(255,255,255,.5); transition: color .2s; }
+    .footer-links a:hover { color: var(--teal); }
+    .footer-contact p { font-size: .84rem; color: rgba(255,255,255,.5); margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.07);
+      padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.25); margin: 0; }
+    .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-bottom-links a { font-size: .78rem; color: rgba(255,255,255,.25); transition: color .2s; }
+    .footer-bottom-links a:hover { color: var(--teal); }
+
+    /* ── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column; position: fixed;
+        inset: 0; background: #fff; z-index: 199; list-style: none;
+        justify-content: center; align-items: center; gap: 2.25rem;
+      }
+      .nav-links.open a { font-size: 1.15rem; font-weight: 600; color: var(--ink); }
+    }
+    @media (max-width: 640px) {
+      .container { padding: 0 1.25rem; }
+      .section { padding: 56px 0; }
+      .nav-inner { padding: .875rem 1.25rem; }
+      h2.display { font-size: clamp(2rem, 9vw, 3rem); }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: .75rem; }
+      .footer-bottom-links { justify-content: center; flex-wrap: wrap; gap: 1rem; }
+    }
+
+/* mobile-menu-fix-start */
+@media (max-width: 768px) {
+  body.menu-open .nav-wrap {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  .nav-links.open {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    background: #ffffff !important;
+    z-index: 9999 !important;
+    list-style: none !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    margin: 0 !important;
+    padding: 2rem !important;
+    overflow-y: auto !important;
+  }
+  .nav-links.open a {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    color: var(--ink) !important;
+    padding: .75rem 1.5rem !important;
+    display: block !important;
+  }
+  .nav-links.open li {
+    list-style: none !important;
+  }
+  .hamburger {
+    z-index: 10000 !important;
+    position: relative;
+  }
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+}
+/* mobile-menu-fix-end */
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "@id": "https://www.tidesbookkeeping.com/#organization",
+  "name": "Tides Bookkeeping LLC",
+  "alternateName": "Tides Bookkeeping",
+  "description": "Remote bookkeeping and accounting for bars, nightclubs, and restaurants across the United States.",
+  "url": "https://www.tidesbookkeeping.com/bar-bookkeeping-guide",
+  "logo": "https://www.tidesbookkeeping.com/logo.png",
+  "image": "https://www.tidesbookkeeping.com/logo.png",
+  "telephone": "+1-864-559-2686",
+  "email": "support@tidesbookkeeping.com",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Greenville",
+    "addressRegion": "SC",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.tidesbookkeeping.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Bar & Nightclub Bookkeeping Guide",
+      "item": "https://www.tidesbookkeeping.com/bar-bookkeeping-guide"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What makes bar bookkeeping different from restaurant bookkeeping?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bars are more cash-intensive and more inventory-sensitive than most restaurants, and their key cost is pour cost — the cost of liquor, beer, and wine poured, rather than food cost. The books have to track pour cost and liquor inventory shrinkage, heavy cash sales and cash tips, comps and bartender buybacks, and revenue streams like tabs, cover charges, and bottle service. On top of that, bars carry liquor licensing and often a separate alcohol tax. The fundamentals are the same as any hospitality business, but they get applied very differently behind the bar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is pour cost, and what is a good pour cost percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pour cost is the bar's version of food cost: the cost of the liquor, beer, and wine you poured, expressed as a percentage of what you sold. Well-run bars generally target the low-to-mid 20s overall — roughly 18–24% on liquor, with draft beer and wine often running higher. Over-pouring, unrung drinks, giveaways, and spillage all push pour cost up. Combined with labor, pour cost gives you prime cost, the same make-or-break number restaurants watch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do bars control liquor inventory and shrinkage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By counting regularly and comparing what should have been poured to what actually was. You count liquor bottle by bottle and beer keg by keg, calculate theoretical usage from sales, and measure the gap against your actual counts. That gap — shrinkage — is where over-pouring, comps, spillage, and theft hide. Tight, consistent inventory counts tied to the books are the single biggest lever on a bar's profit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should a bar handle cash and comps in its books?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Count every drawer and track its over/short to its own account every shift — a register that is consistently short is telling you something, whether it is a training gap, a bad process, or theft. Comps and bartender buybacks (drinks given away) should be recorded to their own account, not buried in sales, so your revenue and pour cost stay honest. Bars run more cash than almost any other retail business, so clean cash and comp bookkeeping is where a lot of them quietly lose money."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do bars pay special taxes on alcohol?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Often, yes. In addition to regular sales tax, many states levy a separate liquor-by-the-drink or mixed-beverage tax on alcohol sold for on-premise consumption, and there are excise and licensing obligations tied to your liquor license. Rates and rules vary by state and sometimes by city. The books need to separate and remit these correctly, which is exactly the kind of thing that is routine with clean records and a nightmare without them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does bar bookkeeping cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Outsourced monthly bar bookkeeping generally runs a few hundred dollars a month, scaling with your sales volume, number of locations, POS and payroll complexity, and whether you are on QuickBooks or Restaurant365. That is a fraction of a full-time in-house bookkeeper, and far less than the cost of an untracked pour cost or unnoticed cash shortages. If you are behind, catch-up is priced separately based on how many months need reconstructing."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Bar & Nightclub Bookkeeping: The Complete Guide",
+  "description": "The complete guide to bar and nightclub bookkeeping and accounting — pour cost, liquor inventory and shrinkage, cash and comps, tabs and bottle service, POS reconciliation, tips, liquor tax, and catch-up.",
+  "url": "https://www.tidesbookkeeping.com/bar-bookkeeping-guide",
+  "mainEntityOfPage": "https://www.tidesbookkeeping.com/bar-bookkeeping-guide",
+  "image": "https://www.tidesbookkeeping.com/logo.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Tides Bookkeeping",
+    "url": "https://www.tidesbookkeeping.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tides Bookkeeping",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.tidesbookkeeping.com/logo.png"
+    }
+  },
+  "datePublished": "2026-08-29",
+  "dateModified": "2026-08-29"
+}
+</script>
+<style>
+.nav-dd{position:relative;}
+.nav-dd-menu{display:none;position:absolute;top:100%;left:0;margin:0;padding:.4rem;list-style:none;background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 10px 30px rgba(15,28,46,.12);min-width:180px;z-index:250;}
+.nav-dd:hover>.nav-dd-menu,.nav-dd:focus-within>.nav-dd-menu{display:block;}
+.nav-dd-menu li{margin:0;}
+.nav-dd-menu a{display:block;padding:.5rem .75rem;border-radius:6px;white-space:nowrap;}
+.nav-dd-menu a:hover{background:var(--teal-lt);color:var(--navy);}
+.nav-dd-caret{font-size:.7em;opacity:.65;}
+.nav-links.open .nav-dd-menu{display:block;position:static;box-shadow:none;border:none;background:transparent;padding:.15rem 0 .15rem 1rem;min-width:0;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav-wrap">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="who-we-serve.html">Who We Serve</a></li>
+      <li class="nav-dd"><a href="about.html">About<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li></ul></li>
+      <li><a href="/pricing">Pricing</a></li><li class="nav-dd"><a href="/tools">Resources<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/tools">Free Tools</a></li><li><a href="/glossary">Glossary</a></li><li><a href="/small-business-bookkeeping-guide">Bookkeeping Guide</a></li></ul></li>
+      <li><a href="/blog" class="active">Blog</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://portal.tidesbookkeeping.com" class="btn btn-outline">Sign In</a>
+      <a href="schedule.html" class="btn btn-primary">Book Appointment</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">Home</a>
+    <span class="breadcrumb-sep">&rsaquo;</span>
+    <span class="breadcrumb-current">Bar &amp; Nightclub Bookkeeping Guide</span>
+  </div>
+</nav>
+
+<!-- PILLAR HERO -->
+<section class="page-hero" style="padding:48px 0 8px;">
+  <div class="container" style="max-width:760px;">
+    <div class="eyebrow">
+      <span style="width:6px;height:6px;border-radius:50%;background:var(--teal);"></span>
+      Bar &amp; Nightclub Guide
+    </div>
+    <h1 class="display" style="font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.05;margin-bottom:1rem;">Bar &amp; Nightclub Bookkeeping: The Complete Guide</h1>
+    <p style="font-size:1.15rem;line-height:1.7;color:var(--body);">
+      Bars and nightclubs are their own bookkeeping animal &mdash; cash-heavy, inventory that walks out the door, pour cost instead of food cost,
+      and revenue that shows up as tabs, cover charges, and bottle service. Bars share a lot with restaurants (start with the broader
+      <a href="restaurant-bookkeeping-guide.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">restaurant bookkeeping guide</a> for the shared fundamentals),
+      but the drink-driven details are their own discipline. This is the map &mdash; each section gives you the plain-English version and links to a deeper guide.
+    </p>
+  </div>
+</section>
+
+<article class="section" style="padding:16px 0 64px;">
+  <div class="container" style="max-width:740px;">
+<div style="display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0 2.5rem;"><a href="#basics" style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:.5rem 1.1rem;font-size:.9rem;font-weight:600;color:var(--navy);text-decoration:none;">What's different about bar books</a><a href="#pour-cost" style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:.5rem 1.1rem;font-size:.9rem;font-weight:600;color:var(--navy);text-decoration:none;">Pour cost</a><a href="#inventory" style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:.5rem 1.1rem;font-size:.9rem;font-weight:600;color:var(--navy);text-decoration:none;">Liquor inventory &amp; shrinkage</a><a href="#cash" style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:.5rem 1.1rem;font-size:.9rem;font-weight:600;color:var(--navy);text-decoration:none;">Cash &amp; comps</a><a href="#revenue" style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:.5rem 1.1rem;font-size:.9rem;font-weight:600;color:var(--navy);text-decoration:none;">Tabs &amp; bottle service</a><a href="#software" style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:.5rem 1.1rem;font-size:.9rem;font-weight:600;color:var(--navy);text-decoration:none;">Software &amp; POS</a><a href="#taxes" style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:.5rem 1.1rem;font-size:.9rem;font-weight:600;color:var(--navy);text-decoration:none;">Tips &amp; liquor tax</a><a href="#by-type" style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:.5rem 1.1rem;font-size:.9rem;font-weight:600;color:var(--navy);text-decoration:none;">By bar type &amp; city</a><a href="#catch-up" style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:.5rem 1.1rem;font-size:.9rem;font-weight:600;color:var(--navy);text-decoration:none;">Behind on your books?</a><a href="#mistakes" style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:.5rem 1.1rem;font-size:.9rem;font-weight:600;color:var(--navy);text-decoration:none;">Costly mistakes</a></div>
+
+<h2 id="basics" class="display" style="font-size:1.9rem;color:var(--navy);margin-top:3rem;margin-bottom:.75rem;scroll-margin-top:90px;">What makes bar &amp; nightclub bookkeeping different</h2>
+<p style="margin-bottom:1.25rem;">A bar isn't a restaurant that skips the kitchen. It's a high-volume, cash-heavy, inventory-sensitive business where a few cents of over-pour on every drink is the difference between a good month and a bad one. The books have to track pour cost, liquor and beer inventory, cash sales and cash tips, comps and bartender buybacks, cover charges, and &mdash; for nightclubs &mdash; bottle service and event revenue, then reconcile all of it against the POS and your deposits. Start here to see why the fundamentals get applied so differently behind the bar.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;"><a href="restaurant-bookkeeping-guide.html" style="display:block;background:var(--teal-lt);border:1px solid rgba(65,207,208,.4);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--navy);font-size:.98rem;margin-bottom:.25rem;">The Restaurant Bookkeeping Guide</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">The shared hospitality fundamentals, in one place.</div></a><a href="industry-restaurants-bars.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Restaurants &amp; Bars Bookkeeping</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Our full hub for restaurant and bar accounting.</div></a><a href="glossary.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Bookkeeping Glossary</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Plain-English definitions of the terms behind your books.</div></a></div>
+
+<h2 id="pour-cost" class="display" style="font-size:1.9rem;color:var(--navy);margin-top:3rem;margin-bottom:.75rem;scroll-margin-top:90px;">Pour cost: the number that runs your bar</h2>
+<p style="margin-bottom:1.25rem;">Pour cost is the bar's version of food cost &mdash; the cost of the liquor, beer, and wine you poured, as a percentage of what you sold. A well-run bar keeps pour cost in the low-to-mid 20s (roughly 18&ndash;24% on liquor, with draft beer and wine often higher). Every free pour, every unrung drink, and every over-pour pushes it up. Combine pour cost with labor and you get prime cost, the same make-or-break number restaurants live by. Books that surface pour cost every period let you catch a leak while it's still small.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;"><a href="blog-bookkeeping-for-restaurants.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Prime Cost &amp; COGS, Explained</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Beverage cost + labor, and the targets to aim for.</div></a><a href="what-is-cost-of-goods-sold.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">What Is Cost of Goods Sold?</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">The beverage cost that drives your gross margin.</div></a><a href="restaurant365-bookkeeping.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Pour-Cost Tracking in Restaurant365</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">How a purpose-built platform tracks beverage cost daily.</div></a></div>
+
+<h2 id="inventory" class="display" style="font-size:1.9rem;color:var(--navy);margin-top:3rem;margin-bottom:.75rem;scroll-margin-top:90px;">Liquor inventory, shrinkage &amp; theft</h2>
+<p style="margin-bottom:1.25rem;">More money disappears through a bar's inventory than almost anywhere else in hospitality. The gap between what you <em>should</em> have poured (theoretical usage from sales) and what you <em>actually</em> poured (from counts) is your shrinkage &mdash; and in a bar it hides over-pouring, giveaways, spillage, and outright theft. The only way to see it is to count regularly, bottle by bottle and keg by keg, and compare theoretical to actual against sales. Tight inventory bookkeeping is the single biggest lever on a bar's profit.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;"><a href="blog-bookkeeping-for-restaurants.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Inventory &amp; COGS Done Right</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Counting, valuing, and reconciling what you sell.</div></a><a href="restaurant365-bookkeeping.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Inventory in Restaurant365</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Theoretical vs actual usage, tracked automatically.</div></a><a href="blog-bookkeeping-mistakes-that-trigger-irs-audits.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Where the Money Leaks</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">The bookkeeping gaps that quietly cost you.</div></a></div>
+
+<h2 id="cash" class="display" style="font-size:1.9rem;color:var(--navy);margin-top:3rem;margin-bottom:.75rem;scroll-margin-top:90px;">Cash handling, comps &amp; over/short</h2>
+<p style="margin-bottom:1.25rem;">Bars take more cash than almost any other retail business, which makes cash control a bookkeeping issue, not just an operations one. Every drawer should be counted and its over/short tracked to its own account every shift &mdash; a register that's consistently short is telling you something. Comps and bartender buybacks (the drinks given away) have to be recorded to their own account, not buried in sales, or your revenue and pour cost both lie. Getting cash, comps, and over/short into the books cleanly is where a lot of bars quietly lose money.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;"><a href="r365-month-end-close-checklist.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">The Month-End Close Checklist</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Reconcile sales, deposits, and cash every period.</div></a><a href="services.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Our Monthly Bookkeeping</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Reconciliation, categorization, and reports every period.</div></a><a href="blog-bookkeeping-mistakes-that-trigger-irs-audits.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Cash Mistakes That Draw Scrutiny</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">How mishandled cash triggers IRS attention.</div></a></div>
+
+<h2 id="revenue" class="display" style="font-size:1.9rem;color:var(--navy);margin-top:3rem;margin-bottom:.75rem;scroll-margin-top:90px;">Bar revenue: tabs, cover charges &amp; bottle service</h2>
+<p style="margin-bottom:1.25rem;">A bar's sales don't all look alike, and the books shouldn't treat them that way. Bar tabs, cover charges at the door, bottle service and VIP minimums, private events, and even ATM or vending income each behave differently for revenue recognition and sales tax. Nightclubs pile promoter deals and ticketed events on top. Categorizing each stream correctly is what makes your P&amp;L actually tell you which part of the business is making money &mdash; and which one just feels busy.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;"><a href="blog-how-to-read-pl-like-ceo.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">How to Read a P&amp;L Like a CEO</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Turn your bar P&amp;L into decisions, not just numbers.</div></a><a href="industry-restaurants-bars.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Restaurant &amp; Bar Services</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">How we handle hospitality revenue and reporting.</div></a><a href="glossary.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Revenue Terms, Defined</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Recognition, deferred revenue, and more in plain English.</div></a></div>
+
+<h2 id="software" class="display" style="font-size:1.9rem;color:var(--navy);margin-top:3rem;margin-bottom:.75rem;scroll-margin-top:90px;">Software &amp; POS: what bars run on</h2>
+<p style="margin-bottom:1.25rem;">Most bars run their core books on QuickBooks with a bookkeeper who understands hospitality; higher-volume and multi-location groups move to Restaurant365, which folds inventory, pour costing, and scheduling into the accounting. Whatever the back office, your bar POS (Toast, SpotOn, Square, and others) is where sales originate &mdash; and tying that POS to the bank and the books every period is non-negotiable. Here's how the options compare and when to make the jump.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;"><a href="blog-restaurant365-vs-quickbooks.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Restaurant365 vs QuickBooks</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">The head-to-head &mdash; features, cost, and when to switch.</div></a><a href="restaurant365-bookkeeping.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Restaurant365 Bookkeeping</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Specialist support inside the Restaurant365 platform.</div></a><a href="blog-best-bookkeeping-software-2026.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Best Bookkeeping Software (2026)</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Our picks by business type and budget.</div></a></div>
+
+<h2 id="taxes" class="display" style="font-size:1.9rem;color:var(--navy);margin-top:3rem;margin-bottom:.75rem;scroll-margin-top:90px;">Tips, liquor tax &amp; compliance</h2>
+<p style="margin-bottom:1.25rem;">Bars carry tax and licensing obligations most businesses never see. Tipped-wage payroll and tip reporting, sales tax on alcohol (many states add a separate liquor-by-the-drink or mixed-beverage tax on top of regular sales tax), and excise and licensing tied to your liquor license all have to be handled right. Clean books make these routine; sloppy ones create liabilities that surface at exactly the wrong time. These cover what trips bars up most.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;"><a href="blog-tax-season-prep-checklist.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Tax Season Prep Checklist</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Get your books handoff-ready before your CPA.</div></a><a href="blog-sales-tax-nexus-explained.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Sales Tax Nexus Explained</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Where you owe sales tax &mdash; including on alcohol.</div></a><a href="blog-s-corp-vs-llc.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">S-Corp vs LLC</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">How your entity choice changes your bar's taxes.</div></a></div>
+
+<h2 id="by-type" class="display" style="font-size:1.9rem;color:var(--navy);margin-top:3rem;margin-bottom:.75rem;scroll-margin-top:90px;">Bookkeeping by bar type &amp; city</h2>
+<p style="margin-bottom:1.25rem;">A neighborhood cocktail bar, a high-volume nightclub, a sports bar with a full kitchen, and a brewery taproom don't keep books the same way &mdash; different pour mix, different labor, different license. We work with all of them, and with bar and hospitality operators in cities across the country. Start with your market.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;"><a href="industry-restaurants-bars.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Restaurants &amp; Bars Bookkeeping</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Our full hub for restaurant and bar accounting.</div></a><a href="industry-restaurants-bars-austin-tx.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Bar Bookkeeping in Austin</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Bar and restaurant accounting for Austin operators.</div></a><a href="industry-restaurants-bars-atlanta-ga.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Bar Bookkeeping in Atlanta</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Bar and nightlife accounting for Atlanta.</div></a><a href="industry-restaurants-bars-miami-fl.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Bar Bookkeeping in Miami</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Nightclub and bar accounting in Miami.</div></a><a href="industry-restaurants-bars-charlotte-nc.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Bar Bookkeeping in Charlotte</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Bar and restaurant accounting for Charlotte.</div></a><a href="who-we-serve.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">All Industries &amp; Areas</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">Find your city or business type.</div></a></div>
+
+<h2 id="catch-up" class="display" style="font-size:1.9rem;color:var(--navy);margin-top:3rem;margin-bottom:.75rem;scroll-margin-top:90px;">Behind on your bar's books? Start here</h2>
+<p style="margin-bottom:1.25rem;">Bars fall behind fast &mdash; late nights, high volume, cash everywhere, and an owner who's rarely at a desk. Catch-up bookkeeping reconstructs the past so your taxes are right and your pour cost and margins are trustworthy again. Here's what it costs and how a cleanup actually runs.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;"><a href="blog-catch-up-bookkeeping-cost.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Catch-Up Bookkeeping: What It Costs</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">How catch-up pricing works when you're behind.</div></a><a href="blog-catch-up-bookkeeping-what-to-expect.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">What to Expect From a Catch-Up</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">What's included, and how it works with your CPA.</div></a><a href="catchup-bookkeeping-estimator.html" style="display:block;background:var(--teal-lt);border:1px solid rgba(65,207,208,.4);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--navy);font-size:.98rem;margin-bottom:.25rem;">Catch-Up Cost Estimator</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">How much to get caught up, and how long &mdash; free tool.</div></a></div>
+
+<h2 id="mistakes" class="display" style="font-size:1.9rem;color:var(--navy);margin-top:3rem;margin-bottom:.75rem;scroll-margin-top:90px;">The costly bar bookkeeping mistakes</h2>
+<p style="margin-bottom:1.25rem;">The bar disasters repeat: never measuring pour cost, letting comps and buybacks vanish into sales, ignoring cash over/short, skipping liquor inventory counts, and putting off the close until tax time. None are exotic &mdash; and all are avoidable once you know them.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;"><a href="blog-bookkeeping-mistakes-that-trigger-irs-audits.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Mistakes That Trigger IRS Audits</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">The errors most likely to draw scrutiny.</div></a><a href="blog-bookkeeping-for-restaurants.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">Hospitality Bookkeeping Done Right</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">The full walkthrough &mdash; so you avoid the traps.</div></a><a href="restaurant-bookkeeping-guide.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;"><div style="font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:.25rem;">The Restaurant Bookkeeping Guide</div><div style="font-size:.82rem;color:var(--muted);line-height:1.5;">The complete companion guide for food-led venues.</div></a></div>
+
+<!-- CTA -->
+    <div style="background:linear-gradient(135deg,var(--navy) 0%,#1d3d7e 100%);border-radius:20px;padding:2.25rem;margin:3.5rem 0 1.5rem;color:#fff;text-align:center;">
+      <h3 style="color:#fff;font-size:1.5rem;margin-bottom:.5rem;">Rather someone who knows bars just handled it?</h3>
+      <p style="color:rgba(255,255,255,.75);font-size:.98rem;margin-bottom:1.25rem;max-width:520px;margin-left:auto;margin-right:auto;">That's what we do. Clean bar books every period, pour cost you can trust, cash and comps handled right, QuickBooks or Restaurant365, catch-up if you're behind &mdash; 100% remote. Book a free call and we'll tell you exactly what your books need.</p>
+      <a href="schedule.html" class="btn btn-teal">Schedule a Free Call &rarr;</a>
+    </div>
+
+<h2 id="faq" class="display" style="font-size:1.9rem;color:var(--navy);margin-top:3rem;margin-bottom:1rem;scroll-margin-top:90px;">Bar bookkeeping FAQ</h2>
+<div class="faq-list">
+<div class="faq-item open" style="border-bottom:1px solid var(--border);padding:1.1rem 0;"><button class="faq-question" onclick="toggleFaq(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;background:none;border:none;cursor:pointer;text-align:left;padding:0;"><h3 style="font-size:1.05rem;color:var(--ink);">What makes bar bookkeeping different from restaurant bookkeeping?</h3><span class="faq-toggle" style="color:var(--teal);font-size:1.4rem;font-weight:700;flex-shrink:0;">+</span></button><div class="faq-answer" style="padding-top:.7rem;color:var(--body);line-height:1.7;">Bars are more cash-intensive and more inventory-sensitive than most restaurants, and their key cost is pour cost &mdash; the cost of liquor, beer, and wine poured, rather than food cost. The books have to track pour cost and liquor inventory shrinkage, heavy cash sales and cash tips, comps and bartender buybacks, and revenue streams like tabs, cover charges, and bottle service. On top of that, bars carry liquor licensing and often a separate alcohol tax. The fundamentals are the same as any hospitality business, but they get applied very differently behind the bar.</div></div>
+<div class="faq-item" style="border-bottom:1px solid var(--border);padding:1.1rem 0;"><button class="faq-question" onclick="toggleFaq(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;background:none;border:none;cursor:pointer;text-align:left;padding:0;"><h3 style="font-size:1.05rem;color:var(--ink);">What is pour cost, and what is a good pour cost percentage?</h3><span class="faq-toggle" style="color:var(--teal);font-size:1.4rem;font-weight:700;flex-shrink:0;">+</span></button><div class="faq-answer" style="padding-top:.7rem;color:var(--body);line-height:1.7;">Pour cost is the bar's version of food cost: the cost of the liquor, beer, and wine you poured, expressed as a percentage of what you sold. Well-run bars generally target the low-to-mid 20s overall &mdash; roughly 18&ndash;24% on liquor, with draft beer and wine often running higher. Over-pouring, unrung drinks, giveaways, and spillage all push pour cost up. Combined with labor, pour cost gives you prime cost, the same make-or-break number restaurants watch.</div></div>
+<div class="faq-item" style="border-bottom:1px solid var(--border);padding:1.1rem 0;"><button class="faq-question" onclick="toggleFaq(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;background:none;border:none;cursor:pointer;text-align:left;padding:0;"><h3 style="font-size:1.05rem;color:var(--ink);">How do bars control liquor inventory and shrinkage?</h3><span class="faq-toggle" style="color:var(--teal);font-size:1.4rem;font-weight:700;flex-shrink:0;">+</span></button><div class="faq-answer" style="padding-top:.7rem;color:var(--body);line-height:1.7;">By counting regularly and comparing what should have been poured to what actually was. You count liquor bottle by bottle and beer keg by keg, calculate theoretical usage from sales, and measure the gap against your actual counts. That gap &mdash; shrinkage &mdash; is where over-pouring, comps, spillage, and theft hide. Tight, consistent inventory counts tied to the books are the single biggest lever on a bar's profit.</div></div>
+<div class="faq-item" style="border-bottom:1px solid var(--border);padding:1.1rem 0;"><button class="faq-question" onclick="toggleFaq(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;background:none;border:none;cursor:pointer;text-align:left;padding:0;"><h3 style="font-size:1.05rem;color:var(--ink);">How should a bar handle cash and comps in its books?</h3><span class="faq-toggle" style="color:var(--teal);font-size:1.4rem;font-weight:700;flex-shrink:0;">+</span></button><div class="faq-answer" style="padding-top:.7rem;color:var(--body);line-height:1.7;">Count every drawer and track its over/short to its own account every shift &mdash; a register that is consistently short is telling you something, whether it is a training gap, a bad process, or theft. Comps and bartender buybacks (drinks given away) should be recorded to their own account, not buried in sales, so your revenue and pour cost stay honest. Bars run more cash than almost any other retail business, so clean cash and comp bookkeeping is where a lot of them quietly lose money.</div></div>
+<div class="faq-item" style="border-bottom:1px solid var(--border);padding:1.1rem 0;"><button class="faq-question" onclick="toggleFaq(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;background:none;border:none;cursor:pointer;text-align:left;padding:0;"><h3 style="font-size:1.05rem;color:var(--ink);">Do bars pay special taxes on alcohol?</h3><span class="faq-toggle" style="color:var(--teal);font-size:1.4rem;font-weight:700;flex-shrink:0;">+</span></button><div class="faq-answer" style="padding-top:.7rem;color:var(--body);line-height:1.7;">Often, yes. In addition to regular sales tax, many states levy a separate liquor-by-the-drink or mixed-beverage tax on alcohol sold for on-premise consumption, and there are excise and licensing obligations tied to your liquor license. Rates and rules vary by state and sometimes by city. The books need to separate and remit these correctly, which is exactly the kind of thing that is routine with clean records and a nightmare without them.</div></div>
+<div class="faq-item" style="border-bottom:1px solid var(--border);padding:1.1rem 0;"><button class="faq-question" onclick="toggleFaq(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;background:none;border:none;cursor:pointer;text-align:left;padding:0;"><h3 style="font-size:1.05rem;color:var(--ink);">How much does bar bookkeeping cost?</h3><span class="faq-toggle" style="color:var(--teal);font-size:1.4rem;font-weight:700;flex-shrink:0;">+</span></button><div class="faq-answer" style="padding-top:.7rem;color:var(--body);line-height:1.7;">Outsourced monthly bar bookkeeping generally runs a few hundred dollars a month, scaling with your sales volume, number of locations, POS and payroll complexity, and whether you are on QuickBooks or Restaurant365. That is a fraction of a full-time in-house bookkeeper, and far less than the cost of an untracked pour cost or unnoticed cash shortages. If you are behind, catch-up is priced separately based on how many months need reconstructing.</div></div>
+</div>
+
+    <p style="margin-top:2.5rem;color:var(--muted);font-size:.9rem;">Tides Bookkeeping provides remote bar, nightclub, and restaurant bookkeeping nationwide, on QuickBooks and inside Restaurant365. See our <a href="industry-restaurants-bars.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">restaurant &amp; bar services</a>, the <a href="restaurant-bookkeeping-guide.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">restaurant bookkeeping guide</a>, the <a href="small-business-bookkeeping-guide.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">complete bookkeeping guide</a>, or <a href="blog.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">read the blog</a>.</p>
+
+  </div>
+</article>
+
+<script>
+  function toggleFaq(btn){
+    const item = btn.closest('.faq-item');
+    const open = item.classList.toggle('open');
+    const ans = item.querySelector('.faq-answer');
+    const tog = item.querySelector('.faq-toggle');
+    if (ans) ans.style.display = open ? 'block' : 'none';
+    if (tog) tog.textContent = open ? '−' : '+';
+  }
+  document.querySelectorAll('.faq-item').forEach(it=>{
+    const ans = it.querySelector('.faq-answer');
+    if (ans) ans.style.display = it.classList.contains('open') ? 'block' : 'none';
+  });
+</script>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><a href="index.html"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+        <p>Remote bookkeeping and financial services for small businesses nationwide. Clean books. Clear numbers. Confident decisions.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/tides-bookkeeping" target="_blank" rel="noopener" class="social-btn">in</a>
+          <a href="https://www.facebook.com/thetidesbookkeeping" target="_blank" rel="noopener" class="social-btn">f</a>
+          <a href="https://www.instagram.com/tidesbookkeeping/" target="_blank" rel="noopener" class="social-btn">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="service-monthly-bookkeeping.html">Monthly Bookkeeping</a></li>
+          <li><a href="service-catchup-bookkeeping.html">Catch-Up Bookkeeping</a></li>
+          <li><a href="service-payroll.html">Payroll Support</a></li>
+          <li><a href="service-financial-reporting.html">Financial Reporting</a></li>
+          <li><a href="service-bank-reconciliation.html">Bank Reconciliation</a></li>
+          <li><a href="services.html">View All Services →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Who We Serve</h4>
+        <ul class="footer-links">
+          <li><a href="industry-real-estate.html">Real Estate</a></li>
+          <li><a href="industry-contractors-trades.html">Contractors &amp; Trades</a></li>
+          <li><a href="industry-restaurants-bars.html">Restaurants &amp; Bars</a></li>
+          <li><a href="industry-healthcare.html">Healthcare Practices</a></li>
+          <li><a href="industry-professional-services.html">Professional Services</a></li>
+          <li><a href="industry-ecommerce-retail.html">E-Commerce &amp; Retail</a></li>
+          <li><a href="who-we-serve.html">All Industries →</a></li>
+          <li><a href="areas-we-serve.html">Areas We Serve</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact footer-col">
+        <h4>Contact</h4>
+        <p>📧 support@tidesbookkeeping.com</p>
+        <p>📞 (864) 559-2686</p>
+        <p>📍 Greenville, South Carolina</p>
+        <div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:.6rem;">
+          <a href="contact.html" class="btn btn-outline-white" style="font-size:.82rem;padding:.65rem 1.4rem;justify-content:center;">Contact Us →</a>
+          <a href="schedule.html" class="btn btn-teal" style="font-size:.82rem;padding:.65rem 1.4rem;">Book a Free Call</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tides Bookkeeping LLC. All rights reserved.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="sitemap.xml">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    const btn   = document.getElementById('hamburger');
+    const links = document.querySelector('.nav-links');
+    if (!btn || !links) return;
+    btn.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        btn.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
+</script>
+
+<script>
+/* mobile-menu-js-fix-start */
+(function(){
+  const btn = document.getElementById('hamburger');
+  const links = document.querySelector('.nav-links');
+  if (!btn || !links) return;
+  const close = () => {
+    links.classList.remove('open');
+    btn.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    document.body.style.overflow = '';
+  };
+  const newBtn = btn.cloneNode(true);
+  btn.parentNode.replaceChild(newBtn, btn);
+  newBtn.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    newBtn.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', close);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+})();
+/* mobile-menu-js-fix-end */
+</script>
+
+<!--Start of Crisp Chatbox-->
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="63ba78f5-feea-49e7-9a4f-df3435912271";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+<!--End of Crisp Chatbox-->
+</body>
+</html>

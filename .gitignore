@@ -20,6 +20,13 @@ _templates/
 # Source state SVGs — only used to extract path data, not deployed
 assets/states/*-source.*
 
+# Private client files — NEVER commit (this repo auto-deploys to a PUBLIC site)
+_Clients/
+
+# Working/source assets not meant for the live site
+assets/social/tax deadline social posts graphics/
+tides-hub-archive-*.zip
+
 # Internal assets (spreadsheets, GHL screenshots, realtor lists)
 assets/Bookkeepers/
 assets/GHL/

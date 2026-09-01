@@ -220,6 +220,24 @@
       min-height: 700px;
     }
 
+    /* ── BOOKING NOTE ───────────────────────────────── */
+    .booking-note {
+      display: flex; align-items: flex-start; gap: .85rem;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      font-size: .85rem; line-height: 1.55; color: var(--body);
+    }
+    .booking-note-icon {
+      width: 26px; height: 26px; border-radius: 8px; flex-shrink: 0;
+      background: var(--teal-lt); color: var(--navy);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .8rem; font-weight: 700;
+    }
+    .booking-note strong { color: var(--ink); font-weight: 700; }
+
     /* ── PERKS STRIP ────────────────────────────────── */
     .perks-strip {
       background: var(--bg-alt);
@@ -482,6 +500,17 @@
         <div class="bc-duration">🕐 45 minutes</div>
       </div>
 
+    </div>
+
+    <!-- Booking note -->
+    <div class="booking-note">
+      <div class="booking-note-icon">i</div>
+      <div>
+        <strong>Before you book:</strong> These calls are reserved for business owners and their teams
+        looking for bookkeeping help. So we can make your 15 minutes useful, please tell us your business
+        name, your industry, and what you're using for bookkeeping today when you book.
+        Sales, vendor, and agency pitches booked on this calendar will be declined.
+      </div>
     </div>
 
     <!-- Calendar embed -->

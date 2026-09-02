@@ -100,6 +100,19 @@
   .billnote { margin-top: 18px; font-size: 14px; color: var(--ink-soft);
     background: color-mix(in srgb, var(--accent-soft) 26%, var(--surface)); border: 1px solid var(--line);
     border-radius: 10px; padding: 14px 16px; max-width: none; }
+  .payroll { margin-top: 16px; border: 1px solid var(--line); border-radius: 12px;
+    background: var(--surface); padding: 22px; }
+  .payroll .lab { font-family: var(--mono); font-size: 11px; letter-spacing: .13em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 12px; }
+  .payroll p { font-size: 13.5px; color: var(--ink-soft); margin: 0 0 16px; max-width: none; }
+  .tiers { list-style: none; margin: 0; padding: 0; border-top: 1px dashed var(--line); }
+  .tiers li { display: flex; align-items: baseline; justify-content: space-between; gap: 18px;
+    padding: 11px 0; border-bottom: 1px dashed var(--line); font-size: 14px; color: var(--ink-soft); }
+  .tiers .rng b { color: var(--ink); font-weight: 600; }
+  .tiers .amt { font-family: var(--serif); font-weight: 700; color: var(--ink); font-size: 20px;
+    font-variant-numeric: tabular-nums; white-space: nowrap; letter-spacing: -.01em; }
+  .tiers .amt span { font-family: var(--sans); font-size: 12.5px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+  .payroll .fine { font-size: 13px; color: var(--muted); margin: 14px 0 0; }
   .incl { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 12px; }
   @media (min-width: 620px) { .incl { grid-template-columns: 1fr 1fr; gap: 12px 28px; } }
   .incl li { display: grid; grid-template-columns: 20px 1fr; gap: 11px; align-items: start; font-size: 14.5px; color: var(--ink-soft); }
@@ -180,7 +193,7 @@
     <h2>Build it right once, then keep it that way.</h2>
     <ul class="scope">
       <li><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M3 12h18M3 17h11" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span><b>One-time cleanup (January 2025 &ndash; September 2026).</b> Build the chart of accounts in Puzzle, then reconstruct and reconcile all three accounts month by month &mdash; Square sales broken into gross sales, tax, tips and fees; payroll recorded properly; business separated from personal &mdash; until 2025 and 2026 are current, balanced, and closed.</span></li>
-      <li><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Ongoing every month.</b> Categorize and reconcile as it happens, keep cost-of-goods and payroll on the books, and close each month with a P&amp;L and balance sheet you can actually run the bar from.</span></li>
+      <li><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Ongoing every month.</b> Your accounts feed straight into Puzzle, so I&rsquo;m watching the transactions as they land rather than opening a shoebox in January. Categorize and reconcile as it happens, keep cost-of-goods and payroll on the books, and close each month with a P&amp;L and balance sheet you can actually run the bar from &mdash; and see for yourself any day in between.</span></li>
       <li><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/></svg></span><span><b>One entity, clearly bounded.</b> This covers <b>Smith Granville Enterprises, LLC (dba Hillgarten)</b>. Rent or transfers involving 412 Devon Main LLC and Jane Lex Properties are recorded as they hit the operating account; separate books for those entities can be added any time.</span></li>
     </ul>
   </section>
@@ -198,17 +211,28 @@
       <div class="card feature">
         <div class="lab">Monthly service</div>
         <div class="amount">$795<span class="per">/month</span></div>
-        <p class="note">Full bookkeeping for the bar in Puzzle &mdash; Square sales, payroll, cost-of-goods, and a closed set of books every month.</p>
+        <p class="note">Full bookkeeping for the bar in Puzzle &mdash; Square sales, payroll, cost-of-goods, and a closed set of books every month, on a live dashboard you can open any day of the week.</p>
         <div class="split">Begins <b>October 1, 2026</b></div>
       </div>
     </div>
-    <p class="billnote">Your cleanup covers everything through <strong>September 30</strong>, and monthly service covers <strong>October 1 forward</strong> &mdash; so the two never overlap and nothing is billed twice. The monthly rate is flat year-round: you pay the same in January as you do in July, even though July is four times the work. Month-to-month, no long-term contract. <strong>Payroll management</strong> is quoted separately once we confirm your peak headcount.</p>
+    <div class="payroll">
+      <div class="lab">Payroll &middot; optional add-on</div>
+      <p>Running payroll in Square &mdash; timecards reviewed, tips and tip credit handled correctly, new hires onboarded, quarterly filings watched, and W-2s issued at year end. Priced on the number of employees actually paid that month, so it drops on its own through the off-season.</p>
+      <ul class="tiers">
+        <li><span class="rng"><b>1&ndash;10</b> employees paid</span><span class="amt">$145<span>/mo</span></span></li>
+        <li><span class="rng"><b>11&ndash;25</b> employees paid</span><span class="amt">$245<span>/mo</span></span></li>
+        <li><span class="rng"><b>26&ndash;40</b> employees paid</span><span class="amt">$345<span>/mo</span></span></li>
+      </ul>
+      <p class="fine">Above 40 we&rsquo;ll price it together. Payroll journal entries are included in your monthly bookkeeping either way &mdash; this add-on is for running payroll itself.</p>
+    </div>
+    <p class="billnote">Your cleanup covers everything through <strong>September 30</strong>, and monthly service covers <strong>October 1 forward</strong> &mdash; so the two never overlap and nothing is billed twice. Bookkeeping is <strong>flat year-round</strong>: you pay the same in January as you do in July, even though July is four times the work. Payroll is the one piece that moves with your season, because the work genuinely does. Month-to-month, no long-term contract.</p>
   </section>
 
   <section class="pad">
     <p class="kicker">What&rsquo;s included every month</p>
     <h2>Everything your books need, handled.</h2>
     <ul class="incl">
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>A live dashboard &mdash; your transactions, cash, and P&amp;L in real time, not three weeks after month-end</span></li>
       <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Huntington checking, Huntington Mastercard, and AMEX reconciled monthly</span></li>
       <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Square sales broken out &mdash; gross sales, sales tax, tips, and processing fees</span></li>
       <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>DoorDash and third-party deposits matched to sales</span></li>
@@ -226,7 +250,7 @@
     <p class="kicker">Getting started</p>
     <h2>Four steps to books you can finally trust.</h2>
     <ol class="steps">
-      <li><div class="st"><b>Give the go-ahead</b> and I set up Puzzle and connect Huntington, the Mastercard, AMEX, and Square.</div></li>
+      <li><div class="st"><b>Give the go-ahead</b> and I set up Puzzle and connect Huntington, the Mastercard, AMEX, and Square &mdash; you get dashboard access the same week.</div></li>
       <li><div class="st"><b>Monthly bookkeeping goes live October 1</b> &mdash; from that day forward the books never fall behind again.</div></li>
       <li><div class="st"><b>I rebuild January 2025 through September 2026</b> in the background &mdash; 2025 delivered first, then 2026. Target mid-November.</div></li>
       <li><div class="st"><b>You get a clean set of books for both years</b> and I work directly with your tax preparer from numbers they can trust.</div></li>

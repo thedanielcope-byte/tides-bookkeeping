@@ -112,6 +112,13 @@
   .tiers .amt { font-family: var(--serif); font-weight: 700; color: var(--ink); font-size: 20px;
     font-variant-numeric: tabular-nums; white-space: nowrap; letter-spacing: -.01em; }
   .tiers .amt span { font-family: var(--sans); font-size: 12.5px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+  .payroll .combined { margin: 18px 0 0; padding: 13px 16px; border-radius: 10px;
+    background: color-mix(in srgb, var(--accent-soft) 45%, var(--surface));
+    border: 1px solid var(--accent); font-size: 14.5px; color: var(--ink-soft); }
+  .payroll .combined b { color: var(--ink); font-weight: 700; font-family: var(--serif);
+    font-size: 18px; font-variant-numeric: tabular-nums; }
+  .tiers .rng .rec { font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--accent-ink); margin-left: 8px; }
   .payroll .fine { font-size: 13px; color: var(--muted); margin: 14px 0 0; }
   .incl { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 12px; }
   @media (min-width: 620px) { .incl { grid-template-columns: 1fr 1fr; gap: 12px 28px; } }
@@ -217,15 +224,15 @@
     </div>
     <div class="payroll">
       <div class="lab">Payroll &middot; optional add-on</div>
-      <p>Running payroll in Square &mdash; timecards reviewed, tips and tip credit handled correctly, new hires onboarded, quarterly filings watched, and W-2s issued at year end. Priced on the number of employees actually paid that month, so it drops on its own through the off-season.</p>
+      <p>Running payroll in Square &mdash; timecards reviewed, tips and tip credit handled correctly, new hires onboarded, quarterly filings watched, and W-2s issued at year end. One flat rate, no per-employee invoice to decode.</p>
       <ul class="tiers">
-        <li><span class="rng"><b>1&ndash;10</b> employees paid</span><span class="amt">$145<span>/mo</span></span></li>
-        <li><span class="rng"><b>11&ndash;25</b> employees paid</span><span class="amt">$245<span>/mo</span></span></li>
-        <li><span class="rng"><b>26&ndash;40</b> employees paid</span><span class="amt">$345<span>/mo</span></span></li>
+        <li><span class="rng"><b>Every two weeks</b><span class="rec">Recommended</span></span><span class="amt">$200<span>/mo</span></span></li>
+        <li><span class="rng"><b>Weekly</b></span><span class="amt">$350<span>/mo</span></span></li>
       </ul>
-      <p class="fine">Above 40 we&rsquo;ll price it together. Payroll journal entries are included in your monthly bookkeeping either way &mdash; this add-on is for running payroll itself.</p>
+      <p class="combined">Bookkeeping and payroll together, every two weeks &mdash; <b>$995 a month.</b></p>
+      <p class="fine">The flat rate covers up to 20 employees paid in a month; above 20 it&rsquo;s $8 per additional employee, so your winter crew never subsidizes your July crew. Moving from weekly to every two weeks keeps you under $1,000 and lines your pay periods up with the seven-day workweeks overtime is calculated on &mdash; cleaner for hourly staff either way. Payroll journal entries are included in your monthly bookkeeping regardless; this add-on is for running payroll itself.</p>
     </div>
-    <p class="billnote">Your cleanup covers everything through <strong>September 30</strong>, and monthly service covers <strong>October 1 forward</strong> &mdash; so the two never overlap and nothing is billed twice. Bookkeeping is <strong>flat year-round</strong>: you pay the same in January as you do in July, even though July is four times the work. Payroll is the one piece that moves with your season, because the work genuinely does. Month-to-month, no long-term contract.</p>
+    <p class="billnote">Your cleanup covers everything through <strong>September 30</strong>, and monthly service covers <strong>October 1 forward</strong> &mdash; so the two never overlap and nothing is billed twice. Both numbers are <strong>flat year-round</strong>: you pay the same in January as you do in July, even though July is four times the work. Month-to-month, no long-term contract.</p>
   </section>
 
   <section class="pad">

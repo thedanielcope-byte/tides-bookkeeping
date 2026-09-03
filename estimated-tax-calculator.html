@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quarterly Estimated Tax Calculator (2026) | Tides Bookkeeping</title>
+  <meta name="description" content="Free quarterly estimated tax calculator for self-employed and small business owners. Estimate your federal quarterly payment from your expected net profit and filing status." />
+  <link rel="canonical" href="https://www.tidesbookkeeping.com/estimated-tax-calculator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Quarterly Estimated Tax Calculator (2026) | Tides Bookkeeping" />
+  <meta property="og:description" content="Estimate your federal quarterly estimated tax payment from your expected self-employment profit and filing status." />
+  <meta property="og:url" content="https://www.tidesbookkeeping.com/estimated-tax-calculator" />
+  <meta property="og:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta property="og:site_name" content="Tides Bookkeeping" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Quarterly Estimated Tax Calculator (2026) | Tides Bookkeeping" />
+  <meta name="twitter:description" content="Estimate your federal quarterly estimated tax payment from your expected self-employment profit." />
+  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KXQS7FCLF2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-KXQS7FCLF2');</script>
+<style>
+    :root {
+      --teal:#41cfd0; --teal-lt:#e6f9f9; --blue:#66c1ee; --blue-lt:#e8f4fd;
+      --navy:#215197; --navy-dk:#163872; --ink:#0f1c2e; --body:#4a5568;
+      --muted:#94a3b8; --border:#e2eaf3; --bg:#ffffff; --bg-alt:#f7fbff;
+      --shadow:0 1px 3px rgba(15,28,46,.06),0 4px 16px rgba(15,28,46,.08);
+      --shadow-lg:0 8px 40px rgba(15,28,46,.12); --r:16px; --r-sm:10px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden;}
+    img{max-width:100%;display:block;}
+    a{text-decoration:none;color:inherit;}
+    .display{font-family:'Bebas Neue',sans-serif;letter-spacing:.02em;line-height:.95;}
+    h2.display{font-size:clamp(2.4rem,5vw,4rem);}
+    h3{font-size:1.1rem;font-weight:700;color:var(--ink);}
+    p{color:var(--body);}
+    .eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:var(--teal-lt);border:1px solid rgba(65,207,208,.25);padding:5px 12px;border-radius:50px;margin-bottom:1.25rem;}
+    .container{max-width:1180px;margin:0 auto;padding:0 2rem;}
+    .section{padding:96px 0;}
+    .section-alt{background:var(--bg-alt);}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.75rem;border-radius:50px;font-weight:600;font-size:.9rem;cursor:pointer;transition:all .2s ease;border:2px solid transparent;}
+    .btn-primary{background:var(--navy);color:#fff;}
+    .btn-primary:hover{background:var(--navy-dk);transform:translateY(-2px);box-shadow:0 8px 24px rgba(33,81,151,.3);}
+    .btn-navy{background:var(--navy);color:#fff;}
+    .btn-navy:hover{background:var(--navy-dk);}
+    .btn-teal{background:var(--teal);color:var(--ink);font-weight:700;}
+    .btn-teal:hover{background:#38bfc0;transform:translateY(-2px);box-shadow:0 8px 24px rgba(65,207,208,.4);}
+    .btn-outline{border-color:var(--border);color:var(--ink);background:#fff;}
+    .btn-outline:hover{border-color:var(--navy);color:var(--navy);}
+    .btn-outline-white{border-color:rgba(255,255,255,.35);color:#fff;}
+    .btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+    .nav-wrap{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;max-width:1180px;margin:0 auto;}
+    .nav-logo img{height:44px;}
+    .nav-links{display:flex;align-items:center;gap:2rem;list-style:none;}
+    .nav-links a{font-size:.87rem;font-weight:500;color:var(--body);transition:color .2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--navy);}
+    .nav-links a.active{font-weight:700;}
+    .nav-cta{display:flex;align-items:center;gap:.75rem;}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+    .hamburger span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:all .25s;}
+    .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+    .breadcrumb{background:var(--bg-alt);border-bottom:1px solid var(--border);padding:.75rem 0;}
+    .breadcrumb-inner{display:flex;align-items:center;gap:.5rem;max-width:1180px;margin:0 auto;padding:0 2rem;font-size:.78rem;color:var(--muted);}
+    .breadcrumb-inner a{color:var(--muted);transition:color .2s;}
+    .breadcrumb-inner a:hover{color:var(--navy);}
+    .breadcrumb-sep{color:var(--border);}
+    .breadcrumb-current{color:var(--navy);font-weight:600;}
+    .page-hero{padding:88px 0 72px;background:#fff;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 85% 20%,rgba(65,207,208,.1) 0%,transparent 60%),radial-gradient(ellipse 50% 50% at 15% 80%,rgba(102,193,238,.08) 0%,transparent 60%);pointer-events:none;}
+    .footer{background:var(--ink);color:#fff;padding:64px 0 32px;}
+    .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:3rem;margin-bottom:3rem;}
+    .footer-logo img{height:40px;margin-bottom:1.25rem;filter:brightness(0) invert(1);}
+    .footer-brand p{font-size:.84rem;color:rgba(255,255,255,.45);line-height:1.7;max-width:280px;margin-bottom:1.5rem;}
+    .footer-social{display:flex;gap:.6rem;}
+    .social-btn{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:.8rem;color:rgba(255,255,255,.5);transition:all .2s;}
+    .social-btn:hover{background:rgba(65,207,208,.15);border-color:var(--teal);color:var(--teal);}
+    .footer-col h4{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.35);margin-bottom:1.25rem;}
+    .footer-links{list-style:none;}
+    .footer-links li{margin-bottom:.55rem;}
+    .footer-links a{font-size:.84rem;color:rgba(255,255,255,.5);transition:color .2s;}
+    .footer-links a:hover{color:var(--teal);}
+    .footer-contact p{font-size:.84rem;color:rgba(255,255,255,.5);margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem;}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-bottom p{font-size:.78rem;color:rgba(255,255,255,.25);margin:0;}
+    .footer-bottom-links{display:flex;gap:2rem;list-style:none;}
+    .footer-bottom-links a{font-size:.78rem;color:rgba(255,255,255,.25);transition:color .2s;}
+    .footer-bottom-links a:hover{color:var(--teal);}
+    @media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
+    @media (max-width:768px){
+      .nav-links,.nav-cta{display:none;}
+      .hamburger{display:flex;}
+      .nav-links.open{display:flex;flex-direction:column;position:fixed;inset:0;background:#fff;z-index:199;list-style:none;justify-content:center;align-items:center;gap:2.25rem;}
+      .nav-links.open a{font-size:1.15rem;font-weight:600;color:var(--ink);}
+    }
+    @media (max-width:640px){
+      .container{padding:0 1.25rem;}
+      .section{padding:56px 0;}
+      .nav-inner{padding:.875rem 1.25rem;}
+      h2.display{font-size:clamp(2rem,9vw,3rem);}
+      .footer-grid{grid-template-columns:1fr;gap:2rem;}
+      .footer-bottom{flex-direction:column;text-align:center;gap:.75rem;}
+      .footer-bottom-links{justify-content:center;flex-wrap:wrap;gap:1rem;}
+    }
+/* mobile-menu-fix-start */
+@media (max-width:768px){
+  body.menu-open .nav-wrap{backdrop-filter:none !important;-webkit-backdrop-filter:none !important;}
+  .nav-links.open{display:flex !important;flex-direction:column !important;position:fixed !important;top:0 !important;left:0 !important;right:0 !important;bottom:0 !important;width:100vw !important;height:100vh !important;max-width:100vw !important;background:#ffffff !important;z-index:9999 !important;list-style:none !important;justify-content:center !important;align-items:center !important;gap:1.5rem !important;margin:0 !important;padding:2rem !important;overflow-y:auto !important;}
+  .nav-links.open a{font-size:1.25rem !important;font-weight:600 !important;color:var(--ink) !important;padding:.75rem 1.5rem !important;display:block !important;}
+  .nav-links.open li{list-style:none !important;}
+  .hamburger{z-index:10000 !important;position:relative;}
+  html,body{overflow-x:hidden !important;max-width:100vw !important;}
+}
+/* mobile-menu-fix-end */
+</style>
+<style>
+  details.faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:.7rem;background:#fff;overflow:hidden;}
+  details.faq-item summary{list-style:none;cursor:pointer;padding:1rem 1.25rem;font-weight:700;color:var(--navy);display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+  details.faq-item summary::-webkit-details-marker{display:none;}
+  details.faq-item summary::after{content:'+';font-size:1.4rem;color:var(--teal);font-weight:400;line-height:1;flex-shrink:0;}
+  details.faq-item[open] summary::after{content:'\2212';}
+  details.faq-item .faq-answer{padding:0 1.25rem 1.15rem;color:var(--body);line-height:1.7;}
+  /* calculator widget */
+  .calc{background:#fff;border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow);padding:1.75rem;margin:1.5rem 0 2rem;}
+  .calc .field{margin-bottom:1.1rem;}
+  .calc label{display:block;font-weight:700;color:var(--ink);font-size:.95rem;margin-bottom:.5rem;}
+  .calc .hint{font-weight:400;color:var(--muted);font-size:.82rem;}
+  .calc .inwrap{position:relative;}
+  .calc .inwrap::before{content:'$';position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:700;}
+  .calc input[type=number]{width:100%;border:2px solid var(--border);border-radius:10px;padding:.75rem 1rem .75rem 1.9rem;font-size:1rem;font-family:inherit;background:#fff;color:var(--ink);}
+  .calc select{width:100%;border:2px solid var(--border);border-radius:10px;padding:.75rem 1rem;font-size:1rem;font-family:inherit;background:#fff;color:var(--ink);}
+  .calc input:focus,.calc select:focus{outline:none;border-color:var(--teal);}
+  .calc-result{margin-top:1.5rem;border-top:1px solid var(--border);padding-top:1.5rem;text-align:center;}
+  .calc-figure{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.6rem,9vw,3.8rem);color:var(--navy);line-height:1;letter-spacing:.01em;}
+  .calc-sub{color:var(--muted);font-size:.9rem;margin-top:.35rem;}
+  .calc-note{background:var(--bg-alt);border:1px solid var(--border);border-radius:12px;padding:.9rem 1.1rem;margin-top:1.1rem;font-size:.9rem;color:var(--body);line-height:1.6;text-align:left;}
+  .calc-cta{margin-top:1.25rem;}
+</style>
+<style>
+.nav-dd{position:relative;}
+.nav-dd-menu{display:none;position:absolute;top:100%;left:0;margin:0;padding:.4rem;list-style:none;background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 10px 30px rgba(15,28,46,.12);min-width:180px;z-index:250;}
+.nav-dd:hover>.nav-dd-menu,.nav-dd:focus-within>.nav-dd-menu{display:block;}
+.nav-dd-menu li{margin:0;}
+.nav-dd-menu a{display:block;padding:.5rem .75rem;border-radius:6px;white-space:nowrap;}
+.nav-dd-menu a:hover{background:var(--teal-lt);color:var(--navy);}
+.nav-dd-caret{font-size:.7em;opacity:.65;}
+.nav-links.open .nav-dd-menu{display:block;position:static;box-shadow:none;border:none;background:transparent;padding:.15rem 0 .15rem 1rem;min-width:0;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav-wrap">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="who-we-serve.html">Who We Serve</a></li>
+      <li class="nav-dd"><a href="about.html">About<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li></ul></li>
+      <li><a href="/pricing">Pricing</a></li><li class="nav-dd"><a href="/tools">Resources<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/tools">Free Tools</a></li><li><a href="/glossary">Glossary</a></li><li><a href="/small-business-bookkeeping-guide">Bookkeeping Guide</a></li></ul></li>
+      <li><a href="/blog" class="active">Blog</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://portal.tidesbookkeeping.com" class="btn btn-outline">Sign In</a>
+      <a href="schedule.html" class="btn btn-primary">Book Appointment</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "@id": "https://www.tidesbookkeeping.com/#organization",
+  "name": "Tides Bookkeeping LLC",
+  "alternateName": "Tides Bookkeeping",
+  "description": "Remote bookkeeping for small businesses nationwide, headquartered in Greenville, SC.",
+  "url": "https://www.tidesbookkeeping.com",
+  "logo": "https://www.tidesbookkeeping.com/logo.png",
+  "telephone": "+1-864-559-2686",
+  "email": "support@tidesbookkeeping.com",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Greenville",
+    "addressRegion": "SC",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Quarterly Estimated Tax Calculator",
+  "url": "https://www.tidesbookkeeping.com/estimated-tax-calculator",
+  "description": "Free quarterly estimated tax calculator for self-employed and small business owners. Estimate your federal quarterly payment from your expected net profit and filing status.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "provider": {
+    "@type": "AccountingService",
+    "name": "Tides Bookkeeping LLC",
+    "url": "https://www.tidesbookkeeping.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.tidesbookkeeping.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Quarterly Estimated Tax Calculator"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who has to pay quarterly estimated taxes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally, if you expect to owe at least $1,000 in federal tax for the year after withholding and credits, and you don't have enough tax withheld from a paycheck to cover it, you're expected to make quarterly estimated payments. That covers most self-employed people, freelancers, single-member LLC owners, S-Corp shareholders taking distributions, landlords, and anyone with significant income that isn't subject to withholding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When are quarterly estimated taxes due?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Federal estimated taxes are due four times a year — roughly April 15, June 15, September 15, and January 15 of the following year. The periods aren't even calendar quarters, and dates shift when they fall on a weekend or holiday, so confirm the exact deadlines each year. Missing a payment can trigger an underpayment penalty even if you pay in full by the annual filing deadline."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much should I pay in estimated taxes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You generally want each payment to cover roughly a quarter of your expected total tax for the year — which for self-employment income means both self-employment (FICA) tax and income tax. A common shortcut is the safe-harbor rule: pay at least 100% of last year's total tax (110% if your prior-year adjusted gross income was over $150,000), split into four payments, and you'll avoid the underpayment penalty even if you end up owing more. This calculator estimates from your projected profit; the safe-harbor amount is an alternative worth checking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I underpay my estimated taxes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The IRS charges an underpayment penalty, which works like interest on the amount you should have paid each quarter but didn't. It's usually not huge, but it's avoidable — and it compounds if you skip multiple quarters. The simplest protection is meeting the safe-harbor threshold (100% or 110% of last year's tax). Setting aside a fixed percentage of each deposit as it comes in, and reconciling your books monthly, keeps you from being surprised at deadline time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this estimated tax calculator tax advice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It's a simplified educational estimate of your federal payment only, not tax, legal, or financial advice. It uses standard federal self-employment and income-tax figures and a simplified QBI deduction; it does not include state or local estimated taxes, tax credits, other deductions, additional Medicare tax, or the specifics of your return. Use it as a directional guide, then confirm your actual payments with a qualified CPA or tax professional. Clean, current books make that calculation far more accurate."
+      }
+    }
+  ]
+}
+</script>
+
+<div class="breadcrumb"><div class="breadcrumb-inner"> <a href="index.html">Home</a> <span class="breadcrumb-sep">&rsaquo;</span> <a href="/tools">Tools</a> <span class="breadcrumb-sep">&rsaquo;</span> <span class="breadcrumb-current">Quarterly Estimated Tax Calculator</span> </div></div>
+<section class="page-hero" style="padding:48px 0 8px;">
+  <div class="container" style="max-width:760px;">
+    <div class="eyebrow"><span style="width:6px;height:6px;border-radius:50%;background:var(--teal);"></span> Free Tool</div>
+    <h1 class="display" style="font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.05;margin:.5rem 0 1rem;">Quarterly Estimated Tax Calculator</h1>
+    <p style="font-size:1.15rem;line-height:1.7;color:var(--body);">Self-employed? Get a quick estimate of your federal quarterly tax payment &mdash; covering both self-employment tax and income tax &mdash; from your expected profit and filing status.</p>
+  </div>
+</section>
+<section class="section" style="padding:8px 0 32px;">
+  <div class="container" style="max-width:640px;">
+    <div class="calc" id="etCalc">
+      <div class="field">
+        <label>Expected annual net self-employment profit <span class="hint">— your business income after expenses</span></label>
+        <div class="inwrap"><input type="number" id="etProfit" min="0" step="1000" value="80000" inputmode="numeric" aria-label="Expected annual net self-employment profit in dollars" placeholder="80000" /></div>
+      </div>
+      <div class="field">
+        <label>Filing status</label>
+        <select id="etStatus" aria-label="Filing status">
+          <option value="single">Single</option>
+          <option value="mfj">Married filing jointly</option>
+          <option value="hoh">Head of household</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Other taxable household income <span class="hint">— W-2 wages, a spouse's income, etc. (optional, helps stack your brackets)</span></label>
+        <div class="inwrap"><input type="number" id="etOther" min="0" step="1000" value="0" inputmode="numeric" aria-label="Other taxable household income in dollars" placeholder="0" /></div>
+      </div>
+      <div class="calc-result">
+        <div class="calc-figure" id="etFig">$0<span style="font-size:1.4rem;color:var(--muted);">/qtr</span></div>
+        <div class="calc-sub" id="etSub">estimated federal quarterly payment</div>
+        <div class="calc-note" id="etNote"></div>
+        <div class="calc-cta"><a href="schedule.html" class="btn btn-teal" style="width:100%;justify-content:center;">Never get surprised at tax time — free call &rarr;</a></div>
+        <div style="margin-top:1.25rem;border-top:1px dashed var(--border);padding-top:1.25rem;text-align:left;">
+          <div style="font-weight:800;color:var(--navy);font-size:1rem;margin-bottom:.25rem;">Want your estimate in writing?</div>
+          <p style="color:var(--muted);font-size:.85rem;margin-bottom:.8rem;line-height:1.5;">We'll email your estimate and can help you set aside for taxes automatically — no spam, ever.</p>
+          <form id="leadForm" onsubmit="return submitLead(event)">
+            <input name="website_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;" />
+            <div style="display:flex;gap:.5rem;flex-wrap:wrap;">
+              <input name="email" type="email" required autocomplete="email" placeholder="you@business.com" style="flex:1 1 200px;border:2px solid var(--border);border-radius:10px;padding:.75rem 1rem;font-size:.95rem;font-family:inherit;color:var(--ink);" />
+              <button type="submit" id="leadBtn" class="btn btn-navy" style="width:auto;padding:.75rem 1.4rem;">Email it to me &rarr;</button>
+            </div>
+            <div id="leadMsg" style="font-size:.85rem;margin-top:.6rem;min-height:1.1rem;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:.8rem;color:var(--muted);text-align:center;">Simplified <strong>federal</strong> estimate for education only &mdash; not tax, legal, or financial advice. It excludes state/local estimated taxes, credits, and other deductions. Confirm your actual payments with a qualified tax professional.</p>
+  </div>
+</section>
+<article class="section section-alt" style="padding:40px 0;">
+  <div class="container" style="max-width:740px;">
+    <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-bottom:.75rem;">How estimated taxes work</h2>
+    <p>When you have a job, your employer withholds tax from every paycheck and sends it to the IRS for you. When you're self-employed, <strong>nobody does that</strong> &mdash; so the IRS asks you to pay as you go, in four estimated installments across the year. If you expect to owe $1,000 or more after withholding, you're generally on the hook for these payments.</p>
+    <p>For self-employment income, each payment has to cover two taxes: <strong>self-employment tax</strong> (about 15.3% for Social Security and Medicare, on 92.35% of your net profit) and <strong>federal income tax</strong> on what's left after the deductions you're entitled to. This calculator estimates both, applies a simplified qualified business income (QBI) deduction and the standard deduction for your filing status, and divides the total into four to show a per-quarter number.</p>
+    <p>Federal estimated payments are due roughly <strong>April 15, June 15, September 15, and January 15</strong> of the next year (dates shift for weekends and holidays &mdash; always confirm the current year's deadlines).</p>
+
+    <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-top:2rem;margin-bottom:.75rem;">The safe-harbor shortcut</h2>
+    <p>If projecting your income feels like guesswork, there's a simpler way to stay penalty-free: the <strong>safe-harbor rule</strong>. Pay at least <strong>100% of last year's total tax</strong> across your four payments &mdash; or <strong>110%</strong> if your prior-year adjusted gross income was over $150,000 &mdash; and the IRS won't charge an underpayment penalty, even if you end up owing more at filing. Many owners use safe harbor for predictability and simply true up the balance when they file. This calculator uses the projected-income method instead, which is more precise when your income is steady; check both and pay the one that fits your situation.</p>
+
+    <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-top:2rem;margin-bottom:.75rem;">What this calculator doesn't include</h2>
+    <p>To keep it simple, this is a <strong>federal-only</strong> estimate. It does not include your state or local estimated taxes (many states require their own), tax credits (child tax credit, education credits, and others), retirement or health-insurance deductions, the 0.9% additional Medicare tax, or the income limits and phase-outs on the QBI deduction. Any of those can move your real payment up or down. Treat the number as a starting point, and confirm your actual quarterly amount with a qualified CPA or tax pro &mdash; something that's far easier when your <a href="service-monthly-bookkeeping.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">books are current every month</a>.</p>
+    <p>Related reading: <a href="blog-tax-season-prep-checklist.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">tax season prep checklist</a>, <a href="blog-s-corp-vs-llc.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">S-Corp vs LLC</a>, and our <a href="s-corp-savings-calculator.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">S-Corp savings calculator</a>, or the whole system in our <a href="small-business-bookkeeping-guide.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">complete guide to small business bookkeeping</a>.</p>
+    <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-top:2rem;margin-bottom:1rem;">Estimated tax FAQ</h2>
+    <div class="faq-list">
+  <details class="faq-item"><summary>Who has to pay quarterly estimated taxes?</summary><div class="faq-answer">Generally, if you expect to owe at least $1,000 in federal tax for the year after withholding and credits, and you don't have enough tax withheld from a paycheck to cover it, you're expected to make quarterly estimated payments. That covers most self-employed people, freelancers, single-member LLC owners, S-Corp shareholders taking distributions, landlords, and anyone with significant income that isn't subject to withholding.</div></details>
+  <details class="faq-item"><summary>When are quarterly estimated taxes due?</summary><div class="faq-answer">Federal estimated taxes are due four times a year &mdash; roughly April 15, June 15, September 15, and January 15 of the following year. The periods aren't even calendar quarters, and dates shift when they fall on a weekend or holiday, so confirm the exact deadlines each year. Missing a payment can trigger an underpayment penalty even if you pay in full by the annual filing deadline.</div></details>
+  <details class="faq-item"><summary>How much should I pay in estimated taxes?</summary><div class="faq-answer">You generally want each payment to cover roughly a quarter of your expected total tax for the year &mdash; which for self-employment income means both self-employment (FICA) tax and income tax. A common shortcut is the safe-harbor rule: pay at least 100% of last year's total tax (110% if your prior-year adjusted gross income was over $150,000), split into four payments, and you'll avoid the underpayment penalty even if you end up owing more. This calculator estimates from your projected profit; the safe-harbor amount is an alternative worth checking.</div></details>
+  <details class="faq-item"><summary>What happens if I underpay my estimated taxes?</summary><div class="faq-answer">The IRS charges an underpayment penalty, which works like interest on the amount you should have paid each quarter but didn't. It's usually not huge, but it's avoidable &mdash; and it compounds if you skip multiple quarters. The simplest protection is meeting the safe-harbor threshold (100% or 110% of last year's tax). Setting aside a fixed percentage of each deposit as it comes in, and reconciling your books monthly, keeps you from being surprised at deadline time.</div></details>
+  <details class="faq-item"><summary>Is this estimated tax calculator tax advice?</summary><div class="faq-answer">No. It's a simplified educational estimate of your federal payment only, not tax, legal, or financial advice. It uses standard federal self-employment and income-tax figures and a simplified QBI deduction; it does not include state or local estimated taxes, tax credits, other deductions, additional Medicare tax, or the specifics of your return. Use it as a directional guide, then confirm your actual payments with a qualified CPA or tax professional. Clean, current books make that calculation far more accurate.</div></details>
+</div>
+  </div>
+</article>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><a href="index.html"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+        <p>Remote bookkeeping and financial services for small businesses nationwide. Clean books. Clear numbers. Confident decisions.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/tides-bookkeeping" target="_blank" rel="noopener" class="social-btn">in</a>
+          <a href="https://www.facebook.com/thetidesbookkeeping" target="_blank" rel="noopener" class="social-btn">f</a>
+          <a href="https://www.instagram.com/tidesbookkeeping/" target="_blank" rel="noopener" class="social-btn">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="service-monthly-bookkeeping.html">Monthly Bookkeeping</a></li>
+          <li><a href="service-catchup-bookkeeping.html">Catch-Up Bookkeeping</a></li>
+          <li><a href="service-payroll.html">Payroll Support</a></li>
+          <li><a href="service-financial-reporting.html">Financial Reporting</a></li>
+          <li><a href="service-bank-reconciliation.html">Bank Reconciliation</a></li>
+          <li><a href="services.html">View All Services →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Who We Serve</h4>
+        <ul class="footer-links">
+          <li><a href="industry-real-estate.html">Real Estate</a></li>
+          <li><a href="industry-contractors-trades.html">Contractors &amp; Trades</a></li>
+          <li><a href="industry-restaurants-bars.html">Restaurants &amp; Bars</a></li>
+          <li><a href="industry-healthcare.html">Healthcare Practices</a></li>
+          <li><a href="industry-professional-services.html">Professional Services</a></li>
+          <li><a href="industry-ecommerce-retail.html">E-Commerce &amp; Retail</a></li>
+          <li><a href="who-we-serve.html">All Industries →</a></li>
+          <li><a href="areas-we-serve.html">Areas We Serve</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact footer-col">
+        <h4>Contact</h4>
+        <p>📧 support@tidesbookkeeping.com</p>
+        <p>📞 (864) 559-2686</p>
+        <p>📍 Greenville, South Carolina</p>
+        <div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:.6rem;">
+          <a href="contact.html" class="btn btn-outline-white" style="font-size:.82rem;padding:.65rem 1.4rem;justify-content:center;">Contact Us →</a>
+          <a href="schedule.html" class="btn btn-teal" style="font-size:.82rem;padding:.65rem 1.4rem;">Book a Free Call</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tides Bookkeeping LLC. All rights reserved.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="sitemap.xml">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    const btn=document.getElementById('hamburger');
+    const links=document.querySelector('.nav-links');
+    if(!btn||!links)return;
+    const newBtn=btn.cloneNode(true);
+    btn.parentNode.replaceChild(newBtn,btn);
+    const close=()=>{links.classList.remove('open');newBtn.classList.remove('open');document.body.classList.remove('menu-open');document.body.style.overflow='';};
+    newBtn.addEventListener('click',()=>{const open=links.classList.toggle('open');newBtn.classList.toggle('open',open);document.body.classList.toggle('menu-open',open);document.body.style.overflow=open?'hidden':'';});
+    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+  })();
+</script>
+
+<!--Start of Crisp Chatbox-->
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="63ba78f5-feea-49e7-9a4f-df3435912271";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+<!--End of Crisp Chatbox-->
+
+<script>
+(function(){
+  // Simplified 2025 federal figures — update annually.
+  var SSB=176100, SS=0.124, MED=0.029, SEF=0.9235;
+  var STD={single:15000, mfj:30000, hoh:22500};
+  var BR={
+    single:[[0,.10],[11925,.12],[48475,.22],[103350,.24],[197300,.32],[250525,.35],[626350,.37]],
+    mfj:[[0,.10],[23850,.12],[96950,.22],[206700,.24],[394600,.32],[501050,.35],[751600,.37]],
+    hoh:[[0,.10],[17000,.12],[64850,.22],[103350,.24],[197300,.32],[250500,.35],[626350,.37]]
+  };
+  function n(id){var el=document.getElementById(id);var v=parseFloat((el.value||'').toString().replace(/[^0-9.]/g,''));return isNaN(v)?0:v;}
+  function money(x){return '$'+Math.round(x).toLocaleString('en-US');}
+  function tax(ti,br){var t=0;for(var i=br.length-1;i>=0;i--){if(ti>br[i][0]){t+=(ti-br[i][0])*br[i][1];ti=br[i][0];}}return t;}
+  function render(){
+    var profit=n('etProfit'), other=n('etOther'), status=document.getElementById('etStatus').value;
+    var br=BR[status], std=STD[status];
+    var fig=document.getElementById('etFig'), note=document.getElementById('etNote');
+    if(profit<=0){ fig.innerHTML='$0<span style="font-size:1.4rem;color:var(--muted);">/qtr</span>'; note.innerHTML='Enter your expected annual net profit to see an estimate.'; return; }
+    var seInc=profit*SEF;
+    var seTax=SS*Math.min(seInc,SSB)+MED*seInc;
+    var halfSE=seTax/2;
+    var qbi=0.20*Math.max(0,profit-halfSE);
+    var taxableTotal=Math.max(0,(profit+other)-halfSE-qbi-std);
+    var taxableOther=Math.max(0,other-std);
+    var incTax=Math.max(0, tax(taxableTotal,br)-tax(taxableOther,br));
+    var totalSE=seTax+incTax;
+    var qtr=totalSE/4;
+    fig.innerHTML=money(qtr)+'<span style="font-size:1.4rem;color:var(--muted);">/qtr</span>';
+    note.innerHTML='On '+money(profit)+' of profit: self-employment tax about <strong>'+money(seTax)+'</strong> + federal income tax about <strong>'+money(incTax)+'</strong> = roughly <strong>'+money(totalSE)+'</strong> for the year, or <strong>'+money(qtr)+'</strong> each quarter (due ~Apr 15, Jun 15, Sep 15, Jan 15). A safe-harbor amount &mdash; 100%&ndash;110% of last year\'s tax &divide; 4 &mdash; is worth checking too.';
+  }
+  ['etProfit','etOther'].forEach(function(id){document.getElementById(id).addEventListener('input',render);});
+  document.getElementById('etStatus').addEventListener('change',render);
+  render();
+})();
+</script>
+<script>
+function submitLead(e){
+  e.preventDefault();
+  var f=e.target, btn=document.getElementById('leadBtn'), msg=document.getElementById('leadMsg');
+  if(f.website_hp.value){return false;}
+  var est=document.getElementById('etFig').textContent.trim()+' — '+document.getElementById('etSub').textContent.trim();
+  btn.disabled=true; var lbl=btn.textContent; btn.textContent='Sending…'; msg.textContent='';
+  fetch('https://wdvolamasztetwpitbwg.supabase.co/functions/v1/capture-lead',{
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({business:'tides', source:'estimated-tax-calculator', tags:'calculator-lead',
+      email:f.email.value, website_hp:f.website_hp.value,
+      message:'Used the quarterly estimated tax calculator — estimate: '+est})
+  }).then(function(r){return r.json();}).then(function(j){
+    if(j&&j.ok){ f.reset(); msg.style.color='#0a7d33'; msg.textContent="Done — check your inbox. We'll follow up."; }
+    else { throw new Error(j&&j.error||'err'); }
+  }).catch(function(){ msg.style.color='#b3261e'; msg.innerHTML='Something went wrong — email <a href="mailto:hello@tidesbookkeeping.com" style="color:var(--navy);font-weight:600;">hello@tidesbookkeeping.com</a>.'; })
+  .then(function(){ btn.disabled=false; btn.textContent=lbl; });
+  return false;
+}
+</script>
+</body>
+</html>

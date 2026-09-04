@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How Much Does an S-Corp Save You in Taxes? (2026) | Tides Blog</title>
+  <meta name="description" content="How much can an S-Corp actually save you? A plain-English breakdown of the self-employment tax math, a worked example, the break-even income, and the costs to subtract." />
+  <link rel="canonical" href="https://www.tidesbookkeeping.com/blog-how-much-does-an-s-corp-save" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2026-09-04" />
+  <meta property="article:author" content="Tides Bookkeeping" />
+  <meta property="og:title" content="How Much Does an S-Corp Save You in Taxes? (2026)" />
+  <meta property="og:description" content="A plain-English breakdown of S-Corp tax savings — the self-employment tax math, a worked example, the break-even income, and the costs." />
+  <meta property="og:url" content="https://www.tidesbookkeeping.com/blog-how-much-does-an-s-corp-save" />
+  <meta property="og:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta property="og:site_name" content="Tides Bookkeeping" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How Much Does an S-Corp Save You in Taxes? (2026)" />
+  <meta name="twitter:description" content="The self-employment tax math behind S-Corp savings, with a worked example and the break-even income." />
+  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal:#41cfd0; --teal-lt:#e6f9f9; --blue:#66c1ee; --blue-lt:#e8f4fd;
+      --navy:#215197; --navy-dk:#163872; --ink:#0f1c2e; --body:#4a5568;
+      --muted:#94a3b8; --border:#e2eaf3; --bg:#ffffff; --bg-alt:#f7fbff;
+      --shadow:0 1px 3px rgba(15,28,46,.06),0 4px 16px rgba(15,28,46,.08);
+      --shadow-lg:0 8px 40px rgba(15,28,46,.12); --r:16px; --r-sm:10px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden;}
+    img{max-width:100%;display:block;}
+    a{text-decoration:none;color:inherit;}
+    .display{font-family:'Bebas Neue',sans-serif;letter-spacing:.02em;line-height:.95;}
+    h2.display{font-size:clamp(2.4rem,5vw,4rem);}
+    h3{font-size:1.1rem;font-weight:700;color:var(--ink);}
+    p{color:var(--body);}
+    .eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:var(--teal-lt);border:1px solid rgba(65,207,208,.25);padding:5px 12px;border-radius:50px;margin-bottom:1.25rem;}
+    .container{max-width:1180px;margin:0 auto;padding:0 2rem;}
+    .section{padding:96px 0;}
+    .section-alt{background:var(--bg-alt);}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.75rem;border-radius:50px;font-weight:600;font-size:.9rem;cursor:pointer;transition:all .2s ease;border:2px solid transparent;}
+    .btn-primary{background:var(--navy);color:#fff;}
+    .btn-primary:hover{background:var(--navy-dk);transform:translateY(-2px);box-shadow:0 8px 24px rgba(33,81,151,.3);}
+    .btn-teal{background:var(--teal);color:var(--ink);font-weight:700;}
+    .btn-teal:hover{background:#38bfc0;transform:translateY(-2px);box-shadow:0 8px 24px rgba(65,207,208,.4);}
+    .btn-outline{border-color:var(--border);color:var(--ink);background:#fff;}
+    .btn-outline:hover{border-color:var(--navy);color:var(--navy);}
+    .btn-outline-white{border-color:rgba(255,255,255,.35);color:#fff;}
+    .btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+    .nav-wrap{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;max-width:1180px;margin:0 auto;}
+    .nav-logo img{height:44px;}
+    .nav-links{display:flex;align-items:center;gap:2rem;list-style:none;}
+    .nav-links a{font-size:.87rem;font-weight:500;color:var(--body);transition:color .2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--navy);}
+    .nav-links a.active{font-weight:700;}
+    .nav-cta{display:flex;align-items:center;gap:.75rem;}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+    .hamburger span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:all .25s;}
+    .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+    .breadcrumb{background:var(--bg-alt);border-bottom:1px solid var(--border);padding:.75rem 0;}
+    .breadcrumb-inner{display:flex;align-items:center;gap:.5rem;max-width:1180px;margin:0 auto;padding:0 2rem;font-size:.78rem;color:var(--muted);}
+    .breadcrumb-inner a{color:var(--muted);transition:color .2s;}
+    .breadcrumb-inner a:hover{color:var(--navy);}
+    .breadcrumb-sep{color:var(--border);}
+    .breadcrumb-current{color:var(--navy);font-weight:600;}
+    .page-hero{padding:88px 0 72px;background:#fff;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 85% 20%,rgba(65,207,208,.1) 0%,transparent 60%),radial-gradient(ellipse 50% 50% at 15% 80%,rgba(102,193,238,.08) 0%,transparent 60%);pointer-events:none;}
+    .footer{background:var(--ink);color:#fff;padding:64px 0 32px;}
+    .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:3rem;margin-bottom:3rem;}
+    .footer-logo img{height:40px;margin-bottom:1.25rem;filter:brightness(0) invert(1);}
+    .footer-brand p{font-size:.84rem;color:rgba(255,255,255,.45);line-height:1.7;max-width:280px;margin-bottom:1.5rem;}
+    .footer-social{display:flex;gap:.6rem;}
+    .social-btn{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:.8rem;color:rgba(255,255,255,.5);transition:all .2s;}
+    .social-btn:hover{background:rgba(65,207,208,.15);border-color:var(--teal);color:var(--teal);}
+    .footer-col h4{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.35);margin-bottom:1.25rem;}
+    .footer-links{list-style:none;}
+    .footer-links li{margin-bottom:.55rem;}
+    .footer-links a{font-size:.84rem;color:rgba(255,255,255,.5);transition:color .2s;}
+    .footer-links a:hover{color:var(--teal);}
+    .footer-contact p{font-size:.84rem;color:rgba(255,255,255,.5);margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem;}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-bottom p{font-size:.78rem;color:rgba(255,255,255,.25);margin:0;}
+    .footer-bottom-links{display:flex;gap:2rem;list-style:none;}
+    .footer-bottom-links a{font-size:.78rem;color:rgba(255,255,255,.25);transition:color .2s;}
+    .footer-bottom-links a:hover{color:var(--teal);}
+    @media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
+    @media (max-width:768px){
+      .nav-links,.nav-cta{display:none;}
+      .hamburger{display:flex;}
+      .nav-links.open{display:flex;flex-direction:column;position:fixed;inset:0;background:#fff;z-index:199;list-style:none;justify-content:center;align-items:center;gap:2.25rem;}
+      .nav-links.open a{font-size:1.15rem;font-weight:600;color:var(--ink);}
+    }
+    @media (max-width:640px){
+      .container{padding:0 1.25rem;}
+      .section{padding:56px 0;}
+      .nav-inner{padding:.875rem 1.25rem;}
+      h2.display{font-size:clamp(2rem,9vw,3rem);}
+      .footer-grid{grid-template-columns:1fr;gap:2rem;}
+      .footer-bottom{flex-direction:column;text-align:center;gap:.75rem;}
+      .footer-bottom-links{justify-content:center;flex-wrap:wrap;gap:1rem;}
+    }
+/* mobile-menu-fix-start */
+@media (max-width:768px){
+  body.menu-open .nav-wrap{backdrop-filter:none !important;-webkit-backdrop-filter:none !important;}
+  .nav-links.open{display:flex !important;flex-direction:column !important;position:fixed !important;top:0 !important;left:0 !important;right:0 !important;bottom:0 !important;width:100vw !important;height:100vh !important;max-width:100vw !important;background:#ffffff !important;z-index:9999 !important;list-style:none !important;justify-content:center !important;align-items:center !important;gap:1.5rem !important;margin:0 !important;padding:2rem !important;overflow-y:auto !important;}
+  .nav-links.open a{font-size:1.25rem !important;font-weight:600 !important;color:var(--ink) !important;padding:.75rem 1.5rem !important;display:block !important;}
+  .nav-links.open li{list-style:none !important;}
+  .hamburger{z-index:10000 !important;position:relative;}
+  html,body{overflow-x:hidden !important;max-width:100vw !important;}
+}
+/* mobile-menu-fix-end */
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXQS7FCLF2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KXQS7FCLF2');
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AccountingService",
+      "name": "Tides Bookkeeping LLC",
+      "description": "Remote bookkeeping and financial services for small businesses nationwide. Clean books, clear numbers, confident decisions.",
+      "url": "https://www.tidesbookkeeping.com",
+      "telephone": "+1-864-559-2686",
+      "email": "support@tidesbookkeeping.com",
+      "image": "https://www.tidesbookkeeping.com/logo.png",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Greenville",
+        "addressRegion": "SC",
+        "addressCountry": "US"
+      },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "sameAs": [
+        "https://www.linkedin.com/company/tides-bookkeeping",
+        "https://www.facebook.com/thetidesbookkeeping",
+        "https://www.instagram.com/tidesbookkeeping/"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.tidesbookkeeping.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.tidesbookkeeping.com/blog" },
+        { "@type": "ListItem", "position": 3, "name": "How Much Does an S-Corp Save You in Taxes?" }
+      ]
+    }
+  ]
+}
+</script>
+<!-- auto-schema-start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How Much Does an S-Corp Save You in Taxes? (2026)",
+  "description": "A plain-English breakdown of S-Corp tax savings — the self-employment tax math, a worked example, the break-even income, and the costs to subtract.",
+  "url": "https://www.tidesbookkeeping.com/blog-how-much-does-an-s-corp-save",
+  "mainEntityOfPage": "https://www.tidesbookkeeping.com/blog-how-much-does-an-s-corp-save",
+  "image": "https://www.tidesbookkeeping.com/logo.png",
+  "author": { "@type": "Organization", "name": "Tides Bookkeeping", "url": "https://www.tidesbookkeeping.com" },
+  "publisher": { "@type": "Organization", "name": "Tides Bookkeeping", "logo": { "@type": "ImageObject", "url": "https://www.tidesbookkeeping.com/logo.png" } },
+  "datePublished": "2026-09-04",
+  "dateModified": "2026-09-04"
+}
+</script>
+<!-- auto-schema-end -->
+<style>
+.nav-dd{position:relative;}
+.nav-dd-menu{display:none;position:absolute;top:100%;left:0;margin:0;padding:.4rem;list-style:none;background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 10px 30px rgba(15,28,46,.12);min-width:180px;z-index:250;}
+.nav-dd:hover>.nav-dd-menu,.nav-dd:focus-within>.nav-dd-menu{display:block;}
+.nav-dd-menu li{margin:0;}
+.nav-dd-menu a{display:block;padding:.5rem .75rem;border-radius:6px;white-space:nowrap;}
+.nav-dd-menu a:hover{background:var(--teal-lt);color:var(--navy);}
+.nav-dd-caret{font-size:.7em;opacity:.65;}
+.nav-links.open .nav-dd-menu{display:block;position:static;box-shadow:none;border:none;background:transparent;padding:.15rem 0 .15rem 1rem;min-width:0;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav-wrap">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="who-we-serve.html">Who We Serve</a></li>
+      <li class="nav-dd"><a href="about.html">About<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li></ul></li>
+      <li><a href="/pricing">Pricing</a></li><li class="nav-dd"><a href="/tools">Resources<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/tools">Free Tools</a></li><li><a href="/glossary">Glossary</a></li><li><a href="/small-business-bookkeeping-guide">Bookkeeping Guide</a></li></ul></li>
+      <li><a href="/blog" class="active">Blog</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://portal.tidesbookkeeping.com" class="btn btn-outline">Sign In</a>
+      <a href="schedule.html" class="btn btn-primary">Book Appointment</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="index.html">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="blog.html">Blog</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">How Much Does an S-Corp Save You in Taxes?</span>
+  </div>
+</div>
+
+<!-- ARTICLE HERO -->
+<section class="page-hero" style="padding:48px 0 16px;">
+  <div class="container" style="max-width:760px;">
+    <div class="eyebrow"><span style="width:6px;height:6px;border-radius:50%;background:var(--teal);"></span> Blog</div>
+    <h1 class="display" style="font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.05;margin-bottom:1rem;">How Much Does an S-Corp Save You in Taxes?</h1>
+    <div style="display:flex;gap:1.25rem;align-items:center;color:var(--muted);font-size:.86rem;margin-top:1.25rem;flex-wrap:wrap;">
+      <span style="display:flex;align-items:center;gap:.4rem;"><span style="width:28px;height:28px;border-radius:50%;background:var(--teal-lt);display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;">T</span> Tides Bookkeeping</span>
+      <span>·</span>
+      <time datetime="2026-09-04">September 4, 2026</time>
+      <span>·</span>
+      <span>9 min read</span>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLE BODY -->
+<article class="section" style="padding:24px 0 64px;">
+  <div class="container" style="max-width:740px;">
+
+    <p style="font-size:1.15rem;line-height:1.7;color:var(--body);margin-bottom:1.75rem;">
+      The short version: an S-Corp can save a profitable self-employed business owner anywhere from a few thousand to well over ten thousand dollars a year &mdash; but only in <strong>self-employment tax</strong>, only above a certain income, and only after you subtract the cost of actually running one. This is the plain-English breakdown of where the savings come from, a worked example you can follow, and how to know whether the numbers work for you. Want to skip to your own figure? Try our free <a href="s-corp-savings-calculator.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">S-Corp savings calculator</a>. <em>(This is general education, not tax advice &mdash; confirm your specifics with a CPA.)</em>
+    </p>
+
+    <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-top:2.5rem;margin-bottom:.75rem;">Where the savings actually come from</h2>
+    <p>Here's the single most important thing to understand: <strong>an S-Corp doesn't save you income tax. It saves you self-employment tax.</strong></p>
+    <p>As a sole proprietor or a single-member LLC taxed the default way, every dollar of your net profit is subject to roughly <strong>15.3% self-employment tax</strong> &mdash; 12.4% for Social Security (up to an annual wage base) and 2.9% for Medicare (no cap) &mdash; on top of your regular income tax. That self-employment tax is the price of not having an employer splitting the payroll-tax bill with you.</p>
+    <p>When you elect S-Corp status, you become an employee of your own company. You pay yourself a <strong>reasonable salary</strong>, which is subject to that same ~15.3% in payroll tax. But the profit left over after your salary is taken as a <strong>distribution</strong> &mdash; and distributions are not subject to self-employment or payroll tax. Your income tax comes out about the same either way, so the entire advantage is the payroll tax you avoid on the distribution portion.</p>
+
+    <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-top:2.5rem;margin-bottom:.75rem;">The math, with a worked example</h2>
+    <p>Let's run real numbers. Say your business nets <strong>$120,000</strong> in profit, and a reasonable salary for your role is <strong>$60,000</strong>.</p>
+    <p style="background:var(--bg-alt);border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.35rem;color:var(--ink);line-height:1.8;">
+      <strong>As a sole proprietor:</strong> ~15.3% self-employment tax on 92.35% of $120,000 &asymp; <strong>$16,955</strong>.<br>
+      <strong>As an S-Corp:</strong> ~15.3% payroll tax on the $60,000 salary = <strong>$9,180</strong>. The other $60,000 comes out as a distribution with <strong>no</strong> SE/payroll tax.<br>
+      <strong>FICA tax avoided:</strong> $16,955 &minus; $9,180 = <strong>$7,775</strong>.<br>
+      <strong>Minus ~$2,000</strong> to run the S-Corp (payroll + a separate return) = <strong>&asymp; $5,775 net savings</strong> for the year.
+    </p>
+    <p>Notice two things. First, the savings scale with the size of the <em>distribution</em> &mdash; the gap between your profit and your salary. Second, income tax never entered the calculation, because it's roughly the same whether that $60,000 is called salary or distribution. Plug your own profit and salary into the <a href="s-corp-savings-calculator.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">S-Corp savings calculator</a> to see your number.</p>
+
+    <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-top:2.5rem;margin-bottom:.75rem;">When an S-Corp is worth it (the break-even)</h2>
+    <p>There's no hard cutoff, but the election generally starts to pay off once your profit is <strong>comfortably higher than a reasonable salary</strong> for your work &mdash; often somewhere north of <strong>$40,000&ndash;$80,000</strong> in profit and up. The logic is simple: the savings come from the distribution, so if your reasonable salary eats up most of your profit, there's not much distribution left to save on.</p>
+    <p>Below that range, the FICA savings on a small distribution frequently get swallowed by the costs of running an S-Corp. Above it, the savings widen the more your profit exceeds your salary. If you're deciding between structures in the first place, our <a href="blog-s-corp-vs-llc.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">S-Corp vs LLC</a> breakdown covers the full comparison.</p>
+
+    <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-top:2.5rem;margin-bottom:.75rem;">The costs you have to subtract</h2>
+    <p>An S-Corp isn't free. It adds real, ongoing costs that a sole proprietorship or default LLC doesn't have:</p>
+    <ul style="padding-left:1.5rem;margin-bottom:1.25rem;">
+      <li style="margin-bottom:.5rem;"><strong>Payroll.</strong> You have to run formal payroll for yourself, with a payroll service handling paychecks and payroll-tax filings.</li>
+      <li style="margin-bottom:.5rem;"><strong>A separate tax return.</strong> An S-Corp files its own return (Form 1120-S), which usually means a higher tax-prep bill than a Schedule C.</li>
+      <li style="margin-bottom:.5rem;"><strong>State fees.</strong> Some states charge franchise taxes or annual fees on S-Corps.</li>
+      <li style="margin-bottom:.5rem;"><strong>Bookkeeping discipline.</strong> The election only works if the books are clean, payroll ties out, and the return is filed on time &mdash; sloppy records are where would-be savings quietly leak away.</li>
+    </ul>
+    <p>Those costs commonly run a couple thousand dollars a year, which is exactly why the election only makes sense once the FICA savings clearly exceed them.</p>
+
+    <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-top:2.5rem;margin-bottom:.75rem;">The reasonable-salary catch</h2>
+    <p>The biggest lever in the whole calculation is your salary &mdash; and it's also where the IRS pays attention. S-Corp owner-employees are required to pay themselves a <strong>reasonable salary</strong>, roughly what you'd pay someone else to do your job, before taking distributions. Setting it artificially low to shrink the payroll-taxed portion is one of the most common S-Corp audit triggers.</p>
+    <p>So the goal isn't the lowest possible salary &mdash; it's a <em>defensible</em> one that reflects your role, hours, experience, and industry pay. Our guide to <a href="blog-reasonable-compensation-s-corp.html" style="color:var(--navy);font-weight:600;text-decoration:underline;">setting a reasonable S-Corp salary</a> walks through how to land on a number you can support, and the calculator lets you test different salary levels to see the effect on your savings.</p>
+
+    <!-- Inline CTA card -->
+    <div style="background:linear-gradient(135deg,var(--navy) 0%,#1d3d7e 100%);border-radius:20px;padding:2rem;margin:3rem 0 1.5rem;color:#fff;text-align:center;">
+      <h3 style="color:#fff;font-size:1.4rem;margin-bottom:.5rem;">See your own S-Corp savings in 30 seconds</h3>
+      <p style="color:rgba(255,255,255,.75);font-size:.95rem;margin-bottom:1.25rem;">Enter your profit and a reasonable salary — our free calculator shows your estimated savings, with the math laid out.</p>
+      <a href="s-corp-savings-calculator.html" class="btn btn-teal">Open the S-Corp Savings Calculator →</a>
+    </div>
+
+    <!-- RELATED POSTS — auto-injected by _internal/related-links.py -->
+    <!-- related-start -->
+    <div style="margin-top:4rem;padding-top:3rem;border-top:1px solid var(--border);">
+      <div class="eyebrow">Keep Reading</div>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--navy);margin-bottom:1.5rem;letter-spacing:.02em;">Keep Reading</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
+      <a href="blog-s-corp-vs-llc.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;">
+        <div style="font-weight:700;color:var(--ink);font-size:.95rem;margin-bottom:.2rem;">S-Corp vs LLC: Which Is Right for You?</div>
+        <div style="font-size:.78rem;color:var(--muted);">The full comparison of the two structures.</div>
+      </a>
+      <a href="blog-reasonable-compensation-s-corp.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;">
+        <div style="font-weight:700;color:var(--ink);font-size:.95rem;margin-bottom:.2rem;">Setting a Reasonable S-Corp Salary</div>
+        <div style="font-size:.78rem;color:var(--muted);">How to land on a defensible number.</div>
+      </a>
+      <a href="s-corp-savings-calculator.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;">
+        <div style="font-weight:700;color:var(--ink);font-size:.95rem;margin-bottom:.2rem;">S-Corp Savings Calculator</div>
+        <div style="font-size:.78rem;color:var(--muted);">Estimate your own savings, free.</div>
+      </a>
+      <a href="small-business-bookkeeping-guide.html" style="display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.4rem;transition:all .2s;text-decoration:none;color:inherit;">
+        <div style="font-weight:700;color:var(--ink);font-size:.95rem;margin-bottom:.2rem;">The Complete Bookkeeping Guide</div>
+        <div style="font-size:.78rem;color:var(--muted);">Everything, start to finish.</div>
+      </a>
+      </div>
+    </div>
+      <!-- related-end -->
+
+  </div>
+</article>
+
+<section style="max-width:760px;margin:0 auto;padding:24px 20px;"><h2 style="font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.5px;">S-Corp savings FAQ</h2>
+<details style="border:1px solid #e2eaf3;border-radius:10px;padding:14px 18px;margin:12px 0;"><summary style="font-weight:700;color:#0f1c2e;cursor:pointer;">How much does an S-Corp save on taxes?</summary><p style="color:#5b6b82;margin:10px 0 0;">The savings come from self-employment (FICA) tax, not income tax. Because only your reasonable salary is subject to the ~15.3% payroll tax and the remaining profit is a distribution that isn't, many owners with $80,000 to $200,000 in profit save a few thousand to over ten thousand dollars a year, after the cost of running payroll and a separate return. The exact figure depends on your profit, your salary, and your added costs.</p></details>
+<details style="border:1px solid #e2eaf3;border-radius:10px;padding:14px 18px;margin:12px 0;"><summary style="font-weight:700;color:#0f1c2e;cursor:pointer;">At what income is an S-Corp worth it?</summary><p style="color:#5b6b82;margin:10px 0 0;">There's no hard cutoff, but it usually starts to pay off once profit is comfortably above a reasonable salary for your work &mdash; often somewhere in the $40,000 to $80,000 profit range and up. Below that, the FICA savings on a small distribution are frequently eaten up by the costs of payroll and a separate 1120-S return.</p></details>
+<details style="border:1px solid #e2eaf3;border-radius:10px;padding:14px 18px;margin:12px 0;"><summary style="font-weight:700;color:#0f1c2e;cursor:pointer;">Does an S-Corp save on income tax too?</summary><p style="color:#5b6b82;margin:10px 0 0;">Generally no. Your federal income tax is about the same whether profit is paid as salary or distribution, so an S-Corp's advantage is specifically the self-employment/payroll tax avoided on the distribution portion. Some owners see a small indirect effect through the QBI deduction, but the core savings are FICA, not income tax.</p></details>
+<details style="border:1px solid #e2eaf3;border-radius:10px;padding:14px 18px;margin:12px 0;"><summary style="font-weight:700;color:#0f1c2e;cursor:pointer;">What is a reasonable salary for an S-Corp owner?</summary><p style="color:#5b6b82;margin:10px 0 0;">Roughly what you'd pay someone else to do your job &mdash; reflecting your role, experience, hours, and industry pay, and supportable if questioned. Setting it artificially low to dodge payroll tax is a common audit trigger, so the aim is a defensible number, not the lowest possible one.</p></details>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><a href="index.html"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+        <p>Remote bookkeeping and financial services for small businesses nationwide. Clean books. Clear numbers. Confident decisions.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/tides-bookkeeping" target="_blank" rel="noopener" class="social-btn">in</a>
+          <a href="https://www.facebook.com/thetidesbookkeeping" target="_blank" rel="noopener" class="social-btn">f</a>
+          <a href="https://www.instagram.com/tidesbookkeeping/" target="_blank" rel="noopener" class="social-btn">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="service-monthly-bookkeeping.html">Monthly Bookkeeping</a></li>
+          <li><a href="service-catchup-bookkeeping.html">Catch-Up Bookkeeping</a></li>
+          <li><a href="service-payroll.html">Payroll Support</a></li>
+          <li><a href="service-financial-reporting.html">Financial Reporting</a></li>
+          <li><a href="service-bank-reconciliation.html">Bank Reconciliation</a></li>
+          <li><a href="services.html">View All Services →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Who We Serve</h4>
+        <ul class="footer-links">
+          <li><a href="industry-real-estate.html">Real Estate</a></li>
+          <li><a href="industry-contractors-trades.html">Contractors &amp; Trades</a></li>
+          <li><a href="industry-restaurants-bars.html">Restaurants &amp; Bars</a></li>
+          <li><a href="industry-healthcare.html">Healthcare Practices</a></li>
+          <li><a href="industry-professional-services.html">Professional Services</a></li>
+          <li><a href="industry-ecommerce-retail.html">E-Commerce &amp; Retail</a></li>
+          <li><a href="who-we-serve.html">All Industries →</a></li>
+          <li><a href="areas-we-serve.html">Areas We Serve</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact footer-col">
+        <h4>Contact</h4>
+        <p>📧 support@tidesbookkeeping.com</p>
+        <p>📞 (864) 559-2686</p>
+        <p>📍 Greenville, South Carolina</p>
+        <div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:.6rem;">
+          <a href="contact.html" class="btn btn-outline-white" style="font-size:.82rem;padding:.65rem 1.4rem;justify-content:center;">Contact Us →</a>
+          <a href="schedule.html" class="btn btn-teal" style="font-size:.82rem;padding:.65rem 1.4rem;">Book a Free Call</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tides Bookkeeping LLC. All rights reserved.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="sitemap.xml">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    const btn=document.getElementById('hamburger');
+    const links=document.querySelector('.nav-links');
+    if(!btn||!links)return;
+    const newBtn=btn.cloneNode(true);
+    btn.parentNode.replaceChild(newBtn,btn);
+    const close=()=>{links.classList.remove('open');newBtn.classList.remove('open');document.body.classList.remove('menu-open');document.body.style.overflow='';};
+    newBtn.addEventListener('click',()=>{const open=links.classList.toggle('open');newBtn.classList.toggle('open',open);document.body.classList.toggle('menu-open',open);document.body.style.overflow=open?'hidden':'';});
+    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+  })();
+</script>
+
+<!--Start of Crisp Chatbox-->
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="63ba78f5-feea-49e7-9a4f-df3435912271";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+<!--End of Crisp Chatbox-->
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does an S-Corp save on taxes?", "acceptedAnswer": {"@type": "Answer", "text": "The savings come from self-employment (FICA) tax, not income tax. Because only your reasonable salary is subject to the ~15.3% payroll tax and the remaining profit is a distribution that isn't, many owners with $80,000 to $200,000 in profit save a few thousand to over ten thousand dollars a year, after the cost of running payroll and a separate return. The exact figure depends on your profit, your salary, and your added costs."}}, {"@type": "Question", "name": "At what income is an S-Corp worth it?", "acceptedAnswer": {"@type": "Answer", "text": "There's no hard cutoff, but it usually starts to pay off once profit is comfortably above a reasonable salary for your work — often somewhere in the $40,000 to $80,000 profit range and up. Below that, the FICA savings on a small distribution are frequently eaten up by the costs of payroll and a separate 1120-S return."}}, {"@type": "Question", "name": "Does an S-Corp save on income tax too?", "acceptedAnswer": {"@type": "Answer", "text": "Generally no. Your federal income tax is about the same whether profit is paid as salary or distribution, so an S-Corp's advantage is specifically the self-employment/payroll tax avoided on the distribution portion. Some owners see a small indirect effect through the QBI deduction, but the core savings are FICA, not income tax."}}, {"@type": "Question", "name": "What is a reasonable salary for an S-Corp owner?", "acceptedAnswer": {"@type": "Answer", "text": "Roughly what you'd pay someone else to do your job — reflecting your role, experience, hours, and industry pay, and supportable if questioned. Setting it artificially low to dodge payroll tax is a common audit trigger, so the aim is a defensible number, not the lowest possible one."}}]}</script>
+</body>
+</html>

@@ -18,7 +18,7 @@
   :root {
     --ground: #eaf1ef; --surface: #ffffff; --ink: #14313b; --ink-soft: #3d545b;
     --muted: #6a7d80; --line: #d7e2df; --accent: #12766b; --accent-ink: #0c554d;
-    --accent-soft: #dcece7; --sand: #a9793e; --good: #12766b;
+    --accent-soft: #dcece7; --sand: #a9793e; --good: #12766b; --strike: #b3261e;
     --shadow: 0 1px 2px rgba(20,49,59,.05), 0 10px 30px rgba(20,49,59,.07);
     --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
     --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -28,20 +28,20 @@
     :root {
       --ground: #0c181d; --surface: #10232a; --ink: #eaf3f1; --ink-soft: #c4d3d2;
       --muted: #8ba0a1; --line: #21383f; --accent: #38b0a1; --accent-ink: #85d6ca;
-      --accent-soft: #142f2d; --sand: #cf9a5c; --good: #38b0a1;
+      --accent-soft: #142f2d; --sand: #cf9a5c; --good: #38b0a1; --strike: #ff6b64;
       --shadow: 0 1px 2px rgba(0,0,0,.35), 0 12px 34px rgba(0,0,0,.4);
     }
   }
   :root[data-theme="light"] {
     --ground: #eaf1ef; --surface: #ffffff; --ink: #14313b; --ink-soft: #3d545b;
     --muted: #6a7d80; --line: #d7e2df; --accent: #12766b; --accent-ink: #0c554d;
-    --accent-soft: #dcece7; --sand: #a9793e; --good: #12766b;
+    --accent-soft: #dcece7; --sand: #a9793e; --good: #12766b; --strike: #b3261e;
     --shadow: 0 1px 2px rgba(20,49,59,.05), 0 10px 30px rgba(20,49,59,.07);
   }
   :root[data-theme="dark"] {
     --ground: #0c181d; --surface: #10232a; --ink: #eaf3f1; --ink-soft: #c4d3d2;
     --muted: #8ba0a1; --line: #21383f; --accent: #38b0a1; --accent-ink: #85d6ca;
-    --accent-soft: #142f2d; --sand: #cf9a5c; --good: #38b0a1;
+    --accent-soft: #142f2d; --sand: #cf9a5c; --good: #38b0a1; --strike: #ff6b64;
     --shadow: 0 1px 2px rgba(0,0,0,.35), 0 12px 34px rgba(0,0,0,.4);
   }
   * { box-sizing: border-box; }
@@ -91,6 +91,8 @@
   .card .lab { font-family: var(--mono); font-size: 11px; letter-spacing: .13em; text-transform: uppercase;
     color: var(--muted); margin-bottom: 12px; }
   .card.feature .lab { color: var(--accent-ink); }
+  .amount .was { font-family: var(--sans); font-weight: 600; font-size: 19px; color: var(--strike);
+    text-decoration: line-through; text-decoration-thickness: 2px; margin-right: 9px; letter-spacing: 0; }
   .amount { font-family: var(--serif); font-weight: 700; color: var(--ink); font-size: clamp(34px, 6vw, 46px);
     line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
   .amount .per { font-family: var(--sans); font-size: 15px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
@@ -214,14 +216,14 @@
       <div class="card">
         <div class="lab">Cleanup &mdash; one-time</div>
         <div class="amount">$2,475</div>
-        <p class="note">April 1 &ndash; August 31, 2026 &mdash; five months rebuilt, reconciled and closed, with opening balances tied to the April purchase. Flat rate, quoted upfront, no hourly billing.</p>
+        <p class="note">April 1 &ndash; September 30, 2026 &mdash; rebuilt, reconciled and closed, with opening balances tied to the April purchase. Priced as five months; <strong>September is included at no charge</strong> while we get you current. Flat rate, no hourly billing.</p>
         <div class="split">Catch-up special &mdash; <b>50% off</b> the regular $4,950</div>
       </div>
       <div class="card feature">
         <div class="lab">Monthly service</div>
         <div class="amount">$895<span class="per">/month</span></div>
-        <p class="note">Scale tier &mdash; covers up to $125,000 a month in expenses and up to 12 bank and card accounts. Comfortably fits Avocados at current volume with room to grow.</p>
-        <div class="split">Begins <b>September 1, 2026</b></div>
+        <p class="note">Weekly bookkeeping and full reconciliation of the Peach State Bank account and both manager debit cards. Daily Toast sales entries. <strong>Weekly payroll and tip allocation for all eight employees.</strong> A <strong>monthly review meeting</strong> with your P&amp;L, balance sheet and cash flow. QuickBooks subscription included.</p>
+        <div class="split">Begins <b>October 1, 2026</b></div>
       </div>
     </div>
 
@@ -229,15 +231,15 @@
     <div class="prices">
       <div class="card">
         <div class="lab">Setup &mdash; one-time</div>
-        <div class="amount">$495</div>
-        <p class="note">New QuickBooks Online company file built from scratch: restaurant chart of accounts matched to Avocados, payroll configured, bank feed and Toast connected, owner contribution and opening balances set. Includes recording August 13&ndash;31.</p>
-        <div class="split">One-time build &mdash; <b>not</b> a recurring fee</div>
+        <div class="amount"><span class="was">$995</span>$495</div>
+        <p class="note">New QuickBooks Online company file built from scratch: restaurant chart of accounts matched to Avocados, payroll configured, bank feed and Toast connected, owner contribution and opening balances set. Includes recording August 13 through September 30.</p>
+        <div class="split"><b>Existing customer discount</b> &mdash; $500 off the standard build</div>
       </div>
       <div class="card feature">
         <div class="lab">Monthly service</div>
         <div class="amount">$299<span class="per">/month</span></div>
-        <p class="note">Starter tier &mdash; covers up to $25,000 a month in expenses and up to 2 bank and card accounts, which fits Mee Maw&rsquo;s today.</p>
-        <div class="split">Begins <b>September 1, 2026</b></div>
+        <p class="note">Weekly bookkeeping and full reconciliation of the Bank of America account and debit card. Daily Toast sales entries. <strong>Weekly payroll and tip allocation for all three employees.</strong> A <strong>monthly review meeting</strong> with your P&amp;L, balance sheet and cash flow. QuickBooks subscription included.</p>
+        <div class="split">Begins <b>October 1, 2026</b></div>
       </div>
     </div>
 
@@ -248,14 +250,14 @@
 
     <div class="sched">
       <div class="r hd"><span>Payment schedule</span><span>Amount</span></div>
-      <div class="r"><span>On signing &mdash; Avocados cleanup deposit (50%) plus Mee Maw&rsquo;s setup in full</span><b>$1,732.50</b></div>
-      <div class="r"><span>On completion of the Avocados cleanup &mdash; remaining 50%</span><b>$1,237.50</b></div>
-      <div class="r"><span>Monthly from September 2026 &mdash; both restaurants, month-to-month</span><b>$1,194.00</b></div>
+      <div class="r"><span>On signing &mdash; Avocados cleanup, April through September</span><b>$2,475.00</b></div>
+      <div class="r"><span>On signing &mdash; Mee Maw&rsquo;s QuickBooks build</span><b>$495.00</b></div>
+      <div class="r"><span>Monthly from October 1, 2026 &mdash; both restaurants, month-to-month</span><b>$1,194.00</b></div>
     </div>
 
-    <p class="billnote"><strong>No overlap, and no gap.</strong> The Avocados cleanup fee covers April 1 through August 31. Monthly service picks up September 1 and runs forward &mdash; you are never billed twice for the same month. Mee Maw&rsquo;s setup fee covers August 13&ndash;31, and its monthly service starts September 1 as well.<br><br>
-    <strong>One thing to flag in advance:</strong> Mee Maw&rsquo;s Starter tier covers up to $25,000 a month in expenses. Once lunch service pushes you past that &mdash; toward your $30,000 and then $50,000 goals &mdash; it moves up to the Essential tier at <strong>$395/month</strong>. I&rsquo;m telling you now so it&rsquo;s never a surprise later. Avocados has room at its tier and won&rsquo;t change.<br><br>
-    Everything is month-to-month. No long-term contract, cancel any time. Pricing valid 30 days.</p>
+    <p class="billnote"><strong>No overlap, and no gap.</strong> The one-time fees carry both restaurants all the way through <strong>September 30</strong> &mdash; Avocados from the April takeover, Mee Maw&rsquo;s from the August 13 opening. Monthly service picks up <strong>October 1</strong> and runs forward. You are never billed twice for the same month, and no month goes uncovered.<br><br>
+    <strong>On the cleanup payment:</strong> it&rsquo;s written as a single payment at signing. If it&rsquo;s easier on cash flow, I&rsquo;m happy to split it into two &mdash; half at signing, half on completion. Just tell me which you&rsquo;d prefer.<br><br>
+    Everything is month-to-month. No long-term contract, cancel any time. If either restaurant&rsquo;s volume grows substantially, we&rsquo;ll talk about it before anything changes. Pricing valid 30 days.</p>
   </section>
 
   <section class="pad">

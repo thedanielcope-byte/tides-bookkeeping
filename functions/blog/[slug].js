@@ -37,7 +37,7 @@ export async function onRequestGet(context) {
 
     const post = data.post;
     const title = post.title || 'Untitled';
-    const metaTitle = `${post.seo_title || post.title || 'Untitled'} | Tides Blog`;
+    const metaTitle = `${post.seo_title || post.title || 'Untitled'} | Tides`;
     const metaDesc = post.seo_description || post.excerpt || '';
     const canonical = `${SITE}/blog/${slug}`;
     const image = post.cover_image || DEFAULT_IMAGE;

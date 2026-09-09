@@ -1,0 +1,36 @@
+# Cloudflare Pages headers for tidesbookkeeping.com
+# Format: a path pattern on its own line, then indented "Header: value" lines.
+# First matching rule wins per header; /* applies to everything.
+#
+# NOTE: netlify.toml in this repo also declares headers. Cloudflare Pages
+# ignores that file entirely — this is the one that takes effect.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=()
+  Cross-Origin-Opener-Policy: same-origin
+  # HSTS without includeSubDomains on purpose: hub. and go. are separate hosts
+  # and must not inherit this. No preload — that is effectively irreversible.
+  Strict-Transport-Security: max-age=31536000
+
+# Static assets: cached for a day, NOT immutable, so replacing a social
+# graphic or the logo propagates without renaming the file.
+/assets/*
+  Cache-Control: public, max-age=86400
+  X-Content-Type-Options: nosniff
+
+/logo.png
+  Cache-Control: public, max-age=86400
+
+# Crawler-facing files should never be served stale.
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+/sitemap-*.xml
+  Cache-Control: public, max-age=3600
+/robots.txt
+  Cache-Control: public, max-age=3600
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600

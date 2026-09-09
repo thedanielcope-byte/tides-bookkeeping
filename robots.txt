@@ -5,3 +5,7 @@ Disallow: /_internal/
 Disallow: /_templates/
 
 Sitemap: https://www.tidesbookkeeping.com/sitemap.xml
+
+# Site summary for AI crawlers and assistants
+# https://llmstxt.org
+# https://www.tidesbookkeeping.com/llms.txt

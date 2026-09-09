@@ -51,7 +51,7 @@
     .btn-navy:hover{background:var(--navy-dk);transform:translateY(-2px);}
     .field{margin-bottom:.9rem;}
     .field label{display:block;font-size:.82rem;font-weight:600;margin-bottom:.35rem;}
-    .field input{width:100%;border:2px solid var(--border);border-radius:10px;padding:.8rem 1rem;font-size:.95rem;font-family:inherit;}
+    .field input{width:100%;border:2px solid var(--border);border-radius:10px;padding:.8rem 1rem;font-size:1rem;font-family:inherit;}
     .field input:focus{outline:none;border-color:var(--teal);}
     .hp{position:absolute;left:-9999px;}
     .scorewrap{text-align:center;}
@@ -174,9 +174,9 @@
       <h2 class="display" style="font-size:2rem;">Where should we send your results?</h2>
       <p class="lead">Get your score and a short action plan tailored to your answers.</p>
       <form id="leadForm" onsubmit="return submitLead(event)">
-        <div class="field"><label>Your name</label><input name="name" required autocomplete="name" placeholder="Jane Owner" /></div>
-        <div class="field"><label>Email</label><input name="email" type="email" required autocomplete="email" placeholder="jane@business.com" /></div>
-        <input class="hp" tabindex="-1" autocomplete="off" name="website_hp" />
+        <div class="field"><label for="hcName">Your name</label><input id="hcName" name="name" required autocomplete="name" placeholder="Jane Owner" /></div>
+        <div class="field"><label for="hcEmail">Email</label><input id="hcEmail" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="jane@business.com" /></div>
+        <input class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" name="website_hp" />
         <button class="btn btn-navy" type="submit" id="leadBtn">See my score →</button>
       </form>
       <p class="fine">We'll never spam you. Just your results and the occasional useful tip.</p>

@@ -15,6 +15,18 @@
   # and must not inherit this. No preload — that is effectively irreversible.
   Strict-Transport-Security: max-age=31536000
 
+# Client proposals: never index anything under here, at ANY file type.
+# The pages carry <meta name="robots" content="noindex,nofollow,noarchive">
+# too, but a meta tag only protects HTML — this header also covers the PNG
+# and any PDF/asset dropped in later, and it applies to proposals created in
+# future even if someone forgets the meta tag.
+# Deliberately NOT robots.txt-Disallowed: blocking the crawl would stop Google
+# reading the noindex, which makes a leaked URL MORE likely to show up as a
+# bare URL result, not less.
+/proposals/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: private, no-store
+
 # Static assets: cached for a day, NOT immutable, so replacing a social
 # graphic or the logo propagates without renaming the file.
 /assets/*

@@ -1,4 +1,16 @@
+# Content Signals (contentsignals.org) — declared by hand, NOT by Cloudflare's
+# "Managed robots.txt" toggle. That toggle is deliberately OFF: it bundled these
+# signals with hard `Disallow: /` lines for ClaudeBot, GPTBot, Google-Extended and
+# others, which blocked the very crawlers this site wants citing it.
+#   search=yes    index us and return links/excerpts
+#   ai-input=yes  you may use our content to ground AI answers (RAG, AI search)
+#   ai-train=no   you may NOT use it to train or fine-tune models
+#   use=reference cite and reference us, don't absorb wholesale
+# This is a declaration of intent, not a technical block — nothing here stops a
+# crawler fetching the site.
+
 User-agent: *
+Content-Signal: search=yes,ai-input=yes,ai-train=no,use=reference
 Allow: /
 
 Disallow: /_internal/

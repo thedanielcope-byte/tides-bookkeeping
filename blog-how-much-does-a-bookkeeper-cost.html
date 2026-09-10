@@ -331,6 +331,18 @@
   }
 }
 /* mobile-menu-fix-end */
+
+    /* Secondary, low-commitment CTA (added 2026-09-10). Primary CTA stays
+       /schedule everywhere; this gives people who aren't ready to book a call
+       something to do, using tools that already exist. */
+    .alt-cta{background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:26px 0;}
+    .alt-cta-inner{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;text-align:center;}
+    .alt-cta-text strong{display:block;color:var(--ink);font-size:1rem;}
+    .alt-cta-text span{color:var(--muted);font-size:.88rem;}
+    .alt-cta a.alt-cta-btn{background:var(--navy);color:#fff;font-weight:700;font-size:.88rem;
+      padding:.7rem 1.4rem;border-radius:50px;white-space:nowrap;transition:background .15s;}
+    .alt-cta a.alt-cta-btn:hover{background:var(--teal);color:var(--ink);}
+    @media(max-width:600px){.alt-cta-inner{flex-direction:column;gap:.9rem;}}
 </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXQS7FCLF2"></script>
@@ -654,6 +666,7 @@
 
 <section style="padding:8px 0;"><h2 style="font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.5px;">Authoritative Resources</h2><ul style="color:#334155;line-height:1.8;"><li><a href="https://www.sba.gov/business-guide/manage-your-business/manage-your-finances" target="_blank" rel="noopener" style="color:#215197;font-weight:600;">U.S. Small Business Administration</a></li><li><a href="https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping" target="_blank" rel="noopener" style="color:#215197;font-weight:600;">IRS — Recordkeeping for Small Business</a></li></ul></section>
 </section>
+<section class="alt-cta"><div class="container"><div class="alt-cta-inner"><div class="alt-cta-text"><strong>Want a number first?</strong><span>Estimate your monthly bookkeeping cost in about a minute.</span></div><a class="alt-cta-btn" href="/bookkeeping-cost-calculator">Try the cost calculator &rarr;</a></div></div></section>
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">

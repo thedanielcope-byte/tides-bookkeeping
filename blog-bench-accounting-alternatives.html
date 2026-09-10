@@ -331,6 +331,18 @@
   }
 }
 /* mobile-menu-fix-end */
+
+    /* Secondary, low-commitment CTA (added 2026-09-10). Primary CTA stays
+       /schedule everywhere; this gives people who aren't ready to book a call
+       something to do, using tools that already exist. */
+    .alt-cta{background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:26px 0;}
+    .alt-cta-inner{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;text-align:center;}
+    .alt-cta-text strong{display:block;color:var(--ink);font-size:1rem;}
+    .alt-cta-text span{color:var(--muted);font-size:.88rem;}
+    .alt-cta a.alt-cta-btn{background:var(--navy);color:#fff;font-weight:700;font-size:.88rem;
+      padding:.7rem 1.4rem;border-radius:50px;white-space:nowrap;transition:background .15s;}
+    .alt-cta a.alt-cta-btn:hover{background:var(--teal);color:var(--ink);}
+    @media(max-width:600px){.alt-cta-inner{flex-direction:column;gap:.9rem;}}
 </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXQS7FCLF2"></script>
@@ -571,6 +583,7 @@
 </article>
 
 <!-- FOOTER -->
+<section class="alt-cta"><div class="container"><div class="alt-cta-inner"><div class="alt-cta-text"><strong>Not ready to talk yet?</strong><span>See how healthy your books are in 2 minutes.</span></div><a class="alt-cta-btn" href="/bookkeeping-health-check">Take the free health check &rarr;</a></div></div></section>
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">

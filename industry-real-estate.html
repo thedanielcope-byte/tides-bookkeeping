@@ -252,6 +252,15 @@
       transition: all .25s;
     }
     .svc-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+
+    /* Whole-card click target: the visible link is stretched over the card via
+       ::after, so the block is clickable without nesting block content in an
+       <a> (stays valid HTML, one link, real anchor text for crawlers). */
+    .svc-card { position: relative; }
+    .svc-card:hover { cursor: pointer; }
+    .svc-card .svc-link::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: 20px; }
+    .svc-card:focus-within { outline: 2px solid var(--teal); outline-offset: 3px; }
+
     .svc-card.featured {
       background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%);
       border-color: transparent; grid-column: span 2;
@@ -1096,6 +1105,8 @@
           <span class="svc-tag">Balance Sheet</span>
           <span class="svc-tag">Commission Tracking</span>
         </div>
+      
+        <a href="/service-monthly-bookkeeping" class="svc-link">See Full Details &rarr;</a>
       </div>
 
       <div class="svc-card">
@@ -1103,30 +1114,40 @@
         <h3>Financial Reporting</h3>
         <p>Monthly reports that show your income, expenses, and profit by category — so you always know where you stand and can make smarter business decisions.</p>
         <div class="svc-tags"><span class="svc-tag light">Monthly Reports</span></div>
+      
+        <a href="/service-financial-reporting" class="svc-link">See Full Details &rarr;</a>
       </div>
 
       <div class="svc-card">
         <div class="svc-icon" style="background:rgba(33,81,151,.08);">🏦</div>
         <h3>Bank Reconciliation</h3>
         <p>Every business account and credit card matched and verified each month. No mystery charges. No unresolved transactions. No surprises.</p>
+      
+        <a href="/service-bank-reconciliation" class="svc-link">See Full Details &rarr;</a>
       </div>
 
       <div class="svc-card">
         <div class="svc-icon">📑</div>
         <h3>Accounts Payable & Receivable</h3>
         <p>We track vendor bills, contractor payments, and outstanding invoices so your cash flow stays healthy and nothing gets missed or paid twice.</p>
+      
+        <a href="/service-accounts-payable-receivable" class="svc-link">See Full Details &rarr;</a>
       </div>
 
       <div class="svc-card">
         <div class="svc-icon" style="background:var(--blue-lt);">🔄</div>
         <h3>Catch-Up Bookkeeping</h3>
         <p>Months or years behind? We clean it all up before we start your regular monthly service — no matter how far back the backlog goes.</p>
+      
+        <a href="/service-catchup-bookkeeping" class="svc-link">See Full Details &rarr;</a>
       </div>
 
       <div class="svc-card">
         <div class="svc-icon" style="background:rgba(33,81,151,.08);">💼</div>
         <h3>Payroll Support</h3>
         <p>If you have team members or pay contractors, we coordinate payroll processing and keep your tax filings clean and on schedule.</p>
+      
+        <a href="/service-payroll" class="svc-link">See Full Details &rarr;</a>
       </div>
 
     </div>

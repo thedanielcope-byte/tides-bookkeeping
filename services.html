@@ -176,6 +176,15 @@
     .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 3.5rem; }
     .svc-card { background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 2rem; box-shadow: var(--shadow); transition: all .25s; }
     .svc-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.35); }
+
+    /* Whole-card click target: the visible link is stretched over the card via
+       ::after, so the block is clickable without nesting block content in an
+       <a> (stays valid HTML, one link, real anchor text for crawlers). */
+    .svc-card { position: relative; }
+    .svc-card:hover { cursor: pointer; }
+    .svc-card .svc-link::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: 20px; }
+    .svc-card:focus-within { outline: 2px solid var(--teal); outline-offset: 3px; }
+
     .svc-card.featured { background: linear-gradient(135deg, var(--navy) 0%, #1d3d7e 100%); border-color: transparent; grid-column: span 2; }
     .svc-icon { width: 50px; height: 50px; border-radius: 13px; background: var(--teal-lt); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 1.25rem; }
     .svc-card.featured .svc-icon { background: rgba(255,255,255,.12); }

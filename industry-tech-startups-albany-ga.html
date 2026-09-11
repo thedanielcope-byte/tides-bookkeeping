@@ -128,6 +128,56 @@
     .hub-uplink p{margin:0;text-align:center;font-size:.88rem;color:var(--muted);line-height:1.6;}
     .hub-uplink a{color:var(--navy);font-weight:700;text-decoration:underline;}
     .hub-uplink a:hover{color:var(--teal);}
+
+    /* ── Restored component CSS (2026-09-11). These sections shipped with markup
+       but no styling and rendered as bare text. Copied verbatim from pages where
+       the same component renders correctly. ── */
+    /* also */
+    .also-section { background: var(--bg-alt); padding: 80px 0; }
+    .also-grid { display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1rem; margin-top: 3rem; }
+    .also-card { display: flex; align-items: center; gap: .85rem;
+      padding: 1rem 1.25rem;
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 14px; text-decoration: none;
+      transition: all .2s ease; }
+    .also-card:hover { border-color: rgba(65,207,208,.5); background: var(--teal-lt);
+      transform: translateY(-2px); box-shadow: var(--shadow); }
+    .also-card.current-industry { border-color: var(--teal); background: var(--teal-lt);
+      pointer-events: none; cursor: default; }
+    .also-card.current-industry .also-name { color: var(--teal); }
+    .also-emoji { font-size: 1.5rem; flex-shrink: 0; line-height: 1; }
+    .also-info { min-width: 0; }
+    .also-name { font-size: .87rem; font-weight: 700; color: var(--ink);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .also-desc { font-size: .72rem; color: var(--muted); margin-top: 2px; line-height: 1.4; }
+    @media (max-width: 1024px) {
+      .also-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .also-grid { grid-template-columns: repeat(2, 1fr); gap: .75rem; }
+      .also-section { padding: 56px 0; }
+    }
+    @media (max-width: 480px) {
+      .also-grid { grid-template-columns: 1fr 1fr; }
+      .also-card { padding: .85rem 1rem; }
+    }
+    /* svc-area */
+    .svc-area-eyebrow { font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); margin-bottom: .5rem; }
+    .svc-area-left h3 { font-size: 1.1rem; font-weight: 800; color: var(--ink); line-height: 1.35; margin-bottom: .4rem; }
+    .svc-area-left > p { font-size: .84rem; color: var(--body); line-height: 1.65; }
+    .svc-area-group { flex: 1; padding: 0 2rem; }
+    .svc-area-group:first-child { padding-left: 0; }
+    .svc-area-group-label { font-size: .62rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .6rem; }
+    .svc-area-pills { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .svc-area-pill { display: inline-block; padding: .3rem .85rem; border-radius: 50px; font-size: .74rem; font-weight: 600; border: 1px solid var(--border); background: #fff; color: var(--body); transition: all .2s; white-space: nowrap; text-decoration: none; }
+    a.svc-area-pill:hover { border-color: var(--teal); color: var(--teal); background: var(--teal-lt); }
+    .svc-area-pill.state-pill { border-color: rgba(33,81,151,.25); color: var(--navy); background: rgba(33,81,151,.06); }
+    .svc-area-pill.nationwide-pill { border-color: rgba(65,207,208,.35); color: var(--teal); background: var(--teal-lt); }
+    .svc-area-link { display: inline-flex; align-items: center; gap: .35rem; font-size: .84rem; font-weight: 700; color: var(--navy); transition: all .2s; }
+    @media (max-width: 768px) {
+      .svc-area-group { padding: 0; }
+    }
 </style>
  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXQS7FCLF2"></script>
  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-KXQS7FCLF2');</script>

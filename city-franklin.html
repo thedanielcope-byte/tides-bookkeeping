@@ -644,6 +644,7 @@
 {
   "@context": "https://schema.org",
   "@type": "AccountingService",
+  "founder": {"@id": "https://www.tidesbookkeeping.com/#daniel-cope"},
   "@id": "https://www.tidesbookkeeping.com/#organization",
   "name": "Tides Bookkeeping LLC",
   "alternateName": "Tides Bookkeeping",
@@ -835,6 +836,57 @@
 .nav-dd-caret{font-size:.7em;opacity:.65;}
 .nav-links.open .nav-dd-menu{display:block;position:static;box-shadow:none;border:none;background:transparent;padding:.15rem 0 .15rem 1rem;min-width:0;}
 </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.tidesbookkeeping.com/#daniel-cope",
+  "name": "Daniel Cope",
+  "jobTitle": "Lead Bookkeeper",
+  "url": "https://www.tidesbookkeeping.com/about",
+  "worksFor": {
+    "@type": "AccountingService",
+    "name": "Tides Bookkeeping LLC",
+    "url": "https://www.tidesbookkeeping.com"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Indiana University"
+  },
+  "knowsAbout": [
+    "Bookkeeping",
+    "Small business accounting",
+    "QuickBooks Online",
+    "Restaurant bookkeeping",
+    "Restaurant365",
+    "Catch-up bookkeeping"
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "QuickBooks Certified ProAdvisor",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Intuit"
+      },
+      "url": "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "degree",
+      "name": "B.S. Finance",
+      "recognizedBy": {
+        "@type": "CollegeOrUniversity",
+        "name": "Indiana University"
+      }
+    }
+  ],
+  "sameAs": [
+    "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -1736,5 +1788,44 @@
 <!--Start of Crisp Chatbox-->
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="63ba78f5-feea-49e7-9a4f-df3435912271";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 <!--End of Crisp Chatbox-->
+<script>
+/* AI referral tracking (2026-09-16). Records when a visitor arrives from an AI
+   assistant, reports it to GA4 as an "ai_referral" event, and tags any lead that
+   visitor submits so the CRM row and the notification email show where they came
+   from. NOTE: Google AI Overviews referrals look identical to ordinary Google
+   traffic and cannot be separated here - those are only visible in Search
+   Console's Generative AI Features report. */
+(function(){
+  var AI=[[/(^|\.)chatgpt\.com$/,'chatgpt'],[/(^|\.)openai\.com$/,'chatgpt'],
+    [/(^|\.)perplexity\.ai$/,'perplexity'],[/(^|\.)claude\.ai$/,'claude'],
+    [/(^|\.)anthropic\.com$/,'claude'],[/(^|\.)gemini\.google\.com$/,'gemini'],
+    [/(^|\.)copilot\.microsoft\.com$/,'copilot'],[/(^|\.)you\.com$/,'you'],
+    [/(^|\.)poe\.com$/,'poe'],[/(^|\.)grok\.com$/,'grok'],[/(^|\.)x\.ai$/,'grok'],
+    [/(^|\.)mistral\.ai$/,'mistral'],[/(^|\.)deepseek\.com$/,'deepseek']];
+  var KEY='tides_ai_src', src=null, fresh=null;
+  try{ var r=document.referrer; if(r){ var h=new URL(r).hostname.toLowerCase();
+    for(var i=0;i<AI.length;i++){ if(AI[i][0].test(h)){ fresh=AI[i][1]; break; } } } }catch(e){}
+  try{ src=localStorage.getItem(KEY)||null; }catch(e){}
+  if(fresh&&!src){ src=fresh; try{ localStorage.setItem(KEY,src); }catch(e){} }
+  if(fresh&&typeof window.gtag==='function'){
+    try{ gtag('event','ai_referral',{ai_source:fresh,page_location:location.href}); }catch(e){}
+  }
+  window.__tidesAiSource=src;
+  var of=window.fetch;
+  if(of){ window.fetch=function(u,o){
+    try{
+      var url=(typeof u==='string')?u:((u&&u.url)||'');
+      if(src&&url.indexOf('/capture-lead')>-1&&o&&typeof o.body==='string'){
+        var d=JSON.parse(o.body);
+        d.tags=(d.tags?d.tags+',':'')+'ai-'+src;
+        d.message=(d.message?d.message+' ':'')+'[arrived via '+src+']';
+        o=Object.assign({},o,{body:JSON.stringify(d)});
+        return of.call(this,u,o);
+      }
+    }catch(e){}
+    return of.apply(this,arguments);
+  }; }
+})();
+</script>
 </body>
 </html>

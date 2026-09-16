@@ -294,6 +294,7 @@
   "@graph": [
     {
       "@type": "AccountingService",
+  "founder": {"@id": "https://www.tidesbookkeeping.com/#daniel-cope"},
       "name": "Tides Bookkeeping LLC",
       "description": "Remote bookkeeping and financial services for small businesses nationwide. Clean books, clear numbers, confident decisions.",
       "url": "https://www.tidesbookkeeping.com",
@@ -352,11 +353,7 @@
   "url": "https://www.tidesbookkeeping.com/blog-is-quickbooks-good-for-restaurants",
   "mainEntityOfPage": "https://www.tidesbookkeeping.com/blog-is-quickbooks-good-for-restaurants",
   "image": "https://www.tidesbookkeeping.com/logo.png",
-  "author": {
-    "@type": "Organization",
-    "name": "Tides Bookkeeping",
-    "url": "https://www.tidesbookkeeping.com"
-  },
+  "author": {"@id": "https://www.tidesbookkeeping.com/#daniel-cope"},
   "publisher": {
     "@type": "Organization",
     "name": "Tides Bookkeeping",
@@ -380,6 +377,57 @@
 .nav-dd-caret{font-size:.7em;opacity:.65;}
 .nav-links.open .nav-dd-menu{display:block;position:static;box-shadow:none;border:none;background:transparent;padding:.15rem 0 .15rem 1rem;min-width:0;}
 </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.tidesbookkeeping.com/#daniel-cope",
+  "name": "Daniel Cope",
+  "jobTitle": "Lead Bookkeeper",
+  "url": "https://www.tidesbookkeeping.com/about",
+  "worksFor": {
+    "@type": "AccountingService",
+    "name": "Tides Bookkeeping LLC",
+    "url": "https://www.tidesbookkeeping.com"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Indiana University"
+  },
+  "knowsAbout": [
+    "Bookkeeping",
+    "Small business accounting",
+    "QuickBooks Online",
+    "Restaurant bookkeeping",
+    "Restaurant365",
+    "Catch-up bookkeeping"
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "QuickBooks Certified ProAdvisor",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Intuit"
+      },
+      "url": "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "degree",
+      "name": "B.S. Finance",
+      "recognizedBy": {
+        "@type": "CollegeOrUniversity",
+        "name": "Indiana University"
+      }
+    }
+  ],
+  "sameAs": [
+    "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -664,5 +712,44 @@
 <!--End of Crisp Chatbox-->
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is QuickBooks good for restaurants?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, with caveats. QuickBooks — especially QuickBooks Online — is a capable, affordable core accounting system for restaurants, particularly single-location and simpler operations. It handles the general ledger, bank reconciliation, accounts payable, payroll integration, and financial statements well, and any bookkeeper or CPA knows it. What it doesn't do is act as a restaurant operating platform: it won't cost recipes, calculate a theoretical food cost, or manage schedules. Set it up with a restaurant-specific chart of accounts and a bookkeeper who knows restaurants, and it works well until multi-location complexity or heavy inventory pushes you toward a purpose-built platform."}}, {"@type": "Question", "name": "Which version of QuickBooks is best for a restaurant?", "acceptedAnswer": {"@type": "Answer", "text": "QuickBooks Online is the right choice for most restaurants today — it's cloud-based and connects to POS and payroll apps, and Intuit has been steering new users to Online over Desktop. Within Online, the Plus tier is usually the sweet spot, because it adds class and location tracking, which lets you break out food vs. beverage and report by location."}}, {"@type": "Question", "name": "Can QuickBooks track restaurant food cost and inventory?", "acceptedAnswer": {"@type": "Answer", "text": "Not the way a restaurant platform does. QuickBooks doesn't do recipe-level or theoretical food costing out of the box. The standard approach is periodic inventory: count at the start and end of each period and book a journal entry so cost of goods sold reflects what you actually used (Beginning + Purchases − Ending). That gives you an accurate food-cost percentage on the P&L; it just won't flag item-level variance in real time the way Restaurant365 can."}}, {"@type": "Question", "name": "QuickBooks or Restaurant365 for my restaurant?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on size and complexity. A single location with straightforward operations is usually well served by QuickBooks. Multiple locations, tight food-cost control, recipe costing, and scheduling tied to sales are where Restaurant365 earns its higher cost. Many owners start on QuickBooks and move to R365 as they scale."}}, {"@type": "Question", "name": "How do I connect my POS to QuickBooks?", "acceptedAnswer": {"@type": "Answer", "text": "Through an integration. Most modern POS systems (Toast, Square, SpotOn, and others) connect to QuickBooks Online directly or through a middleware app that posts a daily sales summary. Done right, that daily entry captures sales by category, tax, tips, and payment types so your books reconcile to the bank. The setup and the mapping are where a restaurant-savvy bookkeeper earns their keep — a bad mapping quietly corrupts every report downstream."}}]}</script>
+<script>
+/* AI referral tracking (2026-09-16). Records when a visitor arrives from an AI
+   assistant, reports it to GA4 as an "ai_referral" event, and tags any lead that
+   visitor submits so the CRM row and the notification email show where they came
+   from. NOTE: Google AI Overviews referrals look identical to ordinary Google
+   traffic and cannot be separated here - those are only visible in Search
+   Console's Generative AI Features report. */
+(function(){
+  var AI=[[/(^|\.)chatgpt\.com$/,'chatgpt'],[/(^|\.)openai\.com$/,'chatgpt'],
+    [/(^|\.)perplexity\.ai$/,'perplexity'],[/(^|\.)claude\.ai$/,'claude'],
+    [/(^|\.)anthropic\.com$/,'claude'],[/(^|\.)gemini\.google\.com$/,'gemini'],
+    [/(^|\.)copilot\.microsoft\.com$/,'copilot'],[/(^|\.)you\.com$/,'you'],
+    [/(^|\.)poe\.com$/,'poe'],[/(^|\.)grok\.com$/,'grok'],[/(^|\.)x\.ai$/,'grok'],
+    [/(^|\.)mistral\.ai$/,'mistral'],[/(^|\.)deepseek\.com$/,'deepseek']];
+  var KEY='tides_ai_src', src=null, fresh=null;
+  try{ var r=document.referrer; if(r){ var h=new URL(r).hostname.toLowerCase();
+    for(var i=0;i<AI.length;i++){ if(AI[i][0].test(h)){ fresh=AI[i][1]; break; } } } }catch(e){}
+  try{ src=localStorage.getItem(KEY)||null; }catch(e){}
+  if(fresh&&!src){ src=fresh; try{ localStorage.setItem(KEY,src); }catch(e){} }
+  if(fresh&&typeof window.gtag==='function'){
+    try{ gtag('event','ai_referral',{ai_source:fresh,page_location:location.href}); }catch(e){}
+  }
+  window.__tidesAiSource=src;
+  var of=window.fetch;
+  if(of){ window.fetch=function(u,o){
+    try{
+      var url=(typeof u==='string')?u:((u&&u.url)||'');
+      if(src&&url.indexOf('/capture-lead')>-1&&o&&typeof o.body==='string'){
+        var d=JSON.parse(o.body);
+        d.tags=(d.tags?d.tags+',':'')+'ai-'+src;
+        d.message=(d.message?d.message+' ':'')+'[arrived via '+src+']';
+        o=Object.assign({},o,{body:JSON.stringify(d)});
+        return of.call(this,u,o);
+      }
+    }catch(e){}
+    return of.apply(this,arguments);
+  }; }
+})();
+</script>
 </body>
 </html>

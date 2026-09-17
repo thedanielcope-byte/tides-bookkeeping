@@ -23,6 +23,10 @@ assets/states/*-source.*
 # Private client files — NEVER commit (this repo auto-deploys to a PUBLIC site)
 _Clients/
 
+# Scraped lead lists (emails/phones) — NEVER commit, public deploy
+Apify/
+_SEO/
+
 # Working/source assets not meant for the live site
 assets/social/tax deadline social posts graphics/
 tides-hub-archive-*.zip

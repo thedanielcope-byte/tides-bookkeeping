@@ -51,3 +51,7 @@ Notion Screenshots/
 # IDE
 .vscode/
 *.swp
+
+# Private marketing source files (certificates with IDs, raw badge kits). Only
+# the web-ready copies in assets/certifications/ are published.
+_marketing/

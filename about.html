@@ -474,6 +474,19 @@
 .nav-dd-caret{font-size:.7em;opacity:.65;}
 .nav-links.open .nav-dd-menu{display:block;position:static;box-shadow:none;border:none;background:transparent;padding:.15rem 0 .15rem 1rem;min-width:0;}
 </style>
+<style>
+/* Certification strip (added 2026-09-18): badges + links to /certifications pages */
+.cert-strip{background:#fff;border-top:1px solid var(--border,#e2eaf3);padding:28px 0;}
+.cert-strip-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;}
+.cert-strip-text{flex:1 1 380px;min-width:0;}
+.cert-strip-text strong{display:block;color:var(--ink,#0f1c2e);font-size:1rem;margin-bottom:.25rem;}
+.cert-strip-text span{color:var(--body,#4a5568);font-size:.92rem;line-height:1.6;}
+.cert-strip-text a{color:var(--navy,#215197);font-weight:600;text-decoration:underline;}
+.cert-strip-badges{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+.cert-strip-badges a{display:block;}
+.cert-strip-badges img{height:56px;width:auto;display:block;}
+@media(max-width:640px){.cert-strip-inner{flex-direction:column;align-items:flex-start;}.cert-strip-badges img{height:48px;}}
+</style>
 </head>
 <body>
 
@@ -486,7 +499,7 @@
       <li><a href="/#how-it-works">How It Works</a></li>
       <li><a href="/services">Services</a></li>
       <li><a href="/who-we-serve">Who We Serve</a></li>
-      <li class="nav-dd"><a href="/about">About<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/about">About Us</a></li><li><a href="/contact">Contact Us</a></li></ul></li>
+      <li class="nav-dd"><a href="/about">About<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/about">About Us</a></li><li><a href="/certifications">Certifications</a></li><li><a href="/contact">Contact Us</a></li></ul></li>
       <li><a href="/pricing">Pricing</a></li><li class="nav-dd"><a href="/tools">Resources<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/tools">Free Tools</a></li><li><a href="/glossary">Glossary</a></li><li><a href="/small-business-bookkeeping-guide">Bookkeeping Guide</a></li></ul></li>
       <li><a href="/blog">Blog</a></li>
     </ul>
@@ -701,6 +714,7 @@
           <div class="team-role">Lead Bookkeeper</div>
           <div class="team-name">Daniel Cope</div>
           <div class="team-creds">B.S. Finance &nbsp;·&nbsp; Indiana University</div>
+          <div class="team-creds" style="margin-top:-.85rem;"><a href="/certifications" style="color:var(--navy);font-weight:600;">QuickBooks ProAdvisor &nbsp;·&nbsp; Puzzle &nbsp;·&nbsp; Gusto &nbsp;·&nbsp; A2X certified</a></div>
           <div class="team-divider"></div>
           <div class="team-contact">
             <div class="team-contact-item">
@@ -720,6 +734,9 @@
 </section>
 
 <!-- CTA -->
+<!-- certstrip-start -->
+<section class="cert-strip"><div class="container"><div class="cert-strip-inner"><div class="cert-strip-text"><strong>Daniel's certifications</strong><span><a href="/certification-quickbooks-proadvisor">QuickBooks ProAdvisor</a>, <a href="/certification-puzzle-advisor">Certified Puzzle Advisor</a>, <a href="/certification-gusto-payroll">Gusto Payroll Certified</a> and <a href="/certification-a2x">A2X certified</a>. Dates, certificates and how to verify each one are on the <a href="/certifications">certifications page</a>.</span></div><div class="cert-strip-badges"><a href="/certification-quickbooks-proadvisor"><img src="/assets/certifications/quickbooks-payroll-proadvisor-badge.png" alt="Intuit Certified QuickBooks Payroll ProAdvisor badge" width="280" height="280" loading="lazy" /></a><a href="/certification-puzzle-advisor"><img src="/assets/certifications/certified-puzzle-advisor-badge.png" alt="Certified Puzzle Advisor badge" width="300" height="300" loading="lazy" /></a><a href="/certification-gusto-payroll"><img src="/assets/certifications/gusto-payroll-certification-badge.png" alt="Gusto Payroll Certification badge" width="420" height="219" loading="lazy" /></a><a href="/certification-a2x"><img src="/assets/certifications/a2x-certified-badge.png" alt="A2X Certified badge" width="368" height="250" loading="lazy" /></a></div></div></div></section>
+<!-- certstrip-end -->
 <section class="alt-cta"><div class="container"><div class="alt-cta-inner"><div class="alt-cta-text"><strong>Not ready to talk yet?</strong><span>See how healthy your books are in 2 minutes.</span></div><a class="alt-cta-btn" href="/bookkeeping-health-check">Take the free health check &rarr;</a></div></div></section>
 <section class="cta-section">
   <div class="container">

@@ -612,7 +612,12 @@
     "QuickBooks Online",
     "Restaurant bookkeeping",
     "Restaurant365",
-    "Catch-up bookkeeping"
+    "Catch-up bookkeeping",
+    "Payroll",
+    "Gusto",
+    "Puzzle",
+    "A2X",
+    "Ecommerce bookkeeping"
   ],
   "hasCredential": [
     {
@@ -624,6 +629,55 @@
         "name": "Intuit"
       },
       "url": "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "QuickBooks Workforce Certification",
+      "description": "Intuit's payroll certification for ProAdvisors, formerly QuickBooks Payroll.",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Intuit"
+      },
+      "url": "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "Certified Puzzle Advisor",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Puzzle",
+        "url": "https://puzzle.io"
+      },
+      "dateCreated": "2026-03-16",
+      "identifier": "fm0kkyrnhg",
+      "url": "https://www.tidesbookkeeping.com/certification-puzzle-advisor"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "Gusto Payroll Certification",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Gusto",
+        "url": "https://gusto.com"
+      },
+      "dateCreated": "2026-03-19",
+      "url": "https://www.tidesbookkeeping.com/certification-gusto-payroll"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "A2X Certification for Accountants and Bookkeepers",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "A2X",
+        "url": "https://www.a2xaccounting.com"
+      },
+      "dateCreated": "2026-09-18",
+      "identifier": "cert_w2m377m7",
+      "url": "https://www.tidesbookkeeping.com/certification-a2x"
     },
     {
       "@type": "EducationalOccupationalCredential",
@@ -640,6 +694,19 @@
   ]
 }
   </script>
+<style>
+/* Certification strip (added 2026-09-18): badges + links to /certifications pages */
+.cert-strip{background:#fff;border-top:1px solid var(--border,#e2eaf3);padding:28px 0;}
+.cert-strip-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;}
+.cert-strip-text{flex:1 1 380px;min-width:0;}
+.cert-strip-text strong{display:block;color:var(--ink,#0f1c2e);font-size:1rem;margin-bottom:.25rem;}
+.cert-strip-text span{color:var(--body,#4a5568);font-size:.92rem;line-height:1.6;}
+.cert-strip-text a{color:var(--navy,#215197);font-weight:600;text-decoration:underline;}
+.cert-strip-badges{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+.cert-strip-badges a{display:block;}
+.cert-strip-badges img{height:56px;width:auto;display:block;}
+@media(max-width:640px){.cert-strip-inner{flex-direction:column;align-items:flex-start;}.cert-strip-badges img{height:48px;}}
+</style>
 </head><body>
 <nav class="nav-wrap">
   <div class="nav-inner">
@@ -648,7 +715,7 @@
       <li><a href="/#how-it-works">How It Works</a></li>
       <li><a href="/services" class="active">Services</a></li>
       <li><a href="/who-we-serve">Who We Serve</a></li>
-      <li class="nav-dd"><a href="/about">About<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/about">About Us</a></li><li><a href="/contact">Contact Us</a></li></ul></li>
+      <li class="nav-dd"><a href="/about">About<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/about">About Us</a></li><li><a href="/certifications">Certifications</a></li><li><a href="/contact">Contact Us</a></li></ul></li>
       <li><a href="/pricing">Pricing</a></li><li class="nav-dd"><a href="/tools">Resources<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/tools">Free Tools</a></li><li><a href="/glossary">Glossary</a></li><li><a href="/small-business-bookkeeping-guide">Bookkeeping Guide</a></li></ul></li>
       <li><a href="/blog">Blog</a></li>
     </ul>
@@ -753,6 +820,9 @@
   </div>
 </section>
 
+<!-- certstrip-start -->
+<section class="cert-strip"><div class="container"><div class="cert-strip-inner"><div class="cert-strip-text"><strong>Certified on both payroll platforms we run</strong><span>Daniel is <a href="/certification-gusto-payroll">Gusto Payroll Certified</a> and holds Intuit's <a href="/certification-quickbooks-proadvisor">QuickBooks payroll certification</a>. Not sure which fits you? Read <a href="/blog-gusto-vs-quickbooks-payroll">Gusto vs QuickBooks Payroll</a>.</span></div><div class="cert-strip-badges"><a href="/certification-gusto-payroll"><img src="/assets/certifications/gusto-payroll-certification-badge.png" alt="Gusto Payroll Certification badge" width="420" height="219" loading="lazy" /></a><a href="/certification-quickbooks-proadvisor"><img src="/assets/certifications/quickbooks-payroll-proadvisor-badge.png" alt="Intuit Certified QuickBooks Payroll ProAdvisor badge" width="280" height="280" loading="lazy" /></a></div></div></div></section>
+<!-- certstrip-end -->
 <!-- glossterms-start -->
 <section class="gloss-terms"><div class="container"><div class="gloss-terms-inner"><h3>Terms that show up around payroll</h3><p>Plain-English explainers, no jargon.</p><div class="gloss-pills"><a href="/what-is-net-income">Net Income</a><a href="/what-is-a-profit-and-loss-statement">Profit &amp; Loss (P&amp;L)</a><a href="/what-is-accounts-payable">Accounts Payable</a><a href="/what-is-a-chart-of-accounts">Chart of Accounts</a><a href="/what-is-a-general-ledger">General Ledger</a><a class="gloss-all" href="/glossary">Full glossary &rarr;</a></div></div></div></section>
 <!-- glossterms-end -->

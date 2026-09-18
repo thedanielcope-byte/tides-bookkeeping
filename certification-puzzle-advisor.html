@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certified Puzzle Advisor Bookkeeping | Tides</title>
+  <meta name="description" content="Daniel Cope is a Certified Puzzle Advisor (issued March 2026). How we use Puzzle's AI-native ledger for startups, who it fits, and how to verify it." />
+  <link rel="canonical" href="https://www.tidesbookkeeping.com/certification-puzzle-advisor" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Certified Puzzle Advisor | Tides Bookkeeping" />
+  <meta property="og:description" content="Certified Puzzle Advisor since March 2026. How we use Puzzle for startups, and who it fits." />
+  <meta property="og:url" content="https://www.tidesbookkeeping.com/certification-puzzle-advisor" />
+  <meta property="og:image" content="https://www.tidesbookkeeping.com/assets/certifications/puzzle-certificate-daniel-cope.jpg" />
+  <meta property="og:site_name" content="Tides Bookkeeping" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Certified Puzzle Advisor | Tides Bookkeeping" />
+  <meta name="twitter:description" content="Certified Puzzle Advisor since March 2026. How we use Puzzle for startups, and who it fits." />
+  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/assets/certifications/puzzle-certificate-daniel-cope.jpg" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal:#41cfd0; --teal-lt:#e6f9f9; --blue:#66c1ee; --blue-lt:#e8f4fd;
+      --navy:#215197; --navy-dk:#163872; --ink:#0f1c2e; --body:#4a5568;
+      --muted:#94a3b8; --border:#e2eaf3; --bg:#ffffff; --bg-alt:#f7fbff;
+      --shadow:0 1px 3px rgba(15,28,46,.06),0 4px 16px rgba(15,28,46,.08);
+      --shadow-lg:0 8px 40px rgba(15,28,46,.12); --r:16px; --r-sm:10px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden;}
+    img{max-width:100%;display:block;}
+    a{text-decoration:none;color:inherit;}
+    .display{font-family:'Bebas Neue',sans-serif;letter-spacing:.02em;line-height:.95;}
+    h2.display{font-size:clamp(2.4rem,5vw,4rem);}
+    h3{font-size:1.1rem;font-weight:700;color:var(--ink);}
+    p{color:var(--body);}
+    .eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:var(--teal-lt);border:1px solid rgba(65,207,208,.25);padding:5px 12px;border-radius:50px;margin-bottom:1.25rem;}
+    .container{max-width:1180px;margin:0 auto;padding:0 2rem;}
+    .section{padding:96px 0;}
+    .section-alt{background:var(--bg-alt);}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.75rem;border-radius:50px;font-weight:600;font-size:.9rem;cursor:pointer;transition:all .2s ease;border:2px solid transparent;}
+    .btn-primary{background:var(--navy);color:#fff;}
+    .btn-primary:hover{background:var(--navy-dk);transform:translateY(-2px);box-shadow:0 8px 24px rgba(33,81,151,.3);}
+    .btn-teal{background:var(--teal);color:var(--ink);font-weight:700;}
+    .btn-teal:hover{background:#38bfc0;transform:translateY(-2px);box-shadow:0 8px 24px rgba(65,207,208,.4);}
+    .btn-outline{border-color:var(--border);color:var(--ink);background:#fff;}
+    .btn-outline:hover{border-color:var(--navy);color:var(--navy);}
+    .btn-outline-white{border-color:rgba(255,255,255,.35);color:#fff;}
+    .btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+    .nav-wrap{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;max-width:1180px;margin:0 auto;}
+    .nav-logo img{height:44px;}
+    .nav-links{display:flex;align-items:center;gap:2rem;list-style:none;}
+    .nav-links a{font-size:.87rem;font-weight:500;color:var(--body);transition:color .2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--navy);}
+    .nav-links a.active{font-weight:700;}
+    .nav-cta{display:flex;align-items:center;gap:.75rem;}
+    .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+    .hamburger span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:all .25s;}
+    .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+    .hamburger.open span:nth-child(2){opacity:0;}
+    .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+    .breadcrumb{background:var(--bg-alt);border-bottom:1px solid var(--border);padding:.75rem 0;}
+    .breadcrumb-inner{display:flex;align-items:center;gap:.5rem;max-width:1180px;margin:0 auto;padding:0 2rem;font-size:.78rem;color:var(--muted);}
+    .breadcrumb-inner a{color:var(--muted);transition:color .2s;}
+    .breadcrumb-inner a:hover{color:var(--navy);}
+    .breadcrumb-sep{color:var(--border);}
+    .breadcrumb-current{color:var(--navy);font-weight:600;}
+    .page-hero{padding:88px 0 72px;background:#fff;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 85% 20%,rgba(65,207,208,.1) 0%,transparent 60%),radial-gradient(ellipse 50% 50% at 15% 80%,rgba(102,193,238,.08) 0%,transparent 60%);pointer-events:none;}
+    .footer{background:var(--ink);color:#fff;padding:64px 0 32px;}
+    .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:3rem;margin-bottom:3rem;}
+    .footer-logo img{height:40px;margin-bottom:1.25rem;filter:brightness(0) invert(1);}
+    .footer-brand p{font-size:.84rem;color:rgba(255,255,255,.45);line-height:1.7;max-width:280px;margin-bottom:1.5rem;}
+    .footer-social{display:flex;gap:.6rem;}
+    .social-btn{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:.8rem;color:rgba(255,255,255,.5);transition:all .2s;}
+    .social-btn:hover{background:rgba(65,207,208,.15);border-color:var(--teal);color:var(--teal);}
+    .footer-col h4{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.35);margin-bottom:1.25rem;}
+    .footer-links{list-style:none;}
+    .footer-links li{margin-bottom:.55rem;}
+    .footer-links a{font-size:.84rem;color:rgba(255,255,255,.5);transition:color .2s;}
+    .footer-links a:hover{color:var(--teal);}
+    .footer-contact p{font-size:.84rem;color:rgba(255,255,255,.5);margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem;}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-bottom p{font-size:.78rem;color:rgba(255,255,255,.25);margin:0;}
+    .footer-bottom-links{display:flex;gap:2rem;list-style:none;}
+    .footer-bottom-links a{font-size:.78rem;color:rgba(255,255,255,.25);transition:color .2s;}
+    .footer-bottom-links a:hover{color:var(--teal);}
+    @media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
+    @media (max-width:768px){
+      .nav-links,.nav-cta{display:none;}
+      .hamburger{display:flex;}
+      .nav-links.open{display:flex;flex-direction:column;position:fixed;inset:0;background:#fff;z-index:199;list-style:none;justify-content:center;align-items:center;gap:2.25rem;}
+      .nav-links.open a{font-size:1.15rem;font-weight:600;color:var(--ink);}
+    }
+    @media (max-width:640px){
+      .container{padding:0 1.25rem;}
+      .section{padding:56px 0;}
+      .nav-inner{padding:.875rem 1.25rem;}
+      h2.display{font-size:clamp(2rem,9vw,3rem);}
+      .footer-grid{grid-template-columns:1fr;gap:2rem;}
+      .footer-bottom{flex-direction:column;text-align:center;gap:.75rem;}
+      .footer-bottom-links{justify-content:center;flex-wrap:wrap;gap:1rem;}
+    }
+/* mobile-menu-fix-start */
+@media (max-width:768px){
+  body.menu-open .nav-wrap{backdrop-filter:none !important;-webkit-backdrop-filter:none !important;}
+  .nav-links.open{display:flex !important;flex-direction:column !important;position:fixed !important;top:0 !important;left:0 !important;right:0 !important;bottom:0 !important;width:100vw !important;height:100vh !important;max-width:100vw !important;background:#ffffff !important;z-index:9999 !important;list-style:none !important;justify-content:center !important;align-items:center !important;gap:1.5rem !important;margin:0 !important;padding:2rem !important;overflow-y:auto !important;}
+  .nav-links.open a{font-size:1.25rem !important;font-weight:600 !important;color:var(--ink) !important;padding:.75rem 1.5rem !important;display:block !important;}
+  .nav-links.open li{list-style:none !important;}
+  .hamburger{z-index:10000 !important;position:relative;}
+  html,body{overflow-x:hidden !important;max-width:100vw !important;}
+}
+/* mobile-menu-fix-end */
+  
+    /* Secondary, low-commitment CTA (added 2026-09-10). Primary CTA stays
+       /schedule everywhere; this gives people who aren't ready to book a call
+       something to do, using tools that already exist. */
+    .alt-cta{background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:26px 0;}
+    .alt-cta-inner{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;text-align:center;}
+    .alt-cta-text strong{display:block;color:var(--ink);font-size:1rem;}
+    .alt-cta-text span{color:var(--muted);font-size:.88rem;}
+    .alt-cta a.alt-cta-btn{background:var(--navy);color:#fff;font-weight:700;font-size:.88rem;
+      padding:.7rem 1.4rem;border-radius:50px;white-space:nowrap;transition:background .15s;}
+    .alt-cta a.alt-cta-btn:hover{background:var(--teal);color:var(--ink);}
+    @media(max-width:600px){.alt-cta-inner{flex-direction:column;gap:.9rem;}}
+</style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXQS7FCLF2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KXQS7FCLF2');
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AccountingService",
+      "founder": {
+        "@id": "https://www.tidesbookkeeping.com/#daniel-cope"
+      },
+      "name": "Tides Bookkeeping LLC",
+      "description": "Remote bookkeeping and financial services for small businesses nationwide. Clean books, clear numbers, confident decisions.",
+      "url": "https://www.tidesbookkeeping.com",
+      "telephone": "+1-864-559-2686",
+      "email": "support@tidesbookkeeping.com",
+      "image": "https://www.tidesbookkeeping.com/logo.png",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Greenville",
+        "addressRegion": "SC",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/tides-bookkeeping",
+        "https://www.facebook.com/thetidesbookkeeping",
+        "https://www.instagram.com/tidesbookkeeping/"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.tidesbookkeeping.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Certifications",
+          "item": "https://www.tidesbookkeeping.com/certifications"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Certified Puzzle Advisor"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.tidesbookkeeping.com/certification-puzzle-advisor#webpage",
+      "url": "https://www.tidesbookkeeping.com/certification-puzzle-advisor",
+      "name": "Certified Puzzle Advisor",
+      "description": "Daniel Cope is a Certified Puzzle Advisor (issued March 2026). How we use Puzzle's AI-native ledger for startups, who it fits, and how to verify it.",
+      "about": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "certification",
+        "name": "Certified Puzzle Advisor",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Puzzle",
+          "url": "https://puzzle.io"
+        },
+        "dateCreated": "2026-03-16",
+        "identifier": "fm0kkyrnhg"
+      },
+      "mainEntity": {
+        "@id": "https://www.tidesbookkeeping.com/#daniel-cope"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Tides Bookkeeping",
+        "url": "https://www.tidesbookkeeping.com"
+      }
+    }
+  ]
+}
+</script>
+<style>
+.nav-dd{position:relative;}
+.nav-dd-menu{display:none;position:absolute;top:100%;left:0;margin:0;padding:.4rem;list-style:none;background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 10px 30px rgba(15,28,46,.12);min-width:180px;z-index:250;}
+.nav-dd:hover>.nav-dd-menu,.nav-dd:focus-within>.nav-dd-menu{display:block;}
+.nav-dd-menu li{margin:0;}
+.nav-dd-menu a{display:block;padding:.5rem .75rem;border-radius:6px;white-space:nowrap;}
+.nav-dd-menu a:hover{background:var(--teal-lt);color:var(--navy);}
+.nav-dd-caret{font-size:.7em;opacity:.65;}
+.nav-links.open .nav-dd-menu{display:block;position:static;box-shadow:none;border:none;background:transparent;padding:.15rem 0 .15rem 1rem;min-width:0;}
+</style>
+<style>
+/* Certification pages + cert blogs (added 2026-09-18) */
+.prose{font-size:1.02rem;}
+.prose p{margin-bottom:1.1rem;line-height:1.75;}
+.prose h2{font-family:'Bebas Neue',sans-serif;letter-spacing:.02em;font-weight:400;font-size:1.9rem;line-height:1.05;color:var(--navy);margin:2.5rem 0 .75rem;}
+.prose h3{margin:1.6rem 0 .5rem;}
+.prose ul,.prose ol{padding-left:1.4rem;margin:0 0 1.25rem;color:var(--body);}
+.prose li{margin-bottom:.5rem;line-height:1.65;}
+.prose a{color:var(--navy);font-weight:600;text-decoration:underline;}
+.prose a:hover{color:var(--teal);}
+.prose a.cert-card,.prose .cert-related-grid a{text-decoration:none;color:inherit;font-weight:inherit;}
+.prose a.btn{text-decoration:none;}
+.prose a.btn-teal{color:var(--ink);}
+.prose a.btn-primary{color:#fff;}
+.prose .lead{font-size:1.15rem;line-height:1.7;margin-bottom:1.75rem;}
+.prose table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:.92rem;}
+.prose th,.prose td{border:1px solid var(--border);padding:.6rem .75rem;text-align:left;vertical-align:top;color:var(--body);}
+.prose th{background:var(--bg-alt);color:var(--ink);font-weight:700;}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.cert-note{background:var(--bg-alt);border:1px solid var(--border);border-left:4px solid var(--teal);border-radius:12px;padding:1rem 1.25rem;margin:1.5rem 0;color:var(--ink);}
+.cert-note p{margin:0;color:var(--ink);}
+.cert-byline{display:flex;gap:.75rem;align-items:center;color:var(--muted);font-size:.86rem;margin-top:1.25rem;flex-wrap:wrap;}
+.cert-byline a{color:var(--navy);font-weight:600;}
+.cert-avatar{width:30px;height:30px;border-radius:50%;background:var(--teal-lt);color:var(--navy);display:inline-flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800;}
+.cert-hero{display:grid;grid-template-columns:1.5fr 1fr;gap:3rem;align-items:center;}
+.cert-hero-badge{background:#fff;border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow);padding:2rem;display:flex;align-items:center;justify-content:center;min-height:220px;}
+.cert-hero-badge img{max-height:190px;width:auto;}
+.cert-hero .cert-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.75rem;}
+.cert-facts{background:#fff;border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow);padding:1.5rem 1.75rem;margin:0 0 2.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.1rem 2rem;}
+.cert-facts div{min-width:0;}
+.cert-facts dt{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem;}
+.cert-facts dd{margin:0;color:var(--ink);font-weight:600;font-size:.95rem;overflow-wrap:anywhere;}
+.cert-facts dd a{color:var(--navy);text-decoration:underline;}
+.cert-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.25rem;margin:1.5rem 0 2rem;}
+@media (max-width:1040px){.cert-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:560px){.cert-grid{grid-template-columns:1fr;}}
+.cert-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;box-shadow:var(--shadow);transition:transform .2s,border-color .2s;color:inherit;text-decoration:none;}
+.cert-card:hover{transform:translateY(-3px);border-color:var(--teal);}
+.cert-card-badge{height:110px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;}
+.cert-card-badge img{max-height:110px;width:auto;}
+.cert-card h3{font-size:1.05rem;margin-bottom:.25rem;color:var(--ink);}
+.cert-card .cert-meta{font-size:.78rem;color:var(--muted);margin-bottom:.6rem;}
+.cert-card p{font-size:.9rem;line-height:1.6;margin-bottom:.9rem;}
+.cert-card .cert-more{margin-top:auto;font-weight:700;font-size:.85rem;color:var(--navy);}
+.cert-proof{margin:2rem 0;}
+.cert-proof img{border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);width:100%;height:auto;}
+.cert-proof figcaption{font-size:.8rem;color:var(--muted);margin-top:.6rem;text-align:center;}
+.cert-cta{background:linear-gradient(135deg,var(--navy) 0%,#1d3d7e 100%);border-radius:20px;padding:2rem;margin:3rem 0 1.5rem;color:#fff;text-align:center;}
+.cert-cta h3{color:#fff;font-size:1.4rem;margin-bottom:.5rem;}
+.cert-cta p{color:rgba(255,255,255,.78);font-size:.95rem;margin-bottom:1.25rem;}
+.cert-faq{max-width:760px;margin:0 auto;padding:24px 20px 48px;}
+.cert-faq h2{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.5px;font-size:1.9rem;color:var(--navy);}
+.cert-faq details{border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin:12px 0;background:#fff;}
+.cert-faq summary{font-weight:700;color:var(--ink);cursor:pointer;}
+.cert-faq details p{color:#5b6b82;margin:10px 0 0;line-height:1.65;}
+.cert-faq details a{color:var(--navy);font-weight:600;text-decoration:underline;}
+.cert-related{margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--border);}
+.cert-related h3{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:1.8rem;color:var(--navy);margin-bottom:1.25rem;letter-spacing:.02em;}
+.cert-related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;}
+.cert-related-grid a{display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.2rem 1.35rem;transition:all .2s;text-decoration:none;color:inherit;}
+.cert-related-grid a:hover{border-color:var(--teal);transform:translateY(-2px);}
+.cert-related-grid strong{display:block;color:var(--ink);font-size:.95rem;margin-bottom:.2rem;}
+.cert-related-grid span{font-size:.8rem;color:var(--muted);}
+@media (max-width:860px){.cert-hero{grid-template-columns:1fr;gap:2rem;}.cert-hero-badge{min-height:0;padding:1.5rem;}.cert-hero-badge img{max-height:150px;}}
+@media (max-width:640px){.cert-facts{padding:1.25rem;}.prose h2{font-size:1.65rem;}.cert-cta{padding:1.5rem 1.25rem;}}
+</style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.tidesbookkeeping.com/#daniel-cope",
+  "name": "Daniel Cope",
+  "jobTitle": "Lead Bookkeeper",
+  "url": "https://www.tidesbookkeeping.com/about",
+  "worksFor": {
+    "@type": "AccountingService",
+    "name": "Tides Bookkeeping LLC",
+    "url": "https://www.tidesbookkeeping.com"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Indiana University"
+  },
+  "knowsAbout": [
+    "Bookkeeping",
+    "Small business accounting",
+    "QuickBooks Online",
+    "Restaurant bookkeeping",
+    "Restaurant365",
+    "Catch-up bookkeeping",
+    "Payroll",
+    "Gusto",
+    "Puzzle",
+    "A2X",
+    "Ecommerce bookkeeping"
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "QuickBooks Certified ProAdvisor",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Intuit"
+      },
+      "url": "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "QuickBooks Workforce Certification",
+      "description": "Intuit's payroll certification for ProAdvisors, formerly QuickBooks Payroll.",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Intuit"
+      },
+      "url": "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "Certified Puzzle Advisor",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Puzzle",
+        "url": "https://puzzle.io"
+      },
+      "dateCreated": "2026-03-16",
+      "identifier": "fm0kkyrnhg",
+      "url": "https://www.tidesbookkeeping.com/certification-puzzle-advisor"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "Gusto Payroll Certification",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Gusto",
+        "url": "https://gusto.com"
+      },
+      "dateCreated": "2026-03-19",
+      "url": "https://www.tidesbookkeeping.com/certification-gusto-payroll"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "A2X Certification for Accountants and Bookkeepers",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "A2X",
+        "url": "https://www.a2xaccounting.com"
+      },
+      "dateCreated": "2026-09-18",
+      "identifier": "cert_w2m377m7",
+      "url": "https://www.tidesbookkeeping.com/certification-a2x"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "degree",
+      "name": "B.S. Finance",
+      "recognizedBy": {
+        "@type": "CollegeOrUniversity",
+        "name": "Indiana University"
+      }
+    }
+  ],
+  "sameAs": [
+    "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
+  ]
+}
+  </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav-wrap">
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="/"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/#how-it-works">How It Works</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/who-we-serve">Who We Serve</a></li>
+      <li class="nav-dd"><a href="/about">About<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/about">About Us</a></li><li><a href="/certifications">Certifications</a></li><li><a href="/contact">Contact Us</a></li></ul></li>
+      <li><a href="/pricing">Pricing</a></li><li class="nav-dd"><a href="/tools">Resources<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/tools">Free Tools</a></li><li><a href="/glossary">Glossary</a></li><li><a href="/small-business-bookkeeping-guide">Bookkeeping Guide</a></li></ul></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://portal.tidesbookkeeping.com" class="btn btn-outline">Sign In</a>
+      <a href="/schedule" class="btn btn-primary">Book Appointment</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="/certifications">Certifications</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">Certified Puzzle Advisor</span>
+  </div>
+</div>
+
+<section class="page-hero" style="padding:56px 0 40px;">
+  <div class="container"><div class="cert-hero">
+    <div>
+      <div class="eyebrow"><span style="width:6px;height:6px;border-radius:50%;background:var(--teal);"></span> Certification</div>
+      <h1 class="display" style="font-size:clamp(2.4rem,5.5vw,4rem);line-height:1;margin-bottom:1rem;">Certified Puzzle Advisor</h1>
+      <p style="font-size:1.1rem;line-height:1.7;">Daniel Cope completed and passed Puzzle's certification program in March 2026. Puzzle is the ledger we use for startups that run on Stripe and modern banks, and it's where Tides keeps its own books.</p>
+      <div class="cert-actions"><a href="/schedule" class="btn btn-primary">Book a free call</a><a href="/certifications" class="btn btn-outline">All certifications</a></div>
+    </div>
+    <div class="cert-hero-badge"><img src="/assets/certifications/certified-puzzle-advisor-badge.png" alt="Certified Puzzle Advisor badge issued to Daniel Cope, March 16, 2026" width="300" height="300" /></div>
+  </div></div>
+</section>
+<section class="section" style="padding:24px 0 56px;">
+  <div class="container prose" style="max-width:860px;">
+<dl class="cert-facts"><div><dt>Credential</dt><dd>Certified Puzzle Advisor</dd></div><div><dt>Issued by</dt><dd>Puzzle (signed by Luke Frye, CPA, Head of Customer Success)</dd></div><div><dt>Holder</dt><dd>Daniel Cope</dd></div><div><dt>Issued</dt><dd>March 16, 2026</dd></div><div><dt>Certificate ID</dt><dd>fm0kkyrnhg</dd></div><div><dt>Verify</dt><dd>Certificate shown below; copy on request</dd></div></dl>
+<div style="max-width:760px;">
+<h2>What Puzzle is</h2>
+<p>Puzzle is AI-native accounting software built for startups. It's a full general ledger, not an add-on to QuickBooks. What makes it different is speed: cash position, the P&amp;L and key metrics update daily instead of waiting on a month-end close, and the AI categorizes transactions and learns from corrections.</p>
+<p>It connects natively to the tools startups already use, including Stripe, Mercury, Brex and Ramp. It keeps cash-basis and accrual-basis books from the same ledger, so a founder can watch runway in cash while investors get accrual financials. For Stripe businesses it automates revenue recognition and deferred revenue.</p>
+
+<h2>What the certification means</h2>
+<p>Puzzle's certification program trains accountants and bookkeepers to set up, run and close client books on its platform, and tests them before issuing the credential. It means we know where Puzzle is strong, where it needs a human, and how to migrate into it without breaking your history.</p>
+<p>It's also a system we use ourselves. Tides runs its own books in Puzzle.</p>
+
+<h2>Who we put on Puzzle</h2>
+<ul>
+  <li><strong>Startups and SaaS companies</strong> whose revenue runs through Stripe. See <a href="/industry-tech-startups">tech startup bookkeeping</a>.</li>
+  <li><strong>Founders who want real-time numbers</strong> (burn, runway, MRR) without building spreadsheets.</li>
+  <li><strong>Service businesses and consultancies</strong> on modern banks and card programs with a simple operation.</li>
+</ul>
+<p>And who we don't: restaurants, inventory-heavy retailers and contractors who live on job costing are usually better served by QuickBooks Online or Restaurant365 today. We'll say so on the first call. Our <a href="/blog-puzzle-accounting-review">Puzzle accounting review</a> goes through the trade-offs in detail.</p>
+
+<figure class="cert-proof"><img src="/assets/certifications/puzzle-certificate-daniel-cope.jpg" alt="Puzzle Certified certificate: Daniel Cope, Certified Puzzle Advisor, issued 2026-03-16, certificate ID fm0kkyrnhg" width="1000" height="706" loading="lazy" /><figcaption>Daniel Cope's Certified Puzzle Advisor certificate, issued March 16, 2026.</figcaption></figure>
+<div class="cert-cta"><h3>Thinking about Puzzle for your startup?</h3><p>We'll look at your stack and tell you whether Puzzle or QuickBooks is the better home for your books.</p><a href="/schedule" class="btn btn-teal">Book a free 15-minute call &rarr;</a></div>
+<div class="cert-related"><h3>Other certifications</h3><div class="cert-related-grid">
+<a href="/certification-quickbooks-proadvisor"><strong>QuickBooks ProAdvisor</strong><span>Intuit · QuickBooks Workforce certified</span></a>
+<a href="/certification-gusto-payroll"><strong>Gusto Payroll Certified</strong><span>Gusto Academy · March 19, 2026</span></a>
+<a href="/certification-a2x"><strong>A2X Certified</strong><span>A2X · September 18, 2026</span></a>
+<a href="/service-software-setup"><strong>Software setup and cleanup</strong><span>Getting your books onto the right system.</span></a>
+</div></div>
+</div>
+  </div>
+</section>
+
+<section class="cert-faq"><h2>Puzzle certification FAQ</h2>
+<details><summary>What is a Certified Puzzle Advisor?</summary><p>An accountant or bookkeeper who has completed and passed Puzzle's certification program for running client books on the Puzzle platform. Daniel Cope's certification was issued March 16, 2026 (certificate ID fm0kkyrnhg).</p></details>
+<details><summary>Is Puzzle a replacement for QuickBooks?</summary><p>For many startups, yes. Puzzle is its own general ledger, not an add-on. For restaurants, inventory-heavy businesses and job-costing contractors, QuickBooks Online is usually still the better fit.</p></details>
+<details><summary>Can you move my books from QuickBooks to Puzzle?</summary><p>Yes, as a setup project. The ledger start date and opening balances get set first, then history comes across and gets reconciled before we switch you over.</p></details>
+<details><summary>Do I still need a bookkeeper if Puzzle uses AI?</summary><p>The AI handles a lot of the categorizing. Someone still has to reconcile to your bank statements, book accruals, close the month and answer your CPA. That's the part we do.</p></details>
+</section>
+
+<!-- FOOTER -->
+<section class="alt-cta"><div class="container"><div class="alt-cta-inner"><div class="alt-cta-text"><strong>Not ready to talk yet?</strong><span>See how healthy your books are in 2 minutes.</span></div><a class="alt-cta-btn" href="/bookkeeping-health-check">Take the free health check &rarr;</a></div></div></section>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo"><a href="/"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+        <p>Remote bookkeeping and financial services for small businesses nationwide. Clean books. Clear numbers. Confident decisions.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/tides-bookkeeping" target="_blank" rel="noopener" class="social-btn">in</a>
+          <a href="https://www.facebook.com/thetidesbookkeeping" target="_blank" rel="noopener" class="social-btn">f</a>
+          <a href="https://www.instagram.com/tidesbookkeeping/" target="_blank" rel="noopener" class="social-btn">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="/service-monthly-bookkeeping">Monthly Bookkeeping</a></li>
+          <li><a href="/service-catchup-bookkeeping">Catch-Up Bookkeeping</a></li>
+          <li><a href="/service-payroll">Payroll Support</a></li>
+          <li><a href="/service-financial-reporting">Financial Reporting</a></li>
+          <li><a href="/service-bank-reconciliation">Bank Reconciliation</a></li>
+          <li><a href="/services">View All Services →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Who We Serve</h4>
+        <ul class="footer-links">
+          <li><a href="/industry-real-estate">Real Estate</a></li>
+          <li><a href="/industry-contractors-trades">Contractors &amp; Trades</a></li>
+          <li><a href="/industry-restaurants-bars">Restaurants &amp; Bars</a></li>
+          <li><a href="/industry-healthcare">Healthcare Practices</a></li>
+          <li><a href="/industry-professional-services">Professional Services</a></li>
+          <li><a href="/industry-ecommerce-retail">E-Commerce &amp; Retail</a></li>
+          <li><a href="/who-we-serve">All Industries →</a></li>
+          <li><a href="/areas-we-serve">Areas We Serve</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact footer-col">
+        <h4>Contact</h4>
+        <p>📧 support@tidesbookkeeping.com</p>
+        <p>📞 (864) 559-2686</p>
+        <p>📍 Greenville, South Carolina</p>
+        <div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:.6rem;">
+          <a href="/contact" class="btn btn-outline-white" style="font-size:.82rem;padding:.65rem 1.4rem;justify-content:center;">Contact Us →</a>
+          <a href="/schedule" class="btn btn-teal" style="font-size:.82rem;padding:.65rem 1.4rem;">Book a Free Call</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Tides Bookkeeping LLC. All rights reserved.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms of Service</a></li>
+        <li><a href="sitemap.xml">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    const btn=document.getElementById('hamburger');
+    const links=document.querySelector('.nav-links');
+    if(!btn||!links)return;
+    const newBtn=btn.cloneNode(true);
+    btn.parentNode.replaceChild(newBtn,btn);
+    const close=()=>{links.classList.remove('open');newBtn.classList.remove('open');document.body.classList.remove('menu-open');document.body.style.overflow='';};
+    newBtn.addEventListener('click',()=>{const open=links.classList.toggle('open');newBtn.classList.toggle('open',open);document.body.classList.toggle('menu-open',open);document.body.style.overflow=open?'hidden':'';});
+    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+  })();
+</script>
+
+<!--Start of Crisp Chatbox-->
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="63ba78f5-feea-49e7-9a4f-df3435912271";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+<!--End of Crisp Chatbox-->
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a Certified Puzzle Advisor?", "acceptedAnswer": {"@type": "Answer", "text": "An accountant or bookkeeper who has completed and passed Puzzle's certification program for running client books on the Puzzle platform. Daniel Cope's certification was issued March 16, 2026 (certificate ID fm0kkyrnhg)."}}, {"@type": "Question", "name": "Is Puzzle a replacement for QuickBooks?", "acceptedAnswer": {"@type": "Answer", "text": "For many startups, yes. Puzzle is its own general ledger, not an add-on. For restaurants, inventory-heavy businesses and job-costing contractors, QuickBooks Online is usually still the better fit."}}, {"@type": "Question", "name": "Can you move my books from QuickBooks to Puzzle?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, as a setup project. The ledger start date and opening balances get set first, then history comes across and gets reconciled before we switch you over."}}, {"@type": "Question", "name": "Do I still need a bookkeeper if Puzzle uses AI?", "acceptedAnswer": {"@type": "Answer", "text": "The AI handles a lot of the categorizing. Someone still has to reconcile to your bank statements, book accruals, close the month and answer your CPA. That's the part we do."}}]}</script>
+<script>
+/* AI referral tracking (2026-09-16). Records when a visitor arrives from an AI
+   assistant, reports it to GA4 as an "ai_referral" event, and tags any lead that
+   visitor submits so the CRM row and the notification email show where they came
+   from. NOTE: Google AI Overviews referrals look identical to ordinary Google
+   traffic and cannot be separated here - those are only visible in Search
+   Console's Generative AI Features report. */
+(function(){
+  var AI=[[/(^|\.)chatgpt\.com$/,'chatgpt'],[/(^|\.)openai\.com$/,'chatgpt'],
+    [/(^|\.)perplexity\.ai$/,'perplexity'],[/(^|\.)claude\.ai$/,'claude'],
+    [/(^|\.)anthropic\.com$/,'claude'],[/(^|\.)gemini\.google\.com$/,'gemini'],
+    [/(^|\.)copilot\.microsoft\.com$/,'copilot'],[/(^|\.)you\.com$/,'you'],
+    [/(^|\.)poe\.com$/,'poe'],[/(^|\.)grok\.com$/,'grok'],[/(^|\.)x\.ai$/,'grok'],
+    [/(^|\.)mistral\.ai$/,'mistral'],[/(^|\.)deepseek\.com$/,'deepseek']];
+  var KEY='tides_ai_src', src=null, fresh=null;
+  try{ var r=document.referrer; if(r){ var h=new URL(r).hostname.toLowerCase();
+    for(var i=0;i<AI.length;i++){ if(AI[i][0].test(h)){ fresh=AI[i][1]; break; } } } }catch(e){}
+  try{ src=localStorage.getItem(KEY)||null; }catch(e){}
+  if(fresh&&!src){ src=fresh; try{ localStorage.setItem(KEY,src); }catch(e){} }
+  if(fresh&&typeof window.gtag==='function'){
+    try{ gtag('event','ai_referral',{ai_source:fresh,page_location:location.href}); }catch(e){}
+  }
+  window.__tidesAiSource=src;
+  var of=window.fetch;
+  if(of){ window.fetch=function(u,o){
+    try{
+      var url=(typeof u==='string')?u:((u&&u.url)||'');
+      if(src&&url.indexOf('/capture-lead')>-1&&o&&typeof o.body==='string'){
+        var d=JSON.parse(o.body);
+        d.tags=(d.tags?d.tags+',':'')+'ai-'+src;
+        d.message=(d.message?d.message+' ':'')+'[arrived via '+src+']';
+        o=Object.assign({},o,{body:JSON.stringify(d)});
+        return of.call(this,u,o);
+      }
+    }catch(e){}
+    return of.apply(this,arguments);
+  }; }
+})();
+</script>
+</body>
+</html>

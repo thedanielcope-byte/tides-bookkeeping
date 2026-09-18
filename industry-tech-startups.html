@@ -442,6 +442,19 @@
 .nav-dd-caret{font-size:.7em;opacity:.65;}
 .nav-links.open .nav-dd-menu{display:block;position:static;box-shadow:none;border:none;background:transparent;padding:.15rem 0 .15rem 1rem;min-width:0;}
 </style>
+<style>
+/* Certification strip (added 2026-09-18): badges + links to /certifications pages */
+.cert-strip{background:#fff;border-top:1px solid var(--border,#e2eaf3);padding:28px 0;}
+.cert-strip-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;}
+.cert-strip-text{flex:1 1 380px;min-width:0;}
+.cert-strip-text strong{display:block;color:var(--ink,#0f1c2e);font-size:1rem;margin-bottom:.25rem;}
+.cert-strip-text span{color:var(--body,#4a5568);font-size:.92rem;line-height:1.6;}
+.cert-strip-text a{color:var(--navy,#215197);font-weight:600;text-decoration:underline;}
+.cert-strip-badges{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+.cert-strip-badges a{display:block;}
+.cert-strip-badges img{height:56px;width:auto;display:block;}
+@media(max-width:640px){.cert-strip-inner{flex-direction:column;align-items:flex-start;}.cert-strip-badges img{height:48px;}}
+</style>
 </head>
 <body>
 
@@ -450,7 +463,7 @@
     <div class="nav-logo"><a href="/"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
     <ul class="nav-links" id="navLinks">
       <li><a href="/#how-it-works">How It Works</a></li><li><a href="/services">Services</a></li>
-      <li><a href="/who-we-serve" class="active">Who We Serve</a></li><li class="nav-dd"><a href="/about">About<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/about">About Us</a></li><li><a href="/contact">Contact Us</a></li></ul></li><li><a href="/pricing">Pricing</a></li><li class="nav-dd"><a href="/tools">Resources<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/tools">Free Tools</a></li><li><a href="/glossary">Glossary</a></li><li><a href="/small-business-bookkeeping-guide">Bookkeeping Guide</a></li></ul></li>
+      <li><a href="/who-we-serve" class="active">Who We Serve</a></li><li class="nav-dd"><a href="/about">About<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/about">About Us</a></li><li><a href="/certifications">Certifications</a></li><li><a href="/contact">Contact Us</a></li></ul></li><li><a href="/pricing">Pricing</a></li><li class="nav-dd"><a href="/tools">Resources<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/tools">Free Tools</a></li><li><a href="/glossary">Glossary</a></li><li><a href="/small-business-bookkeeping-guide">Bookkeeping Guide</a></li></ul></li>
       <li><a href="/blog">Blog</a></li>
     </ul>
     <div class="nav-cta">
@@ -811,6 +824,9 @@ Every Month</div>
   </div>
 </section>
 
+<!-- certstrip-start -->
+<section class="cert-strip"><div class="container"><div class="cert-strip-inner"><div class="cert-strip-text"><strong>Certified Puzzle Advisor</strong><span>Daniel is a <a href="/certification-puzzle-advisor">Certified Puzzle Advisor</a>. Puzzle is the AI-native ledger built for startups on Stripe and modern banks, with cash and accrual books side by side. Read our <a href="/blog-puzzle-accounting-review">Puzzle accounting review</a>.</span></div><div class="cert-strip-badges"><a href="/certification-puzzle-advisor"><img src="/assets/certifications/certified-puzzle-advisor-badge.png" alt="Certified Puzzle Advisor badge" width="300" height="300" loading="lazy" /></a></div></div></div></section>
+<!-- certstrip-end -->
 <!-- glossterms-start -->
 <section class="gloss-terms"><div class="container"><div class="gloss-terms-inner"><h3>Startup finance terms worth knowing</h3><p>Plain-English explainers, no jargon.</p><div class="gloss-pills"><a href="/what-is-a-cash-flow-statement">Cash Flow Statement</a><a href="/what-is-net-income">Net Income</a><a href="/what-is-a-balance-sheet">Balance Sheet</a><a href="/what-is-retained-earnings">Retained Earnings</a><a href="/what-is-a-general-ledger">General Ledger</a><a class="gloss-all" href="/glossary">Full glossary &rarr;</a></div></div></div></section>
 <!-- glossterms-end -->

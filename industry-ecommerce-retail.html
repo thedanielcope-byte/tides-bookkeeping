@@ -466,7 +466,12 @@
     "QuickBooks Online",
     "Restaurant bookkeeping",
     "Restaurant365",
-    "Catch-up bookkeeping"
+    "Catch-up bookkeeping",
+    "Payroll",
+    "Gusto",
+    "Puzzle",
+    "A2X",
+    "Ecommerce bookkeeping"
   ],
   "hasCredential": [
     {
@@ -478,6 +483,55 @@
         "name": "Intuit"
       },
       "url": "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "QuickBooks Workforce Certification",
+      "description": "Intuit's payroll certification for ProAdvisors, formerly QuickBooks Payroll.",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Intuit"
+      },
+      "url": "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "Certified Puzzle Advisor",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Puzzle",
+        "url": "https://puzzle.io"
+      },
+      "dateCreated": "2026-03-16",
+      "identifier": "fm0kkyrnhg",
+      "url": "https://www.tidesbookkeeping.com/certification-puzzle-advisor"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "Gusto Payroll Certification",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Gusto",
+        "url": "https://gusto.com"
+      },
+      "dateCreated": "2026-03-19",
+      "url": "https://www.tidesbookkeeping.com/certification-gusto-payroll"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "A2X Certification for Accountants and Bookkeepers",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "A2X",
+        "url": "https://www.a2xaccounting.com"
+      },
+      "dateCreated": "2026-09-18",
+      "identifier": "cert_w2m377m7",
+      "url": "https://www.tidesbookkeeping.com/certification-a2x"
     },
     {
       "@type": "EducationalOccupationalCredential",
@@ -494,6 +548,19 @@
   ]
 }
   </script>
+<style>
+/* Certification strip (added 2026-09-18): badges + links to /certifications pages */
+.cert-strip{background:#fff;border-top:1px solid var(--border,#e2eaf3);padding:28px 0;}
+.cert-strip-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;}
+.cert-strip-text{flex:1 1 380px;min-width:0;}
+.cert-strip-text strong{display:block;color:var(--ink,#0f1c2e);font-size:1rem;margin-bottom:.25rem;}
+.cert-strip-text span{color:var(--body,#4a5568);font-size:.92rem;line-height:1.6;}
+.cert-strip-text a{color:var(--navy,#215197);font-weight:600;text-decoration:underline;}
+.cert-strip-badges{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+.cert-strip-badges a{display:block;}
+.cert-strip-badges img{height:56px;width:auto;display:block;}
+@media(max-width:640px){.cert-strip-inner{flex-direction:column;align-items:flex-start;}.cert-strip-badges img{height:48px;}}
+</style>
 </head>
 <body>
 
@@ -502,7 +569,7 @@
     <div class="nav-logo"><a href="/"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
     <ul class="nav-links" id="navLinks">
       <li><a href="/#how-it-works">How It Works</a></li><li><a href="/services">Services</a></li>
-      <li><a href="/who-we-serve" class="active">Who We Serve</a></li><li class="nav-dd"><a href="/about">About<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/about">About Us</a></li><li><a href="/contact">Contact Us</a></li></ul></li><li><a href="/pricing">Pricing</a></li><li class="nav-dd"><a href="/tools">Resources<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/tools">Free Tools</a></li><li><a href="/glossary">Glossary</a></li><li><a href="/small-business-bookkeeping-guide">Bookkeeping Guide</a></li></ul></li>
+      <li><a href="/who-we-serve" class="active">Who We Serve</a></li><li class="nav-dd"><a href="/about">About<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/about">About Us</a></li><li><a href="/certifications">Certifications</a></li><li><a href="/contact">Contact Us</a></li></ul></li><li><a href="/pricing">Pricing</a></li><li class="nav-dd"><a href="/tools">Resources<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/tools">Free Tools</a></li><li><a href="/glossary">Glossary</a></li><li><a href="/small-business-bookkeeping-guide">Bookkeeping Guide</a></li></ul></li>
       <li><a href="/blog">Blog</a></li>
     </ul>
     <div class="nav-cta">
@@ -879,6 +946,9 @@
   </div>
 </section>
 
+<!-- certstrip-start -->
+<section class="cert-strip"><div class="container"><div class="cert-strip-inner"><div class="cert-strip-text"><strong>A2X certified for marketplace payouts</strong><span>Daniel is <a href="/certification-a2x">A2X certified</a>, so Shopify, Amazon and PayPal payouts get split into sales, refunds and fees and matched to your bank every month. New to it? <a href="/blog-what-is-a2x">What is A2X?</a></span></div><div class="cert-strip-badges"><a href="/certification-a2x"><img src="/assets/certifications/a2x-certified-badge.png" alt="A2X Certified badge" width="368" height="250" loading="lazy" /></a></div></div></div></section>
+<!-- certstrip-end -->
 <!-- glossterms-start -->
 <section class="gloss-terms"><div class="container"><div class="gloss-terms-inner"><h3>E-commerce terms worth knowing</h3><p>Plain-English explainers, no jargon.</p><div class="gloss-pills"><a href="/what-is-cost-of-goods-sold">Cost of Goods Sold</a><a href="/what-is-gross-margin">Gross Margin</a><a href="/what-is-a-balance-sheet">Balance Sheet</a><a href="/what-is-net-income">Net Income</a><a href="/what-is-a-chart-of-accounts">Chart of Accounts</a><a class="gloss-all" href="/glossary">Full glossary &rarr;</a></div></div></div></section>
 <!-- glossterms-end -->

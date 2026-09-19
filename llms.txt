@@ -89,6 +89,17 @@ All certifications are held by Daniel Cope, Tides' lead bookkeeper, who does the
 - [Gusto vs QuickBooks Payroll](https://www.tidesbookkeeping.com/blog-gusto-vs-quickbooks-payroll): a comparison from a bookkeeper certified in both.
 - [What Is A2X?](https://www.tidesbookkeeping.com/blog-what-is-a2x): how A2X reconciles Shopify and Amazon payouts.
 
+## Software comparisons
+
+Written by Daniel Cope. First-hand experience in QuickBooks Online and Restaurant365, plus the Puzzle, Gusto and A2X certifications.
+
+- [Best Accounting Software for Restaurants](https://www.tidesbookkeeping.com/blog-best-accounting-software-for-restaurants): QuickBooks, Restaurant365, Xero, MarginEdge, xtraCHEF, Sage Intacct and Wave.
+- [Best Payroll Software for Restaurants](https://www.tidesbookkeeping.com/blog-best-payroll-software-for-restaurants): Toast Payroll, Square Payroll, Gusto and QuickBooks payroll, plus tip credit, FICA tip credit and 2026 W-2 tip reporting.
+- [Toast vs Square vs Clover](https://www.tidesbookkeeping.com/blog-toast-vs-square-vs-clover): how each restaurant POS gets sales, tips, taxes and fees into the books.
+- [Best Accounting Software for Ecommerce](https://www.tidesbookkeeping.com/blog-best-accounting-software-for-ecommerce): QuickBooks vs Xero, plus the A2X, Synder, Webgility and Link My Books connectors.
+- [Best Accounting Software for Startups](https://www.tidesbookkeeping.com/blog-best-accounting-software-for-startups): Puzzle, QuickBooks Online, Xero, Wave and NetSuite.
+- [Best Bookkeeping Software 2026](https://www.tidesbookkeeping.com/blog-best-bookkeeping-software-2026): general picks by business type, and the hub for the guides above.
+
 ## Reference
 
 - [Blog](https://www.tidesbookkeeping.com/blog): all articles.

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KXQS7FCLF2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KXQS7FCLF2');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#12766b">
+<title>Bookkeeping Proposal — Another Wednesday | Tides</title>
+<style>
+  :root {
+    --ground: #eaf1ef; --surface: #ffffff; --ink: #14313b; --ink-soft: #3d545b;
+    --muted: #6a7d80; --line: #d7e2df; --accent: #12766b; --accent-ink: #0c554d;
+    --accent-soft: #dcece7; --sand: #a9793e; --good: #12766b;
+    --shadow: 0 1px 2px rgba(20,49,59,.05), 0 10px 30px rgba(20,49,59,.07);
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0c181d; --surface: #10232a; --ink: #eaf3f1; --ink-soft: #c4d3d2;
+      --muted: #8ba0a1; --line: #21383f; --accent: #38b0a1; --accent-ink: #85d6ca;
+      --accent-soft: #142f2d; --sand: #cf9a5c; --good: #38b0a1;
+      --shadow: 0 1px 2px rgba(0,0,0,.35), 0 12px 34px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="light"] {
+    --ground: #eaf1ef; --surface: #ffffff; --ink: #14313b; --ink-soft: #3d545b;
+    --muted: #6a7d80; --line: #d7e2df; --accent: #12766b; --accent-ink: #0c554d;
+    --accent-soft: #dcece7; --sand: #a9793e; --good: #12766b;
+    --shadow: 0 1px 2px rgba(20,49,59,.05), 0 10px 30px rgba(20,49,59,.07);
+  }
+  :root[data-theme="dark"] {
+    --ground: #0c181d; --surface: #10232a; --ink: #eaf3f1; --ink-soft: #c4d3d2;
+    --muted: #8ba0a1; --line: #21383f; --accent: #38b0a1; --accent-ink: #85d6ca;
+    --accent-soft: #142f2d; --sand: #cf9a5c; --good: #38b0a1;
+    --shadow: 0 1px 2px rgba(0,0,0,.35), 0 12px 34px rgba(0,0,0,.4);
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--sans);
+    line-height: 1.6; -webkit-font-smoothing: antialiased; padding: 40px 20px 64px; }
+  .proposal { max-width: 820px; margin: 0 auto; background: var(--surface);
+    border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; }
+  .pad { padding: clamp(28px, 5vw, 56px); }
+  .head { position: relative; padding-bottom: 0; }
+  .brand { display: inline-block; line-height: 0; }
+  .brand img { height: 58px; width: auto; display: block; border-radius: 9px; }
+  @media (prefers-color-scheme: dark) { .brand { box-shadow: 0 1px 10px rgba(0,0,0,.25); border-radius: 9px; } }
+  :root[data-theme="dark"] .brand { box-shadow: 0 1px 10px rgba(0,0,0,.25); border-radius: 9px; }
+  :root[data-theme="light"] .brand { box-shadow: none; }
+  .eyebrow { font-family: var(--mono); font-size: 11.5px; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--muted); margin: 30px 0 12px; }
+  h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(30px, 5.4vw, 44px);
+    line-height: 1.08; letter-spacing: -.01em; margin: 0 0 18px; text-wrap: balance; }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 14px; color: var(--ink-soft);
+    padding-top: 6px; border-top: 1px solid var(--line); }
+  .meta b { color: var(--ink); font-weight: 600; }
+  .wave { display: block; width: 100%; height: 26px; color: var(--accent); opacity: .9; }
+  section { border-top: 1px solid var(--line); }
+  .kicker { font-family: var(--mono); font-size: 11.5px; letter-spacing: .15em; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 14px; display: flex; align-items: center; gap: 10px; }
+  .kicker::after { content:""; flex:1; height:1px; background: var(--line); }
+  h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(20px, 3vw, 25px); line-height: 1.2;
+    margin: 0 0 14px; letter-spacing: -.01em; text-wrap: balance; }
+  p { margin: 0 0 14px; color: var(--ink-soft); max-width: 62ch; }
+  p:last-child { margin-bottom: 0; }
+  strong { color: var(--ink); font-weight: 600; }
+  .books { display: grid; gap: 10px; margin-top: 22px; }
+  .book { display: grid; grid-template-columns: 30px 1fr; align-items: start; gap: 14px; padding: 15px 18px;
+    border: 1px solid var(--line); border-radius: 10px; background: color-mix(in srgb, var(--accent-soft) 30%, var(--surface)); }
+  .book .n { font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--accent); padding-top: 2px; }
+  .book .t { font-weight: 600; color: var(--ink); }
+  .book .d { font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+  .scope { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 16px; }
+  .scope li { display: grid; grid-template-columns: 22px 1fr; gap: 12px; }
+  .scope .ic { color: var(--accent); padding-top: 3px; }
+  .scope b { color: var(--ink); }
+  .scope span { color: var(--ink-soft); }
+  .prices { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px; }
+  @media (max-width: 560px) { .prices { grid-template-columns: 1fr; } }
+  .card { border: 1px solid var(--line); border-radius: 12px; padding: 22px; background: var(--surface); }
+  .card.feature { border-color: var(--accent); background: color-mix(in srgb, var(--accent-soft) 45%, var(--surface)); }
+  .card .lab { font-family: var(--mono); font-size: 11px; letter-spacing: .13em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 12px; }
+  .card.feature .lab { color: var(--accent-ink); }
+  .amount { font-family: var(--serif); font-weight: 700; color: var(--ink); font-size: clamp(34px, 6vw, 46px);
+    line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+  .amount .per { font-family: var(--sans); font-size: 15px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+  .card .note { font-size: 13.5px; color: var(--ink-soft); margin: 14px 0 0; }
+  .card .split { margin-top: 14px; padding-top: 13px; border-top: 1px dashed var(--line); font-size: 13.5px; color: var(--muted); }
+  .card .split b { color: var(--ink); font-variant-numeric: tabular-nums; }
+  .billnote { margin-top: 18px; font-size: 14px; color: var(--ink-soft);
+    background: color-mix(in srgb, var(--accent-soft) 26%, var(--surface)); border: 1px solid var(--line);
+    border-radius: 10px; padding: 14px 16px; max-width: none; }
+  .addon { margin-top: 16px; border: 1px solid var(--line); border-radius: 12px;
+    background: var(--surface); padding: 22px; }
+  .addon .lab { font-family: var(--mono); font-size: 11px; letter-spacing: .13em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 12px; }
+  .addon p { font-size: 13.5px; color: var(--ink-soft); margin: 0 0 16px; max-width: none; }
+  .tiers { list-style: none; margin: 0; padding: 0; border-top: 1px dashed var(--line); }
+  .tiers li { display: flex; align-items: baseline; justify-content: space-between; gap: 18px;
+    padding: 11px 0; border-bottom: 1px dashed var(--line); font-size: 14px; color: var(--ink-soft); }
+  .tiers .rng b { color: var(--ink); font-weight: 600; }
+  .tiers .amt { font-family: var(--serif); font-weight: 700; color: var(--ink); font-size: 20px;
+    font-variant-numeric: tabular-nums; white-space: nowrap; letter-spacing: -.01em; }
+  .tiers .amt span { font-family: var(--sans); font-size: 12.5px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+  .tiers .rng .rec { font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--accent-ink); margin-left: 8px; }
+  .addon .combined { margin: 18px 0 0; padding: 13px 16px; border-radius: 10px;
+    background: color-mix(in srgb, var(--accent-soft) 45%, var(--surface));
+    border: 1px solid var(--accent); font-size: 14.5px; color: var(--ink-soft); }
+  .addon .combined b { color: var(--ink); font-weight: 700; font-family: var(--serif);
+    font-size: 18px; font-variant-numeric: tabular-nums; }
+  .addon .fine { font-size: 13px; color: var(--muted); margin: 14px 0 0; }
+  .incl { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 12px; }
+  @media (min-width: 620px) { .incl { grid-template-columns: 1fr 1fr; gap: 12px 28px; } }
+  .incl li { display: grid; grid-template-columns: 20px 1fr; gap: 11px; align-items: start; font-size: 14.5px; color: var(--ink-soft); }
+  .incl .ck { color: var(--good); padding-top: 2px; }
+  .steps { list-style: none; padding: 0; margin: 20px 0 0; counter-reset: s; display: grid; gap: 2px; }
+  .steps li { counter-increment: s; display: grid; grid-template-columns: 40px 1fr; gap: 16px; align-items: start;
+    padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .steps li:last-child { border-bottom: none; }
+  .steps li::before { content: counter(s); font-family: var(--serif); font-weight: 700; font-size: 20px; color: var(--accent);
+    width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
+    border: 1.5px solid var(--accent); background: var(--accent-soft); font-variant-numeric: tabular-nums; }
+  .steps .st { padding-top: 8px; color: var(--ink-soft); }
+  .steps .st b { color: var(--ink); }
+  .foot { padding: 26px clamp(28px,5vw,56px); border-top: 1px solid var(--line); display: flex; flex-wrap: wrap;
+    justify-content: space-between; gap: 8px 20px; align-items: center;
+    background: color-mix(in srgb, var(--accent-soft) 22%, var(--surface)); }
+  .foot .who { font-family: var(--serif); font-weight: 700; color: var(--ink); }
+  .foot .sub { font-size: 13px; color: var(--muted); }
+  .foot-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; }
+  .foot-contact a { position: relative; }
+  .foot-contact a + a::before { content: ""; position: absolute; left: -10px; top: 50%; transform: translateY(-50%);
+    width: 1px; height: 13px; background: var(--line); }
+  .foot a { color: var(--accent); text-decoration: none; font-size: 13.5px; }
+  .foot a:hover { text-decoration: underline; }
+  @page { size: Letter; margin: 13mm; }
+  @media print {
+    :root { --ground:#ffffff; --surface:#ffffff; --ink:#14313b; --ink-soft:#3d545b; --muted:#6a7d80; --line:#d7e2df;
+      --accent:#12766b; --accent-ink:#0c554d; --accent-soft:#dcece7; --sand:#a9793e; --good:#12766b; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; padding: 0; }
+    .proposal { border: none; box-shadow: none; border-radius: 0; max-width: none; }
+    .pad { padding: 20px 6px; } .foot { padding: 20px 6px; } h1 { font-size: 31px; } header.head { padding-top: 4px; }
+    section, .book, .card, .steps li, .scope li, .incl li { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<main class="proposal">
+  <header class="head pad">
+    <div class="brand"><img src="tides-logo.png" alt="Tides Bookkeeping" width="501" height="189"></div>
+    <p class="eyebrow">Bookkeeping Proposal</p>
+    <h1>Clean books for Another Wednesday &mdash; and a P&amp;L that answers your question</h1>
+    <div class="meta">
+      <span>Prepared for <b>Will DeVito &mdash; Another Wednesday LLC</b></span>
+      <span>Prepared by <b>Dan Cope &middot; Tides Bookkeeping</b></span>
+      <span><b>September 22, 2026</b></span>
+    </div>
+  </header>
+
+  <svg class="wave" viewBox="0 0 820 26" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 13c68 0 68 10 136 10s68-20 136-20 68 20 137 20 68-20 136-20 68 20 136 20 68-10 137-10v16H0z" fill="currentColor" opacity=".14"/>
+    <path d="M0 13c68 0 68 10 136 10s68-20 136-20 68 20 137 20 68-20 136-20 68 20 136 20 68-10 137-10" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".5"/>
+  </svg>
+
+  <!-- SECTION: situation -->
+  <section class="pad">
+    <p class="kicker">Where you're starting</p>
+    <h2>A company built to own the gear, run by three people who&rsquo;d rather be shooting</h2>
+    <p>Another Wednesday exists for a specific reason: three freelancers went out on their own at the same time, bought a camera package together, and needed an entity that could <strong>own and insure the gear</strong>. Three years on, that&rsquo;s still the shape of it &mdash; no office, no employees, one Chase checking and savings account, three cards, and a package now worth <strong>$35&ndash;40k</strong>.</p>
+    <p>The bookkeeping job landed on you on top of producing, and it&rsquo;s the thing that keeps sliding. Categorization is current to roughly <strong>March</strong>; the receipts since &mdash; including the feature you ran through the company over the summer &mdash; are organized in folders but haven&rsquo;t made it into QuickBooks. You catch up in bursts, a couple of months in a week, and then it slides again.</p>
+    <p>What you actually said you want is simpler than a full rebuild: a P&amp;L honest enough to tell you <strong>whether to push harder on your rates or on the production company fee</strong>. That&rsquo;s a real question and the books can answer it &mdash; they just aren&rsquo;t set up to right now.</p>
+  </section>
+
+  <!-- SECTION: findings — duplicate the .book block per finding (aim for 3–4) -->
+  <section class="pad">
+    <p class="kicker">What we found</p>
+    <h2>Four things worth fixing</h2>
+    <div class="books">
+      <div class="book"><div class="n">01</div><div><span class="t">The P&amp;L can&rsquo;t answer your question yet</span><div class="d">The company profits exactly two ways &mdash; <strong>equipment rental</strong> and the <strong>production company fee</strong>. Right now both land in the same income line as the costs you rebill to clients, so there&rsquo;s no way to see which one is carrying you. Splitting the income side is what turns &ldquo;rates or fees?&rdquo; into something you can read off a report each month.</div></div></div>
+      <div class="book"><div class="n">02</div><div><span class="t">2026 stops around March</span><div class="d">Some accounts are categorized through March and nothing since has been entered or attached. Nine months of a calendar fiscal year is a lot to reconstruct in December, and it&rsquo;s the reason the bank balance never quite tells you what you have.</div></div></div>
+      <div class="book"><div class="n">03</div><div><span class="t">Rebilled costs are sitting in cost of goods</span><div class="d">Everything charged to a client went to COGS in 2025. That isn&rsquo;t wrong, but it merges money you&rsquo;re simply passing through with money Another Wednesday actually spends &mdash; so margin reads oddly and the two real profit lines stay buried.</div></div></div>
+      <div class="book"><div class="n">04</div><div><span class="t">All three partners draw from one account</span><div class="d">Owner&rsquo;s draws aren&rsquo;t separated by partner, so there&rsquo;s no running record of who has taken what. That record is the backbone of the ratio you work out at year end, and it has to be right before the <strong>2027 S-corp restructure</strong> &mdash; it&rsquo;s much easier to build now than to reconstruct later.</div></div></div>
+    </div>
+  </section>
+
+  <!-- SECTION: scope — duplicate <li> per item (3 typical). Icons: use the three inline SVGs from proposals/pizza-bar.html -->
+  <section class="pad">
+    <p class="kicker">Scope of work</p>
+    <h2>What I&rsquo;ll do</h2>
+    <ul class="scope">
+      <li><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M3 12h18M3 17h11" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span><b>One-time cleanup (January&ndash;September).</b> Categorize and reconcile every Chase account and all three cards, attach the receipts you&rsquo;ve been collecting, rebuild the chart of accounts around what a production company actually spends money on, split equipment rental and production fees into their own income lines, and separate each partner&rsquo;s draws.</span></li>
+      <li><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Ongoing every month.</b> Keep it current as it happens &mdash; categorized, reconciled, receipts matched from the portal &mdash; and close each month with a P&amp;L, balance sheet and cash summary. No more catching up three months in a week.</span></li>
+      <li><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/></svg></span><span><b>In step with your CPA.</b> I own the monthly books; your CPA keeps the depreciation schedule and handles the returns and the S-corp work &mdash; now from numbers that don&rsquo;t need reconstructing first.</span></li>
+    </ul>
+  </section>
+
+  <!-- SECTION: investment — two cards: one-time + monthly (feature) -->
+  <section class="pad">
+    <p class="kicker">Investment</p>
+    <h2>Two clear numbers. No surprises.</h2>
+    <div class="prices">
+      <div class="card">
+        <div class="lab">One-time cleanup &middot; Jan &ndash; Sep 2026</div>
+        <div class="amount">$1,050</div>
+        <p class="note">Nine months brought current and reconciled &mdash; categorized, receipts attached, income split into the lines that matter, chart of accounts rebuilt, and each partner&rsquo;s draws separated. Covers <strong>January 1 through September 30, 2026</strong>. Earlier years aren&rsquo;t included; if you want 2024 or 2025 revisited, I&rsquo;ll quote it separately once I&rsquo;ve looked.</p>
+        <div class="split"><b>$525</b> to start &middot; <b>$525</b> when delivered</div>
+      </div>
+      <div class="card feature">
+        <div class="lab">Monthly service</div>
+        <div class="amount">$299<span class="per">/month</span></div>
+        <p class="note">Full bookkeeping in QuickBooks &mdash; Chase checking, savings and all three cards categorized and reconciled, receipts matched from the portal, and a closed set of books every month with a P&amp;L, balance sheet and cash summary you can actually read.</p>
+        <div class="split">Begins <b>October 1, 2026</b></div>
+      </div>
+    </div>
+    <div class="addon">
+      <div class="lab">Year-end 1099s &middot; optional add-on</div>
+      <p>Every subcontractor you pay is a 1099, and that number moves with how busy the year was. Rather than bake a guess into your monthly rate, <strong>tracking is free</strong> and you only pay for the forms you actually issue.</p>
+      <ul class="tiers">
+        <li><span class="rng"><b>Tracking through the year</b><span class="rec">Included</span></span><span class="amt">$0</span></li>
+        <li><span class="rng"><b>Prepared and e-filed at year end</b></span><span class="amt">$25<span>/1099</span></span></li>
+      </ul>
+      <p class="combined">Every subcontractor&rsquo;s running total sits in your portal all year, so <b>nothing</b> gets found in January.</p>
+      <p class="fine">W-9s are collected as subcontractors are paid rather than chased at year end, and each vendor&rsquo;s year-to-date total stays visible in the portal so you can see who is approaching the $600 threshold before the year closes. In January I prepare and e-file the forms and send each contractor their copy &mdash; billed once, at $25 per form issued, with no base fee. If a project ever needs actual payroll rather than 1099s, that&rsquo;s outside this quote and I&rsquo;ll price it before anything starts.</p>
+    </div>
+    <p class="billnote">Your cleanup covers everything through <strong>September 30</strong>, and monthly service covers <strong>October 1 forward</strong> &mdash; so the two never overlap and nothing is billed twice. The monthly rate is <strong>flat year-round</strong>: a quiet month at twenty transactions costs the same as a shoot month at fifty. <strong>Month-to-month, no long-term contract.</strong></p>
+  </section>
+
+  <!-- SECTION: included — duplicate <li> per item; keep the checkmark SVG -->
+  <section class="pad">
+    <p class="kicker">What's included every month</p>
+    <h2>Everything your books need, handled</h2>
+    <ul class="incl">
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Chase checking, savings and all three partner cards categorized and reconciled</span></li>
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Receipts matched and attached from the portal &mdash; upload and forget</span></li>
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Equipment rental and production fee income reported as separate lines</span></li>
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Reimbursed production costs kept apart from what the company spends</span></li>
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Each partner&rsquo;s draws and contributions tracked separately</span></li>
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Monthly P&amp;L, balance sheet and cash summary in your portal</span></li>
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Subcontractor 1099 totals tracked all year, at no charge</span></li>
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Direct access to me by email, text or portal chat &mdash; all three of you</span></li>
+    </ul>
+  </section>
+
+  <!-- SECTION: steps — duplicate <li> per step (4 typical) -->
+  <section class="pad">
+    <p class="kicker">Getting started</p>
+    <h2>Three things to start</h2>
+    <ol class="steps">
+      <li><div class="st"><b>Send the accountant invite.</b> Add <b>dan@tidesbookkeeping.com</b> as an accountant user in QuickBooks. That&rsquo;s the only access I need, and it lets me confirm which plan you&rsquo;re on before I touch anything.</div></li>
+      <li><div class="st"><b>Say yes and the agreement follows.</b> Month-to-month, no term. Payment runs through Stripe &mdash; $525 to start the cleanup, the balance when it&rsquo;s delivered, and $299 monthly from October 1.</div></li>
+      <li><div class="st"><b>Point the receipts at the portal.</b> You, Alex and Wesley all get logins. Drop receipts in as they happen &mdash; that&rsquo;s the whole habit, and it replaces the folder-then-marathon cycle.</div></li>
+    </ol>
+  </section>
+
+  <div class="foot">
+    <div>
+      <div class="who">Tides Bookkeeping</div>
+      <div class="sub">Bookkeeping for owner-operators &middot; Confidential &mdash; prepared for Another Wednesday LLC</div>
+    </div>
+    <div class="foot-contact">
+      <a href="mailto:dan@tidesbookkeeping.com">dan@tidesbookkeeping.com</a>
+      <a href="tel:+18645592686">(864) 559-2686</a>
+    </div>
+  </div>
+</main>
+<script>
+/* AI referral tracking (2026-09-16). Records when a visitor arrives from an AI
+   assistant, reports it to GA4 as an "ai_referral" event, and tags any lead that
+   visitor submits so the CRM row and the notification email show where they came
+   from. NOTE: Google AI Overviews referrals look identical to ordinary Google
+   traffic and cannot be separated here - those are only visible in Search
+   Console's Generative AI Features report. */
+(function(){
+  var AI=[[/(^|\.)chatgpt\.com$/,'chatgpt'],[/(^|\.)openai\.com$/,'chatgpt'],
+    [/(^|\.)perplexity\.ai$/,'perplexity'],[/(^|\.)claude\.ai$/,'claude'],
+    [/(^|\.)anthropic\.com$/,'claude'],[/(^|\.)gemini\.google\.com$/,'gemini'],
+    [/(^|\.)copilot\.microsoft\.com$/,'copilot'],[/(^|\.)you\.com$/,'you'],
+    [/(^|\.)poe\.com$/,'poe'],[/(^|\.)grok\.com$/,'grok'],[/(^|\.)x\.ai$/,'grok'],
+    [/(^|\.)mistral\.ai$/,'mistral'],[/(^|\.)deepseek\.com$/,'deepseek']];
+  var KEY='tides_ai_src', src=null, fresh=null;
+  try{ var r=document.referrer; if(r){ var h=new URL(r).hostname.toLowerCase();
+    for(var i=0;i<AI.length;i++){ if(AI[i][0].test(h)){ fresh=AI[i][1]; break; } } } }catch(e){}
+  try{ src=localStorage.getItem(KEY)||null; }catch(e){}
+  if(fresh&&!src){ src=fresh; try{ localStorage.setItem(KEY,src); }catch(e){} }
+  if(fresh&&typeof window.gtag==='function'){
+    try{ gtag('event','ai_referral',{ai_source:fresh,page_location:location.href}); }catch(e){}
+  }
+  window.__tidesAiSource=src;
+  var of=window.fetch;
+  if(of){ window.fetch=function(u,o){
+    try{
+      var url=(typeof u==='string')?u:((u&&u.url)||'');
+      if(src&&url.indexOf('/capture-lead')>-1&&o&&typeof o.body==='string'){
+        var d=JSON.parse(o.body);
+        d.tags=(d.tags?d.tags+',':'')+'ai-'+src;
+        d.message=(d.message?d.message+' ':'')+'[arrived via '+src+']';
+        o=Object.assign({},o,{body:JSON.stringify(d)});
+        return of.call(this,u,o);
+      }
+    }catch(e){}
+    return of.apply(this,arguments);
+  }; }
+})();
+</script>
+</body>
+</html>

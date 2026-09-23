@@ -2,8 +2,8 @@
 # Format: /from /to STATUS
 #
 # Order matters: first match wins.
-# Funnel-path rules MUST come before the apex catch-all so that
-# tidesbookkeeping.com/tiered-pricing → go.subdomain (not www.).
+# Specific rules MUST come before the apex catch-all at the bottom.
+# (GHL / go.tidesbookkeeping.com is retired; everything lives on-site.)
 
 # ─────────────────────────────────────────────
 # Legacy URLs from previous platforms → current pages
@@ -12,7 +12,7 @@
 /post   /blog    301
 
 # ─────────────────────────────────────────────
-# Funnel paths → go. subdomain (works on apex AND www)
+# Old funnel paths → on-site pages (works on apex AND www)
 # ─────────────────────────────────────────────
 # Lead-magnet thank-you page: clean funnel URL → built file (Cloudflare ignores netlify.toml)
 /tax-checklist/thanks            /tax-checklist-thanks.html                                      200
@@ -21,6 +21,12 @@
 /tiered-pricing                  /pricing                                                        301
 /contact-info-for-pricing        /pricing                                                        301
 /pricing-engagement-agreement    /pricing                                                        301
+
+# Old GHL "7 Financial Tricks" funnel (go.tidesbookkeeping.com/7tricks) now lives on-site.
+/7tricks                         /real-estate-agent-financial-mistakes                           301
+/7tricks/*                       /real-estate-agent-financial-mistakes                           301
+# Old GHL booking path (linked from older PDFs) → on-site booking page
+/book-a-call                     /schedule                                                       301
 
 # ─────────────────────────────────────────────
 # Apex → www canonical redirect (catch-all)

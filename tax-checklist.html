@@ -179,16 +179,16 @@
     .form-embed { width: 100%; min-height: 320px; }
     .form-embed iframe { width: 100%; border: none; }
 
-    /* Fallback native form — used until GHL iframe is wired */
+    /* Native opt-in form → Supabase capture-lead (GHL retired 2026-09) */
     .lead-form { display: flex; flex-direction: column; gap: .85rem; }
-    .lead-form label { font-size: .78rem; font-weight: 600; color: var(--ink); }
-    .lead-form input[type="email"] {
+    .lead-form label { display: block; font-size: .78rem; font-weight: 600; color: var(--ink); margin-bottom: .3rem; }
+    .lead-form input[type="email"], .lead-form input[type="text"] {
       width: 100%; padding: .9rem 1.1rem; border-radius: 12px;
       border: 1.5px solid var(--border); background: #fff;
-      font-size: .95rem; font-family: inherit; color: var(--ink);
+      font-size: 1rem; font-family: inherit; color: var(--ink);
       transition: border-color .2s, box-shadow .2s;
     }
-    .lead-form input[type="email"]:focus {
+    .lead-form input[type="email"]:focus, .lead-form input[type="text"]:focus {
       outline: none; border-color: var(--teal);
       box-shadow: 0 0 0 4px rgba(65,207,208,.15);
     }
@@ -505,26 +505,15 @@
           </div>
         </div>
 
-        <!-- GHL Form: Tax Checklist Opt-In -->
-        <div class="form-embed">
-          <iframe
-            src="https://api.leadconnectorhq.com/widget/form/dD7beuF9Y0ecr0M0hAPc"
-            style="width:100%;height:460px;border:none;border-radius:12px;"
-            id="inline-dD7beuF9Y0ecr0M0hAPc"
-            data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="Tax Checklist Opt-In"
-            data-height="434"
-            data-layout-iframe-id="inline-dD7beuF9Y0ecr0M0hAPc"
-            data-form-id="dD7beuF9Y0ecr0M0hAPc"
-            title="Tax Checklist Opt-In"
-          ></iframe>
-        </div>
+        <form class="lead-form" id="lmForm" onsubmit="return submitChecklist(event)" novalidate>
+          <input name="website_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;" />
+          <div><label for="lmName">First name</label>
+          <input id="lmName" name="first_name" type="text" required autocomplete="given-name" /></div>
+          <div><label for="lmEmail">Email</label>
+          <input id="lmEmail" name="email" type="email" required autocomplete="email" /></div>
+          <button type="submit" id="lmBtn">Send Me The Checklist &rarr;</button>
+          <div id="lmMsg" class="form-micro" role="status"></div>
+        </form>
         <p class="form-micro">Instant download. No spam, ever.</p>
       </div>
     </div>
@@ -752,8 +741,31 @@
   })();
 </script>
 
-<!-- GHL form embed loader -->
-<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+<script>
+/* Checklist opt-in → capture-lead, then the thank-you page (which hands over the PDF;
+   capture-lead only notifies Dan, it never emails the lead). keepalive lets the
+   request finish while the page navigates away. */
+function submitChecklist(e){
+  e.preventDefault();
+  var f=e.target, msg=document.getElementById('lmMsg'), btn=document.getElementById('lmBtn');
+  if(f.website_hp.value) return false;
+  if(!f.first_name.value.trim()||!f.email.value.trim()||!f.email.checkValidity()){
+    msg.style.color='#b3261e'; msg.textContent='Please add your first name and a valid email.'; return false;
+  }
+  btn.disabled=true; btn.textContent='Sending...';
+  var go=function(){ location.href='/tax-checklist/thanks'; };
+  try{
+    fetch('https://wdvolamasztetwpitbwg.supabase.co/functions/v1/capture-lead',{
+      method:'POST', keepalive:true, headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({business:'tides', source:'tax-checklist', tags:'lead-magnet,real-estate-lead,tax-checklist',
+        first_name:f.first_name.value.trim(), email:f.email.value.trim(), website_hp:f.website_hp.value,
+        message:'Downloaded the Real Estate Agent Tax Deduction Checklist'})
+    }).then(go,go);
+  }catch(x){ go(); }
+  setTimeout(go,2500);
+  return false;
+}
+</script>
 
 <!--Start of Crisp Chatbox-->
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="63ba78f5-feea-49e7-9a4f-df3435912271";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>

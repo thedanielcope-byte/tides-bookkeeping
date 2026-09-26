@@ -429,7 +429,7 @@
     }
   },
   "datePublished": "2026-06-05",
-  "dateModified": "2026-06-05"
+  "dateModified": "2026-09-26"
 }
 </script>
 <!-- auto-schema-end -->
@@ -641,11 +641,13 @@
     <h1 class="display" style="font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.05;margin-bottom:1rem;">Catch-Up Bookkeeping: What It Costs and Why</h1>
     <div style="display:flex;gap:1.25rem;align-items:center;color:var(--muted);font-size:.86rem;margin-top:1.25rem;flex-wrap:wrap;">
       <span style="display:flex;align-items:center;gap:.4rem;">
-        <span style="width:28px;height:28px;border-radius:50%;background:var(--teal-lt);display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;">T</span>
-        Tides Bookkeeping
+        <span style="width:28px;height:28px;border-radius:50%;background:var(--teal-lt);display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;">D</span>
+        Daniel Cope, Advanced QuickBooks ProAdvisor
       </span>
       <span>·</span>
       <time datetime="2026-06-05">June 5, 2026</time>
+      <span>·</span>
+      <span>Updated <time datetime="2026-09-26">September 2026</time></span>
       <span>·</span>
       <span>5 min read</span>
     </div>
@@ -683,12 +685,43 @@
 
     <h2 class="display" style="font-size:1.9rem;color:var(--navy);margin-top:2.5rem;margin-bottom:.75rem;">Typical ranges (the honest version)</h2>
     <p>The honest answer is "it depends," but here are the rough bands we see for small businesses with reasonable complexity:</p>
-    <ul style="padding-left:1.5rem;margin-bottom:1.25rem;">
-      <li style="margin-bottom:.5rem;"><strong>3–6 months behind, low volume:</strong> roughly $500–$1,500 total. A few hundred transactions across one or two accounts.</li>
-      <li style="margin-bottom:.5rem;"><strong>6–12 months behind, moderate complexity:</strong> roughly $1,500–$4,000. A typical small business with multiple accounts and a year of activity.</li>
-      <li style="margin-bottom:.5rem;"><strong>One to two full years behind:</strong> roughly $3,000–$8,000+. At this scale, prior-year financials usually need to be rebuilt for tax filing.</li>
-      <li style="margin-bottom:.5rem;"><strong>Multiple years, or a real mess:</strong> $8,000 and up. Often this becomes a forensic project — reconstructing what should have happened.</li>
-    </ul>
+    <!-- catch-up pricing table (component CSS ships with the markup) -->
+    <style>
+      .cuc-tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.25rem 0 1.5rem;border:1px solid #e2eaf3;border-radius:12px;}
+      .cuc-table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px;}
+      .cuc-table caption{text-align:left;padding:.9rem 1rem .25rem;font-size:.82rem;color:#5b6b82;caption-side:top;}
+      .cuc-table th,.cuc-table td{padding:.8rem 1rem;text-align:left;border-bottom:1px solid #eef3f9;vertical-align:top;line-height:1.5;}
+      .cuc-table thead th{background:#f7fafd;color:#0f1c2e;font-weight:700;font-size:.82rem;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;}
+      .cuc-table tbody tr:last-child td{border-bottom:none;}
+      .cuc-table td:first-child{font-weight:700;color:#0f1c2e;white-space:nowrap;}
+      .cuc-table td:last-child{font-weight:700;color:#215197;white-space:nowrap;}
+      @media(max-width:640px){.cuc-table{font-size:.88rem;}.cuc-table th,.cuc-table td{padding:.65rem .75rem;}}
+    </style>
+    <div class="cuc-tablewrap">
+      <table class="cuc-table">
+        <caption>Typical catch-up totals for a small business with reasonable complexity. These are ranges we see, not quotes.</caption>
+        <thead>
+          <tr><th scope="col">How far behind</th><th scope="col">What it usually looks like</th><th scope="col">Typical total</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>3–6 months</td><td>A few hundred transactions across one or two accounts.</td><td>$500–$1,500</td></tr>
+          <tr><td>6–12 months</td><td>A typical small business with multiple accounts and a full year of activity.</td><td>$1,500–$4,000</td></tr>
+          <tr><td>1–2 years</td><td>Prior-year financials usually need to be rebuilt for tax filing.</td><td>$3,000–$8,000+</td></tr>
+          <tr><td>2+ years</td><td>Often a forensic project — reconstructing what should have happened.</td><td>$8,000+</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- estimator handoff: the natural next step from a price range -->
+    <style>
+      .cuc-next{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;background:var(--teal-lt,#eef8f8);border:1px solid #cfe6e6;border-radius:14px;padding:1.25rem 1.5rem;margin:0 0 1.75rem;}
+      .cuc-next p{margin:0;font-size:.98rem;color:#0f1c2e;line-height:1.5;flex:1 1 300px;}
+      .cuc-next a{display:inline-block;background:#0f1c2e;color:#fff;font-weight:700;font-size:.92rem;padding:.7rem 1.4rem;border-radius:50px;text-decoration:none;white-space:nowrap;}
+      .cuc-next a:hover{background:#215197;}
+    </style>
+    <div class="cuc-next">
+      <p><strong>Want a number for your situation?</strong> Our estimator asks how far behind you are and how many accounts are involved, then gives you a range and a timeline.</p>
+      <a href="/catchup-bookkeeping-estimator">Estimate my catch-up</a>
+    </div>
     <p>These aren't quotes — every situation is different — but they're the right order of magnitude. The good news: most reputable bookkeepers (including us) quote catch-up as a flat fee upfront, not hourly, so you know the number before you commit. If you've already received a proposal and want to know exactly what's included, <a href="/blog-catch-up-bookkeeping-what-to-expect" style="color:var(--navy);font-weight:600;text-decoration:underline;">here's what to expect from start to finish</a>.</p>
 
     
@@ -763,6 +796,11 @@
 <details style="border:1px solid #e2eaf3;border-radius:10px;padding:14px 18px;margin:12px 0;"><summary style="font-weight:700;color:#0f1c2e;cursor:pointer;">How long does catch-up bookkeeping take?</summary><p style="color:#5b6b82;margin:10px 0 0;">Anywhere from a few days to a few weeks, depending on how many months you're behind and how many accounts and transactions are involved.</p></details>
 <details style="border:1px solid #e2eaf3;border-radius:10px;padding:14px 18px;margin:12px 0;"><summary style="font-weight:700;color:#0f1c2e;cursor:pointer;">Is catch-up bookkeeping tax-deductible?</summary><p style="color:#5b6b82;margin:10px 0 0;">Yes — bookkeeping is an ordinary and necessary business expense, so catch-up work is deductible like any other bookkeeping fee.</p></details>
 <details style="border:1px solid #e2eaf3;border-radius:10px;padding:14px 18px;margin:12px 0;"><summary style="font-weight:700;color:#0f1c2e;cursor:pointer;">What happens if I don't catch up before tax season?</summary><p style="color:#5b6b82;margin:10px 0 0;">You risk missed deductions, a rushed (and pricier) CPA handoff, and late-filing penalties. Catching up early almost always costs less than the scramble in March.</p></details>
+<details style="border:1px solid #e2eaf3;border-radius:10px;padding:14px 18px;margin:12px 0;"><summary style="font-weight:700;color:#0f1c2e;cursor:pointer;">Do you charge hourly or a flat fee?</summary><p style="color:#5b6b82;margin:10px 0 0;">Flat fee, quoted before any work starts, based on how many months you're behind and how complex the books are. Hourly pricing on a catch-up is where budgets run away, because nobody knows how many hours a messy year takes until it's finished.</p></details>
+<details style="border:1px solid #e2eaf3;border-radius:10px;padding:14px 18px;margin:12px 0;"><summary style="font-weight:700;color:#0f1c2e;cursor:pointer;">I'm three years behind. Can you still help?</summary><p style="color:#5b6b82;margin:10px 0 0;">Yes. Going back multiple years is routine. The further back you go, the more the work shifts from categorising transactions to reconstructing them from statements, and that is what moves the price — not the number of years by itself.</p></details>
+<details style="border:1px solid #e2eaf3;border-radius:10px;padding:14px 18px;margin:12px 0;"><summary style="font-weight:700;color:#0f1c2e;cursor:pointer;">What's the difference between catch-up and cleanup bookkeeping?</summary><p style="color:#5b6b82;margin:10px 0 0;">Catch-up is for periods that were never recorded at all. Cleanup is for periods that were recorded wrong — miscategorised transactions, unreconciled accounts, duplicate entries. Plenty of engagements are both: the last year needs catching up and the year before it needs cleaning.</p></details>
+<details style="border:1px solid #e2eaf3;border-radius:10px;padding:14px 18px;margin:12px 0;"><summary style="font-weight:700;color:#0f1c2e;cursor:pointer;">Does catch-up bookkeeping include filing my missing tax returns?</summary><p style="color:#5b6b82;margin:10px 0 0;">No. Catch-up bookkeeping produces the clean financials a return is built from — a reconciled profit and loss, balance sheet and general ledger for every period. Your CPA or tax preparer files from those. Tides does bookkeeping, not tax preparation.</p></details>
+<details style="border:1px solid #e2eaf3;border-radius:10px;padding:14px 18px;margin:12px 0;"><summary style="font-weight:700;color:#0f1c2e;cursor:pointer;">What if I can't find old receipts or bank statements?</summary><p style="color:#5b6b82;margin:10px 0 0;">Statements are the backbone of a catch-up, and banks can usually reproduce them for several years back. Receipts matter for substantiating deductions rather than for the bookkeeping itself — transactions still reconcile without them.</p></details>
 </section>
 
 <section style="padding:8px 0;"><h2 style="font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.5px;">Authoritative Resources</h2><ul style="color:#334155;line-height:1.8;"><li><a href="https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping" target="_blank" rel="noopener" style="color:#215197;font-weight:600;">IRS — Recordkeeping for Small Business</a></li><li><a href="https://www.sba.gov/business-guide/manage-your-business/manage-your-finances" target="_blank" rel="noopener" style="color:#215197;font-weight:600;">U.S. Small Business Administration</a></li></ul></section>
@@ -884,7 +922,7 @@
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="63ba78f5-feea-49e7-9a4f-df3435912271";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 <!--End of Crisp Chatbox-->
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does catch-up bookkeeping cost?", "acceptedAnswer": {"@type": "Answer", "text": "It's usually priced per month you're behind, based on transaction volume \u2014 often a bit more per month than ongoing service because the work is heavier. Reputable firms quote it as a flat total up front."}}, {"@type": "Question", "name": "How long does catch-up bookkeeping take?", "acceptedAnswer": {"@type": "Answer", "text": "Anywhere from a few days to a few weeks, depending on how many months you're behind and how many accounts and transactions are involved."}}, {"@type": "Question", "name": "Is catch-up bookkeeping tax-deductible?", "acceptedAnswer": {"@type": "Answer", "text": "Yes \u2014 bookkeeping is an ordinary and necessary business expense, so catch-up work is deductible like any other bookkeeping fee."}}, {"@type": "Question", "name": "What happens if I don't catch up before tax season?", "acceptedAnswer": {"@type": "Answer", "text": "You risk missed deductions, a rushed (and pricier) CPA handoff, and late-filing penalties. Catching up early almost always costs less than the scramble in March."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does catch-up bookkeeping cost?", "acceptedAnswer": {"@type": "Answer", "text": "It's usually priced per month you're behind, based on transaction volume — often a bit more per month than ongoing service because the work is heavier. Reputable firms quote it as a flat total up front."}}, {"@type": "Question", "name": "How long does catch-up bookkeeping take?", "acceptedAnswer": {"@type": "Answer", "text": "Anywhere from a few days to a few weeks, depending on how many months you're behind and how many accounts and transactions are involved."}}, {"@type": "Question", "name": "Is catch-up bookkeeping tax-deductible?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — bookkeeping is an ordinary and necessary business expense, so catch-up work is deductible like any other bookkeeping fee."}}, {"@type": "Question", "name": "What happens if I don't catch up before tax season?", "acceptedAnswer": {"@type": "Answer", "text": "You risk missed deductions, a rushed (and pricier) CPA handoff, and late-filing penalties. Catching up early almost always costs less than the scramble in March."}}, {"@type": "Question", "name": "Do you charge hourly or a flat fee?", "acceptedAnswer": {"@type": "Answer", "text": "Flat fee, quoted before any work starts, based on how many months you're behind and how complex the books are. Hourly pricing on a catch-up is where budgets run away, because nobody knows how many hours a messy year takes until it's finished."}}, {"@type": "Question", "name": "I'm three years behind. Can you still help?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Going back multiple years is routine. The further back you go, the more the work shifts from categorising transactions to reconstructing them from statements, and that is what moves the price — not the number of years by itself."}}, {"@type": "Question", "name": "What's the difference between catch-up and cleanup bookkeeping?", "acceptedAnswer": {"@type": "Answer", "text": "Catch-up is for periods that were never recorded at all. Cleanup is for periods that were recorded wrong — miscategorised transactions, unreconciled accounts, duplicate entries. Plenty of engagements are both: the last year needs catching up and the year before it needs cleaning."}}, {"@type": "Question", "name": "Does catch-up bookkeeping include filing my missing tax returns?", "acceptedAnswer": {"@type": "Answer", "text": "No. Catch-up bookkeeping produces the clean financials a return is built from — a reconciled profit and loss, balance sheet and general ledger for every period. Your CPA or tax preparer files from those. Tides does bookkeeping, not tax preparation."}}, {"@type": "Question", "name": "What if I can't find old receipts or bank statements?", "acceptedAnswer": {"@type": "Answer", "text": "Statements are the backbone of a catch-up, and banks can usually reproduce them for several years back. Receipts matter for substantiating deductions rather than for the bookkeeping itself — transactions still reconcile without them."}}]}</script>
 <script>
 /* AI referral tracking (2026-09-16). Records when a visitor arrives from an AI
    assistant, reports it to GA4 as an "ai_referral" event, and tags any lead that

@@ -20,7 +20,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KXQS7FCLF2"></script>
+<script>
+    /* ga-optout-start -- device-level opt-out (2026-09-28). Visit ?ga_optout=1 once
+       on a device to stop counting it; ?ga_optout=0 re-enables. Uses Google's
+       official ga-disable flag, which must be set before gtag.js loads. */
+    (function(){try{
+      var q=new URLSearchParams(location.search).get('ga_optout');
+      if(q==='1'){localStorage.setItem('tides_ga_optout','1');}
+      if(q==='0'){localStorage.removeItem('tides_ga_optout');}
+      if(localStorage.getItem('tides_ga_optout')==='1'){window['ga-disable-G-KXQS7FCLF2']=true;}
+    }catch(e){}})();
+    /* ga-optout-end */
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXQS7FCLF2"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-KXQS7FCLF2');</script>
 <style>
     :root {
@@ -159,7 +171,7 @@
 <!-- NAV -->
 <nav class="nav-wrap">
   <div class="nav-inner">
-    <div class="nav-logo"><a href="/"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+    <div class="nav-logo"><a href="/"><img src="logo-128.png" alt="Tides Bookkeeping" /></a></div>
     <ul class="nav-links" id="navLinks">
       <li><a href="/#how-it-works">How It Works</a></li>
       <li><a href="/services">Services</a></li>
@@ -392,7 +404,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-logo"><a href="/"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+        <div class="footer-logo"><a href="/"><img src="logo-128.png" alt="Tides Bookkeeping" /></a></div>
         <p>Remote bookkeeping and financial services for small businesses nationwide. Clean books. Clear numbers. Confident decisions.</p>
         <div class="footer-social">
           <a href="https://www.linkedin.com/company/tides-bookkeeping" target="_blank" rel="noopener" class="social-btn">in</a>
@@ -515,7 +527,7 @@ function submitLead(e){
       email:f.email.value, website_hp:f.website_hp.value,
       message:'Used the prime cost calculator — '+est})
   }).then(function(r){return r.json();}).then(function(j){
-    if(j&&j.ok){ f.reset(); msg.style.color='#0a7d33'; msg.textContent="Done — check your inbox. I'll follow up."; }
+    if(j&&j.ok){ try{ if(window.gtag) gtag('event','generate_lead',{ method:'calculator', form_location:'prime-cost-calculator' }); }catch(e){}  f.reset(); msg.style.color='#0a7d33'; msg.textContent="Done — check your inbox. I'll follow up."; }
     else { throw new Error(j&&j.error||'err'); }
   }).catch(function(){ msg.style.color='#b3261e'; msg.innerHTML='Something went wrong — email <a href="mailto:hello@tidesbookkeeping.com" style="color:var(--navy);font-weight:600;">hello@tidesbookkeeping.com</a>.'; })
   .then(function(){ btn.disabled=false; btn.textContent=lbl; });

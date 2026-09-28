@@ -362,6 +362,18 @@
 /* mobile-menu-fix-end */
 </style>
   <!-- Google tag (gtag.js) -->
+  <script>
+    /* ga-optout-start -- device-level opt-out (2026-09-28). Visit ?ga_optout=1 once
+       on a device to stop counting it; ?ga_optout=0 re-enables. Uses Google's
+       official ga-disable flag, which must be set before gtag.js loads. */
+    (function(){try{
+      var q=new URLSearchParams(location.search).get('ga_optout');
+      if(q==='1'){localStorage.setItem('tides_ga_optout','1');}
+      if(q==='0'){localStorage.removeItem('tides_ga_optout');}
+      if(localStorage.getItem('tides_ga_optout')==='1'){window['ga-disable-G-KXQS7FCLF2']=true;}
+    }catch(e){}})();
+    /* ga-optout-end */
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXQS7FCLF2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -411,7 +423,7 @@
 <!-- NAV -->
 <nav class="nav-wrap">
   <div class="nav-inner">
-    <div class="nav-logo"><a href="/"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+    <div class="nav-logo"><a href="/"><img src="logo-128.png" alt="Tides Bookkeeping" /></a></div>
     <ul class="nav-links" id="navLinks">
       <li><a href="/#how-it-works">How It Works</a></li>
       <li><a href="/services">Services</a></li>
@@ -534,12 +546,33 @@
   </div>
 </section>
 
+<script>
+/* cal-booking-tracking-start (2026-09-28)
+   The calendar is a bare <iframe>, not the Cal.com embed SDK, so there is no
+   official callback. Cal.com still postMessages booking events to the parent on
+   most versions, so listen for them. Best-effort: if it ever stops firing, the
+   guaranteed path is Cal.com -> event type -> Advanced -> "Redirect on booking"
+   pointed at a page on this site that fires the event directly. */
+(function(){
+  var sent = false;
+  window.addEventListener('message', function(e){
+    if (sent) return;
+    if (!/(^|\.)cal\.com$/.test((function(){try{return new URL(e.origin).hostname;}catch(_){return '';}})())) return;
+    var d = e.data, t = '';
+    try { t = (typeof d === 'string' ? d : (d && (d.type || d.action))) || ''; } catch(_){ return; }
+    if (!/booking(Successful|_successful)|bookingSuccessfulV2/i.test(String(t))) return;
+    sent = true;
+    try { if (window.gtag) gtag('event','book_appointment',{ method:'cal_com', form_location:'schedule' }); } catch(_){}
+  }, false);
+})();
+/* cal-booking-tracking-end */
+</script>
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-logo"><a href="/"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+        <div class="footer-logo"><a href="/"><img src="logo-128.png" alt="Tides Bookkeeping" /></a></div>
         <p>Remote bookkeeping and financial services for small businesses nationwide. Clean books. Clear numbers. Confident decisions.</p>
         <div class="footer-social">
           <a href="https://www.linkedin.com/company/tides-bookkeeping" target="_blank" rel="noopener" class="social-btn">in</a>

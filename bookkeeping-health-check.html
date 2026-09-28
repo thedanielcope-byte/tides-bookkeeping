@@ -2,6 +2,18 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
+  <script>
+    /* ga-optout-start -- device-level opt-out (2026-09-28). Visit ?ga_optout=1 once
+       on a device to stop counting it; ?ga_optout=0 re-enables. Uses Google's
+       official ga-disable flag, which must be set before gtag.js loads. */
+    (function(){try{
+      var q=new URLSearchParams(location.search).get('ga_optout');
+      if(q==='1'){localStorage.setItem('tides_ga_optout','1');}
+      if(q==='0'){localStorage.removeItem('tides_ga_optout');}
+      if(localStorage.getItem('tides_ga_optout')==='1'){window['ga-disable-G-KXQS7FCLF2']=true;}
+    }catch(e){}})();
+    /* ga-optout-end */
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXQS7FCLF2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -262,6 +274,7 @@
       message:'Bookkeeping Health Check score: ' + score + '/100 — ' + b.t,
       notify:'thedanielcope@gmail.com'
     }) }).catch(function(){});
+    try{ if(window.gtag) gtag('event','generate_lead',{ method:'quiz', form_location:'bookkeeping-health-check' }); }catch(e){}
     // Show result regardless (never block the user on the network)
     document.getElementById('capture').classList.add('hidden');
     document.getElementById('scoreNum').textContent = score;

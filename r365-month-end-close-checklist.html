@@ -2,6 +2,18 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
+  <script>
+    /* ga-optout-start -- device-level opt-out (2026-09-28). Visit ?ga_optout=1 once
+       on a device to stop counting it; ?ga_optout=0 re-enables. Uses Google's
+       official ga-disable flag, which must be set before gtag.js loads. */
+    (function(){try{
+      var q=new URLSearchParams(location.search).get('ga_optout');
+      if(q==='1'){localStorage.setItem('tides_ga_optout','1');}
+      if(q==='0'){localStorage.removeItem('tides_ga_optout');}
+      if(localStorage.getItem('tides_ga_optout')==='1'){window['ga-disable-G-KXQS7FCLF2']=true;}
+    }catch(e){}})();
+    /* ga-optout-end */
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXQS7FCLF2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -217,7 +229,7 @@
 
 <article class="doc">
   <div class="doc-head">
-    <img src="logo.png" alt="Tides Bookkeeping" />
+    <img src="logo-128.png" alt="Tides Bookkeeping" />
     <div class="kicker">Free Resource · Restaurant Bookkeeping</div>
     <h1 class="display">The Restaurant365 Month-End Close Checklist</h1>
     <p>Everything that has to be true before you trust the P&amp;L — in the order a restaurant specialist actually works it inside R365.</p>

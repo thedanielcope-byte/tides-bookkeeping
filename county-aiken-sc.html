@@ -514,6 +514,18 @@
     </style>
 
   <!-- Google tag (gtag.js) -->
+  <script>
+    /* ga-optout-start -- device-level opt-out (2026-09-28). Visit ?ga_optout=1 once
+       on a device to stop counting it; ?ga_optout=0 re-enables. Uses Google's
+       official ga-disable flag, which must be set before gtag.js loads. */
+    (function(){try{
+      var q=new URLSearchParams(location.search).get('ga_optout');
+      if(q==='1'){localStorage.setItem('tides_ga_optout','1');}
+      if(q==='0'){localStorage.removeItem('tides_ga_optout');}
+      if(localStorage.getItem('tides_ga_optout')==='1'){window['ga-disable-G-KXQS7FCLF2']=true;}
+    }catch(e){}})();
+    /* ga-optout-end */
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXQS7FCLF2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -642,7 +654,7 @@
 <!-- NAV -->
 <nav class="nav-wrap">
   <div class="nav-inner">
-    <div class="nav-logo"><a href="/"><img src="logo.png" alt="Tides Bookkeeping" /></a></div>
+    <div class="nav-logo"><a href="/"><img src="logo-128.png" alt="Tides Bookkeeping" /></a></div>
     <ul class="nav-links" id="navLinks">
       <li><a href="/#how-it-works">How It Works</a></li>
       <li><a href="/services">Services</a></li>
@@ -1073,7 +1085,7 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="logo.png" alt="Tides Bookkeeping" class="footer-logo" />
+        <img src="logo-128.png" alt="Tides Bookkeeping" class="footer-logo" />
         <p class="footer-about">Remote bookkeeping, payroll support, and financial reporting for small businesses across Aiken County and all of South Carolina.</p>
       </div>
       <div class="footer-col">

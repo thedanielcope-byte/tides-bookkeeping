@@ -96,6 +96,8 @@
   .scope .ic { color: var(--accent); padding-top: 3px; }
   .scope b { color: var(--ink); }
   .scope span { color: var(--ink-soft); }
+  .was { font-family: var(--sans); font-size: .5em; font-weight: 500; color: var(--muted); text-decoration: line-through; margin-right: 10px; letter-spacing: 0; }
+  .tiers .amt span.was { text-decoration: line-through; margin-right: 6px; font-size: 13.5px; }
   .prices { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px; }
   @media (max-width: 560px) { .prices { grid-template-columns: 1fr; } }
   .card { border: 1px solid var(--line); border-radius: 12px; padding: 22px; background: var(--surface); }
@@ -227,9 +229,9 @@
     <div class="prices">
       <div class="card">
         <div class="lab">One-time catch-up &middot; Jan &ndash; Oct 2026</div>
-        <div class="amount">$2,975</div>
-        <p class="note">Ten months categorized and reconciled across Summit checking, both Shopify Balance accounts and all three cards, starting from the 2025 year-end balances. Seller-note payments recorded, Gusto connected, and Shopify sales, fees and gift cards posted cleanly. Covers <strong>January 1 through October 31, 2026</strong>.</p>
-        <div class="split"><b>One payment</b> &middot; due on signing</div>
+        <div class="amount"><span class="was">$5,950</span>$2,975</div>
+        <p class="note">Ten months at the $595 monthly rate comes to <strong>$5,950</strong>. Because monthly service follows, the catch-up is half that. Ten months categorized and reconciled across Summit checking, both Shopify Balance accounts and all three cards, starting from the 2025 year-end balances. Seller-note payments recorded, Gusto connected, and Shopify sales, fees and gift cards posted cleanly. Covers <strong>January 1 through October 31, 2026</strong>.</p>
+        <div class="split"><b>Two payments</b> &middot; $1,487.50 on signing, $1,487.50 on completion</div>
       </div>
       <div class="card feature">
         <div class="lab">Monthly service &middot; Growth</div>
@@ -247,9 +249,9 @@
     <div class="prices">
       <div class="card">
         <div class="lab">One-time yearly review &middot; Jan &ndash; Oct 2026</div>
-        <div class="amount">$395</div>
-        <p class="note">A full pass over Poppy&rsquo;s 2026: every account reconciled through October, categories and classifications cleaned up, anything stuck since January brought current, and Gusto connected. Covers <strong>January 1 through October 31, 2026</strong>.</p>
-        <div class="split"><b>One payment</b> &middot; due on signing</div>
+        <div class="amount"><span class="was">$395</span>$0</div>
+        <p class="note"><strong>Waived when both stores are on monthly service with me.</strong> A full pass over Poppy&rsquo;s 2026: every account reconciled through October, categories and classifications cleaned up, anything stuck since January brought current, and Gusto connected. Covers <strong>January 1 through October 31, 2026</strong>.</p>
+        <div class="split"><b>No charge</b> &middot; with both stores on monthly</div>
       </div>
       <div class="card feature">
         <div class="lab">Monthly service &middot; Essential</div>
@@ -261,13 +263,13 @@
     <div class="addon">
       <div class="lab">Both stores together</div>
       <ul class="tiers">
-        <li><span class="rng"><b>Tradition catch-up &middot; Jan &ndash; Oct 2026</b><span class="rec">One-time</span></span><span class="amt">$2,975</span></li>
-        <li><span class="rng"><b>Poppy yearly review &middot; Jan &ndash; Oct 2026</b><span class="rec">One-time</span></span><span class="amt">$395</span></li>
+        <li><span class="rng"><b>Tradition catch-up &middot; Jan &ndash; Oct 2026</b><span class="rec">One-time &middot; two payments</span></span><span class="amt"><span class="was">$5,950</span>$2,975</span></li>
+        <li><span class="rng"><b>Poppy yearly review &middot; Jan &ndash; Oct 2026</b><span class="rec">Waived with both stores on monthly</span></span><span class="amt"><span class="was">$395</span>$0</span></li>
         <li><span class="rng"><b>Tradition monthly &middot; Growth</b></span><span class="amt">$595<span>/mo</span></span></li>
         <li><span class="rng"><b>Poppy monthly &middot; Essential</b></span><span class="amt">$395<span>/mo</span></span></li>
       </ul>
       <p class="combined">From November 1, both stores: <b>$990/month</b> &mdash; invoiced separately per store so each business carries its own expense.</p>
-      <p class="fine">Each store&rsquo;s tier is set by its volume &mdash; Essential covers up to roughly $50k a month in activity, Growth the next step up. If a store outgrows its tier, I&rsquo;ll raise it with you at least a month ahead, never after the fact.</p>
+      <p class="fine">Each store&rsquo;s tier is set by its volume &mdash; Essential covers up to roughly $50k a month in activity, Growth the next step up. If a store outgrows its tier, I&rsquo;ll raise it with you at least a month ahead, never after the fact. Poppy&rsquo;s $395 review is waived as long as both stores start monthly service on November 1.</p>
     </div>
     <p class="billnote">Catch-up work covers everything through <strong>October 31</strong>, and monthly service covers <strong>November 1 forward</strong> &mdash; so the two never overlap and nothing is billed twice. Tradition&rsquo;s July&ndash;December 2025 catch-up is separate and already agreed. <strong>Month-to-month, no long-term contract.</strong></p>
   </section>
@@ -295,7 +297,7 @@
     <p class="kicker">Getting started</p>
     <h2>Four things to start</h2>
     <ol class="steps">
-      <li><div class="st"><b>Say yes and the agreements follow.</b> One per store, month-to-month. Tradition&rsquo;s <b>$2,975</b> and Poppy&rsquo;s <b>$395</b> are each paid once on signing; monthly billing starts November 1.</div></li>
+      <li><div class="st"><b>Say yes and the agreements follow.</b> One per store, month-to-month. Tradition&rsquo;s <b>$2,975</b> is paid in two halves &mdash; <b>$1,487.50</b> on signing and <b>$1,487.50</b> when the catch-up is finished. Poppy&rsquo;s review is on me. Monthly billing starts November 1.</div></li>
       <li><div class="st"><b>Invite me to Poppy&rsquo;s QuickBooks.</b> Add <b>dan@tidesbookkeeping.com</b> as an accountant user, the same way you did for Tradition. Connect Gusto to both files if you can &mdash; I&rsquo;ll walk you through it if not.</div></li>
       <li><div class="st"><b>Send Poppy&rsquo;s regulars.</b> Its accounts and anything that repeats each month &mdash; rent, loans, subscriptions. Tradition&rsquo;s are already covered from the 2025 work.</div></li>
       <li><div class="st"><b>Send Tradition&rsquo;s 2026 statements.</b> January through now for Summit checking, the Summit card, the Amex and the Capital One card, plus the Shopify Balance statements and your 2026 Wisconsin sales tax returns. The portal works the same way it did for 2025.</div></li>

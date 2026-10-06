@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#12766b">
+<title>Avocados Follow-up Questions | Tides Bookkeeping</title>
+<style>
+  :root {
+    --ground: #eaf1ef; --surface: #ffffff; --ink: #14313b; --ink-soft: #3d545b;
+    --muted: #6a7d80; --line: #d7e2df; --accent: #12766b; --accent-ink: #0c554d;
+    --accent-soft: #dcece7; --sand: #a9793e; --strike: #b3261e;
+    --shadow: 0 1px 2px rgba(20,49,59,.05), 0 10px 30px rgba(20,49,59,.07);
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0c181d; --surface: #10232a; --ink: #eaf3f1; --ink-soft: #c4d3d2;
+      --muted: #8ba0a1; --line: #21383f; --accent: #38b0a1; --accent-ink: #85d6ca;
+      --accent-soft: #142f2d; --sand: #cf9a5c; --strike: #ff6b64;
+      --shadow: 0 1px 2px rgba(0,0,0,.35), 0 12px 34px rgba(0,0,0,.4);
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.5; -webkit-text-size-adjust: 100%; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 24px 16px 140px; }
+  header.top { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+  header.top img { height: 44px; width: auto; background: #fff; border-radius: 8px; padding: 4px 8px; }
+  h1 { font-family: var(--serif); font-weight: 600; font-size: 30px; line-height: 1.15; margin: 0 0 10px; text-wrap: balance; }
+  h2 { font-family: var(--serif); font-weight: 600; font-size: 22px; margin: 0 0 4px; }
+  p { margin: 0 0 12px; color: var(--ink-soft); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 18px; margin-bottom: 14px; }
+  .sec { margin: 34px 0 12px; }
+  .sec .count { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  label.f { display: block; font-size: 13px; font-weight: 600; color: var(--muted); margin: 12px 0 5px; letter-spacing: .02em; }
+  input[type=text], input[type=password], select { width: 100%; font: inherit; font-size: 16px; color: var(--ink); background: var(--ground); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; min-width: 0; }
+  select { appearance: none; -webkit-appearance: none; padding-right: 30px; cursor: pointer;
+    background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+    background-position: calc(100% - 15px) 52%, calc(100% - 10px) 52%; background-size: 5px 5px; background-repeat: no-repeat; }
+  input:focus, select:focus, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  input:disabled { opacity: .45; }
+  .grid { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; }
+  .row { display: grid; grid-template-columns: minmax(0, 1.5fr) 118px minmax(0, 1.1fr) minmax(0, 1.1fr) minmax(0, 1.3fr); gap: 10px; align-items: center; padding: 10px 14px; border-top: 1px solid var(--line); border-left: 4px solid transparent; }
+  .row.head { border-top: 0; background: var(--ground); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 600; padding-top: 9px; padding-bottom: 9px; }
+  .row.done { border-left-color: var(--accent); }
+  .who b { display: block; font-weight: 650; font-size: 15.5px; line-height: 1.3; }
+  .who small { display: block; font-size: 13.5px; color: var(--ink-soft); line-height: 1.35; margin-top: 2px; }
+  .tog { background: none; border: 0; padding: 4px 0; text-align: left; color: var(--accent-ink); font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.3; border-radius: 6px; }
+  .tog .amt { display: block; color: var(--ink); font-weight: 650; }
+  .tog .car { display: inline-block; transition: transform .15s; margin-right: 3px; }
+  .tog[aria-expanded="true"] .car { transform: rotate(90deg); }
+  .lbl { display: none; }
+  .checks { grid-column: 1 / -1; background: var(--ground); border-radius: 10px; padding: 4px 10px; overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  th { text-align: left; font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 600; padding: 7px 8px; border-bottom: 1px solid var(--line); }
+  td { padding: 5px 8px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  tr:last-child td { border-bottom: 0; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td input[type=text] { padding: 5px 8px; min-width: 160px; background: var(--surface); }
+  .sec p.intro { margin-top: 6px; }
+  @media (max-width: 860px) {
+    .row { grid-template-columns: 1fr 1fr; gap: 8px 10px; padding: 14px; }
+    .row.head { display: none; }
+    .who { grid-column: 1 / -1; }
+    .row .cell-checks { grid-column: 1 / -1; }
+    .row .cell-note { grid-column: 1 / -1; }
+    .lbl { display: block; font-size: 12px; font-weight: 600; color: var(--muted); margin-bottom: 3px; }
+  }
+  @media (max-width: 480px) { .row .cell-for, .row .cell-name { grid-column: 1 / -1; } }
+  .bar { position: fixed; left: 0; right: 0; bottom: 0; background: var(--surface); border-top: 1px solid var(--line); box-shadow: 0 -6px 24px rgba(20,49,59,.08); }
+  .bar-in { max-width: 1180px; margin: 0 auto; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .prog { flex: 1; min-width: 150px; font-size: 14px; color: var(--ink-soft); }
+  .prog b { color: var(--ink); font-variant-numeric: tabular-nums; }
+  .track { height: 6px; background: var(--accent-soft); border-radius: 99px; margin-top: 5px; overflow: hidden; }
+  .track i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .3s; }
+  button { font: inherit; font-weight: 650; border-radius: 10px; padding: 10px 16px; border: 1px solid var(--accent); cursor: pointer; }
+  button.pri { background: var(--accent); color: #fff; }
+  button.sec2 { background: transparent; color: var(--accent-ink); }
+  button:disabled { opacity: .55; cursor: default; }
+  .status { font-size: 13px; color: var(--muted); width: 100%; }
+  .status.err { color: var(--strike); }
+  .banner { border-left: 4px solid var(--accent); }
+  .hide { display: none !important; }
+  @media (max-width: 520px) { h1 { font-size: 25px; } .item-head { flex-direction: column; gap: 0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><img src="tides-logo.png" alt="Tides Bookkeeping"></header>
+
+  <div id="gate" class="card hide">
+    <h2>Enter your access code</h2>
+    <p>It's in the email from Dan. The link in that email opens this page without it.</p>
+    <label class="f" for="code">Access code</label>
+    <input type="password" id="code" autocomplete="off">
+    <p id="gateMsg" class="status err" style="margin-top:8px"></p>
+    <button class="pri" id="open" style="margin-top:6px">Open worksheet</button>
+  </div>
+
+  <main id="sheet" class="hide">
+    <h1>Avocados: the last few questions</h1>
+    <p>Kunal, thanks for the first round. It cleared most of the list. These are the ones still open, plus the card charges and deposits I can’t place. Answer what you know, skip what you don’t. It saves as you go and the same link works on any device.</p>
+    <div id="doneBanner" class="card banner hide"><b>Submitted. Thank you.</b> You can still change an answer and submit again.</div>
+    <div id="sections"></div>
+    <p style="margin-top:28px;font-size:14px">Dan Cope, Tides Bookkeeping · dan@tidesbookkeeping.com</p>
+  </main>
+</div>
+
+<div class="bar hide" id="bar"><div class="bar-in">
+  <div class="prog"><span><b id="pn">0</b> of <b id="pt">0</b> answered</span><div class="track"><i id="pf"></i></div></div>
+  <button class="sec2" id="save">Save</button>
+  <button class="pri" id="submit">Submit to Dan</button>
+  <div class="status" id="status" role="status"></div>
+</div></div>
+
+<script>
+(function(){
+  var SB = 'https://wdvolamasztetwpitbwg.supabase.co/rest/v1/rpc/';
+  var KEY = 'sb_publishable_QJLFpFpOjsziPQX09HzVzA_LbU4VrY0';
+  var SLUG = 'avocados-followup';
+  var LOCAL = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) && /local/.test(location.search);
+  var code = decodeURIComponent(location.hash.slice(1));
+  var items = [], answers = {}, dirty = false, timer = null, saving = false;
+  var $ = function(id){ return document.getElementById(id); };
+
+  var SECTIONS = [
+    ['who', 'Still need a name, or what it was for', 'Checks where the first answer was "something else" or the name was left blank.'],
+    ['sup', 'Two suppliers', 'You said my guess was wrong. Who are they?'],
+    ['mus', 'Musicians', 'I just need the name of the musician or band.'],
+    ['con', 'Outside contractors', ''],
+    ['two', 'Two to confirm', ''],
+    ['rec', 'Recent checks', ''],
+    ['card', 'Card charges', 'What were these for? One answer per store is fine. Open the list to note any that were different.'],
+    ['dep', 'Deposits', 'Where did this money come from?']
+  ];
+
+  var KINDS = {
+    person: { opts: ['Tips', 'Kitchen pay', 'Front-of-house pay', 'Paying them back for a purchase', 'Outside contractor', 'Musician', 'Something else'], name: 'Full name' },
+    abel:   { opts: ['Pay', 'Tips', 'Both'], name: '' },
+    owner:  { opts: ['Money I took out for myself', 'Cash used to pay business costs', 'Something else'], name: '' },
+    bought: { opts: ['Food', 'Kitchen or bar supplies', 'Decor or event', 'It was tips', 'Something else'], name: 'What was bought' },
+    split:  { opts: [], name: 'What was bought', amount: 'Purchase part, $' },
+    vendor: { opts: ['Yes, that’s right', 'No, it’s someone else'], name: 'If not, who is it?' },
+    pre:    { opts: ['The seller’s costs', 'Mine', 'Some of each'], name: '' }
+  };
+  var HEAD_FOR = { bought: 'What kind of purchase?', vendor: 'Is my read right?', pre: 'Whose costs?', split: 'Purchase amount', owner: 'What was it?' };
+
+  function money(n){ return '$' + Number(n).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
+  function el(tag, attrs, kids){
+    var e = document.createElement(tag), k;
+    for (k in (attrs || {})) { if (k === 'text') e.textContent = attrs[k]; else if (k === 'cls') e.className = attrs[k]; else e.setAttribute(k, attrs[k]); }
+    (kids || []).forEach(function(c){ e.appendChild(c); });
+    return e;
+  }
+  function ans(id){ return answers[id] || (answers[id] = {}); }
+  function answered(it){
+    var a = answers[it.id]; if (!a) return false;
+    return !!(a.type || (a.name && a.name.trim()) || (a.note && a.note.trim()) || (a.amount && a.amount.trim()) ||
+      (a.checks && Object.keys(a.checks).some(function(k){ return a.checks[k].trim(); })));
+  }
+  function changed(it, row){
+    dirty = true;
+    if (row) row.classList.toggle('done', answered(it));
+    progress();
+    try { localStorage.setItem('ws_' + SLUG, JSON.stringify(answers)); } catch (e) {}
+    clearTimeout(timer); timer = setTimeout(function(){ save(false); }, 2500);
+    status('Not saved yet…');
+  }
+  function progress(){
+    var n = items.filter(answered).length;
+    $('pn').textContent = n; $('pt').textContent = items.length;
+    $('pf').style.width = (items.length ? 100 * n / items.length : 0) + '%';
+  }
+  function status(t, err){ var s = $('status'); s.textContent = t; s.className = 'status' + (err ? ' err' : ''); }
+  function cell(cls, label, ctl){ return el('div', {cls: cls}, [el('span', {cls: 'lbl', text: label}), ctl]); }
+  function input(it, row, key, ph){
+    var inp = el('input', {type: 'text', placeholder: ph || '', 'aria-label': (ph || key) + ', ' + it.title});
+    if (!ph) { inp.disabled = true; inp.placeholder = '—'; }
+    inp.value = ans(it.id)[key] || '';
+    inp.addEventListener('input', function(){ ans(it.id)[key] = inp.value; changed(it, row); });
+    return inp;
+  }
+
+  function renderRow(it, frag){
+    var K = it.opts ? { opts: it.opts, name: it.nameLabel || '' } : (KINDS[it.kind] || KINDS.person), n = it.checks.length;
+    var row = el('div', {cls: 'row' + (answered(it) ? ' done' : '')});
+    var hint = it.hint || '';
+    if (n === 1 && it.checks[0].memo && it.kind === 'person' && !/memo/i.test(hint)) hint = (hint ? hint + ' ' : '') + 'Memo: ' + it.checks[0].memo + '.';
+    var who = el('div', {cls: 'who'}, [el('b', {text: it.title})]);
+    if (hint) who.appendChild(el('small', {text: hint}));
+    row.appendChild(who);
+
+    // checks column: count + total, toggles the check list
+    var tog = el('button', {cls: 'tog', type: 'button', 'aria-expanded': 'false'});
+    tog.appendChild(el('span', {cls: 'amt', text: money(it.total)}));
+    tog.appendChild(el('span', {cls: 'car', text: '▸'}));
+    tog.appendChild(document.createTextNode(n === 1 ? (/^\d+$/.test(it.checks[0].n) ? '#' + it.checks[0].n + ' · ' : '') + it.checks[0].date : n + (/^\d+$/.test(it.checks[0].n) ? ' checks' : ' items')));
+    row.appendChild(cell('cell-checks', 'Checks', tog));
+
+    // what it was for (or the equivalent question for this kind)
+    var forCtl;
+    if (K.opts.length) {
+      forCtl = el('select', {'aria-label': (HEAD_FOR[it.kind] || 'What was it for') + ', ' + it.title});
+      forCtl.appendChild(el('option', {value: '', text: 'Choose…'}));
+      K.opts.forEach(function(o){ var op = el('option', {value: o, text: o}); if (ans(it.id).type === o) op.selected = true; forCtl.appendChild(op); });
+      forCtl.addEventListener('change', function(){ if (forCtl.value) ans(it.id).type = forCtl.value; else delete ans(it.id).type; changed(it, row); });
+    } else {
+      forCtl = input(it, row, 'amount', K.amount);
+    }
+    row.appendChild(cell('cell-for', HEAD_FOR[it.kind] || 'What was it for?', forCtl));
+    row.appendChild(cell('cell-name', K.name || 'Name', input(it, row, 'name', K.name)));
+    row.appendChild(cell('cell-note', 'Notes', input(it, row, 'note', 'Anything I should know')));
+
+    // expandable list of every check, with a note per check
+    var per = it.kind !== 'pre' && n > 1;
+    var tb = el('tbody');
+    it.checks.forEach(function(c){
+      var cells = [el('td', {text: /^\d+$/.test(c.n) ? c.n : ''}), el('td', {text: c.date}), el('td', {cls: 'num', text: money(c.amt)}), el('td', {text: c.memo || ''})];
+      if (per) {
+        var inp = el('input', {type: 'text', 'aria-label': 'Note for check ' + c.n, placeholder: 'Only if different'});
+        inp.value = (ans(it.id).checks || {})[c.n] || '';
+        inp.addEventListener('input', function(){ var a = ans(it.id); (a.checks = a.checks || {})[c.n] = inp.value; changed(it, row); });
+        cells.push(el('td', {}, [inp]));
+      }
+      tb.appendChild(el('tr', {}, cells));
+    });
+    var heads = ['Check', 'Cleared', 'Amount', it.kind === 'pre' ? 'Paid to' : 'Memo'];
+    if (per) heads.push('If this one is different');
+    var list = el('div', {cls: 'checks hide'}, [el('table', {}, [
+      el('thead', {}, [el('tr', {}, heads.map(function(h, i){ return el('th', {text: h, cls: i === 2 ? 'num' : ''}); }))]), tb])]);
+    row.appendChild(list);
+    tog.addEventListener('click', function(){
+      var open = list.classList.toggle('hide') === false;
+      tog.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    frag.appendChild(row);
+  }
+
+  function render(){
+    var root = $('sections'); root.textContent = '';
+    SECTIONS.forEach(function(s, i){
+      var list = items.filter(function(it){ return it.sec === s[0]; });
+      if (!list.length) return;
+      var nc = list.reduce(function(a, it){ return a + it.checks.length; }, 0);
+      var tot = list.reduce(function(a, it){ return a + it.total; }, 0);
+      var head = el('div', {cls: 'sec'}, [
+        el('h2', {text: (i + 1) + '. ' + s[1]}),
+        el('div', {cls: 'count', text: nc + ' items · ' + money(tot)})
+      ]);
+      if (s[2]) head.appendChild(el('p', {cls: 'intro', text: s[2]}));
+      root.appendChild(head);
+      var k = list[0].kind, K = list[0].opts ? { opts: list[0].opts, name: list[0].nameLabel || '' } : (KINDS[k] || KINDS.person);
+      var grid = el('div', {cls: 'grid'}, [el('div', {cls: 'row head', 'aria-hidden': 'true'}, [
+        el('div', {text: s[0] === 'pre' ? 'What it covers' : 'Who / what I read'}), el('div', {text: 'Amount'}),
+        el('div', {text: s[0] === 'mary' ? 'What kind / how much' : (HEAD_FOR[k] || 'What was it for?')}), el('div', {text: K.name || (s[0] === 'mary' ? 'What was bought' : 'Name')}), el('div', {text: 'Notes'})
+      ])]);
+      list.forEach(function(it){ renderRow(it, grid); });
+      root.appendChild(grid);
+    });
+    progress();
+  }
+
+  function rpc(fn, body){
+    return fetch(SB + fn, { method: 'POST', headers: { 'Content-Type': 'application/json', apikey: KEY, Authorization: 'Bearer ' + KEY }, body: JSON.stringify(body) })
+      .then(function(r){ if (!r.ok) throw new Error('http ' + r.status); return r.json(); });
+  }
+  function stamp(iso){ return new Date(iso).toLocaleTimeString([], {hour: 'numeric', minute: '2-digit'}); }
+
+  function save(submit){
+    clearTimeout(timer);
+    if (saving) { timer = setTimeout(function(){ save(submit); }, 800); return; }
+    if (LOCAL) { dirty = false; status('Saved on this device (preview mode)'); if (submit) $('doneBanner').classList.remove('hide'); return; }
+    saving = true; status('Saving…');
+    $('submit').disabled = true;
+    rpc('worksheet_save', {p_slug: SLUG, p_code: code, p_answers: answers, p_submit: !!submit}).then(function(res){
+      if (!res) throw new Error('rejected');
+      dirty = false;
+      status(submit ? 'Submitted to Dan at ' + stamp(res.saved_at) : 'Saved at ' + stamp(res.saved_at));
+      if (res.submitted_at) $('doneBanner').classList.remove('hide');
+      if (submit) window.scrollTo({top: 0, behavior: 'smooth'});
+    }).catch(function(){
+      status('Couldn’t save just now. Your answers are kept on this device. Try Save again.', true);
+    }).then(function(){ saving = false; $('submit').disabled = false; });
+  }
+
+  function start(data){
+    items = data.items || []; answers = data.answers || {};
+    try { // answers typed on this device but never saved win over the server copy
+      var loc = JSON.parse(localStorage.getItem('ws_' + SLUG) || 'null');
+      if (loc && LOCAL) answers = loc;
+      else if (loc && localStorage.getItem('ws_dirty_' + SLUG) === '1') answers = loc;
+    } catch (e) {}
+    $('gate').classList.add('hide'); $('sheet').classList.remove('hide'); $('bar').classList.remove('hide');
+    if (data.submitted_at) $('doneBanner').classList.remove('hide');
+    render();
+    status(data.saved_at ? 'Last saved ' + new Date(data.saved_at).toLocaleString([], {month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit'}) : 'Saves automatically as you go');
+  }
+  function load(){
+    if (LOCAL) return fetch('kunal-worksheet-2-data.json').then(function(r){ return r.json(); }).then(function(d){ start({items: d}); });
+    if (!code) { $('gate').classList.remove('hide'); return; }
+    $('gateMsg').textContent = '';
+    rpc('worksheet_load', {p_slug: SLUG, p_code: code}).then(function(res){
+      if (!res) { $('gate').classList.remove('hide'); $('gateMsg').textContent = 'That code didn’t work. Check the email from Dan.'; return; }
+      start(res);
+    }).catch(function(){ $('gate').classList.remove('hide'); $('gateMsg').textContent = 'Couldn’t reach the server. Check your connection and try again.'; });
+  }
+
+  $('open').addEventListener('click', function(){ code = $('code').value.trim(); load(); });
+  $('code').addEventListener('keydown', function(e){ if (e.key === 'Enter') $('open').click(); });
+  $('save').addEventListener('click', function(){ save(false); });
+  $('submit').addEventListener('click', function(){ save(true); });
+  window.addEventListener('beforeunload', function(){ try { localStorage.setItem('ws_dirty_' + SLUG, dirty ? '1' : '0'); } catch (e) {} });
+  load();
+})();
+</script>
+</body>
+</html>

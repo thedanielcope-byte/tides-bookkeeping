@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script>
+    /* ga-optout-start -- device-level opt-out (2026-09-28). Visit ?ga_optout=1 once
+       on a device to stop counting it; ?ga_optout=0 re-enables. Uses Google's
+       official ga-disable flag, which must be set before gtag.js loads. */
+    (function(){try{
+      var q=new URLSearchParams(location.search).get('ga_optout');
+      if(q==='1'){localStorage.setItem('tides_ga_optout','1');}
+      if(q==='0'){localStorage.removeItem('tides_ga_optout');}
+      if(localStorage.getItem('tides_ga_optout')==='1'){window['ga-disable-G-KXQS7FCLF2']=true;}
+    }catch(e){}})();
+    /* ga-optout-end */
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXQS7FCLF2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KXQS7FCLF2');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#12766b">
+<title>Bookkeeping Proposal — Hold Investments | Tides</title>
+<style>
+  :root {
+    --ground: #eaf1ef; --surface: #ffffff; --ink: #14313b; --ink-soft: #3d545b;
+    --muted: #6a7d80; --line: #d7e2df; --accent: #12766b; --accent-ink: #0c554d;
+    --accent-soft: #dcece7; --sand: #a9793e; --good: #12766b;
+    --shadow: 0 1px 2px rgba(20,49,59,.05), 0 10px 30px rgba(20,49,59,.07);
+    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0c181d; --surface: #10232a; --ink: #eaf3f1; --ink-soft: #c4d3d2;
+      --muted: #8ba0a1; --line: #21383f; --accent: #38b0a1; --accent-ink: #85d6ca;
+      --accent-soft: #142f2d; --sand: #cf9a5c; --good: #38b0a1;
+      --shadow: 0 1px 2px rgba(0,0,0,.35), 0 12px 34px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="light"] {
+    --ground: #eaf1ef; --surface: #ffffff; --ink: #14313b; --ink-soft: #3d545b;
+    --muted: #6a7d80; --line: #d7e2df; --accent: #12766b; --accent-ink: #0c554d;
+    --accent-soft: #dcece7; --sand: #a9793e; --good: #12766b;
+    --shadow: 0 1px 2px rgba(20,49,59,.05), 0 10px 30px rgba(20,49,59,.07);
+  }
+  :root[data-theme="dark"] {
+    --ground: #0c181d; --surface: #10232a; --ink: #eaf3f1; --ink-soft: #c4d3d2;
+    --muted: #8ba0a1; --line: #21383f; --accent: #38b0a1; --accent-ink: #85d6ca;
+    --accent-soft: #142f2d; --sand: #cf9a5c; --good: #38b0a1;
+    --shadow: 0 1px 2px rgba(0,0,0,.35), 0 12px 34px rgba(0,0,0,.4);
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--sans);
+    line-height: 1.6; -webkit-font-smoothing: antialiased; padding: 40px 20px 64px; }
+  .proposal { max-width: 820px; margin: 0 auto; background: var(--surface);
+    border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; }
+  .pad { padding: clamp(28px, 5vw, 56px); }
+  .head { position: relative; padding-bottom: 0; }
+  .brand { display: inline-block; line-height: 0; }
+  .brand img { height: 58px; width: auto; display: block; border-radius: 9px; }
+  @media (prefers-color-scheme: dark) { .brand { box-shadow: 0 1px 10px rgba(0,0,0,.25); border-radius: 9px; } }
+  :root[data-theme="dark"] .brand { box-shadow: 0 1px 10px rgba(0,0,0,.25); border-radius: 9px; }
+  :root[data-theme="light"] .brand { box-shadow: none; }
+  .eyebrow { font-family: var(--mono); font-size: 11.5px; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--muted); margin: 30px 0 12px; }
+  h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(30px, 5.4vw, 44px);
+    line-height: 1.08; letter-spacing: -.01em; margin: 0 0 18px; text-wrap: balance; }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 14px; color: var(--ink-soft);
+    padding-top: 6px; border-top: 1px solid var(--line); }
+  .meta b { color: var(--ink); font-weight: 600; }
+  .wave { display: block; width: 100%; height: 26px; color: var(--accent); opacity: .9; }
+  section { border-top: 1px solid var(--line); }
+  .kicker { font-family: var(--mono); font-size: 11.5px; letter-spacing: .15em; text-transform: uppercase;
+    color: var(--accent); margin: 0 0 14px; display: flex; align-items: center; gap: 10px; }
+  .kicker::after { content:""; flex:1; height:1px; background: var(--line); }
+  h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(20px, 3vw, 25px); line-height: 1.2;
+    margin: 0 0 14px; letter-spacing: -.01em; text-wrap: balance; }
+  p { margin: 0 0 14px; color: var(--ink-soft); max-width: 62ch; }
+  p:last-child { margin-bottom: 0; }
+  strong { color: var(--ink); font-weight: 600; }
+  .books { display: grid; gap: 10px; margin-top: 22px; }
+  .book { display: grid; grid-template-columns: 30px 1fr; align-items: start; gap: 14px; padding: 15px 18px;
+    border: 1px solid var(--line); border-radius: 10px; background: color-mix(in srgb, var(--accent-soft) 30%, var(--surface)); }
+  .book .n { font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--accent); padding-top: 2px; }
+  .book .t { font-weight: 600; color: var(--ink); }
+  .book .d { font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+  .scope { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 16px; }
+  .scope li { display: grid; grid-template-columns: 22px 1fr; gap: 12px; }
+  .scope .ic { color: var(--accent); padding-top: 3px; }
+  .scope b { color: var(--ink); }
+  .scope span { color: var(--ink-soft); }
+  .prices { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px; }
+  @media (max-width: 560px) { .prices { grid-template-columns: 1fr; } }
+  .card { border: 1px solid var(--line); border-radius: 12px; padding: 22px; background: var(--surface); }
+  .card.feature { border-color: var(--accent); background: color-mix(in srgb, var(--accent-soft) 45%, var(--surface)); }
+  .card .lab { font-family: var(--mono); font-size: 11px; letter-spacing: .13em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 12px; }
+  .card.feature .lab { color: var(--accent-ink); }
+  .amount { font-family: var(--serif); font-weight: 700; color: var(--ink); font-size: clamp(34px, 6vw, 46px);
+    line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+  .amount .per { font-family: var(--sans); font-size: 15px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+  .card .note { font-size: 13.5px; color: var(--ink-soft); margin: 14px 0 0; }
+  .card .split { margin-top: 14px; padding-top: 13px; border-top: 1px dashed var(--line); font-size: 13.5px; color: var(--muted); }
+  .card .split b { color: var(--ink); font-variant-numeric: tabular-nums; }
+  .billnote { margin-top: 18px; font-size: 14px; color: var(--ink-soft);
+    background: color-mix(in srgb, var(--accent-soft) 26%, var(--surface)); border: 1px solid var(--line);
+    border-radius: 10px; padding: 14px 16px; max-width: none; }
+  .addon { margin-top: 16px; border: 1px solid var(--line); border-radius: 12px;
+    background: var(--surface); padding: 22px; }
+  .addon .lab { font-family: var(--mono); font-size: 11px; letter-spacing: .13em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 12px; }
+  .addon p { font-size: 13.5px; color: var(--ink-soft); margin: 0 0 16px; max-width: none; }
+  .tiers { list-style: none; margin: 0; padding: 0; border-top: 1px dashed var(--line); }
+  .tiers li { display: flex; align-items: baseline; justify-content: space-between; gap: 18px;
+    padding: 11px 0; border-bottom: 1px dashed var(--line); font-size: 14px; color: var(--ink-soft); }
+  .tiers .rng b { color: var(--ink); font-weight: 600; }
+  .tiers .amt { font-family: var(--serif); font-weight: 700; color: var(--ink); font-size: 20px;
+    font-variant-numeric: tabular-nums; white-space: nowrap; letter-spacing: -.01em; }
+  .tiers .amt span { font-family: var(--sans); font-size: 12.5px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+  .tiers .rng .rec { font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--accent-ink); margin-left: 8px; }
+  .addon .combined { margin: 18px 0 0; padding: 13px 16px; border-radius: 10px;
+    background: color-mix(in srgb, var(--accent-soft) 45%, var(--surface));
+    border: 1px solid var(--accent); font-size: 14.5px; color: var(--ink-soft); }
+  .addon .combined b { color: var(--ink); font-weight: 700; font-family: var(--serif);
+    font-size: 18px; font-variant-numeric: tabular-nums; }
+  .addon .fine { font-size: 13px; color: var(--muted); margin: 14px 0 0; }
+  .incl { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 12px; }
+  @media (min-width: 620px) { .incl { grid-template-columns: 1fr 1fr; gap: 12px 28px; } }
+  .incl li { display: grid; grid-template-columns: 20px 1fr; gap: 11px; align-items: start; font-size: 14.5px; color: var(--ink-soft); }
+  .incl .ck { color: var(--good); padding-top: 2px; }
+  .steps { list-style: none; padding: 0; margin: 20px 0 0; counter-reset: s; display: grid; gap: 2px; }
+  .steps li { counter-increment: s; display: grid; grid-template-columns: 40px 1fr; gap: 16px; align-items: start;
+    padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .steps li:last-child { border-bottom: none; }
+  .steps li::before { content: counter(s); font-family: var(--serif); font-weight: 700; font-size: 20px; color: var(--accent);
+    width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
+    border: 1.5px solid var(--accent); background: var(--accent-soft); font-variant-numeric: tabular-nums; }
+  .steps .st { padding-top: 8px; color: var(--ink-soft); }
+  .steps .st b { color: var(--ink); }
+  .foot { padding: 26px clamp(28px,5vw,56px); border-top: 1px solid var(--line); display: flex; flex-wrap: wrap;
+    justify-content: space-between; gap: 8px 20px; align-items: center;
+    background: color-mix(in srgb, var(--accent-soft) 22%, var(--surface)); }
+  .foot .who { font-family: var(--serif); font-weight: 700; color: var(--ink); }
+  .foot .sub { font-size: 13px; color: var(--muted); }
+  .foot-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; }
+  .foot-contact a { position: relative; }
+  .foot-contact a + a::before { content: ""; position: absolute; left: -10px; top: 50%; transform: translateY(-50%);
+    width: 1px; height: 13px; background: var(--line); }
+  .foot a { color: var(--accent); text-decoration: none; font-size: 13.5px; }
+  .foot a:hover { text-decoration: underline; }
+  @page { size: Letter; margin: 13mm; }
+  @media print {
+    :root { --ground:#ffffff; --surface:#ffffff; --ink:#14313b; --ink-soft:#3d545b; --muted:#6a7d80; --line:#d7e2df;
+      --accent:#12766b; --accent-ink:#0c554d; --accent-soft:#dcece7; --sand:#a9793e; --good:#12766b; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; padding: 0; }
+    .proposal { border: none; box-shadow: none; border-radius: 0; max-width: none; }
+    .pad { padding: 20px 6px; } .foot { padding: 20px 6px; } h1 { font-size: 31px; } header.head { padding-top: 4px; }
+    section, .book, .card, .steps li, .scope li, .incl li { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<main class="proposal">
+  <header class="head pad">
+    <div class="brand"><img src="tides-logo.png" alt="Tides Bookkeeping" width="501" height="189"></div>
+    <p class="eyebrow">Bookkeeping Proposal</p>
+    <h1>Thirty-seven properties, one LLC, and books that keep up</h1>
+    <div class="meta">
+      <span>Prepared for <b>Rameh Khazen &mdash; Hold Investments, LLC</b></span>
+      <span>Prepared by <b>Dan Cope &middot; Tides Bookkeeping</b></span>
+      <span><b>October 8, 2026</b></span>
+    </div>
+  </header>
+
+  <svg class="wave" viewBox="0 0 820 26" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 13c68 0 68 10 136 10s68-20 136-20 68 20 137 20 68-20 136-20 68 20 136 20 68-10 137-10v16H0z" fill="currentColor" opacity=".14"/>
+    <path d="M0 13c68 0 68 10 136 10s68-20 136-20 68 20 137 20 68-20 136-20 68 20 136 20 68-10 137-10" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".5"/>
+  </svg>
+
+  <section class="pad">
+    <p class="kicker">Where you're starting</p>
+    <h2>The setup is right. 2026 just hasn&rsquo;t been entered.</h2>
+    <p>Hold Investments runs a lot through one LLC: <strong>34 single-family rentals</strong> with a property manager, <strong>three Airbnbs</strong> you run yourself, your brokerage income, the houses you buy, fix and sell, and the occasional contracting job.</p>
+    <p>You built QuickBooks the right way, with a class for each property. Then the bookkeeper you hired at the start of the year took another job and the work stopped, so <strong>2026 hasn&rsquo;t been touched</strong> and the file is still in her name.</p>
+    <p>You told me what you want. Get caught up, then have someone enter the property manager&rsquo;s statement every month, split the mortgage payments, record each house you buy from its settlement statement, and be there for ten minutes when something doesn&rsquo;t fit.</p>
+  </section>
+
+  <section class="pad">
+    <p class="kicker">How I'd set it up</p>
+    <h2>Four pieces</h2>
+    <div class="books">
+      <div class="book"><div class="n">01</div><div><span class="t">The QuickBooks file moves into your name first</span><div class="d">You become the primary admin and the subscription bills to you. Then you invite me as your accountant. You own the books and I work inside them, so they stay with you no matter who does the bookkeeping.</div></div></div>
+      <div class="book"><div class="n">02</div><div><span class="t">Your classes stay as you built them</span><div class="d">One class per property, plus real estate sales, construction and short-term rentals. QuickBooks Plus limits how many classes a file can hold, so I&rsquo;ll check where you stand before Airbnbs four and five go in.</div></div></div>
+      <div class="book"><div class="n">03</div><div><span class="t">The property manager&rsquo;s statement drives the rentals</span><div class="d">Your bank only sees the net deposit. I enter the statement itself: rent collected, the 3% fee, utilities, lawn care and repairs, each to its property, and tie the total back to the deposit.</div></div></div>
+      <div class="book"><div class="n">04</div><div><span class="t">Purchases, sales and mortgages come from the paperwork</span><div class="d">Each house you buy or sell is recorded from the settlement statement in your Dropbox, using your property list to find it. Mortgage payments are split between principal and interest from the lender&rsquo;s statements.</div></div></div>
+    </div>
+  </section>
+
+  <section class="pad">
+    <p class="kicker">Scope of work</p>
+    <h2>What I&rsquo;ll do</h2>
+    <ul class="scope">
+      <li><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M3 12h18M3 17h11" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span><b>Catch-up, January through October 2026 (one-time).</b> Every bank account and card reconciled for the year, each month&rsquo;s property manager statement entered by property, mortgage payments split, purchases and sales recorded from their settlement statements, Airbnb income and contractor payments recorded, and a short list of anything I need you to answer.</span></li>
+      <li><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Ongoing every month, from November 1.</b> The statement entered after the 10th, every account reconciled, new purchases recorded as they close, and the month closed with reports you can open in the portal. Because the statement arrives on the 10th, each month closes in the second half of the following month.</span></li>
+      <li><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/></svg></span><span><b>Ready for your CPA.</b> Whoever you choose gets a clean set of books by property and by line of business. I keep the books. Your CPA handles the returns, the LLC&rsquo;s tax status and how you pay yourself.</span></li>
+    </ul>
+  </section>
+
+  <section class="pad">
+    <p class="kicker">Investment</p>
+    <h2>Two clear numbers. No surprises.</h2>
+    <div class="prices">
+      <div class="card">
+        <div class="lab">One-time catch-up &middot; Jan&ndash;Oct 2026</div>
+        <div class="amount">$1,500</div>
+        <p class="note">All ten months of 2026 brought current and reconciled, across every account and card on the file. Priced at <strong>half the monthly rate</strong> for the ten months.</p>
+        <div class="split"><b>One payment</b> &middot; due on signing</div>
+      </div>
+      <div class="card feature">
+        <div class="lab">Monthly service</div>
+        <div class="amount">$299<span class="per">/month</span></div>
+        <p class="note">The property manager&rsquo;s statement entered by property, every account reconciled, purchases and mortgage splits recorded, and a closed set of books each month.</p>
+        <div class="split">Begins <b>November 1, 2026</b></div>
+      </div>
+    </div>
+    <div class="addon">
+      <div class="lab">Catch-up schedule</div>
+      <p>The clock starts the day I have accountant access and the statements. Two to three weeks is typical, four at the most.</p>
+      <ul class="tiers">
+        <li><span class="rng"><b>Accounts connected</b> &middot; statements gathered, classes checked</span><span class="amt">Week 1</span></li>
+        <li><span class="rng"><b>January through June</b> &middot; reconciled, statements entered by property</span><span class="amt">Week 2</span></li>
+        <li><span class="rng"><b>July through October</b> &middot; reconciled, purchases and mortgage splits recorded</span><span class="amt">Week 3</span></li>
+        <li><span class="rng"><b>Review call</b> &middot; open questions answered, reports in your portal</span><span class="amt">Week 4</span></li>
+      </ul>
+      <p class="fine">You get a short update at the end of each week, so you can see where it stands.</p>
+    </div>
+    <div class="addon">
+      <div class="lab">What the monthly is based on</div>
+      <p>$299 is my Starter plan, which covers up to <strong>$25,000 a month in expenses</strong>. The price you pay for a property isn&rsquo;t an expense and doesn&rsquo;t count toward that. Rehab, operating and contracting costs do.</p>
+      <ul class="tiers">
+        <li><span class="rng"><b>Starter</b> &middot; up to $25,000 in monthly expenses<span class="rec">Your plan</span></span><span class="amt">$299<span>/mo</span></span></li>
+        <li><span class="rng"><b>Essential</b> &middot; up to $50,000 in monthly expenses</span><span class="amt">$395<span>/mo</span></span></li>
+      </ul>
+      <p class="fine">One busy month doesn&rsquo;t move you. If expenses run above $25,000 for three months in a row, the plan moves to Essential, and I&rsquo;ll tell you before it does. Payroll and tax returns aren&rsquo;t in this quote. Your personal accounts and stock trading stay outside the books. If you later split the LLC into more than one company, each company is its own set of books and I&rsquo;ll price that with you first.</p>
+    </div>
+    <div class="addon">
+      <div class="lab">Year-end 1099s &middot; optional add-on</div>
+      <p>For your Airbnb contractor and anyone else you pay for the properties or jobs, <strong>tracking is free</strong> in the Tides Portal and you only pay for the forms you issue.</p>
+      <ul class="tiers">
+        <li><span class="rng"><b>Tracking through the year</b><span class="rec">Included</span></span><span class="amt">$0</span></li>
+        <li><span class="rng"><b>Prepared and e-filed at year end</b></span><span class="amt">$25<span>/1099</span></span></li>
+      </ul>
+      <p class="fine">Each contractor&rsquo;s year-to-date total stays visible in the portal, with their W-9 on file. The reporting threshold is <strong>$2,000 for 2026</strong>, up from $600. In January I prepare and e-file each form with the IRS and send the contractor their copy. Billed once, at $25 per form issued, with no base fee.</p>
+    </div>
+    <div class="addon">
+      <div class="lab">Software &middot; paid by you, direct</div>
+      <p>QuickBooks isn&rsquo;t part of the $299. You hold the subscription, so the books stay yours.</p>
+      <ul class="tiers">
+        <li><span class="rng"><b>QuickBooks Plus</b> &middot; needed for classes</span><span class="amt">$140<span>/mo list</span></span></li>
+      </ul>
+      <p class="fine">Intuit sets the price. I&rsquo;ll check for a current discount when the billing moves to you.</p>
+    </div>
+    <p class="billnote">The catch-up covers <strong>January through October 2026</strong>. Monthly service covers <strong>November 1 forward</strong>, so the two never overlap and nothing is billed twice. <strong>Month-to-month, no long-term contract.</strong></p>
+  </section>
+
+  <section class="pad">
+    <p class="kicker">What's included every month</p>
+    <h2>Everything the books need, handled</h2>
+    <ul class="incl">
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>The property manager&rsquo;s statement entered each month after the 10th, by property</span></li>
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Every bank account and credit card reconciled</span></li>
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Mortgage payments split between principal and interest</span></li>
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Each purchase and sale recorded from its settlement statement</span></li>
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Airbnb income and costs kept under short-term rentals</span></li>
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Flip and contracting job costs kept on their own classes</span></li>
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Profit and loss by property and by line of business, in your portal</span></li>
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>A short call whenever something doesn&rsquo;t fit</span></li>
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Contractor 1099 totals tracked all year in the Tides Portal, at no charge</span></li>
+      <li><span class="ck"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Direct access to me by email, text or portal chat</span></li>
+    </ul>
+  </section>
+
+  <section class="pad">
+    <p class="kicker">Getting started</p>
+    <h2>Four things to start</h2>
+    <ol class="steps">
+      <li><div class="st"><b>Say yes and the agreement follows.</b> Month-to-month, no term. Payment runs through Stripe: the $1,500 catch-up once on signing, then $299 monthly from November 1.</div></li>
+      <li><div class="st"><b>Get the QuickBooks file in your name.</b> Ask your previous bookkeeper to make you the primary admin, then move the billing to your card. If she doesn&rsquo;t respond, Intuit has a request form for this and I&rsquo;ll walk you through it.</div></li>
+      <li><div class="st"><b>Invite me as your accountant.</b> In QuickBooks, add <b>dan@tidesbookkeeping.com</b> under Manage users. Leave every credit card connected until 2026 is reconciled.</div></li>
+      <li><div class="st"><b>Share the paperwork.</b> The Dropbox folder with your settlement statements, your property list, this year&rsquo;s property manager statements, and the lender statements. Ask the property manager to copy me on the statement each month.</div></li>
+    </ol>
+  </section>
+
+  <div class="foot">
+    <div>
+      <div class="who">Tides Bookkeeping</div>
+      <div class="sub">Bookkeeping for owner-operators &middot; Confidential &mdash; prepared for Hold Investments, LLC</div>
+    </div>
+    <div class="foot-contact">
+      <a href="mailto:dan@tidesbookkeeping.com">dan@tidesbookkeeping.com</a>
+      <a href="tel:+18645592686">(864) 559-2686</a>
+    </div>
+  </div>
+</main>
+<script>
+/* AI referral tracking (2026-09-16). Records when a visitor arrives from an AI
+   assistant, reports it to GA4 as an "ai_referral" event, and tags any lead that
+   visitor submits so the CRM row and the notification email show where they came
+   from. NOTE: Google AI Overviews referrals look identical to ordinary Google
+   traffic and cannot be separated here - those are only visible in Search
+   Console's Generative AI Features report. */
+(function(){
+  var AI=[[/(^|\.)chatgpt\.com$/,'chatgpt'],[/(^|\.)openai\.com$/,'chatgpt'],
+    [/(^|\.)perplexity\.ai$/,'perplexity'],[/(^|\.)claude\.ai$/,'claude'],
+    [/(^|\.)anthropic\.com$/,'claude'],[/(^|\.)gemini\.google\.com$/,'gemini'],
+    [/(^|\.)copilot\.microsoft\.com$/,'copilot'],[/(^|\.)you\.com$/,'you'],
+    [/(^|\.)poe\.com$/,'poe'],[/(^|\.)grok\.com$/,'grok'],[/(^|\.)x\.ai$/,'grok'],
+    [/(^|\.)mistral\.ai$/,'mistral'],[/(^|\.)deepseek\.com$/,'deepseek']];
+  var KEY='tides_ai_src', src=null, fresh=null;
+  try{ var r=document.referrer; if(r){ var h=new URL(r).hostname.toLowerCase();
+    for(var i=0;i<AI.length;i++){ if(AI[i][0].test(h)){ fresh=AI[i][1]; break; } } } }catch(e){}
+  try{ src=localStorage.getItem(KEY)||null; }catch(e){}
+  if(fresh&&!src){ src=fresh; try{ localStorage.setItem(KEY,src); }catch(e){} }
+  if(fresh&&typeof window.gtag==='function'){
+    try{ gtag('event','ai_referral',{ai_source:fresh,page_location:location.href}); }catch(e){}
+  }
+  window.__tidesAiSource=src;
+  var of=window.fetch;
+  if(of){ window.fetch=function(u,o){
+    try{
+      var url=(typeof u==='string')?u:((u&&u.url)||'');
+      if(src&&url.indexOf('/capture-lead')>-1&&o&&typeof o.body==='string'){
+        var d=JSON.parse(o.body);
+        d.tags=(d.tags?d.tags+',':'')+'ai-'+src;
+        d.message=(d.message?d.message+' ':'')+'[arrived via '+src+']';
+        o=Object.assign({},o,{body:JSON.stringify(d)});
+        return of.call(this,u,o);
+      }
+    }catch(e){}
+    return of.apply(this,arguments);
+  }; }
+})();
+</script>
+</body>
+</html>

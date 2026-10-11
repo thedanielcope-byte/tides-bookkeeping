@@ -1006,7 +1006,6 @@
   "@context": "https://schema.org",
   "@type": "AccountingService",
   "founder": {"@id": "https://www.tidesbookkeeping.com/#daniel-cope"},
-    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "8", "bestRating": "5"},
   "@id": "https://www.tidesbookkeeping.com/#organization",
   "name": "Tides Bookkeeping LLC",
   "alternateName": "Tides Bookkeeping",
@@ -1812,7 +1811,7 @@
     <div class="section-header centered">
       <div class="eyebrow">Client Stories</div>
       <h2 class="display">Real Business Owners,<br/><span class="gradient-text">Real Results</span></h2>
-      <p id="reviewsSummary" style="margin-top:.75rem;">5.0 ★ across 8 reviews — verified on Google</p>
+      <p id="reviewsSummary" style="margin-top:.75rem;">5.0 ★ across 8 reviews — verified on Intuit's ProAdvisor directory</p>
     </div>
 
     <div class="carousel-wrap" id="reviewCarousel">
@@ -2113,7 +2112,7 @@
       </table>
     </div>
     <p style="text-align:center;margin:24px 0 0;"><a href="/pricing" style="display:inline-block;background:#41cfd0;color:#06263b;font-weight:800;text-decoration:none;padding:12px 26px;border-radius:10px;">See full plan details &rarr;</a></p>
-    <p style="text-align:center;margin:22px 0 0;font-size:1rem;font-weight:700;color:#0f1c2e;"><span style="color:#f5a623;letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 &middot; 8 Google reviews</p>
+    <p style="text-align:center;margin:22px 0 0;font-size:1rem;font-weight:700;color:#0f1c2e;"><span style="color:#f5a623;letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 &middot; 8 client reviews on <a href="https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Intuit's ProAdvisor directory</a></p>
     <p style="text-align:center;color:#94a3b8;font-size:.82rem;margin:8px 0 0;">&#10004; Reviewed by <strong style="color:#5b6b82;">Daniel Cope</strong>, Advanced QuickBooks ProAdvisor &middot; Updated August 2026</p>
   </div>
 </section>
@@ -2251,7 +2250,7 @@
         if (d && d.reviews && d.reviews.length) {
           track.innerHTML = d.reviews.map(card).join('');
           const sum = document.getElementById('reviewsSummary');
-          if (sum && d.average) sum.innerHTML = d.average.toFixed(1) + ' ★ across ' + d.count + ' reviews — verified on Google';
+          if (sum && d.average) sum.innerHTML = d.average.toFixed(1) + ' ★ across ' + d.count + " reviews — verified on Intuit's ProAdvisor directory";
         }
       })
       .catch(() => {})

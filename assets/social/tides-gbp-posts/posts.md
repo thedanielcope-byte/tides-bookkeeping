@@ -24,7 +24,7 @@ If last April was a scramble of receipts and spreadsheets, let's fix it now.
 
 Our cleanup process gets your books tax-ready year-round, so your CPA gets organized, accurate records — no surprises, no panic.
 
-Flat monthly pricing. No setup fees. Cancel anytime.
+Flat monthly pricing. Cancel anytime.
 
 Based in SC, serving businesses nationwide.
 
@@ -100,7 +100,7 @@ Hourly staff, overtime, tip credits, turnover — restaurant payroll is brutal.
 
 As Gusto Payroll Certified partners, we run payroll, file taxes, and keep your team paid on time. No missed filings, no compliance headaches.
 
-One flat monthly rate. No setup fees.
+One flat monthly rate.
 
 👉 Let's simplify your payroll.
 
@@ -197,7 +197,7 @@ No hourly billing. No surprise invoices.
 SC small businesses choose Tides for simple, flat-rate pricing:
 Starter $299/mo | Essential $395/mo | Growth $595/mo | Scale $895/mo
 
-All 7 services included. No setup fees. Cancel anytime.
+All 7 services included. Cancel anytime.
 
 Your Books, Handled. Your Business, Grown.
 
@@ -247,7 +247,7 @@ It's not free. It's your weekends, your missed deductions, and the stress every 
 
 For one flat monthly rate (starting at $299/mo), a dedicated bookkeeper handles it all — reconciliations, categorization, monthly P&L — while you run your business.
 
-No setup fees. Cancel anytime.
+Cancel anytime.
 
 👉 Get your weekends back.
 
@@ -283,7 +283,7 @@ Tip credits, tip pooling, payroll compliance — get it wrong and it's expensive
 
 As Gusto Payroll Certified partners, we handle tip reporting correctly, run payroll on time, and keep you compliant. Your staff gets paid right, every time.
 
-One flat rate. No setup fees.
+One flat rate.
 
 👉 Let's simplify your payroll.
 
@@ -319,6 +319,6 @@ Just formed your LLC? The best time to set up proper bookkeeping is day one.
 
 We set up your QuickBooks correctly, connect your accounts, build your chart of accounts, and keep you clean from the start — so you never need a painful cleanup later.
 
-Starter plan: $299/mo. No setup fees. Cancel anytime.
+Starter plan: $299/mo. Cancel anytime.
 
 👉 Start clean — free 15-min call.

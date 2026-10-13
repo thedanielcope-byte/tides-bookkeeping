@@ -147,9 +147,11 @@
     /* ── BOOKING SELECTOR ───────────────────────────── */
     .booking-section { padding: 48px 0 80px; }
     .booking-cards {
-      display: grid; grid-template-columns: repeat(3, 1fr);
+      display: grid; grid-template-columns: repeat(4, 1fr);
       gap: 1.25rem; margin-bottom: 40px;
     }
+    @media (max-width: 1100px) { .booking-cards { grid-template-columns: repeat(2, 1fr); } }
+    .bc-more { display: block; width: fit-content; margin-top: .6rem; font-size: .82rem; font-weight: 600; color: var(--navy); text-decoration: underline; }
     .booking-card {
       background: #fff; border: 2px solid var(--border);
       border-radius: 20px; padding: 1.75rem 1.5rem;
@@ -428,7 +430,7 @@
       <li><a href="/#how-it-works">How It Works</a></li>
       <li><a href="/services">Services</a></li>
       <li><a href="/who-we-serve">Who We Serve</a></li>
-      <li class="nav-dd"><a href="/about">About<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/about">About Us</a></li><li><a href="/certifications">Certifications</a></li><li><a href="/press">Press</a></li><li><a href="/contact">Contact Us</a></li></ul></li>
+      <li class="nav-dd"><a href="/about">About<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/about">About Us</a></li><li><a href="/reviews">Reviews</a></li><li><a href="/certifications">Certifications</a></li><li><a href="/press">Press</a></li><li><a href="/contact">Contact Us</a></li></ul></li>
       <li><a href="/pricing">Pricing</a></li><li class="nav-dd"><a href="/tools">Resources<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/tools">Free Tools</a></li><li><a href="/glossary">Glossary</a></li><li><a href="/small-business-bookkeeping-guide">Bookkeeping Guide</a></li></ul></li>
       <li><a href="/blog">Blog</a></li>
     </ul>
@@ -512,6 +514,16 @@
         <div class="bc-duration">🕐 45 minutes</div>
       </div>
 
+      <div class="booking-card" onclick="selectBooking(3)" id="card-3">
+        <div class="bc-check">✓</div>
+        <div class="bc-icon">🔎</div>
+        <div class="bc-tag">Free · Read-Only</div>
+        <div class="bc-title">Free Books Review</div>
+        <p class="bc-desc">Already keeping books? Share your screen and we check five things, then send a one-page written summary. Nothing gets changed.</p>
+        <a class="bc-more" href="/free-books-review" onclick="event.stopPropagation()">What we check</a>
+        <div class="bc-duration">🕐 30 minutes</div>
+      </div>
+
     </div>
 
     <!-- Booking note -->
@@ -562,7 +574,7 @@
     try { t = (typeof d === 'string' ? d : (d && (d.type || d.action))) || ''; } catch(_){ return; }
     if (!/booking(Successful|_successful)|bookingSuccessfulV2/i.test(String(t))) return;
     sent = true;
-    try { if (window.gtag) gtag('event','book_appointment',{ method:'cal_com', form_location:'schedule' }); } catch(_){}
+    try { if (window.gtag) gtag('event','book_appointment',{ method:'cal_com', form_location:(window.__tidesBookingIdx === 3 ? 'schedule_books_review' : 'schedule') }); } catch(_){}
   }, false);
 })();
 /* cal-booking-tracking-end */
@@ -646,6 +658,12 @@
       icon:  '🧾',
       title: 'CPA Session',
       sub:   '45-minute call · With your CPA, books return-ready'
+    },
+    {
+      url:   'https://cal.com/daniel-cope-8rwjyy/free-books-review',
+      icon:  '🔎',
+      title: 'Free Books Review',
+      sub:   '30-minute call · Free · Written summary included'
     }
   ];
 
@@ -656,6 +674,7 @@
     });
     // Update header
     const b = BOOKINGS[idx];
+    window.__tidesBookingIdx = idx;
     document.getElementById('calIcon').textContent  = b.icon;
     document.getElementById('calTitle').textContent = b.title;
     document.getElementById('calSub').textContent   = b.sub;

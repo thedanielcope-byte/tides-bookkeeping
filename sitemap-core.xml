@@ -7,6 +7,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.tidesbookkeeping.com/reviews</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.tidesbookkeeping.com/areas-we-serve</loc>
     <lastmod>2026-09-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -111,6 +117,12 @@
   <url>
     <loc>https://www.tidesbookkeeping.com/blog-when-to-hire-a-bookkeeper</loc>
     <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.tidesbookkeeping.com/blog-is-your-bookkeeper-doing-a-good-job</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

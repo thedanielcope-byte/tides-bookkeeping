@@ -15,6 +15,9 @@ Allow: /
 
 Disallow: /_internal/
 Disallow: /_templates/
+# Cloudflare's email-obfuscation endpoint. It 404s for crawlers and showed up as the
+# only error in Bing's Site Scan (2026-10-11); it is not a page.
+Disallow: /cdn-cgi/
 
 Sitemap: https://www.tidesbookkeeping.com/sitemap.xml
 

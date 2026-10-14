@@ -10,16 +10,18 @@
   <meta property="og:title" content="Richland County Bookkeeping | Tides" />
   <meta property="og:description" content="Bookkeeping for small businesses across Richland County, SC — Columbia, Forest Acres, Blythewood, Irmo. Remote, flat-rate monthly service." />
   <meta property="og:url" content="https://www.tidesbookkeeping.com/county-richland-sc" />
-  <meta property="og:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta property="og:image" content="https://www.tidesbookkeeping.com/assets/social/tides-share-1200x630.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Tides Bookkeeping" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Richland County Bookkeeping | Tides" />
   <meta name="twitter:description" content="Bookkeeping for small businesses across Richland County, SC — Columbia, Forest Acres, Blythewood, Irmo. Remote, flat-rate monthly service." />
-  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/assets/social/tides-share-1200x630.png" />
   <link rel="icon" type="image/png" href="/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <style>/* self-hosted-fonts */@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/bebas-neue-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/bebas-neue-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
   <style>
     /* ── TOKENS ─────────────────────────────────────── */
     :root {
@@ -31,7 +33,7 @@
       --navy-dk: #163872;
       --ink:     #0f1c2e;
       --body:    #4a5568;
-      --muted:   #94a3b8;
+      --muted:   #586880;
       --border:  #e2eaf3;
       --bg:      #ffffff;
       --bg-alt:  #f7fbff;
@@ -54,7 +56,7 @@
     .eyebrow {
       display: inline-flex; align-items: center; gap: 6px;
       font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
-      text-transform: uppercase; color: var(--teal);
+      text-transform: uppercase; color: #0d7377;
       background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
       padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
     }
@@ -178,7 +180,7 @@
       font-size: .67rem; font-weight: 700; padding: 3px 10px; border-radius: 50px; letter-spacing: .04em;
     }
     .ha-badge.green { background: #dcfce7; color: #16a34a; }
-    .ha-badge.teal { background: var(--teal-lt); color: var(--teal); }
+    .ha-badge.teal { background: var(--teal-lt); color: #0d7377; }
     .ha-badge.blue { background: var(--blue-lt); color: var(--navy); }
     .ha-stat-row {
       display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
@@ -268,7 +270,7 @@
       padding: 4px 10px; border-radius: 50px;
       background: rgba(255,255,255,.1); color: rgba(255,255,255,.75);
     }
-    .svc-tag.light { background: var(--teal-lt); color: var(--teal); }
+    .svc-tag.light { background: var(--teal-lt); color: #0d7377; }
 
     /* ── INDUSTRIES ─────────────────────────────────── */
     .industries-grid {
@@ -351,23 +353,23 @@
       display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem;
     }
     .footer-logo { height: 40px; margin-bottom: 1.25rem; filter: brightness(10); }
-    .footer-about { font-size: .84rem; color: rgba(255,255,255,.35); line-height: 1.75; max-width: 280px; }
+    .footer-about { font-size: .84rem; color: rgba(255,255,255,.62); line-height: 1.75; max-width: 280px; }
     .footer-col h4 {
       font-size: .66rem; font-weight: 600; text-transform: uppercase;
-      letter-spacing: .12em; color: rgba(255,255,255,.25); margin-bottom: 1.25rem;
+      letter-spacing: .12em; color: rgba(255,255,255,.62); margin-bottom: 1.25rem;
     }
     .footer-links { list-style: none; }
     .footer-links li { margin-bottom: .55rem; }
-    .footer-links a { font-size: .82rem; color: rgba(255,255,255,.4); transition: color .15s; }
-    .footer-links a:hover { color: rgba(255,255,255,.8); }
+    .footer-links a { font-size: .82rem; color: rgba(255,255,255,.72); transition: color .15s; }
+    .footer-links a:hover { color: rgba(255,255,255,.95); }
     .footer-bottom {
       border-top: 1px solid rgba(255,255,255,.06); padding-top: 1.5rem;
       display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
     }
-    .footer-bottom p { font-size: .72rem; color: rgba(255,255,255,.2); }
+    .footer-bottom p { font-size: .72rem; color: rgba(255,255,255,.62); }
     .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
-    .footer-bottom-links a { font-size: .72rem; color: rgba(255,255,255,.2); transition: color .15s; }
-    .footer-bottom-links a:hover { color: rgba(255,255,255,.5); }
+    .footer-bottom-links a { font-size: .72rem; color: rgba(255,255,255,.62); transition: color .15s; }
+    .footer-bottom-links a:hover { color: rgba(255,255,255,.95); }
 
     /* ── LOCAL TWO COL ──────────────────────────────── */
     .local-two-col {
@@ -409,7 +411,7 @@
     /* ── SVC AREA ───────────────────────────────────── */
     .svc-area { background: var(--bg-alt); padding: 72px 0; border-top: 1px solid var(--border); }
     .svc-area-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-    .svc-area-eyebrow { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); margin-bottom: .75rem; }
+    .svc-area-eyebrow { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #0d7377; margin-bottom: .75rem; }
     .svc-area-wrap h3 { font-size: 1.4rem; font-weight: 800; color: var(--ink); line-height: 1.3; margin-bottom: .85rem; }
     .svc-area-wrap p { font-size: .9rem; color: var(--body); line-height: 1.75; }
     .svc-area-groups { display: flex; flex-direction: column; gap: 1.5rem; }
@@ -564,7 +566,10 @@
   "sameAs": [
     "https://www.linkedin.com/company/tides-bookkeeping",
     "https://www.facebook.com/thetidesbookkeeping",
-    "https://www.instagram.com/tidesbookkeeping/"
+    "https://www.instagram.com/tidesbookkeeping/",
+    "https://www.youtube.com/@TidesBookkeeping",
+    "https://www.google.com/maps?cid=14527500788148536557",
+    "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
   ],
   "openingHoursSpecification": [
     {
@@ -751,6 +756,7 @@
     </button>
   </div>
 </nav>
+<main id="main">
 
 <!-- BREADCRUMB -->
 <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -1156,42 +1162,42 @@
     <div class="industries-grid">
       <div class="ind-card">
         <div class="ind-icon">🏛️</div>
-        <h4>Government Contractors</h4>
+        <h4 role="heading" aria-level="3">Government Contractors</h4>
         <p>Project billing, compliance-ready books, and contract cost tracking</p>
       </div>
       <div class="ind-card">
         <div class="ind-icon">🏥</div>
-        <h4>Healthcare &amp; Wellness</h4>
+        <h4 role="heading" aria-level="3">Healthcare &amp; Wellness</h4>
         <p>Medical practices, insurance coordination, and practice management</p>
       </div>
       <div class="ind-card">
         <div class="ind-icon">🍽️</div>
-        <h4>Restaurants &amp; Food</h4>
+        <h4 role="heading" aria-level="3">Restaurants &amp; Food</h4>
         <p>COGS, tip payroll, inventory tracking, and vendor management</p>
       </div>
       <div class="ind-card">
         <div class="ind-icon">💼</div>
-        <h4>Professional Services</h4>
+        <h4 role="heading" aria-level="3">Professional Services</h4>
         <p>Consultants, attorneys, agencies — clean monthly financials</p>
       </div>
       <div class="ind-card">
         <div class="ind-icon">🏗️</div>
-        <h4>Contractors &amp; Trades</h4>
+        <h4 role="heading" aria-level="3">Contractors &amp; Trades</h4>
         <p>Job costing, subcontractors, and seasonal cash flow management</p>
       </div>
       <div class="ind-card">
         <div class="ind-icon">🏠</div>
-        <h4>Real Estate</h4>
+        <h4 role="heading" aria-level="3">Real Estate</h4>
         <p>Agent commissions, rental income, and investor portfolios</p>
       </div>
       <div class="ind-card">
         <div class="ind-icon">🛍️</div>
-        <h4>Retail &amp; eCommerce</h4>
+        <h4 role="heading" aria-level="3">Retail &amp; eCommerce</h4>
         <p>Inventory, merchant fees, platform reconciliation</p>
       </div>
       <div class="ind-card">
         <div class="ind-icon">💻</div>
-        <h4>Tech &amp; Startups</h4>
+        <h4 role="heading" aria-level="3">Tech &amp; Startups</h4>
         <p>Burn rate tracking, investor reporting, and SaaS revenue recognition</p>
       </div>
     </div>
@@ -1230,21 +1236,21 @@
       <div class="faq-list">
         <div class="faq-item open">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <h4>Do you serve all of Richland County?</h4>
+            <h4 role="heading" aria-level="3">Do you serve all of Richland County?</h4>
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer"><p>Yes — we serve businesses throughout all of Richland County, including Columbia, Forest Acres, Blythewood, Irmo, Hopkins, and all unincorporated areas. We're 100% remote, so your exact location within the county doesn't affect service quality or pricing.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <h4>Do you work with government contractors?</h4>
+            <h4 role="heading" aria-level="3">Do you work with government contractors?</h4>
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer"><p>Yes. We serve many government contractors and professional service firms in the Columbia area. We help with project cost tracking, proper categorization of government contract expenses, and keeping books clean for your CPA at year-end.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <h4>How is pricing determined?</h4>
+            <h4 role="heading" aria-level="3">How is pricing determined?</h4>
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer"><p>Pricing is based on your monthly transaction volume. Most small businesses fall between $395–$895/month. We provide an exact quote during your free consultation — no guesswork, no surprises.</p></div>
@@ -1253,21 +1259,21 @@
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <h4>Do I need QuickBooks before signing up?</h4>
+            <h4 role="heading" aria-level="3">Do I need QuickBooks before signing up?</h4>
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer"><p>No. If you don't have QuickBooks Online, we can set it up as part of your onboarding. If you already have an account, we'll connect and clean it up as needed. Want real-time dashboards? We can run your books in Puzzle.io.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <h4>How long does it take to get started?</h4>
+            <h4 role="heading" aria-level="3">How long does it take to get started?</h4>
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer"><p>Most Richland County businesses are fully onboarded within 5–7 business days. We schedule a kickoff call, connect your accounts, review your chart of accounts, and begin work right away.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <h4>What if I want to switch from my current bookkeeper?</h4>
+            <h4 role="heading" aria-level="3">What if I want to switch from my current bookkeeper?</h4>
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer"><p>We make switching easy. We work directly with your previous bookkeeper to transition files and access, review existing books for accuracy, and pick up right where they left off — or clean things up if needed.</p></div>
@@ -1289,19 +1295,19 @@
     </div>
     <div class="nearby-grid">
       <div class="nearby-card">
-        <h4>Lexington County</h4>
+        <h4 role="heading" aria-level="3">Lexington County</h4>
         <p>Lexington · Cayce · West Columbia · Irmo</p>
       </div>
       <div class="nearby-card">
-        <h4>Kershaw County</h4>
+        <h4 role="heading" aria-level="3">Kershaw County</h4>
         <p>Camden · Elgin · Lugoff</p>
       </div>
       <div class="nearby-card">
-        <h4>Fairfield County</h4>
+        <h4 role="heading" aria-level="3">Fairfield County</h4>
         <p>Winnsboro · Ridgeway · Jenkinsville</p>
       </div>
       <div class="nearby-card">
-        <h4>Sumter County</h4>
+        <h4 role="heading" aria-level="3">Sumter County</h4>
         <p>Sumter · Shaw AFB · Dalzell</p>
       </div>
     </div>
@@ -1374,6 +1380,7 @@
   </div>
 </section>
 
+</main>
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -1382,7 +1389,7 @@
         <p class="footer-about">Remote bookkeeping, payroll support, and financial reporting for small businesses across Richland County and all of South Carolina.</p>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4 role="heading" aria-level="3">Services</h4>
         <ul class="footer-links">
           <li><a href="/service-monthly-bookkeeping">Monthly Bookkeeping</a></li>
           <li><a href="/service-catchup-bookkeeping">Catch-Up Bookkeeping</a></li>
@@ -1393,7 +1400,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>County Cities</h4>
+        <h4 role="heading" aria-level="3">County Cities</h4>
         <ul class="footer-links">
           <li><a href="/city-columbia-sc">Columbia</a></li>
           <li><a href="/areas-we-serve">Forest Acres</a></li>
@@ -1403,7 +1410,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4 role="heading" aria-level="3">Contact</h4>
         <ul class="footer-links">
           <li><a href="mailto:support@tidesbookkeeping.com">support@tidesbookkeeping.com</a></li>
           <li><a href="tel:+18645592686">(864) 559-2686</a></li>

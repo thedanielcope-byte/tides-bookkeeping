@@ -10,16 +10,18 @@
   <meta property="og:title" content="Catch-Up Bookkeeping in Dayton, OH | Tides" />
   <meta property="og:description" content="Catch-up bookkeeping services in Dayton, OH. Get months of messy books cleaned up fast with flat-rate pricing." />
   <meta property="og:url" content="https://www.tidesbookkeeping.com/service-catchup-bookkeeping-dayton-oh" />
-  <meta property="og:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta property="og:image" content="https://www.tidesbookkeeping.com/assets/social/tides-share-1200x630.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Tides Bookkeeping" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Catch-Up Bookkeeping in Dayton, OH | Tides" />
   <meta name="twitter:description" content="Catch-up bookkeeping services in Dayton, OH. Get months of messy books cleaned up fast with flat-rate pricing." />
-  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/assets/social/tides-share-1200x630.png" />
   <link rel="icon" type="image/png" href="/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <style>/* self-hosted-fonts */@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/bebas-neue-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/bebas-neue-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
   <style>
     /* ── TOKENS ─────────────────────────────────────── */
     :root {
@@ -31,7 +33,7 @@
       --navy-dk: #163872;
       --ink:     #0f1c2e;
       --body:    #4a5568;
-      --muted:   #94a3b8;
+      --muted:   #586880;
       --border:  #e2eaf3;
       --bg:      #ffffff;
       --bg-alt:  #f7fbff;
@@ -54,7 +56,7 @@
     .eyebrow {
       display: inline-flex; align-items: center; gap: 6px;
       font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
-      text-transform: uppercase; color: var(--teal);
+      text-transform: uppercase; color: #0d7377;
       background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
       padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
     }
@@ -153,7 +155,7 @@
     .ha-row strong { font-weight: 600; color: var(--ink); }
     .ha-badge { font-size: .67rem; font-weight: 700; padding: 3px 10px; border-radius: 50px; letter-spacing: .04em; }
     .ha-badge.green { background: #dcfce7; color: #16a34a; }
-    .ha-badge.teal { background: var(--teal-lt); color: var(--teal); }
+    .ha-badge.teal { background: var(--teal-lt); color: #0d7377; }
     .ha-badge.blue { background: var(--blue-lt); color: var(--navy); }
     .ha-stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--r-sm); overflow: hidden; margin-top: 1.5rem; }
     .ha-stat { background: var(--bg-alt); padding: 1rem; text-align: center; }
@@ -222,7 +224,7 @@
     /* ── SERVICE AREA ──────────────────────────────── */
     .svc-area { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 52px 0; }
     .svc-area-wrap { display: grid; grid-template-columns: 260px 1fr; gap: 3.5rem; align-items: flex-start; }
-    .svc-area-eyebrow { font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); margin-bottom: .5rem; }
+    .svc-area-eyebrow { font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #0d7377; margin-bottom: .5rem; }
     .svc-area-left h3 { font-size: 1.1rem; font-weight: 800; color: var(--ink); line-height: 1.35; margin-bottom: .4rem; }
     .svc-area-left > p { font-size: .84rem; color: var(--body); line-height: 1.65; }
     .svc-area-groups { display: flex; align-items: stretch; gap: 0; }
@@ -231,10 +233,10 @@
     .svc-area-group-label { font-size: .62rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .6rem; }
     .svc-area-pills { display: flex; flex-wrap: wrap; gap: .4rem; }
     .svc-area-pill { display: inline-block; padding: .3rem .85rem; border-radius: 50px; font-size: .74rem; font-weight: 600; border: 1px solid var(--border); background: #fff; color: var(--body); transition: all .2s; white-space: nowrap; text-decoration: none; }
-    a.svc-area-pill:hover { border-color: var(--teal); color: var(--teal); background: var(--teal-lt); }
+    a.svc-area-pill:hover { border-color: var(--teal); color: #0d7377; background: var(--teal-lt); }
     .svc-area-pill.state-pill { border-color: rgba(33,81,151,.25); color: var(--navy); background: rgba(33,81,151,.06); }
     a.svc-area-pill.state-pill:hover { background: rgba(33,81,151,.12); border-color: var(--navy); }
-    .svc-area-pill.nationwide-pill { border-color: rgba(65,207,208,.35); color: var(--teal); background: var(--teal-lt); }
+    .svc-area-pill.nationwide-pill { border-color: rgba(65,207,208,.35); color: #0d7377; background: var(--teal-lt); }
     .svc-area-divider { width: 1px; background: var(--border); flex-shrink: 0; }
     .svc-area-footer { margin-top: 1.75rem; display: flex; justify-content: flex-end; align-items: center; gap: 1.5rem; border-top: 1px solid var(--border); padding-top: 1.25rem; }
     .svc-area-link { display: inline-flex; align-items: center; gap: .35rem; font-size: .84rem; font-weight: 700; color: var(--navy); transition: all .2s; }
@@ -284,21 +286,21 @@
     /* ── FOOTER ─────────────────────────────────────── */
     .footer { background: var(--ink); padding: 64px 0 32px; border-top: 1px solid rgba(255,255,255,.06); }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; margin-bottom: 3rem; }
-    .footer-brand p { font-size: .84rem; color: rgba(255,255,255,.4); line-height: 1.7; margin: 1rem 0 1.5rem; }
+    .footer-brand p { font-size: .84rem; color: rgba(255,255,255,.62); line-height: 1.7; margin: 1rem 0 1.5rem; }
     .footer-logo img { height: 40px; filter: brightness(0) invert(1) opacity(.9); }
     .footer-social { display: flex; gap: .6rem; }
     .social-btn { width: 34px; height: 34px; border-radius: 8px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; font-size: .8rem; color: rgba(255,255,255,.5); transition: all .2s; }
     .social-btn:hover { background: rgba(65,207,208,.15); border-color: var(--teal); color: var(--teal); }
-    .footer-col h4 { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.35); margin-bottom: 1.25rem; }
+    .footer-col h4 { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.62); margin-bottom: 1.25rem; }
     .footer-links { list-style: none; }
     .footer-links li { margin-bottom: .55rem; }
-    .footer-links a { font-size: .84rem; color: rgba(255,255,255,.5); transition: color .2s; }
+    .footer-links a { font-size: .84rem; color: rgba(255,255,255,.72); transition: color .2s; }
     .footer-links a:hover { color: var(--teal); }
-    .footer-contact p { font-size: .84rem; color: rgba(255,255,255,.5); margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem; }
+    .footer-contact p { font-size: .84rem; color: rgba(255,255,255,.62); margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem; }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,.07); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.25); margin: 0; }
+    .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.62); margin: 0; }
     .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
-    .footer-bottom-links a { font-size: .78rem; color: rgba(255,255,255,.25); transition: color .2s; }
+    .footer-bottom-links a { font-size: .78rem; color: rgba(255,255,255,.62); transition: color .2s; }
     .footer-bottom-links a:hover { color: var(--teal); }
 
     /* ── HAMBURGER ──────────────────────────────── */
@@ -486,7 +488,15 @@
           "addressRegion": "SC",
           "addressCountry": "US"
         },
-        "telephone": "+1-864-559-2686"
+        "telephone": "+1-864-559-2686",
+        "sameAs": [
+          "https://www.linkedin.com/company/tides-bookkeeping",
+          "https://www.facebook.com/thetidesbookkeeping",
+          "https://www.instagram.com/tidesbookkeeping/",
+          "https://www.youtube.com/@TidesBookkeeping",
+          "https://www.google.com/maps?cid=14527500788148536557",
+          "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
+        ]
       },
       "description": "Professional catch-up bookkeeping that clears months or years of backlog, reconciles all accounts, and delivers tax-ready financials.",
       "areaServed": {
@@ -657,6 +667,7 @@
     </button>
   </div>
 </nav>
+<main id="main">
 
 <div class="breadcrumb">
     <div class="breadcrumb-inner">
@@ -743,7 +754,7 @@
         <div class="eyebrow">What's Included</div>
         <h2 class="display">What's Included in<br/><span class="gradient-text">Every Catch-Up.</span></h2>
         <p style="margin-top:1rem;font-size:1rem;line-height:1.75;">Catch-up bookkeeping isn't just data entry. It's a systematic process that touches every account, every period, and every inconsistency — so your books are accurate when we're done.</p>
-        <div class="pain-list"><div class="pain-item"><span class="pain-x">✅</span><div><h4>Complete Transaction Categorization</h4><p>Every transaction across every period is reviewed, categorized, and assigned to the correct account. We use your actual business activity to determine categories — not guesses.</p></div></div><div class="pain-item"><span class="pain-x">✅</span><div><h4>Full Account Reconciliation</h4><p>Every bank account, credit card, and loan account is reconciled against statements for every month in the catch-up period. Every discrepancy is identified and resolved.</p></div></div><div class="pain-item"><span class="pain-x">✅</span><div><h4>Chart of Accounts Review & Cleanup</h4><p>Duplicate accounts, miscategorized items, and structural problems in your QuickBooks are fixed. You get a clean, logical account structure going forward.</p></div></div><div class="pain-item"><span class="pain-x">✅</span><div><h4>Period-by-Period P&L Statements</h4><p>Once catch-up is complete, we deliver profit and loss statements for each year or period covered — so you have a real financial history, not a black hole.</p></div></div></div>
+        <div class="pain-list"><div class="pain-item"><span class="pain-x">✅</span><div><h4 role="heading" aria-level="3">Complete Transaction Categorization</h4><p>Every transaction across every period is reviewed, categorized, and assigned to the correct account. We use your actual business activity to determine categories — not guesses.</p></div></div><div class="pain-item"><span class="pain-x">✅</span><div><h4 role="heading" aria-level="3">Full Account Reconciliation</h4><p>Every bank account, credit card, and loan account is reconciled against statements for every month in the catch-up period. Every discrepancy is identified and resolved.</p></div></div><div class="pain-item"><span class="pain-x">✅</span><div><h4 role="heading" aria-level="3">Chart of Accounts Review & Cleanup</h4><p>Duplicate accounts, miscategorized items, and structural problems in your QuickBooks are fixed. You get a clean, logical account structure going forward.</p></div></div><div class="pain-item"><span class="pain-x">✅</span><div><h4 role="heading" aria-level="3">Period-by-Period P&L Statements</h4><p>Once catch-up is complete, we deliver profit and loss statements for each year or period covered — so you have a real financial history, not a black hole.</p></div></div></div>
       </div>
       <div>
         <div class="pain-visual" style="margin-top:4.75rem;">
@@ -785,7 +796,7 @@
         <div class="eyebrow">Sound Familiar?</div>
         <h2 class="display">The Real Cost of<br/><span class="gradient-text">Falling Behind.</span></h2>
         <p style="margin-top:1rem;font-size:1rem;line-height:1.75;">Most business owners know their books are behind. What they underestimate is what that actually costs them in time, money, and missed opportunities.</p>
-        <div class="pain-list"><div class="pain-item"><span class="pain-x">😩</span><div><h4>CPA Cleanup Charges</h4><p>When your accountant has to reconcile 12 months of transactions to file your taxes, they charge accordingly — often hundreds or thousands in extra fees that clean books would have eliminated.</p></div></div><div class="pain-item"><span class="pain-x">💸</span><div><h4>Missed Deductions</h4><p>Transactions that aren't categorized correctly don't show up as deductions. Behind books mean you're likely overpaying on taxes every year.</p></div></div><div class="pain-item"><span class="pain-x">📊</span><div><h4>No Real Financial Picture</h4><p>Without accurate records, you can't know if your business is truly profitable. Decisions about hiring, pricing, and growth are made on gut instinct instead of facts.</p></div></div><div class="pain-item"><span class="pain-x">⏰</span><div><h4>Lost Time Every Tax Season</h4><p>Spending January and February tracking down receipts, matching bank statements, and reconstructing a year of activity costs dozens of hours you'll never get back.</p></div></div></div>
+        <div class="pain-list"><div class="pain-item"><span class="pain-x">😩</span><div><h4 role="heading" aria-level="3">CPA Cleanup Charges</h4><p>When your accountant has to reconcile 12 months of transactions to file your taxes, they charge accordingly — often hundreds or thousands in extra fees that clean books would have eliminated.</p></div></div><div class="pain-item"><span class="pain-x">💸</span><div><h4 role="heading" aria-level="3">Missed Deductions</h4><p>Transactions that aren't categorized correctly don't show up as deductions. Behind books mean you're likely overpaying on taxes every year.</p></div></div><div class="pain-item"><span class="pain-x">📊</span><div><h4 role="heading" aria-level="3">No Real Financial Picture</h4><p>Without accurate records, you can't know if your business is truly profitable. Decisions about hiring, pricing, and growth are made on gut instinct instead of facts.</p></div></div><div class="pain-item"><span class="pain-x">⏰</span><div><h4 role="heading" aria-level="3">Lost Time Every Tax Season</h4><p>Spending January and February tracking down receipts, matching bank statements, and reconstructing a year of activity costs dozens of hours you'll never get back.</p></div></div></div>
       </div>
       <div>
         <div class="pain-visual" style="margin-top:4.75rem;">
@@ -980,48 +991,48 @@
     <div class="faq-list faq-two-col" style="margin-top:3.5rem;">
       <div><div class="faq-item open">
   <button class="faq-question" onclick="toggleFaq(this)">
-    <h4>How far back can you go?</h4><span class="faq-toggle">+</span>
+    <h4 role="heading" aria-level="3">How far back can you go?</h4><span class="faq-toggle">+</span>
   </button>
   <div class="faq-answer">There's no limit. We've cleaned up books that were 3+ years behind. The further back the work goes, the more it costs, but we always give you a firm quote upfront so you know exactly what you're paying before we start.</div>
 </div><div class="faq-item">
   <button class="faq-question" onclick="toggleFaq(this)">
-    <h4>How long does catch-up take?</h4><span class="faq-toggle">+</span>
+    <h4 role="heading" aria-level="3">How long does catch-up take?</h4><span class="faq-toggle">+</span>
   </button>
   <div class="faq-answer">It depends on the volume of transactions and how many months are involved. A single year with moderate transaction volume typically takes 2–3 weeks. We'll give you a realistic timeline in your free assessment.</div>
 </div><div class="faq-item">
   <button class="faq-question" onclick="toggleFaq(this)">
-    <h4>Do I need to have QuickBooks?</h4><span class="faq-toggle">+</span>
+    <h4 role="heading" aria-level="3">Do I need to have QuickBooks?</h4><span class="faq-toggle">+</span>
   </button>
   <div class="faq-answer">No. If you're not on QuickBooks Online, we'll set it up as part of the process. If you're on a different platform or have no accounting software at all, we migrate or build from scratch.</div>
 </div><div class="faq-item">
   <button class="faq-question" onclick="toggleFaq(this)">
-    <h4>What do I need to provide?</h4><span class="faq-toggle">+</span>
+    <h4 role="heading" aria-level="3">What do I need to provide?</h4><span class="faq-toggle">+</span>
   </button>
   <div class="faq-answer">Access to your QuickBooks Online account and bank statements for the periods being cleaned up. If you don't have statements, we can work with bank feed data in most cases.</div>
 </div></div>
       <div><div class="faq-item">
   <button class="faq-question" onclick="toggleFaq(this)">
-    <h4>Will I get actual financial reports?</h4><span class="faq-toggle">+</span>
+    <h4 role="heading" aria-level="3">Will I get actual financial reports?</h4><span class="faq-toggle">+</span>
   </button>
   <div class="faq-answer">Yes. Once the catch-up is complete, we deliver P&L statements and balance sheets for each year covered. You'll have real financials — not just reconciled data.</div>
 </div><div class="faq-item">
   <button class="faq-question" onclick="toggleFaq(this)">
-    <h4>How is catch-up bookkeeping priced?</h4><span class="faq-toggle">+</span>
+    <h4 role="heading" aria-level="3">How is catch-up bookkeeping priced?</h4><span class="faq-toggle">+</span>
   </button>
   <div class="faq-answer">It's a flat project fee based on the number of months and average transaction volume. No hourly billing. We quote the full project upfront so there are no surprises.</div>
 </div><div class="faq-item">
   <button class="faq-question" onclick="toggleFaq(this)">
-    <h4>Can I move to monthly service after catch-up?</h4><span class="faq-toggle">+</span>
+    <h4 role="heading" aria-level="3">Can I move to monthly service after catch-up?</h4><span class="faq-toggle">+</span>
   </button>
   <div class="faq-answer">Absolutely — that's the most common path. Once your books are current, we start your monthly bookkeeping cycle immediately. The transition is seamless.</div>
 </div><div class="faq-item">
   <button class="faq-question" onclick="toggleFaq(this)">
-    <h4>What if my previous bookkeeper made errors?</h4><span class="faq-toggle">+</span>
+    <h4 role="heading" aria-level="3">What if my previous bookkeeper made errors?</h4><span class="faq-toggle">+</span>
   </button>
   <div class="faq-answer">We audit the prior work, identify errors, and correct them as part of the catch-up. We don't assume prior work is accurate — everything gets verified.</div>
 </div><div class="faq-item">
   <button class="faq-question" onclick="toggleFaq(this)">
-    <h4>Do you handle Dayton-area catch-up work if you're fully remote?</h4><span class="faq-toggle">+</span>
+    <h4 role="heading" aria-level="3">Do you handle Dayton-area catch-up work if you're fully remote?</h4><span class="faq-toggle">+</span>
   </button>
   <div class="faq-answer">Yes. We clean up backlogs for businesses across Southwest Ohio — Downtown, the Oregon District, and the suburbs of Kettering, Beavercreek, Centerville, and Huber Heights — entirely online. Bank statements and QuickBooks access come through secure connections, so there's nothing to drop off and no in-person meetings required. We reconstruct your reconciliations and untangle back City of Dayton and RITA municipal filings, then hand you a clean, CPA-ready package at the end.</div>
 </div></div>
@@ -1053,42 +1064,42 @@
     <div class="industries-grid">
       <a href="/industry-real-estate-dayton-oh" class="ind-card">
         <div class="ind-icon">🏡</div>
-        <h4>Real Estate</h4>
+        <h4 role="heading" aria-level="3">Real Estate</h4>
         <p>Commission backlogs, rental income gaps, property expense catch-up.</p>
       </a>
       <a href="/industry-contractors-trades-dayton-oh" class="ind-card">
         <div class="ind-icon">🔨</div>
-        <h4>Contractors &amp; Trades</h4>
+        <h4 role="heading" aria-level="3">Contractors &amp; Trades</h4>
         <p>Job cost catch-up, subcontractor 1099s, equipment expense sorting.</p>
       </a>
       <a href="/industry-restaurants-bars-dayton-oh" class="ind-card">
         <div class="ind-icon">🍽️</div>
-        <h4>Restaurants &amp; Bars</h4>
+        <h4 role="heading" aria-level="3">Restaurants &amp; Bars</h4>
         <p>Daily sales reconciliation, vendor AP, tip payroll catch-up.</p>
       </a>
       <a href="/industry-healthcare-dayton-oh" class="ind-card">
         <div class="ind-icon">🏥</div>
-        <h4>Healthcare Practices</h4>
+        <h4 role="heading" aria-level="3">Healthcare Practices</h4>
         <p>Insurance reimbursement catch-up, patient billing reconciliation.</p>
       </a>
       <a href="/industry-professional-services-dayton-oh" class="ind-card">
         <div class="ind-icon">💼</div>
-        <h4>Professional Services</h4>
+        <h4 role="heading" aria-level="3">Professional Services</h4>
         <p>Retainer income, project billing, and expense catch-up.</p>
       </a>
       <a href="/industry-ecommerce-retail-dayton-oh" class="ind-card">
         <div class="ind-icon">🛒</div>
-        <h4>E-Commerce &amp; Retail</h4>
+        <h4 role="heading" aria-level="3">E-Commerce &amp; Retail</h4>
         <p>Platform fee reconciliation, inventory, and COGS catch-up.</p>
       </a>
       <a href="/industry-tech-startups-dayton-oh" class="ind-card">
         <div class="ind-icon">💻</div>
-        <h4>Tech &amp; Startups</h4>
+        <h4 role="heading" aria-level="3">Tech &amp; Startups</h4>
         <p>Runway reconstruction, MRR reconciliation, investor-ready clean-up.</p>
       </a>
       <a href="/industry-solo-entrepreneurs-dayton-oh" class="ind-card">
         <div class="ind-icon">🌿</div>
-        <h4>Service Businesses</h4>
+        <h4 role="heading" aria-level="3">Service Businesses</h4>
         <p>Recurring revenue, expense categories, and payroll catch-up.</p>
       </a>
     </div>
@@ -1124,6 +1135,7 @@
   </div>
 </section>
 
+</main>
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -1137,7 +1149,7 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4 role="heading" aria-level="3">Services</h4>
         <ul class="footer-links">
           <li><a href="/services">All Services</a></li>
           <li><a href="/service-monthly-bookkeeping">Monthly Bookkeeping</a></li>
@@ -1150,7 +1162,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Who We Serve</h4>
+        <h4 role="heading" aria-level="3">Who We Serve</h4>
         <ul class="footer-links">
           <li><a href="/industry-real-estate-dayton-oh">Real Estate</a></li>
           <li><a href="/industry-contractors-trades-dayton-oh">Contractors &amp; Trades</a></li>
@@ -1163,7 +1175,7 @@
         </ul>
       </div>
       <div class="footer-contact footer-col">
-        <h4>Contact</h4>
+        <h4 role="heading" aria-level="3">Contact</h4>
         <p>📧 support@tidesbookkeeping.com</p>
         <p>📞 (864) 559-2686</p>
         <p>📍 Greenville, South Carolina</p>

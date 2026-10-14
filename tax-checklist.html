@@ -10,16 +10,18 @@
   <meta property="og:title" content="The Real Estate Agent Tax Deduction Checklist" />
   <meta property="og:description" content="The 1-page checklist that helps real estate agents capture every write-off they've earned — before they hand everything to their CPA in April." />
   <meta property="og:url" content="https://www.tidesbookkeeping.com/tax-checklist" />
-  <meta property="og:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta property="og:image" content="https://www.tidesbookkeeping.com/assets/social/tides-share-1200x630.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Tides Bookkeeping" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="The Real Estate Agent Tax Deduction Checklist" />
   <meta name="twitter:description" content="The 1-page checklist that helps real estate agents capture every write-off they've earned — before they hand everything to their CPA in April." />
-  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/assets/social/tides-share-1200x630.png" />
   <link rel="icon" type="image/png" href="/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <style>/* self-hosted-fonts */@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/bebas-neue-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/bebas-neue-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
   <style>
     /* ── TOKENS ─────────────────────────────────────── */
     :root {
@@ -31,7 +33,7 @@
       --navy-dk: #163872;
       --ink:     #0f1c2e;
       --body:    #4a5568;
-      --muted:   #94a3b8;
+      --muted:   #586880;
       --border:  #e2eaf3;
       --bg:      #ffffff;
       --bg-alt:  #f7fbff;
@@ -56,7 +58,7 @@
     .eyebrow {
       display: inline-flex; align-items: center; gap: 6px;
       font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
-      text-transform: uppercase; color: var(--teal);
+      text-transform: uppercase; color: #0d7377;
       background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
       padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
     }
@@ -150,7 +152,7 @@
     .hero-trust span { display: inline-flex; align-items: center; gap: .4rem; }
     .hero-trust span::before {
       content: '✓'; width: 18px; height: 18px; border-radius: 50%;
-      background: var(--teal-lt); color: var(--teal); font-size: .7rem; font-weight: 800;
+      background: var(--teal-lt); color: #0d7377; font-size: .7rem; font-weight: 800;
       display: inline-flex; align-items: center; justify-content: center;
     }
 
@@ -218,7 +220,7 @@
     }
     .inside-card-icon {
       width: 38px; height: 38px; border-radius: 10px;
-      background: var(--teal-lt); color: var(--teal);
+      background: var(--teal-lt); color: #0d7377;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.1rem; flex-shrink: 0;
     }
@@ -302,7 +304,7 @@
       gap: 3rem; margin-bottom: 3rem;
     }
     .footer-logo img { height: 40px; margin-bottom: 1.25rem; filter: brightness(0) invert(1); }
-    .footer-brand p { font-size: .84rem; color: rgba(255,255,255,.45); line-height: 1.7; max-width: 280px; margin-bottom: 1.5rem; }
+    .footer-brand p { font-size: .84rem; color: rgba(255,255,255,.62); line-height: 1.7; max-width: 280px; margin-bottom: 1.5rem; }
     .footer-social { display: flex; gap: .6rem; }
     .social-btn {
       width: 34px; height: 34px; border-radius: 8px;
@@ -313,20 +315,20 @@
     .social-btn:hover { background: rgba(65,207,208,.15); border-color: var(--teal); color: var(--teal); }
     .footer-col h4 {
       font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
-      color: rgba(255,255,255,.35); margin-bottom: 1.25rem;
+      color: rgba(255,255,255,.62); margin-bottom: 1.25rem;
     }
     .footer-links { list-style: none; }
     .footer-links li { margin-bottom: .55rem; }
-    .footer-links a { font-size: .84rem; color: rgba(255,255,255,.5); transition: color .2s; }
+    .footer-links a { font-size: .84rem; color: rgba(255,255,255,.72); transition: color .2s; }
     .footer-links a:hover { color: var(--teal); }
-    .footer-contact p { font-size: .84rem; color: rgba(255,255,255,.5); margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem; }
+    .footer-contact p { font-size: .84rem; color: rgba(255,255,255,.62); margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem; }
     .footer-bottom {
       border-top: 1px solid rgba(255,255,255,.07);
       padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
     }
-    .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.25); margin: 0; }
+    .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.62); margin: 0; }
     .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
-    .footer-bottom-links a { font-size: .78rem; color: rgba(255,255,255,.25); transition: color .2s; }
+    .footer-bottom-links a { font-size: .78rem; color: rgba(255,255,255,.62); transition: color .2s; }
     .footer-bottom-links a:hover { color: var(--teal); }
 
     /* ── RESPONSIVE ─────────────────────────────────── */
@@ -486,6 +488,7 @@
     </button>
   </div>
 </nav>
+<main id="main">
 
 <!-- HERO -->
 <section class="hero">
@@ -512,7 +515,7 @@
         <div class="form-card-header">
           <div class="form-card-icon">📋</div>
           <div>
-            <h3>Get the checklist</h3>
+            <h3 role="heading" aria-level="2">Get the checklist</h3>
             <p>50+ deductions on 1 page · Free PDF</p>
           </div>
         </div>
@@ -549,35 +552,35 @@
     <div class="inside-grid">
       <div class="inside-card">
         <div class="inside-card-icon">🚗</div>
-        <div><h4>Vehicle &amp; Mileage</h4><p>Mileage tracking, lease, depreciation, tolls, parking</p></div>
+        <div><h4 role="heading" aria-level="3">Vehicle &amp; Mileage</h4><p>Mileage tracking, lease, depreciation, tolls, parking</p></div>
       </div>
       <div class="inside-card">
         <div class="inside-card-icon">🏠</div>
-        <div><h4>Home Office</h4><p>Square footage method, utilities, repairs, insurance</p></div>
+        <div><h4 role="heading" aria-level="3">Home Office</h4><p>Square footage method, utilities, repairs, insurance</p></div>
       </div>
       <div class="inside-card">
         <div class="inside-card-icon">🪪</div>
-        <div><h4>MLS, Dues &amp; Licensing</h4><p>Board dues, MLS fees, license renewals, E&amp;O insurance</p></div>
+        <div><h4 role="heading" aria-level="3">MLS, Dues &amp; Licensing</h4><p>Board dues, MLS fees, license renewals, E&amp;O insurance</p></div>
       </div>
       <div class="inside-card">
         <div class="inside-card-icon">📣</div>
-        <div><h4>Marketing &amp; Ads</h4><p>Signs, Zillow leads, Facebook ads, photography, video</p></div>
+        <div><h4 role="heading" aria-level="3">Marketing &amp; Ads</h4><p>Signs, Zillow leads, Facebook ads, photography, video</p></div>
       </div>
       <div class="inside-card">
         <div class="inside-card-icon">💻</div>
-        <div><h4>Tech &amp; Software</h4><p>CRM, transaction tools, e-sign, cloud storage, phone</p></div>
+        <div><h4 role="heading" aria-level="3">Tech &amp; Software</h4><p>CRM, transaction tools, e-sign, cloud storage, phone</p></div>
       </div>
       <div class="inside-card">
         <div class="inside-card-icon">⚖️</div>
-        <div><h4>Professional Services</h4><p>Bookkeeping, tax prep, legal, coaching, consulting</p></div>
+        <div><h4 role="heading" aria-level="3">Professional Services</h4><p>Bookkeeping, tax prep, legal, coaching, consulting</p></div>
       </div>
       <div class="inside-card">
         <div class="inside-card-icon">🍽️</div>
-        <div><h4>Meals &amp; Travel</h4><p>Client meals, conferences, lodging, business travel</p></div>
+        <div><h4 role="heading" aria-level="3">Meals &amp; Travel</h4><p>Client meals, conferences, lodging, business travel</p></div>
       </div>
       <div class="inside-card">
         <div class="inside-card-icon">💡</div>
-        <div><h4>Often-Missed Deductions</h4><p>Health insurance, retirement, business gifts, training</p></div>
+        <div><h4 role="heading" aria-level="3">Often-Missed Deductions</h4><p>Health insurance, retirement, business gifts, training</p></div>
       </div>
     </div>
   </div>
@@ -609,7 +612,7 @@
         <div class="author">
           <div class="author-avatar">D</div>
           <div class="author-info">
-            <h4>Dan Cope</h4>
+            <h4 role="heading" aria-level="3">Dan Cope</h4>
             <p>Founder, Tides Bookkeeping</p>
           </div>
         </div>
@@ -672,6 +675,7 @@
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -685,7 +689,7 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4 role="heading" aria-level="3">Services</h4>
         <ul class="footer-links">
           <li><a href="/service-monthly-bookkeeping">Monthly Bookkeeping</a></li>
           <li><a href="/service-catchup-bookkeeping">Catch-Up Bookkeeping</a></li>
@@ -696,7 +700,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Who We Serve</h4>
+        <h4 role="heading" aria-level="3">Who We Serve</h4>
         <ul class="footer-links">
           <li><a href="/industry-real-estate">Real Estate</a></li>
           <li><a href="/industry-contractors-trades">Contractors &amp; Trades</a></li>
@@ -709,7 +713,7 @@
         </ul>
       </div>
       <div class="footer-contact footer-col">
-        <h4>Contact</h4>
+        <h4 role="heading" aria-level="3">Contact</h4>
         <p>📧 support@tidesbookkeeping.com</p>
         <p>📞 (864) 559-2686</p>
         <p>📍 Greenville, South Carolina</p>

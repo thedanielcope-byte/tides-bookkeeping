@@ -10,16 +10,18 @@
   <meta property="og:title" content="Blog | Tides Bookkeeping" />
   <meta property="og:description" content="Practical bookkeeping tips for small business owners." />
   <meta property="og:url" content="https://www.tidesbookkeeping.com/blog" />
-  <meta property="og:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta property="og:image" content="https://www.tidesbookkeeping.com/assets/social/tides-share-1200x630.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Tides Bookkeeping" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Blog | Tides Bookkeeping" />
   <meta name="twitter:description" content="Practical bookkeeping tips for small business owners." />
-  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/assets/social/tides-share-1200x630.png" />
   <link rel="icon" type="image/png" href="/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <style>/* self-hosted-fonts */@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/bebas-neue-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/bebas-neue-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
   <style>
     /* ── TOKENS ─────────────────────────────────────── */
     :root {
@@ -31,7 +33,7 @@
       --navy-dk: #163872;
       --ink:     #0f1c2e;
       --body:    #4a5568;
-      --muted:   #94a3b8;
+      --muted:   #586880;
       --border:  #e2eaf3;
       --bg:      #ffffff;
       --bg-alt:  #f7fbff;
@@ -56,7 +58,7 @@
     .eyebrow {
       display: inline-flex; align-items: center; gap: 6px;
       font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
-      text-transform: uppercase; color: var(--teal);
+      text-transform: uppercase; color: #0d7377;
       background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
       padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
     }
@@ -225,7 +227,7 @@
       gap: 3rem; margin-bottom: 3rem;
     }
     .footer-logo img { height: 40px; margin-bottom: 1.25rem; filter: brightness(0) invert(1); }
-    .footer-brand p { font-size: .84rem; color: rgba(255,255,255,.45); line-height: 1.7; max-width: 280px; margin-bottom: 1.5rem; }
+    .footer-brand p { font-size: .84rem; color: rgba(255,255,255,.62); line-height: 1.7; max-width: 280px; margin-bottom: 1.5rem; }
     .footer-social { display: flex; gap: .6rem; }
     .social-btn {
       width: 34px; height: 34px; border-radius: 8px;
@@ -236,20 +238,20 @@
     .social-btn:hover { background: rgba(65,207,208,.15); border-color: var(--teal); color: var(--teal); }
     .footer-col h4 {
       font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
-      color: rgba(255,255,255,.35); margin-bottom: 1.25rem;
+      color: rgba(255,255,255,.62); margin-bottom: 1.25rem;
     }
     .footer-links { list-style: none; }
     .footer-links li { margin-bottom: .55rem; }
-    .footer-links a { font-size: .84rem; color: rgba(255,255,255,.5); transition: color .2s; }
+    .footer-links a { font-size: .84rem; color: rgba(255,255,255,.72); transition: color .2s; }
     .footer-links a:hover { color: var(--teal); }
-    .footer-contact p { font-size: .84rem; color: rgba(255,255,255,.5); margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem; }
+    .footer-contact p { font-size: .84rem; color: rgba(255,255,255,.62); margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem; }
     .footer-bottom {
       border-top: 1px solid rgba(255,255,255,.07);
       padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
     }
-    .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.25); margin: 0; }
+    .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.62); margin: 0; }
     .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
-    .footer-bottom-links a { font-size: .78rem; color: rgba(255,255,255,.25); transition: color .2s; }
+    .footer-bottom-links a { font-size: .78rem; color: rgba(255,255,255,.62); transition: color .2s; }
     .footer-bottom-links a:hover { color: var(--teal); }
 
     /* ── RESPONSIVE ─────────────────────────────────── */
@@ -410,6 +412,7 @@
     </button>
   </div>
 </nav>
+<main id="main">
 
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
@@ -445,7 +448,7 @@
       .blog-card { background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 2rem 1.75rem; transition: all .2s; display: flex; flex-direction: column; }
       .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(65,207,208,.4); }
       .blog-card-meta { font-size: .78rem; color: var(--muted); margin-bottom: .65rem; display: flex; gap: .5rem; align-items: center; }
-      .blog-card-tag { background: var(--teal-lt); color: var(--teal); padding: 2px 10px; border-radius: 50px; font-weight: 700; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
+      .blog-card-tag { background: var(--teal-lt); color: #0d7377; padding: 2px 10px; border-radius: 50px; font-weight: 700; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
       .blog-card h3 { font-size: 1.15rem; line-height: 1.35; margin-bottom: .5rem; color: var(--ink); }
       .blog-card p { font-size: .88rem; color: var(--body); line-height: 1.6; margin-bottom: 1.25rem; flex: 1; }
       .blog-card a.read { font-size: .85rem; font-weight: 700; color: var(--navy); }
@@ -457,277 +460,277 @@
       <!-- blog-list-start -->
       <a href="/blog-is-your-bookkeeper-doing-a-good-job" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Oct 14, 2026</span></div>
-        <h3>Is Your Bookkeeper Doing a Good Job? 5 Things to Ask For</h3>
+        <h3 role="heading" aria-level="2">Is Your Bookkeeper Doing a Good Job? 5 Things to Ask For</h3>
         <p>Five things to ask your bookkeeper for, what a good answer looks like for each, and the email to send. No bookkeeping knowledge needed.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-local-vs-remote-bookkeeper" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Sep 28, 2026</span></div>
-        <h3>Local Bookkeeper vs Remote Bookkeeper: How to Choose</h3>
+        <h3 role="heading" aria-level="2">Local Bookkeeper vs Remote Bookkeeper: How to Choose</h3>
         <p>When local is the right call, when remote is, and the questions to ask either one before you hand over your books.</p>
         <span class="read">Read more &rarr;</span>
       </a>
       <a href="/blog-best-payroll-software-for-restaurants" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Sep 19, 2026</span></div>
-        <h3>Best Payroll Software for Restaurants (2026)</h3>
+        <h3 role="heading" aria-level="2">Best Payroll Software for Restaurants (2026)</h3>
         <p>Toast Payroll, Square Payroll, Gusto and QuickBooks payroll compared, plus the tip rules restaurant payroll has to get right in 2026.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-toast-vs-square-vs-clover" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Sep 19, 2026</span></div>
-        <h3>Toast vs Square vs Clover: Which POS Makes Bookkeeping Easiest?</h3>
+        <h3 role="heading" aria-level="2">Toast vs Square vs Clover: Which POS Makes Bookkeeping Easiest?</h3>
         <p>How each POS gets sales, tips, taxes and fees into your books, plus contracts and the questions to ask before you sign.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-best-accounting-software-for-ecommerce" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Sep 19, 2026</span></div>
-        <h3>Best Accounting Software for Ecommerce Sellers (2026)</h3>
+        <h3 role="heading" aria-level="2">Best Accounting Software for Ecommerce Sellers (2026)</h3>
         <p>The ledger plus the connector: QuickBooks vs Xero, and A2X, Synder, Webgility and Link My Books, from an A2X certified bookkeeper.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-best-accounting-software-for-startups" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Sep 19, 2026</span></div>
-        <h3>Best Accounting Software for Startups (2026)</h3>
+        <h3 role="heading" aria-level="2">Best Accounting Software for Startups (2026)</h3>
         <p>Puzzle, QuickBooks Online, Xero, Wave and NetSuite compared for founders by a Certified Puzzle Advisor.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-best-accounting-software-for-restaurants" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Sep 19, 2026</span></div>
-        <h3>Best Accounting Software for Restaurants (2026)</h3>
+        <h3 role="heading" aria-level="2">Best Accounting Software for Restaurants (2026)</h3>
         <p>QuickBooks, Restaurant365, Xero, MarginEdge and more, compared by a bookkeeper who works in QuickBooks and Restaurant365 for restaurant clients.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-what-is-a-quickbooks-proadvisor" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Sep 18, 2026</span></div>
-        <h3>What Is a QuickBooks ProAdvisor? (And How to Verify One)</h3>
+        <h3 role="heading" aria-level="2">What Is a QuickBooks ProAdvisor? (And How to Verify One)</h3>
         <p>What a QuickBooks ProAdvisor is, what the certifications cover, why they lapse every year, and how to check a bookkeeper&rsquo;s status in 60 seconds.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-puzzle-accounting-review" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Sep 18, 2026</span></div>
-        <h3>Puzzle Accounting Review: A Certified Advisor&rsquo;s Take</h3>
+        <h3 role="heading" aria-level="2">Puzzle Accounting Review: A Certified Advisor&rsquo;s Take</h3>
         <p>An honest Puzzle review from a Certified Puzzle Advisor: what it does well, who it fits, and where QuickBooks is still the better call.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-gusto-vs-quickbooks-payroll" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Sep 18, 2026</span></div>
-        <h3>Gusto vs QuickBooks Payroll: A Bookkeeper Certified in Both</h3>
+        <h3 role="heading" aria-level="2">Gusto vs QuickBooks Payroll: A Bookkeeper Certified in Both</h3>
         <p>How Gusto and QuickBooks payroll (now QuickBooks Workforce) differ, the bookkeeping side most people miss, and which to pick.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-what-is-a2x" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Sep 18, 2026</span></div>
-        <h3>What Is A2X? Shopify &amp; Amazon Bookkeeping, Explained</h3>
+        <h3 role="heading" aria-level="2">What Is A2X? Shopify &amp; Amazon Bookkeeping, Explained</h3>
         <p>Why Shopify and Amazon deposits never match your sales, and how A2X turns each payout into one clean entry in QuickBooks or Xero.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-how-much-does-an-s-corp-save" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Sep 4, 2026</span></div>
-        <h3>How Much Does an S-Corp Save You in Taxes?</h3>
+        <h3 role="heading" aria-level="2">How Much Does an S-Corp Save You in Taxes?</h3>
         <p>A plain-English breakdown of S-Corp tax savings: the self-employment tax math, a worked example, the break-even income, and the costs to subtract.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-quarterly-estimated-taxes-guide" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Sep 4, 2026</span></div>
-        <h3>Quarterly Estimated Taxes: A Guide for the Self-Employed</h3>
+        <h3 role="heading" aria-level="2">Quarterly Estimated Taxes: A Guide for the Self-Employed</h3>
         <p>Who has to pay, the four deadlines, how much to pay, the safe-harbor rule, and how to avoid the underpayment penalty — for the self-employed.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-is-quickbooks-good-for-restaurants" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Aug 29, 2026</span></div>
-        <h3>Is QuickBooks Good for Restaurants? An Honest Answer</h3>
+        <h3 role="heading" aria-level="2">Is QuickBooks Good for Restaurants? An Honest Answer</h3>
         <p>Is QuickBooks good for restaurants? Yes — with caveats. What it does well, where it falls short, when it's enough, how to set it up right, and when to move to Restaurant365.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-catch-up-bookkeeping-what-to-expect" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Aug 17, 2026</span></div>
-        <h3>Catch-Up Bookkeeping: What to Expect From Start to Finish</h3>
+        <h3 role="heading" aria-level="2">Catch-Up Bookkeeping: What to Expect From Start to Finish</h3>
         <p>Wondering what catch-up bookkeeping actually delivers? Here's exactly what you'll get, how it works with your CPA, and what's included in the price.</p>
         <span class="read">Read more &rarr;</span>
       </a>
       <a href="/blog-bookkeeping-for-law-firms" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Aug 2, 2026</span></div>
-        <h3>Bookkeeping for Law Firms: Trust Accounting &amp; IOLTA</h3>
+        <h3 role="heading" aria-level="2">Bookkeeping for Law Firms: Trust Accounting &amp; IOLTA</h3>
         <p>Law firm bookkeeping explained: IOLTA trust accounting, three-way reconciliation, earned vs unearned fees, and the compliance mistakes that get attorneys in trouble.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-bookkeeping-for-truckers" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Aug 2, 2026</span></div>
-        <h3>Bookkeeping for Truckers &amp; Owner-Operators</h3>
+        <h3 role="heading" aria-level="2">Bookkeeping for Truckers &amp; Owner-Operators</h3>
         <p>Owner-operator bookkeeping made clear: cost per mile, the per-diem deduction, IFTA fuel tax, settlement statements, equipment depreciation, and the numbers that keep you profitable.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-chart-of-accounts-guide" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Aug 2, 2026</span></div>
-        <h3>The Small Business Chart of Accounts: A Complete Guide</h3>
+        <h3 role="heading" aria-level="2">The Small Business Chart of Accounts: A Complete Guide</h3>
         <p>What a chart of accounts is, the five account types, how to number and organize it, industry-specific setups, and the mistakes that make your reports useless.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-how-to-categorize-business-expenses" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Aug 2, 2026</span></div>
-        <h3>How to Categorize Business Expenses (the Right Way)</h3>
+        <h3 role="heading" aria-level="2">How to Categorize Business Expenses (the Right Way)</h3>
         <p>A plain-English guide to categorizing business expenses: the common categories, business vs personal, what's deductible, and the miscategorizations that cost you at tax time.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-quickbooks-live-alternatives" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Aug 1, 2026</span></div>
-        <h3>The Best QuickBooks Live Alternatives (2026)</h3>
+        <h3 role="heading" aria-level="2">The Best QuickBooks Live Alternatives (2026)</h3>
         <p>Looking for a QuickBooks Live alternative? Six real options compared — dedicated remote firms, local bookkeepers, app-based services, fractional CPAs, and DIY.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-bench-accounting-alternatives" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jul 31, 2026</span></div>
-        <h3>Bench Accounting Alternatives: 2026 Guide</h3>
+        <h3 role="heading" aria-level="2">Bench Accounting Alternatives: 2026 Guide</h3>
         <p>Bench shut down overnight and left 12,000 businesses scrambling. What to look for in a bookkeeping service now — and the alternatives worth considering in 2026.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-quickbooks-live-vs-dedicated-bookkeeper" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jul 31, 2026</span></div>
-        <h3>QuickBooks Live vs a Dedicated Bookkeeper</h3>
+        <h3 role="heading" aria-level="2">QuickBooks Live vs a Dedicated Bookkeeper</h3>
         <p>QuickBooks Live pricing, what's in scope, and where it falls short — an honest comparison with a dedicated bookkeeping firm, and how to pick for your business.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-restaurant365-vs-quickbooks" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jul 25, 2026</span></div>
-        <h3>Restaurant365 vs QuickBooks: Which Is Right for Your Restaurant?</h3>
+        <h3 role="heading" aria-level="2">Restaurant365 vs QuickBooks: Which Is Right for Your Restaurant?</h3>
         <p>Restaurant365 vs QuickBooks for restaurants: an honest comparison of features, restaurant-specific costing, pricing, and which one actually fits a single spot versus a multi-location group.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-bookkeeping-for-contractors-job-costing" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jul 13, 2026</span></div>
-        <h3>Bookkeeping for Contractors: Job Costing Made Simple</h3>
+        <h3 role="heading" aria-level="2">Bookkeeping for Contractors: Job Costing Made Simple</h3>
         <p>Job costing shows contractors which jobs actually made money. A plain-English guide to tracking labor, materials, subs, overhead, WIP, retainage and 1099s.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-bookkeeping-for-ecommerce" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jul 13, 2026</span></div>
-        <h3>Bookkeeping for E-commerce Sellers: Inventory, Fees &amp; Sales Tax</h3>
+        <h3 role="heading" aria-level="2">Bookkeeping for E-commerce Sellers: Inventory, Fees &amp; Sales Tax</h3>
         <p>E-commerce bookkeeping explained: why payouts aren't revenue, how to track platform fees, inventory and COGS, and handle sales tax nexus across every channel.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-bookkeeping-for-restaurants" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jul 13, 2026</span></div>
-        <h3>Bookkeeping for Restaurants: COGS, Tips &amp; Payroll</h3>
+        <h3 role="heading" aria-level="2">Bookkeeping for Restaurants: COGS, Tips &amp; Payroll</h3>
         <p>Restaurant bookkeeping made clear: track COGS and food-cost %, prime cost, tips and tip payroll, POS reconciliation, sales tax, and the weekly reports owners need.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-hawaii-general-excise-tax-explained" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jul 13, 2026</span></div>
-        <h3>Hawaii's General Excise Tax (GET), Explained for Small Businesses</h3>
+        <h3 role="heading" aria-level="2">Hawaii's General Excise Tax (GET), Explained for Small Businesses</h3>
         <p>Hawaii's General Excise Tax (GET) isn't a sales tax — it's a gross-receipts tax on your business. Learn the rates, county surcharges, and G-45/G-49 filing.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-ohio-municipal-income-tax-rita-guide" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jul 13, 2026</span></div>
-        <h3>Ohio Municipal Income Tax &amp; RITA: A Small Business Owner's Guide</h3>
+        <h3 role="heading" aria-level="2">Ohio Municipal Income Tax &amp; RITA: A Small Business Owner's Guide</h3>
         <p>Ohio's 600+ cities levy their own income tax. A plain-English guide to RITA vs CCA, employer withholding, the 20-day rule, net-profit returns, and the CAT.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-sales-tax-nexus-explained" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jul 13, 2026</span></div>
-        <h3>Sales Tax Nexus: When Do You Owe Tax in Another State?</h3>
+        <h3 role="heading" aria-level="2">Sales Tax Nexus: When Do You Owe Tax in Another State?</h3>
         <p>Sales tax nexus explained: physical vs economic nexus, post-Wayfair state thresholds, marketplace-facilitator and Amazon FBA rules, and how to stay compliant.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-bookkeeping-mistakes-that-trigger-irs-audits" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jun 16, 2026</span></div>
-        <h3>8 Bookkeeping Mistakes That Trigger IRS Audits</h3>
+        <h3 role="heading" aria-level="2">8 Bookkeeping Mistakes That Trigger IRS Audits</h3>
         <p>The 8 bookkeeping mistakes most likely to land your small business on the IRS audit radar — and how clean books prevent every one.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-cash-vs-accrual-accounting" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jun 16, 2026</span></div>
-        <h3>Cash vs Accrual Accounting: Which Is Right for Your Business?</h3>
+        <h3 role="heading" aria-level="2">Cash vs Accrual Accounting: Which Is Right for Your Business?</h3>
         <p>Cash vs accrual accounting explained — what changes, which is better for your business, and when the IRS forces the choice.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-reasonable-compensation-s-corp" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jun 16, 2026</span></div>
-        <h3>Reasonable Compensation for S-Corp Owners: What the IRS Expects</h3>
+        <h3 role="heading" aria-level="2">Reasonable Compensation for S-Corp Owners: What the IRS Expects</h3>
         <p>How the IRS calculates &quot;reasonable compensation&quot; for S-Corp owners, why it matters, and how to set a defensible salary.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-s-corp-vs-llc" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jun 16, 2026</span></div>
-        <h3>S-Corp vs LLC: Which Is Right for Your Small Business?</h3>
+        <h3 role="heading" aria-level="2">S-Corp vs LLC: Which Is Right for Your Small Business?</h3>
         <p>S-Corp vs LLC explained for small business owners — the actual tax difference, the income threshold where it matters, and how to decide.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-90-day-bookkeeping-cleanup" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jun 5, 2026</span></div>
-        <h3>The 90-Day Bookkeeping Cleanup Plan</h3>
+        <h3 role="heading" aria-level="2">The 90-Day Bookkeeping Cleanup Plan</h3>
         <p>A practical 90-day plan to clean up messy books, get current, and set up a system that won't fall apart again.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-annual-bookkeeping-audit-guide" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jun 5, 2026</span></div>
-        <h3>The Annual Bookkeeping Audit: A Year-End Guide for Owners</h3>
+        <h3 role="heading" aria-level="2">The Annual Bookkeeping Audit: A Year-End Guide for Owners</h3>
         <p>An annual bookkeeping audit checklist for small-business owners: what to review, what to fix, and what to hand off to your CPA.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-best-bookkeeping-software-2026" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jun 5, 2026</span></div>
-        <h3>Best Bookkeeping Software for Small Businesses in 2026</h3>
+        <h3 role="heading" aria-level="2">Best Bookkeeping Software for Small Businesses in 2026</h3>
         <p>The five bookkeeping platforms small businesses actually use in 2026 — what each is good at, and which fits your business.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-catch-up-bookkeeping-cost" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jun 5, 2026</span></div>
-        <h3>Catch-Up Bookkeeping: What It Costs and Why</h3>
+        <h3 role="heading" aria-level="2">Catch-Up Bookkeeping: What It Costs and Why</h3>
         <p>What does catch-up bookkeeping actually cost — and what drives the price? A practical breakdown for owners who've fallen behind.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-how-to-find-local-bookkeeper" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jun 5, 2026</span></div>
-        <h3>How to Find a Local Bookkeeper You Can Actually Trust</h3>
+        <h3 role="heading" aria-level="2">How to Find a Local Bookkeeper You Can Actually Trust</h3>
         <p>How to find a bookkeeper you can actually trust — what to look for, what to ask, and the red flags that should stop the conversation.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-how-to-read-pl-like-ceo" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jun 5, 2026</span></div>
-        <h3>How to Read a Profit & Loss Statement Like a CEO</h3>
+        <h3 role="heading" aria-level="2">How to Read a Profit & Loss Statement Like a CEO</h3>
         <p>Most owners look at their P&L wrong. Here's how a CEO actually reads one — the four numbers that matter and the three checks to run.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-quickbooks-online-vs-xero" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jun 5, 2026</span></div>
-        <h3>QuickBooks Online vs Xero: Which Is Right for Your Business?</h3>
+        <h3 role="heading" aria-level="2">QuickBooks Online vs Xero: Which Is Right for Your Business?</h3>
         <p>QuickBooks Online vs Xero: a head-to-head comparison of features, pricing, and which one fits your business best.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-real-estate-investor-bookkeeping-guide" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jun 5, 2026</span></div>
-        <h3>The Real Estate Investor's Bookkeeping Guide</h3>
+        <h3 role="heading" aria-level="2">The Real Estate Investor's Bookkeeping Guide</h3>
         <p>A practical bookkeeping guide for real estate investors: per-property P&L, entity structure, deductions, and the system that scales.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-tax-season-prep-checklist" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>Jun 5, 2026</span></div>
-        <h3>Tax Season Prep: A Bookkeeping Checklist for Small Businesses</h3>
+        <h3 role="heading" aria-level="2">Tax Season Prep: A Bookkeeping Checklist for Small Businesses</h3>
         <p>The bookkeeping checklist that turns tax season from a panic into a 30-minute handoff. What to do in January (and what NOT to wait on).</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-when-to-hire-a-bookkeeper" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>May 22, 2026</span></div>
-        <h3>When to Hire a Bookkeeper: 7 Signs It's Time</h3>
+        <h3 role="heading" aria-level="2">When to Hire a Bookkeeper: 7 Signs It's Time</h3>
         <p>Not sure if you need a bookkeeper yet? Here are 7 clear signs it's time to hire one — and what it costs to wait too long.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-7-bookkeeping-mistakes-real-estate-investors" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>May 15, 2026</span></div>
-        <h3>7 Bookkeeping Mistakes Killing Real Estate Investors at Tax Time</h3>
+        <h3 role="heading" aria-level="2">7 Bookkeeping Mistakes Killing Real Estate Investors at Tax Time</h3>
         <p>The 7 most common bookkeeping mistakes real estate investors make — and exactly how each one costs you money at tax time.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-bookkeeper-vs-cpa-vs-accountant" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>May 13, 2026</span></div>
-        <h3>Bookkeeper vs CPA vs Accountant: Who Do You Actually Need?</h3>
+        <h3 role="heading" aria-level="2">Bookkeeper vs CPA vs Accountant: Who Do You Actually Need?</h3>
         <p>The real differences between bookkeepers, accountants, and CPAs — what each costs, what each does, and which one your small business actually needs.</p>
         <span class="read">Read more →</span>
       </a>
       <a href="/blog-how-much-does-a-bookkeeper-cost" class="blog-card" style="text-decoration:none;color:inherit;">
         <div class="blog-card-meta"><span class="blog-card-tag">Article</span><span>May 1, 2026</span></div>
-        <h3>How Much Does a Bookkeeper Cost in 2026? (Real Numbers, No Fluff)</h3>
+        <h3 role="heading" aria-level="2">How Much Does a Bookkeeper Cost in 2026? (Real Numbers, No Fluff)</h3>
         <p>Real bookkeeper pricing in 2026 — hourly rates, monthly packages, DIY costs, and what drives the price. Honest numbers from a working bookkeeping firm.</p>
         <span class="read">Read more →</span>
       </a>
@@ -737,6 +740,7 @@
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -750,7 +754,7 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4 role="heading" aria-level="3">Services</h4>
         <ul class="footer-links">
           <li><a href="/service-monthly-bookkeeping">Monthly Bookkeeping</a></li>
           <li><a href="/service-catchup-bookkeeping">Catch-Up Bookkeeping</a></li>
@@ -761,7 +765,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Who We Serve</h4>
+        <h4 role="heading" aria-level="3">Who We Serve</h4>
         <ul class="footer-links">
           <li><a href="/industry-real-estate">Real Estate</a></li>
           <li><a href="/industry-contractors-trades">Contractors &amp; Trades</a></li>
@@ -774,7 +778,7 @@
         </ul>
       </div>
       <div class="footer-contact footer-col">
-        <h4>Contact</h4>
+        <h4 role="heading" aria-level="3">Contact</h4>
         <p>📧 support@tidesbookkeeping.com</p>
         <p>📞 (864) 559-2686</p>
         <p>📍 Greenville, South Carolina</p>
@@ -888,7 +892,7 @@
         card.innerHTML =
           '<div class="blog-card-meta"><span class="blog-card-tag">Article</span>' +
           (date ? '<span>' + esc(date) + '</span>' : '') + '</div>' +
-          '<h3>' + esc(post.title || 'Untitled') + '</h3>' +
+          '<h3 role="heading" aria-level="2">' + esc(post.title || 'Untitled') + '</h3>' +
           '<p>' + esc(post.excerpt || '') + '</p>' +
           '<span class="read">Read more &rarr;</span>';
         grid.insertBefore(card, grid.firstChild);

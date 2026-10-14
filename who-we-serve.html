@@ -10,16 +10,18 @@
   <meta property="og:title" content="Who We Serve | Tides Bookkeeping Industry Experts" />
   <meta property="og:description" content="Bookkeeping built for 12 industries — real estate, contractors, restaurants, tech startups, and more. We know your numbers." />
   <meta property="og:url" content="https://www.tidesbookkeeping.com/who-we-serve" />
-  <meta property="og:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta property="og:image" content="https://www.tidesbookkeeping.com/assets/social/tides-share-1200x630.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Tides Bookkeeping" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Who We Serve | Tides Bookkeeping Industry Experts" />
   <meta name="twitter:description" content="Bookkeeping built for 12 industries — real estate, contractors, restaurants, tech startups, and more. We know your numbers." />
-  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/assets/social/tides-share-1200x630.png" />
   <link rel="icon" type="image/png" href="/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <style>/* self-hosted-fonts */@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/bebas-neue-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/bebas-neue-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
   <style>
     /* ── TOKENS ─────────────────────────────────────── */
     :root {
@@ -31,7 +33,7 @@
       --navy-dk: #163872;
       --ink:     #0f1c2e;
       --body:    #4a5568;
-      --muted:   #94a3b8;
+      --muted:   #586880;
       --border:  #e2eaf3;
       --bg:      #ffffff;
       --bg-alt:  #f7fbff;
@@ -54,7 +56,7 @@
     .eyebrow {
       display: inline-flex; align-items: center; gap: 6px;
       font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
-      text-transform: uppercase; color: var(--teal);
+      text-transform: uppercase; color: #0d7377;
       background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
       padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
     }
@@ -252,7 +254,7 @@
       display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr;
       gap: 3rem; margin-bottom: 3rem;
     }
-    .footer-brand p { font-size: .84rem; color: rgba(255,255,255,.4); line-height: 1.7; margin: 1rem 0 1.5rem; }
+    .footer-brand p { font-size: .84rem; color: rgba(255,255,255,.62); line-height: 1.7; margin: 1rem 0 1.5rem; }
     .footer-logo img { height: 40px; filter: brightness(0) invert(1) opacity(.9); }
     .footer-social { display: flex; gap: .6rem; }
     .social-btn {
@@ -264,20 +266,20 @@
     .social-btn:hover { background: rgba(65,207,208,.15); border-color: var(--teal); color: var(--teal); }
     .footer-col h4 {
       font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
-      color: rgba(255,255,255,.35); margin-bottom: 1.25rem;
+      color: rgba(255,255,255,.62); margin-bottom: 1.25rem;
     }
     .footer-links { list-style: none; }
     .footer-links li { margin-bottom: .55rem; }
-    .footer-links a { font-size: .84rem; color: rgba(255,255,255,.5); transition: color .2s; }
+    .footer-links a { font-size: .84rem; color: rgba(255,255,255,.72); transition: color .2s; }
     .footer-links a:hover { color: var(--teal); }
-    .footer-contact p { font-size: .84rem; color: rgba(255,255,255,.5); margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem; }
+    .footer-contact p { font-size: .84rem; color: rgba(255,255,255,.62); margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem; }
     .footer-bottom {
       border-top: 1px solid rgba(255,255,255,.07);
       padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
     }
-    .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.25); margin: 0; }
+    .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.62); margin: 0; }
     .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
-    .footer-bottom-links a { font-size: .78rem; color: rgba(255,255,255,.25); transition: color .2s; }
+    .footer-bottom-links a { font-size: .78rem; color: rgba(255,255,255,.62); transition: color .2s; }
     .footer-bottom-links a:hover { color: var(--teal); }
 
     /* ── HAMBURGER ──────────────────────────────── */
@@ -364,7 +366,7 @@
     /* ── SERVICE AREA ──────────────────────────────── */
     .svc-area { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 52px 0; }
     .svc-area-wrap { display: grid; grid-template-columns: 260px 1fr; gap: 3.5rem; align-items: flex-start; }
-    .svc-area-eyebrow { font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); margin-bottom: .5rem; }
+    .svc-area-eyebrow { font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #0d7377; margin-bottom: .5rem; }
     .svc-area-left h3 { font-size: 1.1rem; font-weight: 800; color: var(--ink); line-height: 1.35; margin-bottom: .4rem; }
     .svc-area-left > p { font-size: .84rem; color: var(--body); line-height: 1.65; }
     .svc-area-groups { display: flex; align-items: stretch; gap: 0; }
@@ -373,10 +375,10 @@
     .svc-area-group-label { font-size: .62rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: .6rem; }
     .svc-area-pills { display: flex; flex-wrap: wrap; gap: .4rem; }
     .svc-area-pill { display: inline-block; padding: .3rem .85rem; border-radius: 50px; font-size: .74rem; font-weight: 600; border: 1px solid var(--border); background: #fff; color: var(--body); transition: all .2s; white-space: nowrap; text-decoration: none; }
-    a.svc-area-pill:hover { border-color: var(--teal); color: var(--teal); background: var(--teal-lt); }
+    a.svc-area-pill:hover { border-color: var(--teal); color: #0d7377; background: var(--teal-lt); }
     .svc-area-pill.state-pill { border-color: rgba(33,81,151,.25); color: var(--navy); background: rgba(33,81,151,.06); }
     a.svc-area-pill.state-pill:hover { background: rgba(33,81,151,.12); border-color: var(--navy); }
-    .svc-area-pill.nationwide-pill { border-color: rgba(65,207,208,.35); color: var(--teal); background: var(--teal-lt); }
+    .svc-area-pill.nationwide-pill { border-color: rgba(65,207,208,.35); color: #0d7377; background: var(--teal-lt); }
     .svc-area-divider { width: 1px; background: var(--border); flex-shrink: 0; }
     .svc-area-footer { margin-top: 1.75rem; display: flex; justify-content: flex-end; align-items: center; gap: 1.5rem; border-top: 1px solid var(--border); padding-top: 1.25rem; }
     .svc-area-link { display: inline-flex; align-items: center; gap: .35rem; font-size: .84rem; font-weight: 700; color: var(--navy); transition: all .2s; }
@@ -512,7 +514,15 @@
   "worksFor": {
     "@type": "AccountingService",
     "name": "Tides Bookkeeping LLC",
-    "url": "https://www.tidesbookkeeping.com"
+    "url": "https://www.tidesbookkeeping.com",
+    "sameAs": [
+      "https://www.linkedin.com/company/tides-bookkeeping",
+      "https://www.facebook.com/thetidesbookkeeping",
+      "https://www.instagram.com/tidesbookkeeping/",
+      "https://www.youtube.com/@TidesBookkeeping",
+      "https://www.google.com/maps?cid=14527500788148536557",
+      "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
+    ]
   },
   "alumniOf": {
     "@type": "CollegeOrUniversity",
@@ -651,7 +661,7 @@
     "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
   ]
 }
-  </script>
+</script>
 </head>
 <body>
 
@@ -676,6 +686,7 @@
     </button>
   </div>
 </nav>
+<main id="main">
 
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
@@ -845,15 +856,15 @@
 
     <div class="why-grid">
       <div class="why-card">
-        <h4>We Speak Your Language</h4>
+        <h4 role="heading" aria-level="3">We Speak Your Language</h4>
         <p>A contractor and a restaurant owner have completely different financial structures. We know the difference between job costing and food cost percentage — and we apply that knowledge to your books from day one.</p>
       </div>
       <div class="why-card">
-        <h4>Industry-Specific Tax Prep</h4>
+        <h4 role="heading" aria-level="3">Industry-Specific Tax Prep</h4>
         <p>Different industries have different deductions, different filing requirements, and different deadlines. We keep your books organized around what your CPA actually needs for your specific business type.</p>
       </div>
       <div class="why-card">
-        <h4>Fewer Surprises. More Clarity.</h4>
+        <h4 role="heading" aria-level="3">Fewer Surprises. More Clarity.</h4>
         <p>When your bookkeeper understands your industry, they catch what generic bookkeeping misses — misclassified expenses, missed deductions, and patterns that could hurt you at tax time.</p>
       </div>
     </div>
@@ -870,25 +881,25 @@
     <div class="process-inner">
       <div class="process-step">
         <div class="process-num">01</div>
-        <h4>Discovery Call</h4>
+        <h4 role="heading" aria-level="3">Discovery Call</h4>
         <p>Free 15-minute call to learn your business and current books</p>
       </div>
       <div class="process-arrow">→</div>
       <div class="process-step">
         <div class="process-num">02</div>
-        <h4>Onboarding</h4>
+        <h4 role="heading" aria-level="3">Onboarding</h4>
         <p>We set up all your systems and connect your accounts in 2–3 days</p>
       </div>
       <div class="process-arrow">→</div>
       <div class="process-step">
         <div class="process-num">03</div>
-        <h4>Clean-Up</h4>
+        <h4 role="heading" aria-level="3">Clean-Up</h4>
         <p>Any backlog gets resolved before we start fresh</p>
       </div>
       <div class="process-arrow">→</div>
       <div class="process-step">
         <div class="process-num">04</div>
-        <h4>Monthly Work</h4>
+        <h4 role="heading" aria-level="3">Monthly Work</h4>
         <p>Clean books, monthly reports, dedicated bookkeeper — every month</p>
       </div>
     </div>
@@ -989,6 +1000,7 @@
 <details style="border:1px solid #e2eaf3;border-radius:10px;padding:14px 18px;margin:12px 0;"><summary style="font-weight:700;color:#0f1c2e;cursor:pointer;">Why does an industry-specific bookkeeper matter?</summary><p style="color:#5b6b82;margin:10px 0 0;">Because the categories, KPIs, and gotchas differ by industry — a restaurant's prime cost, a realtor's commission tracking, an e-commerce seller's platform fees. Industry fit means cleaner books and more useful reports.</p></details>
 <details style="border:1px solid #e2eaf3;border-radius:10px;padding:14px 18px;margin:12px 0;"><summary style="font-weight:700;color:#0f1c2e;cursor:pointer;">How quickly can you get started?</summary><p style="color:#5b6b82;margin:10px 0 0;">Most clients are up and running within a few days — we connect your accounts, set up (or clean up) your software, and get your first month's books moving right away.</p></details>
 </section>
+</main>
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -1002,7 +1014,7 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4 role="heading" aria-level="3">Services</h4>
         <ul class="footer-links">
           <li><a href="/service-monthly-bookkeeping">Monthly Bookkeeping</a></li>
           <li><a href="/service-catchup-bookkeeping">Catch-Up Bookkeeping</a></li>
@@ -1015,7 +1027,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Who We Serve</h4>
+        <h4 role="heading" aria-level="3">Who We Serve</h4>
         <ul class="footer-links">
           <li><a href="/industry-real-estate">Real Estate</a></li>
           <li><a href="/industry-contractors-trades">Contractors &amp; Trades</a></li>
@@ -1028,7 +1040,7 @@
         </ul>
       </div>
       <div class="footer-contact footer-col">
-        <h4>Contact</h4>
+        <h4 role="heading" aria-level="3">Contact</h4>
         <p>📧 support@tidesbookkeeping.com</p>
         <p>📞 (864) 559-2686</p>
         <p>📍 Greenville, South Carolina</p>

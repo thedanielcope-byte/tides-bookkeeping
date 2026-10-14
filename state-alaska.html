@@ -10,17 +10,19 @@
   <meta property="og:title" content="Bookkeeping Services in Alaska | Tides" />
   <meta property="og:description" content="Remote bookkeeping, payroll, and reporting for small businesses across Alaska — no state sales tax." />
   <meta property="og:url" content="https://www.tidesbookkeeping.com/state-alaska" />
-  <meta property="og:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta property="og:image" content="https://www.tidesbookkeeping.com/assets/social/tides-share-1200x630.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Tides Bookkeeping" />
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Bookkeeping Services in Alaska | Tides" />
   <meta name="twitter:description" content="Remote bookkeeping, payroll, and reporting for small businesses across Alaska — no state sales tax." />
-  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/assets/social/tides-share-1200x630.png" />
   <link rel="icon" type="image/png" href="/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <style>/* self-hosted-fonts */@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/bebas-neue-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/bebas-neue-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
   <style>
     /* ── TOKENS ─────────────────────────────────────── */
     :root {
@@ -32,7 +34,7 @@
       --navy-dk: #163872;
       --ink:     #0f1c2e;
       --body:    #4a5568;
-      --muted:   #94a3b8;
+      --muted:   #586880;
       --border:  #e2eaf3;
       --bg:      #ffffff;
       --bg-alt:  #f7fbff;
@@ -55,7 +57,7 @@
     .eyebrow {
       display: inline-flex; align-items: center; gap: 6px;
       font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
-      text-transform: uppercase; color: var(--teal);
+      text-transform: uppercase; color: #0d7377;
       background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
       padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
     }
@@ -180,7 +182,7 @@
       font-size: .67rem; font-weight: 700; padding: 3px 10px; border-radius: 50px; letter-spacing: .04em;
     }
     .ha-badge.green { background: #dcfce7; color: #16a34a; }
-    .ha-badge.teal { background: var(--teal-lt); color: var(--teal); }
+    .ha-badge.teal { background: var(--teal-lt); color: #0d7377; }
     .ha-badge.blue { background: var(--blue-lt); color: var(--navy); }
     .ha-stat-row {
       display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
@@ -240,7 +242,7 @@
       padding: 4px 10px; border-radius: 50px;
       background: rgba(255,255,255,.1); color: rgba(255,255,255,.75);
     }
-    .svc-tag.light { background: var(--teal-lt); color: var(--teal); }
+    .svc-tag.light { background: var(--teal-lt); color: #0d7377; }
 
     /* ── COVERAGE GRID ──────────────────────────────── */
     .coverage-intro {
@@ -278,7 +280,7 @@
       padding: 4px 12px; border-radius: 50px; transition: all .15s;
     }
     .city-pill:hover { background: var(--navy); color: #fff; border-color: transparent; }
-    .city-pill.teal { background: var(--teal-lt); color: var(--teal); border-color: rgba(65,207,208,.3); }
+    .city-pill.teal { background: var(--teal-lt); color: #0d7377; border-color: rgba(65,207,208,.3); }
 
     /* ── INDUSTRIES ─────────────────────────────────── */
     .industries-grid {
@@ -366,23 +368,23 @@
       display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem;
     }
     .footer-logo { height: 40px; margin-bottom: 1.25rem; filter: brightness(10); }
-    .footer-about { font-size: .84rem; color: rgba(255,255,255,.35); line-height: 1.75; max-width: 280px; }
+    .footer-about { font-size: .84rem; color: rgba(255,255,255,.62); line-height: 1.75; max-width: 280px; }
     .footer-col h4 {
       font-size: .66rem; font-weight: 600; text-transform: uppercase;
-      letter-spacing: .12em; color: rgba(255,255,255,.25); margin-bottom: 1.25rem;
+      letter-spacing: .12em; color: rgba(255,255,255,.62); margin-bottom: 1.25rem;
     }
     .footer-links { list-style: none; }
     .footer-links li { margin-bottom: .55rem; }
-    .footer-links a { font-size: .82rem; color: rgba(255,255,255,.4); transition: color .15s; }
-    .footer-links a:hover { color: rgba(255,255,255,.8); }
+    .footer-links a { font-size: .82rem; color: rgba(255,255,255,.72); transition: color .15s; }
+    .footer-links a:hover { color: rgba(255,255,255,.95); }
     .footer-bottom {
       border-top: 1px solid rgba(255,255,255,.06); padding-top: 1.5rem;
       display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
     }
-    .footer-bottom p { font-size: .72rem; color: rgba(255,255,255,.2); }
+    .footer-bottom p { font-size: .72rem; color: rgba(255,255,255,.62); }
     .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
-    .footer-bottom-links a { font-size: .72rem; color: rgba(255,255,255,.2); transition: color .15s; }
-    .footer-bottom-links a:hover { color: rgba(255,255,255,.5); }
+    .footer-bottom-links a { font-size: .72rem; color: rgba(255,255,255,.62); transition: color .15s; }
+    .footer-bottom-links a:hover { color: rgba(255,255,255,.95); }
 
     /* ── STATE GUIDE ────────────────────────────────── */
     .sc-regions-grid {
@@ -603,7 +605,15 @@
         "@type": "State",
         "name": "Alaska"
       },
-      "description": "Remote bookkeeping, payroll support, and monthly financial reporting for small businesses across Alaska - including local borough and city sales tax tracking, ARSSTC remote-seller filing support, seasonal cash-flow reporting, and freight cost accounting."
+      "description": "Remote bookkeeping, payroll support, and monthly financial reporting for small businesses across Alaska - including local borough and city sales tax tracking, ARSSTC remote-seller filing support, seasonal cash-flow reporting, and freight cost accounting.",
+      "sameAs": [
+        "https://www.linkedin.com/company/tides-bookkeeping",
+        "https://www.facebook.com/thetidesbookkeeping",
+        "https://www.instagram.com/tidesbookkeeping/",
+        "https://www.youtube.com/@TidesBookkeeping",
+        "https://www.google.com/maps?cid=14527500788148536557",
+        "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
+      ]
     }
   ]
 }
@@ -715,6 +725,7 @@
     </button>
   </div>
 </nav>
+<main id="main">
 
 <!-- BREADCRUMB -->
 <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -1280,42 +1291,42 @@
     <div class="industries-grid">
       <a href="/industry-contractors-trades" class="ind-card">
         <div class="ind-icon">🏗️</div>
-        <h4>Contractors &amp; Construction</h4>
+        <h4 role="heading" aria-level="3">Contractors &amp; Construction</h4>
         <p>Job costing, subcontractor payments, freight-heavy material costs</p>
       </a>
       <a href="/industry-small-businesses" class="ind-card">
         <div class="ind-icon">🎣</div>
-        <h4>Fishing, Charters &amp; Tours</h4>
+        <h4 role="heading" aria-level="3">Fishing, Charters &amp; Tours</h4>
         <p>Seasonal revenue, crew pay, permits and gear — books that survive winter</p>
       </a>
       <a href="/industry-restaurants-bars" class="ind-card">
         <div class="ind-icon">🍽️</div>
-        <h4>Restaurants &amp; Food Service</h4>
+        <h4 role="heading" aria-level="3">Restaurants &amp; Food Service</h4>
         <p>COGS with real freight in it, tip payroll, vendor management</p>
       </a>
       <a href="/industry-real-estate" class="ind-card">
         <div class="ind-icon">🏠</div>
-        <h4>Real Estate</h4>
+        <h4 role="heading" aria-level="3">Real Estate</h4>
         <p>Commission tracking, rental income, property expenses</p>
       </a>
       <a href="/industry-professional-services" class="ind-card">
         <div class="ind-icon">💼</div>
-        <h4>Professional Services</h4>
+        <h4 role="heading" aria-level="3">Professional Services</h4>
         <p>Consultants, attorneys, agencies — clean P&amp;L every month</p>
       </a>
       <a href="/industry-ecommerce-retail" class="ind-card">
         <div class="ind-icon">🛍️</div>
-        <h4>Retail &amp; eCommerce</h4>
+        <h4 role="heading" aria-level="3">Retail &amp; eCommerce</h4>
         <p>Inventory, merchant fees, local sales tax and ARSSTC tracking</p>
       </a>
       <a href="/industry-healthcare" class="ind-card">
         <div class="ind-icon">🏥</div>
-        <h4>Healthcare &amp; Wellness</h4>
+        <h4 role="heading" aria-level="3">Healthcare &amp; Wellness</h4>
         <p>Insurance billing, payroll, HIPAA-aware practices</p>
       </a>
       <a href="/industry-logistics-transportation" class="ind-card">
         <div class="ind-icon">✈️</div>
-        <h4>Transportation &amp; Air Cargo</h4>
+        <h4 role="heading" aria-level="3">Transportation &amp; Air Cargo</h4>
         <p>Fleet and aircraft expenses, fuel costs, freight and barge billing</p>
       </a>
     </div>
@@ -1400,28 +1411,28 @@
       <div class="faq-list">
         <div class="faq-item open">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <h4>Do I need to be located in Alaska?</h4>
+            <h4 role="heading" aria-level="3">Do I need to be located in Alaska?</h4>
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer"><p>No — we serve businesses nationally. But Alaska is a service region we know well, from Anchorage and the Mat-Su Valley to the Interior, the Kenai Peninsula, Southeast, and the island and Delta communities. Because we are 100% remote, where you are located changes nothing about the quality of your books.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <h4>Does Alaska have a state sales tax?</h4>
+            <h4 role="heading" aria-level="3">Does Alaska have a state sales tax?</h4>
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer"><p>No. Alaska is one of the few states with no statewide sales tax and no state personal income tax. But that headline hides the real story: more than 100 local jurisdictions — boroughs and cities — levy their own sales tax, generally somewhere between 0% and 7.5%. Each one sets its own rate, exemptions, maximum taxable amounts, and filing calendar. That local layer, not the state, is where Alaska sales tax compliance actually happens.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <h4>Which Alaska cities and boroughs charge a local sales tax?</h4>
+            <h4 role="heading" aria-level="3">Which Alaska cities and boroughs charge a local sales tax?</h4>
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer"><p>It varies widely, and the answer surprises people. Anchorage and the Fairbanks North Star Borough have no general local sales tax at all — two of the state's biggest markets are sales-tax-free. Meanwhile Juneau (about 5%), Sitka (about 6%), Ketchikan (about 6.5% combined), Kodiak (about 7%), Bethel (about 6%), Wasilla (about 2.5%), and the Kenai Peninsula Borough plus its cities (Kenai, Soldotna, Homer) all do collect. Rates and seasonal variations shown here are as of 2026 — always confirm the current rate directly with your borough or city before you file.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <h4>I sell into Alaska from out of state. Do I have to collect sales tax?</h4>
+            <h4 role="heading" aria-level="3">I sell into Alaska from out of state. Do I have to collect sales tax?</h4>
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer"><p>Possibly — through the ARSSTC, the Alaska Remote Sellers Sales Tax Commission. Rather than registering with 100+ individual towns, remote sellers and marketplace facilitators file once through a single statewide system that distributes the tax to member jurisdictions. The threshold is $100,000 in gross statewide sales in the current or prior calendar year; the old 200-transaction test was removed effective January 1, 2025. We track your Alaska gross sales so you know well before you cross the line. Figures are as of 2026 — confirm current rules with the ARSSTC.</p></div>
@@ -1430,28 +1441,28 @@
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <h4>Does Alaska have an income tax?</h4>
+            <h4 role="heading" aria-level="3">Does Alaska have an income tax?</h4>
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer"><p>There is no state personal income tax — Alaska repealed it in 1980 and never brought it back — so owners of pass-through entities pay no Alaska tax on that business income. Alaska does have a corporate income tax on C-corporations, applied on graduated brackets topping out around 9.4%, plus industry-specific taxes such as the fisheries business tax for seafood processors and exporters. We keep your books structured so those filings are straightforward for your CPA. Figures are as of 2026 — confirm current rates.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <h4>Can you handle a seasonal business and the cost of freight?</h4>
+            <h4 role="heading" aria-level="3">Can you handle a seasonal business and the cost of freight?</h4>
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer"><p>Yes — this is Alaska bookkeeping in a nutshell. Fishing, charter, tour, and cruise-season businesses earn most of a year's revenue in a few months and then carry fixed costs through the winter, so your books have to show that rhythm clearly. And because nearly everything a business sells here arrived by barge, plane, or truck, freight and shipping are real cost lines — not rounding errors. We categorize freight properly so you can see true landed cost and true margin, and we build reporting that survives a seasonal cash-flow curve.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <h4>How does remote bookkeeping work?</h4>
+            <h4 role="heading" aria-level="3">How does remote bookkeeping work?</h4>
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer"><p>Everything is handled in QuickBooks Online, or in Puzzle.io if you want real-time dashboards and an instant snapshot of your books at any time. You connect your bank and credit card accounts, and we handle the rest. Monthly reports and communication happen via email and a dedicated client portal — no in-person meetings, which matters more in Alaska than almost anywhere else.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" onclick="toggleFaq(this)">
-            <h4>How much does bookkeeping in Alaska cost, and do you cover the whole state?</h4>
+            <h4 role="heading" aria-level="3">How much does bookkeeping in Alaska cost, and do you cover the whole state?</h4>
             <span class="faq-toggle">+</span>
           </button>
           <div class="faq-answer"><p>Pricing starts at $395/month for small businesses and is based on your monthly transaction volume — a free consultation gets you an exact quote with no obligation. And yes, we cover the entire state: because we are 100% remote, we serve every borough and census area in Alaska, from Anchorage and Fairbanks to Juneau, Ketchikan, Kodiak, and Bethel.</p></div>
@@ -1493,6 +1504,7 @@
   </div>
 </section>
 
+</main>
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -1506,7 +1518,7 @@
         </p>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4 role="heading" aria-level="3">Services</h4>
         <ul class="footer-links">
           <li><a href="/service-monthly-bookkeeping">Monthly Bookkeeping</a></li>
           <li><a href="/service-catchup-bookkeeping">Catch-Up Bookkeeping</a></li>
@@ -1518,7 +1530,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>AK Cities</h4>
+        <h4 role="heading" aria-level="3">AK Cities</h4>
         <ul class="footer-links">
           <li><a href="/city-anchorage-ak">Anchorage</a></li>
           <li><a href="/city-fairbanks-ak">Fairbanks</a></li>
@@ -1531,7 +1543,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4 role="heading" aria-level="3">Contact</h4>
         <ul class="footer-links">
           <li><a href="mailto:support@tidesbookkeeping.com">support@tidesbookkeeping.com</a></li>
           <li><a href="tel:+18645592686">(864) 559-2686</a></li>

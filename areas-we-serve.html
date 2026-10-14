@@ -10,16 +10,18 @@
   <meta property="og:title" content="Bookkeeping Services Nationwide | Tides Bookkeeping" />
   <meta property="og:description" content="Tides Bookkeeping serves small businesses across all 50 states. Based in Greenville, SC — 100% remote bookkeeping for clients nationwide." />
   <meta property="og:url" content="https://www.tidesbookkeeping.com/areas-we-serve" />
-  <meta property="og:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta property="og:image" content="https://www.tidesbookkeeping.com/assets/social/tides-share-1200x630.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Tides Bookkeeping" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Bookkeeping Services Nationwide | Tides Bookkeeping" />
   <meta name="twitter:description" content="Tides Bookkeeping serves small businesses across all 50 states. Based in Greenville, SC — 100% remote bookkeeping for clients nationwide." />
-  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/assets/social/tides-share-1200x630.png" />
   <link rel="icon" type="image/png" href="/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <style>/* self-hosted-fonts */@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/bebas-neue-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/bebas-neue-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
   <style>
     /* ── TOKENS ─────────────────────────────────────── */
     :root {
@@ -31,7 +33,7 @@
       --navy-dk: #163872;
       --ink:     #0f1c2e;
       --body:    #4a5568;
-      --muted:   #94a3b8;
+      --muted:   #586880;
       --border:  #e2eaf3;
       --bg:      #ffffff;
       --bg-alt:  #f7fbff;
@@ -53,7 +55,7 @@
     .eyebrow {
       display: inline-flex; align-items: center; gap: 6px;
       font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
-      text-transform: uppercase; color: var(--teal);
+      text-transform: uppercase; color: #0d7377;
       background: var(--teal-lt); border: 1px solid rgba(65,207,208,.25);
       padding: 5px 12px; border-radius: 50px; margin-bottom: 1.25rem;
     }
@@ -344,21 +346,21 @@
     /* ── FOOTER ─────────────────────────────────────── */
     .footer { background: var(--ink); padding: 64px 0 32px; border-top: 1px solid rgba(255,255,255,.06); }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; margin-bottom: 3rem; }
-    .footer-brand p { font-size: .84rem; color: rgba(255,255,255,.4); line-height: 1.7; margin: 1rem 0 1.5rem; }
+    .footer-brand p { font-size: .84rem; color: rgba(255,255,255,.62); line-height: 1.7; margin: 1rem 0 1.5rem; }
     .footer-logo img { height: 40px; filter: brightness(0) invert(1) opacity(.9); }
     .footer-social { display: flex; gap: .6rem; }
     .social-btn { width: 34px; height: 34px; border-radius: 8px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; font-size: .8rem; color: rgba(255,255,255,.5); transition: all .2s; }
     .social-btn:hover { background: rgba(65,207,208,.15); border-color: var(--teal); color: var(--teal); }
-    .footer-col h4 { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.35); margin-bottom: 1.25rem; }
+    .footer-col h4 { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.62); margin-bottom: 1.25rem; }
     .footer-links { list-style: none; }
     .footer-links li { margin-bottom: .55rem; }
-    .footer-links a { font-size: .84rem; color: rgba(255,255,255,.5); transition: color .2s; }
+    .footer-links a { font-size: .84rem; color: rgba(255,255,255,.72); transition: color .2s; }
     .footer-links a:hover { color: var(--teal); }
-    .footer-contact p { font-size: .84rem; color: rgba(255,255,255,.5); margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem; }
+    .footer-contact p { font-size: .84rem; color: rgba(255,255,255,.62); margin-bottom: .5rem; display: flex; align-items: center; gap: .5rem; }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,.07); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.25); margin: 0; }
+    .footer-bottom p { font-size: .78rem; color: rgba(255,255,255,.62); margin: 0; }
     .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
-    .footer-bottom-links a { font-size: .78rem; color: rgba(255,255,255,.25); transition: color .2s; }
+    .footer-bottom-links a { font-size: .78rem; color: rgba(255,255,255,.62); transition: color .2s; }
     .footer-bottom-links a:hover { color: var(--teal); }
 
     /* ── RESPONSIVE ─────────────────────────────────── */
@@ -491,10 +493,18 @@
     },
     {
       "@type": "Service",
-      "name": "Remote Bookkeeping \u2014 Nationwide Service Areas",
+      "name": "Remote Bookkeeping — Nationwide Service Areas",
       "provider": {
         "@type": "AccountingService",
-        "name": "Tides Bookkeeping"
+        "name": "Tides Bookkeeping",
+        "sameAs": [
+          "https://www.linkedin.com/company/tides-bookkeeping",
+          "https://www.facebook.com/thetidesbookkeeping",
+          "https://www.instagram.com/tidesbookkeeping/",
+          "https://www.youtube.com/@TidesBookkeeping",
+          "https://www.google.com/maps?cid=14527500788148536557",
+          "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
+        ]
       },
       "description": "Remote bookkeeping services available to small businesses in all 50 states. Based in Greenville, SC.",
       "areaServed": {
@@ -530,7 +540,10 @@
   "sameAs": [
     "https://www.linkedin.com/company/tides-bookkeeping",
     "https://www.facebook.com/thetidesbookkeeping",
-    "https://www.instagram.com/tidesbookkeeping/"
+    "https://www.instagram.com/tidesbookkeeping/",
+    "https://www.youtube.com/@TidesBookkeeping",
+    "https://www.google.com/maps?cid=14527500788148536557",
+    "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
   ],
   "openingHoursSpecification": [
     {
@@ -662,6 +675,7 @@
     </button>
   </div>
 </nav>
+<main id="main">
 
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
@@ -1277,6 +1291,7 @@
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -1290,7 +1305,7 @@
         </div>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4 role="heading" aria-level="3">Services</h4>
         <ul class="footer-links">
           <li><a href="/service-monthly-bookkeeping">Monthly Bookkeeping</a></li>
           <li><a href="/service-catchup-bookkeeping">Catch-Up Bookkeeping</a></li>
@@ -1303,7 +1318,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Who We Serve</h4>
+        <h4 role="heading" aria-level="3">Who We Serve</h4>
         <ul class="footer-links">
           <li><a href="/industry-real-estate">Real Estate</a></li>
           <li><a href="/industry-contractors-trades">Contractors &amp; Trades</a></li>
@@ -1316,7 +1331,7 @@
         </ul>
       </div>
       <div class="footer-contact footer-col">
-        <h4>Contact</h4>
+        <h4 role="heading" aria-level="3">Contact</h4>
         <p>📧 support@tidesbookkeeping.com</p>
         <p>📞 (864) 559-2686</p>
         <p>📍 Greenville, South Carolina</p>

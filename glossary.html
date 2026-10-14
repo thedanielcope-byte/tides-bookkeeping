@@ -10,16 +10,18 @@
   <meta property="og:title" content="Bookkeeping Glossary: 107 Finance Terms | Tides" />
   <meta property="og:description" content="107 bookkeeping, tax, and payroll terms defined in plain English. From accounts payable to year-end close — your small business finance glossary." />
   <meta property="og:url" content="https://www.tidesbookkeeping.com/glossary" />
-  <meta property="og:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta property="og:image" content="https://www.tidesbookkeeping.com/assets/social/tides-share-1200x630.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Tides Bookkeeping" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Bookkeeping Glossary: 107 Finance Terms | Tides" />
   <meta name="twitter:description" content="107 bookkeeping, tax, and payroll terms defined in plain English. From accounts payable to year-end close — your small business finance glossary." />
-  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/assets/social/tides-share-1200x630.png" />
   <link rel="icon" type="image/png" href="/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <style>/* self-hosted-fonts */@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/bebas-neue-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/bebas-neue-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
   <style>
     /* ── TOKENS ─────────────────────────────────────── */
     :root {
@@ -31,7 +33,7 @@
       --navy-dk: #163872;
       --ink:     #0f1c2e;
       --body:    #4a5568;
-      --muted:   #94a3b8;
+      --muted:   #586880;
       --border:  #e2eaf3;
       --bg:      #ffffff;
       --bg-alt:  #f7fbff;
@@ -220,7 +222,7 @@
       cursor: pointer; transition: all .15s; flex-shrink: 0;
       border: none; background: none;
     }
-    .alpha-link:hover { background: var(--teal-lt); color: var(--teal); }
+    .alpha-link:hover { background: var(--teal-lt); color: #0d7377; }
     .alpha-link.active { background: var(--teal); color: var(--ink); }
     .alpha-link.disabled { color: var(--border); cursor: default; pointer-events: none; }
 
@@ -322,23 +324,23 @@
     footer { background: #080f1a; padding: 72px 0 32px; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
     .footer-logo { height: 40px; margin-bottom: 1.25rem; filter: brightness(10); }
-    .footer-about { font-size: .84rem; color: rgba(255,255,255,.35); line-height: 1.75; max-width: 280px; }
+    .footer-about { font-size: .84rem; color: rgba(255,255,255,.62); line-height: 1.75; max-width: 280px; }
     .footer-col h4 {
       font-size: .66rem; font-weight: 600; text-transform: uppercase;
-      letter-spacing: .12em; color: rgba(255,255,255,.25); margin-bottom: 1.25rem;
+      letter-spacing: .12em; color: rgba(255,255,255,.62); margin-bottom: 1.25rem;
     }
     .footer-links { list-style: none; }
     .footer-links li { margin-bottom: .55rem; }
-    .footer-links a { font-size: .82rem; color: rgba(255,255,255,.4); transition: color .15s; }
-    .footer-links a:hover { color: rgba(255,255,255,.8); }
+    .footer-links a { font-size: .82rem; color: rgba(255,255,255,.72); transition: color .15s; }
+    .footer-links a:hover { color: rgba(255,255,255,.95); }
     .footer-bottom {
       border-top: 1px solid rgba(255,255,255,.06); padding-top: 1.5rem;
       display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
     }
-    .footer-bottom p { font-size: .72rem; color: rgba(255,255,255,.2); }
+    .footer-bottom p { font-size: .72rem; color: rgba(255,255,255,.62); }
     .footer-bottom-links { display: flex; gap: 2rem; list-style: none; }
-    .footer-bottom-links a { font-size: .72rem; color: rgba(255,255,255,.2); transition: color .15s; }
-    .footer-bottom-links a:hover { color: rgba(255,255,255,.5); }
+    .footer-bottom-links a { font-size: .72rem; color: rgba(255,255,255,.62); transition: color .15s; }
+    .footer-bottom-links a:hover { color: rgba(255,255,255,.95); }
 
     /* ── RESPONSIVE ─────────────────────────────────── */
     @media (max-width: 1024px) {
@@ -576,7 +578,15 @@
   "worksFor": {
     "@type": "AccountingService",
     "name": "Tides Bookkeeping LLC",
-    "url": "https://www.tidesbookkeeping.com"
+    "url": "https://www.tidesbookkeeping.com",
+    "sameAs": [
+      "https://www.linkedin.com/company/tides-bookkeeping",
+      "https://www.facebook.com/thetidesbookkeeping",
+      "https://www.instagram.com/tidesbookkeeping/",
+      "https://www.youtube.com/@TidesBookkeeping",
+      "https://www.google.com/maps?cid=14527500788148536557",
+      "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
+    ]
   },
   "alumniOf": {
     "@type": "CollegeOrUniversity",
@@ -715,7 +725,7 @@
     "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
   ]
 }
-  </script>
+</script>
 </head>
 <body>
 
@@ -740,6 +750,7 @@
     </button>
   </div>
 </nav>
+<main id="main">
 
 <!-- BREADCRUMB -->
 <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -848,7 +859,7 @@
     <!-- No results message -->
     <div class="no-results" id="noResults">
       <div class="nr-icon">🔍</div>
-      <h3>No terms found</h3>
+      <h3 role="heading" aria-level="2">No terms found</h3>
       <p>Try a different search term or <span class="reset-link visible" id="noResultsReset" style="display:inline;cursor:pointer;">clear your filters</span>.</p>
     </div>
 
@@ -1270,7 +1281,7 @@
     <!-- MID-PAGE CTA -->
     <div class="mid-cta">
       <div class="mid-cta-text">
-        <h3>Questions about your bookkeeping?</h3>
+        <h3 role="heading" aria-level="2">Questions about your bookkeeping?</h3>
         <p>Schedule a free 15-minute consultation. No pressure, no commitments — just clear answers from a real bookkeeper.</p>
       </div>
       <a href="/schedule" class="btn btn-teal">Book a Free Call →</a>
@@ -1609,6 +1620,7 @@
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -1617,7 +1629,7 @@
         <p class="footer-about">Remote bookkeeping, payroll support, and financial reporting for small businesses across South Carolina and beyond.</p>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4 role="heading" aria-level="3">Services</h4>
         <ul class="footer-links">
           <li><a href="/service-monthly-bookkeeping">Monthly Bookkeeping</a></li>
           <li><a href="/service-catchup-bookkeeping">Catch-Up Bookkeeping</a></li>
@@ -1627,7 +1639,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Who We Serve</h4>
+        <h4 role="heading" aria-level="3">Who We Serve</h4>
         <ul class="footer-links">
           <li><a href="/industry-real-estate">Real Estate</a></li>
           <li><a href="/industry-contractors-trades">Contractors &amp; Trades</a></li>
@@ -1640,7 +1652,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4 role="heading" aria-level="3">Contact</h4>
         <ul class="footer-links">
           <li><a href="mailto:support@tidesbookkeeping.com">support@tidesbookkeeping.com</a></li>
           <li><a href="tel:+18645592686">(864) 559-2686</a></li>

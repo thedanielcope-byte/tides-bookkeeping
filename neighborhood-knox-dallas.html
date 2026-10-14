@@ -10,22 +10,24 @@
   <meta property="og:title" content="Bookkeeping in Knox | Dallas, TX | Tides" />
   <meta property="og:description" content="Remote bookkeeping, payroll, and reporting for small businesses in Knox, Dallas, TX. Flat-rate monthly service with a dedicated bookkeeper." />
   <meta property="og:url" content="https://www.tidesbookkeeping.com/neighborhood-knox-dallas" />
-  <meta property="og:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta property="og:image" content="https://www.tidesbookkeeping.com/assets/social/tides-share-1200x630.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Tides Bookkeeping" />
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Bookkeeping in Knox | Dallas, TX | Tides" />
   <meta name="twitter:description" content="Remote bookkeeping, payroll, and reporting for small businesses in Knox, Dallas, TX. Flat-rate monthly service with a dedicated bookkeeper." />
-  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/logo.png" />
+  <meta name="twitter:image" content="https://www.tidesbookkeeping.com/assets/social/tides-share-1200x630.png" />
   <link rel="icon" type="image/png" href="/logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <style>/* self-hosted-fonts */@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Inter';font-style:normal;font-weight:100 900;font-display:swap;src:url(/assets/fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/bebas-neue-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/bebas-neue-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
   <style>
     :root{
       --teal:#41cfd0;--teal-lt:#e6f9f9;--blue:#66c1ee;--blue-lt:#e8f4fd;
       --navy:#215197;--navy-dk:#163872;--ink:#0f1c2e;--body:#4a5568;
-      --muted:#94a3b8;--border:#e2eaf3;--bg:#ffffff;--bg-alt:#f7fbff;
+      --muted:#586880;--border:#e2eaf3;--bg:#ffffff;--bg-alt:#f7fbff;
       --shadow:0 1px 3px rgba(15,28,46,.06),0 4px 16px rgba(15,28,46,.08);
       --shadow-lg:0 8px 40px rgba(15,28,46,.12);--r:16px;--r-sm:10px;
     }
@@ -39,7 +41,7 @@
     h3{font-size:1.1rem;font-weight:700;color:var(--ink);}
     p{color:var(--body);}
     .eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;
-      letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:var(--teal-lt);
+      letter-spacing:.12em;text-transform:uppercase;color: #0d7377;background:var(--teal-lt);
       border:1px solid rgba(65,207,208,.25);padding:5px 12px;border-radius:50px;margin-bottom:1.25rem;}
     .gradient-text{background:linear-gradient(135deg,var(--teal) 0%,var(--blue) 100%);
       -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
@@ -138,20 +140,20 @@
     footer{background:#080f1a;padding:64px 0 32px;}
     .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
     .footer-logo{height:40px;margin-bottom:1.25rem;filter:brightness(10);}
-    .footer-about{font-size:.84rem;color:rgba(255,255,255,.35);line-height:1.75;max-width:280px;}
-    .footer-hq{font-size:.82rem;color:rgba(255,255,255,.45);margin-top:1rem;font-weight:600;}
+    .footer-about{font-size:.84rem;color:rgba(255,255,255,.62);line-height:1.75;max-width:280px;}
+    .footer-hq{font-size:.82rem;color:rgba(255,255,255,.62);margin-top:1rem;font-weight:600;}
     .footer-col h4{font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;
-      color:rgba(255,255,255,.25);margin-bottom:1.25rem;}
+      color:rgba(255,255,255,.62);margin-bottom:1.25rem;}
     .footer-links{list-style:none;}
     .footer-links li{margin-bottom:.55rem;}
-    .footer-links a{font-size:.82rem;color:rgba(255,255,255,.4);transition:color .15s;}
-    .footer-links a:hover{color:rgba(255,255,255,.8);}
+    .footer-links a{font-size:.82rem;color:rgba(255,255,255,.72);transition:color .15s;}
+    .footer-links a:hover{color:rgba(255,255,255,.95);}
     .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;
       justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
-    .footer-bottom p{font-size:.72rem;color:rgba(255,255,255,.2);}
+    .footer-bottom p{font-size:.72rem;color:rgba(255,255,255,.62);}
     .footer-bottom-links{display:flex;gap:2rem;list-style:none;}
-    .footer-bottom-links a{font-size:.72rem;color:rgba(255,255,255,.2);transition:color .15s;}
-    .footer-bottom-links a:hover{color:rgba(255,255,255,.5);}
+    .footer-bottom-links a{font-size:.72rem;color:rgba(255,255,255,.62);transition:color .15s;}
+    .footer-bottom-links a:hover{color:rgba(255,255,255,.95);}
     @media (max-width:1024px){
       .industries-grid{grid-template-columns:repeat(3,1fr);}
       .svc-grid{grid-template-columns:1fr 1fr;}
@@ -325,6 +327,14 @@
           "@type": "State",
           "name": "Texas"
         }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/tides-bookkeeping",
+        "https://www.facebook.com/thetidesbookkeeping",
+        "https://www.instagram.com/tidesbookkeeping/",
+        "https://www.youtube.com/@TidesBookkeeping",
+        "https://www.google.com/maps?cid=14527500788148536557",
+        "https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope"
       ]
     }
   ]
@@ -364,6 +374,7 @@
     </button>
   </div>
 </nav>
+<main id="main">
 
 <!-- BREADCRUMB -->
 <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -433,42 +444,42 @@
     <div class="industries-grid">
       <a class="ind-card" href="/industry-contractors-trades-dallas-tx">
         <div class="ind-icon">🏗️</div>
-        <h4>Contractors &amp; Trades</h4>
+        <h4 role="heading" aria-level="3">Contractors &amp; Trades</h4>
         <p>Job costing, subcontractor payments, and materials tracking.</p>
       </a>
       <a class="ind-card" href="/industry-real-estate-dallas-tx">
         <div class="ind-icon">🏠</div>
-        <h4>Real Estate</h4>
+        <h4 role="heading" aria-level="3">Real Estate</h4>
         <p>Commission tracking, rental income, and investor reporting.</p>
       </a>
       <a class="ind-card" href="/industry-restaurants-bars-dallas-tx">
         <div class="ind-icon">🍽️</div>
-        <h4>Restaurants &amp; Bars</h4>
+        <h4 role="heading" aria-level="3">Restaurants &amp; Bars</h4>
         <p>COGS, tip payroll, and vendor reconciliation done right.</p>
       </a>
       <a class="ind-card" href="/industry-professional-services-dallas-tx">
         <div class="ind-icon">💼</div>
-        <h4>Professional Services</h4>
+        <h4 role="heading" aria-level="3">Professional Services</h4>
         <p>Consultants, agencies, and attorneys - clean, simple books.</p>
       </a>
       <a class="ind-card" href="/industry-healthcare-dallas-tx">
         <div class="ind-icon">🏥</div>
-        <h4>Healthcare &amp; Wellness</h4>
+        <h4 role="heading" aria-level="3">Healthcare &amp; Wellness</h4>
         <p>Practices, gyms, and spas - payroll and insurance handled.</p>
       </a>
       <a class="ind-card" href="/industry-ecommerce-retail-dallas-tx">
         <div class="ind-icon">🛍️</div>
-        <h4>Retail &amp; E-Commerce</h4>
+        <h4 role="heading" aria-level="3">Retail &amp; E-Commerce</h4>
         <p>Inventory costs, merchant fees, and online-sales reconciliation.</p>
       </a>
       <a class="ind-card" href="/industry-solo-entrepreneurs-dallas-tx">
         <div class="ind-icon">✂️</div>
-        <h4>Solo &amp; Personal Services</h4>
+        <h4 role="heading" aria-level="3">Solo &amp; Personal Services</h4>
         <p>Salons, freelancers, and owner-operators - kept simple.</p>
       </a>
       <a class="ind-card" href="/industry-tech-startups-dallas-tx">
         <div class="ind-icon">💻</div>
-        <h4>Tech &amp; Startups</h4>
+        <h4 role="heading" aria-level="3">Tech &amp; Startups</h4>
         <p>SaaS revenue, runway tracking, and investor-ready books.</p>
       </a>
     </div>
@@ -486,25 +497,25 @@
     <div class="svc-grid">
       <a class="svc-card" href="/service-monthly-bookkeeping-dallas-tx">
         <div class="svc-icon">📆</div>
-        <h4>Monthly Bookkeeping</h4>
+        <h4 role="heading" aria-level="3">Monthly Bookkeeping</h4>
         <p>A dedicated bookkeeper, reconciled accounts, and clean monthly financial statements.</p>
         <span class="svc-link">Learn more →</span>
       </a>
       <a class="svc-card" href="/service-catchup-bookkeeping-dallas-tx">
         <div class="svc-icon">⏪</div>
-        <h4>Catch-Up Bookkeeping</h4>
+        <h4 role="heading" aria-level="3">Catch-Up Bookkeeping</h4>
         <p>Behind on your books? We get months (or years) of records caught up and accurate.</p>
         <span class="svc-link">Learn more →</span>
       </a>
       <a class="svc-card" href="/service-payroll">
         <div class="svc-icon">💵</div>
-        <h4>Payroll Support</h4>
+        <h4 role="heading" aria-level="3">Payroll Support</h4>
         <p>Reliable payroll processing and payroll-tax record-keeping for your small team.</p>
         <span class="svc-link">Learn more →</span>
       </a>
       <a class="svc-card" href="/service-financial-reporting">
         <div class="svc-icon">📊</div>
-        <h4>Financial Reporting</h4>
+        <h4 role="heading" aria-level="3">Financial Reporting</h4>
         <p>Monthly P&amp;L, balance sheet, and cash-flow reporting so you always know your numbers.</p>
         <span class="svc-link">Learn more →</span>
       </a>
@@ -523,7 +534,7 @@
       <div class="faq-list">
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          <h4>Do you provide bookkeeping for businesses in Knox?</h4>
+          <h4 role="heading" aria-level="3">Do you provide bookkeeping for businesses in Knox?</h4>
           <span class="faq-toggle">+</span>
         </button>
         <div class="faq-answer">
@@ -532,7 +543,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          <h4>I have fallen behind on my books - can you still help?</h4>
+          <h4 role="heading" aria-level="3">I have fallen behind on my books - can you still help?</h4>
           <span class="faq-toggle">+</span>
         </button>
         <div class="faq-answer">
@@ -543,7 +554,7 @@
       <div class="faq-list">
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          <h4>How much does bookkeeping cost for a Knox business?</h4>
+          <h4 role="heading" aria-level="3">How much does bookkeeping cost for a Knox business?</h4>
           <span class="faq-toggle">+</span>
         </button>
         <div class="faq-answer">
@@ -552,7 +563,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          <h4>Can you work with my CPA and keep my Texas sales tax organized?</h4>
+          <h4 role="heading" aria-level="3">Can you work with my CPA and keep my Texas sales tax organized?</h4>
           <span class="faq-toggle">+</span>
         </button>
         <div class="faq-answer">
@@ -581,6 +592,7 @@
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -590,7 +602,7 @@
         <p class="footer-hq">📍 Greenville, South Carolina</p>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4 role="heading" aria-level="3">Services</h4>
         <ul class="footer-links">
           <li><a href="/service-monthly-bookkeeping-dallas-tx">Monthly Bookkeeping</a></li>
           <li><a href="/service-catchup-bookkeeping-dallas-tx">Catch-Up Bookkeeping</a></li>
@@ -600,7 +612,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Dallas Area</h4>
+        <h4 role="heading" aria-level="3">Dallas Area</h4>
         <ul class="footer-links">
           <li><a href="/city-dallas">Dallas, TX</a></li>
           <li><a href="/county-dallas-tx">Dallas County</a></li>
@@ -609,7 +621,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4 role="heading" aria-level="3">Contact</h4>
         <ul class="footer-links">
           <li><a href="mailto:support@tidesbookkeeping.com">support@tidesbookkeeping.com</a></li>
           <li><a href="tel:+18645592686">(864) 559-2686</a></li>

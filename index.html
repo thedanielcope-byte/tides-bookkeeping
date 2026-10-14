@@ -120,7 +120,7 @@
       display: flex; align-items: center; justify-content: space-between;
       padding: 1rem 2rem; max-width: 1180px; margin: 0 auto;
     }
-    .nav-logo img { height: 44px; }
+    .nav-logo img { height: 52px; width: auto; } /* nav-logo-v2 */ @media (min-width: 769px) { .nav-wrap .nav-inner { max-width: 1240px; } .nav-inner .nav-links { gap: 1.5rem; } .nav-inner .nav-links > li > a, .nav-inner .nav-cta a { white-space: nowrap; } } @media (min-width: 769px) and (max-width: 1199px) { .nav-logo img { height: 42px; } .nav-inner .nav-links { gap: 1rem; } .nav-inner .nav-links > li > a { font-size: .82rem; } } @media (min-width: 769px) and (max-width: 979px) { .nav-logo img { height: 34px; } .nav-inner .nav-links { gap: .65rem; } .nav-inner .nav-links > li > a { font-size: .78rem; } .nav-inner .nav-cta .btn { padding-left: .9rem; padding-right: .9rem; } } @media (max-width: 768px) { .nav-logo img { height: 40px; } }
     .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
     .nav-links a { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
     .nav-links a:hover { color: var(--navy); }
@@ -1309,7 +1309,7 @@
 ══════════════════════════════════════ -->
 <nav class="nav-wrap">
   <div class="nav-inner">
-    <div class="nav-logo"><a href="/"><img src="logo-128.png" alt="Tides Bookkeeping" /></a></div>
+    <div class="nav-logo"><a href="/"><img src="/assets/brand/tides-logo-nav.png" alt="Tides Bookkeeping" /></a></div>
     <ul class="nav-links" id="navLinks">
       <li><a href="/#how-it-works">How It Works</a></li>
       <li><a href="/services">Services</a></li>
@@ -1486,8 +1486,8 @@
         <div class="bento-icon">💼</div>
         <h3>Payroll Support</h3>
         <p>Gusto Payroll Certified. We run payroll, file taxes, and keep your team paid on time.</p>
-        <span class="bento-tag" style="background:rgba(255,255,255,.25);color:#fff;">Gusto Certified</span>
-        <a href="/service-payroll" class="bento-link" style="color:#fff;">Learn more →</a>
+        <span class="bento-tag" style="background:rgba(255,255,255,.4);color:var(--ink);">Gusto Certified</span>
+        <a href="/service-payroll" class="bento-link" style="color:var(--ink);">Learn more →</a>
       </div>
 
       <div class="bento-card">
@@ -2036,12 +2036,12 @@
           </svg>
         </div>
         <div style="padding:1.5rem;flex:1;display:flex;flex-direction:column;">
-          <span style="display:inline-flex;align-items:center;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);background:#e6f9f9;border:1px solid rgba(65,207,208,.25);padding:3px 10px;border-radius:50px;margin-bottom:.85rem;width:fit-content;">Pricing</span>
+          <span style="display:inline-flex;align-items:center;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0d7377;background:#e6f9f9;border:1px solid rgba(65,207,208,.25);padding:3px 10px;border-radius:50px;margin-bottom:.85rem;width:fit-content;">Pricing</span>
           <div style="font-size:1.05rem;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:.65rem;">How Much Does a Bookkeeper Cost in 2026?</div>
           <div style="font-size:.875rem;color:var(--body);line-height:1.7;flex:1;margin-bottom:1.25rem;">Honest pricing breakdown — what to expect for monthly bookkeeping, what drives the cost up or down, and where to walk away.</div>
           <div style="display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid var(--border);">
-            <span style="font-size:.75rem;color:#94a3b8;">7 min read</span>
-            <span style="font-size:.78rem;font-weight:600;color:var(--teal);">Read article →</span>
+            <span style="font-size:.75rem;color:#586880;">7 min read</span>
+            <span style="font-size:.78rem;font-weight:600;color:#0d7377;">Read article →</span>
           </div>
         </div>
       </a>
@@ -2071,8 +2071,8 @@
           <div style="font-size:1.05rem;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:.65rem;">Catch-Up Bookkeeping: What It Costs and Why</div>
           <div style="font-size:.875rem;color:var(--body);line-height:1.7;flex:1;margin-bottom:1.25rem;">What drives catch-up pricing, typical ranges by months behind, and the hidden costs of staying behind. Now 50% off our regular rate.</div>
           <div style="display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid var(--border);">
-            <span style="font-size:.75rem;color:#94a3b8;">6 min read</span>
-            <span style="font-size:.78rem;font-weight:600;color:var(--teal);">Read article →</span>
+            <span style="font-size:.75rem;color:#586880;">6 min read</span>
+            <span style="font-size:.78rem;font-weight:600;color:#0d7377;">Read article →</span>
           </div>
         </div>
       </a>
@@ -2098,12 +2098,12 @@
           </svg>
         </div>
         <div style="padding:1.5rem;flex:1;display:flex;flex-direction:column;">
-          <span style="display:inline-flex;align-items:center;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);background:#e6f9f9;border:1px solid rgba(65,207,208,.25);padding:3px 10px;border-radius:50px;margin-bottom:.85rem;width:fit-content;">Financial Strategy</span>
+          <span style="display:inline-flex;align-items:center;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0d7377;background:#e6f9f9;border:1px solid rgba(65,207,208,.25);padding:3px 10px;border-radius:50px;margin-bottom:.85rem;width:fit-content;">Financial Strategy</span>
           <div style="font-size:1.05rem;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:.65rem;">How to Read a Profit &amp; Loss Statement Like a CEO</div>
           <div style="font-size:.875rem;color:var(--body);line-height:1.7;flex:1;margin-bottom:1.25rem;">Most owners look at their P&amp;L wrong. The four lines that matter, the three checks a CEO runs every month, and what changes when you do it right.</div>
           <div style="display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid var(--border);">
-            <span style="font-size:.75rem;color:#94a3b8;">8 min read</span>
-            <span style="font-size:.78rem;font-weight:600;color:var(--teal);">Read article →</span>
+            <span style="font-size:.75rem;color:#586880;">8 min read</span>
+            <span style="font-size:.78rem;font-weight:600;color:#0d7377;">Read article →</span>
           </div>
         </div>
       </a>
@@ -2161,7 +2161,7 @@
     </div>
     <p style="text-align:center;margin:24px 0 0;"><a href="/pricing" style="display:inline-block;background:#41cfd0;color:#06263b;font-weight:800;text-decoration:none;padding:12px 26px;border-radius:10px;">See full plan details &rarr;</a></p>
     <p style="text-align:center;margin:22px 0 0;font-size:1rem;font-weight:700;color:#0f1c2e;"><span style="color:#f5a623;letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 &middot; 8 client reviews on <a href="https://proadvisor.intuit.com/app/accountant/search?searchId=daniel-cope" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Intuit's ProAdvisor directory</a></p>
-    <p style="text-align:center;color:#94a3b8;font-size:.82rem;margin:8px 0 0;">&#10004; Reviewed by <strong style="color:#5b6b82;">Daniel Cope</strong>, Advanced QuickBooks ProAdvisor &middot; Updated August 2026</p>
+    <p style="text-align:center;color:#586880;font-size:.82rem;margin:8px 0 0;">&#10004; Reviewed by <strong style="color:#5b6b82;">Daniel Cope</strong>, Advanced QuickBooks ProAdvisor &middot; Updated August 2026</p>
   </div>
 </section>
 

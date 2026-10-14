@@ -37,7 +37,7 @@
     .btn-lg{padding:1rem 2.2rem;font-size:1rem}
     .nav-wrap{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;max-width:1180px;margin:0 auto}
-    .nav-logo img{height:44px}.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}.nav-links a{font-size:.87rem;font-weight:500;color:var(--body);transition:color .2s}.nav-links a:hover,.nav-links a.active{color:var(--navy);font-weight:700}.nav-cta{display:flex;align-items:center;gap:.75rem}
+    .nav-logo img { height: 52px; width: auto; } /* nav-logo-v2 */ @media (min-width: 769px) { .nav-wrap .nav-inner { max-width: 1240px; } .nav-inner .nav-links { gap: 1.5rem; } .nav-inner .nav-links > li > a, .nav-inner .nav-cta a { white-space: nowrap; } } @media (min-width: 769px) and (max-width: 1199px) { .nav-logo img { height: 42px; } .nav-inner .nav-links { gap: 1rem; } .nav-inner .nav-links > li > a { font-size: .82rem; } } @media (min-width: 769px) and (max-width: 979px) { .nav-logo img { height: 34px; } .nav-inner .nav-links { gap: .65rem; } .nav-inner .nav-links > li > a { font-size: .78rem; } .nav-inner .nav-cta .btn { padding-left: .9rem; padding-right: .9rem; } } @media (max-width: 768px) { .nav-logo img { height: 40px; } }.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}.nav-links a{font-size:.87rem;font-weight:500;color:var(--body);transition:color .2s}.nav-links a:hover,.nav-links a.active{color:var(--navy);font-weight:700}.nav-cta{display:flex;align-items:center;gap:.75rem}
     .breadcrumb{background:var(--bg-alt);border-bottom:1px solid var(--border);padding:.75rem 0}.breadcrumb-inner{display:flex;align-items:center;gap:.5rem;max-width:1180px;margin:0 auto;padding:0 2rem;font-size:.78rem;color:var(--muted)}.breadcrumb-inner a{color:var(--muted);transition:color .2s}.breadcrumb-inner a:hover{color:var(--navy)}.breadcrumb-sep{color:var(--border)}.breadcrumb-current{color:var(--navy);font-weight:600}
     .page-hero{padding:88px 0 80px;background:#fff;position:relative;overflow:hidden}.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 65% 75% at 88% 15%,rgba(65,207,208,.11) 0%,transparent 60%),radial-gradient(ellipse 45% 45% at 10% 85%,rgba(102,193,238,.08) 0%,transparent 60%)}
     .page-hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:center}
@@ -138,7 +138,7 @@
       transform: translateY(-2px); box-shadow: var(--shadow); }
     .also-card.current-industry { border-color: var(--teal); background: var(--teal-lt);
       pointer-events: none; cursor: default; }
-    .also-card.current-industry .also-name { color: var(--teal); }
+    .also-card.current-industry .also-name { color: #0d7377; }
     .also-emoji { font-size: 1.5rem; flex-shrink: 0; line-height: 1; }
     .also-info { min-width: 0; }
     .also-name { font-size: .87rem; font-weight: 700; color: var(--ink);
@@ -284,6 +284,14 @@
     {
       "@type": "State",
       "name": "Alaska"
+    },
+    {
+      "@type": "City",
+      "name": "Kenai",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Alaska"
+      }
     }
   ],
   "hasOfferCatalog": {
@@ -461,7 +469,7 @@
 
 <nav class="nav-wrap">
   <div class="nav-inner">
-    <div class="nav-logo"><a href="/"><img src="logo-128.png" alt="Tides Bookkeeping" /></a></div>
+    <div class="nav-logo"><a href="/"><img src="/assets/brand/tides-logo-nav.png" alt="Tides Bookkeeping" /></a></div>
     <ul class="nav-links" id="navLinks">
       <li><a href="/#how-it-works">How It Works</a></li><li><a href="/services">Services</a></li>
       <li><a href="/who-we-serve" class="active">Who We Serve</a></li><li class="nav-dd"><a href="/about">About<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/about">About Us</a></li><li><a href="/reviews">Reviews</a></li><li><a href="/certifications">Certifications</a></li><li><a href="/press">Press</a></li><li><a href="/contact">Contact Us</a></li></ul></li><li><a href="/pricing">Pricing</a></li><li class="nav-dd"><a href="/tools">Resources<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/tools">Free Tools</a></li><li><a href="/glossary">Glossary</a></li><li><a href="/small-business-bookkeeping-guide">Bookkeeping Guide</a></li></ul></li>

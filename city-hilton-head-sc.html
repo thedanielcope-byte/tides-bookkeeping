@@ -40,7 +40,7 @@
     .btn-lg{padding:1rem 2.2rem;font-size:1rem;}
     .nav-wrap{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;max-width:1180px;margin:0 auto;}
-    .nav-logo img{height:44px;}.nav-links{display:flex;align-items:center;gap:2rem;list-style:none;}
+    .nav-logo img { height: 52px; width: auto; } /* nav-logo-v2 */ @media (min-width: 769px) { .nav-wrap .nav-inner { max-width: 1240px; } .nav-inner .nav-links { gap: 1.5rem; } .nav-inner .nav-links > li > a, .nav-inner .nav-cta a { white-space: nowrap; } } @media (min-width: 769px) and (max-width: 1199px) { .nav-logo img { height: 42px; } .nav-inner .nav-links { gap: 1rem; } .nav-inner .nav-links > li > a { font-size: .82rem; } } @media (min-width: 769px) and (max-width: 979px) { .nav-logo img { height: 34px; } .nav-inner .nav-links { gap: .65rem; } .nav-inner .nav-links > li > a { font-size: .78rem; } .nav-inner .nav-cta .btn { padding-left: .9rem; padding-right: .9rem; } } @media (max-width: 768px) { .nav-logo img { height: 40px; } }.nav-links{display:flex;align-items:center;gap:2rem;list-style:none;}
     .nav-links a{font-size:.87rem;font-weight:500;color:var(--body);transition:color .2s;}.nav-links a:hover{color:var(--navy);font-weight:700;}
     .nav-cta{display:flex;align-items:center;gap:.75rem;}.nav-signin{font-size:.87rem;font-weight:500;color:var(--body);}.nav-signin:hover{color:var(--navy);}
     .hamburger{display:none;background:none;border:none;cursor:pointer;padding:.4rem;flex-direction:column;gap:5px;z-index:1001;}
@@ -299,6 +299,14 @@
     {
       "@type": "State",
       "name": "South Carolina"
+    },
+    {
+      "@type": "City",
+      "name": "Hilton Head Island",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "South Carolina"
+      }
     }
   ],
   "hasOfferCatalog": {
@@ -460,7 +468,7 @@
 
 <nav class="nav-wrap">
   <div class="nav-inner">
-    <div class="nav-logo"><a href="/"><img src="logo-128.png" alt="Tides Bookkeeping" /></a></div>
+    <div class="nav-logo"><a href="/"><img src="/assets/brand/tides-logo-nav.png" alt="Tides Bookkeeping" /></a></div>
     <ul class="nav-links" id="navLinks">
       <li><a href="/#how-it-works">How It Works</a></li><li><a href="/services">Services</a></li>
       <li><a href="/who-we-serve">Who We Serve</a></li><li class="nav-dd"><a href="/about">About<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/about">About Us</a></li><li><a href="/reviews">Reviews</a></li><li><a href="/certifications">Certifications</a></li><li><a href="/press">Press</a></li><li><a href="/contact">Contact Us</a></li></ul></li><li><a href="/pricing">Pricing</a></li><li class="nav-dd"><a href="/tools">Resources<span class="nav-dd-caret"> ▾</span></a><ul class="nav-dd-menu"><li><a href="/tools">Free Tools</a></li><li><a href="/glossary">Glossary</a></li><li><a href="/small-business-bookkeeping-guide">Bookkeeping Guide</a></li></ul></li>

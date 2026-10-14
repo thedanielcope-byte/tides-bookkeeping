@@ -99,7 +99,7 @@
       display: flex; align-items: center; justify-content: space-between;
       padding: 1rem 2rem; max-width: 1180px; margin: 0 auto;
     }
-    .nav-logo img { height: 44px; }
+    .nav-logo img { height: 52px; width: auto; } /* nav-logo-v2 */ @media (min-width: 769px) { .nav-wrap .nav-inner { max-width: 1240px; } .nav-inner .nav-links { gap: 1.5rem; } .nav-inner .nav-links > li > a, .nav-inner .nav-cta a { white-space: nowrap; } } @media (min-width: 769px) and (max-width: 1199px) { .nav-logo img { height: 42px; } .nav-inner .nav-links { gap: 1rem; } .nav-inner .nav-links > li > a { font-size: .82rem; } } @media (min-width: 769px) and (max-width: 979px) { .nav-logo img { height: 34px; } .nav-inner .nav-links { gap: .65rem; } .nav-inner .nav-links > li > a { font-size: .78rem; } .nav-inner .nav-cta .btn { padding-left: .9rem; padding-right: .9rem; } } @media (max-width: 768px) { .nav-logo img { height: 40px; } }
     .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
     .nav-links a { font-size: .87rem; font-weight: 500; color: var(--body); transition: color .2s; }
     .nav-links a:hover, .nav-links a.active { color: var(--navy); font-weight: 700; }
@@ -443,7 +443,7 @@
       border-color: var(--teal); background: var(--teal-lt);
       pointer-events: none; cursor: default;
     }
-    .also-card.current-industry .also-name { color: var(--teal); }
+    .also-card.current-industry .also-name { color: #0d7377; }
     .also-emoji { font-size: 1.5rem; flex-shrink: 0; line-height: 1; }
     .also-info { min-width: 0; }
     .also-name {
@@ -718,6 +718,14 @@
     {
       "@type": "State",
       "name": "Indiana"
+    },
+    {
+      "@type": "City",
+      "name": "South Bend",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Indiana"
+      }
     }
   ],
   "hasOfferCatalog": {
@@ -880,7 +888,7 @@
 <!-- NAV -->
 <nav class="nav-wrap">
   <div class="nav-inner">
-    <div class="nav-logo"><a href="/"><img src="logo-128.png" alt="Tides Bookkeeping" /></a></div>
+    <div class="nav-logo"><a href="/"><img src="/assets/brand/tides-logo-nav.png" alt="Tides Bookkeeping" /></a></div>
     <ul class="nav-links" id="navLinks">
       <li><a href="/#how-it-works">How It Works</a></li>
       <li><a href="/services">Services</a></li>

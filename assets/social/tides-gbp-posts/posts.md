@@ -35,7 +35,7 @@ Duplicate transactions, unreconciled accounts, mystery balances — we've seen i
 
 As QuickBooks Certified ProAdvisors, we clean up and set up your QuickBooks Online the right way: connected accounts, organized chart of accounts, everything reconciled.
 
-One dedicated bookkeeper. Accuracy guaranteed.
+One dedicated bookkeeper.
 
 👉 Schedule your free cleanup assessment.
 
@@ -109,7 +109,7 @@ Vendor invoices, liquor distributors, linen services, repairs — it piles up fa
 
 We track what you owe and what you're owed (AP/AR), manage vendor bills, and keep cash flow healthy so you're never surprised.
 
-Clean books every month — guaranteed.
+Clean books every month.
 
 👉 Book your free discovery call.
 
@@ -217,7 +217,7 @@ Don't wait for January panic.
 
 "Dan is crucial to the financial management of my business... resourceful, detail oriented, and most importantly responsive and fast."
 
-That's the Tides difference: one dedicated bookkeeper, accuracy guaranteed, always responsive.
+That's the Tides difference: one dedicated bookkeeper, always responsive.
 
 Based in SC. Serving America.
 
@@ -256,7 +256,7 @@ Stuck with a bookkeeper who ghosts you, or software that's a mess?
 
 We migrate everything cleanly: review your current books, fix what's broken, set up proper systems, and take over monthly work without missing a beat.
 
-QuickBooks ProAdvisor Certified. Accuracy guaranteed.
+QuickBooks ProAdvisor Certified.
 
 👉 Let's talk about a smooth handoff.
 

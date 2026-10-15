@@ -231,32 +231,35 @@
 
   <script>
   var CAPTURE = 'https://wdvolamasztetwpitbwg.supabase.co/functions/v1/capture-lead';
+  /* Each option is [label, points, short tag]. The short tag is what gets sent
+     with the lead so the CRM note and the notification email show which
+     questions they actually failed — labels are too long for one line. */
   var QUESTIONS = [
     { q: 'How are your books kept today?', a: [
-      ['A professional bookkeeper or accountant', 20],
-      ['Accounting software — I do it myself', 12],
-      ['Spreadsheets', 6],
-      ['Honestly, not really tracked', 0] ] },
+      ['A professional bookkeeper or accountant', 20, 'pro-bookkeeper'],
+      ['Accounting software — I do it myself', 12, 'software-diy'],
+      ['Spreadsheets', 6, 'spreadsheets'],
+      ['Honestly, not really tracked', 0, 'not-tracked'] ] },
     { q: 'When were your accounts last reconciled?', a: [
-      ['Every month', 20],
-      ['Every quarter', 12],
-      ['Once a year / at tax time', 5],
-      ["I'm not sure", 0] ] },
+      ['Every month', 20, 'recon-monthly'],
+      ['Every quarter', 12, 'recon-quarterly'],
+      ['Once a year / at tax time', 5, 'recon-yearly'],
+      ["I'm not sure", 0, 'recon-unsure'] ] },
     { q: 'Do you know your current monthly profit?', a: [
-      ['Yes — to the dollar', 20],
-      ['Roughly', 10],
-      ['No idea', 0] ] },
+      ['Yes — to the dollar', 20, 'profit-exact'],
+      ['Roughly', 10, 'profit-roughly'],
+      ['No idea', 0, 'profit-no-idea'] ] },
     { q: 'How do you feel at tax time?', a: [
-      ["Calm — everything's ready", 20],
-      ['A little stressed', 10],
-      ['Full panic / scramble', 0] ] },
+      ["Calm — everything's ready", 20, 'tax-calm'],
+      ['A little stressed', 10, 'tax-stressed'],
+      ['Full panic / scramble', 0, 'tax-panic'] ] },
     { q: 'How many hours a month do you spend on bookkeeping?', a: [
-      ['0 — someone handles it', 20],
-      ['1–3 hours', 14],
-      ['4–8 hours', 7],
-      ['8+ hours', 2] ] }
+      ['0 — someone handles it', 20, '0hrs'],
+      ['1–3 hours', 14, '1-3hrs'],
+      ['4–8 hours', 7, '4-8hrs'],
+      ['8+ hours', 2, '8+hrs'] ] }
   ];
-  var idx = 0, score = 0;
+  var idx = 0, score = 0, picks = [];
 
   function startQuiz(){ document.getElementById('intro').classList.add('hidden'); document.getElementById('quiz').classList.remove('hidden'); render(); }
   function render(){
@@ -268,12 +271,12 @@
     Q.a.forEach(function(opt){
       var b = document.createElement('button');
       b.className = 'opt'; b.type = 'button'; b.textContent = opt[0];
-      b.onclick = function(){ answer(opt[1]); };
+      b.onclick = function(){ answer(opt[1], opt[2]); };
       box.appendChild(b);
     });
   }
-  function answer(pts){
-    score += pts; idx++;
+  function answer(pts, tag){
+    score += pts; picks.push(tag); idx++;
     if (idx < QUESTIONS.length) { render(); }
     else {
       document.getElementById('progressBar').style.width = '100%';
@@ -293,8 +296,9 @@
     var b = band(score);
     fetch(CAPTURE, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({
       business:'tides', name: f.name.value, email: f.email.value, website_hp: f.website_hp.value,
-      source:'bookkeeping-health-check', tags:'quiz-lead',
-      message:'Bookkeeping Health Check score: ' + score + '/100 — ' + b.t,
+      source:'bookkeeping-health-check', tags:'quiz-lead', hc_score: score,
+      message:'Bookkeeping Health Check score: ' + score + '/100 — ' + b.t
+        + ' · Answers: ' + picks.join(' | '),
       notify:'thedanielcope@gmail.com'
     }) }).catch(function(){});
     try{ if(window.gtag) gtag('event','generate_lead',{ method:'quiz', form_location:'bookkeeping-health-check' }); }catch(e){}

@@ -746,7 +746,8 @@
       <input id="lmEmail" name="email" type="email" required autocomplete="email" />
       <label class="lm-lbl" for="lmPhone">Phone <span class="lm-opt">(optional)</span></label>
       <input id="lmPhone" name="phone" type="tel" autocomplete="tel" />
-      <label class="lm-consent"><input type="checkbox" name="sms_consent" value="yes"><span>By checking this box, you agree to receive text messages from Tides Bookkeeping at the number provided, including appointment reminders, replies to your inquiry, and account and document requests. We don't send marketing texts. Consent is not a condition of purchase. Msg &amp; data rates may apply. Msg frequency varies. Reply <strong>STOP</strong> to opt out or <strong>HELP</strong> for help. See our <a href="/privacy">Privacy Policy</a> and <a href="/terms#sms">Terms</a>.</span></label>
+      <label class="lm-consent"><input type="checkbox" name="sms_consent" value="yes"><span>By checking this box, you agree to receive text messages from Tides Bookkeeping at the number provided, including appointment reminders, replies to your inquiry, and account and document requests. Consent is not a condition of purchase. Msg &amp; data rates may apply. Msg frequency varies. Reply <strong>STOP</strong> to opt out or <strong>HELP</strong> for help. See our <a href="/privacy">Privacy Policy</a> and <a href="/terms#sms">Terms</a>.</span></label>
+      <label class="lm-consent"><input type="checkbox" name="sms_marketing_consent" value="yes"><span><strong>Optional, separate from the box above:</strong> check this box to also receive occasional marketing texts from Tides Bookkeeping, such as offers and new-service announcements. Consent is not a condition of purchase. Up to 4 msgs/month. Msg &amp; data rates may apply. Reply <strong>STOP</strong> to opt out or <strong>HELP</strong> for help.</span></label>
       <button type="submit" id="lmBtn" class="btn btn-primary btn-lg">Send me the ebook &rarr;</button>
       <div id="lmMsg" class="lm-fine" role="status"></div>
       <p class="lm-fine">Free. No spam, ever. Unsubscribe anytime.</p>
@@ -867,6 +868,10 @@
     if(f.sms_consent.checked){
       data.tags+=',sms-consent';
       data.message+='\n\n[SMS consent: YES \u2014 checkbox on '+location.host+location.pathname+' at '+new Date().toISOString()+']';
+    }
+    if(f.sms_marketing_consent&&f.sms_marketing_consent.checked){
+      data.tags+=',sms-marketing-consent';
+      data.message+='\n\n[SMS MARKETING consent: YES \u2014 separate checkbox on '+location.host+location.pathname+' at '+new Date().toISOString()+']';
     }
     var win=null; try{ win=window.open(LM_PDF,'_blank'); }catch(x){}
     fetch('https://wdvolamasztetwpitbwg.supabase.co/functions/v1/capture-lead',{
